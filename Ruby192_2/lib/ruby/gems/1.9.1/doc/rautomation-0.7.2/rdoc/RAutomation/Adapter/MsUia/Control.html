@@ -1,0 +1,1032 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: RAutomation::Adapter::MsUia::Control</title>
+
+	<link rel="stylesheet" href="../../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../../index.html">Home</a>
+          <a href="../../../index.html#classes">Classes</a>
+          <a href="../../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../../lib/rautomation/adapter/ms_uia/control_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/rautomation/adapter/ms_uia/control.rb">lib/rautomation/adapter/ms_uia/control.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-assert_enabled">#assert_enabled</a></li>
+					
+					<li><a href="#method-i-bounding_rectangle">#bounding_rectangle</a></li>
+					
+					<li><a href="#method-i-click">#click</a></li>
+					
+					<li><a href="#method-i-control_class">#control_class</a></li>
+					
+					<li><a href="#method-i-control_name">#control_name</a></li>
+					
+					<li><a href="#method-i-disabled%3F">#disabled?</a></li>
+					
+					<li><a href="#method-i-enabled%3F">#enabled?</a></li>
+					
+					<li><a href="#method-i-exist%3F">#exist?</a></li>
+					
+					<li><a href="#method-i-exists%3F">#exists?</a></li>
+					
+					<li><a href="#method-i-get_current_control_type">#get_current_control_type</a></li>
+					
+					<li><a href="#method-i-has_focus%3F">#has_focus?</a></li>
+					
+					<li><a href="#method-i-hwnd">#hwnd</a></li>
+					
+					<li><a href="#method-i-matches_type%3F">#matches_type?</a></li>
+					
+					<li><a href="#method-i-new_pid">#new_pid</a></li>
+					
+					<li><a href="#method-i-set_focus">#set_focus</a></li>
+					
+					<li><a href="#method-i-uia_element">#uia_element</a></li>
+					
+					<li><a href="#method-i-visible%3F">#visible?</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+			<div id="includes-section" class="section">
+				<h3 class="section-header">Included Modules</h3>
+				<ul class="link-list">
+				
+				
+					<li><span class="include">WaitHelper</span></li>
+				
+				
+				
+					<li><span class="include">Locators</span></li>
+				
+				
+				</ul>
+			</div>
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../../RAutomation.html">RAutomation</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter.html">RAutomation::Adapter</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Autoit.html">RAutomation::Adapter::Autoit</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Autoit/Button.html">RAutomation::Adapter::Autoit::Button</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Autoit/Locators.html">RAutomation::Adapter::Autoit::Locators</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Autoit/Mouse.html">RAutomation::Adapter::Autoit::Mouse</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Autoit/TextField.html">RAutomation::Adapter::Autoit::TextField</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Autoit/Window.html">RAutomation::Adapter::Autoit::Window</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Helper.html">RAutomation::Adapter::Helper</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia.html">RAutomation::Adapter::MsUia</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/Button.html">RAutomation::Adapter::MsUia::Button</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/ButtonHelper.html">RAutomation::Adapter::MsUia::ButtonHelper</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/Checkbox.html">RAutomation::Adapter::MsUia::Checkbox</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/Constants.html">RAutomation::Adapter::MsUia::Constants</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/Control.html">RAutomation::Adapter::MsUia::Control</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/Functions.html">RAutomation::Adapter::MsUia::Functions</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/KeystrokeConverter.html">RAutomation::Adapter::MsUia::KeystrokeConverter</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/Label.html">RAutomation::Adapter::MsUia::Label</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/ListBox.html">RAutomation::Adapter::MsUia::ListBox</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/ListItem.html">RAutomation::Adapter::MsUia::ListItem</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/Locators.html">RAutomation::Adapter::MsUia::Locators</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/Radio.html">RAutomation::Adapter::MsUia::Radio</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/SelectList.html">RAutomation::Adapter::MsUia::SelectList</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/SelectList/SelectListOption.html">RAutomation::Adapter::MsUia::SelectList::SelectListOption</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/Table.html">RAutomation::Adapter::MsUia::Table</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/TextField.html">RAutomation::Adapter::MsUia::TextField</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/UiaDll.html">RAutomation::Adapter::MsUia::UiaDll</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/Window.html">RAutomation::Adapter::MsUia::Window</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32.html">RAutomation::Adapter::Win32</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Button.html">RAutomation::Adapter::Win32::Button</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/ButtonHelper.html">RAutomation::Adapter::Win32::ButtonHelper</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Checkbox.html">RAutomation::Adapter::Win32::Checkbox</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Constants.html">RAutomation::Adapter::Win32::Constants</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Control.html">RAutomation::Adapter::Win32::Control</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Functions.html">RAutomation::Adapter::Win32::Functions</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Keys.html">RAutomation::Adapter::Win32::Keys</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Label.html">RAutomation::Adapter::Win32::Label</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/ListBox.html">RAutomation::Adapter::Win32::ListBox</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Locators.html">RAutomation::Adapter::Win32::Locators</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Mouse.html">RAutomation::Adapter::Win32::Mouse</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Radio.html">RAutomation::Adapter::Win32::Radio</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/SelectList.html">RAutomation::Adapter::Win32::SelectList</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/SelectList/SelectListOption.html">RAutomation::Adapter::Win32::SelectList::SelectListOption</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Table.html">RAutomation::Adapter::Win32::Table</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/TextField.html">RAutomation::Adapter::Win32::TextField</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Window.html">RAutomation::Adapter::Win32::Window</a></li>
+				
+					<li><a href="../../../RAutomation/Button.html">RAutomation::Button</a></li>
+				
+					<li><a href="../../../RAutomation/ElementCollections.html">RAutomation::ElementCollections</a></li>
+				
+					<li><a href="../../../RAutomation/ElementCollections/UnsupportedLocatorException.html">RAutomation::ElementCollections::UnsupportedLocatorException</a></li>
+				
+					<li><a href="../../../RAutomation/TextField.html">RAutomation::TextField</a></li>
+				
+					<li><a href="../../../RAutomation/UnknownButtonException.html">RAutomation::UnknownButtonException</a></li>
+				
+					<li><a href="../../../RAutomation/UnknownElementException.html">RAutomation::UnknownElementException</a></li>
+				
+					<li><a href="../../../RAutomation/UnknownTextFieldException.html">RAutomation::UnknownTextFieldException</a></li>
+				
+					<li><a href="../../../RAutomation/UnknownWindowException.html">RAutomation::UnknownWindowException</a></li>
+				
+					<li><a href="../../../RAutomation/WaitHelper.html">RAutomation::WaitHelper</a></li>
+				
+					<li><a href="../../../RAutomation/WaitHelper/TimeoutError.html">RAutomation::WaitHelper::TimeoutError</a></li>
+				
+					<li><a href="../../../RAutomation/Window.html">RAutomation::Window</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">RAutomation::Adapter::MsUia::Control</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(window, locators)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Creates the control object. @note this method is not meant to be accessed
+directly @param [RAutomation::Window] window this button belongs to.
+@param [Hash] locators for searching the button. @option locators [String,
+Regexp] :value Value (text) of the button @option locators [String,
+Regexp] :class Internal class name of the button @option locators [String,
+Fixnum] :id Internal ID of the button @option locators [String, Fixnum]
+:index 0-based index to specify n-th button if all other criteria match
+@see <a
+href="../../Window.html#method-i-button">RAutomation::Window#button</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rautomation/adapter/ms_uia/control.rb, line 17</span>
+17:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">window</span>, <span class="ruby-identifier">locators</span>)
+18:           <span class="ruby-ivar">@window</span> = <span class="ruby-identifier">window</span>
+19:           <span class="ruby-identifier">extract</span>(<span class="ruby-identifier">locators</span>)
+20:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="assert-enabled-method" class="method-detail ">
+				<a name="method-i-assert_enabled"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">assert_enabled</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="assert-enabled-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/adapter/ms_uia/control.rb, line 174</span>
+174:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">assert_enabled</span>
+175:           <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Cannot interact with disabled control #{@locators.inspect} on window #{@window.locators.inspect}!&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">disabled?</span>
+176:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="bounding-rectangle-method" class="method-detail ">
+				<a name="method-i-bounding_rectangle"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">bounding_rectangle</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="bounding-rectangle-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/adapter/ms_uia/control.rb, line 119</span>
+119:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">bounding_rectangle</span>
+120:           <span class="ruby-identifier">control</span> = <span class="ruby-identifier">uia_element</span>
+121: 
+122:           <span class="ruby-identifier">boundary</span> = <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">MemoryPointer</span>.<span class="ruby-identifier">new</span> <span class="ruby-value">:long</span>, <span class="ruby-value">4</span>
+123:           <span class="ruby-constant">UiaDll</span><span class="ruby-operator">::</span><span class="ruby-identifier">bounding_rectangle</span>(<span class="ruby-identifier">control</span>, <span class="ruby-identifier">boundary</span>)
+124: 
+125:           <span class="ruby-identifier">boundary</span>.<span class="ruby-identifier">read_array_of_long</span>(<span class="ruby-value">4</span>)
+126:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="click-method" class="method-detail ">
+				<a name="method-i-click"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">click</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+todo - replace with UIA version
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="click-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rautomation/adapter/ms_uia/control.rb, line 77</span>
+77:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">click</span>
+78:           <span class="ruby-identifier">assert_enabled</span>
+79:           <span class="ruby-identifier">clicked</span> = <span class="ruby-keyword kw">false</span>
+80:           <span class="ruby-identifier">wait_until</span> <span class="ruby-keyword kw">do</span>
+81:             <span class="ruby-ivar">@window</span>.<span class="ruby-identifier">activate</span>
+82:             <span class="ruby-ivar">@window</span>.<span class="ruby-identifier">active?</span> <span class="ruby-operator">&amp;&amp;</span>
+83:                 <span class="ruby-constant">Functions</span>.<span class="ruby-identifier">set_control_focus</span>(<span class="ruby-identifier">hwnd</span>) <span class="ruby-operator">&amp;&amp;</span>
+84:                 <span class="ruby-constant">Functions</span>.<span class="ruby-identifier">control_click</span>(<span class="ruby-identifier">hwnd</span>) <span class="ruby-operator">&amp;&amp;</span>
+85:                 <span class="ruby-identifier">clicked</span> = <span class="ruby-keyword kw">true</span> <span class="ruby-comment cmt"># is clicked at least once</span>
+86: 
+87:             <span class="ruby-identifier">block_given?</span> <span class="ruby-operator">?</span> <span class="ruby-keyword kw">yield</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">clicked</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">exist?</span>
+88:           <span class="ruby-keyword kw">end</span>
+89:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="control-class-method" class="method-detail ">
+				<a name="method-i-control_class"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">control_class</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="control-class-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/adapter/ms_uia/control.rb, line 164</span>
+164:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">control_class</span>
+165:           <span class="ruby-identifier">uia_control</span> = <span class="ruby-identifier">uia_element</span>
+166:           <span class="ruby-identifier">element_class</span> = <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">MemoryPointer</span>.<span class="ruby-identifier">new</span> <span class="ruby-value">:char</span>, <span class="ruby-constant">UiaDll</span><span class="ruby-operator">::</span><span class="ruby-identifier">get_class_name</span>(<span class="ruby-identifier">uia_control</span>, <span class="ruby-keyword kw">nil</span>) <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+167: 
+168:           <span class="ruby-constant">UiaDll</span><span class="ruby-operator">::</span><span class="ruby-identifier">get_class_name</span>(<span class="ruby-identifier">uia_control</span>, <span class="ruby-identifier">element_class</span>)
+169:           <span class="ruby-identifier">element_class</span>.<span class="ruby-identifier">read_string</span>
+170:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="control-name-method" class="method-detail ">
+				<a name="method-i-control_name"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">control_name</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="control-name-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/adapter/ms_uia/control.rb, line 156</span>
+156:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">control_name</span>
+157:           <span class="ruby-identifier">uia_control</span> = <span class="ruby-identifier">uia_element</span>
+158:           <span class="ruby-identifier">element_name</span> = <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">MemoryPointer</span>.<span class="ruby-identifier">new</span> <span class="ruby-value">:char</span>, <span class="ruby-constant">UiaDll</span><span class="ruby-operator">::</span><span class="ruby-identifier">get_name</span>(<span class="ruby-identifier">uia_control</span>, <span class="ruby-keyword kw">nil</span>) <span class="ruby-operator">+</span> <span class="ruby-value">1</span>
+159: 
+160:           <span class="ruby-constant">UiaDll</span><span class="ruby-operator">::</span><span class="ruby-identifier">get_name</span>(<span class="ruby-identifier">uia_control</span>, <span class="ruby-identifier">element_name</span>)
+161:           <span class="ruby-identifier">element_name</span>.<span class="ruby-identifier">read_string</span>
+162:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="disabled--method" class="method-detail ">
+				<a name="method-i-disabled%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">disabled?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+todo - replace with UIA version
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="disabled--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/adapter/ms_uia/control.rb, line 104</span>
+104:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">disabled?</span>
+105:           <span class="ruby-constant">Functions</span>.<span class="ruby-identifier">unavailable?</span>(<span class="ruby-identifier">hwnd</span>)
+106:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="enabled--method" class="method-detail ">
+				<a name="method-i-enabled%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">enabled?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="enabled--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/adapter/ms_uia/control.rb, line 99</span>
+ 99:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">enabled?</span>
+100:           <span class="ruby-operator">!</span><span class="ruby-identifier">disabled?</span>
+101:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="exist--method" class="method-detail ">
+				<a name="method-i-exist%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">exist?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="exist--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rautomation/adapter/ms_uia/control.rb, line 91</span>
+91:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">exist?</span>
+92:           <span class="ruby-keyword kw">begin</span>
+93:             <span class="ruby-operator">!</span><span class="ruby-operator">!</span><span class="ruby-identifier">uia_element</span>
+94:           <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">UnknownElementException</span>
+95:             <span class="ruby-keyword kw">false</span>
+96:           <span class="ruby-keyword kw">end</span>
+97:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="Control.html#method-i-exists%3F">exists?</a>
+				</div>
+				
+
+				
+			</div>
+
+		
+			<div id="exists--method" class="method-detail method-alias">
+				<a name="method-i-exists%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">exists?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="Control.html#method-i-exist%3F">exist?</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="get-current-control-type-method" class="method-detail ">
+				<a name="method-i-get_current_control_type"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">get_current_control_type</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="get-current-control-type-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/adapter/ms_uia/control.rb, line 148</span>
+148:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_current_control_type</span>
+149:           <span class="ruby-constant">UiaDll</span><span class="ruby-operator">::</span><span class="ruby-identifier">current_control_type</span>(<span class="ruby-identifier">uia_element</span>)
+150:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="has-focus--method" class="method-detail ">
+				<a name="method-i-has_focus%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">has_focus?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+todo - replace with UIA version
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="has-focus--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/adapter/ms_uia/control.rb, line 109</span>
+109:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">has_focus?</span>
+110:           <span class="ruby-constant">Functions</span>.<span class="ruby-identifier">has_focus?</span>(<span class="ruby-identifier">hwnd</span>)
+111:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="hwnd-method" class="method-detail ">
+				<a name="method-i-hwnd"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">hwnd</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+todo - replace with UIA version
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="hwnd-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rautomation/adapter/ms_uia/control.rb, line 23</span>
+23:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">hwnd</span>
+24:           <span class="ruby-constant">Functions</span>.<span class="ruby-identifier">control_hwnd</span>(<span class="ruby-ivar">@window</span>.<span class="ruby-identifier">hwnd</span>, <span class="ruby-ivar">@locators</span>)
+25:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="matches-type--method" class="method-detail ">
+				<a name="method-i-matches_type%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">matches_type?</span><span
+						class="method-args">(clazz)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="matches-type--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/adapter/ms_uia/control.rb, line 144</span>
+144:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">matches_type?</span>(<span class="ruby-identifier">clazz</span>)
+145:           <span class="ruby-identifier">get_current_control_type</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">clazz</span>
+146:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="new-pid-method" class="method-detail ">
+				<a name="method-i-new_pid"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new_pid</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-pid-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/adapter/ms_uia/control.rb, line 152</span>
+152:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">new_pid</span>
+153:           <span class="ruby-constant">UiaDll</span><span class="ruby-operator">::</span><span class="ruby-identifier">current_process_id</span>(<span class="ruby-identifier">uia_element</span>)
+154:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="set-focus-method" class="method-detail ">
+				<a name="method-i-set_focus"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">set_focus</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="set-focus-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/adapter/ms_uia/control.rb, line 113</span>
+113:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">set_focus</span>
+114:           <span class="ruby-identifier">assert_enabled</span>
+115:           <span class="ruby-identifier">uia_control</span> = <span class="ruby-constant">UiaDll</span><span class="ruby-operator">::</span><span class="ruby-identifier">element_from_handle</span>(<span class="ruby-identifier">hwnd</span>)
+116:           <span class="ruby-constant">UiaDll</span><span class="ruby-operator">::</span><span class="ruby-identifier">set_focus</span>(<span class="ruby-identifier">uia_control</span>)
+117:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="uia-element-method" class="method-detail ">
+				<a name="method-i-uia_element"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">uia_element</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="uia-element-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rautomation/adapter/ms_uia/control.rb, line 27</span>
+27:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">uia_element</span>
+28: <span class="ruby-comment cmt">#          puts &quot;finding element with #{@locators.inspect}&quot;</span>
+29: 
+30:           <span class="ruby-keyword kw">case</span>
+31:             <span class="ruby-comment cmt">#Causes a bug for some reason</span>
+32: <span class="ruby-comment cmt">#            when @locators[:value]</span>
+33: <span class="ruby-comment cmt">#              uia_window = UiaDll::element_from_handle(@window.hwnd)</span>
+34: <span class="ruby-comment cmt">#              begin</span>
+35: <span class="ruby-comment cmt">#                uia_window.read_pointer</span>
+36: <span class="ruby-comment cmt">#              rescue FFI::NullPointerError =&gt; e</span>
+37: <span class="ruby-comment cmt">#                raise UnknownElementException, &quot;Window with handle #{@window.hwnd} does not exist&quot;</span>
+38: <span class="ruby-comment cmt">#              end</span>
+39: <span class="ruby-comment cmt">#              uia_control = UiaDll::find_child_by_name(uia_window, @locators[:value].to_s)</span>
+40: <span class="ruby-comment cmt">#              begin</span>
+41: <span class="ruby-comment cmt">#                uia_control.read_pointer</span>
+42: <span class="ruby-comment cmt">#              rescue FFI::NullPointerError =&gt; e</span>
+43: <span class="ruby-comment cmt">#                raise UnknownElementException, &quot;#{@locators[:value]} does not exist&quot;</span>
+44: <span class="ruby-comment cmt">#              end</span>
+45:             <span class="ruby-keyword kw">when</span> <span class="ruby-ivar">@locators</span>[<span class="ruby-value">:focus</span>]
+46:               <span class="ruby-identifier">uia_control</span> = <span class="ruby-constant">UiaDll</span><span class="ruby-operator">::</span><span class="ruby-identifier">get_focused_element</span>
+47:               <span class="ruby-keyword kw">begin</span>
+48:                 <span class="ruby-identifier">uia_control</span>.<span class="ruby-identifier">read_pointer</span>
+49:               <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">NullPointerError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+50:                 <span class="ruby-identifier">raise</span> <span class="ruby-constant">UnknownElementException</span>, <span class="ruby-value str">&quot;Focused element does not exist&quot;</span>
+51:               <span class="ruby-keyword kw">end</span>
+52:             <span class="ruby-keyword kw">when</span> <span class="ruby-ivar">@locators</span>[<span class="ruby-value">:id</span>]
+53:               <span class="ruby-identifier">uia_window</span> = <span class="ruby-constant">UiaDll</span><span class="ruby-operator">::</span><span class="ruby-identifier">element_from_handle</span>(<span class="ruby-ivar">@window</span>.<span class="ruby-identifier">hwnd</span>)
+54:               <span class="ruby-identifier">uia_control</span> = <span class="ruby-constant">UiaDll</span><span class="ruby-operator">::</span><span class="ruby-identifier">find_child_by_id</span>(<span class="ruby-identifier">uia_window</span>, <span class="ruby-ivar">@locators</span>[<span class="ruby-value">:id</span>].<span class="ruby-identifier">to_s</span>)
+55:               <span class="ruby-keyword kw">begin</span>
+56:                 <span class="ruby-identifier">uia_control</span>.<span class="ruby-identifier">read_pointer</span>
+57:               <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">NullPointerError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+58:                 <span class="ruby-identifier">raise</span> <span class="ruby-constant">UnknownElementException</span>, <span class="ruby-node">&quot;#{@locators[:id]} does not exist&quot;</span>
+59:               <span class="ruby-keyword kw">end</span>
+60:             <span class="ruby-keyword kw">when</span> <span class="ruby-ivar">@locators</span>[<span class="ruby-value">:point</span>]
+61:               <span class="ruby-identifier">uia_control</span> = <span class="ruby-constant">UiaDll</span><span class="ruby-operator">::</span><span class="ruby-identifier">element_from_point</span>(<span class="ruby-ivar">@locators</span>[<span class="ruby-value">:point</span>][<span class="ruby-value">0</span>], <span class="ruby-ivar">@locators</span>[<span class="ruby-value">:point</span>][<span class="ruby-value">1</span>])
+62:               <span class="ruby-keyword kw">begin</span>
+63:                 <span class="ruby-identifier">uia_control</span>.<span class="ruby-identifier">read_pointer</span>
+64:               <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">NullPointerError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+65:                 <span class="ruby-identifier">raise</span> <span class="ruby-constant">UnknownElementException</span>, <span class="ruby-node">&quot;#{@locators[:point]} does not exist&quot;</span>
+66:               <span class="ruby-keyword kw">end</span>
+67:             <span class="ruby-keyword kw">else</span>
+68:               <span class="ruby-identifier">handle</span>= <span class="ruby-identifier">hwnd</span>
+69:               <span class="ruby-identifier">raise</span> <span class="ruby-constant">UnknownElementException</span>, <span class="ruby-node">&quot;Element with #{@locators.inspect} does not exist&quot;</span> <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">handle</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>) <span class="ruby-keyword kw">or</span> (<span class="ruby-identifier">handle</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">nil</span>)
+70:               <span class="ruby-identifier">uia_control</span> = <span class="ruby-constant">UiaDll</span><span class="ruby-operator">::</span><span class="ruby-identifier">element_from_handle</span>(<span class="ruby-identifier">handle</span>)
+71:           <span class="ruby-keyword kw">end</span>
+72:           <span class="ruby-identifier">uia_control</span>
+73:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="visible--method" class="method-detail ">
+				<a name="method-i-visible%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">visible?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="visible--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/adapter/ms_uia/control.rb, line 128</span>
+128:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">visible?</span>
+129:           <span class="ruby-identifier">element</span> = <span class="ruby-constant">UiaDll</span><span class="ruby-operator">::</span><span class="ruby-identifier">element_from_handle</span>(<span class="ruby-identifier">hwnd</span>)
+130: 
+131:           <span class="ruby-identifier">off_screen</span> = <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">MemoryPointer</span>.<span class="ruby-identifier">new</span> <span class="ruby-value">:int</span>
+132: 
+133:           <span class="ruby-keyword kw">if</span> <span class="ruby-constant">UiaDll</span><span class="ruby-operator">::</span><span class="ruby-identifier">is_offscreen</span>(<span class="ruby-identifier">element</span>, <span class="ruby-identifier">off_screen</span>) <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+134:             <span class="ruby-identifier">fail</span> <span class="ruby-value str">&quot;Could not check element&quot;</span>
+135:           <span class="ruby-keyword kw">end</span>
+136: 
+137: <span class="ruby-comment cmt">#          puts &quot;return #{off_screen.read_int}&quot;</span>
+138:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">off_screen</span>.<span class="ruby-identifier">read_int</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+139:             <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span>
+140:           <span class="ruby-keyword kw">end</span>
+141:           <span class="ruby-keyword kw">false</span>
+142:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

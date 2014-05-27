@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: UserChoices::Command</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/user-choices/command_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/user-choices/command.rb">lib/user-choices/command.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-add_choices">#add_choices</a></li>
+					
+					<li><a href="#method-i-add_sources">#add_sources</a></li>
+					
+					<li><a href="#method-i-execute">#execute</a></li>
+					
+					<li><a href="#method-i-postprocess_user_choices">#postprocess_user_choices</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../History_txt.html">History.txt</a></li>
+				
+					<li class="file"><a href="../LICENSE_txt.html">LICENSE.txt</a></li>
+				
+					<li class="file"><a href="../Manifest_txt.html">Manifest.txt</a></li>
+				
+					<li class="file"><a href="../README_txt.html">README.txt</a></li>
+				
+					<li class="file"><a href="../examples/older/README_txt.html">README.txt</a></li>
+				
+					<li class="file"><a href="../examples/tutorial/css/LICENSE_txt.html">LICENSE.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../UserChoices/ChoicesBuilder.html">UserChoices::ChoicesBuilder</a></li>
+				
+					<li><a href="../UserChoices/Command.html">UserChoices::Command</a></li>
+				
+					<li><a href="../UserChoices/CommandLineSource.html">UserChoices::CommandLineSource</a></li>
+				
+					<li><a href="../UserChoices/EnvironmentSource.html">UserChoices::EnvironmentSource</a></li>
+				
+					<li><a href="../UserChoices/PosixCommandLineSource.html">UserChoices::PosixCommandLineSource</a></li>
+				
+					<li><a href="../UserChoices/XmlConfigFileSource.html">UserChoices::XmlConfigFileSource</a></li>
+				
+					<li><a href="../UserChoices/YamlConfigFileSource.html">UserChoices::YamlConfigFileSource</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">UserChoices::Command</h1>
+
+		<div id="description">
+			<p>
+A template class. Subclasses describe all the choices a user may make to
+affect the execution of the command, and the sources for those choices
+(such as the command line).
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="user-choices-attribute-method" class="method-detail">
+				<a name="user_choices"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">user_choices</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/user-choices/command.rb, line 10</span>
+10:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+11:       <span class="ruby-identifier">builder</span> = <span class="ruby-constant">ChoicesBuilder</span>.<span class="ruby-identifier">new</span>
+12:       <span class="ruby-identifier">add_sources</span>(<span class="ruby-identifier">builder</span>)
+13:       <span class="ruby-identifier">add_choices</span>(<span class="ruby-identifier">builder</span>)
+14:       <span class="ruby-ivar">@user_choices</span> = <span class="ruby-identifier">builder</span>.<span class="ruby-identifier">build</span>
+15:       <span class="ruby-identifier">postprocess_user_choices</span>
+16:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="add-choices-method" class="method-detail ">
+				<a name="method-i-add_choices"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">add_choices</span><span
+						class="method-args">(builder)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Add choices to the <a href="ChoicesBuilder.html">ChoicesBuilder</a>. A
+choice is a symbol that ends up in the @<a
+href="Command.html#user_choices">user_choices</a> hash. It may have a
+:default value and a :type, as well as an OptionParser-style description of
+command-line arguments.
+</p>
+<p>
+Must be defined in a subclass.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="add-choices-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/user-choices/command.rb, line 29</span>
+29:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_choices</span>(<span class="ruby-identifier">builder</span>); <span class="ruby-identifier">subclass_responsibility</span>; <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="add-sources-method" class="method-detail ">
+				<a name="method-i-add_sources"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">add_sources</span><span
+						class="method-args">(builder)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Add sources such as <a href="EnvironmentSource.html">EnvironmentSource</a>,
+<a href="XmlConfigFileSource.html">XmlConfigFileSource</a>, and <a
+href="CommandLineSource.html">CommandLineSource</a> to the <a
+href="ChoicesBuilder.html">ChoicesBuilder</a>.
+</p>
+<p>
+Must be defined in a subclass.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="add-sources-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/user-choices/command.rb, line 22</span>
+22:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_sources</span>(<span class="ruby-identifier">builder</span>); <span class="ruby-identifier">subclass_responsibility</span>; <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="execute-method" class="method-detail ">
+				<a name="method-i-execute"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">execute</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Execute the command, using @<a
+href="Command.html#user_choices">user_choices</a> for parameterization. 
+</p>
+<p>
+Must be defined in a subclass.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="execute-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/user-choices/command.rb, line 40</span>
+40:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">execute</span>; <span class="ruby-identifier">subclass_responsibility</span>; <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="postprocess-user-choices-method" class="method-detail ">
+				<a name="method-i-postprocess_user_choices"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">postprocess_user_choices</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+After choices from all sources are collected into @<a
+href="Command.html#user_choices">user_choices</a>, this method is called to
+do any postprocessing. Does nothing unless overridden. 
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="postprocess-user-choices-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/user-choices/command.rb, line 34</span>
+34:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">postprocess_user_choices</span>
+35:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

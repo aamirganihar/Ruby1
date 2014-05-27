@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: UserChoices::ChoicesBuilder</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/user-choices/builder_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/user-choices/builder.rb">lib/user-choices/builder.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-add_choice">#add_choice</a></li>
+					
+					<li><a href="#method-i-add_help_line">#add_help_line</a></li>
+					
+					<li><a href="#method-i-add_source">#add_source</a></li>
+					
+					<li><a href="#method-i-build">#build</a></li>
+					
+					<li><a href="#method-i-section">#section</a></li>
+					
+					<li><a href="#method-i-section_specific_to_script">#section_specific_to_script</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../History_txt.html">History.txt</a></li>
+				
+					<li class="file"><a href="../LICENSE_txt.html">LICENSE.txt</a></li>
+				
+					<li class="file"><a href="../Manifest_txt.html">Manifest.txt</a></li>
+				
+					<li class="file"><a href="../README_txt.html">README.txt</a></li>
+				
+					<li class="file"><a href="../examples/older/README_txt.html">README.txt</a></li>
+				
+					<li class="file"><a href="../examples/tutorial/css/LICENSE_txt.html">LICENSE.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../UserChoices/ChoicesBuilder.html">UserChoices::ChoicesBuilder</a></li>
+				
+					<li><a href="../UserChoices/Command.html">UserChoices::Command</a></li>
+				
+					<li><a href="../UserChoices/CommandLineSource.html">UserChoices::CommandLineSource</a></li>
+				
+					<li><a href="../UserChoices/EnvironmentSource.html">UserChoices::EnvironmentSource</a></li>
+				
+					<li><a href="../UserChoices/PosixCommandLineSource.html">UserChoices::PosixCommandLineSource</a></li>
+				
+					<li><a href="../UserChoices/XmlConfigFileSource.html">UserChoices::XmlConfigFileSource</a></li>
+				
+					<li><a href="../UserChoices/YamlConfigFileSource.html">UserChoices::YamlConfigFileSource</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">UserChoices::ChoicesBuilder</h1>
+
+		<div id="description">
+			<p>
+This class accepts a series of source and choice descriptions and then
+builds a hash-like object that describes all the choices a user has made
+before (or while) invoking a script.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/user-choices/builder.rb, line 15</span>
+15:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+16:       <span class="ruby-ivar">@defaults</span> = {}
+17:       <span class="ruby-ivar">@conversions</span> = {}
+18:       <span class="ruby-ivar">@sources</span> = []
+19:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="add-choice-method" class="method-detail ">
+				<a name="method-i-add_choice"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">add_choice</span><span
+						class="method-args">(choice, args={}, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Add the choice named <em>choice</em>, a symbol. <em>args</em> is a keyword
+argument: 
+</p>
+<ul>
+<li><p>
+<tt>:default</tt> takes a value that is the default value of the
+<em>choice</em>. 
+</p>
+</li>
+<li><p>
+<tt>:type</tt> can be given an array of valid string values. These are
+checked.
+</p>
+</li>
+<li><p>
+<tt>:type</tt> can also be given <tt>:integer</tt>. The value is cast into
+an integer. If that&#8217;s impossible, an exception is raised. 
+</p>
+</li>
+<li><p>
+<tt>:type</tt> can also be given <tt>:boolean</tt>. The value is converted
+into <tt>true</tt> or <tt>false</tt> (or an exception is raised).
+</p>
+</li>
+<li><p>
+<tt>:type</tt> can also be given <tt>[:string]</tt>. The value will be an
+array of strings. For example, &#8220;&#8212;value a,b,c&#8221; will
+produce [&#8216;a&#8217;, &#8216;b&#8217;, &#8216;c&#8217;].
+</p>
+</li>
+</ul>
+<p>
+You might also give <tt>:length =&gt; 5</tt> or <tt>:length =&gt;
+3..4</tt>. (In  this case, a <tt>:type</tt> of <tt>[:string]</tt> is
+assumed.)
+</p>
+<p>
+The <em>block</em> is passed a <a
+href="CommandLineSource.html">CommandLineSource</a> object. It&#8217;s used
+to describe the command line.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="add-choice-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/user-choices/builder.rb, line 39</span>
+39:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_choice</span>(<span class="ruby-identifier">choice</span>, <span class="ruby-identifier">args</span>={}, &amp;<span class="ruby-identifier">block</span>)
+40:       <span class="ruby-comment cmt"># TODO: does the has_key? actually make a difference?</span>
+41:       <span class="ruby-ivar">@defaults</span>[<span class="ruby-identifier">choice</span>] = <span class="ruby-identifier">args</span>[<span class="ruby-value">:default</span>] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:default</span>)
+42:       <span class="ruby-ivar">@conversions</span>[<span class="ruby-identifier">choice</span>] = []
+43:       <span class="ruby-constant">Conversion</span>.<span class="ruby-identifier">record_for</span>(<span class="ruby-identifier">args</span>[<span class="ruby-value">:type</span>], <span class="ruby-ivar">@conversions</span>[<span class="ruby-identifier">choice</span>])
+44:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:length</span>)
+45:         <span class="ruby-constant">Conversion</span>.<span class="ruby-identifier">record_for</span>({<span class="ruby-value">:length</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">args</span>[<span class="ruby-value">:length</span>]}, <span class="ruby-ivar">@conversions</span>[<span class="ruby-identifier">choice</span>])
+46:       <span class="ruby-keyword kw">end</span>
+47:       <span class="ruby-identifier">block</span>.<span class="ruby-identifier">call</span>(<span class="ruby-constant">ArgForwarder</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@command_line_source</span>, <span class="ruby-identifier">choice</span>)) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block</span>
+48:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="add-help-line-method" class="method-detail ">
+				<a name="method-i-add_help_line"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">add_help_line</span><span
+						class="method-args">(string)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Add a single line composed of <em>string</em> to the current position in
+the help output.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="add-help-line-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/user-choices/builder.rb, line 62</span>
+62:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_help_line</span>(<span class="ruby-identifier">string</span>)
+63:       <span class="ruby-identifier">user_claims</span>(<span class="ruby-ivar">@command_line_source</span>) {
+64:         <span class="ruby-value str">&quot;Can't use 'add_help_string' when there's no command line source.&quot;</span>
+65:       }
+66:       <span class="ruby-ivar">@command_line_source</span>.<span class="ruby-identifier">add_help_line</span>(<span class="ruby-identifier">string</span>)
+67:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="add-source-method" class="method-detail ">
+				<a name="method-i-add_source"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">add_source</span><span
+						class="method-args">(source_class, *messages_and_args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+This adds a source of choices. The <em>source</em> is a class like <a
+href="CommandLineSource.html">CommandLineSource</a>. The
+<tt>messages_and_args</tt> are sent  to a new object of that class. 
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="add-source-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/user-choices/builder.rb, line 53</span>
+53:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_source</span>(<span class="ruby-identifier">source_class</span>, *<span class="ruby-identifier">messages_and_args</span>)
+54:       <span class="ruby-identifier">source</span> = <span class="ruby-identifier">source_class</span>.<span class="ruby-identifier">new</span>
+55:       <span class="ruby-identifier">message_sends</span>(<span class="ruby-identifier">messages_and_args</span>).<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span> <span class="ruby-identifier">send_me</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">source</span>.<span class="ruby-identifier">send</span>(*<span class="ruby-identifier">send_me</span>) }
+56:       <span class="ruby-ivar">@sources</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">source</span>
+57:       <span class="ruby-ivar">@command_line_source</span> = <span class="ruby-identifier">source</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">source_class</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-constant">CommandLineSource</span>
+58:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="build-method" class="method-detail ">
+				<a name="method-i-build"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">build</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Once sources and choices have been described, this builds and returns a
+hash-like object indexed by the choices.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="build-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/user-choices/builder.rb, line 91</span>
+91:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">build</span>
+92:       <span class="ruby-identifier">retval</span> = {}
+93:       <span class="ruby-ivar">@sources</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">DefaultSource</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">use_hash</span>(<span class="ruby-ivar">@defaults</span>)
+94:       <span class="ruby-ivar">@sources</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">fill</span> }
+95:       <span class="ruby-ivar">@sources</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">apply</span>(<span class="ruby-ivar">@conversions</span>) }
+96:       <span class="ruby-ivar">@sources</span>.<span class="ruby-identifier">reverse</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">retval</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-identifier">s</span>) }
+97:       <span class="ruby-ivar">@sources</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">adjust</span>(<span class="ruby-identifier">retval</span>) }
+98:       <span class="ruby-identifier">retval</span>
+99:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="section-method" class="method-detail ">
+				<a name="method-i-section"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">section</span><span
+						class="method-args">(description)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Demarcate a section of help text. It begins with the <em>description</em>, 
+ends with a dashed line.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="section-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/user-choices/builder.rb, line 71</span>
+71:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">section</span>(<span class="ruby-identifier">description</span>)
+72:       <span class="ruby-identifier">add_help_line</span>(<span class="ruby-value str">&quot;... &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">description</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;:&quot;</span>)
+73:       <span class="ruby-keyword kw">yield</span>
+74:       <span class="ruby-identifier">add_help_line</span>(<span class="ruby-value str">&quot;---------------------------------&quot;</span>)
+75:       <span class="ruby-identifier">add_help_line</span>(<span class="ruby-value str">''</span>)
+76:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="section-specific-to-script-method" class="method-detail ">
+				<a name="method-i-section_specific_to_script"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">section_specific_to_script</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+In groups of related commands, there are often choices that apply to all
+commands and choices that apply only to this particular command. Use this
+to define the latter.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="section-specific-to-script-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/user-choices/builder.rb, line 81</span>
+81:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">section_specific_to_script</span>
+82:       <span class="ruby-identifier">section</span>(<span class="ruby-value str">&quot;specific to this script&quot;</span>) <span class="ruby-keyword kw">do</span>
+83:         <span class="ruby-keyword kw">yield</span>
+84:       <span class="ruby-keyword kw">end</span>
+85:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

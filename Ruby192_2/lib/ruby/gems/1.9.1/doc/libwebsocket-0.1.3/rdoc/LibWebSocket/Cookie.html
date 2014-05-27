@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: LibWebSocket::Cookie</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/libwebsocket/cookie/request_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/libwebsocket/cookie/request.rb">lib/libwebsocket/cookie/request.rb</a></li>
+					
+						<li><a href="../lib/libwebsocket/cookie/response_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/libwebsocket/cookie/response.rb">lib/libwebsocket/cookie/response.rb</a></li>
+					
+						<li><a href="../lib/libwebsocket/cookie_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/libwebsocket/cookie.rb">lib/libwebsocket/cookie.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+			<div id="namespace-list-section" class="section">
+				<h3 class="section-header">Namespace</h3>
+				<ul class="link-list">
+					
+					<li><span class="type">CLASS</span> <a href="Cookie/Request.html">LibWebSocket::Cookie::Request</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Cookie/Response.html">LibWebSocket::Cookie::Response</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-parse">#parse</a></li>
+					
+					<li><a href="#method-i-to_s">#to_s</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../LibWebSocket.html">LibWebSocket</a></li>
+				
+					<li><a href="../LibWebSocket/Cookie.html">LibWebSocket::Cookie</a></li>
+				
+					<li><a href="../LibWebSocket/Cookie/Request.html">LibWebSocket::Cookie::Request</a></li>
+				
+					<li><a href="../LibWebSocket/Cookie/Response.html">LibWebSocket::Cookie::Response</a></li>
+				
+					<li><a href="../LibWebSocket/Frame.html">LibWebSocket::Frame</a></li>
+				
+					<li><a href="../LibWebSocket/Message.html">LibWebSocket::Message</a></li>
+				
+					<li><a href="../LibWebSocket/OpeningHandshake.html">LibWebSocket::OpeningHandshake</a></li>
+				
+					<li><a href="../LibWebSocket/OpeningHandshake/Client.html">LibWebSocket::OpeningHandshake::Client</a></li>
+				
+					<li><a href="../LibWebSocket/OpeningHandshake/Server.html">LibWebSocket::OpeningHandshake::Server</a></li>
+				
+					<li><a href="../LibWebSocket/Request.html">LibWebSocket::Request</a></li>
+				
+					<li><a href="../LibWebSocket/Response.html">LibWebSocket::Response</a></li>
+				
+					<li><a href="../LibWebSocket/Stateful.html">LibWebSocket::Stateful</a></li>
+				
+					<li><a href="../LibWebSocket/URL.html">LibWebSocket::URL</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">LibWebSocket::Cookie</h1>
+
+		<div id="description">
+			<p>
+A base class for <a
+href="Cookie/Request.html">LibWebSocket::Cookie::Request</a> and <a
+href="Cookie/Response.html">LibWebSocket::Cookie::Response</a>.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="TOKEN">TOKEN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NAME">NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="QUOTED_STRING">QUOTED_STRING</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="VALUE">VALUE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="pairs-attribute-method" class="method-detail">
+				<a name="pairs"></a>
+				
+				<a name="pairs="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">pairs</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(hash = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/libwebsocket/cookie.rb, line 15</span>
+15:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">hash</span> = {})
+16:       <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+17:         <span class="ruby-identifier">instance_variable_set</span>(<span class="ruby-node">&quot;@#{k}&quot;</span>,<span class="ruby-identifier">v</span>)
+18:       <span class="ruby-keyword kw">end</span>
+19:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="parse-method" class="method-detail ">
+				<a name="method-i-parse"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse</span><span
+						class="method-args">(string)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Parse cookie string to array
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="parse-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/libwebsocket/cookie.rb, line 22</span>
+22:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse</span>(<span class="ruby-identifier">string</span>)
+23:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">pairs</span> = []
+24: 
+25:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">string</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">string</span> <span class="ruby-operator">==</span> <span class="ruby-value str">''</span>
+26: 
+27:       <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">string</span>.<span class="ruby-identifier">slice!</span>(<span class="ruby-node">/\s*(#{NAME})\s*(?:=\s*(#{VALUE}))?;?/</span>)
+28:         <span class="ruby-identifier">attr</span>, <span class="ruby-identifier">value</span> = <span class="ruby-node">$1</span>, <span class="ruby-node">$2</span>
+29:         <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">value</span>.<span class="ruby-identifier">nil?</span>
+30:           <span class="ruby-identifier">value</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-regexp re">/^&quot;/</span>, <span class="ruby-value str">''</span>)
+31:           <span class="ruby-identifier">value</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-regexp re">/&quot;$/</span>, <span class="ruby-value str">''</span>)
+32:           <span class="ruby-identifier">value</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-regexp re">/\\&quot;/</span>, <span class="ruby-value str">'&quot;'</span>)
+33:         <span class="ruby-keyword kw">end</span>
+34:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">pairs</span>.<span class="ruby-identifier">push</span>([<span class="ruby-identifier">attr</span>, <span class="ruby-identifier">value</span>])
+35:       <span class="ruby-keyword kw">end</span>
+36: 
+37:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>
+38:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-s-method" class="method-detail ">
+				<a name="method-i-to_s"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_s</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Convert cookie array to string
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="to-s-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/libwebsocket/cookie.rb, line 41</span>
+41:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_s</span>
+42:       <span class="ruby-identifier">pairs</span> = []
+43: 
+44:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">pairs</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">pair</span><span class="ruby-operator">|</span>
+45:         <span class="ruby-identifier">string</span> = <span class="ruby-value str">''</span>
+46:         <span class="ruby-identifier">string</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">pair</span>[<span class="ruby-value">0</span>]
+47: 
+48:         <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">pair</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">nil?</span>
+49:           <span class="ruby-identifier">string</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">'='</span>
+50:           <span class="ruby-identifier">string</span> <span class="ruby-operator">+=</span> (<span class="ruby-operator">!</span><span class="ruby-identifier">pair</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">match</span>(<span class="ruby-node">/^#{VALUE}$/</span>) <span class="ruby-operator">?</span> <span class="ruby-node">&quot;\&quot;#{pair[1]}\&quot;&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">pair</span>[<span class="ruby-value">1</span>])
+51:         <span class="ruby-keyword kw">end</span>
+52: 
+53:         <span class="ruby-identifier">pairs</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">string</span>)
+54:       <span class="ruby-keyword kw">end</span>
+55: 
+56:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">pairs</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;; &quot;</span>)
+57:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

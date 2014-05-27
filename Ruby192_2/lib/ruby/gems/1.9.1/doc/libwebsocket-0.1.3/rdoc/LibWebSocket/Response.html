@@ -1,0 +1,920 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: LibWebSocket::Response</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/libwebsocket/response_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/libwebsocket/response.rb">lib/libwebsocket/response.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="Message.html">LibWebSocket::Message</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-build_cookie">#build_cookie</a></li>
+					
+					<li><a href="#method-i-build_url">#build_url</a></li>
+					
+					<li><a href="#method-i-cookie%3D">#cookie=</a></li>
+					
+					<li><a href="#method-i-finalize">#finalize</a></li>
+					
+					<li><a href="#method-i-number1">#number1</a></li>
+					
+					<li><a href="#method-i-number1%3D">#number1=</a></li>
+					
+					<li><a href="#method-i-number2">#number2</a></li>
+					
+					<li><a href="#method-i-number2%3D">#number2=</a></li>
+					
+					<li><a href="#method-i-parse">#parse</a></li>
+					
+					<li><a href="#method-i-parse_body">#parse_body</a></li>
+					
+					<li><a href="#method-i-parse_first_line">#parse_first_line</a></li>
+					
+					<li><a href="#method-i-to_rack">#to_rack</a></li>
+					
+					<li><a href="#method-i-to_s">#to_s</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../LibWebSocket.html">LibWebSocket</a></li>
+				
+					<li><a href="../LibWebSocket/Cookie.html">LibWebSocket::Cookie</a></li>
+				
+					<li><a href="../LibWebSocket/Cookie/Request.html">LibWebSocket::Cookie::Request</a></li>
+				
+					<li><a href="../LibWebSocket/Cookie/Response.html">LibWebSocket::Cookie::Response</a></li>
+				
+					<li><a href="../LibWebSocket/Frame.html">LibWebSocket::Frame</a></li>
+				
+					<li><a href="../LibWebSocket/Message.html">LibWebSocket::Message</a></li>
+				
+					<li><a href="../LibWebSocket/OpeningHandshake.html">LibWebSocket::OpeningHandshake</a></li>
+				
+					<li><a href="../LibWebSocket/OpeningHandshake/Client.html">LibWebSocket::OpeningHandshake::Client</a></li>
+				
+					<li><a href="../LibWebSocket/OpeningHandshake/Server.html">LibWebSocket::OpeningHandshake::Server</a></li>
+				
+					<li><a href="../LibWebSocket/Request.html">LibWebSocket::Request</a></li>
+				
+					<li><a href="../LibWebSocket/Response.html">LibWebSocket::Response</a></li>
+				
+					<li><a href="../LibWebSocket/Stateful.html">LibWebSocket::Stateful</a></li>
+				
+					<li><a href="../LibWebSocket/URL.html">LibWebSocket::URL</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">LibWebSocket::Response</h1>
+
+		<div id="description">
+			<p>
+Construct or parse a WebSocket response.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="location-attribute-method" class="method-detail">
+				<a name="location"></a>
+				
+				<a name="location="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">location</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="secure-attribute-method" class="method-detail">
+				<a name="secure"></a>
+				
+				<a name="secure="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">secure</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="resource-name-attribute-method" class="method-detail">
+				<a name="resource_name"></a>
+				
+				<a name="resource_name="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">resource_name</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="cookies-attribute-method" class="method-detail">
+				<a name="cookies"></a>
+				
+				<a name="cookies="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">cookies</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="key--attribute-method" class="method-detail">
+				<a name="key1"></a>
+				
+				<a name="key1="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">key1</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="key--attribute-method" class="method-detail">
+				<a name="key2"></a>
+				
+				<a name="key2="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">key2</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="cookie--method" class="method-detail ">
+				<a name="method-i-cookie%3D"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">cookie=</span><span
+						class="method-args">(hash)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Build cookies from hash @see <a href="Cookie.html">LibWebSocket::Cookie</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="cookie--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/libwebsocket/response.rb, line 137</span>
+137:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">cookie=</span>(<span class="ruby-identifier">hash</span>)
+138:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">cookies</span>.<span class="ruby-identifier">push</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">build_cookie</span>(<span class="ruby-identifier">hash</span>)
+139:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="number--method" class="method-detail ">
+				<a name="method-i-number1"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">number1</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Draft 76 number 1 reader
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="number--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/libwebsocket/response.rb, line 142</span>
+142:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">number1</span>
+143:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">number</span>(<span class="ruby-value str">'number1'</span>,<span class="ruby-value str">'key1'</span>)
+144:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="number--method" class="method-detail ">
+				<a name="method-i-number1%3D"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">number1=</span><span
+						class="method-args">(val)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Draft 76 number 1 writter
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="number--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/libwebsocket/response.rb, line 146</span>
+146:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">number1=</span>(<span class="ruby-identifier">val</span>)
+147:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">number</span>(<span class="ruby-value str">'number1'</span>,<span class="ruby-value str">'key1'</span>,<span class="ruby-identifier">val</span>)
+148:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="number--method" class="method-detail ">
+				<a name="method-i-number2"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">number2</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Draft 76 number 2 reader
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="number--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/libwebsocket/response.rb, line 150</span>
+150:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">number2</span>
+151:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">number</span>(<span class="ruby-value str">'number2'</span>,<span class="ruby-value str">'key2'</span>)
+152:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="number--method" class="method-detail ">
+				<a name="method-i-number2%3D"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">number2=</span><span
+						class="method-args">(val)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Draft 76 number 2 writter
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="number--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/libwebsocket/response.rb, line 154</span>
+154:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">number2=</span>(<span class="ruby-identifier">val</span>)
+155:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">number</span>(<span class="ruby-value str">'number2'</span>,<span class="ruby-value str">'key2'</span>,<span class="ruby-identifier">val</span>)
+156:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parse-method" class="method-detail ">
+				<a name="method-i-parse"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse</span><span
+						class="method-args">(string)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Parse a WebSocket response. @see <a
+href="Message.html#method-i-parse">Message#parse</a> @example Parser
+</p>
+<pre>
+  res = LibWebSocket::Response.new;
+  res.parse(&quot;HTTP/1.1 101 WebSocket Protocol Handshake\x0d\x0a&quot;)
+  res.parse(&quot;Upgrade: WebSocket\x0d\x0a&quot;)
+  res.parse(&quot;Connection: Upgrade\x0d\x0a&quot;)
+  res.parse(&quot;Sec-WebSocket-Origin: file://\x0d\x0a&quot;)
+  res.parse(&quot;Sec-WebSocket-Location: ws://example.com/demo\x0d\x0a&quot;)
+  res.parse(&quot;\x0d\x0a&quot;)
+  res.parse(&quot;0st3Rl&amp;q-2ZU^weu&quot;)</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="parse-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/libwebsocket/response.rb, line 18</span>
+18:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse</span>(<span class="ruby-identifier">string</span>)
+19:       <span class="ruby-keyword kw">super</span>
+20:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-rack-method" class="method-detail ">
+				<a name="method-i-to_rack"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_rack</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Construct a WebSocket response in rack format. @example Construct
+</p>
+<pre>
+  res = LibWebSocket::Response.new(
+    :host          =&gt; 'example.com',
+    :resource_name =&gt; '/demo',
+    :origin        =&gt; 'file://',
+    :number1       =&gt; 777_007_543,
+    :number2       =&gt; 114_997_259,
+    :challenge     =&gt; &quot;\x47\x30\x22\x2D\x5A\x3F\x47\x58&quot;
+  )
+  res.to_rack # [ 101,
+              # {
+              #   'Upgrade'                =&gt; 'WebSocket'
+              #   'Connection'             =&gt; 'Upgrade'
+              #   'Sec-WebSocket-Origin'   =&gt; 'file://'
+              #   'Sec-WebSocket-Location' =&gt; 'ws://example.com/demo'
+              #   'Content-Length'         =&gt; 16
+              # },
+              # [ 0st3Rl&amp;q-2ZU^weu ] ]</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="to-rack-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/libwebsocket/response.rb, line 98</span>
+ 98:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_rack</span>
+ 99:       <span class="ruby-identifier">status</span> = <span class="ruby-value">101</span>
+100:       <span class="ruby-identifier">hash</span> = {}
+101:       <span class="ruby-identifier">body</span> = <span class="ruby-value str">''</span>
+102: 
+103:       <span class="ruby-identifier">hash</span> = {<span class="ruby-value str">'Upgrade'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'WebSocket'</span>, <span class="ruby-value str">'Connection'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'Upgrade'</span>}
+104: 
+105:       <span class="ruby-identifier">raise</span> <span class="ruby-value str">'host is required'</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">host</span>
+106: 
+107:       <span class="ruby-identifier">location</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">build_url</span>(
+108:           <span class="ruby-value">:host</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">host</span>,
+109:           <span class="ruby-value">:secure</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">secure</span>,
+110:           <span class="ruby-value">:resource_name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">resource_name</span>
+111:       )
+112:       <span class="ruby-identifier">origin</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">origin</span> <span class="ruby-operator">||</span> <span class="ruby-value str">'http://'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">location</span>.<span class="ruby-identifier">host</span>
+113: 
+114:       <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">version</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">75</span>
+115:           <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-value str">'WebSocket-Protocol'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">subprotocol</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">subprotocol</span>
+116:           <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-value str">'WebSocket-Origin'</span>   =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">origin</span>)
+117:           <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-value str">'WebSocket-Location'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">location</span>.<span class="ruby-identifier">to_s</span>)
+118:       <span class="ruby-keyword kw">else</span>
+119:           <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-value str">'Sec-WebSocket-Protocol'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">subprotocol</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">subprotocol</span>
+120:           <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-value str">'Sec-WebSocket-Origin'</span>   =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">origin</span>)
+121:           <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-value str">'Sec-WebSocket-Location'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">location</span>.<span class="ruby-identifier">to_s</span>)
+122:       <span class="ruby-keyword kw">end</span>
+123: 
+124:       <span class="ruby-keyword kw">unless</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">cookies</span>.<span class="ruby-identifier">empty?</span>
+125:         <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-value str">'Set-Cookie'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">cookies</span>.<span class="ruby-identifier">collect</span>(&amp;<span class="ruby-value">:to_s</span>).<span class="ruby-identifier">join</span>(<span class="ruby-value str">','</span>))
+126:       <span class="ruby-keyword kw">end</span>
+127: 
+128:       <span class="ruby-identifier">body</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">checksum</span> <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">version</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">75</span>
+129: 
+130:       <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-value str">'Content-Length'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">body</span>.<span class="ruby-identifier">length</span>.<span class="ruby-identifier">to_s</span>)
+131: 
+132:       <span class="ruby-keyword kw">return</span> [ <span class="ruby-identifier">status</span>, <span class="ruby-identifier">hash</span>, [ <span class="ruby-identifier">body</span> ]]
+133:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-s-method" class="method-detail ">
+				<a name="method-i-to_s"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_s</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Construct a WebSocket response in string format. @example Construct
+</p>
+<pre>
+  res = LibWebSocket::Response.new(
+    :host          =&gt; 'example.com',
+    :resource_name =&gt; '/demo',
+    :origin        =&gt; 'file://',
+    :number1       =&gt; 777_007_543,
+    :number2       =&gt; 114_997_259,
+    :challenge     =&gt; &quot;\x47\x30\x22\x2D\x5A\x3F\x47\x58&quot;
+  )
+  res.to_s # HTTP/1.1 101 WebSocket Protocol Handshake
+           # Upgrade: WebSocket
+           # Connection: Upgrade
+           # Sec-WebSocket-Origin: file://
+           # Sec-WebSocket-Location: ws://example.com/demo
+           #
+           # 0st3Rl&amp;q-2ZU^weu</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="to-s-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/libwebsocket/response.rb, line 39</span>
+39:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_s</span>
+40:       <span class="ruby-identifier">string</span> = <span class="ruby-value str">''</span>
+41: 
+42:       <span class="ruby-identifier">string</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">&quot;HTTP/1.1 101 WebSocket Protocol Handshake\x0d\x0a&quot;</span>
+43: 
+44:       <span class="ruby-identifier">string</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">&quot;Upgrade: WebSocket\x0d\x0a&quot;</span>
+45:       <span class="ruby-identifier">string</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">&quot;Connection: Upgrade\x0d\x0a&quot;</span>
+46: 
+47:       <span class="ruby-identifier">raise</span> <span class="ruby-value str">'host is required'</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">host</span>
+48: 
+49:       <span class="ruby-identifier">location</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">build_url</span>(
+50:           <span class="ruby-value">:host</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">host</span>,
+51:           <span class="ruby-value">:secure</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">secure</span>,
+52:           <span class="ruby-value">:resource_name</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">resource_name</span>
+53:       )
+54:       <span class="ruby-identifier">origin</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">origin</span> <span class="ruby-operator">||</span> <span class="ruby-value str">'http://'</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">location</span>.<span class="ruby-identifier">host</span>
+55: 
+56:       <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">version</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">75</span>
+57:           <span class="ruby-identifier">string</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">'WebSocket-Protocol: '</span> <span class="ruby-operator">+</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">subprotocol</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;\x0d\x0a&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">subprotocol</span>
+58:           <span class="ruby-identifier">string</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">'WebSocket-Origin: '</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">origin</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;\x0d\x0a&quot;</span>
+59:           <span class="ruby-identifier">string</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">'WebSocket-Location: '</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">location</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;\x0d\x0a&quot;</span>
+60:       <span class="ruby-keyword kw">else</span>
+61:           <span class="ruby-identifier">string</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">'Sec-WebSocket-Protocol: '</span> <span class="ruby-operator">+</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">subprotocol</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;\x0d\x0a&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">subprotocol</span>
+62:           <span class="ruby-identifier">string</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">'Sec-WebSocket-Origin: '</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">origin</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;\x0d\x0a&quot;</span>
+63:           <span class="ruby-identifier">string</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">'Sec-WebSocket-Location: '</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">location</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;\x0d\x0a&quot;</span>
+64:       <span class="ruby-keyword kw">end</span>
+65: 
+66:       <span class="ruby-keyword kw">unless</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">cookies</span>.<span class="ruby-identifier">empty?</span>
+67:           <span class="ruby-identifier">string</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">'Set-Cookie: '</span>
+68:           <span class="ruby-identifier">string</span> <span class="ruby-operator">+=</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">cookies</span>.<span class="ruby-identifier">collect</span>(&amp;<span class="ruby-value">:to_s</span>).<span class="ruby-identifier">join</span>(<span class="ruby-value str">','</span>)
+69:           <span class="ruby-identifier">string</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">&quot;\x0d\x0a&quot;</span>
+70:       <span class="ruby-keyword kw">end</span>
+71: 
+72:       <span class="ruby-identifier">string</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">&quot;\x0d\x0a&quot;</span>
+73: 
+74:       <span class="ruby-identifier">string</span> <span class="ruby-operator">+=</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">checksum</span> <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">version</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">75</span>
+75: 
+76:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">string</span>
+77:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="protected-instance-method-details" class="method-section section">
+			<h3 class="section-header">Protected Instance Methods</h3>
+
+		
+			<div id="build-cookie-method" class="method-detail ">
+				<a name="method-i-build_cookie"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">build_cookie</span><span
+						class="method-args">(hash = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="build-cookie-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/libwebsocket/response.rb, line 210</span>
+210:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">build_cookie</span>(<span class="ruby-identifier">hash</span> = {})
+211:       <span class="ruby-constant">Cookie</span><span class="ruby-operator">::</span><span class="ruby-constant">Response</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">hash</span>)
+212:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="build-url-method" class="method-detail ">
+				<a name="method-i-build_url"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">build_url</span><span
+						class="method-args">(hash = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="build-url-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/libwebsocket/response.rb, line 206</span>
+206:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">build_url</span>(<span class="ruby-identifier">hash</span> = {})
+207:       <span class="ruby-constant">URL</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">hash</span>)
+208:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="finalize-method" class="method-detail ">
+				<a name="method-i-finalize"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">finalize</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="finalize-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/libwebsocket/response.rb, line 187</span>
+187:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">finalize</span>
+188:       <span class="ruby-identifier">location</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">field</span>(<span class="ruby-value str">'Sec-WebSocket-Location'</span>) <span class="ruby-operator">||</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">field</span>(<span class="ruby-value str">'WebSocket-Location'</span>)
+189:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">location</span>
+190:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">location</span> = <span class="ruby-identifier">location</span>
+191: 
+192:       <span class="ruby-identifier">url</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">build_url</span>
+193:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">url</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">location</span>)
+194: 
+195:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">secure</span> = <span class="ruby-identifier">url</span>.<span class="ruby-identifier">secure</span>
+196:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">host</span> = <span class="ruby-identifier">url</span>.<span class="ruby-identifier">host</span>
+197:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">resource_name</span> = <span class="ruby-identifier">url</span>.<span class="ruby-identifier">resource_name</span>
+198: 
+199:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">origin</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">field</span>(<span class="ruby-value str">'Sec-WebSocket-Origin'</span>) <span class="ruby-operator">||</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">field</span>(<span class="ruby-value str">'WebSocket-Origin'</span>)
+200: 
+201:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">subprotocol</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">field</span>(<span class="ruby-value str">'Sec-WebSocket-Protocol'</span>) <span class="ruby-operator">||</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">field</span>(<span class="ruby-value str">'WebSocket-Protocol'</span>)
+202: 
+203:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span>
+204:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parse-body-method" class="method-detail ">
+				<a name="method-i-parse_body"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse_body</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="parse-body-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/libwebsocket/response.rb, line 169</span>
+169:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse_body</span>
+170:       <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">field</span>(<span class="ruby-value str">'Sec-WebSocket-Origin'</span>)
+171:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@buffer</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">16</span>
+172: 
+173:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">version</span> = <span class="ruby-value">76</span>
+174: 
+175:         <span class="ruby-identifier">checksum</span> = <span class="ruby-ivar">@buffer</span>.<span class="ruby-identifier">slice!</span>(<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">15</span>)
+176:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">checksum</span> = <span class="ruby-identifier">checksum</span>
+177:       <span class="ruby-keyword kw">else</span>
+178:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">version</span> = <span class="ruby-value">75</span>
+179:       <span class="ruby-keyword kw">end</span>
+180: 
+181:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">finalize</span>
+182: 
+183:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">error</span> = <span class="ruby-value str">'Not a valid response'</span>
+184:       <span class="ruby-keyword kw">return</span>
+185:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parse-first-line-method" class="method-detail ">
+				<a name="method-i-parse_first_line"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse_first_line</span><span
+						class="method-args">(line)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="parse-first-line-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/libwebsocket/response.rb, line 160</span>
+160:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse_first_line</span>(<span class="ruby-identifier">line</span>)
+161:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">line</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/\AHTTP\/1.1 101 .+/</span>
+162:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">error</span> = <span class="ruby-value str">'Wrong response line'</span>
+163:         <span class="ruby-keyword kw">return</span>
+164:       <span class="ruby-keyword kw">end</span>
+165: 
+166:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>
+167:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

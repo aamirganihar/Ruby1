@@ -1,0 +1,16 @@
+Wed, 11 Jul 2012 23:50:42 -0700
+lib/user-choices/arglist-strategies.rb	Wed, 11 Jul 2012 23:50:04 -0700
+lib/user-choices/builder.rb	Wed, 11 Jul 2012 23:50:04 -0700
+lib/user-choices/command-line-source.rb	Wed, 11 Jul 2012 23:50:04 -0700
+lib/user-choices/command.rb	Wed, 11 Jul 2012 23:50:04 -0700
+lib/user-choices/conversions.rb	Wed, 11 Jul 2012 23:50:04 -0700
+lib/user-choices/ruby-extensions.rb	Wed, 11 Jul 2012 23:50:04 -0700
+lib/user-choices/sources.rb	Wed, 11 Jul 2012 23:50:04 -0700
+lib/user-choices/version.rb	Wed, 11 Jul 2012 23:50:04 -0700
+lib/user-choices.rb	Wed, 11 Jul 2012 23:50:04 -0700
+History.txt	Wed, 11 Jul 2012 23:50:04 -0700
+LICENSE.txt	Wed, 11 Jul 2012 23:50:04 -0700
+Manifest.txt	Wed, 11 Jul 2012 23:50:04 -0700
+README.txt	Wed, 11 Jul 2012 23:50:04 -0700
+examples/older/README.txt	Wed, 11 Jul 2012 23:50:04 -0700
+examples/tutorial/css/LICENSE.txt	Wed, 11 Jul 2012 23:50:04 -0700

@@ -1,0 +1,905 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Watir::Container</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/watir-classic/container_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/watir-classic/container.rb">lib/watir-classic/container.rb</a></li>
+					
+						<li><a href="../lib/watir-classic/supported_elements_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/watir-classic/supported_elements.rb">lib/watir-classic/supported_elements.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-support_element">::support_element</a></li>
+					
+					<li><a href="#method-i-__ole_inner_elements">#__ole_inner_elements</a></li>
+					
+					<li><a href="#method-i-copy_test_config">#copy_test_config</a></li>
+					
+					<li><a href="#method-i-format_specifiers">#format_specifiers</a></li>
+					
+					<li><a href="#method-i-locator_for">#locator_for</a></li>
+					
+					<li><a href="#method-i-log">#log</a></li>
+					
+					<li><a href="#method-i-modal_dialog">#modal_dialog</a></li>
+					
+					<li><a href="#method-i-show_all_objects">#show_all_objects</a></li>
+					
+					<li><a href="#method-i-wait">#wait</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+			<div id="includes-section" class="section">
+				<h3 class="section-header">Included Modules</h3>
+				<ul class="link-list">
+				
+				
+					<li><a class="include" href="Exception.html">Watir::Exception</a></li>
+				
+				
+				</ul>
+			</div>
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Watir.html">Watir</a></li>
+				
+					<li><a href="../Watir/Area.html">Watir::Area</a></li>
+				
+					<li><a href="../Watir/Assertions.html">Watir::Assertions</a></li>
+				
+					<li><a href="../Watir/Audio.html">Watir::Audio</a></li>
+				
+					<li><a href="../Watir/Base.html">Watir::Base</a></li>
+				
+					<li><a href="../Watir/Browser.html">Watir::Browser</a></li>
+				
+					<li><a href="../Watir/Button.html">Watir::Button</a></li>
+				
+					<li><a href="../Watir/CheckBox.html">Watir::CheckBox</a></li>
+				
+					<li><a href="../Watir/Command.html">Watir::Command</a></li>
+				
+					<li><a href="../Watir/Container.html">Watir::Container</a></li>
+				
+					<li><a href="../Watir/Cookies.html">Watir::Cookies</a></li>
+				
+					<li><a href="../Watir/Data.html">Watir::Data</a></li>
+				
+					<li><a href="../Watir/DefaultLogger.html">Watir::DefaultLogger</a></li>
+				
+					<li><a href="../Watir/DragAndDropHelper.html">Watir::DragAndDropHelper</a></li>
+				
+					<li><a href="../Watir/Element.html">Watir::Element</a></li>
+				
+					<li><a href="../Watir/ElementCollection.html">Watir::ElementCollection</a></li>
+				
+					<li><a href="../Watir/ElementExtensions.html">Watir::ElementExtensions</a></li>
+				
+					<li><a href="../Watir/ElementExtensions/WhenPresentDecorator.html">Watir::ElementExtensions::WhenPresentDecorator</a></li>
+				
+					<li><a href="../Watir/Embed.html">Watir::Embed</a></li>
+				
+					<li><a href="../Watir/Exception.html">Watir::Exception</a></li>
+				
+					<li><a href="../Watir/Exception/FrameAccessDeniedException.html">Watir::Exception::FrameAccessDeniedException</a></li>
+				
+					<li><a href="../Watir/Exception/MissingWayOfFindingObjectException.html">Watir::Exception::MissingWayOfFindingObjectException</a></li>
+				
+					<li><a href="../Watir/Exception/NavigationException.html">Watir::Exception::NavigationException</a></li>
+				
+					<li><a href="../Watir/Exception/NoMatchingWindowFoundException.html">Watir::Exception::NoMatchingWindowFoundException</a></li>
+				
+					<li><a href="../Watir/Exception/NoStatusBarException.html">Watir::Exception::NoStatusBarException</a></li>
+				
+					<li><a href="../Watir/Exception/NoValueFoundException.html">Watir::Exception::NoValueFoundException</a></li>
+				
+					<li><a href="../Watir/Exception/ObjectDisabledException.html">Watir::Exception::ObjectDisabledException</a></li>
+				
+					<li><a href="../Watir/Exception/ObjectReadOnlyException.html">Watir::Exception::ObjectReadOnlyException</a></li>
+				
+					<li><a href="../Watir/Exception/TimeOutException.html">Watir::Exception::TimeOutException</a></li>
+				
+					<li><a href="../Watir/Exception/UnhandledEventException.html">Watir::Exception::UnhandledEventException</a></li>
+				
+					<li><a href="../Watir/Exception/UnknownCellException.html">Watir::Exception::UnknownCellException</a></li>
+				
+					<li><a href="../Watir/Exception/UnknownFormException.html">Watir::Exception::UnknownFormException</a></li>
+				
+					<li><a href="../Watir/Exception/UnknownFrameException.html">Watir::Exception::UnknownFrameException</a></li>
+				
+					<li><a href="../Watir/Exception/UnknownObjectException.html">Watir::Exception::UnknownObjectException</a></li>
+				
+					<li><a href="../Watir/Exception/WatirException.html">Watir::Exception::WatirException</a></li>
+				
+					<li><a href="../Watir/FieldSet.html">Watir::FieldSet</a></li>
+				
+					<li><a href="../Watir/FileField.html">Watir::FileField</a></li>
+				
+					<li><a href="../Watir/Font.html">Watir::Font</a></li>
+				
+					<li><a href="../Watir/Form.html">Watir::Form</a></li>
+				
+					<li><a href="../Watir/FormLocator.html">Watir::FormLocator</a></li>
+				
+					<li><a href="../Watir/Frame.html">Watir::Frame</a></li>
+				
+					<li><a href="../Watir/FrameLocator.html">Watir::FrameLocator</a></li>
+				
+					<li><a href="../Watir/HTMLElementCollection.html">Watir::HTMLElementCollection</a></li>
+				
+					<li><a href="../Watir/Hidden.html">Watir::Hidden</a></li>
+				
+					<li><a href="../Watir/IE.html">Watir::IE</a></li>
+				
+					<li><a href="../Watir/IE/Process.html">Watir::IE::Process</a></li>
+				
+					<li><a href="../Watir/Image.html">Watir::Image</a></li>
+				
+					<li><a href="../Watir/InputElementCollection.html">Watir::InputElementCollection</a></li>
+				
+					<li><a href="../Watir/InputElementLocator.html">Watir::InputElementLocator</a></li>
+				
+					<li><a href="../Watir/JavascriptDialog.html">Watir::JavascriptDialog</a></li>
+				
+					<li><a href="../Watir/Keygen.html">Watir::Keygen</a></li>
+				
+					<li><a href="../Watir/Label.html">Watir::Label</a></li>
+				
+					<li><a href="../Watir/Li.html">Watir::Li</a></li>
+				
+					<li><a href="../Watir/Link.html">Watir::Link</a></li>
+				
+					<li><a href="../Watir/Locator.html">Watir::Locator</a></li>
+				
+					<li><a href="../Watir/Map.html">Watir::Map</a></li>
+				
+					<li><a href="../Watir/Menu.html">Watir::Menu</a></li>
+				
+					<li><a href="../Watir/Meta.html">Watir::Meta</a></li>
+				
+					<li><a href="../Watir/Meter.html">Watir::Meter</a></li>
+				
+					<li><a href="../Watir/ModalDialog.html">Watir::ModalDialog</a></li>
+				
+					<li><a href="../Watir/Object.html">Watir::Object</a></li>
+				
+					<li><a href="../Watir/Optgroup.html">Watir::Optgroup</a></li>
+				
+					<li><a href="../Watir/Option.html">Watir::Option</a></li>
+				
+					<li><a href="../Watir/Output.html">Watir::Output</a></li>
+				
+					<li><a href="../Watir/PageContainer.html">Watir::PageContainer</a></li>
+				
+					<li><a href="../Watir/Param.html">Watir::Param</a></li>
+				
+					<li><a href="../Watir/Process.html">Watir::Process</a></li>
+				
+					<li><a href="../Watir/Progress.html">Watir::Progress</a></li>
+				
+					<li><a href="../Watir/Radio.html">Watir::Radio</a></li>
+				
+					<li><a href="../Watir/RadioCheckCommon.html">Watir::RadioCheckCommon</a></li>
+				
+					<li><a href="../Watir/ScreenCapture.html">Watir::ScreenCapture</a></li>
+				
+					<li><a href="../Watir/Script.html">Watir::Script</a></li>
+				
+					<li><a href="../Watir/SelectList.html">Watir::SelectList</a></li>
+				
+					<li><a href="../Watir/Source.html">Watir::Source</a></li>
+				
+					<li><a href="../Watir/Style.html">Watir::Style</a></li>
+				
+					<li><a href="../Watir/Table.html">Watir::Table</a></li>
+				
+					<li><a href="../Watir/TableCell.html">Watir::TableCell</a></li>
+				
+					<li><a href="../Watir/TableCellCollection.html">Watir::TableCellCollection</a></li>
+				
+					<li><a href="../Watir/TableCellsContainer.html">Watir::TableCellsContainer</a></li>
+				
+					<li><a href="../Watir/TableContainer.html">Watir::TableContainer</a></li>
+				
+					<li><a href="../Watir/TableElementCollection.html">Watir::TableElementCollection</a></li>
+				
+					<li><a href="../Watir/TableElementsContainer.html">Watir::TableElementsContainer</a></li>
+				
+					<li><a href="../Watir/TableRow.html">Watir::TableRow</a></li>
+				
+					<li><a href="../Watir/TableRowCollection.html">Watir::TableRowCollection</a></li>
+				
+					<li><a href="../Watir/TableRowsContainer.html">Watir::TableRowsContainer</a></li>
+				
+					<li><a href="../Watir/TableSection.html">Watir::TableSection</a></li>
+				
+					<li><a href="../Watir/TaggedElementLocator.html">Watir::TaggedElementLocator</a></li>
+				
+					<li><a href="../Watir/TestCase.html">Watir::TestCase</a></li>
+				
+					<li><a href="../Watir/TextField.html">Watir::TextField</a></li>
+				
+					<li><a href="../Watir/TimeKeeper.html">Watir::TimeKeeper</a></li>
+				
+					<li><a href="../Watir/Track.html">Watir::Track</a></li>
+				
+					<li><a href="../Watir/Util.html">Watir::Util</a></li>
+				
+					<li><a href="../Watir/Video.html">Watir::Video</a></li>
+				
+					<li><a href="../Watir/Wait.html">Watir::Wait</a></li>
+				
+					<li><a href="../Watir/Wait/TimeoutError.html">Watir::Wait::TimeoutError</a></li>
+				
+					<li><a href="../Watir/WaitHelper.html">Watir::WaitHelper</a></li>
+				
+					<li><a href="../Watir/Waiter.html">Watir::Waiter</a></li>
+				
+					<li><a href="../Watir/WatirLogger.html">Watir::WatirLogger</a></li>
+				
+					<li><a href="../Watir/WatirOptions.html">Watir::WatirOptions</a></li>
+				
+					<li><a href="../Watir/Win32.html">Watir::Win32</a></li>
+				
+					<li><a href="../Watir/Window.html">Watir::Window</a></li>
+				
+					<li><a href="../Watir/XpathLocator.html">Watir::XpathLocator</a></li>
+				
+					<li><a href="../Test.html">Test</a></li>
+				
+					<li><a href="../Test/Unit.html">Test::Unit</a></li>
+				
+					<li><a href="../Test/Unit/Assertions.html">Test::Unit::Assertions</a></li>
+				
+					<li><a href="../Readline.html">Readline</a></li>
+				
+					<li><a href="../Readline/History.html">Readline::History</a></li>
+				
+					<li><a href="../IEProcess.html">IEProcess</a></li>
+				
+					<li><a href="../Integer.html">Integer</a></li>
+				
+					<li><a href="../Object.html">Object</a></li>
+				
+					<li><a href="../PageCheckers.html">PageCheckers</a></li>
+				
+					<li><a href="../Regexp.html">Regexp</a></li>
+				
+					<li><a href="../String.html">String</a></li>
+				
+					<li><a href="../WinClicker.html">WinClicker</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Watir::Container</h1>
+
+		<div id="description">
+			<pre>
+ This module contains the factory methods that are used to access most html objects
+
+ For example, to access a button on a web page that has the following html
+  &lt;input type=button name='b1' value='Click Me' onClick='javascript:doSomething()'&gt;
+
+ the following watir code could be used to click the button
+
+  browser.button(:name, 'b1').click
+
+ or to find the name attribute
+
+  browser.button(:value, 'Click Me').name
+
+ there are many methods available to the Button object
+</pre>
+<p>
+&#8212;
+</p>
+<pre>
+ Is includable for classes that have @container, document and __ole_inner_elements</pre>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="typingspeed-attribute-method" class="method-detail">
+				<a name="typingspeed"></a>
+				
+				<a name="typingspeed="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">typingspeed</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+This is used to change the typing speed when entering text on a page.
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="type-keys-attribute-method" class="method-detail">
+				<a name="type_keys"></a>
+				
+				<a name="type_keys="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">type_keys</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="active-bject-igh-ight-olor-attribute-method" class="method-detail">
+				<a name="activeObjectHighLightColor"></a>
+				
+				<a name="activeObjectHighLightColor="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">activeObjectHighLightColor</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+The color we want to use for the active object. This can be any valid
+web-friendly color.
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="page-container-attribute-method" class="method-detail">
+				<a name="page_container"></a>
+				
+				<a name="page_container="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">page_container</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+The <a href="PageContainer.html">PageContainer</a> object containing this
+element
+</p>
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="private-class-method-details" class="method-section section">
+			<h3 class="section-header">Private Class Methods</h3>
+
+		
+			<div id="support-element-method" class="method-detail ">
+				<a name="method-c-support_element"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">support_element</span><span
+						class="method-args">(method_name, args={})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="support-element-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-classic/supported_elements.rb, line 5</span>
+ 5:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">support_element</span> <span class="ruby-identifier">method_name</span>, <span class="ruby-identifier">args</span>={}
+ 6:         <span class="ruby-identifier">klass</span> = <span class="ruby-identifier">args</span>[<span class="ruby-value">:class</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">method_name</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">capitalize</span>
+ 7:         <span class="ruby-identifier">super_class</span> = <span class="ruby-identifier">args</span>[<span class="ruby-value">:super_class</span>] <span class="ruby-operator">||</span> <span class="ruby-value str">&quot;Element&quot;</span>
+ 8: 
+ 9:         <span class="ruby-keyword kw">unless</span> <span class="ruby-constant">Watir</span>.<span class="ruby-identifier">const_defined?</span> <span class="ruby-identifier">klass</span>
+10:           <span class="ruby-constant">Watir</span>.<span class="ruby-identifier">class_eval</span> <span class="ruby-node">%[class #{klass} &lt; #{super_class}; end]</span>
+11:         <span class="ruby-keyword kw">end</span>
+12: 
+13:         <span class="ruby-keyword kw">unless</span> <span class="ruby-constant">Watir</span>.<span class="ruby-identifier">const_defined?</span> <span class="ruby-node">&quot;#{klass}Collection&quot;</span>
+14:           <span class="ruby-constant">Watir</span>.<span class="ruby-identifier">class_eval</span> <span class="ruby-node">%[class #{klass}Collection &lt; #{args[:super_collection] || super_class}Collection; end]</span>
+15:         <span class="ruby-keyword kw">end</span>
+16: 
+17:         <span class="ruby-identifier">tag_name</span> = <span class="ruby-identifier">args</span>[<span class="ruby-value">:tag_name</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">method_name</span>
+18: 
+19:         <span class="ruby-constant">Watir</span><span class="ruby-operator">::</span><span class="ruby-constant">Container</span>.<span class="ruby-identifier">module_eval</span> <span class="ruby-node">%[
+20:           def #{method_name}(how={}, what=nil)
+21:             #{klass}.new(self, format_specifiers(#{tag_name.inspect}, how, what))
+22:           end
+23: 
+24:           def #{args.delete(:plural) || method_name.to_s + &quot;s&quot;}(how={}, what=nil)
+25:             specifiers = format_specifiers(#{tag_name.inspect}, how, what)
+26:             #{klass}Collection.new(self, specifiers)
+27:           end
+28:         ]</span>
+29:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="-ole-inner-elements-method" class="method-detail ">
+				<a name="method-i-__ole_inner_elements"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">__ole_inner_elements</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<pre>
+ Searching for Page Elements
+ Not for external consumption
+
+</pre>
+<p>
+++
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="-ole-inner-elements-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-classic/container.rb, line 68</span>
+68:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">__ole_inner_elements</span>
+69:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">document</span>.<span class="ruby-identifier">body</span>.<span class="ruby-identifier">all</span>
+70:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="locator-for-method" class="method-detail ">
+				<a name="method-i-locator_for"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">locator_for</span><span
+						class="method-args">(locator_class, specifiers, klass)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+<a href="Locator.html">Locator</a> Methods
+</p>
+<p>
+Not for external use, but cannot set to private due to usages in <a
+href="Element.html">Element</a> classes.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="locator-for-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-classic/container.rb, line 105</span>
+105:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">locator_for</span>(<span class="ruby-identifier">locator_class</span>, <span class="ruby-identifier">specifiers</span>, <span class="ruby-identifier">klass</span>)
+106:       <span class="ruby-identifier">locator_class</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword kw">self</span>, <span class="ruby-identifier">specifiers</span>, <span class="ruby-identifier">klass</span>
+107:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="log-method" class="method-detail ">
+				<a name="method-i-log"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">log</span><span
+						class="method-args">(what)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Write the specified string to the log.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="log-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-classic/container.rb, line 42</span>
+42:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">log</span>(<span class="ruby-identifier">what</span>)
+43:       <span class="ruby-ivar">@container</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span>(<span class="ruby-identifier">what</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@logger</span>
+44:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="modal-dialog-method" class="method-detail ">
+				<a name="method-i-modal_dialog"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">modal_dialog</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="modal-dialog-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-classic/container.rb, line 60</span>
+60:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">modal_dialog</span>
+61:       <span class="ruby-constant">ModalDialog</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>)
+62:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="show-all-objects-method" class="method-detail ">
+				<a name="method-i-show_all_objects"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">show_all_objects</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+This method shows the available objects on the current page. This is
+usually only used for debugging or writing new test scripts. This is a
+nice feature to help find out what HTML objects are on a page when
+developing a test case using <a href="../Watir.html">Watir</a>.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="show-all-objects-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-classic/container.rb, line 76</span>
+76:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">show_all_objects</span>
+77:       <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;-----------Objects in page -------------&quot;</span>
+78:       <span class="ruby-identifier">doc</span> = <span class="ruby-identifier">document</span>
+79:       <span class="ruby-identifier">s</span> = <span class="ruby-value str">&quot;&quot;</span>
+80:       <span class="ruby-identifier">props</span> = [<span class="ruby-value str">&quot;name&quot;</span>, <span class="ruby-value str">&quot;id&quot;</span>, <span class="ruby-value str">&quot;value&quot;</span>, <span class="ruby-value str">&quot;alt&quot;</span>, <span class="ruby-value str">&quot;src&quot;</span>]
+81:       <span class="ruby-identifier">doc</span>.<span class="ruby-identifier">all</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span>
+82:         <span class="ruby-keyword kw">begin</span>
+83:           <span class="ruby-identifier">s</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">n</span>.<span class="ruby-identifier">invoke</span>(<span class="ruby-value str">&quot;type&quot;</span>).<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">ljust</span>(<span class="ruby-value">16</span>)
+84:         <span class="ruby-keyword kw">rescue</span>
+85:           <span class="ruby-keyword kw">next</span>
+86:         <span class="ruby-keyword kw">end</span>
+87:         <span class="ruby-identifier">props</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">prop</span><span class="ruby-operator">|</span>
+88:           <span class="ruby-keyword kw">begin</span>
+89:             <span class="ruby-identifier">p</span> = <span class="ruby-identifier">n</span>.<span class="ruby-identifier">invoke</span>(<span class="ruby-identifier">prop</span>)
+90:             <span class="ruby-identifier">s</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">&quot;  &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-node">&quot;#{prop}=#{p}&quot;</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">ljust</span>(<span class="ruby-value">18</span>)
+91:           <span class="ruby-keyword kw">rescue</span>
+92:             <span class="ruby-comment cmt"># this object probably doesnt have this property</span>
+93:           <span class="ruby-keyword kw">end</span>
+94:         <span class="ruby-keyword kw">end</span>
+95:         <span class="ruby-identifier">s</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">&quot;\n&quot;</span>
+96:       <span class="ruby-keyword kw">end</span>
+97:       <span class="ruby-identifier">puts</span> <span class="ruby-identifier">s</span>
+98:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="wait-method" class="method-detail ">
+				<a name="method-i-wait"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">wait</span><span
+						class="method-args">(no_sleep=false)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<pre>
+ Wait until Browser has finished loading the page.
+</pre>
+<p>
+&#8212;
+</p>
+<pre>
+ called explicitly by most click and set methods</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="wait-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-classic/container.rb, line 49</span>
+49:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">wait</span>(<span class="ruby-identifier">no_sleep</span>=<span class="ruby-keyword kw">false</span>)
+50:       <span class="ruby-ivar">@container</span>.<span class="ruby-identifier">wait</span>(<span class="ruby-identifier">no_sleep</span>)
+51:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="copy-test-config-method" class="method-detail ">
+				<a name="method-i-copy_test_config"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">copy_test_config</span><span
+						class="method-args">(container)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="copy-test-config-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-classic/container.rb, line 34</span>
+34:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">copy_test_config</span>(<span class="ruby-identifier">container</span>) <span class="ruby-comment cmt"># only used by form and frame</span>
+35:       <span class="ruby-ivar">@typingspeed</span> = <span class="ruby-identifier">container</span>.<span class="ruby-identifier">typingspeed</span>
+36:       <span class="ruby-ivar">@type_keys</span> = <span class="ruby-identifier">container</span>.<span class="ruby-identifier">type_keys</span>
+37:       <span class="ruby-ivar">@activeObjectHighLightColor</span> = <span class="ruby-identifier">container</span>.<span class="ruby-identifier">activeObjectHighLightColor</span>
+38:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="format-specifiers-method" class="method-detail ">
+				<a name="method-i-format_specifiers"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">format_specifiers</span><span
+						class="method-args">(tag_name, how, what)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="format-specifiers-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-classic/supported_elements.rb, line 34</span>
+34:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">format_specifiers</span>(<span class="ruby-identifier">tag_name</span>, <span class="ruby-identifier">how</span>, <span class="ruby-identifier">what</span>)
+35:       <span class="ruby-identifier">defaults</span> = {<span class="ruby-value">:tag_name</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-identifier">tag_name</span>].<span class="ruby-identifier">flatten</span>.<span class="ruby-identifier">map</span>(&amp;<span class="ruby-value">:to_s</span>)}
+36:       <span class="ruby-identifier">formatted_specifiers</span> = <span class="ruby-identifier">defaults</span>.<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">what</span> <span class="ruby-operator">?</span> {<span class="ruby-identifier">how</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">what</span>} <span class="ruby-operator">:</span> <span class="ruby-identifier">how</span>)
+37:       <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">formatted_specifiers</span>[<span class="ruby-value">:css</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">formatted_specifiers</span>[<span class="ruby-value">:xpath</span>]) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">formatted_specifiers</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">2</span>
+38:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;:xpath and :css specifiers should be the only one when used in #{formatted_specifiers.inspect}&quot;</span>
+39:       <span class="ruby-keyword kw">end</span>
+40:       <span class="ruby-identifier">formatted_specifiers</span>
+41:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

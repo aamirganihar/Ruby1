@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+	<title>Class: RSpec::Mocks::ConstantStubber</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/rspec/mocks/stub_const_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/rspec/mocks/stub_const.rb">lib/rspec/mocks/stub_const.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+			<div id="namespace-list-section" class="section">
+				<h3 class="section-header">Namespace</h3>
+				<ul class="link-list">
+					
+					<li><span class="type">CLASS</span> <a href="ConstantStubber/BaseStubber.html">RSpec::Mocks::ConstantStubber::BaseStubber</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="ConstantStubber/DefinedConstantReplacer.html">RSpec::Mocks::ConstantStubber::DefinedConstantReplacer</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="ConstantStubber/UndefinedConstantSetter.html">RSpec::Mocks::ConstantStubber::UndefinedConstantSetter</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-ensure_registered_with_mocks_space">::ensure_registered_with_mocks_space</a></li>
+					
+					<li><a href="#method-c-find">::find</a></li>
+					
+					<li><a href="#method-c-raise_on_invalid_const">::raise_on_invalid_const</a></li>
+					
+					<li><a href="#method-c-rspec_reset">::rspec_reset</a></li>
+					
+					<li><a href="#method-c-stub">::stub</a></li>
+					
+					<li><a href="#method-c-stubbers">::stubbers</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../RSpec.html">RSpec</a></li>
+				
+					<li><a href="../../RSpec/Mocks.html">RSpec::Mocks</a></li>
+				
+					<li><a href="../../RSpec/Mocks/AmbiguousReturnError.html">RSpec::Mocks::AmbiguousReturnError</a></li>
+				
+					<li><a href="../../RSpec/Mocks/AnyInstance.html">RSpec::Mocks::AnyInstance</a></li>
+				
+					<li><a href="../../RSpec/Mocks/AnyInstance/Chain.html">RSpec::Mocks::AnyInstance::Chain</a></li>
+				
+					<li><a href="../../RSpec/Mocks/AnyInstance/ExpectationChain.html">RSpec::Mocks::AnyInstance::ExpectationChain</a></li>
+				
+					<li><a href="../../RSpec/Mocks/AnyInstance/MessageChains.html">RSpec::Mocks::AnyInstance::MessageChains</a></li>
+				
+					<li><a href="../../RSpec/Mocks/AnyInstance/NegativeExpectationChain.html">RSpec::Mocks::AnyInstance::NegativeExpectationChain</a></li>
+				
+					<li><a href="../../RSpec/Mocks/AnyInstance/PositiveExpectationChain.html">RSpec::Mocks::AnyInstance::PositiveExpectationChain</a></li>
+				
+					<li><a href="../../RSpec/Mocks/AnyInstance/Recorder.html">RSpec::Mocks::AnyInstance::Recorder</a></li>
+				
+					<li><a href="../../RSpec/Mocks/AnyInstance/StubChain.html">RSpec::Mocks::AnyInstance::StubChain</a></li>
+				
+					<li><a href="../../RSpec/Mocks/AnyInstance/StubChainChain.html">RSpec::Mocks::AnyInstance::StubChainChain</a></li>
+				
+					<li><a href="../../RSpec/Mocks/ArgumentListMatcher.html">RSpec::Mocks::ArgumentListMatcher</a></li>
+				
+					<li><a href="../../RSpec/Mocks/ArgumentMatchers.html">RSpec::Mocks::ArgumentMatchers</a></li>
+				
+					<li><a href="../../RSpec/Mocks/ArgumentMatchers/AnyArgMatcher.html">RSpec::Mocks::ArgumentMatchers::AnyArgMatcher</a></li>
+				
+					<li><a href="../../RSpec/Mocks/ArgumentMatchers/AnyArgsMatcher.html">RSpec::Mocks::ArgumentMatchers::AnyArgsMatcher</a></li>
+				
+					<li><a href="../../RSpec/Mocks/ArgumentMatchers/BooleanMatcher.html">RSpec::Mocks::ArgumentMatchers::BooleanMatcher</a></li>
+				
+					<li><a href="../../RSpec/Mocks/ArgumentMatchers/DuckTypeMatcher.html">RSpec::Mocks::ArgumentMatchers::DuckTypeMatcher</a></li>
+				
+					<li><a href="../../RSpec/Mocks/ArgumentMatchers/EqualityProxy.html">RSpec::Mocks::ArgumentMatchers::EqualityProxy</a></li>
+				
+					<li><a href="../../RSpec/Mocks/ArgumentMatchers/HashExcludingMatcher.html">RSpec::Mocks::ArgumentMatchers::HashExcludingMatcher</a></li>
+				
+					<li><a href="../../RSpec/Mocks/ArgumentMatchers/HashIncludingMatcher.html">RSpec::Mocks::ArgumentMatchers::HashIncludingMatcher</a></li>
+				
+					<li><a href="../../RSpec/Mocks/ArgumentMatchers/InstanceOf.html">RSpec::Mocks::ArgumentMatchers::InstanceOf</a></li>
+				
+					<li><a href="../../RSpec/Mocks/ArgumentMatchers/KindOf.html">RSpec::Mocks::ArgumentMatchers::KindOf</a></li>
+				
+					<li><a href="../../RSpec/Mocks/ArgumentMatchers/MatcherMatcher.html">RSpec::Mocks::ArgumentMatchers::MatcherMatcher</a></li>
+				
+					<li><a href="../../RSpec/Mocks/ArgumentMatchers/NoArgsMatcher.html">RSpec::Mocks::ArgumentMatchers::NoArgsMatcher</a></li>
+				
+					<li><a href="../../RSpec/Mocks/ArgumentMatchers/RegexpMatcher.html">RSpec::Mocks::ArgumentMatchers::RegexpMatcher</a></li>
+				
+					<li><a href="../../RSpec/Mocks/Constant.html">RSpec::Mocks::Constant</a></li>
+				
+					<li><a href="../../RSpec/Mocks/ConstantStubber.html">RSpec::Mocks::ConstantStubber</a></li>
+				
+					<li><a href="../../RSpec/Mocks/ConstantStubber/BaseStubber.html">RSpec::Mocks::ConstantStubber::BaseStubber</a></li>
+				
+					<li><a href="../../RSpec/Mocks/ConstantStubber/DefinedConstantReplacer.html">RSpec::Mocks::ConstantStubber::DefinedConstantReplacer</a></li>
+				
+					<li><a href="../../RSpec/Mocks/ConstantStubber/UndefinedConstantSetter.html">RSpec::Mocks::ConstantStubber::UndefinedConstantSetter</a></li>
+				
+					<li><a href="../../RSpec/Mocks/ErrorGenerator.html">RSpec::Mocks::ErrorGenerator</a></li>
+				
+					<li><a href="../../RSpec/Mocks/ExampleMethods.html">RSpec::Mocks::ExampleMethods</a></li>
+				
+					<li><a href="../../RSpec/Mocks/InstanceExec.html">RSpec::Mocks::InstanceExec</a></li>
+				
+					<li><a href="../../RSpec/Mocks/MessageExpectation.html">RSpec::Mocks::MessageExpectation</a></li>
+				
+					<li><a href="../../RSpec/Mocks/MethodDouble.html">RSpec::Mocks::MethodDouble</a></li>
+				
+					<li><a href="../../RSpec/Mocks/Methods.html">RSpec::Mocks::Methods</a></li>
+				
+					<li><a href="../../RSpec/Mocks/Mock.html">RSpec::Mocks::Mock</a></li>
+				
+					<li><a href="../../RSpec/Mocks/MockExpectationError.html">RSpec::Mocks::MockExpectationError</a></li>
+				
+					<li><a href="../../RSpec/Mocks/NegativeMessageExpectation.html">RSpec::Mocks::NegativeMessageExpectation</a></li>
+				
+					<li><a href="../../RSpec/Mocks/OrderGroup.html">RSpec::Mocks::OrderGroup</a></li>
+				
+					<li><a href="../../RSpec/Mocks/Proxy.html">RSpec::Mocks::Proxy</a></li>
+				
+					<li><a href="../../RSpec/Mocks/RecursiveConstMethods.html">RSpec::Mocks::RecursiveConstMethods</a></li>
+				
+					<li><a href="../../RSpec/Mocks/Serialization.html">RSpec::Mocks::Serialization</a></li>
+				
+					<li><a href="../../RSpec/Mocks/Serialization/YAML.html">RSpec::Mocks::Serialization::YAML</a></li>
+				
+					<li><a href="../../RSpec/Mocks/Space.html">RSpec::Mocks::Space</a></li>
+				
+					<li><a href="../../RSpec/Mocks/TestDouble.html">RSpec::Mocks::TestDouble</a></li>
+				
+					<li><a href="../../RSpec/Mocks/Version.html">RSpec::Mocks::Version</a></li>
+				
+					<li><a href="../../Marshal.html">Marshal</a></li>
+				
+					<li><a href="../../Psych.html">Psych</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">RSpec::Mocks::ConstantStubber</h1>
+
+		<div id="description">
+			<p>
+Provides a means to stub constants.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="ensure-registered-with-mocks-space-method" class="method-detail ">
+				<a name="method-c-ensure_registered_with_mocks_space"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">ensure_registered_with_mocks_space</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Ensures the constant stubbing is registered with rspec-mocks space so that
+stubbed constants can be restored when examples finish.
+</p>
+<p>
+@api private
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="ensure-registered-with-mocks-space-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rspec/mocks/stub_const.rb, line 232</span>
+232:       <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">ensure_registered_with_mocks_space</span>
+233:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@registered_with_mocks_space</span>
+234:         <span class="ruby-operator">::</span><span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Mocks</span>.<span class="ruby-identifier">space</span>.<span class="ruby-identifier">add</span>(<span class="ruby-keyword kw">self</span>)
+235:         <span class="ruby-ivar">@registered_with_mocks_space</span> = <span class="ruby-keyword kw">true</span>
+236:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="find-method" class="method-detail ">
+				<a name="method-c-find"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">find</span><span
+						class="method-args">(name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="find-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rspec/mocks/stub_const.rb, line 261</span>
+261:       <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">name</span>)
+262:         <span class="ruby-identifier">stubbers</span>.<span class="ruby-identifier">find</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">full_constant_name</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">name</span> }
+263:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="raise-on-invalid-const-method" class="method-detail ">
+				<a name="method-c-raise_on_invalid_const"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">raise_on_invalid_const</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Used internally by the constant stubbing to raise a helpful error when a
+constant like &#8220;A::B::C&#8221; is stubbed and A::B is not a module
+(and thus, it&#8217;s impossible to define &#8220;A::B::C&#8221; since only
+modules can have nested constants).
+</p>
+<p>
+@api private
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="raise-on-invalid-const-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rspec/mocks/stub_const.rb, line 271</span>
+271:       <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">raise_on_invalid_const</span>
+272:         <span class="ruby-identifier">lambda</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">const_name</span>, <span class="ruby-identifier">failed_name</span><span class="ruby-operator">|</span>
+273:           <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Cannot stub constant #{failed_name} on #{const_name} &quot;</span> <span class="ruby-operator">+</span>
+274:                 <span class="ruby-node">&quot;since #{const_name} is not a module.&quot;</span>
+275:         <span class="ruby-keyword kw">end</span>
+276:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="rspec-reset-method" class="method-detail ">
+				<a name="method-c-rspec_reset"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">rspec_reset</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Resets all stubbed constants. This is called automatically by rspec-mocks
+when an example finishes.
+</p>
+<p>
+@api private
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="rspec-reset-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rspec/mocks/stub_const.rb, line 242</span>
+242:       <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">rspec_reset</span>
+243:         <span class="ruby-ivar">@registered_with_mocks_space</span> = <span class="ruby-keyword kw">false</span>
+244: 
+245:         <span class="ruby-comment cmt"># We use reverse order so that if the same constant</span>
+246:         <span class="ruby-comment cmt"># was stubbed multiple times, the original value gets</span>
+247:         <span class="ruby-comment cmt"># properly restored.</span>
+248:         <span class="ruby-identifier">stubbers</span>.<span class="ruby-identifier">reverse</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">rspec_reset</span> }
+249: 
+250:         <span class="ruby-identifier">stubbers</span>.<span class="ruby-identifier">clear</span>
+251:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="stub-method" class="method-detail ">
+				<a name="method-c-stub"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">stub</span><span
+						class="method-args">(constant_name, value, options = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Stubs a constant.
+</p>
+<p>
+@param (see <a
+href="ExampleMethods.html#method-i-stub_const">ExampleMethods#stub_const</a>)
+@option (see <a
+href="ExampleMethods.html#method-i-stub_const">ExampleMethods#stub_const</a>)
+@return (see <a
+href="ExampleMethods.html#method-i-stub_const">ExampleMethods#stub_const</a>)
+</p>
+<p>
+@see <a
+href="ExampleMethods.html#method-i-stub_const">ExampleMethods#stub_const</a>
+@note It&#8217;s recommended that you use `stub_const` in your
+</p>
+<pre>
+ examples. This is an alternate public API that is provided
+ so you can stub constants in other contexts (e.g. helper
+ classes).</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="stub-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rspec/mocks/stub_const.rb, line 95</span>
+ 95:       <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">stub</span>(<span class="ruby-identifier">constant_name</span>, <span class="ruby-identifier">value</span>, <span class="ruby-identifier">options</span> = {})
+ 96:         <span class="ruby-identifier">stubber</span> = <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">recursive_const_defined?</span>(<span class="ruby-identifier">constant_name</span>, &amp;<span class="ruby-identifier">raise_on_invalid_const</span>)
+ 97:           <span class="ruby-constant">DefinedConstantReplacer</span>
+ 98:         <span class="ruby-keyword kw">else</span>
+ 99:           <span class="ruby-constant">UndefinedConstantSetter</span>
+100:         <span class="ruby-keyword kw">end</span>
+101: 
+102:         <span class="ruby-identifier">stubber</span> = <span class="ruby-identifier">stubber</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">constant_name</span>, <span class="ruby-identifier">value</span>, <span class="ruby-identifier">options</span>[<span class="ruby-value">:transfer_nested_constants</span>])
+103:         <span class="ruby-identifier">stubbers</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">stubber</span>
+104: 
+105:         <span class="ruby-identifier">stubber</span>.<span class="ruby-identifier">stub</span>
+106:         <span class="ruby-identifier">ensure_registered_with_mocks_space</span>
+107:         <span class="ruby-identifier">value</span>
+108:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="stubbers-method" class="method-detail ">
+				<a name="method-c-stubbers"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">stubbers</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The list of constant stubbers that have been used for the current example.
+</p>
+<p>
+@api private
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="stubbers-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rspec/mocks/stub_const.rb, line 257</span>
+257:       <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">stubbers</span>
+258:         <span class="ruby-ivar">@stubbers</span> <span class="ruby-operator">||=</span> []
+259:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

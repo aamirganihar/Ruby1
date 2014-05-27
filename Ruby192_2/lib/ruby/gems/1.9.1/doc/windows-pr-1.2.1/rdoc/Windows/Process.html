@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Windows::Process</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/windows/process_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/windows/process.rb">lib/windows/process.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-windows_64%3F">#windows_64?</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../CHANGES.html">CHANGES</a></li>
+				
+					<li class="file"><a href="../MANIFEST.html">MANIFEST</a></li>
+				
+					<li class="file"><a href="../README.html">README</a></li>
+				
+					<li class="file"><a href="../doc/conversion_guide_txt.html">conversion_guide.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Windows.html">Windows</a></li>
+				
+					<li><a href="../Windows/COM.html">Windows::COM</a></li>
+				
+					<li><a href="../Windows/COM/Accessibility.html">Windows::COM::Accessibility</a></li>
+				
+					<li><a href="../Windows/COM/Automation.html">Windows::COM::Automation</a></li>
+				
+					<li><a href="../Windows/COM/Variant.html">Windows::COM::Variant</a></li>
+				
+					<li><a href="../Windows/Clipboard.html">Windows::Clipboard</a></li>
+				
+					<li><a href="../Windows/Console.html">Windows::Console</a></li>
+				
+					<li><a href="../Windows/Debug.html">Windows::Debug</a></li>
+				
+					<li><a href="../Windows/DeviceIO.html">Windows::DeviceIO</a></li>
+				
+					<li><a href="../Windows/Directory.html">Windows::Directory</a></li>
+				
+					<li><a href="../Windows/Error.html">Windows::Error</a></li>
+				
+					<li><a href="../Windows/EventLog.html">Windows::EventLog</a></li>
+				
+					<li><a href="../Windows/File.html">Windows::File</a></li>
+				
+					<li><a href="../Windows/FileMapping.html">Windows::FileMapping</a></li>
+				
+					<li><a href="../Windows/FileSystem.html">Windows::FileSystem</a></li>
+				
+					<li><a href="../Windows/GDI.html">Windows::GDI</a></li>
+				
+					<li><a href="../Windows/GDI/Bitmap.html">Windows::GDI::Bitmap</a></li>
+				
+					<li><a href="../Windows/GDI/DeviceContext.html">Windows::GDI::DeviceContext</a></li>
+				
+					<li><a href="../Windows/GDI/MetaFile.html">Windows::GDI::MetaFile</a></li>
+				
+					<li><a href="../Windows/GDI/PaintingDrawing.html">Windows::GDI::PaintingDrawing</a></li>
+				
+					<li><a href="../Windows/Handle.html">Windows::Handle</a></li>
+				
+					<li><a href="../Windows/Library.html">Windows::Library</a></li>
+				
+					<li><a href="../Windows/Limits.html">Windows::Limits</a></li>
+				
+					<li><a href="../Windows/MSVCRT.html">Windows::MSVCRT</a></li>
+				
+					<li><a href="../Windows/MSVCRT/Buffer.html">Windows::MSVCRT::Buffer</a></li>
+				
+					<li><a href="../Windows/MSVCRT/Directory.html">Windows::MSVCRT::Directory</a></li>
+				
+					<li><a href="../Windows/MSVCRT/File.html">Windows::MSVCRT::File</a></li>
+				
+					<li><a href="../Windows/MSVCRT/IO.html">Windows::MSVCRT::IO</a></li>
+				
+					<li><a href="../Windows/MSVCRT/String.html">Windows::MSVCRT::String</a></li>
+				
+					<li><a href="../Windows/MSVCRT/Time.html">Windows::MSVCRT::Time</a></li>
+				
+					<li><a href="../Windows/Mailslot.html">Windows::Mailslot</a></li>
+				
+					<li><a href="../Windows/Memory.html">Windows::Memory</a></li>
+				
+					<li><a href="../Windows/NIO.html">Windows::NIO</a></li>
+				
+					<li><a href="../Windows/NTFS.html">Windows::NTFS</a></li>
+				
+					<li><a href="../Windows/NTFS/Winternl.html">Windows::NTFS::Winternl</a></li>
+				
+					<li><a href="../Windows/National.html">Windows::National</a></li>
+				
+					<li><a href="../Windows/Network.html">Windows::Network</a></li>
+				
+					<li><a href="../Windows/Network/Management.html">Windows::Network::Management</a></li>
+				
+					<li><a href="../Windows/Network/SNMP.html">Windows::Network::SNMP</a></li>
+				
+					<li><a href="../Windows/Network/Winsock.html">Windows::Network::Winsock</a></li>
+				
+					<li><a href="../Windows/Path.html">Windows::Path</a></li>
+				
+					<li><a href="../Windows/Pipe.html">Windows::Pipe</a></li>
+				
+					<li><a href="../Windows/Process.html">Windows::Process</a></li>
+				
+					<li><a href="../Windows/Registry.html">Windows::Registry</a></li>
+				
+					<li><a href="../Windows/Security.html">Windows::Security</a></li>
+				
+					<li><a href="../Windows/Security/Authentication.html">Windows::Security::Authentication</a></li>
+				
+					<li><a href="../Windows/Service.html">Windows::Service</a></li>
+				
+					<li><a href="../Windows/Shell.html">Windows::Shell</a></li>
+				
+					<li><a href="../Windows/Socket.html">Windows::Socket</a></li>
+				
+					<li><a href="../Windows/Sound.html">Windows::Sound</a></li>
+				
+					<li><a href="../Windows/Synchronize.html">Windows::Synchronize</a></li>
+				
+					<li><a href="../Windows/SystemInfo.html">Windows::SystemInfo</a></li>
+				
+					<li><a href="../Windows/Thread.html">Windows::Thread</a></li>
+				
+					<li><a href="../Windows/Time.html">Windows::Time</a></li>
+				
+					<li><a href="../Windows/ToolHelper.html">Windows::ToolHelper</a></li>
+				
+					<li><a href="../Windows/Unicode.html">Windows::Unicode</a></li>
+				
+					<li><a href="../Windows/Volume.html">Windows::Volume</a></li>
+				
+					<li><a href="../Windows/WSA.html">Windows::WSA</a></li>
+				
+					<li><a href="../Windows/Window.html">Windows::Window</a></li>
+				
+					<li><a href="../Windows/Window/Classes.html">Windows::Window::Classes</a></li>
+				
+					<li><a href="../Windows/Window/Dialog.html">Windows::Window::Dialog</a></li>
+				
+					<li><a href="../Windows/Window/Menu.html">Windows::Window::Menu</a></li>
+				
+					<li><a href="../Windows/Window/Message.html">Windows::Window::Message</a></li>
+				
+					<li><a href="../Windows/Window/Properties.html">Windows::Window::Properties</a></li>
+				
+					<li><a href="../Windows/Window/Timer.html">Windows::Window::Timer</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Windows::Process</h1>
+
+		<div id="description">
+			<p>
+The <a href="Process.html">Process</a> module includes process related
+functions and constants, including some tool help functions that relate to
+processes.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="PROCESS_ALL_ACCESS">PROCESS_ALL_ACCESS</a></dt>
+				
+				<dd class="description"><p>
+<a href="Process.html">Process</a> access rights
+</p></dd>
+				
+			
+				<dt><a name="PROCESS_CREATE_PROCESS">PROCESS_CREATE_PROCESS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="PROCESS_CREATE_THREAD">PROCESS_CREATE_THREAD</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="PROCESS_DUP_HANDLE">PROCESS_DUP_HANDLE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="PROCESS_QUERY_INFORMATION">PROCESS_QUERY_INFORMATION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="PROCESS_QUERY_LIMITED_INFORMATION">PROCESS_QUERY_LIMITED_INFORMATION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="PROCESS_SET_QUOTA">PROCESS_SET_QUOTA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="PROCESS_SET_INFORMATION">PROCESS_SET_INFORMATION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="PROCESS_SUSPEND_RESUME">PROCESS_SUSPEND_RESUME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="PROCESS_TERMINATE">PROCESS_TERMINATE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="PROCESS_VM_OPERATION">PROCESS_VM_OPERATION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="PROCESS_VM_READ">PROCESS_VM_READ</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="PROCESS_VM_WRITE">PROCESS_VM_WRITE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SYNCHRONIZE">SYNCHRONIZE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="STILL_ACTIVE">STILL_ACTIVE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ABOVE_NORMAL_PRIORITY_CLASS">ABOVE_NORMAL_PRIORITY_CLASS</a></dt>
+				
+				<dd class="description"><p>
+<a href="Process.html">Process</a> priority flags
+</p></dd>
+				
+			
+				<dt><a name="BELOW_NORMAL_PRIORITY_CLASS">BELOW_NORMAL_PRIORITY_CLASS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="HIGH_PRIORITY_CLASS">HIGH_PRIORITY_CLASS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="IDLE_PRIORITY_CLASS">IDLE_PRIORITY_CLASS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NORMAL_PRIORITY_CLASS">NORMAL_PRIORITY_CLASS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="REALTIME_PRIORITY_CLASS">REALTIME_PRIORITY_CLASS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CREATE_BREAKAWAY_FROM_JOB">CREATE_BREAKAWAY_FROM_JOB</a></dt>
+				
+				<dd class="description"><p>
+<a href="Process.html">Process</a> creation flags
+</p></dd>
+				
+			
+				<dt><a name="CREATE_DEFAULT_ERROR_MODE">CREATE_DEFAULT_ERROR_MODE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CREATE_NEW_CONSOLE">CREATE_NEW_CONSOLE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CREATE_NEW_PROCESS_GROUP">CREATE_NEW_PROCESS_GROUP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CREATE_NO_WINDOW">CREATE_NO_WINDOW</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CREATE_PRESERVE_CODE_AUTHZ_LEVEL">CREATE_PRESERVE_CODE_AUTHZ_LEVEL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CREATE_SEPARATE_WOW_VDM">CREATE_SEPARATE_WOW_VDM</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CREATE_SHARED_WOW_VDM">CREATE_SHARED_WOW_VDM</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CREATE_SUSPENDED">CREATE_SUSPENDED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CREATE_UNICODE_ENVIRONMENT">CREATE_UNICODE_ENVIRONMENT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DEBUG_ONLY_THIS_PROCESS">DEBUG_ONLY_THIS_PROCESS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DEBUG_PROCESS">DEBUG_PROCESS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DETACHED_PROCESS">DETACHED_PROCESS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="STARTF_USESHOWWINDOW">STARTF_USESHOWWINDOW</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="STARTF_USESIZE">STARTF_USESIZE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="STARTF_USEPOSITION">STARTF_USEPOSITION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="STARTF_USECOUNTCHARS">STARTF_USECOUNTCHARS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="STARTF_USEFILLATTRIBUTE">STARTF_USEFILLATTRIBUTE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="STARTF_RUNFULLSCREEN">STARTF_RUNFULLSCREEN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="STARTF_FORCEONFEEDBACK">STARTF_FORCEONFEEDBACK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="STARTF_FORCEOFFFEEDBACK">STARTF_FORCEOFFFEEDBACK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="STARTF_USESTDHANDLES">STARTF_USESTDHANDLES</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="STARTF_USEHOTKEY">STARTF_USEHOTKEY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOGON_WITH_PROFILE">LOGON_WITH_PROFILE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOGON_NETCREDENTIALS_ONLY">LOGON_NETCREDENTIALS_ONLY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SHUTDOWN_NORETRY">SHUTDOWN_NORETRY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="JobObjectBasicLimitInformation">JobObjectBasicLimitInformation</a></dt>
+				
+				<dd class="description"><p>
+Job Object Classes
+</p></dd>
+				
+			
+				<dt><a name="JobObjectBasicUIRestrictions">JobObjectBasicUIRestrictions</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="JobObjectSecurityLimitInformation">JobObjectSecurityLimitInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="JobObjectEndOfJobTimeInformation">JobObjectEndOfJobTimeInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="JobObjectAssociateCompletionPortInformation">JobObjectAssociateCompletionPortInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="JobObjectExtendedLimitInformation">JobObjectExtendedLimitInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="JobObjectGroupInformation">JobObjectGroupInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="JOB_OBJECT_LIMIT_WORKINGSET">JOB_OBJECT_LIMIT_WORKINGSET</a></dt>
+				
+				<dd class="description"><p>
+Job Limit Flags
+</p></dd>
+				
+			
+				<dt><a name="JOB_OBJECT_LIMIT_PROCESS_TIME">JOB_OBJECT_LIMIT_PROCESS_TIME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="JOB_OBJECT_LIMIT_JOB_TIME">JOB_OBJECT_LIMIT_JOB_TIME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="JOB_OBJECT_LIMIT_ACTIVE_PROCESS">JOB_OBJECT_LIMIT_ACTIVE_PROCESS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="JOB_OBJECT_LIMIT_AFFINITY">JOB_OBJECT_LIMIT_AFFINITY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="JOB_OBJECT_LIMIT_PRIORITY_CLASS">JOB_OBJECT_LIMIT_PRIORITY_CLASS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="JOB_OBJECT_LIMIT_PRESERVE_JOB_TIME">JOB_OBJECT_LIMIT_PRESERVE_JOB_TIME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="JOB_OBJECT_LIMIT_SCHEDULING_CLASS">JOB_OBJECT_LIMIT_SCHEDULING_CLASS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="JOB_OBJECT_LIMIT_PROCESS_MEMORY">JOB_OBJECT_LIMIT_PROCESS_MEMORY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="JOB_OBJECT_LIMIT_JOB_MEMORY">JOB_OBJECT_LIMIT_JOB_MEMORY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="JOB_OBJECT_LIMIT_DIE_ON_UNHANDLED_EXCEPTION">JOB_OBJECT_LIMIT_DIE_ON_UNHANDLED_EXCEPTION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="JOB_OBJECT_LIMIT_BREAKAWAY_OK">JOB_OBJECT_LIMIT_BREAKAWAY_OK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="JOB_OBJECT_LIMIT_SILENT_BREAKAWAY_OK">JOB_OBJECT_LIMIT_SILENT_BREAKAWAY_OK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE">JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="JOB_OBJECT_ASSIGN_PROCESS">JOB_OBJECT_ASSIGN_PROCESS</a></dt>
+				
+				<dd class="description"><p>
+Job Access Rights
+</p></dd>
+				
+			
+				<dt><a name="JOB_OBJECT_SET_ATTRIBUTES">JOB_OBJECT_SET_ATTRIBUTES</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="JOB_OBJECT_QUERY">JOB_OBJECT_QUERY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="JOB_OBJECT_TERMINATE">JOB_OBJECT_TERMINATE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="JOB_OBJECT_SET_SECURITY_ATTRIBUTES">JOB_OBJECT_SET_SECURITY_ATTRIBUTES</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="JOB_OBJECT_ALL_ACCESS">JOB_OBJECT_ALL_ACCESS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="windows--method" class="method-detail ">
+				<a name="method-i-windows_64%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">windows_64?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Helper method to determine if you&#8217;re on a 64 bit version of <a
+href="../Windows.html">Windows</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="windows--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/process.rb, line 161</span>
+161:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">windows_64?</span>
+162:       <span class="ruby-identifier">bool</span> = <span class="ruby-keyword kw">false</span>
+163: 
+164:       <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">defined?</span> <span class="ruby-constant">IsWow64Process</span>
+165:         <span class="ruby-identifier">buf</span> = <span class="ruby-value">0</span>.<span class="ruby-identifier">chr</span> * <span class="ruby-value">4</span>
+166:         <span class="ruby-keyword kw">if</span> <span class="ruby-constant">IsWow64Process</span>(<span class="ruby-constant">GetCurrentProcess</span>(), <span class="ruby-identifier">buf</span>)
+167:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">buf</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-value str">'I'</span>)[<span class="ruby-value">0</span>] <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+168:             <span class="ruby-identifier">bool</span> = <span class="ruby-keyword kw">true</span>
+169:           <span class="ruby-keyword kw">end</span>
+170:         <span class="ruby-keyword kw">end</span>
+171:       <span class="ruby-keyword kw">end</span>
+172: 
+173:       <span class="ruby-identifier">bool</span>
+174:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

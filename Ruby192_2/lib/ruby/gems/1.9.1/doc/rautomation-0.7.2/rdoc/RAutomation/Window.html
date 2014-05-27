@@ -1,0 +1,1465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: RAutomation::Window</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/rautomation/window_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/rautomation/window.rb">lib/rautomation/window.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-c-wait_timeout">::wait_timeout</a></li>
+					
+					<li><a href="#method-c-wait_timeout%3D">::wait_timeout=</a></li>
+					
+					<li><a href="#method-c-windows">::windows</a></li>
+					
+					<li><a href="#method-i-activate">#activate</a></li>
+					
+					<li><a href="#method-i-active%3F">#active?</a></li>
+					
+					<li><a href="#method-i-button">#button</a></li>
+					
+					<li><a href="#method-i-class_names">#class_names</a></li>
+					
+					<li><a href="#method-i-close">#close</a></li>
+					
+					<li><a href="#method-i-exist%3F">#exist?</a></li>
+					
+					<li><a href="#method-i-exists%3F">#exists?</a></li>
+					
+					<li><a href="#method-i-hwnd">#hwnd</a></li>
+					
+					<li><a href="#method-i-maximize">#maximize</a></li>
+					
+					<li><a href="#method-i-method_missing">#method_missing</a></li>
+					
+					<li><a href="#method-i-minimize">#minimize</a></li>
+					
+					<li><a href="#method-i-minimized%3F">#minimized?</a></li>
+					
+					<li><a href="#method-i-normalize">#normalize</a></li>
+					
+					<li><a href="#method-i-pid">#pid</a></li>
+					
+					<li><a href="#method-i-present%3F">#present?</a></li>
+					
+					<li><a href="#method-i-restore">#restore</a></li>
+					
+					<li><a href="#method-i-send_keys">#send_keys</a></li>
+					
+					<li><a href="#method-i-text">#text</a></li>
+					
+					<li><a href="#method-i-text_field">#text_field</a></li>
+					
+					<li><a href="#method-i-title">#title</a></li>
+					
+					<li><a href="#method-i-visible%3F">#visible?</a></li>
+					
+					<li><a href="#method-i-wait_until_exists">#wait_until_exists</a></li>
+					
+					<li><a href="#method-i-wait_until_present">#wait_until_present</a></li>
+					
+					<li><a href="#method-i-windows">#windows</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+			<div id="includes-section" class="section">
+				<h3 class="section-header">Included Modules</h3>
+				<ul class="link-list">
+				
+				
+					<li><span class="include">Adapter::Helper</span></li>
+				
+				
+				</ul>
+			</div>
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../RAutomation.html">RAutomation</a></li>
+				
+					<li><a href="../RAutomation/Adapter.html">RAutomation::Adapter</a></li>
+				
+					<li><a href="../RAutomation/Adapter/Autoit.html">RAutomation::Adapter::Autoit</a></li>
+				
+					<li><a href="../RAutomation/Adapter/Autoit/Button.html">RAutomation::Adapter::Autoit::Button</a></li>
+				
+					<li><a href="../RAutomation/Adapter/Autoit/Locators.html">RAutomation::Adapter::Autoit::Locators</a></li>
+				
+					<li><a href="../RAutomation/Adapter/Autoit/Mouse.html">RAutomation::Adapter::Autoit::Mouse</a></li>
+				
+					<li><a href="../RAutomation/Adapter/Autoit/TextField.html">RAutomation::Adapter::Autoit::TextField</a></li>
+				
+					<li><a href="../RAutomation/Adapter/Autoit/Window.html">RAutomation::Adapter::Autoit::Window</a></li>
+				
+					<li><a href="../RAutomation/Adapter/Helper.html">RAutomation::Adapter::Helper</a></li>
+				
+					<li><a href="../RAutomation/Adapter/MsUia.html">RAutomation::Adapter::MsUia</a></li>
+				
+					<li><a href="../RAutomation/Adapter/MsUia/Button.html">RAutomation::Adapter::MsUia::Button</a></li>
+				
+					<li><a href="../RAutomation/Adapter/MsUia/ButtonHelper.html">RAutomation::Adapter::MsUia::ButtonHelper</a></li>
+				
+					<li><a href="../RAutomation/Adapter/MsUia/Checkbox.html">RAutomation::Adapter::MsUia::Checkbox</a></li>
+				
+					<li><a href="../RAutomation/Adapter/MsUia/Constants.html">RAutomation::Adapter::MsUia::Constants</a></li>
+				
+					<li><a href="../RAutomation/Adapter/MsUia/Control.html">RAutomation::Adapter::MsUia::Control</a></li>
+				
+					<li><a href="../RAutomation/Adapter/MsUia/Functions.html">RAutomation::Adapter::MsUia::Functions</a></li>
+				
+					<li><a href="../RAutomation/Adapter/MsUia/KeystrokeConverter.html">RAutomation::Adapter::MsUia::KeystrokeConverter</a></li>
+				
+					<li><a href="../RAutomation/Adapter/MsUia/Label.html">RAutomation::Adapter::MsUia::Label</a></li>
+				
+					<li><a href="../RAutomation/Adapter/MsUia/ListBox.html">RAutomation::Adapter::MsUia::ListBox</a></li>
+				
+					<li><a href="../RAutomation/Adapter/MsUia/ListItem.html">RAutomation::Adapter::MsUia::ListItem</a></li>
+				
+					<li><a href="../RAutomation/Adapter/MsUia/Locators.html">RAutomation::Adapter::MsUia::Locators</a></li>
+				
+					<li><a href="../RAutomation/Adapter/MsUia/Radio.html">RAutomation::Adapter::MsUia::Radio</a></li>
+				
+					<li><a href="../RAutomation/Adapter/MsUia/SelectList.html">RAutomation::Adapter::MsUia::SelectList</a></li>
+				
+					<li><a href="../RAutomation/Adapter/MsUia/SelectList/SelectListOption.html">RAutomation::Adapter::MsUia::SelectList::SelectListOption</a></li>
+				
+					<li><a href="../RAutomation/Adapter/MsUia/Table.html">RAutomation::Adapter::MsUia::Table</a></li>
+				
+					<li><a href="../RAutomation/Adapter/MsUia/TextField.html">RAutomation::Adapter::MsUia::TextField</a></li>
+				
+					<li><a href="../RAutomation/Adapter/MsUia/UiaDll.html">RAutomation::Adapter::MsUia::UiaDll</a></li>
+				
+					<li><a href="../RAutomation/Adapter/MsUia/Window.html">RAutomation::Adapter::MsUia::Window</a></li>
+				
+					<li><a href="../RAutomation/Adapter/Win32.html">RAutomation::Adapter::Win32</a></li>
+				
+					<li><a href="../RAutomation/Adapter/Win32/Button.html">RAutomation::Adapter::Win32::Button</a></li>
+				
+					<li><a href="../RAutomation/Adapter/Win32/ButtonHelper.html">RAutomation::Adapter::Win32::ButtonHelper</a></li>
+				
+					<li><a href="../RAutomation/Adapter/Win32/Checkbox.html">RAutomation::Adapter::Win32::Checkbox</a></li>
+				
+					<li><a href="../RAutomation/Adapter/Win32/Constants.html">RAutomation::Adapter::Win32::Constants</a></li>
+				
+					<li><a href="../RAutomation/Adapter/Win32/Control.html">RAutomation::Adapter::Win32::Control</a></li>
+				
+					<li><a href="../RAutomation/Adapter/Win32/Functions.html">RAutomation::Adapter::Win32::Functions</a></li>
+				
+					<li><a href="../RAutomation/Adapter/Win32/Keys.html">RAutomation::Adapter::Win32::Keys</a></li>
+				
+					<li><a href="../RAutomation/Adapter/Win32/Label.html">RAutomation::Adapter::Win32::Label</a></li>
+				
+					<li><a href="../RAutomation/Adapter/Win32/ListBox.html">RAutomation::Adapter::Win32::ListBox</a></li>
+				
+					<li><a href="../RAutomation/Adapter/Win32/Locators.html">RAutomation::Adapter::Win32::Locators</a></li>
+				
+					<li><a href="../RAutomation/Adapter/Win32/Mouse.html">RAutomation::Adapter::Win32::Mouse</a></li>
+				
+					<li><a href="../RAutomation/Adapter/Win32/Radio.html">RAutomation::Adapter::Win32::Radio</a></li>
+				
+					<li><a href="../RAutomation/Adapter/Win32/SelectList.html">RAutomation::Adapter::Win32::SelectList</a></li>
+				
+					<li><a href="../RAutomation/Adapter/Win32/SelectList/SelectListOption.html">RAutomation::Adapter::Win32::SelectList::SelectListOption</a></li>
+				
+					<li><a href="../RAutomation/Adapter/Win32/Table.html">RAutomation::Adapter::Win32::Table</a></li>
+				
+					<li><a href="../RAutomation/Adapter/Win32/TextField.html">RAutomation::Adapter::Win32::TextField</a></li>
+				
+					<li><a href="../RAutomation/Adapter/Win32/Window.html">RAutomation::Adapter::Win32::Window</a></li>
+				
+					<li><a href="../RAutomation/Button.html">RAutomation::Button</a></li>
+				
+					<li><a href="../RAutomation/ElementCollections.html">RAutomation::ElementCollections</a></li>
+				
+					<li><a href="../RAutomation/ElementCollections/UnsupportedLocatorException.html">RAutomation::ElementCollections::UnsupportedLocatorException</a></li>
+				
+					<li><a href="../RAutomation/TextField.html">RAutomation::TextField</a></li>
+				
+					<li><a href="../RAutomation/UnknownButtonException.html">RAutomation::UnknownButtonException</a></li>
+				
+					<li><a href="../RAutomation/UnknownElementException.html">RAutomation::UnknownElementException</a></li>
+				
+					<li><a href="../RAutomation/UnknownTextFieldException.html">RAutomation::UnknownTextFieldException</a></li>
+				
+					<li><a href="../RAutomation/UnknownWindowException.html">RAutomation::UnknownWindowException</a></li>
+				
+					<li><a href="../RAutomation/WaitHelper.html">RAutomation::WaitHelper</a></li>
+				
+					<li><a href="../RAutomation/WaitHelper/TimeoutError.html">RAutomation::WaitHelper::TimeoutError</a></li>
+				
+					<li><a href="../RAutomation/Window.html">RAutomation::Window</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">RAutomation::Window</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="adapter-attribute-method" class="method-detail">
+				<a name="adapter"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">adapter</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Currently used {Adapter}.
+</p>
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(locators)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Creates the window object.
+</p>
+<p>
+Possible window <em>locators</em> may depend of the used platform and
+adapter, but following examples will use :title, :class and :hwnd.
+</p>
+<p>
+@example Use window with some title:
+</p>
+<pre>
+  RAutomation::Window.new(:title =&gt; &quot;some title&quot;)
+
+</pre>
+<p>
+@example Use window with Regexp title:
+</p>
+<pre>
+  RAutomation::Window.new(:title =&gt; /some title/i)
+
+</pre>
+<p>
+@example Use window with handle (hwnd):
+</p>
+<pre>
+  RAutomation::Window.new(:hwnd =&gt; 123456)
+
+</pre>
+<p>
+@example Use multiple locators, every locator will be matched (AND-ed) to
+the window:
+</p>
+<pre>
+  RAutomation::Window.new(:title =&gt; &quot;some title&quot;, :class =&gt; &quot;IEFrame&quot;)
+
+</pre>
+<p>
+@note Refer to all possible <em>locators</em> in each {Adapter}
+documentation.
+</p>
+<p>
+<em>locators</em> may also include a key called :adapter to change default
+adapter, which is dependent of the platform, to automate windows and their
+controls.
+</p>
+<p>
+It is also possible to change the default adapter by using environment
+variable called <em>RAUTOMATION_ADAPTER</em>
+</p>
+<p>
+@note This constructor doesn&#8217;t check for window&#8217;s existance.
+@note Only visible windows are supported. @note If given <em>locators</em>
+include :hwnd then every other possible <em>locator</em> is ignored.
+@param [Hash] locators locators for the window.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rautomation/window.rb, line 65</span>
+65:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">locators</span>)
+66:       <span class="ruby-ivar">@adapter</span> = <span class="ruby-identifier">locators</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:adapter</span>) <span class="ruby-operator">||</span> <span class="ruby-constant">ENV</span>[<span class="ruby-value str">&quot;RAUTOMATION_ADAPTER&quot;</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">ENV</span>[<span class="ruby-value str">&quot;RAUTOMATION_ADAPTER&quot;</span>].<span class="ruby-identifier">to_sym</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">default_adapter</span>
+67:       <span class="ruby-ivar">@window</span> = <span class="ruby-constant">Adapter</span>.<span class="ruby-identifier">const_get</span>(<span class="ruby-identifier">normalize</span>(<span class="ruby-ivar">@adapter</span>)).<span class="ruby-identifier">const_get</span>(<span class="ruby-value">:Window</span>).<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-identifier">locators</span>)
+68:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="wait-timeout-method" class="method-detail ">
+				<a name="method-c-wait_timeout"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">wait_timeout</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Retrieve current timeout in seconds to wait before
+{WaitHelper::TimeoutError} is raised. @return [Fixnum] timeout in seconds
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="wait-timeout-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rautomation/window.rb, line 82</span>
+82:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">wait_timeout</span>
+83:         <span class="ruby-identifier">@@wait_timeout</span>
+84:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="wait-timeout--method" class="method-detail ">
+				<a name="method-c-wait_timeout%3D"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">wait_timeout=</span><span
+						class="method-args">(timeout)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Change the timeout to wait before {WaitHelper::TimeoutError} is raised.
+@param [Fixnum] timeout in seconds.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="wait-timeout--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rautomation/window.rb, line 76</span>
+76:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">wait_timeout=</span>(<span class="ruby-identifier">timeout</span>)
+77:         <span class="ruby-identifier">@@wait_timeout</span> = <span class="ruby-identifier">timeout</span>
+78:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="windows-method" class="method-detail ">
+				<a name="method-c-windows"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">windows</span><span
+						class="method-args">(locators = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@param locators (see #) @return [Windows] all windows. 
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="windows-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rautomation/window.rb, line 20</span>
+20:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">windows</span>(<span class="ruby-identifier">locators</span> = {})
+21:         <span class="ruby-constant">Windows</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">locators</span>)
+22:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="activate-method" class="method-detail ">
+				<a name="method-i-activate"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">activate</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Activates the <a href="Window.html">Window</a>, e.g. brings it to the top
+of other windows.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="activate-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/window.rb, line 117</span>
+117:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">activate</span>
+118:       <span class="ruby-ivar">@window</span>.<span class="ruby-identifier">activate</span>
+119:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="active--method" class="method-detail ">
+				<a name="method-i-active%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">active?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Checks if the window is active, e.g. on the top of other windows. @return
+[Boolean] true if the window is active, false otherwise.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="active--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/window.rb, line 123</span>
+123:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">active?</span>
+124:       <span class="ruby-ivar">@window</span>.<span class="ruby-identifier">active?</span>
+125:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="button-method" class="method-detail ">
+				<a name="method-i-button"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">button</span><span
+						class="method-args">(locators={})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Retrieves {Button} on the window. @note Refer to specific {Adapter}
+documentation for possible <em>locator</em> parameters. @param [Hash]
+locators for the {Button}. @raise [UnknownWindowException] if the window
+doesn&#8217;t exist.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="button-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/window.rb, line 205</span>
+205:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">button</span>(<span class="ruby-identifier">locators</span>={})
+206:       <span class="ruby-identifier">wait_until_present</span>
+207:       <span class="ruby-constant">Button</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@window</span>, <span class="ruby-identifier">locators</span>)
+208:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="class-names-method" class="method-detail ">
+				<a name="method-i-class_names"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">class_names</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@return [Array<String>] all {Window} class names in a sorted array. @raise
+[UnknownWindowException] if the window doesn&#8217;t exist.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="class-names-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/window.rb, line 111</span>
+111:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">class_names</span>
+112:       <span class="ruby-identifier">wait_until_present</span>
+113:       <span class="ruby-ivar">@window</span>.<span class="ruby-identifier">class_names</span>
+114:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="close-method" class="method-detail ">
+				<a name="method-i-close"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">close</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Closes the window if it exists.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="close-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/window.rb, line 196</span>
+196:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">close</span>
+197:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@window</span>.<span class="ruby-identifier">exists?</span>
+198:       <span class="ruby-ivar">@window</span>.<span class="ruby-identifier">close</span>
+199:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="exist--method" class="method-detail method-alias">
+				<a name="method-i-exist%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">exist?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="Window.html#method-i-exists%3F">exists?</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="exists--method" class="method-detail ">
+				<a name="method-i-exists%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">exists?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Checks if the window exists (does have to be visible). @return [Boolean]
+true if the window exists, false otherwise.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="exists--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/window.rb, line 137</span>
+137:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">exists?</span>
+138:       <span class="ruby-ivar">@window</span>.<span class="ruby-identifier">exists?</span>
+139:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="Window.html#method-i-exist%3F">exist?</a>
+				</div>
+				
+
+				
+			</div>
+
+		
+			<div id="hwnd-method" class="method-detail ">
+				<a name="method-i-hwnd"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">hwnd</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@return [Fixnum] handle of the window which is used internally for other
+methods. @raise [UnknownWindowException] if the window doesn&#8217;t
+exist.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="hwnd-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rautomation/window.rb, line 90</span>
+90:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">hwnd</span>
+91:       <span class="ruby-identifier">wait_until_present</span>
+92:       <span class="ruby-ivar">@window</span>.<span class="ruby-identifier">hwnd</span>
+93:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="maximize-method" class="method-detail ">
+				<a name="method-i-maximize"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">maximize</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Maximizes the window. @raise [UnknownWindowException] if the window
+doesn&#8217;t exist.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="maximize-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/window.rb, line 160</span>
+160:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">maximize</span>
+161:       <span class="ruby-identifier">wait_until_present</span>
+162:       <span class="ruby-ivar">@window</span>.<span class="ruby-identifier">maximize</span>
+163:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="method-missing-method" class="method-detail ">
+				<a name="method-i-method_missing"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">method_missing</span><span
+						class="method-args">(name, *args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Allows to execute specific {Adapter} methods not part of the public API.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="method-missing-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/window.rb, line 219</span>
+219:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">method_missing</span>(<span class="ruby-identifier">name</span>, *<span class="ruby-identifier">args</span>)
+220:       <span class="ruby-ivar">@window</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">name</span>, *<span class="ruby-identifier">args</span>)
+221:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="minimize-method" class="method-detail ">
+				<a name="method-i-minimize"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">minimize</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Minimizes the window. @raise [UnknownWindowException] if the window
+doesn&#8217;t exist.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="minimize-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/window.rb, line 167</span>
+167:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">minimize</span>
+168:       <span class="ruby-identifier">wait_until_present</span>
+169:       <span class="ruby-ivar">@window</span>.<span class="ruby-identifier">minimize</span>
+170:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="minimized--method" class="method-detail ">
+				<a name="method-i-minimized%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">minimized?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Checks if window is minimized. @return [Boolean] true if window is
+minimized, false otherwise. @raise [UnknownWindowException] if the window
+doesn&#8217;t exist.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="minimized--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/window.rb, line 175</span>
+175:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">minimized?</span>
+176:       <span class="ruby-identifier">wait_until_present</span>
+177:       <span class="ruby-ivar">@window</span>.<span class="ruby-identifier">minimized?</span>
+178:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="pid-method" class="method-detail ">
+				<a name="method-i-pid"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">pid</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@return [Fixnum] process identifier (PID) of the window. @raise
+[UnknownWindowException] if the window doesn&#8217;t exist.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="pid-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/window.rb, line 97</span>
+ 97:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pid</span>
+ 98:       <span class="ruby-identifier">wait_until_present</span>
+ 99:       <span class="ruby-ivar">@window</span>.<span class="ruby-identifier">pid</span>
+100:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="present--method" class="method-detail ">
+				<a name="method-i-present%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">present?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Checks if the window exists and is visible. @return [Boolean] true if
+window exists and is visible, false otherwise
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="present--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/window.rb, line 154</span>
+154:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">present?</span>
+155:       <span class="ruby-identifier">exists?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">visible?</span>
+156:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="restore-method" class="method-detail ">
+				<a name="method-i-restore"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">restore</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Restores the window size and position. @note If the window is minimized,
+makes it visible again. @raise [UnknownWindowException] if the window
+doesn&#8217;t exist.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="restore-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/window.rb, line 183</span>
+183:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">restore</span>
+184:       <span class="ruby-identifier">wait_until_present</span>
+185:       <span class="ruby-ivar">@window</span>.<span class="ruby-identifier">restore</span>
+186:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="send-keys-method" class="method-detail ">
+				<a name="method-i-send_keys"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">send_keys</span><span
+						class="method-args">(*keys)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Sends keyboard keys to the window. Refer to specific {Adapter}
+documentation for all possible values. @raise [UnknownWindowException] if
+the window doesn&#8217;t exist.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="send-keys-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/window.rb, line 190</span>
+190:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">send_keys</span>(*<span class="ruby-identifier">keys</span>)
+191:       <span class="ruby-identifier">wait_until_present</span>
+192:       <span class="ruby-ivar">@window</span>.<span class="ruby-identifier">send_keys</span>(<span class="ruby-identifier">keys</span>)
+193:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="text-method" class="method-detail ">
+				<a name="method-i-text"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">text</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns visible text of the <a href="Window.html">Window</a>. @return
+[String] visible text of the window. @raise [UnknownWindowException] if
+the window doesn&#8217;t exist.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="text-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/window.rb, line 130</span>
+130:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">text</span>
+131:       <span class="ruby-identifier">wait_until_present</span>
+132:       <span class="ruby-ivar">@window</span>.<span class="ruby-identifier">text</span>
+133:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="text-field-method" class="method-detail ">
+				<a name="method-i-text_field"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">text_field</span><span
+						class="method-args">(locators={})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Retrieves {TextField} on the window. @note Refer to specific {Adapter}
+documentation for possible <em>locators</em> parameters. @raise
+[UnknownWindowException] if the window doesn&#8217;t exist.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="text-field-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/window.rb, line 213</span>
+213:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">text_field</span>(<span class="ruby-identifier">locators</span>={})
+214:       <span class="ruby-identifier">wait_until_present</span>
+215:       <span class="ruby-constant">TextField</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@window</span>, <span class="ruby-identifier">locators</span>)
+216:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="title-method" class="method-detail ">
+				<a name="method-i-title"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">title</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@return [String] title of the window. @raise [UnknownWindowException] if
+the window doesn&#8217;t exist.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="title-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/window.rb, line 104</span>
+104:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">title</span>
+105:       <span class="ruby-identifier">wait_until_present</span>
+106:       <span class="ruby-ivar">@window</span>.<span class="ruby-identifier">title</span>
+107:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="visible--method" class="method-detail ">
+				<a name="method-i-visible%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">visible?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Checks if window is visible. @note <a href="Window.html">Window</a> is
+also visible, if it is behind other windows or minimized. @return
+[Boolean] true if window is visible, false otherwise. @raise
+[UnknownWindowException] if the window doesn&#8217;t exist.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="visible--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/window.rb, line 147</span>
+147:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">visible?</span>
+148:       <span class="ruby-identifier">wait_until_exists</span>
+149:       <span class="ruby-ivar">@window</span>.<span class="ruby-identifier">visible?</span>
+150:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="wait-until-exists-method" class="method-detail ">
+				<a name="method-i-wait_until_exists"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">wait_until_exists</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="wait-until-exists-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/window.rb, line 229</span>
+229:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">wait_until_exists</span>
+230:       <span class="ruby-constant">WaitHelper</span>.<span class="ruby-identifier">wait_until</span> {<span class="ruby-identifier">exists?</span>}
+231:     <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">WaitHelper</span><span class="ruby-operator">::</span><span class="ruby-constant">TimeoutError</span>
+232:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">UnknownWindowException</span>, <span class="ruby-node">&quot;Window with locator #{@window.locators.inspect} doesn't exist!&quot;</span>
+233:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="wait-until-present-method" class="method-detail ">
+				<a name="method-i-wait_until_present"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">wait_until_present</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="wait-until-present-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/window.rb, line 223</span>
+223:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">wait_until_present</span>
+224:       <span class="ruby-constant">WaitHelper</span>.<span class="ruby-identifier">wait_until</span> {<span class="ruby-identifier">present?</span>}
+225:     <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">WaitHelper</span><span class="ruby-operator">::</span><span class="ruby-constant">TimeoutError</span>
+226:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">UnknownWindowException</span>, <span class="ruby-node">&quot;Window with locator #{@window.locators.inspect} doesn't exist or is not visible!&quot;</span>
+227:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="windows-method" class="method-detail ">
+				<a name="method-i-windows"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">windows</span><span
+						class="method-args">(locators = @window.locators)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Retrieves all windows with similar locators to the current window. @param
+locators (see #)  @return [Windows] all windows matching current
+window&#8217;s <em>locators</em> if no
+</p>
+<pre>
+  explicit locators specified or windows matching the specified _locators_.</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="windows-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rautomation/window.rb, line 29</span>
+29:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">windows</span>(<span class="ruby-identifier">locators</span> = <span class="ruby-ivar">@window</span>.<span class="ruby-identifier">locators</span>)
+30:       <span class="ruby-constant">Windows</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">locators</span>)
+31:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="normalize-method" class="method-detail ">
+				<a name="method-i-normalize"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">normalize</span><span
+						class="method-args">(adapter)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="normalize-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/window.rb, line 237</span>
+237:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">normalize</span> <span class="ruby-identifier">adapter</span>
+238:       <span class="ruby-identifier">adapter</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;_&quot;</span>).<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">word</span><span class="ruby-operator">|</span> <span class="ruby-identifier">word</span>.<span class="ruby-identifier">capitalize</span>}.<span class="ruby-identifier">join</span>
+239:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

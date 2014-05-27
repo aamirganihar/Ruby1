@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Selenium::Rake::RemoteControlStartTask</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/selenium/rake/remote_control_start_task_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/selenium/rake/remote_control_start_task.rb">lib/selenium/rake/remote_control_start_task.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-define">#define</a></li>
+					
+					<li><a href="#method-i-jar_file%3D">#jar_file=</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../Selenium.html">Selenium</a></li>
+				
+					<li><a href="../../Selenium/Client.html">Selenium::Client</a></li>
+				
+					<li><a href="../../Selenium/Client/Base.html">Selenium::Client::Base</a></li>
+				
+					<li><a href="../../Selenium/Client/Driver.html">Selenium::Client::Driver</a></li>
+				
+					<li><a href="../../Selenium/Client/Driver.html">Selenium::Client::Driver</a></li>
+				
+					<li><a href="../../Selenium/Client/Extensions.html">Selenium::Client::Extensions</a></li>
+				
+					<li><a href="../../Selenium/Client/GeneratedDriver.html">Selenium::Client::GeneratedDriver</a></li>
+				
+					<li><a href="../../Selenium/Client/Idiomatic.html">Selenium::Client::Idiomatic</a></li>
+				
+					<li><a href="../../Selenium/Client/JavascriptExpressionBuilder.html">Selenium::Client::JavascriptExpressionBuilder</a></li>
+				
+					<li><a href="../../Selenium/Client/JavascriptFrameworks.html">Selenium::Client::JavascriptFrameworks</a></li>
+				
+					<li><a href="../../Selenium/Client/JavascriptFrameworks/JQuery.html">Selenium::Client::JavascriptFrameworks::JQuery</a></li>
+				
+					<li><a href="../../Selenium/Client/JavascriptFrameworks/Prototype.html">Selenium::Client::JavascriptFrameworks::Prototype</a></li>
+				
+					<li><a href="../../Selenium/Client/Protocol.html">Selenium::Client::Protocol</a></li>
+				
+					<li><a href="../../Selenium/Client/SeleniumHelper.html">Selenium::Client::SeleniumHelper</a></li>
+				
+					<li><a href="../../Selenium/Client/SeleniumHelper.html">Selenium::Client::SeleniumHelper</a></li>
+				
+					<li><a href="../../Selenium/CommandError.html">Selenium::CommandError</a></li>
+				
+					<li><a href="../../Selenium/CommandError.html">Selenium::CommandError</a></li>
+				
+					<li><a href="../../Selenium/ProtocolError.html">Selenium::ProtocolError</a></li>
+				
+					<li><a href="../../Selenium/RSpec.html">Selenium::RSpec</a></li>
+				
+					<li><a href="../../Selenium/RSpec/Reporting.html">Selenium::RSpec::Reporting</a></li>
+				
+					<li><a href="../../Selenium/RSpec/Reporting/FilePathStrategy.html">Selenium::RSpec::Reporting::FilePathStrategy</a></li>
+				
+					<li><a href="../../Selenium/RSpec/Reporting/HtmlReport.html">Selenium::RSpec::Reporting::HtmlReport</a></li>
+				
+					<li><a href="../../Selenium/RSpec/Reporting/SystemCapture.html">Selenium::RSpec::Reporting::SystemCapture</a></li>
+				
+					<li><a href="../../Selenium/RSpec/SeleniumTestReportFormatter.html">Selenium::RSpec::SeleniumTestReportFormatter</a></li>
+				
+					<li><a href="../../Selenium/Rake.html">Selenium::Rake</a></li>
+				
+					<li><a href="../../Selenium/Rake/RemoteControlStartTask.html">Selenium::Rake::RemoteControlStartTask</a></li>
+				
+					<li><a href="../../Selenium/Rake/RemoteControlStopTask.html">Selenium::Rake::RemoteControlStopTask</a></li>
+				
+					<li><a href="../../Selenium/RemoteControl.html">Selenium::RemoteControl</a></li>
+				
+					<li><a href="../../Selenium/RemoteControl/RemoteControl.html">Selenium::RemoteControl::RemoteControl</a></li>
+				
+					<li><a href="../../Spec.html">Spec</a></li>
+				
+					<li><a href="../../Spec/Example.html">Spec::Example</a></li>
+				
+					<li><a href="../../Spec/Example/ExampleMethods.html">Spec::Example::ExampleMethods</a></li>
+				
+					<li><a href="../../Spec/Example/ExampleProxy.html">Spec::Example::ExampleProxy</a></li>
+				
+					<li><a href="../../Nautilus.html">Nautilus</a></li>
+				
+					<li><a href="../../Nautilus/Shell.html">Nautilus::Shell</a></li>
+				
+					<li><a href="../../TCPSocket.html">TCPSocket</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Selenium::Rake::RemoteControlStartTask</h1>
+
+		<div id="description">
+			<p>
+<a href="../Rake.html">Rake</a> tasks to start a Remote Control server.
+</p>
+<p>
+require &#8216;selenium/rake/tasks&#8217; 
+</p>
+<p>
+Selenium::Rake::RemoteControlStartTask.new do |rc|
+</p>
+<pre>
+  rc.port = 4444
+  rc.timeout_in_seconds = 3 * 60
+  rc.background = true
+  rc.wait_until_up_and_running = true
+  rc.jar_file = &quot;/path/to/where/selenium-rc-standalone-jar-is-installed&quot;
+  rc.additional_args &lt;&lt; &quot;-singleWindow&quot;
+</pre>
+<p>
+end
+</p>
+<p>
+If you do not explicitly specify the path to selenium remote control jar it
+will be &#8220;auto-discovered&#8221; in `vendor` directory using the
+following path :
+`vendor/selenium-remote-control/selenium-server*-standalone.jar`
+</p>
+<p>
+To leverage the latest selenium-client capabilities, you may need to
+download  a recent nightly build of a standalone packaging of <a
+href="../../Selenium.html">Selenium</a> Remote  Control. You will find the
+nightly build at  <a
+href="http://nexus.openqa.org/content/repositories/snapshots/org/seleniumhq/selenium/server/selenium-server/">nexus.openqa.org/content/repositories/snapshots/org/seleniumhq/selenium/server/selenium-server/</a>
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="JAR_FILE_PATTERN">JAR_FILE_PATTERN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="host-attribute-method" class="method-detail">
+				<a name="host"></a>
+				
+				<a name="host="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">host</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="port-attribute-method" class="method-detail">
+				<a name="port"></a>
+				
+				<a name="port="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">port</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="timeout-in-seconds-attribute-method" class="method-detail">
+				<a name="timeout_in_seconds"></a>
+				
+				<a name="timeout_in_seconds="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">timeout_in_seconds</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="background-attribute-method" class="method-detail">
+				<a name="background"></a>
+				
+				<a name="background="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">background</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="wait-until-up-and-running-attribute-method" class="method-detail">
+				<a name="wait_until_up_and_running"></a>
+				
+				<a name="wait_until_up_and_running="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">wait_until_up_and_running</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="additional-args-attribute-method" class="method-detail">
+				<a name="additional_args"></a>
+				
+				<a name="additional_args="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">additional_args</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="log-to-attribute-method" class="method-detail">
+				<a name="log_to"></a>
+				
+				<a name="log_to="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">log_to</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="jar-file-attribute-method" class="method-detail">
+				<a name="jar_file"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">jar_file</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(name = :'selenium:rc:start')</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/selenium/rake/remote_control_start_task.rb, line 33</span>
+33:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">name</span> = <span class="ruby-value">:'selenium:rc:start'</span>)
+34:         <span class="ruby-ivar">@name</span> = <span class="ruby-identifier">name</span>
+35:         <span class="ruby-ivar">@host</span> = <span class="ruby-value str">&quot;localhost&quot;</span>
+36:         <span class="ruby-ivar">@port</span> = <span class="ruby-value">4444</span>
+37:         <span class="ruby-ivar">@timeout_in_seconds</span> = <span class="ruby-value">5</span>
+38:         <span class="ruby-identifier">project_specific_jar</span> = <span class="ruby-constant">Dir</span>[<span class="ruby-constant">JAR_FILE_PATTERN</span>].<span class="ruby-identifier">first</span>
+39:         <span class="ruby-ivar">@jar_file</span> = <span class="ruby-identifier">project_specific_jar</span>
+40:         <span class="ruby-ivar">@additional_args</span> = []
+41:         <span class="ruby-ivar">@background</span> = <span class="ruby-keyword kw">false</span>
+42:         <span class="ruby-ivar">@wait_until_up_and_running</span> = <span class="ruby-keyword kw">false</span>
+43:         <span class="ruby-keyword kw">yield</span> <span class="ruby-keyword kw">self</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block_given?</span>
+44:         <span class="ruby-identifier">define</span>
+45:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="define-method" class="method-detail ">
+				<a name="method-i-define"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">define</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="define-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/selenium/rake/remote_control_start_task.rb, line 51</span>
+51:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">define</span>
+52:         <span class="ruby-identifier">desc</span> <span class="ruby-value str">&quot;Launch Selenium Remote Control&quot;</span>
+53:         <span class="ruby-identifier">task</span> <span class="ruby-ivar">@name</span> <span class="ruby-keyword kw">do</span>
+54:           <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Starting Selenium Remote Control at 0.0.0.0:#{@port}...&quot;</span>
+55:           <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Could not find jar file '#{@jar_file}'. Expected it under #{JAR_FILE_PATTERN}&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@jar_file</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exists?</span>(<span class="ruby-ivar">@jar_file</span>)
+56:           <span class="ruby-identifier">remote_control</span> = <span class="ruby-constant">Selenium</span><span class="ruby-operator">::</span><span class="ruby-constant">RemoteControl</span><span class="ruby-operator">::</span><span class="ruby-constant">RemoteControl</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">&quot;0.0.0.0&quot;</span>, <span class="ruby-ivar">@port</span>, <span class="ruby-value">:timeout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@timeout_in_seconds</span>)
+57:           <span class="ruby-identifier">remote_control</span>.<span class="ruby-identifier">jar_file</span> = <span class="ruby-ivar">@jar_file</span>
+58:           <span class="ruby-identifier">remote_control</span>.<span class="ruby-identifier">additional_args</span> = <span class="ruby-ivar">@additional_args</span>
+59:           <span class="ruby-identifier">remote_control</span>.<span class="ruby-identifier">log_to</span> = <span class="ruby-ivar">@log_to</span>
+60:           <span class="ruby-identifier">remote_control</span>.<span class="ruby-identifier">start</span> <span class="ruby-value">:background</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@background</span>
+61:           <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@background</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@wait_until_up_and_running</span>
+62:             <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;Waiting for Remote Control to be up and running...&quot;</span>
+63:             <span class="ruby-constant">TCPSocket</span>.<span class="ruby-identifier">wait_for_service</span> <span class="ruby-value">:host</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@host</span>, <span class="ruby-value">:port</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@port</span>
+64:           <span class="ruby-keyword kw">end</span>
+65:           <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Selenium Remote Control at 0.0.0.0:#{@port} ready&quot;</span>
+66:         <span class="ruby-keyword kw">end</span>
+67:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="jar-file--method" class="method-detail ">
+				<a name="method-i-jar_file%3D"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">jar_file=</span><span
+						class="method-args">(new_jar_file)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="jar-file--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/selenium/rake/remote_control_start_task.rb, line 47</span>
+47:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">jar_file=</span>(<span class="ruby-identifier">new_jar_file</span>)
+48:         <span class="ruby-ivar">@jar_file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-identifier">new_jar_file</span>)
+49:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

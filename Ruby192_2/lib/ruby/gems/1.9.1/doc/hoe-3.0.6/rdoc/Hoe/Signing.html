@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Hoe::Signing</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/hoe/signing_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/hoe/signing.rb">lib/hoe/signing.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-define_signing_tasks">#define_signing_tasks</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../History_txt.html">History.txt</a></li>
+				
+					<li class="file"><a href="../Manifest_txt.html">Manifest.txt</a></li>
+				
+					<li class="file"><a href="../README_txt.html">README.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Hoe.html">Hoe</a></li>
+				
+					<li><a href="../Hoe/Clean.html">Hoe::Clean</a></li>
+				
+					<li><a href="../Hoe/Compiler.html">Hoe::Compiler</a></li>
+				
+					<li><a href="../Hoe/Debug.html">Hoe::Debug</a></li>
+				
+					<li><a href="../Hoe/Deps.html">Hoe::Deps</a></li>
+				
+					<li><a href="../Hoe/Flay.html">Hoe::Flay</a></li>
+				
+					<li><a href="../Hoe/Flog.html">Hoe::Flog</a></li>
+				
+					<li><a href="../Hoe/GemPreludeSucks.html">Hoe::GemPreludeSucks</a></li>
+				
+					<li><a href="../Hoe/Gemcutter.html">Hoe::Gemcutter</a></li>
+				
+					<li><a href="../Hoe/Inline.html">Hoe::Inline</a></li>
+				
+					<li><a href="../Hoe/Newb.html">Hoe::Newb</a></li>
+				
+					<li><a href="../Hoe/Package.html">Hoe::Package</a></li>
+				
+					<li><a href="../Hoe/Publish.html">Hoe::Publish</a></li>
+				
+					<li><a href="../Hoe/RCov.html">Hoe::RCov</a></li>
+				
+					<li><a href="../Hoe/Racc.html">Hoe::Racc</a></li>
+				
+					<li><a href="../Hoe/RubyForge.html">Hoe::RubyForge</a></li>
+				
+					<li><a href="../Hoe/Signing.html">Hoe::Signing</a></li>
+				
+					<li><a href="../Hoe/Test.html">Hoe::Test</a></li>
+				
+					<li><a href="../Rake.html">Rake</a></li>
+				
+					<li><a href="../Rake/Task.html">Rake::Task</a></li>
+				
+					<li><a href="../Rake/TaskManager.html">Rake::TaskManager</a></li>
+				
+					<li><a href="../File.html">File</a></li>
+				
+					<li><a href="../Gem.html">Gem</a></li>
+				
+					<li><a href="../String.html">String</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Hoe::Signing</h1>
+
+		<div id="description">
+			<p>
+<a href="Signing.html">Signing</a> plugin for hoe.
+</p>
+<h3>Tasks Provided:</h3>
+<table>
+<tr><td valign="top">generate_key</td><td><p>
+Generate a key for signing your gems.
+</p>
+</td></tr>
+</table>
+<h3>Extra Configuration Options:</h3>
+<table>
+<tr><td valign="top">signing_key_file</td><td><p>
+Signs your gems with this private key.
+</p>
+</td></tr>
+<tr><td valign="top">signing_cert_file</td><td><p>
+Signs your gem with this certificate.
+</p>
+</td></tr>
+</table>
+<h3>Usage:</h3>
+<p>
+Run the &#8216;generate_key&#8217; task.  This will:
+</p>
+<ol>
+<li><p>
+Configure your ~/.hoerc.
+</p>
+</li>
+<li><p>
+Generate a signing key and certificate.
+</p>
+</li>
+<li><p>
+Install the private key and public certificate files into ~/.gem.
+</p>
+</li>
+<li><p>
+Upload the certificate to <a href="RubyForge.html">RubyForge</a>.
+</p>
+</li>
+</ol>
+<p>
+<a href="../Hoe.html">Hoe</a> will now generate signed gems when the
+package task is run.  If you have multiple machines you build gems on, be
+sure to install your key and certificate on each machine.
+</p>
+<p>
+Keep your private key secret!  Keep your private key safe!
+</p>
+<p>
+To make sure your gems are signed run:
+</p>
+<pre>
+  rake package; tar tf pkg/yourproject-1.2.3.gem
+</pre>
+<p>
+If your gem is signed you will see:
+</p>
+<pre>
+  data.tar.gz
+  data.tar.gz.sig
+  metadata.gz
+  metadata.gz.sig</pre>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="define-signing-tasks-method" class="method-detail ">
+				<a name="method-i-define_signing_tasks"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">define_signing_tasks</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Define tasks for plugin.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="define-signing-tasks-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe/signing.rb, line 46</span>
+ 46:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">define_signing_tasks</span>
+ 47:     <span class="ruby-identifier">signing_key</span> = <span class="ruby-keyword kw">nil</span>
+ 48:     <span class="ruby-identifier">cert_chain</span> = []
+ 49: 
+ 50:     <span class="ruby-identifier">with_config</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">config</span>, <span class="ruby-identifier">path</span><span class="ruby-operator">|</span>
+ 51:       <span class="ruby-keyword kw">break</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">config</span>[<span class="ruby-value str">'signing_key_file'</span>] <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">config</span>[<span class="ruby-value str">'signing_cert_file'</span>]
+ 52:       <span class="ruby-identifier">key_file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span> <span class="ruby-identifier">config</span>[<span class="ruby-value str">'signing_key_file'</span>].<span class="ruby-identifier">to_s</span>
+ 53:       <span class="ruby-identifier">signing_key</span> = <span class="ruby-identifier">key_file</span> <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span> <span class="ruby-identifier">key_file</span>
+ 54: 
+ 55:       <span class="ruby-identifier">cert_file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span> <span class="ruby-identifier">config</span>[<span class="ruby-value str">'signing_cert_file'</span>].<span class="ruby-identifier">to_s</span>
+ 56:       <span class="ruby-identifier">cert_chain</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">cert_file</span> <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span> <span class="ruby-identifier">cert_file</span>
+ 57:     <span class="ruby-keyword kw">end</span>
+ 58: 
+ 59:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">signing_key</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">cert_chain</span> <span class="ruby-keyword kw">then</span>
+ 60:       <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">signing_key</span> = <span class="ruby-identifier">signing_key</span>
+ 61:       <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">cert_chain</span> = <span class="ruby-identifier">cert_chain</span>
+ 62:     <span class="ruby-keyword kw">end</span>
+ 63: 
+ 64:     <span class="ruby-identifier">desc</span> <span class="ruby-value str">'Generate a key for signing your gems.'</span>
+ 65:     <span class="ruby-identifier">task</span> <span class="ruby-value">:generate_key</span> <span class="ruby-keyword kw">do</span>
+ 66:       <span class="ruby-identifier">email</span> = <span class="ruby-constant">Array</span>(<span class="ruby-identifier">spec</span>.<span class="ruby-identifier">email</span>)
+ 67:       <span class="ruby-identifier">abort</span> <span class="ruby-value str">&quot;No email in your gemspec&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">email</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">email</span>.<span class="ruby-identifier">empty?</span>
+ 68: 
+ 69:       <span class="ruby-identifier">key_file</span> = <span class="ruby-identifier">with_config</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">config</span>, <span class="ruby-identifier">_</span><span class="ruby-operator">|</span> <span class="ruby-identifier">config</span>[<span class="ruby-value str">'signing_key_file'</span>] }
+ 70:       <span class="ruby-identifier">cert_file</span> = <span class="ruby-identifier">with_config</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">config</span>, <span class="ruby-identifier">_</span><span class="ruby-operator">|</span> <span class="ruby-identifier">config</span>[<span class="ruby-value str">'signing_cert_file'</span>] }
+ 71: 
+ 72:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">key_file</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">cert_file</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword kw">then</span>
+ 73:         <span class="ruby-constant">ENV</span>[<span class="ruby-value str">'SHOW_EDITOR'</span>] <span class="ruby-operator">||=</span> <span class="ruby-value str">'no'</span>
+ 74:         <span class="ruby-constant">Rake</span><span class="ruby-operator">::</span><span class="ruby-constant">Task</span>[<span class="ruby-value str">'config_hoe'</span>].<span class="ruby-identifier">invoke</span>
+ 75: 
+ 76:         <span class="ruby-identifier">key_file</span> = <span class="ruby-identifier">with_config</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">config</span>, <span class="ruby-identifier">_</span><span class="ruby-operator">|</span> <span class="ruby-identifier">config</span>[<span class="ruby-value str">'signing_key_file'</span>] }
+ 77:         <span class="ruby-identifier">cert_file</span> = <span class="ruby-identifier">with_config</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">config</span>, <span class="ruby-identifier">_</span><span class="ruby-operator">|</span> <span class="ruby-identifier">config</span>[<span class="ruby-value str">'signing_cert_file'</span>] }
+ 78:       <span class="ruby-keyword kw">end</span>
+ 79: 
+ 80:       <span class="ruby-identifier">key_file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span> <span class="ruby-identifier">key_file</span>
+ 81:       <span class="ruby-identifier">cert_file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span> <span class="ruby-identifier">cert_file</span>
+ 82: 
+ 83:       <span class="ruby-keyword kw">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span> <span class="ruby-identifier">key_file</span> <span class="ruby-keyword kw">then</span>
+ 84:         <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;Generating certificate&quot;</span>
+ 85: 
+ 86:         <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span> <span class="ruby-identifier">key_file</span> <span class="ruby-keyword kw">then</span>
+ 87:           <span class="ruby-identifier">abort</span> <span class="ruby-node">&quot;Have #{key_file} but no #{cert_file}, aborting as a precaution&quot;</span>
+ 88:         <span class="ruby-keyword kw">end</span>
+ 89: 
+ 90:         <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;NOTICE: using #{email.first} for certificate&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">email</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>
+ 91: 
+ 92:         <span class="ruby-identifier">sh</span> <span class="ruby-node">&quot;gem cert --build #{email.first}&quot;</span>
+ 93:         <span class="ruby-identifier">mv</span> <span class="ruby-value str">&quot;gem-private_key.pem&quot;</span>, <span class="ruby-identifier">key_file</span>, <span class="ruby-value">:verbose</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">true</span>
+ 94:         <span class="ruby-identifier">mv</span> <span class="ruby-value str">&quot;gem-public_cert.pem&quot;</span>, <span class="ruby-identifier">cert_file</span>, <span class="ruby-value">:verbose</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword kw">true</span>
+ 95: 
+ 96:         <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;Installed key and certificate.&quot;</span>
+ 97:       <span class="ruby-keyword kw">end</span>
+ 98: 
+ 99:       <span class="ruby-identifier">rf</span> = <span class="ruby-constant">RubyForge</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">configure</span>
+100:       <span class="ruby-identifier">rf</span>.<span class="ruby-identifier">login</span>
+101: 
+102:       <span class="ruby-identifier">cert_package</span> = <span class="ruby-node">&quot;#{rubyforge_name}-certificates&quot;</span>
+103: 
+104:       <span class="ruby-keyword kw">begin</span>
+105:         <span class="ruby-identifier">rf</span>.<span class="ruby-identifier">lookup</span> <span class="ruby-value str">'package'</span>, <span class="ruby-identifier">cert_package</span>
+106:       <span class="ruby-keyword kw">rescue</span>
+107:         <span class="ruby-identifier">rf</span>.<span class="ruby-identifier">create_package</span> <span class="ruby-identifier">rubyforge_name</span>, <span class="ruby-identifier">cert_package</span>
+108:       <span class="ruby-keyword kw">end</span>
+109: 
+110:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">rf</span>.<span class="ruby-identifier">lookup</span>(<span class="ruby-value str">'release'</span>, <span class="ruby-identifier">cert_package</span>)[<span class="ruby-value str">'certificates'</span>] <span class="ruby-keyword kw">then</span>
+111:         <span class="ruby-identifier">rf</span>.<span class="ruby-identifier">add_release</span> <span class="ruby-identifier">rubyforge_name</span>, <span class="ruby-identifier">cert_package</span>, <span class="ruby-value str">'certificates'</span>, <span class="ruby-identifier">cert_file</span>
+112:         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Uploaded certificates to release \&quot;certificates\&quot; in package #{cert_package}&quot;</span>
+113:       <span class="ruby-keyword kw">else</span>
+114:         <span class="ruby-identifier">puts</span> <span class="ruby-value str">'&quot;certificates&quot; release exists, adding file anyway (will not overwrite)'</span>
+115:         <span class="ruby-identifier">rf</span>.<span class="ruby-identifier">add_file</span> <span class="ruby-identifier">rubyforge_name</span>, <span class="ruby-identifier">cert_package</span>, <span class="ruby-value str">'certificates'</span>, <span class="ruby-identifier">cert_file</span>
+116:       <span class="ruby-keyword kw">end</span>
+117:     <span class="ruby-keyword kw">end</span>
+118:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

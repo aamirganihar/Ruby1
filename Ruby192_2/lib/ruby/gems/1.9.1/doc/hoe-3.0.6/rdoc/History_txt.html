@@ -1,0 +1,2983 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>File: History.txt [hoe-3.0.6 Documentation]</title>
+
+	<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+</head>
+
+<body class="file">
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="./History_txt.html">History.txt</a></li>
+				
+					<li class="file"><a href="./Manifest_txt.html">Manifest.txt</a></li>
+				
+					<li class="file"><a href="./README_txt.html">README.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./Hoe.html">Hoe</a></li>
+				
+					<li><a href="./Hoe/Clean.html">Hoe::Clean</a></li>
+				
+					<li><a href="./Hoe/Compiler.html">Hoe::Compiler</a></li>
+				
+					<li><a href="./Hoe/Debug.html">Hoe::Debug</a></li>
+				
+					<li><a href="./Hoe/Deps.html">Hoe::Deps</a></li>
+				
+					<li><a href="./Hoe/Flay.html">Hoe::Flay</a></li>
+				
+					<li><a href="./Hoe/Flog.html">Hoe::Flog</a></li>
+				
+					<li><a href="./Hoe/GemPreludeSucks.html">Hoe::GemPreludeSucks</a></li>
+				
+					<li><a href="./Hoe/Gemcutter.html">Hoe::Gemcutter</a></li>
+				
+					<li><a href="./Hoe/Inline.html">Hoe::Inline</a></li>
+				
+					<li><a href="./Hoe/Newb.html">Hoe::Newb</a></li>
+				
+					<li><a href="./Hoe/Package.html">Hoe::Package</a></li>
+				
+					<li><a href="./Hoe/Publish.html">Hoe::Publish</a></li>
+				
+					<li><a href="./Hoe/RCov.html">Hoe::RCov</a></li>
+				
+					<li><a href="./Hoe/Racc.html">Hoe::Racc</a></li>
+				
+					<li><a href="./Hoe/RubyForge.html">Hoe::RubyForge</a></li>
+				
+					<li><a href="./Hoe/Signing.html">Hoe::Signing</a></li>
+				
+					<li><a href="./Hoe/Test.html">Hoe::Test</a></li>
+				
+					<li><a href="./Rake.html">Rake</a></li>
+				
+					<li><a href="./Rake/Task.html">Rake::Task</a></li>
+				
+					<li><a href="./Rake/TaskManager.html">Rake::TaskManager</a></li>
+				
+					<li><a href="./File.html">File</a></li>
+				
+					<li><a href="./Gem.html">Gem</a></li>
+				
+					<li><a href="./String.html">String</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h3>3.0.6 / 2012-05-15</h3>
+<ul>
+<li><p>
+1 minor enhancement:
+</p>
+<ul>
+<li><p>
+Added install_plugins to the newb task
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>3.0.5 / 2012-05-07</h3>
+<ul>
+<li><p>
+1 bug fix:
+</p>
+<ul>
+<li><p>
+Fixed ridocs argument handling (erikh)
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>3.0.4 / 2012-05-01</h3>
+<ul>
+<li><p>
+1 bug fix:
+</p>
+<ul>
+<li><p>
+Removed rubygems/deprecated and rolled my own for users on older rubygems
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>3.0.3 / 2012-04-09</h3>
+<ul>
+<li><p>
+2 bug fixes:
+</p>
+<ul>
+<li><p>
+Fixed racc plugin&#8217;s gem dependency activation
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Fixed rake multi&#8217;s use of multiruby_skip.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>3.0.2 / 2012-04-03</h3>
+<ul>
+<li><p>
+1 bug fix:
+</p>
+<ul>
+<li><p>
+Generate urls list properly in # if you use k/v form
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>3.0.1 / 2012-03-26</h3>
+<ul>
+<li><p>
+1 minor enhancement:
+</p>
+<ul>
+<li><p>
+Uniqify hoe plugins in sow Rakefile template. (evanphx)
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+3 bug fixes:
+</p>
+<ul>
+<li><p>
+Fixed have_gem? checks in the install_plugins task to match the install_gem
+calls.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Fixed homepage handling when bullet list used in readme. (evanphx)
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Removed deprecated use of # in publish plugin
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>3.0.0 / 2012-03-20</h3>
+<ul>
+<li><p>
+3 major enhancements:
+</p>
+<ul>
+<li><p>
+Added activate_plugin_deps phase to plugin loading.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Removed long deprecated Hoe.new { block }.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Removed long deprecated handling of improper dependencies.
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+3 minor enhancements:
+</p>
+<ul>
+<li><p>
+Added deprecation warnings to <a href="Hoe.html#method-i-url">Hoe#url</a>
+and <a href="Hoe.html#method-i-url%3D">Hoe#url=</a>. Already deprecated for
+9 mo.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Reworked all the plugins to use activate_XXX_deps, as necessary.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Switched internal usage of # to #.
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+2 bug fixes:
+</p>
+<ul>
+<li><p>
+Fixed failures in the publish_docs task when remote directory times cannot
+be changed (such as on rubyforge).
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Fixed isolate setup for the racc plugin
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>2.16.1 / 2012-03-13</h3>
+<ul>
+<li><p>
+2 bug fixes:
+</p>
+<ul>
+<li><p>
+Fixed missing dependency for .gemtest creation (larskanis)
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Fixed the rdoc/rcov commands to use sh. Oops.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>2.16.0 / 2012-03-06</h3>
+<ul>
+<li><p>
+9 minor enhancements:
+</p>
+<ul>
+<li><p>
+Added Gem.bin_wrapper to provide API to bin wrapped files.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added check_manifest task to compile_tasks in the compiler plugin.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Decoupled from rcov task. Solves isolate/hoe bootstrap issues.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Decoupled from rdoc tasks. Solves isolate/hoe bootstrap issues.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Updated default exclude config to skip extconf.h and .o files.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Updated known 3rd party plugin list in readme.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Warn against using system installed rake (eg osx ships their own on 1.8).
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Removed rcov plugin from the default loaded set.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added dev dependency for rcov when the plugin is loaded.
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+2 bug fixes:
+</p>
+<ul>
+<li><p>
+Fix Rake::DSL include warnings.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Removing check_manifest from prerelease. (should be pushed to the hoe-git
+plugin)
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>2.15.0 / 2012-02-29</h3>
+<ul>
+<li><p>
+5 minor enhancements:
+</p>
+<ul>
+<li><p>
+Added <a href="Hoe.html#method-c-bad_plugins">Hoe::bad_plugins</a> which
+returns plugins that could not be found
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added post_blog_zenweb to post releases to my blog&#8217;s jekyll-like
+format
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added the install_plugins task
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Documented the blogs .hoerc entry.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Revamped post_blog task to allow for local file based blogs.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>2.14.0 / 2012-02-20</h3>
+<ul>
+<li><p>
+9 minor enhancements:
+</p>
+<ul>
+<li><p>
+.rdoc files are now automatically added to the extra_rdoc_files list.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added <a href="Hoe.html#method-i-read_manifest">Hoe#read_manifest</a>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added check_manifest to the prerelease task to prevent broken releases.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added extra duplicate dependency checking.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<a href="Hoe.html#method-i-with_config">Hoe#with_config</a> merges the
+local and home configuration atop Hoe::DEFAULT_CONFIG to allow plugins to
+supply new defaults.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+The readme_file and history_file are now automatically guessed from the
+manifest.  This allows &#8220;README.rdoc&#8220; to be used automatically.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+install_gem optionally excludes rdoc/ri generation.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+rake check_extra_deps excludes rdoc/ri generation. rake install_gem does
+not.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+rake multi now just reinvokes rake using multiruby to allow hoe plugins to
+be invoked.
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+3 bug fixes:
+</p>
+<ul>
+<li><p>
+Added workaround for check_extra_deps for multi-version dependencies.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+The publish plugin no longer raises an exception for missing or ancient
+versions of rdoc.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+rdoc plugin calls isolate if using isolate
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>2.13.1 / 2012-02-06</h3>
+<ul>
+<li><p>
+1 minor enhancement:
+</p>
+<ul>
+<li><p>
+:doc task should depend on isolate if activated
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>2.13.0 / 2012-01-23</h3>
+<ul>
+<li><p>
+3 minor enhancements:
+</p>
+<ul>
+<li><p>
+Added :dcov task so you can easily check documentation coverage.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added <a href="Rake.html">Rake</a> monkeypatch so that Task#clear will
+clear comments. (github)
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added coverage sorting and added tmp/isolate to rcov flags
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+2 bug fixes:
+</p>
+<ul>
+<li><p>
+Quelled 1.9.3 warning. (erikh)
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+rcov plugin should invoke isolate task if isolate plugin is being used.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>2.12.5 / 2011-12-19</h3>
+<ul>
+<li><p>
+3 minor enhancements:
+</p>
+<ul>
+<li><p>
+Make hoe noisy about missing plugins again.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Normalize dev/runtime deps: dev + runtime = runtime.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Add support for per-project .hoerc overrides. (ged)
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>2.12.4 / 2011-11-28</h3>
+<ul>
+<li><p>
+3 bug fixes:
+</p>
+<ul>
+<li><p>
+Fixed Hoe.read_utf to work on both 1.8 and 1.9. Unicode files FTW!
+(tenderlove)
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Moved the rdoc dependency to the publish plugin from hoe-seattlerb.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Only load rdoc once to fix test loading bugs.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>2.12.3 / 2011-09-06</h3>
+<ul>
+<li><p>
+1 bug fix:
+</p>
+<ul>
+<li><p>
+<a href="Hoe.html">Hoe</a> was loading rdoc early... delay and isolate will
+be happier
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>2.12.2 / 2011-08-24</h3>
+<ul>
+<li><p>
+2 minor enhancements:
+</p>
+<ul>
+<li><p>
+Added recursive chmod to docs task to ensure group write-ability (kleb)
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Improve error message when no manifest found. (Apparently some linux
+packagers remove manifest files)
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+3 bug fixes:
+</p>
+<ul>
+<li><p>
+Added missing minitest/autorun require (NOT reported by fedoraproject.org)
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Fix for RSpec support broken in 0dc6b2f (ged)
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Fix for the edgiest of edge cases (-Ku in ruby19... ummm, yeah)
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>2.12.1 / 2011-08-22</h3>
+<ul>
+<li><p>
+2 bug fixes:
+</p>
+<ul>
+<li><p>
+Fixed a test that fails on non-privileged (rvm/multiruby) setups
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+RbConfig is used instead of Config to remove a 1.9.3 warning.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>2.12.0 / 2011-08-15</h3>
+<ul>
+<li><p>
+2 minor enhancements:
+</p>
+<ul>
+<li><p>
+Forcibly copy file specified in &#8212;main to index.html. (ewong)
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+need_tar now defaults to false.
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+4 bug fixes:
+</p>
+<ul>
+<li><p>
+Don&#8217;t attempt to require RSpec 1 in an RSpec 2 environment. (monde)
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Fixed test/packaging issue when wrapping hoespec in namespace. (damphyr)
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Fixed tests for jruby. (sferik)
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Hoe.load_plugins removes bad entries so plugin? returns false for unloaded
+plugins.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>2.11.0 / 2011-08-08</h3>
+<ul>
+<li><p>
+2 minor enhancements:
+</p>
+<ul>
+<li><p>
+Bypass sudo on install_gem if GEM_HOME is writable (ala rvm).
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+rcov plugin should set libs to lib, test, and &#8217;.&#8217;. (tenderlove)
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+1 bug fix:
+</p>
+<ul>
+<li><p>
+Fixed windoze detection on jruby. <b>sigh</b> (myabc)
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>2.10.0 / 2011-06-30</h3>
+<ul>
+<li><p>
+3 minor enhancements:
+</p>
+<ul>
+<li><p>
+Added parse_urls to deal with array and hash style url lists in <a
+href="README_txt.html">README.txt</a>.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added urls accessor.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Deprecated url accessors.
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+1 bug fix:
+</p>
+<ul>
+<li><p>
+Specified wrong version of racc in racc plugin.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>2.9.6 / 2011-06-22</h3>
+<ul>
+<li><p>
+3 bug fixes:
+</p>
+<ul>
+<li><p>
+Fixed hoe dep to be a spermy (~>) dep
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Hard coded rake dependency as ~> 0.8 so we don&#8217;t collide with other
+libs
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Removed circular dependency check. Hasn&#8217;t been needed in a long
+while.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>2.9.5 / 2011-06-21</h3>
+<ul>
+<li><p>
+2 minor enhancements:
+</p>
+<ul>
+<li><p>
+Extended # to work post-spec creation in case a task wants to add a dep.
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+4 bug fixes:
+</p>
+<ul>
+<li><p>
+Fixed dependency for :inline plugin.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Fixed minor 1.9.3 warnings.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Fixed sow to obey gem naming conventions.  It no longer munges - to _.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Switched hoe deps from >= to ~>.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>2.9.4 / 2011-04-01</h3>
+<ul>
+<li><p>
+1 minor enhancement:
+</p>
+<ul>
+<li><p>
+check_manifest now fails when there is a diff. AKA, drbrain was lazy and it
+is somehow my fault. If anything, it is jbarnette&#8217;s fault for not
+building any brains into hoe-git the way that my hoe-perforce plugin works.
+I mean, c&#8217;mon... how hard is it to validate the manifest before you
+release? I do it all the time and twice on sundays. BAH! Damn kids! Get off
+my lawn!
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>2.9.3 / 2011-04-01</h3>
+<ul>
+<li><p>
+1 minor enhancement:
+</p>
+<ul>
+<li><p>
+Cleanup for rubygems 1.7 deprecations
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>2.9.2 / 2011-03-31</h3>
+<ul>
+<li><p>
+7 minor enhancements:
+</p>
+<ul>
+<li><p>
+Added :none as a testlib option to let you do whatever you want. (phiggins)
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added <a href="Hoe.html#method-i-dependency">Hoe#dependency</a>(name,
+version, type = :runtime) for cleaner hoe specs.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added NOSUDO option to `rake gem_install`. (nihildeb)
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Include Rake::DSL to support future versions of rake
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Multiruby now skips mri_trunk if multiruby_skip includes 1.9
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Test#make_test_cmd now sorts test files (mostly for testing)
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Try using psych before syck.
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+3 bug fixes:
+</p>
+<ul>
+<li><p>
+Clean generated extension library too
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Fixed a bug with sow -d or -t
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Fixed plugin activation via ~/.hoerc. (ged)
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>2.9.1 / 2011-02-05</h3>
+<ul>
+<li><p>
+1 minor enhancement:
+</p>
+<ul>
+<li><p>
+Sow now creates all template directories before dealing with anything else
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+3 bug fixes:
+</p>
+<ul>
+<li><p>
+Fixed dependency order bug with prereleases [erikh]
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Fixed sanity check for prereleases.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Fixed sow when passed no args. [erikh]
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>2.9.0 / 2011-01-31</h3>
+<ul>
+<li><p>
+11 minor enhancements:
+</p>
+<ul>
+<li><p>
+Added <a
+href="Hoe/Package.html#method-i-pkg_path">Hoe::Package#pkg_path</a> to make
+package hook writing easier.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added Hoe::Test#test_prelude to allow for code to run before test loading.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added plugin?(name) to allow for easier plugin guarding in hoe spec.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added support for multiple template dirs for sow.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added support for rubygems-test. See <a
+href="http://www.gem-testers.org/">www.gem-testers.org/</a>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Clean up sow a LOT using: include FileUtils::Verbose
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Don&#8217;t warn about missing plugins without rake -t
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<a href="Hoe.html">Hoe</a> requires Gem::PackageTask from RubyGems 1.4+
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Moved post_news from publish to rubyforge
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Plugins can now be loaded from a <tt>plugins</tt> array in ~/.hoerc
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+rubyforge plugin now uses plain globs to push. Fixes releases for rubygems
+itself
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+4 bug fixes:
+</p>
+<ul>
+<li><p>
+Failed plugins should notify on both trace and debug.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Fixed rdoc_dir for custom rdoc locations
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Fixed require &#8216;rubyforge&#8217; that was too late
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Fixed sow to properly rename dirs depth first
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>2.8.0 / 2010-12-08</h3>
+<ul>
+<li><p>
+6 minor enhancements:
+</p>
+<ul>
+<li><p>
+Added PRE=a.1 variable to package and release tasks. (ged)
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added compiler plugin to support rake-compiler. (tenderlove)
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added known_plugins task and updated included and 3rd party plugins doco
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added racc/rex plugin!
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Extended sow&#8217;s Rakefile template to dynamically include installed
+plugins
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Turned off rubyforge plugin by default. (tenderlove&#8217;s whining)
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>2.7.0 / 2010-11-15</h3>
+<ul>
+<li><p>
+2 minor enhancements:
+</p>
+<ul>
+<li><p>
+Added new plugin: gem_prelude_sucks. (jbarnette)
+</p>
+<ul>
+<li><p>
+Activate under 1.9 if you don&#8217;t want it messing with you.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>
+Added rspec2 support (bleything)
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+1 bug fix:
+</p>
+<ul>
+<li><p>
+require uri in hoe/deps (raggi)
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>2.6.2 / 2010-08-31</h3>
+<ul>
+<li><p>
+1 minor enhancement:
+</p>
+<ul>
+<li><p>
+Updated inline dependency when using inline plugin
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+1 bug fix:
+</p>
+<ul>
+<li><p>
+Fixed timebomb to bottom out properly on the end value
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>2.6.1 / 2010-06-02</h3>
+<ul>
+<li><p>
+2 bug fixes:
+</p>
+<ul>
+<li><p>
+Fix up hoe to be happy when rubyforge is missing or misconfigured
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Fixed dep tasks to deal with broken rubygems changes RF#27847 (mjwillson)
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>2.6.0 / 2010-03-27</h3>
+<ul>
+<li><p>
+6 minor enhancements:
+</p>
+<ul>
+<li><p>
+Added &#8217;.&#8217; to load path for (bad) 1.9.2 changes
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added rdoc_locations array to the publish plugin to allow for multiple
+arbitrary rdoc locations
+</p>
+<ul>
+<li><p>
+Refactored old rubyforge rdoc location to the rubyforge plugin.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>
+Added require_ruby_version and require_rubygems_version.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Cleaned up dep tests
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<a href="Hoe.html">Hoe</a> now depends on rubygems 1.3.6 instead of the
+gemcutter gem.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Remove ext from default_ruby_flags and require_paths. (luis)
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+2 bug fixes:
+</p>
+<ul>
+<li><p>
+Fixed test command to use &#8217;&#8212;&#8217; before filter args
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Tweaked .hoerc error to point to a fix.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>2.5.0 / 2010-01-06</h3>
+<ul>
+<li><p>
+8 minor enhancements:
+</p>
+<ul>
+<li><p>
+Add extra dirs to rcov include path if needed.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added <a
+href="Hoe.html#method-i-dependency_target">Hoe#dependency_target</a> to
+make dependencies easier to declare.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added extra doco to describe how auto-population works.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added more doco to readme.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Don&#8217;t bother posting news to rubyforge.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<a href="Hoe/Inline.html">Hoe::Inline</a> plugin now deals with X::Y by
+flattening the name.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Merged some of Hoe.pdf to <a href="README_txt.html">README.txt</a> and
+further improved doco.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Pushed gemcutter &amp; rubyforge dependencies down to the plugins.
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+2 bug fixes:
+</p>
+<ul>
+<li><p>
+Fix perms on Hoe.pdf after copying.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Fixed <a href="Hoe.html">Hoe</a> rdoc problem caused by gemcutter plugin.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>2.4.0 / 2009-12-08</h3>
+<ul>
+<li><p>
+6 minor enhancements:
+</p>
+<ul>
+<li><p>
+Added Hoe.pdf
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added gemcutter plugin (raggi)
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added newb plugin. (jbarnette)
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Improved <a href="README_txt.html">README.txt</a>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Improved rdoc
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Refactored rubyforge task to plugin. (jbarnette)
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>2.3.3 / 2009-08-07</h3>
+<ul>
+<li><p>
+6 minor enhancements:
+</p>
+<ul>
+<li><p>
+# now uniq&#8217;s contents. (asarih)
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added extra warnings if manifest is borked.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added link to full doco.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Deprecated plain string dependencies, auto-fill with &#8217;>= 0&#8217;.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Improved doco with some code examples.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Moved version check from package task to prerelease task.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>2.3.2 / 2009-06-30</h3>
+<ul>
+<li><p>
+1 minor enhancement:
+</p>
+<ul>
+<li><p>
+splat all gems on release. (luis lavena)
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+3 bug fixes:
+</p>
+<ul>
+<li><p>
+Fix File.read_utf on ruby 1.9 for UTF-8 files
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Force read_utf to open file ascii-8bit. UGH. ruby 1.9 encoding is a PITA.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Version regex needs to allow multiple spaces for OCD coders.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>2.3.1 / 2009-06-24</h3>
+<ul>
+<li><p>
+2 minor enhancements:
+</p>
+<ul>
+<li><p>
+Removed email.txt from clean_globs, added TAGS.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Use Gem::PackageTask if available, since Rake&#8217;s package task will go
+away
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+2 bug fixes:
+</p>
+<ul>
+<li><p>
+Added require time where used
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+JB nitpicks too much. fixed templates.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>2.3.0 / 2009-06-23</h3>
+<ul>
+<li><p>
+1 major enhancement:
+</p>
+<ul>
+<li><p>
+Plugins can no longer be self-activating.
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+8 minor enhancements:
+</p>
+<ul>
+<li><p>
+All hoe plugins are pre-activated.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Allow RDoc title to be set via spec_extras[&#8216;rdoc_options&#8217;].
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Cleaned up plugin activation.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+History intuition extended for markdown. drnic/jbarnette
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Move RDoc task requires to hoe/publish.rb.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Only activated plugins are loaded, extended, and activated.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Plugin loading deferred until hoe-spec creation, allowing proper
+meta-plugins.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+inline plugin adds RubyInline dependency and hooks clean task.
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+2 bug fixes:
+</p>
+<ul>
+<li><p>
+Fixed developer load order error in load_plugins.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+rcov should use test_globs. apatterson
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>2.2.0 / 2009-06-17</h3>
+<ul>
+<li><p>
+8 minor enhancements:
+</p>
+<ul>
+<li><p>
+Alter task descriptions to say what plugin they come from. jbarnette
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Fix and improve generate_key task.  Patch #20441 by Matthew Kent.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Hoe.plugin can take multiple names. jbarnette
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Increase configurability of RDoc tasks.  Patch #19597 by Sylvain Joyeux.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Refactored and renamed email task to debug_email, removed from announce.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Removed email task from announce task.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Switched to seattlerb plugin
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+check_extra_deps now installs developer dependencies as well
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+3 bug fixes:
+</p>
+<ul>
+<li><p>
+Fixed blogs entry in DEFAULT_CONFIG.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+activated but missing plugins are properly skipped now
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+exclude field was missing from DEFAULT_CONFIG
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>2.1.0 / 2009-06-14</h3>
+<ul>
+<li><p>
+6 minor enhancements:
+</p>
+<ul>
+<li><p>
+Added <a href="File.html#method-c-read_utf">File::read_utf</a> to strip out
+UTF BOM marker. Fixes nokogiri. (tenderlove)
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Now using the minitest plugin.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Refactored :release task to facilitate other plugins.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Version intuiting now only bombs on packaging, allowing check_manifest.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+release now has prerelease, postrelease deps.
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+1 bug fix:
+</p>
+<ul>
+<li><p>
+Fixed version intuiting to allow for beta versions (eg, 1.2.3.beta.4)
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>2.0.0 / 2009-06-02</h3>
+<ul>
+<li><p>
+3 major enhancements:
+</p>
+<ul>
+<li><p>
+Added a plugin system and extracted nearly everything into separate
+plugins.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added Clean, Debug, Deps, Flay, Flog, Inline, Package, Publish, <a
+href="Rake.html">Rake</a>, Rcov, Signing, and Test plugins
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+9 minor enhancements:
+</p>
+<ul>
+<li><p>
+Added <a href="Hoe.html#method-c-spec">Hoe::spec</a> replacing old Hoe.new
+spec form. Now with DSL flavors!
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added DEFAULT_CONFIG so plugins can add to it.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added pluggable! to declare your package depends on rubygems 1.3.1+.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Changes are now included in the gem&#8217;s description.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Deprecated Hoe.new spec form.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Filled in all the blanks on rdoc.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Refactored nearly all the spec logic down to much smaller/cleaner pieces.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Updated templates to use new form. No clue how best to update yours. :P
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Version number is now auto-searchable by grepping in all the files.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.12.2 / 2009-04-16</h3>
+<ul>
+<li><p>
+1 minor enhancement:
+</p>
+<ul>
+<li><p>
+Removed rcov_info.
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+2 bug fixes:
+</p>
+<ul>
+<li><p>
+clean globs should have coverage* glob.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+rcov task should create coverage.info file for tools.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.12.1 / 2009-03-31</h3>
+<ul>
+<li><p>
+1 bug fix:
+</p>
+<ul>
+<li><p>
+Added Rake.all_tasks because rake architecture sucks.
+</p>
+<ul>
+<li><p>
+YAY! Go view <a href="http://technonancy.us/">technonancy.us/</a> !!
+</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.12.0 / 2009-03-31</h3>
+<ul>
+<li><p>
+6 minor enhancements:
+</p>
+<ul>
+<li><p>
+Added Rake.undo.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added from vlad: Rake.application.all_tasks and Rake.clear_tasks.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added log files to default excludes. (technonancy)
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Refactored gem install code and extended to work with jruby
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Refactored run_tests into make_test_cmd, enabling use in tasks. (jbarnette)
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Use RDoc::Task instead of Rake::RDocTask, if available.
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+1 bug fix:
+</p>
+<ul>
+<li><p>
+Fixed incorrect usage. (jmhodges)
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.11.0 / 2009-03-16</h3>
+<ul>
+<li><p>
+2 minor enhancements:
+</p>
+<ul>
+<li><p>
+Added timebomb method. Set flay/flog thresholds to degrade over time.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Switched to flog&#8217;s new FlogTask, added flog_threshold.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.10.0 / 2009-03-09</h3>
+<ul>
+<li><p>
+2 minor enhancements:
+</p>
+<ul>
+<li><p>
+Switched to flay&#8217;s new FlayTask, added flay_threshold.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+generate_key now creates the certificate package automatically.
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+1 bug fix:
+</p>
+<ul>
+<li><p>
+Fixed generate_key if more than one developer on the project.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.9.0 / 2009-02-26:</h3>
+<ul>
+<li><p>
+7 minor enhancements:
+</p>
+<ul>
+<li><p>
+Added flog, flay, and rdoc tasks.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added ~/.hoe_template and basic erb templating to sow.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+install_gem automatically installs missing dependencies. From Dr. Nic.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Parameterized history and readme paths for github users (<b>sigh</b>).
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added rspec support including having both tests and specs.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Match RubyGems&#8217; RDoc behavior and removed rdoc_pattern attribute. 
+Use extra_rdoc_files instead.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added testlib and SUPPORTED_TEST_FRAMEWORKS to switch your testing library.
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+1 bug fix:
+</p>
+<ul>
+<li><p>
+Fixed rdoc title command-line parameters.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.8.3 / 2009-01-20:</h3>
+<ul>
+<li><p>
+1 minor enhancement:
+</p>
+<ul>
+<li><p>
+Refactored sow&#8217;s naming code to Hoe.normalize_names and wrote some
+tests to flush out inconsistencies.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.8.2 / 2008-10-24:</h3>
+<ul>
+<li><p>
+1 minor enhancement:
+</p>
+<ul>
+<li><p>
+Now asks Inline for known inlined classes if you package w/ INLINE=1.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.8.1 / 2008-10-22</h3>
+<ul>
+<li><p>
+1 bug fix:
+</p>
+<ul>
+<li><p>
+Fixes for windows compatibility from Luis Lavena.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.8.0 / 2008-10-09</h3>
+<ul>
+<li><p>
+5 minor enhancements:
+</p>
+<ul>
+<li><p>
+Added Hoe.add_include_dirs to make setting up rake deps easier.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Removed unused optional group arg in sow.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added testlib variable so you can specify what test library to use.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added deps:list to help you review dependent projects.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added deps:email to help you communicate with dependent projects.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added deps:fetch to help you search through dependent projects.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.7.0 / 2008-06-30</h3>
+<ul>
+<li><p>
+3 minor enhancements:
+</p>
+<ul>
+<li><p>
+Use rdoc 2.x gem if available. Eric likes his backslashes.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added extra_dev_deps for new rubygems developer dependencies.
+</p>
+<ul>
+<li><p>
+Switched hoe to dev dep. Fork off, bitches.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>
+Finally got a sane test that does something. Hey&#8230; it&#8217;s a start.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.6.0 / 2008-06-18</h3>
+<ul>
+<li><p>
+1 minor enhancement
+</p>
+<ul>
+<li><p>
+blog categories! Defaults to array with project&#8217;s name. Thanks Aaron!
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.5.3 / 2008-05-20</h3>
+<ul>
+<li><p>
+1 Bug Fix
+</p>
+<ul>
+<li><p>
+hoe really really needs better tests. I suck. :/
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.5.2 / 2008-05-20</h3>
+<ul>
+<li><p>
+4 Minor Enhancements:
+</p>
+<ul>
+<li><p>
+Added multiruby_skip attribute for &#8216;rake multi&#8217; version
+invalidation.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Improved error messages when files are missing.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added rubygems post_install_message accessor. Thanks to Dr. Nic.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Cleaned up alternative_name... I didn&#8217;t get it.
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+1 Bug Fix:
+</p>
+<ul>
+<li><p>
+Removed require of rake/contrib/sshpublisher to fix 1.9.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.5.1 / 2008-03-04</h3>
+<ul>
+<li><p>
+2 Minor Enhancements:
+</p>
+<ul>
+<li><p>
+Removed install/uninstall tasks. Too buggy. Gems do a better job.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added cleaning of rbc files to default list
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+5 Bug Fixes:
+</p>
+<ul>
+<li><p>
+Correctly deal with errors intuiting history and readme files. Thanks
+Aaron!
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Fixed rdoc title. Thanks, Sander!
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Fixed sow to match new Rakefile and History format. Thanks, me!
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Moved test/unit to the front for rake test. Fixes use of miniunit.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Renamed shadowed variable.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.5.0 / 2008-01-30</h3>
+<ul>
+<li><p>
+9 Minor Enhancements:
+</p>
+<ul>
+<li><p>
+Added autopopulation of changes from <a
+href="History_txt.html">History.txt</a>.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added autopopulation of urls from <a
+href="History_txt.html">History.txt</a>.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added autopopulation of description from <a
+href="History_txt.html">History.txt</a>
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added autopopulation of summary from description.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added description_sections to declare what sections of readme to use.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added summary_sentences to declare how many sentences you want in summary.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added developer(name, email) to cleanly populate both author/email arrays.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+author and email now default to &#8220;doofus&#8221;.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+author and email warn that they&#8217;ll blow up on 2008-04-01.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.4.0 / 2007-12-20</h3>
+<ul>
+<li><p>
+1 Major Enhancement:
+</p>
+<ul>
+<li><p>
+rake package now supports INLINE=1 and FORCE_PLATFORM=whatever.
+</p>
+<ul>
+<li><p>
+Supports ruby_inline extensions.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Contributed by Luis Lavena. Thanks Luis!
+</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.3.0 / 2007-08-13</h3>
+<ul>
+<li><p>
+1 Major Enhancement:
+</p>
+<ul>
+<li><p>
+<a href="Hoe.html">Hoe</a> now builds signed gems automatically.  Run the
+generate_key task to automatically create a signing key.
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+4 Minor Enhancements:
+</p>
+<ul>
+<li><p>
+Extended rdoc pattern to include ext dirs.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Fixed dependency adding for versionless dependencies.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added NODOT env var to disable RDoc diagram generation.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+The config_hoe task automatically merges in new config entries.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.2.2 / 2007-07-23</h3>
+<ul>
+<li><p>
+2 Minor Enhancements:
+</p>
+<ul>
+<li><p>
+Added exclude parameter for check_manifest filtering to .hoerc.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Documented .hoerc stuffs.
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+1 Bug Fix:
+</p>
+<ul>
+<li><p>
+Various (untested) fixes for windows compatibility.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.2.1 / 2007-05-21</h3>
+<ul>
+<li><p>
+8 Minor Enhancements:
+</p>
+<ul>
+<li><p>
+Allow for spaces in filenames in manifest. Thanks to Aaron Patterson.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Allow rsync flags to be set.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Allow rdoc destination directory to be set.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Deal with bad line-endings. Stupid windoze users... :(
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added WINDOZE check for diff.exe and look for gdiff first.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Use gdiff if available, diff otherwise. Allows to work on borked Solaris.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Move RDoc to attr* from big &#8216;ol chunk at the top of the class.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Basic conversion of history/urls from rdoc to markdown.
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+1 Bug Fix:
+</p>
+<ul>
+<li><p>
+Fixed executables regexp to /^bin/.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.2.0 / 2007-02-13</h3>
+<ul>
+<li><p>
+4 Minor Enhancements:
+</p>
+<ul>
+<li><p>
+Added more support for ext dirs.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added a simple config file (yaml). Use &#8216;rake config_hoe&#8217; to
+edit.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added post_blog task (thanks Aaron!), configured via config_hoe.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Announce task now posts to your blogs and/or publishes API depending on
+config.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.1.7 / 2007-01-10</h3>
+<ul>
+<li><p>
+5 Minor Enhancements:
+</p>
+<ul>
+<li><p>
+extra_deps is now self-healing, and ensures no (direct) cycles.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+cleans check_manifest for CVS projects.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+rubyforge changes for config.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Now uses rsync for publish_docs. YAY for fast!
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Bug #7193 fix spelling of &#8216;synopsys&#8217;.  Submitted by Jacob
+Atzen.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.1.6 / 2006-11-29</h3>
+<ul>
+<li><p>
+1 Bug Fix:
+</p>
+<ul>
+<li><p>
+Fix release to work correctly with need_zip and need_tar.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.1.5 / 2006-11-29</h3>
+<ul>
+<li><p>
+2 Minor Enhancements:
+</p>
+<ul>
+<li><p>
+Reduced check_manifest dependencies to just diff for windows.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Don&#8217;t use default author in summary, description or changes.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.1.4 / 2006-11-12</h3>
+<ul>
+<li><p>
+3 Minor Enhancements:
+</p>
+<ul>
+<li><p>
+Added need_tar and need_zip to customize package requirements. Stupid
+windoze.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Extended spec_extras to take procs as values. Passes in named parameter.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Removed test from require_paths. I thought I already parameterized this. :/
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.1.3 / 2006-11-09</h3>
+<ul>
+<li><p>
+6 Minor Enhancements:
+</p>
+<ul>
+<li><p>
+Added test_deps, now you can automatically discover test dependency
+ommisions.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added ext support! Build C extensions with hoe!
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Gemspec uses test_all.rb or result of test_globs. Tweak those tests.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Now uses https to login to rubyforge. Rubyforge crackers beware!
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Fixed doco and automated updating of it.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added rdoc_pattern. Go doco go!
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.1.2 / 2006-10-22</h3>
+<ul>
+<li><p>
+4 Minor Enhancements:
+</p>
+<ul>
+<li><p>
+Added -d and -t flags to sow to make dev or trunk subdirs for p4 and svn
+projects.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added install_gem to further test gem builds.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added test_globs to customize your test file list.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Removed demo.rb from clean_globs. I&#8217;m torn on this one.
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+1 Bug Fix:
+</p>
+<ul>
+<li><p>
+Fixed bug in install rule.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.1.1 / 2006-10-11</h3>
+<ul>
+<li><p>
+2 Bug Fixes:
+</p>
+<ul>
+<li><p>
+Fixed minor problem with subject of email.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Fixed problem in test.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.1.0 / 2006-10-04</h3>
+<ul>
+<li><p>
+1 Major Enhancement:
+</p>
+<ul>
+<li><p>
+Added sow, a command-line tool for quickly creating new projects.
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+1 Minor Enhancement:
+</p>
+<ul>
+<li><p>
+Added check_manifest task
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.0.5 / 2006-10-03</h3>
+<ul>
+<li><p>
+8 Minor Enhancements:
+</p>
+<ul>
+<li><p>
+Doco cleanup.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Removed <a href="Manifest_txt.html">Manifest.txt</a> from rdoc and added
+title.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added changeset support.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added spec_extras for easy gemspec attribute setting.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added release_notes, changeset setting for releases.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added paragraphs_of utility method.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added email and rubyforge news announcement tasks.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Url attribute may now be an array of urls.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.0.4 / 2006-09-23</h3>
+<ul>
+<li><p>
+1 Bug Fix:
+</p>
+<ul>
+<li><p>
+Damnit&#8230; I messed up. There is no rubygems gem to be dependent upon.
+Duh.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.0.3 / 2006-09-23</h3>
+<ul>
+<li><p>
+9 Minor Enhancements:
+</p>
+<ul>
+<li><p>
+Added debug_gem rule.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added lots of doco.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added proper deps to hoe for other&#8217;s gems, and
+rake/rubyforge/rubygems for hoe.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added ridocs to generate ri locally for testing.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added support for multiple authors.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Rdoc now includes any top level .txt files.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Renamed deploy to release.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Renamed upload to publish_docs.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+publish_docs is now smart about subprojects and missing subdirectories.
+</p>
+</li>
+</ul>
+</li>
+<li><p>
+1 Bug Fix:
+</p>
+<ul>
+<li><p>
+Fixed include paths.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.0.2 / 2006-09-20</h3>
+<ul>
+<li><p>
+2 Minor Enhancements:
+</p>
+<ul>
+<li><p>
+Wee little tests.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Fixed up gemspec&#8217;s require_paths.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.0.1 / 2006-09-20</h3>
+<ul>
+<li><p>
+5 Minor Enhancements:
+</p>
+<ul>
+<li><p>
+Finally got deployment straightened out. Maybe. Some might be on
+rubyforge.org.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added default description and summary.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Added dependency mechanism.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Improved gemspec debugging.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Swapped gem with tgz in deploy... we&#8217;d rather screw up on tgz
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3>1.0.0 / 2006-09-19</h3>
+<ul>
+<li><p>
+1 Major Enhancement:
+</p>
+<ul>
+<li><p>
+Birthday!
+</p>
+</li>
+</ul>
+</li>
+</ul>
+
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+</body>
+</html>
+

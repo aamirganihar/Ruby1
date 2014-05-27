@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Windows::Service</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/windows/service_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/windows/service.rb">lib/windows/service.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../CHANGES.html">CHANGES</a></li>
+				
+					<li class="file"><a href="../MANIFEST.html">MANIFEST</a></li>
+				
+					<li class="file"><a href="../README.html">README</a></li>
+				
+					<li class="file"><a href="../doc/conversion_guide_txt.html">conversion_guide.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Windows.html">Windows</a></li>
+				
+					<li><a href="../Windows/COM.html">Windows::COM</a></li>
+				
+					<li><a href="../Windows/COM/Accessibility.html">Windows::COM::Accessibility</a></li>
+				
+					<li><a href="../Windows/COM/Automation.html">Windows::COM::Automation</a></li>
+				
+					<li><a href="../Windows/COM/Variant.html">Windows::COM::Variant</a></li>
+				
+					<li><a href="../Windows/Clipboard.html">Windows::Clipboard</a></li>
+				
+					<li><a href="../Windows/Console.html">Windows::Console</a></li>
+				
+					<li><a href="../Windows/Debug.html">Windows::Debug</a></li>
+				
+					<li><a href="../Windows/DeviceIO.html">Windows::DeviceIO</a></li>
+				
+					<li><a href="../Windows/Directory.html">Windows::Directory</a></li>
+				
+					<li><a href="../Windows/Error.html">Windows::Error</a></li>
+				
+					<li><a href="../Windows/EventLog.html">Windows::EventLog</a></li>
+				
+					<li><a href="../Windows/File.html">Windows::File</a></li>
+				
+					<li><a href="../Windows/FileMapping.html">Windows::FileMapping</a></li>
+				
+					<li><a href="../Windows/FileSystem.html">Windows::FileSystem</a></li>
+				
+					<li><a href="../Windows/GDI.html">Windows::GDI</a></li>
+				
+					<li><a href="../Windows/GDI/Bitmap.html">Windows::GDI::Bitmap</a></li>
+				
+					<li><a href="../Windows/GDI/DeviceContext.html">Windows::GDI::DeviceContext</a></li>
+				
+					<li><a href="../Windows/GDI/MetaFile.html">Windows::GDI::MetaFile</a></li>
+				
+					<li><a href="../Windows/GDI/PaintingDrawing.html">Windows::GDI::PaintingDrawing</a></li>
+				
+					<li><a href="../Windows/Handle.html">Windows::Handle</a></li>
+				
+					<li><a href="../Windows/Library.html">Windows::Library</a></li>
+				
+					<li><a href="../Windows/Limits.html">Windows::Limits</a></li>
+				
+					<li><a href="../Windows/MSVCRT.html">Windows::MSVCRT</a></li>
+				
+					<li><a href="../Windows/MSVCRT/Buffer.html">Windows::MSVCRT::Buffer</a></li>
+				
+					<li><a href="../Windows/MSVCRT/Directory.html">Windows::MSVCRT::Directory</a></li>
+				
+					<li><a href="../Windows/MSVCRT/File.html">Windows::MSVCRT::File</a></li>
+				
+					<li><a href="../Windows/MSVCRT/IO.html">Windows::MSVCRT::IO</a></li>
+				
+					<li><a href="../Windows/MSVCRT/String.html">Windows::MSVCRT::String</a></li>
+				
+					<li><a href="../Windows/MSVCRT/Time.html">Windows::MSVCRT::Time</a></li>
+				
+					<li><a href="../Windows/Mailslot.html">Windows::Mailslot</a></li>
+				
+					<li><a href="../Windows/Memory.html">Windows::Memory</a></li>
+				
+					<li><a href="../Windows/NIO.html">Windows::NIO</a></li>
+				
+					<li><a href="../Windows/NTFS.html">Windows::NTFS</a></li>
+				
+					<li><a href="../Windows/NTFS/Winternl.html">Windows::NTFS::Winternl</a></li>
+				
+					<li><a href="../Windows/National.html">Windows::National</a></li>
+				
+					<li><a href="../Windows/Network.html">Windows::Network</a></li>
+				
+					<li><a href="../Windows/Network/Management.html">Windows::Network::Management</a></li>
+				
+					<li><a href="../Windows/Network/SNMP.html">Windows::Network::SNMP</a></li>
+				
+					<li><a href="../Windows/Network/Winsock.html">Windows::Network::Winsock</a></li>
+				
+					<li><a href="../Windows/Path.html">Windows::Path</a></li>
+				
+					<li><a href="../Windows/Pipe.html">Windows::Pipe</a></li>
+				
+					<li><a href="../Windows/Process.html">Windows::Process</a></li>
+				
+					<li><a href="../Windows/Registry.html">Windows::Registry</a></li>
+				
+					<li><a href="../Windows/Security.html">Windows::Security</a></li>
+				
+					<li><a href="../Windows/Security/Authentication.html">Windows::Security::Authentication</a></li>
+				
+					<li><a href="../Windows/Service.html">Windows::Service</a></li>
+				
+					<li><a href="../Windows/Shell.html">Windows::Shell</a></li>
+				
+					<li><a href="../Windows/Socket.html">Windows::Socket</a></li>
+				
+					<li><a href="../Windows/Sound.html">Windows::Sound</a></li>
+				
+					<li><a href="../Windows/Synchronize.html">Windows::Synchronize</a></li>
+				
+					<li><a href="../Windows/SystemInfo.html">Windows::SystemInfo</a></li>
+				
+					<li><a href="../Windows/Thread.html">Windows::Thread</a></li>
+				
+					<li><a href="../Windows/Time.html">Windows::Time</a></li>
+				
+					<li><a href="../Windows/ToolHelper.html">Windows::ToolHelper</a></li>
+				
+					<li><a href="../Windows/Unicode.html">Windows::Unicode</a></li>
+				
+					<li><a href="../Windows/Volume.html">Windows::Volume</a></li>
+				
+					<li><a href="../Windows/WSA.html">Windows::WSA</a></li>
+				
+					<li><a href="../Windows/Window.html">Windows::Window</a></li>
+				
+					<li><a href="../Windows/Window/Classes.html">Windows::Window::Classes</a></li>
+				
+					<li><a href="../Windows/Window/Dialog.html">Windows::Window::Dialog</a></li>
+				
+					<li><a href="../Windows/Window/Menu.html">Windows::Window::Menu</a></li>
+				
+					<li><a href="../Windows/Window/Message.html">Windows::Window::Message</a></li>
+				
+					<li><a href="../Windows/Window/Properties.html">Windows::Window::Properties</a></li>
+				
+					<li><a href="../Windows/Window/Timer.html">Windows::Window::Timer</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Windows::Service</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="SC_MANAGER_ALL_ACCESS">SC_MANAGER_ALL_ACCESS</a></dt>
+				
+				<dd class="description"><p>
+SCM access rights
+</p></dd>
+				
+			
+				<dt><a name="SC_MANAGER_CREATE_SERVICE">SC_MANAGER_CREATE_SERVICE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SC_MANAGER_CONNECT">SC_MANAGER_CONNECT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SC_MANAGER_ENUMERATE_SERVICE">SC_MANAGER_ENUMERATE_SERVICE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SC_MANAGER_LOCK">SC_MANAGER_LOCK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SC_MANAGER_MODIFY_BOOT_CONFIG">SC_MANAGER_MODIFY_BOOT_CONFIG</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SC_MANAGER_QUERY_LOCK_STATUS">SC_MANAGER_QUERY_LOCK_STATUS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SC_STATUS_PROCESS_INFO">SC_STATUS_PROCESS_INFO</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SC_ENUM_PROCESS_INFO">SC_ENUM_PROCESS_INFO</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SC_ACTION_NONE">SC_ACTION_NONE</a></dt>
+				
+				<dd class="description"><p>
+<a href="Service.html">Service</a> control action types
+</p></dd>
+				
+			
+				<dt><a name="SC_ACTION_RESTART">SC_ACTION_RESTART</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SC_ACTION_REBOOT">SC_ACTION_REBOOT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SC_ACTION_RUN_COMMAND">SC_ACTION_RUN_COMMAND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_ALL_ACCESS">SERVICE_ALL_ACCESS</a></dt>
+				
+				<dd class="description"><p>
+<a href="Service.html">Service</a> access rights
+</p></dd>
+				
+			
+				<dt><a name="SERVICE_CHANGE_CONFIG">SERVICE_CHANGE_CONFIG</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_ENUMERATE_DEPENDENTS">SERVICE_ENUMERATE_DEPENDENTS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_INTERROGATE">SERVICE_INTERROGATE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_PAUSE_CONTINUE">SERVICE_PAUSE_CONTINUE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_QUERY_CONFIG">SERVICE_QUERY_CONFIG</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_QUERY_STATUS">SERVICE_QUERY_STATUS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_START">SERVICE_START</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_STOP">SERVICE_STOP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_USER_DEFINED_CONTROL">SERVICE_USER_DEFINED_CONTROL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_KERNEL_DRIVER">SERVICE_KERNEL_DRIVER</a></dt>
+				
+				<dd class="description"><p>
+<a href="Service.html">Service</a> types
+</p></dd>
+				
+			
+				<dt><a name="SERVICE_FILE_SYSTEM_DRIVER">SERVICE_FILE_SYSTEM_DRIVER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_ADAPTER">SERVICE_ADAPTER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_RECOGNIZER_DRIVER">SERVICE_RECOGNIZER_DRIVER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_WIN32_OWN_PROCESS">SERVICE_WIN32_OWN_PROCESS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_WIN32_SHARE_PROCESS">SERVICE_WIN32_SHARE_PROCESS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_WIN32">SERVICE_WIN32</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_INTERACTIVE_PROCESS">SERVICE_INTERACTIVE_PROCESS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_DRIVER">SERVICE_DRIVER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_TYPE_ALL">SERVICE_TYPE_ALL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_ERROR_IGNORE">SERVICE_ERROR_IGNORE</a></dt>
+				
+				<dd class="description"><p>
+<a href="Error.html">Error</a> control
+</p></dd>
+				
+			
+				<dt><a name="SERVICE_ERROR_NORMAL">SERVICE_ERROR_NORMAL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_ERROR_SEVERE">SERVICE_ERROR_SEVERE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_ERROR_CRITICAL">SERVICE_ERROR_CRITICAL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_BOOT_START">SERVICE_BOOT_START</a></dt>
+				
+				<dd class="description"><p>
+Start types
+</p></dd>
+				
+			
+				<dt><a name="SERVICE_SYSTEM_START">SERVICE_SYSTEM_START</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_AUTO_START">SERVICE_AUTO_START</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_DEMAND_START">SERVICE_DEMAND_START</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_DISABLED">SERVICE_DISABLED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_CONTROL_STOP">SERVICE_CONTROL_STOP</a></dt>
+				
+				<dd class="description"><p>
+<a href="Service.html">Service</a> control
+</p></dd>
+				
+			
+				<dt><a name="SERVICE_CONTROL_PAUSE">SERVICE_CONTROL_PAUSE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_CONTROL_CONTINUE">SERVICE_CONTROL_CONTINUE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_CONTROL_INTERROGATE">SERVICE_CONTROL_INTERROGATE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_CONTROL_PARAMCHANGE">SERVICE_CONTROL_PARAMCHANGE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_CONTROL_NETBINDADD">SERVICE_CONTROL_NETBINDADD</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_CONTROL_NETBINDREMOVE">SERVICE_CONTROL_NETBINDREMOVE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_CONTROL_NETBINDENABLE">SERVICE_CONTROL_NETBINDENABLE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_CONTROL_NETBINDDISABLE">SERVICE_CONTROL_NETBINDDISABLE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_ACCEPT_STOP">SERVICE_ACCEPT_STOP</a></dt>
+				
+				<dd class="description"><p>
+<a href="Service.html">Service</a> controls accepted
+</p></dd>
+				
+			
+				<dt><a name="SERVICE_ACCEPT_PAUSE_CONTINUE">SERVICE_ACCEPT_PAUSE_CONTINUE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_ACCEPT_SHUTDOWN">SERVICE_ACCEPT_SHUTDOWN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_ACCEPT_PARAMCHANGE">SERVICE_ACCEPT_PARAMCHANGE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_ACCEPT_NETBINDCHANGE">SERVICE_ACCEPT_NETBINDCHANGE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_ACCEPT_HARDWAREPROFILECHANGE">SERVICE_ACCEPT_HARDWAREPROFILECHANGE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_ACCEPT_POWEREVENT">SERVICE_ACCEPT_POWEREVENT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_ACCEPT_SESSIONCHANGE">SERVICE_ACCEPT_SESSIONCHANGE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_ACCEPT_PRESHUTDOWN">SERVICE_ACCEPT_PRESHUTDOWN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_ACTIVE">SERVICE_ACTIVE</a></dt>
+				
+				<dd class="description"><p>
+<a href="Service.html">Service</a> states
+</p></dd>
+				
+			
+				<dt><a name="SERVICE_INACTIVE">SERVICE_INACTIVE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_STATE_ALL">SERVICE_STATE_ALL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_STOPPED">SERVICE_STOPPED</a></dt>
+				
+				<dd class="description"><p>
+<a href="Service.html">Service</a> current states
+</p></dd>
+				
+			
+				<dt><a name="SERVICE_START_PENDING">SERVICE_START_PENDING</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_STOP_PENDING">SERVICE_STOP_PENDING</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_RUNNING">SERVICE_RUNNING</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_CONTINUE_PENDING">SERVICE_CONTINUE_PENDING</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_PAUSE_PENDING">SERVICE_PAUSE_PENDING</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_PAUSED">SERVICE_PAUSED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_CONFIG_DESCRIPTION">SERVICE_CONFIG_DESCRIPTION</a></dt>
+				
+				<dd class="description"><p>
+Info levels
+</p></dd>
+				
+			
+				<dt><a name="SERVICE_CONFIG_FAILURE_ACTIONS">SERVICE_CONFIG_FAILURE_ACTIONS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_CONFIG_DELAYED_AUTO_START_INFO">SERVICE_CONFIG_DELAYED_AUTO_START_INFO</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_CONFIG_FAILURE_ACTIONS_FLAG">SERVICE_CONFIG_FAILURE_ACTIONS_FLAG</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_CONFIG_SERVICE_SID_INFO">SERVICE_CONFIG_SERVICE_SID_INFO</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_CONFIG_REQUIRED_PRIVILEGES_INFO">SERVICE_CONFIG_REQUIRED_PRIVILEGES_INFO</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_CONFIG_PRESHUTDOWN_INFO">SERVICE_CONFIG_PRESHUTDOWN_INFO</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SERVICE_NO_CHANGE">SERVICE_NO_CHANGE</a></dt>
+				
+				<dd class="description"><p>
+Configuration
+</p></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

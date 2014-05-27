@@ -1,0 +1,962 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Windows::API</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/windows/api_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/windows/api.rb">lib/windows/api.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-auto_constant">::auto_constant</a></li>
+					
+					<li><a href="#method-c-auto_constant%3D">::auto_constant=</a></li>
+					
+					<li><a href="#method-c-auto_method">::auto_method</a></li>
+					
+					<li><a href="#method-c-auto_method%3D">::auto_method=</a></li>
+					
+					<li><a href="#method-c-auto_namespace">::auto_namespace</a></li>
+					
+					<li><a href="#method-c-auto_namespace%3D">::auto_namespace=</a></li>
+					
+					<li><a href="#method-c-auto_unicode">::auto_unicode</a></li>
+					
+					<li><a href="#method-c-auto_unicode%3D">::auto_unicode=</a></li>
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-call">#call</a></li>
+					
+					<li><a href="#method-i-class_for">#class_for</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../CHANGES.html">CHANGES</a></li>
+				
+					<li class="file"><a href="../MANIFEST.html">MANIFEST</a></li>
+				
+					<li class="file"><a href="../README.html">README</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Windows.html">Windows</a></li>
+				
+					<li><a href="../Windows/API.html">Windows::API</a></li>
+				
+					<li><a href="../WideString.html">WideString</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Windows::API</h1>
+
+		<div id="description">
+			<p>
+Wrapper around the Win32::API class
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="VERSION">VERSION</a></dt>
+				
+				<dd class="description"><p>
+The version of the windows-api library
+</p></dd>
+				
+			
+				<dt><a name="DATA_TYPES">DATA_TYPES</a></dt>
+				
+				<dd class="description"><p>
+Verbose data types that can be used instead of single letters
+</p></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="auto-constant-method" class="method-detail ">
+				<a name="method-c-auto_constant"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">auto_constant</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the value of the @<a
+href="API.html#method-c-auto_constant">auto_constant</a> class instance
+variable. The default is nil, i.e. none. See the
+Windows::API.auto_constant= documentation for more information. 
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="auto-constant-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/api.rb, line 133</span>
+133:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">auto_constant</span>
+134:       <span class="ruby-ivar">@auto_constant</span>
+135:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="auto-constant--method" class="method-detail ">
+				<a name="method-c-auto_constant%3D"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">auto_constant=</span><span
+						class="method-args">(bool)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<pre>
+ Automatically sets a constant to match the function name.
+
+ The standard practice for defining Windows::API objects is to use
+ a constant that matches the function name. For example, this is a
+ typical idiom:
+
+    module Windows
+       module File
+          GetFileAttributes = API.new('GetFileAttributes', 'P','L')
+       end
+    end
+
+ With the API.auto_constant value set to true you can avoid the
+ assignment step and the matching constant name will be automatically
+ set for you in the namespace defined in API.auto_namespace. In other
+ words, this example is identical to the one above:
+
+    module Windows
+       module File
+          API.auto_constant  = true
+          API.auto_namespace = 'Windows::File'
+          API.new('GetFileAttributes', 'P', 'L')
+       end
+    end
+
+ If the auto_constant class variable is set to true, but no
+ auto_namespace is set, an error will be raised. Note that the
+ namespace must refer to an existing module (not a class).
+</pre>
+<p>
+&#8212;
+</p>
+<pre>
+ TODO: If there's a way to automatically grab the namespace internally,
+ nesting and all, I'd love to know the solution.
+</pre>
+<p>
+
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="auto-constant--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/api.rb, line 169</span>
+169:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">auto_constant=</span>(<span class="ruby-identifier">bool</span>)
+170:       <span class="ruby-ivar">@auto_constant</span> = <span class="ruby-identifier">bool</span>
+171:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="auto-method-method" class="method-detail ">
+				<a name="method-c-auto_method"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">auto_method</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the value of the <a
+href="API.html#method-c-auto_method">auto_method</a> class instance
+variable. Used in conjunction with auto_unicode.  See API.auto_method= for
+more information. 
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="auto-method-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/api.rb, line 196</span>
+196:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">auto_method</span>
+197:       <span class="ruby-ivar">@auto_method</span>
+198:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="auto-method--method" class="method-detail ">
+				<a name="method-c-auto_method%3D"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">auto_method=</span><span
+						class="method-args">(bool)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+If this option is set to true then a corresponding method is automatically
+generated when you create a new <a href="API.html">Windows::API</a>
+object.
+</p>
+<p>
+For example, instead of doing this:
+</p>
+<pre>
+   module Windows
+      module File
+         GetFileAttributes = API.new('GetFileAttributes', 'P', 'L')
+
+         def GetFileAttributes(x)
+            GetFileAttributes.call(x)
+         end
+      end
+   end
+
+</pre>
+<p>
+You can do this, and have the method autogenerated for you.
+</p>
+<pre>
+   module Windows
+      module File
+         API.auto_namespace = 'Windows::File'
+         API.auto_constant  = true
+         API.auto_method    = true
+         API.new('GetFileAttributes', 'P', 'L')
+      end
+   end
+
+   include Windows::File
+   GetFileAttributes('C:/test.txt') # vs. GetFileAttributes.call
+
+</pre>
+<p>
+If the <a href="API.html">Windows::API</a> object is declared to be a
+boolean in the constructor, then the method definition automatically
+includes a &#8217;!= 0&#8217; clause at the end of the call. That way, you
+can do &#8216;if SomeMethod(x)&#8217; instead of having to do &#8216;if
+SomeMethod(x) != 0&#8217;, and it will do the right thing.
+</p>
+<p>
+If the API.auto_unicode option is also set to true, then you will get
+three method definitions. The standard function name, the explicit ANSI
+(&#8216;A&#8217;) version and the explicit Unicode/wide version
+(&#8216;W&#8217;). The exception to this rule is that the explicit ANSI
+and Unicode methods will NOT be generated if the function passed to the
+constructor already ends with &#8216;A&#8217; or &#8216;W&#8217;. 
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="auto-method--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/api.rb, line 242</span>
+242:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">auto_method=</span>(<span class="ruby-identifier">bool</span>)
+243:       <span class="ruby-ivar">@auto_method</span> = <span class="ruby-identifier">bool</span>
+244:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="auto-namespace-method" class="method-detail ">
+				<a name="method-c-auto_namespace"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">auto_namespace</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the value of the <a
+href="API.html#method-c-auto_namespace">auto_namespace</a> class instance
+variable. Used in conjunction with API.auto_constant and/or
+API.auto_method. 
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="auto-namespace-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/api.rb, line 176</span>
+176:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">auto_namespace</span>
+177:       <span class="ruby-ivar">@auto_namespace</span>
+178:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="auto-namespace--method" class="method-detail ">
+				<a name="method-c-auto_namespace%3D"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">auto_namespace=</span><span
+						class="method-args">(namespace)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Sets the value of the <a
+href="API.html#method-c-auto_namespace">auto_namespace</a> class nstance
+variable. The default is nil, i.e. none. Use in conjunction with the <a
+href="API.html#method-c-auto_constant">auto_constant</a> and/or <a
+href="API.html#method-c-auto_method">auto_method</a> class variables, this
+method will automatically set a constant and/or method in
+<tt>namespace</tt> equal to the function name set in the constructor.
+</p>
+<p>
+The <tt>namespace</tt> must refer to an existing module, not a class. 
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="auto-namespace--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/api.rb, line 188</span>
+188:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">auto_namespace=</span>(<span class="ruby-identifier">namespace</span>)
+189:       <span class="ruby-ivar">@auto_namespace</span> = <span class="ruby-identifier">namespace</span>
+190:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="auto-unicode-method" class="method-detail ">
+				<a name="method-c-auto_unicode"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">auto_unicode</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the value of the <a
+href="API.html#method-c-auto_unicode">auto_unicode</a> class instance
+variable. This is used in conjunction with the <a
+href="API.html#method-c-auto_method">auto_method</a> and/or <a
+href="API.html#method-c-auto_constant">auto_constant</a> class variables.
+Not significant if neither of those variables are set. 
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="auto-unicode-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/api.rb, line 250</span>
+250:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">auto_unicode</span>
+251:       <span class="ruby-ivar">@auto_unicode</span>
+252:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="auto-unicode--method" class="method-detail ">
+				<a name="method-c-auto_unicode%3D"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">auto_unicode=</span><span
+						class="method-args">(bool)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+If set to true, and the <a
+href="API.html#method-c-auto_constant">auto_constant</a> variable is set,
+then the automatic constant generation will generate the explicit ANSI
+(&#8216;A&#8217;) and Unicode/wide (&#8216;W&#8217;) versions of the
+function passed to the constructor, if such versions exist.  Likewise, if
+the the <a href="API.html#method-c-auto_method">auto_method</a> variable
+is set, then explicit ANSI and Unicode methods are generated.
+</p>
+<p>
+Here&#8217;s a typical idiom:
+</p>
+<p>
+module <a href="../Windows.html">Windows</a>
+</p>
+<pre>
+   module Path
+      API.auto_namespace = Windows::Path
+      API.auto_constant = true
+      API.new('shlwapi', 'PathAddBackslash', 'P', 'P')
+      API.new('shlwapi', 'PathAddBackslashA', 'P', 'P')
+      API.new('shlwapi', 'PathAddBackslashW', 'P', 'P')
+   end
+</pre>
+<p>
+end
+</p>
+<p>
+That can be reduced to this:
+</p>
+<p>
+module <a href="../Windows.html">Windows</a>
+</p>
+<pre>
+   module Path
+      API.auto_namespace = Windows::Path
+      API.auto_constant = true
+      API.auto_unicode  = true
+      API.new('shlwapi', 'PathAddBackslash', 'P', 'P')
+   end
+</pre>
+<p>
+end
+</p>
+<p>
+This value is ignored if the function passed to the constructor already
+ends with an &#8216;A&#8217; or &#8216;W&#8217;. 
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="auto-unicode--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/api.rb, line 287</span>
+287:     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">auto_unicode=</span>(<span class="ruby-identifier">bool</span>)
+288:       <span class="ruby-ivar">@auto_unicode</span> = <span class="ruby-identifier">bool</span>
+289:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-callseq">new(func, proto='V', rtype='L', dll='kernel32')</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Creates and returns a new <a href="API.html">Windows::API</a> object.  The
+<tt>func</tt> is the name of the <a href="../Windows.html">Windows</a>
+function.
+</p>
+<p>
+The <tt>proto</tt> is the function prototype for <tt>func</tt>.  This can
+be a string or an array of characters.  The possible valid characters are
+&#8216;I&#8217; (integer), &#8216;B&#8217; (BOOL), &#8216;L&#8217; (long),
+&#8216;V&#8217; (void), or &#8216;P&#8217; (pointer). The default is void
+(&#8216;V&#8217;).
+</p>
+<p>
+The <tt>rtype</tt> argument is the return type for the function.  The
+valid characters are the same as for the <tt>proto</tt>. The default is
+long (&#8216;L&#8217;).
+</p>
+<p>
+The &#8216;B&#8217; (BOOL) return type is the same as &#8216;I&#8217;
+(Integer). This is significant only if the API.auto_method option is set
+to true, in which case it alters the generated method definition slightly.
+See the API.auto_method= class method for more information.
+</p>
+<p>
+The <tt>dll</tt> is the name of the DLL file that the function is exported
+from. The default is &#8216;kernel32&#8217;.
+</p>
+<p>
+If the function cannot be found then an API::Error is raised (a subclass
+of RuntimeError). 
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/api.rb, line 316</span>
+316:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">func</span>, <span class="ruby-identifier">proto</span>=<span class="ruby-value str">'V'</span>, <span class="ruby-identifier">rtype</span>=<span class="ruby-value str">'L'</span>, <span class="ruby-identifier">dll</span>=<span class="ruby-value str">'kernel32'</span>)
+317:       <span class="ruby-comment cmt"># Convert literal data types to values that win32-api understands</span>
+318:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">proto</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>)
+319:         <span class="ruby-identifier">proto</span>.<span class="ruby-identifier">each_with_index</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">pt</span>, <span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+320:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">pt</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>
+321:             <span class="ruby-identifier">proto</span>[<span class="ruby-identifier">index</span>].<span class="ruby-identifier">replace</span>(<span class="ruby-constant">DATA_TYPES</span>[<span class="ruby-identifier">pt</span>])
+322:           <span class="ruby-keyword kw">end</span>
+323:         }
+324:       <span class="ruby-keyword kw">end</span>
+325: 
+326:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">rtype</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span>
+327:         <span class="ruby-identifier">rtype</span>.<span class="ruby-identifier">replace</span>(<span class="ruby-constant">DATA_TYPES</span>[<span class="ruby-identifier">rtype</span>])
+328:       <span class="ruby-keyword kw">end</span>
+329: 
+330:       <span class="ruby-ivar">@function_name</span> = <span class="ruby-identifier">func</span>
+331:       <span class="ruby-ivar">@prototype</span>     = <span class="ruby-identifier">proto</span>
+332:       <span class="ruby-ivar">@return_type</span>   = <span class="ruby-identifier">rtype</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'B'</span> <span class="ruby-operator">?</span> <span class="ruby-value str">'I'</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">rtype</span>
+333:       <span class="ruby-ivar">@dll_name</span>      = <span class="ruby-identifier">dll</span>
+334:       <span class="ruby-ivar">@boolean</span>       = <span class="ruby-identifier">rtype</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'B'</span> <span class="ruby-operator">?</span> <span class="ruby-keyword kw">true</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">false</span>
+335: 
+336:       <span class="ruby-ivar">@api</span> = <span class="ruby-constant">Win32</span><span class="ruby-operator">::</span><span class="ruby-constant">API</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">func</span>, <span class="ruby-identifier">proto</span>, <span class="ruby-identifier">rtype</span>, <span class="ruby-identifier">dll</span>)
+337: 
+338:       <span class="ruby-identifier">api_a</span> = <span class="ruby-keyword kw">nil</span>
+339:       <span class="ruby-identifier">api_w</span> = <span class="ruby-keyword kw">nil</span>
+340: 
+341:       <span class="ruby-comment cmt"># If the auto_unicode option is set, and the func is not already</span>
+342:       <span class="ruby-comment cmt"># an explicit ANSI or Wide function name, generate Win32::API</span>
+343:       <span class="ruby-comment cmt"># objects for those functions as well. Ignore errors because not</span>
+344:       <span class="ruby-comment cmt"># all functions have explicit ANSI or Wide character implementations.</span>
+345:       <span class="ruby-comment cmt">#</span>
+346:       <span class="ruby-comment cmt"># This entire bit of logic is skipped if the DLL is msvcrt, since</span>
+347:       <span class="ruby-comment cmt"># msvcrt functions never have explicit ANSI or Wide character</span>
+348:       <span class="ruby-comment cmt"># versions.</span>
+349:       <span class="ruby-comment cmt">#</span>
+350:       <span class="ruby-keyword kw">if</span> <span class="ruby-constant">Windows</span><span class="ruby-operator">::</span><span class="ruby-constant">API</span>.<span class="ruby-identifier">auto_unicode</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">dll</span> <span class="ruby-operator">!~</span> <span class="ruby-regexp re">/msvcr/</span>
+351:         <span class="ruby-keyword kw">begin</span>
+352:           <span class="ruby-keyword kw">unless</span> [<span class="ruby-value str">'A'</span>, <span class="ruby-value str">'W'</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">func</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">chr</span>)
+353:             <span class="ruby-identifier">api_a</span> = <span class="ruby-constant">Win32</span><span class="ruby-operator">::</span><span class="ruby-constant">API</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;#{func}A&quot;</span>, <span class="ruby-identifier">proto</span>, <span class="ruby-identifier">rtype</span>, <span class="ruby-identifier">dll</span>)
+354:           <span class="ruby-keyword kw">end</span>
+355:         <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">RuntimeError</span>
+356:         <span class="ruby-keyword kw">end</span>
+357: 
+358:         <span class="ruby-keyword kw">begin</span>
+359:           <span class="ruby-keyword kw">unless</span> [<span class="ruby-value str">'W'</span>, <span class="ruby-value str">'A'</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">func</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">chr</span>)
+360:             <span class="ruby-identifier">api_w</span> = <span class="ruby-constant">Win32</span><span class="ruby-operator">::</span><span class="ruby-constant">API</span>.<span class="ruby-identifier">new</span>(<span class="ruby-node">&quot;#{func}W&quot;</span>, <span class="ruby-identifier">proto</span>, <span class="ruby-identifier">rtype</span>, <span class="ruby-identifier">dll</span>)
+361:           <span class="ruby-keyword kw">end</span>
+362:         <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">RuntimeError</span>
+363:         <span class="ruby-keyword kw">end</span>
+364:       <span class="ruby-keyword kw">end</span>
+365: 
+366:       <span class="ruby-identifier">func_upper</span> = <span class="ruby-keyword kw">nil</span>
+367: 
+368:       <span class="ruby-comment cmt"># Automatically define a constant matching the function name if the</span>
+369:       <span class="ruby-comment cmt"># auto_constant option is set. Lower case method names will have a</span>
+370:       <span class="ruby-comment cmt"># capitalized equivalent created, e.g. Memcpy for memcpy, etc.</span>
+371:       <span class="ruby-comment cmt">#</span>
+372:       <span class="ruby-keyword kw">if</span> <span class="ruby-constant">Windows</span><span class="ruby-operator">::</span><span class="ruby-constant">API</span>.<span class="ruby-identifier">auto_constant</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">Windows</span><span class="ruby-operator">::</span><span class="ruby-constant">API</span>.<span class="ruby-identifier">auto_namespace</span>
+373:         <span class="ruby-keyword kw">if</span> <span class="ruby-constant">Windows</span><span class="ruby-operator">::</span><span class="ruby-constant">API</span>.<span class="ruby-identifier">auto_namespace</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">'Windows'</span>
+374:           <span class="ruby-identifier">namespace</span> = <span class="ruby-identifier">class_for</span>(<span class="ruby-constant">Windows</span><span class="ruby-operator">::</span><span class="ruby-constant">API</span>.<span class="ruby-identifier">auto_namespace</span>)
+375:         <span class="ruby-keyword kw">else</span>
+376:           <span class="ruby-identifier">namespace</span> = <span class="ruby-constant">Windows</span><span class="ruby-operator">::</span><span class="ruby-constant">API</span>.<span class="ruby-identifier">auto_namespace</span>
+377:         <span class="ruby-keyword kw">end</span>
+378: 
+379:         <span class="ruby-comment cmt"># Convert e.g. 'strstr' to 'Strstr' as an equivalent constant</span>
+380:         <span class="ruby-keyword kw">if</span> (<span class="ruby-value str">'A'</span><span class="ruby-operator">..</span><span class="ruby-value str">'Z'</span>).<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">func</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">chr</span>)
+381:           <span class="ruby-identifier">namespace</span>.<span class="ruby-identifier">const_set</span>(<span class="ruby-identifier">func</span>, <span class="ruby-ivar">@api</span>)
+382:         <span class="ruby-keyword kw">else</span>
+383:           <span class="ruby-identifier">func_upper</span> = <span class="ruby-identifier">func</span>.<span class="ruby-identifier">dup</span>
+384:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">func_upper</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">chr</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'_'</span>
+385:             <span class="ruby-identifier">func_upper</span> = <span class="ruby-identifier">func_upper</span>[<span class="ruby-value">1</span>, <span class="ruby-identifier">func_upper</span>.<span class="ruby-identifier">length</span>]
+386:           <span class="ruby-keyword kw">end</span>
+387:           <span class="ruby-identifier">func_upper</span>[<span class="ruby-value">0</span>, <span class="ruby-value">1</span>] = <span class="ruby-identifier">func_upper</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">chr</span>.<span class="ruby-identifier">capitalize</span>
+388:           <span class="ruby-identifier">namespace</span>.<span class="ruby-identifier">const_set</span>(<span class="ruby-identifier">func_upper</span>, <span class="ruby-ivar">@api</span>)
+389:         <span class="ruby-keyword kw">end</span>
+390: 
+391:         <span class="ruby-comment cmt"># Automatically define the explicit ANSI and Unicode functions</span>
+392:         <span class="ruby-comment cmt"># as constants as well, if appropriate.</span>
+393:         <span class="ruby-comment cmt">#</span>
+394:         <span class="ruby-keyword kw">if</span> <span class="ruby-constant">Windows</span><span class="ruby-operator">::</span><span class="ruby-constant">API</span>.<span class="ruby-identifier">auto_unicode</span>
+395:           <span class="ruby-identifier">namespace</span>.<span class="ruby-identifier">const_set</span>(<span class="ruby-node">&quot;#{func}A&quot;</span>, <span class="ruby-identifier">api_a</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">api_a</span>
+396:           <span class="ruby-identifier">namespace</span>.<span class="ruby-identifier">const_set</span>(<span class="ruby-node">&quot;#{func}W&quot;</span>, <span class="ruby-identifier">api_w</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">api_w</span>
+397:         <span class="ruby-keyword kw">end</span>
+398:       <span class="ruby-keyword kw">end</span>
+399: 
+400:       <span class="ruby-comment cmt"># Automatically define a method in the auto_namespace if the</span>
+401:       <span class="ruby-comment cmt"># auto_method option is set. The explicit ANSI and Unicode methods</span>
+402:       <span class="ruby-comment cmt"># are added as well if the auto_unicode option is set to true.</span>
+403:       <span class="ruby-comment cmt">#</span>
+404:       <span class="ruby-keyword kw">if</span> <span class="ruby-constant">Windows</span><span class="ruby-operator">::</span><span class="ruby-constant">API</span>.<span class="ruby-identifier">auto_method</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">Windows</span><span class="ruby-operator">::</span><span class="ruby-constant">API</span>.<span class="ruby-identifier">auto_namespace</span>
+405:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">proto</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'V'</span>
+406:           <span class="ruby-identifier">proto</span> = <span class="ruby-value str">''</span>
+407:         <span class="ruby-keyword kw">else</span>
+408:           <span class="ruby-identifier">n</span> = <span class="ruby-value">0</span>
+409:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">proto</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)
+410:             <span class="ruby-identifier">proto</span> = <span class="ruby-identifier">proto</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">''</span>).<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span>
+411:               <span class="ruby-identifier">n</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+412:               <span class="ruby-identifier">e</span>.<span class="ruby-identifier">downcase</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">n</span>.<span class="ruby-identifier">to_s</span>
+413:             }.<span class="ruby-identifier">join</span>(<span class="ruby-value str">', '</span>)
+414:           <span class="ruby-keyword kw">else</span>
+415:             <span class="ruby-identifier">proto</span> = <span class="ruby-identifier">proto</span>.<span class="ruby-identifier">map</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span>
+416:               <span class="ruby-identifier">n</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+417:               <span class="ruby-identifier">e</span>.<span class="ruby-identifier">downcase</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">n</span>.<span class="ruby-identifier">to_s</span>
+418:             }.<span class="ruby-identifier">join</span>(<span class="ruby-value str">', '</span>)
+419:           <span class="ruby-keyword kw">end</span>
+420:         <span class="ruby-keyword kw">end</span>
+421: 
+422:         <span class="ruby-comment cmt"># Use the upper case function equivalent if defined</span>
+423:         <span class="ruby-identifier">call_func</span> = <span class="ruby-identifier">func_upper</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">func</span>
+424: 
+425:         <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@boolean</span>
+426:           <span class="ruby-identifier">string</span> = <span class="ruby-value str">            module #{Windows::API.auto_namespace}              def #{func}(#{proto})                #{call_func}.call(#{proto}) != 0              end</span>
+427: 
+428:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">api_a</span>
+429:             <span class="ruby-identifier">string</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">%{
+430:               def #{func}A(#{proto})
+431:                 #{call_func}A.call(#{proto}) != 0
+432:               end
+433:             }</span>
+434:           <span class="ruby-keyword kw">end</span>
+435: 
+436:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">api_w</span>
+437:             <span class="ruby-identifier">string</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">%{
+438:               def #{func}W(#{proto})
+439:                 #{call_func}W.call(#{proto}) != 0
+440:               end
+441:             }</span>
+442:           <span class="ruby-keyword kw">end</span>
+443: 
+444:           <span class="ruby-identifier">string</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">'end'</span>
+445:         <span class="ruby-keyword kw">else</span>
+446:           <span class="ruby-identifier">string</span> = <span class="ruby-value str">            module #{Windows::API.auto_namespace}              def #{func}(#{proto})                #{call_func}.call(#{proto})              end</span>
+447: 
+448:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">api_a</span>
+449:             <span class="ruby-identifier">string</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">%{
+450:               def #{func}A(#{proto})
+451:                 #{call_func}A.call(#{proto})
+452:               end
+453:             }</span>
+454:           <span class="ruby-keyword kw">end</span>
+455: 
+456:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">api_w</span>
+457:             <span class="ruby-identifier">string</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">%{
+458:               def #{func}W(#{proto})
+459:                 #{call_func}W.call(#{proto})
+460:               end
+461:             }</span>
+462:           <span class="ruby-keyword kw">end</span>
+463: 
+464:           <span class="ruby-comment cmt"># Create aliases for methods with an underscore that do not</span>
+465:           <span class="ruby-comment cmt"># require an underscore, e.g. umask and _umask.</span>
+466:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">func</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">chr</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'_'</span>
+467:             <span class="ruby-identifier">func_alias</span> = <span class="ruby-identifier">func</span>[<span class="ruby-value">1</span>, <span class="ruby-identifier">func</span>.<span class="ruby-identifier">length</span>]
+468:             <span class="ruby-identifier">string</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;alias #{func_alias} #{func}\n&quot;</span>
+469:           <span class="ruby-keyword kw">end</span>
+470: 
+471:           <span class="ruby-identifier">string</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">'end'</span>
+472:         <span class="ruby-keyword kw">end</span>
+473: 
+474:         <span class="ruby-identifier">eval</span>(<span class="ruby-identifier">string</span>)
+475:       <span class="ruby-keyword kw">end</span>
+476:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="call-method" class="method-detail ">
+				<a name="method-i-call"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">call</span><span
+						class="method-args">(*args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Calls the function name set in the constructor. 
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="call-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/api.rb, line 490</span>
+490:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">call</span>(*<span class="ruby-identifier">args</span>)
+491:       <span class="ruby-ivar">@api</span>.<span class="ruby-identifier">call</span>(*<span class="ruby-identifier">args</span>)
+492:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="class-for-method" class="method-detail ">
+				<a name="method-i-class_for"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">class_for</span><span
+						class="method-args">(class_name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Get a module&#8217;s namespace. This is basically the equivalent of the
+rb_path2class() function from intern.h 
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="class-for-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/api.rb, line 499</span>
+499:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">class_for</span>(<span class="ruby-identifier">class_name</span>)
+500:       <span class="ruby-identifier">names</span> = <span class="ruby-identifier">class_name</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;::&quot;</span>)
+501:       <span class="ruby-identifier">result</span> = <span class="ruby-constant">Object</span>
+502:       <span class="ruby-identifier">names</span>.<span class="ruby-identifier">each</span>{ <span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span> <span class="ruby-identifier">result</span> = <span class="ruby-identifier">result</span>.<span class="ruby-identifier">const_get</span>(<span class="ruby-identifier">n</span>) }
+503:       <span class="ruby-identifier">result</span>
+504:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

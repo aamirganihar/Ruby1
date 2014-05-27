@@ -1,0 +1,2121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Windows::National</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/windows/national_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/windows/national.rb">lib/windows/national.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-MAKELANGID">#MAKELANGID</a></li>
+					
+					<li><a href="#method-i-MAKELCID">#MAKELCID</a></li>
+					
+					<li><a href="#method-i-get_acp_string">#get_acp_string</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../CHANGES.html">CHANGES</a></li>
+				
+					<li class="file"><a href="../MANIFEST.html">MANIFEST</a></li>
+				
+					<li class="file"><a href="../README.html">README</a></li>
+				
+					<li class="file"><a href="../doc/conversion_guide_txt.html">conversion_guide.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Windows.html">Windows</a></li>
+				
+					<li><a href="../Windows/COM.html">Windows::COM</a></li>
+				
+					<li><a href="../Windows/COM/Accessibility.html">Windows::COM::Accessibility</a></li>
+				
+					<li><a href="../Windows/COM/Automation.html">Windows::COM::Automation</a></li>
+				
+					<li><a href="../Windows/COM/Variant.html">Windows::COM::Variant</a></li>
+				
+					<li><a href="../Windows/Clipboard.html">Windows::Clipboard</a></li>
+				
+					<li><a href="../Windows/Console.html">Windows::Console</a></li>
+				
+					<li><a href="../Windows/Debug.html">Windows::Debug</a></li>
+				
+					<li><a href="../Windows/DeviceIO.html">Windows::DeviceIO</a></li>
+				
+					<li><a href="../Windows/Directory.html">Windows::Directory</a></li>
+				
+					<li><a href="../Windows/Error.html">Windows::Error</a></li>
+				
+					<li><a href="../Windows/EventLog.html">Windows::EventLog</a></li>
+				
+					<li><a href="../Windows/File.html">Windows::File</a></li>
+				
+					<li><a href="../Windows/FileMapping.html">Windows::FileMapping</a></li>
+				
+					<li><a href="../Windows/FileSystem.html">Windows::FileSystem</a></li>
+				
+					<li><a href="../Windows/GDI.html">Windows::GDI</a></li>
+				
+					<li><a href="../Windows/GDI/Bitmap.html">Windows::GDI::Bitmap</a></li>
+				
+					<li><a href="../Windows/GDI/DeviceContext.html">Windows::GDI::DeviceContext</a></li>
+				
+					<li><a href="../Windows/GDI/MetaFile.html">Windows::GDI::MetaFile</a></li>
+				
+					<li><a href="../Windows/GDI/PaintingDrawing.html">Windows::GDI::PaintingDrawing</a></li>
+				
+					<li><a href="../Windows/Handle.html">Windows::Handle</a></li>
+				
+					<li><a href="../Windows/Library.html">Windows::Library</a></li>
+				
+					<li><a href="../Windows/Limits.html">Windows::Limits</a></li>
+				
+					<li><a href="../Windows/MSVCRT.html">Windows::MSVCRT</a></li>
+				
+					<li><a href="../Windows/MSVCRT/Buffer.html">Windows::MSVCRT::Buffer</a></li>
+				
+					<li><a href="../Windows/MSVCRT/Directory.html">Windows::MSVCRT::Directory</a></li>
+				
+					<li><a href="../Windows/MSVCRT/File.html">Windows::MSVCRT::File</a></li>
+				
+					<li><a href="../Windows/MSVCRT/IO.html">Windows::MSVCRT::IO</a></li>
+				
+					<li><a href="../Windows/MSVCRT/String.html">Windows::MSVCRT::String</a></li>
+				
+					<li><a href="../Windows/MSVCRT/Time.html">Windows::MSVCRT::Time</a></li>
+				
+					<li><a href="../Windows/Mailslot.html">Windows::Mailslot</a></li>
+				
+					<li><a href="../Windows/Memory.html">Windows::Memory</a></li>
+				
+					<li><a href="../Windows/NIO.html">Windows::NIO</a></li>
+				
+					<li><a href="../Windows/NTFS.html">Windows::NTFS</a></li>
+				
+					<li><a href="../Windows/NTFS/Winternl.html">Windows::NTFS::Winternl</a></li>
+				
+					<li><a href="../Windows/National.html">Windows::National</a></li>
+				
+					<li><a href="../Windows/Network.html">Windows::Network</a></li>
+				
+					<li><a href="../Windows/Network/Management.html">Windows::Network::Management</a></li>
+				
+					<li><a href="../Windows/Network/SNMP.html">Windows::Network::SNMP</a></li>
+				
+					<li><a href="../Windows/Network/Winsock.html">Windows::Network::Winsock</a></li>
+				
+					<li><a href="../Windows/Path.html">Windows::Path</a></li>
+				
+					<li><a href="../Windows/Pipe.html">Windows::Pipe</a></li>
+				
+					<li><a href="../Windows/Process.html">Windows::Process</a></li>
+				
+					<li><a href="../Windows/Registry.html">Windows::Registry</a></li>
+				
+					<li><a href="../Windows/Security.html">Windows::Security</a></li>
+				
+					<li><a href="../Windows/Security/Authentication.html">Windows::Security::Authentication</a></li>
+				
+					<li><a href="../Windows/Service.html">Windows::Service</a></li>
+				
+					<li><a href="../Windows/Shell.html">Windows::Shell</a></li>
+				
+					<li><a href="../Windows/Socket.html">Windows::Socket</a></li>
+				
+					<li><a href="../Windows/Sound.html">Windows::Sound</a></li>
+				
+					<li><a href="../Windows/Synchronize.html">Windows::Synchronize</a></li>
+				
+					<li><a href="../Windows/SystemInfo.html">Windows::SystemInfo</a></li>
+				
+					<li><a href="../Windows/Thread.html">Windows::Thread</a></li>
+				
+					<li><a href="../Windows/Time.html">Windows::Time</a></li>
+				
+					<li><a href="../Windows/ToolHelper.html">Windows::ToolHelper</a></li>
+				
+					<li><a href="../Windows/Unicode.html">Windows::Unicode</a></li>
+				
+					<li><a href="../Windows/Volume.html">Windows::Volume</a></li>
+				
+					<li><a href="../Windows/WSA.html">Windows::WSA</a></li>
+				
+					<li><a href="../Windows/Window.html">Windows::Window</a></li>
+				
+					<li><a href="../Windows/Window/Classes.html">Windows::Window::Classes</a></li>
+				
+					<li><a href="../Windows/Window/Dialog.html">Windows::Window::Dialog</a></li>
+				
+					<li><a href="../Windows/Window/Menu.html">Windows::Window::Menu</a></li>
+				
+					<li><a href="../Windows/Window/Message.html">Windows::Window::Message</a></li>
+				
+					<li><a href="../Windows/Window/Properties.html">Windows::Window::Properties</a></li>
+				
+					<li><a href="../Windows/Window/Timer.html">Windows::Window::Timer</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Windows::National</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="CODE_PAGE">CODE_PAGE</a></dt>
+				
+				<dd class="description"><p>
+Code page identifiers.  Used for <a
+href="National.html#method-i-get_acp_string">get_acp_string</a> method. 
+</p></dd>
+				
+			
+				<dt><a name="LANG_NEUTRAL">LANG_NEUTRAL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_INVARIANT">LANG_INVARIANT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_AFRIKAANS">LANG_AFRIKAANS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_ALBANIAN">LANG_ALBANIAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_ARABIC">LANG_ARABIC</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_ARMENIAN">LANG_ARMENIAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_ASSAMESE">LANG_ASSAMESE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_AZERI">LANG_AZERI</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_BASQUE">LANG_BASQUE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_BELARUSIAN">LANG_BELARUSIAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_BENGALI">LANG_BENGALI</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_BOSNIAN">LANG_BOSNIAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_BULGARIAN">LANG_BULGARIAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_CATALAN">LANG_CATALAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_CHINESE">LANG_CHINESE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_CROATIAN">LANG_CROATIAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_CZECH">LANG_CZECH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_DANISH">LANG_DANISH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_DIVEHI">LANG_DIVEHI</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_DUTCH">LANG_DUTCH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_ENGLISH">LANG_ENGLISH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_ESTONIAN">LANG_ESTONIAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_FAEROESE">LANG_FAEROESE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_FARSI">LANG_FARSI</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_FINNISH">LANG_FINNISH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_FRENCH">LANG_FRENCH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_GALICIAN">LANG_GALICIAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_GEORGIAN">LANG_GEORGIAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_GERMAN">LANG_GERMAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_GREEK">LANG_GREEK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_GUJARATI">LANG_GUJARATI</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_HEBREW">LANG_HEBREW</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_HINDI">LANG_HINDI</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_HUNGARIAN">LANG_HUNGARIAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_ICELANDIC">LANG_ICELANDIC</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_INDONESIAN">LANG_INDONESIAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_ITALIAN">LANG_ITALIAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_JAPANESE">LANG_JAPANESE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_KANNADA">LANG_KANNADA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_KASHMIRI">LANG_KASHMIRI</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_KAZAK">LANG_KAZAK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_KONKANI">LANG_KONKANI</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_KOREAN">LANG_KOREAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_KYRGYZ">LANG_KYRGYZ</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_LATVIAN">LANG_LATVIAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_LITHUANIAN">LANG_LITHUANIAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_MACEDONIAN">LANG_MACEDONIAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_MALAY">LANG_MALAY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_MALAYALAM">LANG_MALAYALAM</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_MALTESE">LANG_MALTESE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_MANIPURI">LANG_MANIPURI</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_MAORI">LANG_MAORI</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_MARATHI">LANG_MARATHI</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_MONGOLIAN">LANG_MONGOLIAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_NEPALI">LANG_NEPALI</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_NORWEGIAN">LANG_NORWEGIAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_ORIYA">LANG_ORIYA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_POLISH">LANG_POLISH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_PORTUGUESE">LANG_PORTUGUESE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_PUNJABI">LANG_PUNJABI</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_QUECHUA">LANG_QUECHUA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_ROMANIAN">LANG_ROMANIAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_RUSSIAN">LANG_RUSSIAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_SAMI">LANG_SAMI</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_SANSKRIT">LANG_SANSKRIT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_SERBIAN">LANG_SERBIAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_SINDHI">LANG_SINDHI</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_SLOVAK">LANG_SLOVAK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_SLOVENIAN">LANG_SLOVENIAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_SOTHO">LANG_SOTHO</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_SPANISH">LANG_SPANISH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_SWAHILI">LANG_SWAHILI</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_SWEDISH">LANG_SWEDISH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_SYRIAC">LANG_SYRIAC</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_TAMIL">LANG_TAMIL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_TATAR">LANG_TATAR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_TELUGU">LANG_TELUGU</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_THAI">LANG_THAI</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_TSWANA">LANG_TSWANA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_TURKISH">LANG_TURKISH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_UKRAINIAN">LANG_UKRAINIAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_URDU">LANG_URDU</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_UZBEK">LANG_UZBEK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_VIETNAMESE">LANG_VIETNAMESE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_WELSH">LANG_WELSH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_XHOSA">LANG_XHOSA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_ZULU">LANG_ZULU</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_NEUTRAL">SUBLANG_NEUTRAL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_DEFAULT">SUBLANG_DEFAULT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SYS_DEFAULT">SUBLANG_SYS_DEFAULT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_ARABIC_SAUDI_ARABIA">SUBLANG_ARABIC_SAUDI_ARABIA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_ARABIC_IRAQ">SUBLANG_ARABIC_IRAQ</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_ARABIC_EGYPT">SUBLANG_ARABIC_EGYPT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_ARABIC_LIBYA">SUBLANG_ARABIC_LIBYA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_ARABIC_ALGERIA">SUBLANG_ARABIC_ALGERIA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_ARABIC_MOROCCO">SUBLANG_ARABIC_MOROCCO</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_ARABIC_TUNISIA">SUBLANG_ARABIC_TUNISIA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_ARABIC_OMAN">SUBLANG_ARABIC_OMAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_ARABIC_YEMEN">SUBLANG_ARABIC_YEMEN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_ARABIC_SYRIA">SUBLANG_ARABIC_SYRIA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_ARABIC_JORDAN">SUBLANG_ARABIC_JORDAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_ARABIC_LEBANON">SUBLANG_ARABIC_LEBANON</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_ARABIC_KUWAIT">SUBLANG_ARABIC_KUWAIT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_ARABIC_UAE">SUBLANG_ARABIC_UAE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_ARABIC_BAHRAIN">SUBLANG_ARABIC_BAHRAIN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_ARABIC_QATAR">SUBLANG_ARABIC_QATAR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_AZERI_LATIN">SUBLANG_AZERI_LATIN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_AZERI_CYRILLIC">SUBLANG_AZERI_CYRILLIC</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_BOSNIAN_BOSNIA_HERZEGOVINA_LATIN">SUBLANG_BOSNIAN_BOSNIA_HERZEGOVINA_LATIN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_CHINESE_TRADITIONAL">SUBLANG_CHINESE_TRADITIONAL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_CHINESE_SIMPLIFIED">SUBLANG_CHINESE_SIMPLIFIED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_CHINESE_HONGKONG">SUBLANG_CHINESE_HONGKONG</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_CHINESE_SINGAPORE">SUBLANG_CHINESE_SINGAPORE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_CHINESE_MACAU">SUBLANG_CHINESE_MACAU</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_CROATIAN_CROATIA">SUBLANG_CROATIAN_CROATIA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_CROATIAN_BOSNIA_HERZEGOVINA_LATIN">SUBLANG_CROATIAN_BOSNIA_HERZEGOVINA_LATIN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_DUTCH">SUBLANG_DUTCH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_DUTCH_BELGIAN">SUBLANG_DUTCH_BELGIAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_ENGLISH_US">SUBLANG_ENGLISH_US</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_ENGLISH_UK">SUBLANG_ENGLISH_UK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_ENGLISH_AUS">SUBLANG_ENGLISH_AUS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_ENGLISH_CAN">SUBLANG_ENGLISH_CAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_ENGLISH_NZ">SUBLANG_ENGLISH_NZ</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_ENGLISH_EIRE">SUBLANG_ENGLISH_EIRE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_ENGLISH_SOUTH_AFRICA">SUBLANG_ENGLISH_SOUTH_AFRICA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_ENGLISH_JAMAICA">SUBLANG_ENGLISH_JAMAICA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_ENGLISH_CARIBBEAN">SUBLANG_ENGLISH_CARIBBEAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_ENGLISH_BELIZE">SUBLANG_ENGLISH_BELIZE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_ENGLISH_TRINIDAD">SUBLANG_ENGLISH_TRINIDAD</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_ENGLISH_ZIMBABWE">SUBLANG_ENGLISH_ZIMBABWE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_ENGLISH_PHILIPPINES">SUBLANG_ENGLISH_PHILIPPINES</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_FRENCH">SUBLANG_FRENCH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_FRENCH_BELGIAN">SUBLANG_FRENCH_BELGIAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_FRENCH_CANADIAN">SUBLANG_FRENCH_CANADIAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_FRENCH_SWISS">SUBLANG_FRENCH_SWISS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_FRENCH_LUXEMBOURG">SUBLANG_FRENCH_LUXEMBOURG</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_FRENCH_MONACO">SUBLANG_FRENCH_MONACO</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_GERMAN">SUBLANG_GERMAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_GERMAN_SWISS">SUBLANG_GERMAN_SWISS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_GERMAN_AUSTRIAN">SUBLANG_GERMAN_AUSTRIAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_GERMAN_LUXEMBOURG">SUBLANG_GERMAN_LUXEMBOURG</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_GERMAN_LIECHTENSTEIN">SUBLANG_GERMAN_LIECHTENSTEIN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_ITALIAN">SUBLANG_ITALIAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_ITALIAN_SWISS">SUBLANG_ITALIAN_SWISS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_KASHMIRI_SASIA">SUBLANG_KASHMIRI_SASIA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_KASHMIRI_INDIA">SUBLANG_KASHMIRI_INDIA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_KOREAN">SUBLANG_KOREAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_LITHUANIAN">SUBLANG_LITHUANIAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_MALAY_MALAYSIA">SUBLANG_MALAY_MALAYSIA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_MALAY_BRUNEI_DARUSSALAM">SUBLANG_MALAY_BRUNEI_DARUSSALAM</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_NEPALI_INDIA">SUBLANG_NEPALI_INDIA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_NORWEGIAN_BOKMAL">SUBLANG_NORWEGIAN_BOKMAL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_NORWEGIAN_NYNORSK">SUBLANG_NORWEGIAN_NYNORSK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_PORTUGUESE">SUBLANG_PORTUGUESE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_PORTUGUESE_BRAZILIAN">SUBLANG_PORTUGUESE_BRAZILIAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_QUECHUA_BOLIVIA">SUBLANG_QUECHUA_BOLIVIA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_QUECHUA_ECUADOR">SUBLANG_QUECHUA_ECUADOR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_QUECHUA_PERU">SUBLANG_QUECHUA_PERU</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SAMI_NORTHERN_NORWAY">SUBLANG_SAMI_NORTHERN_NORWAY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SAMI_NORTHERN_SWEDEN">SUBLANG_SAMI_NORTHERN_SWEDEN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SAMI_NORTHERN_FINLAND">SUBLANG_SAMI_NORTHERN_FINLAND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SAMI_LULE_NORWAY">SUBLANG_SAMI_LULE_NORWAY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SAMI_LULE_SWEDEN">SUBLANG_SAMI_LULE_SWEDEN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SAMI_SOUTHERN_NORWAY">SUBLANG_SAMI_SOUTHERN_NORWAY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SAMI_SOUTHERN_SWEDEN">SUBLANG_SAMI_SOUTHERN_SWEDEN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SAMI_SKOLT_FINLAND">SUBLANG_SAMI_SKOLT_FINLAND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SAMI_INARI_FINLAND">SUBLANG_SAMI_INARI_FINLAND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SERBIAN_BOSNIA_HERZEGOVINA_LATIN">SUBLANG_SERBIAN_BOSNIA_HERZEGOVINA_LATIN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SERBIAN_BOSNIA_HERZEGOVINA_CYRILLIC">SUBLANG_SERBIAN_BOSNIA_HERZEGOVINA_CYRILLIC</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SERBIAN_LATIN">SUBLANG_SERBIAN_LATIN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SERBIAN_CYRILLIC">SUBLANG_SERBIAN_CYRILLIC</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SOTHO_NORTHERN_SOUTH_AFRICA">SUBLANG_SOTHO_NORTHERN_SOUTH_AFRICA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SPANISH">SUBLANG_SPANISH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SPANISH_MEXICAN">SUBLANG_SPANISH_MEXICAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SPANISH_MODERN">SUBLANG_SPANISH_MODERN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SPANISH_GUATEMALA">SUBLANG_SPANISH_GUATEMALA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SPANISH_COSTA_RICA">SUBLANG_SPANISH_COSTA_RICA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SPANISH_PANAMA">SUBLANG_SPANISH_PANAMA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SPANISH_DOMINICAN_REPUBLIC">SUBLANG_SPANISH_DOMINICAN_REPUBLIC</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SPANISH_VENEZUELA">SUBLANG_SPANISH_VENEZUELA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SPANISH_COLOMBIA">SUBLANG_SPANISH_COLOMBIA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SPANISH_PERU">SUBLANG_SPANISH_PERU</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SPANISH_ARGENTINA">SUBLANG_SPANISH_ARGENTINA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SPANISH_ECUADOR">SUBLANG_SPANISH_ECUADOR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SPANISH_CHILE">SUBLANG_SPANISH_CHILE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SPANISH_URUGUAY">SUBLANG_SPANISH_URUGUAY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SPANISH_PARAGUAY">SUBLANG_SPANISH_PARAGUAY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SPANISH_BOLIVIA">SUBLANG_SPANISH_BOLIVIA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SPANISH_EL_SALVADOR">SUBLANG_SPANISH_EL_SALVADOR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SPANISH_HONDURAS">SUBLANG_SPANISH_HONDURAS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SPANISH_NICARAGUA">SUBLANG_SPANISH_NICARAGUA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SPANISH_PUERTO_RICO">SUBLANG_SPANISH_PUERTO_RICO</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SWEDISH">SUBLANG_SWEDISH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_SWEDISH_FINLAND">SUBLANG_SWEDISH_FINLAND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_URDU_PAKISTAN">SUBLANG_URDU_PAKISTAN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_URDU_INDIA">SUBLANG_URDU_INDIA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_UZBEK_LATIN">SUBLANG_UZBEK_LATIN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUBLANG_UZBEK_CYRILLIC">SUBLANG_UZBEK_CYRILLIC</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_NOUSEROVERRIDE">LOCALE_NOUSEROVERRIDE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_USE_CP_ACP">LOCALE_USE_CP_ACP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_RETURN_NUMBER">LOCALE_RETURN_NUMBER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_ILANGUAGE">LOCALE_ILANGUAGE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SLANGUAGE">LOCALE_SLANGUAGE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SENGLANGUAGE">LOCALE_SENGLANGUAGE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SABBREVLANGNAME">LOCALE_SABBREVLANGNAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SNATIVELANGNAME">LOCALE_SNATIVELANGNAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_ICOUNTRY">LOCALE_ICOUNTRY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SCOUNTRY">LOCALE_SCOUNTRY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SENGCOUNTRY">LOCALE_SENGCOUNTRY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SABBREVCTRYNAME">LOCALE_SABBREVCTRYNAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SNATIVECTRYNAME">LOCALE_SNATIVECTRYNAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_IDEFAULTLANGUAGE">LOCALE_IDEFAULTLANGUAGE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_IDEFAULTCOUNTRY">LOCALE_IDEFAULTCOUNTRY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_IDEFAULTCODEPAGE">LOCALE_IDEFAULTCODEPAGE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_IDEFAULTANSICODEPAGE">LOCALE_IDEFAULTANSICODEPAGE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_IDEFAULTMACCODEPAGE">LOCALE_IDEFAULTMACCODEPAGE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SLIST">LOCALE_SLIST</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_IMEASURE">LOCALE_IMEASURE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SDECIMAL">LOCALE_SDECIMAL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_STHOUSAND">LOCALE_STHOUSAND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SGROUPING">LOCALE_SGROUPING</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_IDIGITS">LOCALE_IDIGITS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_ILZERO">LOCALE_ILZERO</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_INEGNUMBER">LOCALE_INEGNUMBER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SNATIVEDIGITS">LOCALE_SNATIVEDIGITS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SCURRENCY">LOCALE_SCURRENCY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SINTLSYMBOL">LOCALE_SINTLSYMBOL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SMONDECIMALSEP">LOCALE_SMONDECIMALSEP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SMONTHOUSANDSEP">LOCALE_SMONTHOUSANDSEP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SMONGROUPING">LOCALE_SMONGROUPING</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_ICURRDIGITS">LOCALE_ICURRDIGITS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_IINTLCURRDIGITS">LOCALE_IINTLCURRDIGITS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_ICURRENCY">LOCALE_ICURRENCY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_INEGCURR">LOCALE_INEGCURR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SDATE">LOCALE_SDATE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_STIME">LOCALE_STIME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SSHORTDATE">LOCALE_SSHORTDATE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SLONGDATE">LOCALE_SLONGDATE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_STIMEFORMAT">LOCALE_STIMEFORMAT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_IDATE">LOCALE_IDATE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_ILDATE">LOCALE_ILDATE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_ITIME">LOCALE_ITIME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_ITIMEMARKPOSN">LOCALE_ITIMEMARKPOSN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_ICENTURY">LOCALE_ICENTURY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_ITLZERO">LOCALE_ITLZERO</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_IDAYLZERO">LOCALE_IDAYLZERO</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_IMONLZERO">LOCALE_IMONLZERO</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_S1159">LOCALE_S1159</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_S2359">LOCALE_S2359</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_ICALENDARTYPE">LOCALE_ICALENDARTYPE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_IOPTIONALCALENDAR">LOCALE_IOPTIONALCALENDAR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_IFIRSTDAYOFWEEK">LOCALE_IFIRSTDAYOFWEEK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_IFIRSTWEEKOFYEAR">LOCALE_IFIRSTWEEKOFYEAR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SDAYNAME1">LOCALE_SDAYNAME1</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SDAYNAME2">LOCALE_SDAYNAME2</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SDAYNAME3">LOCALE_SDAYNAME3</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SDAYNAME4">LOCALE_SDAYNAME4</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SDAYNAME5">LOCALE_SDAYNAME5</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SDAYNAME6">LOCALE_SDAYNAME6</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SDAYNAME7">LOCALE_SDAYNAME7</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SABBREVDAYNAME1">LOCALE_SABBREVDAYNAME1</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SABBREVDAYNAME2">LOCALE_SABBREVDAYNAME2</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SABBREVDAYNAME3">LOCALE_SABBREVDAYNAME3</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SABBREVDAYNAME4">LOCALE_SABBREVDAYNAME4</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SABBREVDAYNAME5">LOCALE_SABBREVDAYNAME5</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SABBREVDAYNAME6">LOCALE_SABBREVDAYNAME6</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SABBREVDAYNAME7">LOCALE_SABBREVDAYNAME7</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SMONTHNAME1">LOCALE_SMONTHNAME1</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SMONTHNAME2">LOCALE_SMONTHNAME2</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SMONTHNAME3">LOCALE_SMONTHNAME3</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SMONTHNAME4">LOCALE_SMONTHNAME4</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SMONTHNAME5">LOCALE_SMONTHNAME5</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SMONTHNAME6">LOCALE_SMONTHNAME6</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SMONTHNAME7">LOCALE_SMONTHNAME7</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SMONTHNAME8">LOCALE_SMONTHNAME8</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SMONTHNAME9">LOCALE_SMONTHNAME9</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SMONTHNAME10">LOCALE_SMONTHNAME10</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SMONTHNAME11">LOCALE_SMONTHNAME11</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SMONTHNAME12">LOCALE_SMONTHNAME12</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SMONTHNAME13">LOCALE_SMONTHNAME13</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SABBREVMONTHNAME1">LOCALE_SABBREVMONTHNAME1</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SABBREVMONTHNAME2">LOCALE_SABBREVMONTHNAME2</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SABBREVMONTHNAME3">LOCALE_SABBREVMONTHNAME3</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SABBREVMONTHNAME4">LOCALE_SABBREVMONTHNAME4</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SABBREVMONTHNAME5">LOCALE_SABBREVMONTHNAME5</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SABBREVMONTHNAME6">LOCALE_SABBREVMONTHNAME6</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SABBREVMONTHNAME7">LOCALE_SABBREVMONTHNAME7</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SABBREVMONTHNAME8">LOCALE_SABBREVMONTHNAME8</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SABBREVMONTHNAME9">LOCALE_SABBREVMONTHNAME9</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SABBREVMONTHNAME10">LOCALE_SABBREVMONTHNAME10</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SABBREVMONTHNAME11">LOCALE_SABBREVMONTHNAME11</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SABBREVMONTHNAME12">LOCALE_SABBREVMONTHNAME12</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SABBREVMONTHNAME13">LOCALE_SABBREVMONTHNAME13</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SPOSITIVESIGN">LOCALE_SPOSITIVESIGN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SNEGATIVESIGN">LOCALE_SNEGATIVESIGN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_IPOSSIGNPOSN">LOCALE_IPOSSIGNPOSN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_INEGSIGNPOSN">LOCALE_INEGSIGNPOSN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_IPOSSYMPRECEDES">LOCALE_IPOSSYMPRECEDES</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_IPOSSEPBYSPACE">LOCALE_IPOSSEPBYSPACE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_INEGSYMPRECEDES">LOCALE_INEGSYMPRECEDES</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_INEGSEPBYSPACE">LOCALE_INEGSEPBYSPACE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_FONTSIGNATURE">LOCALE_FONTSIGNATURE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SISO639LANGNAME">LOCALE_SISO639LANGNAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SISO3166CTRYNAME">LOCALE_SISO3166CTRYNAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_IDEFAULTEBCDICCODEPAGE">LOCALE_IDEFAULTEBCDICCODEPAGE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_IPAPERSIZE">LOCALE_IPAPERSIZE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SENGCURRNAME">LOCALE_SENGCURRNAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SNATIVECURRNAME">LOCALE_SNATIVECURRNAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SYEARMONTH">LOCALE_SYEARMONTH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SSORTNAME">LOCALE_SSORTNAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_IDIGITSUBSTITUTION">LOCALE_IDIGITSUBSTITUTION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TIME_NOMINUTESORSECONDS">TIME_NOMINUTESORSECONDS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TIME_NOSECONDS">TIME_NOSECONDS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TIME_NOTIMEMARKER">TIME_NOTIMEMARKER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TIME_FORCE24HOURFORMAT">TIME_FORCE24HOURFORMAT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DATE_SHORTDATE">DATE_SHORTDATE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DATE_LONGDATE">DATE_LONGDATE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DATE_USE_ALT_CALENDAR">DATE_USE_ALT_CALENDAR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DATE_YEARMONTH">DATE_YEARMONTH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DATE_LTRREADING">DATE_LTRREADING</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DATE_RTLREADING">DATE_RTLREADING</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SORT_DEFAULT">SORT_DEFAULT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SORT_JAPANESE_XJIS">SORT_JAPANESE_XJIS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SORT_JAPANESE_UNICODE">SORT_JAPANESE_UNICODE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SORT_CHINESE_BIG5">SORT_CHINESE_BIG5</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SORT_CHINESE_PRCP">SORT_CHINESE_PRCP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SORT_CHINESE_UNICODE">SORT_CHINESE_UNICODE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SORT_CHINESE_PRC">SORT_CHINESE_PRC</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SORT_CHINESE_BOPOMOFO">SORT_CHINESE_BOPOMOFO</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SORT_KOREAN_KSC">SORT_KOREAN_KSC</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SORT_KOREAN_UNICODE">SORT_KOREAN_UNICODE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SORT_GERMAN_PHONE_BOOK">SORT_GERMAN_PHONE_BOOK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SORT_HUNGARIAN_DEFAULT">SORT_HUNGARIAN_DEFAULT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SORT_HUNGARIAN_TECHNICAL">SORT_HUNGARIAN_TECHNICAL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SORT_GEORGIAN_TRADITIONAL">SORT_GEORGIAN_TRADITIONAL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SORT_GEORGIAN_MODERN">SORT_GEORGIAN_MODERN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_SYSTEM_DEFAULT">LANG_SYSTEM_DEFAULT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LANG_USER_DEFAULT">LANG_USER_DEFAULT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_SYSTEM_DEFAULT">LOCALE_SYSTEM_DEFAULT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_USER_DEFAULT">LOCALE_USER_DEFAULT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="LOCALE_INVARIANT">LOCALE_INVARIANT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-MAKELANGID"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">MAKELANGID</span><span
+						class="method-args">(x, s)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Equivalent of the <a
+href="National.html#method-i-MAKELANGID">MAKELANGID</a> macro in WinNT.h 
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/national.rb, line 576</span>
+576:     <span class="ruby-keyword kw">def</span> <span class="ruby-constant">MAKELANGID</span>(<span class="ruby-identifier">x</span>, <span class="ruby-identifier">s</span>)
+577:       <span class="ruby-identifier">s</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">10</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>
+578:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-MAKELCID"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">MAKELCID</span><span
+						class="method-args">(srtid, lgid)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Equivalent of the <a href="National.html#method-i-MAKELCID">MAKELCID</a>
+macro in WinNT.h 
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/national.rb, line 570</span>
+570:     <span class="ruby-keyword kw">def</span> <span class="ruby-constant">MAKELCID</span>(<span class="ruby-identifier">srtid</span>, <span class="ruby-identifier">lgid</span>)
+571:       <span class="ruby-identifier">srtid</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">16</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">lgid</span>
+572:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="get-acp-string-method" class="method-detail ">
+				<a name="method-i-get_acp_string"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">get_acp_string</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Convenience method for converting the results of the GetACP() function to
+a human readable string. 
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="get-acp-string-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/national.rb, line 564</span>
+564:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_acp_string</span>
+565:       <span class="ruby-constant">CODE_PAGE</span>[<span class="ruby-constant">GetACP</span>.<span class="ruby-identifier">call</span>]
+566:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

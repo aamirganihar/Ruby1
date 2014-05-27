@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>File: CHANGES [win32-api-1.4.8-x86-mingw32 Documentation]</title>
+
+	<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+</head>
+
+<body class="file">
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="./CHANGES.html">CHANGES</a></li>
+				
+					<li class="file"><a href="./MANIFEST.html">MANIFEST</a></li>
+				
+					<li class="file"><a href="./README.html">README</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./Win32.html">Win32</a></li>
+				
+					<li><a href="./Win32/API.html">Win32::API</a></li>
+				
+					<li><a href="./Win32/API/Callback.html">Win32::API::Callback</a></li>
+				
+					<li><a href="./Win32/API/Error.html">Win32::API::Error</a></li>
+				
+					<li><a href="./Win32/API/Function.html">Win32::API::Function</a></li>
+				
+					<li><a href="./Win32/API/LoadLibraryError.html">Win32::API::LoadLibraryError</a></li>
+				
+					<li><a href="./Win32/API/PrototypeError.html">Win32::API::PrototypeError</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h2>1.4.8 - 16-Jan-2011</h2>
+<ul>
+<li><p>
+A binary for both 1.8.x and 1.9.x is now shipped as part of the binary
+build. A stub file is used to dynamically require the correct binary based
+on your current version of Ruby.
+</p>
+</li>
+<li><p>
+Some updates to the Rakefile to help build multiple binaries.
+</p>
+</li>
+</ul>
+<h2>1.4.7 - 4-Dec-2010</h2>
+<ul>
+<li><p>
+An internal error formatting function now resorts to the default LANGID on
+error 1815 (ERROR_RESOURCE_LANG_NOT_FOUND). Thanks go to Little Snake for
+the spot.
+</p>
+</li>
+<li><p>
+Added a default Rake task and refactored the clean task.
+</p>
+</li>
+</ul>
+<h2>1.4.6 - 9-Feb-2010</h2>
+<ul>
+<li><p>
+Fixed a warning that showed up with MinGW/gcc caused by an unnecessary
+pointer dereference.
+</p>
+</li>
+<li><p>
+Some updates to the Rakefile and gemspec. Gem building is now handled via
+Rake tasks.
+</p>
+</li>
+<li><p>
+Minor updates to the test suite.
+</p>
+</li>
+</ul>
+<h2>1.4.5 - 24-Aug-2009</h2>
+<ul>
+<li><p>
+Reverted the change in 1.4.4. We need unsigned longs in a few cases.
+Consequently, you should upgrade windows-pr to 1.0.8 or later because some
+return values were set to -1 instead of 0xFFFFFFFF as they are now.
+</p>
+</li>
+<li><p>
+Updated one test to validate return value from failed function.
+</p>
+</li>
+</ul>
+<h2>1.4.4 - 18-Aug-2009</h2>
+<ul>
+<li><p>
+Fixed a bug where functions that returned a long return type were unsigned
+instead of signed.
+</p>
+</li>
+<li><p>
+The Rakefile has been refactored somewhat, including the removal of FFI
+related tasks. Those are now in a separate branch in the repository.
+</p>
+</li>
+<li><p>
+The test-unit library is now a development dependency instead of a runtime
+dependency.
+</p>
+</li>
+</ul>
+<h2>1.4.3 - 23-Jun-2009</h2>
+<ul>
+<li><p>
+Bug fix for mingw.
+</p>
+</li>
+<li><p>
+License now set to Artistic 2.0.
+</p>
+</li>
+</ul>
+<h2>1.4.2 - 31-May-2009</h2>
+<ul>
+<li><p>
+Updated the internal StringError() function to better handle the
+possibility of the English .mui file not being found. Thanks go to Michel
+Demazure for the spot.
+</p>
+</li>
+</ul>
+<h2>1.4.1 - 29-May-2009</h2>
+<ul>
+<li><p>
+Callback handling improvements.
+</p>
+</li>
+<li><p>
+Updated the gemspec description.
+</p>
+</li>
+</ul>
+<h2>1.4.0 - 19-Feb-2009</h2>
+<ul>
+<li><p>
+Now compatible with Ruby 1.9.x.
+</p>
+</li>
+<li><p>
+In what will go down as, &#8220;It seemed like a good idea at the
+time&#8221;, I have removed the feature where W (wide) character functions
+were used first if your $KCODE environment variable was set to
+&#8220;UTF8&#8221;. It caused too many headaches in practice, especially
+amongst Rails users. You must now always explicitly specify &#8216;W&#8217;
+in the constructor if that&#8217;s what you want.
+</p>
+</li>
+<li><p>
+Fixed RF bug #23944 - bad error message for MSVCRT functions that failed to
+load properly.
+</p>
+</li>
+</ul>
+<h2>1.3.0 - 1-Jan-2009</h2>
+<ul>
+<li><p>
+Fixed RubyForge bug #23395, which was caused by inadvertently modifying a
+variable within a loop. This caused callbacks to fail in certain
+situations.
+</p>
+</li>
+<li><p>
+Added the <a
+href="Win32/API/LoadLibraryError.html">Win32::API::LoadLibraryError</a> and
+<a href="Win32/API/PrototypeError.html">Win32::API::PrototypeError</a>
+classes to provide more fine grained handling of possible error conditions
+in the constructor. These are both subclasses of <a
+href="Win32/API/Error.html">Win32::API::Error</a>.
+</p>
+</li>
+<li><p>
+Removed the Win32::API::CallbackError class.
+</p>
+</li>
+<li><p>
+Changed the upper limit on prototypes from 16 to 20. It turns out that
+there are actually Windows functions with more than 16 prototypes.
+</p>
+</li>
+<li><p>
+Refactored a high iteration test so that it counts as only one test instead
+of 1000.
+</p>
+</li>
+</ul>
+<h2>1.2.2 - 27-Nov-2008</h2>
+<ul>
+<li><p>
+Fixed bug in the error message for illegal prototypes and illegal return
+types where the character in question would come out as empty or garbage.
+</p>
+</li>
+<li><p>
+Passing a bad return type to <a
+href="Win32/API/Callback.html">Win32::API::Callback</a> now raises an
+error.
+</p>
+</li>
+<li><p>
+Updated the error message for illegal return types to say, &#8220;Illegal
+return type&#8221; instead of &#8220;Illegal prototype&#8221; as it did
+previously.
+</p>
+</li>
+<li><p>
+The error message for a bad function name passed to Win32::API.new now
+matches JRuby&#8217;s FFI error message.
+</p>
+</li>
+<li><p>
+Improved the handling of msvcrt functions with regards to skipping
+&#8216;A&#8217; and &#8216;W&#8217; checks. Previously it was checking
+against the literal string &#8216;msvcrt&#8217;. Now it checks against any
+string that starts with &#8216;msvcr&#8217;.
+</p>
+</li>
+<li><p>
+Added test-unit 2.x as a prerequisite.
+</p>
+</li>
+<li><p>
+Added tests for the Win32::API::Callback#address method.
+</p>
+</li>
+<li><p>
+Added tests to all <a href="Win32/API.html">Win32::API</a> classes that
+explicitly check error messages.
+</p>
+</li>
+</ul>
+<h2>1.2.1 - 14-Nov-2008</h2>
+<ul>
+<li><p>
+Fixed and updated callback handling.
+</p>
+</li>
+<li><p>
+Fixed wide string return handling for pointers and strings.
+</p>
+</li>
+<li><p>
+Added the Win32::API::Callback#address instance method.
+</p>
+</li>
+<li><p>
+All errors are now in English instead of your native language, because
+that&#8217;s what Ruby itself does.
+</p>
+</li>
+</ul>
+<h2>1.2.0 - 22-Jul-2008</h2>
+<ul>
+<li><p>
+Added support for the &#8216;S&#8217; (string) prototype and return type.
+It can be used instead of &#8216;P&#8217; (pointer) for const char*.
+</p>
+</li>
+<li><p>
+Some internal refactoring. The attempts to load ANSI and/or Wide character
+versions of functions are skipped for MSVCRT functions, since they do not
+exist. This eliminates some unnecessary LoadLibrary() calls.
+</p>
+</li>
+<li><p>
+Added a couple of gem building Rake tasks.
+</p>
+</li>
+<li><p>
+Added a few more tests.
+</p>
+</li>
+</ul>
+<h2>1.1.0 - 12-Jun-2008</h2>
+<ul>
+<li><p>
+Added the Windows::API::Function class. This is a subclass of <a
+href="Win32/API.html">Win32::API</a> meant only for use with raw function
+pointers.
+</p>
+</li>
+<li><p>
+Some documentation updates in the source and <a
+href="README.html">README</a> files.
+</p>
+</li>
+</ul>
+<h2>1.0.6 - 18-Apr-2008</h2>
+<ul>
+<li><p>
+Added the effective_function_name method. This allows you to see what the
+actual function name is that was defined, e.g. GetUserNameA vs
+GetUserNameW.
+</p>
+</li>
+<li><p>
+Replaced an instance of _tcscmp with strcmp. The case in question was
+always going to be ASCII.
+</p>
+</li>
+<li><p>
+Cleaned up some -W3 warnings.
+</p>
+</li>
+<li><p>
+Added the build_manifest task to the Rakefile, which is automatically run
+if you&#8217;re using a version of Ruby built with VC++ 8 or later. This
+builds a ruby.exe.manifest file (if it doesn&#8217;t already exist).
+</p>
+</li>
+</ul>
+<h2>1.0.5 - 20-Nov-2007</h2>
+<ul>
+<li><p>
+The API.new method now defaults to &#8220;W&#8221; (wide character
+functions) before &#8220;A&#8221; (ANSI functions) if the $KCODE global
+variable is set to &#8216;u&#8217; (UTF8).
+</p>
+</li>
+<li><p>
+Minor improvements to the Rakefile.
+</p>
+</li>
+</ul>
+<h2>1.0.4 - 26-Oct-2007</h2>
+<ul>
+<li><p>
+Fixed a bug where methods that returned pointers (&#8216;P&#8217;) could
+choke if the resulting pointer was 0 or NULL. In this case, nil is now
+returned instead.
+</p>
+</li>
+<li><p>
+Tweak to the extconf.rb file that helps the gem build it from source
+properly.
+</p>
+</li>
+</ul>
+<h2>1.0.3 - 28-Sep-2007</h2>
+<ul>
+<li><p>
+Fixed a subtle but dangerous copy-on-write bug in the API#call method.
+</p>
+</li>
+</ul>
+<h2>1.0.2 - 28-Sep-2007</h2>
+<ul>
+<li><p>
+Fixed a bug in an internal struct member that was causing segfaults. Thanks
+go to Lars Olsson for the spot.
+</p>
+</li>
+<li><p>
+Fixed the &#8216;install&#8217; task in the Rakefile. This only affected
+native builds, not the prebuilt binary.
+</p>
+</li>
+<li><p>
+Added a few more tests.
+</p>
+</li>
+</ul>
+<h2>1.0.1 - 27-Sep-2007</h2>
+<ul>
+<li><p>
+Functions declared with a void prototype no longer require an explicit nil
+argument to fulfill the arity requirement. You can still call them with an
+explicit nil if you wish, however.
+</p>
+</li>
+<li><p>
+Fixed the gemspec for the native build.
+</p>
+</li>
+</ul>
+<h2>1.0.0 - 14-Sep-2007</h2>
+<ul>
+<li><p>
+Initial release
+</p>
+</li>
+</ul>
+
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+</body>
+</html>
+

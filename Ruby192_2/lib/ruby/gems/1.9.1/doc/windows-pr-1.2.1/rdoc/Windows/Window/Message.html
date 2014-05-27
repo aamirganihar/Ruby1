@@ -1,0 +1,1460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Windows::Window::Message</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/windows/window/message_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/windows/window/message.rb">lib/windows/window/message.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../../CHANGES.html">CHANGES</a></li>
+				
+					<li class="file"><a href="../../MANIFEST.html">MANIFEST</a></li>
+				
+					<li class="file"><a href="../../README.html">README</a></li>
+				
+					<li class="file"><a href="../../doc/conversion_guide_txt.html">conversion_guide.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../Windows.html">Windows</a></li>
+				
+					<li><a href="../../Windows/COM.html">Windows::COM</a></li>
+				
+					<li><a href="../../Windows/COM/Accessibility.html">Windows::COM::Accessibility</a></li>
+				
+					<li><a href="../../Windows/COM/Automation.html">Windows::COM::Automation</a></li>
+				
+					<li><a href="../../Windows/COM/Variant.html">Windows::COM::Variant</a></li>
+				
+					<li><a href="../../Windows/Clipboard.html">Windows::Clipboard</a></li>
+				
+					<li><a href="../../Windows/Console.html">Windows::Console</a></li>
+				
+					<li><a href="../../Windows/Debug.html">Windows::Debug</a></li>
+				
+					<li><a href="../../Windows/DeviceIO.html">Windows::DeviceIO</a></li>
+				
+					<li><a href="../../Windows/Directory.html">Windows::Directory</a></li>
+				
+					<li><a href="../../Windows/Error.html">Windows::Error</a></li>
+				
+					<li><a href="../../Windows/EventLog.html">Windows::EventLog</a></li>
+				
+					<li><a href="../../Windows/File.html">Windows::File</a></li>
+				
+					<li><a href="../../Windows/FileMapping.html">Windows::FileMapping</a></li>
+				
+					<li><a href="../../Windows/FileSystem.html">Windows::FileSystem</a></li>
+				
+					<li><a href="../../Windows/GDI.html">Windows::GDI</a></li>
+				
+					<li><a href="../../Windows/GDI/Bitmap.html">Windows::GDI::Bitmap</a></li>
+				
+					<li><a href="../../Windows/GDI/DeviceContext.html">Windows::GDI::DeviceContext</a></li>
+				
+					<li><a href="../../Windows/GDI/MetaFile.html">Windows::GDI::MetaFile</a></li>
+				
+					<li><a href="../../Windows/GDI/PaintingDrawing.html">Windows::GDI::PaintingDrawing</a></li>
+				
+					<li><a href="../../Windows/Handle.html">Windows::Handle</a></li>
+				
+					<li><a href="../../Windows/Library.html">Windows::Library</a></li>
+				
+					<li><a href="../../Windows/Limits.html">Windows::Limits</a></li>
+				
+					<li><a href="../../Windows/MSVCRT.html">Windows::MSVCRT</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/Buffer.html">Windows::MSVCRT::Buffer</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/Directory.html">Windows::MSVCRT::Directory</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/File.html">Windows::MSVCRT::File</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/IO.html">Windows::MSVCRT::IO</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/String.html">Windows::MSVCRT::String</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/Time.html">Windows::MSVCRT::Time</a></li>
+				
+					<li><a href="../../Windows/Mailslot.html">Windows::Mailslot</a></li>
+				
+					<li><a href="../../Windows/Memory.html">Windows::Memory</a></li>
+				
+					<li><a href="../../Windows/NIO.html">Windows::NIO</a></li>
+				
+					<li><a href="../../Windows/NTFS.html">Windows::NTFS</a></li>
+				
+					<li><a href="../../Windows/NTFS/Winternl.html">Windows::NTFS::Winternl</a></li>
+				
+					<li><a href="../../Windows/National.html">Windows::National</a></li>
+				
+					<li><a href="../../Windows/Network.html">Windows::Network</a></li>
+				
+					<li><a href="../../Windows/Network/Management.html">Windows::Network::Management</a></li>
+				
+					<li><a href="../../Windows/Network/SNMP.html">Windows::Network::SNMP</a></li>
+				
+					<li><a href="../../Windows/Network/Winsock.html">Windows::Network::Winsock</a></li>
+				
+					<li><a href="../../Windows/Path.html">Windows::Path</a></li>
+				
+					<li><a href="../../Windows/Pipe.html">Windows::Pipe</a></li>
+				
+					<li><a href="../../Windows/Process.html">Windows::Process</a></li>
+				
+					<li><a href="../../Windows/Registry.html">Windows::Registry</a></li>
+				
+					<li><a href="../../Windows/Security.html">Windows::Security</a></li>
+				
+					<li><a href="../../Windows/Security/Authentication.html">Windows::Security::Authentication</a></li>
+				
+					<li><a href="../../Windows/Service.html">Windows::Service</a></li>
+				
+					<li><a href="../../Windows/Shell.html">Windows::Shell</a></li>
+				
+					<li><a href="../../Windows/Socket.html">Windows::Socket</a></li>
+				
+					<li><a href="../../Windows/Sound.html">Windows::Sound</a></li>
+				
+					<li><a href="../../Windows/Synchronize.html">Windows::Synchronize</a></li>
+				
+					<li><a href="../../Windows/SystemInfo.html">Windows::SystemInfo</a></li>
+				
+					<li><a href="../../Windows/Thread.html">Windows::Thread</a></li>
+				
+					<li><a href="../../Windows/Time.html">Windows::Time</a></li>
+				
+					<li><a href="../../Windows/ToolHelper.html">Windows::ToolHelper</a></li>
+				
+					<li><a href="../../Windows/Unicode.html">Windows::Unicode</a></li>
+				
+					<li><a href="../../Windows/Volume.html">Windows::Volume</a></li>
+				
+					<li><a href="../../Windows/WSA.html">Windows::WSA</a></li>
+				
+					<li><a href="../../Windows/Window.html">Windows::Window</a></li>
+				
+					<li><a href="../../Windows/Window/Classes.html">Windows::Window::Classes</a></li>
+				
+					<li><a href="../../Windows/Window/Dialog.html">Windows::Window::Dialog</a></li>
+				
+					<li><a href="../../Windows/Window/Menu.html">Windows::Window::Menu</a></li>
+				
+					<li><a href="../../Windows/Window/Message.html">Windows::Window::Message</a></li>
+				
+					<li><a href="../../Windows/Window/Properties.html">Windows::Window::Properties</a></li>
+				
+					<li><a href="../../Windows/Window/Timer.html">Windows::Window::Timer</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Windows::Window::Message</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="BSF_QUERY">BSF_QUERY</a></dt>
+				
+				<dd class="description"><p>
+These constants are in winuser.h
+</p></dd>
+				
+			
+				<dt><a name="BSF_IGNORECURRENTTASK">BSF_IGNORECURRENTTASK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="BSF_FLUSHDISK">BSF_FLUSHDISK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="BSF_NOHANG">BSF_NOHANG</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="BSF_POSTMESSAGE">BSF_POSTMESSAGE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="BSF_FORCEIFHUNG">BSF_FORCEIFHUNG</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="BSF_NOTIMEOUTIFNOTHUNG">BSF_NOTIMEOUTIFNOTHUNG</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="BSF_ALLOWSFW">BSF_ALLOWSFW</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="BSF_SENDNOTIFYMESSAGE">BSF_SENDNOTIFYMESSAGE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="BSF_RETURNHDESK">BSF_RETURNHDESK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="BSF_LUID">BSF_LUID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SMTO_NORMAL">SMTO_NORMAL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SMTO_BLOCK">SMTO_BLOCK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SMTO_ABORTIFHUNG">SMTO_ABORTIFHUNG</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SMTO_NOTIMEOUTIFNOTHUNG">SMTO_NOTIMEOUTIFNOTHUNG</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_NULL">WM_NULL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_CREATE">WM_CREATE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_DESTROY">WM_DESTROY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_MOVE">WM_MOVE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_SIZE">WM_SIZE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_ACTIVATE">WM_ACTIVATE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_SETFOCUS">WM_SETFOCUS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_KILLFOCUS">WM_KILLFOCUS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_ENABLE">WM_ENABLE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_SETREDRAW">WM_SETREDRAW</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_SETTEXT">WM_SETTEXT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_GETTEXT">WM_GETTEXT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_GETTEXTLENGTH">WM_GETTEXTLENGTH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_PAINT">WM_PAINT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_CLOSE">WM_CLOSE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_QUERYENDSESSION">WM_QUERYENDSESSION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_QUERYOPEN">WM_QUERYOPEN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_ENDSESSION">WM_ENDSESSION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_QUIT">WM_QUIT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_ERASEBKGND">WM_ERASEBKGND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_SYSCOLORCHANGE">WM_SYSCOLORCHANGE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_SHOWWINDOW">WM_SHOWWINDOW</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_WININICHANGE">WM_WININICHANGE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_SETTINGCHANGE">WM_SETTINGCHANGE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_DEVMODECHANGE">WM_DEVMODECHANGE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_ACTIVATEAPP">WM_ACTIVATEAPP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_FONTCHANGE">WM_FONTCHANGE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_TIMECHANGE">WM_TIMECHANGE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_CANCELMODE">WM_CANCELMODE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_SETCURSOR">WM_SETCURSOR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_MOUSEACTIVATE">WM_MOUSEACTIVATE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_CHILDACTIVATE">WM_CHILDACTIVATE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_QUEUESYNC">WM_QUEUESYNC</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_GETMINMAXINFO">WM_GETMINMAXINFO</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_PAINTICON">WM_PAINTICON</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_ICONERASEBKGND">WM_ICONERASEBKGND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_NEXTDLGCTL">WM_NEXTDLGCTL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_SPOOLERSTATUS">WM_SPOOLERSTATUS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_DRAWITEM">WM_DRAWITEM</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_MEASUREITEM">WM_MEASUREITEM</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_DELETEITEM">WM_DELETEITEM</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_VKEYTOITEM">WM_VKEYTOITEM</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_CHARTOITEM">WM_CHARTOITEM</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_SETFONT">WM_SETFONT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_GETFONT">WM_GETFONT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_SETHOTKEY">WM_SETHOTKEY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_GETHOTKEY">WM_GETHOTKEY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_QUERYDRAGICON">WM_QUERYDRAGICON</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_COMPAREITEM">WM_COMPAREITEM</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_GETOBJECT">WM_GETOBJECT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_COMPACTING">WM_COMPACTING</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_COMMNOTIFY">WM_COMMNOTIFY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_WINDOWPOSCHANGING">WM_WINDOWPOSCHANGING</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_WINDOWPOSCHANGED">WM_WINDOWPOSCHANGED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_POWER">WM_POWER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_COPYDATA">WM_COPYDATA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_CANCELJOURNAL">WM_CANCELJOURNAL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_NOTIFY">WM_NOTIFY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_INPUTLANGCHANGEREQUEST">WM_INPUTLANGCHANGEREQUEST</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_INPUTLANGCHANGE">WM_INPUTLANGCHANGE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_TCARD">WM_TCARD</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_HELP">WM_HELP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_USERCHANGED">WM_USERCHANGED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_NOTIFYFORMAT">WM_NOTIFYFORMAT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_CONTEXTMENU">WM_CONTEXTMENU</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_STYLECHANGING">WM_STYLECHANGING</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_STYLECHANGED">WM_STYLECHANGED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_DISPLAYCHANGE">WM_DISPLAYCHANGE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_GETICON">WM_GETICON</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_SETICON">WM_SETICON</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_NCCREATE">WM_NCCREATE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_NCDESTROY">WM_NCDESTROY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_NCCALCSIZE">WM_NCCALCSIZE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_NCHITTEST">WM_NCHITTEST</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_NCPAINT">WM_NCPAINT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_NCACTIVATE">WM_NCACTIVATE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_GETDLGCODE">WM_GETDLGCODE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_SYNCPAINT">WM_SYNCPAINT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_NCMOUSEMOVE">WM_NCMOUSEMOVE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_NCLBUTTONDOWN">WM_NCLBUTTONDOWN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_NCLBUTTONUP">WM_NCLBUTTONUP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_NCLBUTTONDBLCLK">WM_NCLBUTTONDBLCLK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_NCRBUTTONDOWN">WM_NCRBUTTONDOWN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_NCRBUTTONUP">WM_NCRBUTTONUP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_NCRBUTTONDBLCLK">WM_NCRBUTTONDBLCLK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_NCMBUTTONDOWN">WM_NCMBUTTONDOWN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_NCMBUTTONUP">WM_NCMBUTTONUP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_NCMBUTTONDBLCLK">WM_NCMBUTTONDBLCLK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_NCXBUTTONDOWN">WM_NCXBUTTONDOWN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_NCXBUTTONUP">WM_NCXBUTTONUP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_NCXBUTTONDBLCLK">WM_NCXBUTTONDBLCLK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_INPUT">WM_INPUT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_KEYFIRST">WM_KEYFIRST</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_KEYDOWN">WM_KEYDOWN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_KEYUP">WM_KEYUP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_CHAR">WM_CHAR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_DEADCHAR">WM_DEADCHAR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_SYSKEYDOWN">WM_SYSKEYDOWN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_SYSKEYUP">WM_SYSKEYUP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_SYSCHAR">WM_SYSCHAR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_SYSDEADCHAR">WM_SYSDEADCHAR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_UNICHAR">WM_UNICHAR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_IME_STARTCOMPOSITION">WM_IME_STARTCOMPOSITION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_IME_ENDCOMPOSITION">WM_IME_ENDCOMPOSITION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_IME_COMPOSITION">WM_IME_COMPOSITION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_IME_KEYLAST">WM_IME_KEYLAST</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_INITDIALOG">WM_INITDIALOG</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_COMMAND">WM_COMMAND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_SYSCOMMAND">WM_SYSCOMMAND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_TIMER">WM_TIMER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_HSCROLL">WM_HSCROLL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_VSCROLL">WM_VSCROLL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_INITMENU">WM_INITMENU</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_INITMENUPOPUP">WM_INITMENUPOPUP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_MENUSELECT">WM_MENUSELECT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_MENUCHAR">WM_MENUCHAR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_ENTERIDLE">WM_ENTERIDLE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_MENURBUTTONUP">WM_MENURBUTTONUP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_MENUDRAG">WM_MENUDRAG</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_MENUGETOBJECT">WM_MENUGETOBJECT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_UNINITMENUPOPUP">WM_UNINITMENUPOPUP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_MENUCOMMAND">WM_MENUCOMMAND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_CHANGEUISTATE">WM_CHANGEUISTATE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_UPDATEUISTATE">WM_UPDATEUISTATE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_QUERYUISTATE">WM_QUERYUISTATE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_CTLCOLORMSGBOX">WM_CTLCOLORMSGBOX</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_CTLCOLOREDIT">WM_CTLCOLOREDIT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_CTLCOLORLISTBOX">WM_CTLCOLORLISTBOX</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_CTLCOLORBTN">WM_CTLCOLORBTN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_CTLCOLORDLG">WM_CTLCOLORDLG</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_CTLCOLORSCROLLBAR">WM_CTLCOLORSCROLLBAR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_CTLCOLORSTATIC">WM_CTLCOLORSTATIC</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_MOUSEFIRST">WM_MOUSEFIRST</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_MOUSEMOVE">WM_MOUSEMOVE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_LBUTTONDOWN">WM_LBUTTONDOWN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_LBUTTONUP">WM_LBUTTONUP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_LBUTTONDBLCLK">WM_LBUTTONDBLCLK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_RBUTTONDOWN">WM_RBUTTONDOWN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_RBUTTONUP">WM_RBUTTONUP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_RBUTTONDBLCLK">WM_RBUTTONDBLCLK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_MBUTTONDOWN">WM_MBUTTONDOWN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_MBUTTONUP">WM_MBUTTONUP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_MBUTTONDBLCLK">WM_MBUTTONDBLCLK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_MOUSEWHEEL">WM_MOUSEWHEEL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_XBUTTONDOWN">WM_XBUTTONDOWN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_XBUTTONUP">WM_XBUTTONUP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_XBUTTONDBLCLK">WM_XBUTTONDBLCLK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_MOUSELAST">WM_MOUSELAST</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_PARENTNOTIFY">WM_PARENTNOTIFY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_ENTERMENULOOP">WM_ENTERMENULOOP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_EXITMENULOOP">WM_EXITMENULOOP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_NEXTMENU">WM_NEXTMENU</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_SIZING">WM_SIZING</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_CAPTURECHANGED">WM_CAPTURECHANGED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_MOVING">WM_MOVING</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_POWERBROADCAST">WM_POWERBROADCAST</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_DEVICECHANGE">WM_DEVICECHANGE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_MDICREATE">WM_MDICREATE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_MDIDESTROY">WM_MDIDESTROY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_MDIACTIVATE">WM_MDIACTIVATE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_MDIRESTORE">WM_MDIRESTORE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_MDINEXT">WM_MDINEXT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_MDIMAXIMIZE">WM_MDIMAXIMIZE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_MDITILE">WM_MDITILE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_MDICASCADE">WM_MDICASCADE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_MDIICONARRANGE">WM_MDIICONARRANGE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_MDIGETACTIVE">WM_MDIGETACTIVE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_MDISETMENU">WM_MDISETMENU</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_ENTERSIZEMOVE">WM_ENTERSIZEMOVE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_EXITSIZEMOVE">WM_EXITSIZEMOVE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_DROPFILES">WM_DROPFILES</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_MDIREFRESHMENU">WM_MDIREFRESHMENU</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_IME_SETCONTEXT">WM_IME_SETCONTEXT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_IME_NOTIFY">WM_IME_NOTIFY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_IME_CONTROL">WM_IME_CONTROL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_IME_COMPOSITIONFULL">WM_IME_COMPOSITIONFULL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_IME_SELECT">WM_IME_SELECT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_IME_CHAR">WM_IME_CHAR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_IME_REQUEST">WM_IME_REQUEST</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_IME_KEYDOWN">WM_IME_KEYDOWN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_IME_KEYUP">WM_IME_KEYUP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_MOUSEHOVER">WM_MOUSEHOVER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_MOUSELEAVE">WM_MOUSELEAVE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_NCMOUSEHOVER">WM_NCMOUSEHOVER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_NCMOUSELEAVE">WM_NCMOUSELEAVE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_WTSSESSION_CHANGE">WM_WTSSESSION_CHANGE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_TABLET_FIRST">WM_TABLET_FIRST</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_TABLET_LAST">WM_TABLET_LAST</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_CUT">WM_CUT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_COPY">WM_COPY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_PASTE">WM_PASTE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_CLEAR">WM_CLEAR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_UNDO">WM_UNDO</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_RENDERFORMAT">WM_RENDERFORMAT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_RENDERALLFORMATS">WM_RENDERALLFORMATS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_DESTROYCLIPBOARD">WM_DESTROYCLIPBOARD</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_DRAWCLIPBOARD">WM_DRAWCLIPBOARD</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_PAINTCLIPBOARD">WM_PAINTCLIPBOARD</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_VSCROLLCLIPBOARD">WM_VSCROLLCLIPBOARD</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_SIZECLIPBOARD">WM_SIZECLIPBOARD</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_ASKCBFORMATNAME">WM_ASKCBFORMATNAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_CHANGECBCHAIN">WM_CHANGECBCHAIN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_HSCROLLCLIPBOARD">WM_HSCROLLCLIPBOARD</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_QUERYNEWPALETTE">WM_QUERYNEWPALETTE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_PALETTEISCHANGING">WM_PALETTEISCHANGING</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_PALETTECHANGED">WM_PALETTECHANGED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_HOTKEY">WM_HOTKEY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_PRINT">WM_PRINT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_PRINTCLIENT">WM_PRINTCLIENT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_APPCOMMAND">WM_APPCOMMAND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_THEMECHANGED">WM_THEMECHANGED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_HANDHELDFIRST">WM_HANDHELDFIRST</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_HANDHELDLAST">WM_HANDHELDLAST</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_AFXFIRST">WM_AFXFIRST</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_AFXLAST">WM_AFXLAST</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_PENWINFIRST">WM_PENWINFIRST</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_PENWINLAST">WM_PENWINLAST</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_APP">WM_APP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_USER">WM_USER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_KEYLAST">WM_KEYLAST</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WM_KEYLAST">WM_KEYLAST</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

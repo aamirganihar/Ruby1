@@ -1,0 +1,2457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Watir::Element</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/watir-webdriver/elements/element_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/watir-webdriver/elements/element.rb">lib/watir-webdriver/elements/element.rb</a></li>
+					
+						<li><a href="../lib/watir-webdriver/extensions/select_text_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/watir-webdriver/extensions/select_text.rb">lib/watir-webdriver/extensions/select_text.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="Object.html">Watir::Object</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-%3D%3D">#==</a></li>
+					
+					<li><a href="#method-i-assert_enabled">#assert_enabled</a></li>
+					
+					<li><a href="#method-i-assert_exists">#assert_exists</a></li>
+					
+					<li><a href="#method-i-assert_has_input_devices_for">#assert_has_input_devices_for</a></li>
+					
+					<li><a href="#method-i-assert_is_element">#assert_is_element</a></li>
+					
+					<li><a href="#method-i-assert_not_stale">#assert_not_stale</a></li>
+					
+					<li><a href="#method-i-assert_writable">#assert_writable</a></li>
+					
+					<li><a href="#method-i-attribute%3F">#attribute?</a></li>
+					
+					<li><a href="#method-i-attribute_value">#attribute_value</a></li>
+					
+					<li><a href="#method-i-browser">#browser</a></li>
+					
+					<li><a href="#method-i-click">#click</a></li>
+					
+					<li><a href="#method-i-double_click">#double_click</a></li>
+					
+					<li><a href="#method-i-drag_and_drop_by">#drag_and_drop_by</a></li>
+					
+					<li><a href="#method-i-drag_and_drop_on">#drag_and_drop_on</a></li>
+					
+					<li><a href="#method-i-driver">#driver</a></li>
+					
+					<li><a href="#method-i-eql%3F">#eql?</a></li>
+					
+					<li><a href="#method-i-exist%3F">#exist?</a></li>
+					
+					<li><a href="#method-i-exists%3F">#exists?</a></li>
+					
+					<li><a href="#method-i-fire_event">#fire_event</a></li>
+					
+					<li><a href="#method-i-flash">#flash</a></li>
+					
+					<li><a href="#method-i-focus">#focus</a></li>
+					
+					<li><a href="#method-i-focused%3F">#focused?</a></li>
+					
+					<li><a href="#method-i-hash">#hash</a></li>
+					
+					<li><a href="#method-i-hover">#hover</a></li>
+					
+					<li><a href="#method-i-html">#html</a></li>
+					
+					<li><a href="#method-i-inspect">#inspect</a></li>
+					
+					<li><a href="#method-i-locate">#locate</a></li>
+					
+					<li><a href="#method-i-locator_class">#locator_class</a></li>
+					
+					<li><a href="#method-i-method_missing">#method_missing</a></li>
+					
+					<li><a href="#method-i-parent">#parent</a></li>
+					
+					<li><a href="#method-i-present%3F">#present?</a></li>
+					
+					<li><a href="#method-i-reset%21">#reset!</a></li>
+					
+					<li><a href="#method-i-right_click">#right_click</a></li>
+					
+					<li><a href="#method-i-run_checkers">#run_checkers</a></li>
+					
+					<li><a href="#method-i-select_text">#select_text</a></li>
+					
+					<li><a href="#method-i-selector_string">#selector_string</a></li>
+					
+					<li><a href="#method-i-send_keys">#send_keys</a></li>
+					
+					<li><a href="#method-i-style">#style</a></li>
+					
+					<li><a href="#method-i-tag_name">#tag_name</a></li>
+					
+					<li><a href="#method-i-text">#text</a></li>
+					
+					<li><a href="#method-i-to_subtype">#to_subtype</a></li>
+					
+					<li><a href="#method-i-value">#value</a></li>
+					
+					<li><a href="#method-i-visible%3F">#visible?</a></li>
+					
+					<li><a href="#method-i-wd">#wd</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+			<div id="includes-section" class="section">
+				<h3 class="section-header">Included Modules</h3>
+				<ul class="link-list">
+				
+				
+					<li><span class="include">Exception</span></li>
+				
+				
+				
+					<li><span class="include">Container</span></li>
+				
+				
+				
+					<li><span class="include">EventuallyPresent</span></li>
+				
+				
+				</ul>
+			</div>
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../lib/watir-webdriver/atoms/README.html">README</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Watir.html">Watir</a></li>
+				
+					<li><a href="../Watir/Alert.html">Watir::Alert</a></li>
+				
+					<li><a href="../Watir/AlertHelper.html">Watir::AlertHelper</a></li>
+				
+					<li><a href="../Watir/Anchor.html">Watir::Anchor</a></li>
+				
+					<li><a href="../Watir/AnchorCollection.html">Watir::AnchorCollection</a></li>
+				
+					<li><a href="../Watir/Applet.html">Watir::Applet</a></li>
+				
+					<li><a href="../Watir/AppletCollection.html">Watir::AppletCollection</a></li>
+				
+					<li><a href="../Watir/Area.html">Watir::Area</a></li>
+				
+					<li><a href="../Watir/AreaCollection.html">Watir::AreaCollection</a></li>
+				
+					<li><a href="../Watir/Atoms.html">Watir::Atoms</a></li>
+				
+					<li><a href="../Watir/AttributeHelper.html">Watir::AttributeHelper</a></li>
+				
+					<li><a href="../Watir/Audio.html">Watir::Audio</a></li>
+				
+					<li><a href="../Watir/AudioCollection.html">Watir::AudioCollection</a></li>
+				
+					<li><a href="../Watir/BR.html">Watir::BR</a></li>
+				
+					<li><a href="../Watir/BRCollection.html">Watir::BRCollection</a></li>
+				
+					<li><a href="../Watir/Base.html">Watir::Base</a></li>
+				
+					<li><a href="../Watir/BaseCollection.html">Watir::BaseCollection</a></li>
+				
+					<li><a href="../Watir/BaseFont.html">Watir::BaseFont</a></li>
+				
+					<li><a href="../Watir/BaseFontCollection.html">Watir::BaseFontCollection</a></li>
+				
+					<li><a href="../Watir/Body.html">Watir::Body</a></li>
+				
+					<li><a href="../Watir/BodyCollection.html">Watir::BodyCollection</a></li>
+				
+					<li><a href="../Watir/Browser.html">Watir::Browser</a></li>
+				
+					<li><a href="../Watir/Button.html">Watir::Button</a></li>
+				
+					<li><a href="../Watir/ButtonCollection.html">Watir::ButtonCollection</a></li>
+				
+					<li><a href="../Watir/ButtonLocator.html">Watir::ButtonLocator</a></li>
+				
+					<li><a href="../Watir/Canvas.html">Watir::Canvas</a></li>
+				
+					<li><a href="../Watir/CanvasCollection.html">Watir::CanvasCollection</a></li>
+				
+					<li><a href="../Watir/CellContainer.html">Watir::CellContainer</a></li>
+				
+					<li><a href="../Watir/CheckBox.html">Watir::CheckBox</a></li>
+				
+					<li><a href="../Watir/CheckBoxCollection.html">Watir::CheckBoxCollection</a></li>
+				
+					<li><a href="../Watir/ChildCellLocator.html">Watir::ChildCellLocator</a></li>
+				
+					<li><a href="../Watir/ChildRowLocator.html">Watir::ChildRowLocator</a></li>
+				
+					<li><a href="../Watir/Command.html">Watir::Command</a></li>
+				
+					<li><a href="../Watir/CommandCollection.html">Watir::CommandCollection</a></li>
+				
+					<li><a href="../Watir/Container.html">Watir::Container</a></li>
+				
+					<li><a href="../Watir/Cookies.html">Watir::Cookies</a></li>
+				
+					<li><a href="../Watir/DList.html">Watir::DList</a></li>
+				
+					<li><a href="../Watir/DListCollection.html">Watir::DListCollection</a></li>
+				
+					<li><a href="../Watir/Data.html">Watir::Data</a></li>
+				
+					<li><a href="../Watir/DataCollection.html">Watir::DataCollection</a></li>
+				
+					<li><a href="../Watir/DataList.html">Watir::DataList</a></li>
+				
+					<li><a href="../Watir/DataListCollection.html">Watir::DataListCollection</a></li>
+				
+					<li><a href="../Watir/Details.html">Watir::Details</a></li>
+				
+					<li><a href="../Watir/DetailsCollection.html">Watir::DetailsCollection</a></li>
+				
+					<li><a href="../Watir/Dialog.html">Watir::Dialog</a></li>
+				
+					<li><a href="../Watir/DialogCollection.html">Watir::DialogCollection</a></li>
+				
+					<li><a href="../Watir/Directory.html">Watir::Directory</a></li>
+				
+					<li><a href="../Watir/DirectoryCollection.html">Watir::DirectoryCollection</a></li>
+				
+					<li><a href="../Watir/Div.html">Watir::Div</a></li>
+				
+					<li><a href="../Watir/DivCollection.html">Watir::DivCollection</a></li>
+				
+					<li><a href="../Watir/Element.html">Watir::Element</a></li>
+				
+					<li><a href="../Watir/ElementCollection.html">Watir::ElementCollection</a></li>
+				
+					<li><a href="../Watir/ElementLocator.html">Watir::ElementLocator</a></li>
+				
+					<li><a href="../Watir/Embed.html">Watir::Embed</a></li>
+				
+					<li><a href="../Watir/EmbedCollection.html">Watir::EmbedCollection</a></li>
+				
+					<li><a href="../Watir/EventuallyPresent.html">Watir::EventuallyPresent</a></li>
+				
+					<li><a href="../Watir/Exception.html">Watir::Exception</a></li>
+				
+					<li><a href="../Watir/Exception/Error.html">Watir::Exception::Error</a></li>
+				
+					<li><a href="../Watir/Exception/MissingWayOfFindingObjectException.html">Watir::Exception::MissingWayOfFindingObjectException</a></li>
+				
+					<li><a href="../Watir/Exception/NavigationException.html">Watir::Exception::NavigationException</a></li>
+				
+					<li><a href="../Watir/Exception/NoMatchingWindowFoundException.html">Watir::Exception::NoMatchingWindowFoundException</a></li>
+				
+					<li><a href="../Watir/Exception/NoStatusBarException.html">Watir::Exception::NoStatusBarException</a></li>
+				
+					<li><a href="../Watir/Exception/NoValueFoundException.html">Watir::Exception::NoValueFoundException</a></li>
+				
+					<li><a href="../Watir/Exception/ObjectDisabledException.html">Watir::Exception::ObjectDisabledException</a></li>
+				
+					<li><a href="../Watir/Exception/ObjectReadOnlyException.html">Watir::Exception::ObjectReadOnlyException</a></li>
+				
+					<li><a href="../Watir/Exception/UnknownCellException.html">Watir::Exception::UnknownCellException</a></li>
+				
+					<li><a href="../Watir/Exception/UnknownFrameException.html">Watir::Exception::UnknownFrameException</a></li>
+				
+					<li><a href="../Watir/Exception/UnknownObjectException.html">Watir::Exception::UnknownObjectException</a></li>
+				
+					<li><a href="../Watir/Exception/UnknownRowException.html">Watir::Exception::UnknownRowException</a></li>
+				
+					<li><a href="../Watir/FieldSet.html">Watir::FieldSet</a></li>
+				
+					<li><a href="../Watir/FieldSetCollection.html">Watir::FieldSetCollection</a></li>
+				
+					<li><a href="../Watir/FileField.html">Watir::FileField</a></li>
+				
+					<li><a href="../Watir/FileFieldCollection.html">Watir::FileFieldCollection</a></li>
+				
+					<li><a href="../Watir/Font.html">Watir::Font</a></li>
+				
+					<li><a href="../Watir/FontCollection.html">Watir::FontCollection</a></li>
+				
+					<li><a href="../Watir/Form.html">Watir::Form</a></li>
+				
+					<li><a href="../Watir/FormCollection.html">Watir::FormCollection</a></li>
+				
+					<li><a href="../Watir/Frame.html">Watir::Frame</a></li>
+				
+					<li><a href="../Watir/FrameCollection.html">Watir::FrameCollection</a></li>
+				
+					<li><a href="../Watir/FrameSet.html">Watir::FrameSet</a></li>
+				
+					<li><a href="../Watir/FrameSetCollection.html">Watir::FrameSetCollection</a></li>
+				
+					<li><a href="../Watir/FramedDriver.html">Watir::FramedDriver</a></li>
+				
+					<li><a href="../Watir/HR.html">Watir::HR</a></li>
+				
+					<li><a href="../Watir/HRCollection.html">Watir::HRCollection</a></li>
+				
+					<li><a href="../Watir/HTML.html">Watir::HTML</a></li>
+				
+					<li><a href="../Watir/HTML/Generator.html">Watir::HTML::Generator</a></li>
+				
+					<li><a href="../Watir/HTML/IDLSorter.html">Watir::HTML::IDLSorter</a></li>
+				
+					<li><a href="../Watir/HTML/SpecExtractor.html">Watir::HTML::SpecExtractor</a></li>
+				
+					<li><a href="../Watir/HTML/Util.html">Watir::HTML::Util</a></li>
+				
+					<li><a href="../Watir/HTML/Visitor.html">Watir::HTML::Visitor</a></li>
+				
+					<li><a href="../Watir/HTMLElement.html">Watir::HTMLElement</a></li>
+				
+					<li><a href="../Watir/HTMLElementCollection.html">Watir::HTMLElementCollection</a></li>
+				
+					<li><a href="../Watir/HasWindow.html">Watir::HasWindow</a></li>
+				
+					<li><a href="../Watir/Head.html">Watir::Head</a></li>
+				
+					<li><a href="../Watir/HeadCollection.html">Watir::HeadCollection</a></li>
+				
+					<li><a href="../Watir/Heading.html">Watir::Heading</a></li>
+				
+					<li><a href="../Watir/HeadingCollection.html">Watir::HeadingCollection</a></li>
+				
+					<li><a href="../Watir/Hidden.html">Watir::Hidden</a></li>
+				
+					<li><a href="../Watir/HiddenCollection.html">Watir::HiddenCollection</a></li>
+				
+					<li><a href="../Watir/Html.html">Watir::Html</a></li>
+				
+					<li><a href="../Watir/HtmlCollection.html">Watir::HtmlCollection</a></li>
+				
+					<li><a href="../Watir/IFrame.html">Watir::IFrame</a></li>
+				
+					<li><a href="../Watir/IFrameCollection.html">Watir::IFrameCollection</a></li>
+				
+					<li><a href="../Watir/Image.html">Watir::Image</a></li>
+				
+					<li><a href="../Watir/ImageCollection.html">Watir::ImageCollection</a></li>
+				
+					<li><a href="../Watir/Input.html">Watir::Input</a></li>
+				
+					<li><a href="../Watir/InputCollection.html">Watir::InputCollection</a></li>
+				
+					<li><a href="../Watir/Keygen.html">Watir::Keygen</a></li>
+				
+					<li><a href="../Watir/KeygenCollection.html">Watir::KeygenCollection</a></li>
+				
+					<li><a href="../Watir/LI.html">Watir::LI</a></li>
+				
+					<li><a href="../Watir/LICollection.html">Watir::LICollection</a></li>
+				
+					<li><a href="../Watir/Label.html">Watir::Label</a></li>
+				
+					<li><a href="../Watir/LabelCollection.html">Watir::LabelCollection</a></li>
+				
+					<li><a href="../Watir/Legend.html">Watir::Legend</a></li>
+				
+					<li><a href="../Watir/LegendCollection.html">Watir::LegendCollection</a></li>
+				
+					<li><a href="../Watir/Map.html">Watir::Map</a></li>
+				
+					<li><a href="../Watir/MapCollection.html">Watir::MapCollection</a></li>
+				
+					<li><a href="../Watir/Marquee.html">Watir::Marquee</a></li>
+				
+					<li><a href="../Watir/MarqueeCollection.html">Watir::MarqueeCollection</a></li>
+				
+					<li><a href="../Watir/Media.html">Watir::Media</a></li>
+				
+					<li><a href="../Watir/MediaCollection.html">Watir::MediaCollection</a></li>
+				
+					<li><a href="../Watir/Menu.html">Watir::Menu</a></li>
+				
+					<li><a href="../Watir/MenuCollection.html">Watir::MenuCollection</a></li>
+				
+					<li><a href="../Watir/Meta.html">Watir::Meta</a></li>
+				
+					<li><a href="../Watir/MetaCollection.html">Watir::MetaCollection</a></li>
+				
+					<li><a href="../Watir/Meter.html">Watir::Meter</a></li>
+				
+					<li><a href="../Watir/MeterCollection.html">Watir::MeterCollection</a></li>
+				
+					<li><a href="../Watir/Mod.html">Watir::Mod</a></li>
+				
+					<li><a href="../Watir/ModCollection.html">Watir::ModCollection</a></li>
+				
+					<li><a href="../Watir/OList.html">Watir::OList</a></li>
+				
+					<li><a href="../Watir/OListCollection.html">Watir::OListCollection</a></li>
+				
+					<li><a href="../Watir/Object.html">Watir::Object</a></li>
+				
+					<li><a href="../Watir/ObjectCollection.html">Watir::ObjectCollection</a></li>
+				
+					<li><a href="../Watir/OptGroup.html">Watir::OptGroup</a></li>
+				
+					<li><a href="../Watir/OptGroupCollection.html">Watir::OptGroupCollection</a></li>
+				
+					<li><a href="../Watir/Option.html">Watir::Option</a></li>
+				
+					<li><a href="../Watir/OptionCollection.html">Watir::OptionCollection</a></li>
+				
+					<li><a href="../Watir/Output.html">Watir::Output</a></li>
+				
+					<li><a href="../Watir/OutputCollection.html">Watir::OutputCollection</a></li>
+				
+					<li><a href="../Watir/Paragraph.html">Watir::Paragraph</a></li>
+				
+					<li><a href="../Watir/ParagraphCollection.html">Watir::ParagraphCollection</a></li>
+				
+					<li><a href="../Watir/Param.html">Watir::Param</a></li>
+				
+					<li><a href="../Watir/ParamCollection.html">Watir::ParamCollection</a></li>
+				
+					<li><a href="../Watir/Pre.html">Watir::Pre</a></li>
+				
+					<li><a href="../Watir/PreCollection.html">Watir::PreCollection</a></li>
+				
+					<li><a href="../Watir/Progress.html">Watir::Progress</a></li>
+				
+					<li><a href="../Watir/ProgressCollection.html">Watir::ProgressCollection</a></li>
+				
+					<li><a href="../Watir/Quote.html">Watir::Quote</a></li>
+				
+					<li><a href="../Watir/QuoteCollection.html">Watir::QuoteCollection</a></li>
+				
+					<li><a href="../Watir/Radio.html">Watir::Radio</a></li>
+				
+					<li><a href="../Watir/RadioCollection.html">Watir::RadioCollection</a></li>
+				
+					<li><a href="../Watir/RowContainer.html">Watir::RowContainer</a></li>
+				
+					<li><a href="../Watir/Screenshot.html">Watir::Screenshot</a></li>
+				
+					<li><a href="../Watir/Script.html">Watir::Script</a></li>
+				
+					<li><a href="../Watir/ScriptCollection.html">Watir::ScriptCollection</a></li>
+				
+					<li><a href="../Watir/Select.html">Watir::Select</a></li>
+				
+					<li><a href="../Watir/SelectCollection.html">Watir::SelectCollection</a></li>
+				
+					<li><a href="../Watir/Source.html">Watir::Source</a></li>
+				
+					<li><a href="../Watir/SourceCollection.html">Watir::SourceCollection</a></li>
+				
+					<li><a href="../Watir/Span.html">Watir::Span</a></li>
+				
+					<li><a href="../Watir/SpanCollection.html">Watir::SpanCollection</a></li>
+				
+					<li><a href="../Watir/Style.html">Watir::Style</a></li>
+				
+					<li><a href="../Watir/StyleCollection.html">Watir::StyleCollection</a></li>
+				
+					<li><a href="../Watir/Table.html">Watir::Table</a></li>
+				
+					<li><a href="../Watir/TableCaption.html">Watir::TableCaption</a></li>
+				
+					<li><a href="../Watir/TableCaptionCollection.html">Watir::TableCaptionCollection</a></li>
+				
+					<li><a href="../Watir/TableCell.html">Watir::TableCell</a></li>
+				
+					<li><a href="../Watir/TableCellCollection.html">Watir::TableCellCollection</a></li>
+				
+					<li><a href="../Watir/TableCol.html">Watir::TableCol</a></li>
+				
+					<li><a href="../Watir/TableColCollection.html">Watir::TableColCollection</a></li>
+				
+					<li><a href="../Watir/TableCollection.html">Watir::TableCollection</a></li>
+				
+					<li><a href="../Watir/TableDataCell.html">Watir::TableDataCell</a></li>
+				
+					<li><a href="../Watir/TableDataCellCollection.html">Watir::TableDataCellCollection</a></li>
+				
+					<li><a href="../Watir/TableHeaderCell.html">Watir::TableHeaderCell</a></li>
+				
+					<li><a href="../Watir/TableHeaderCellCollection.html">Watir::TableHeaderCellCollection</a></li>
+				
+					<li><a href="../Watir/TableRow.html">Watir::TableRow</a></li>
+				
+					<li><a href="../Watir/TableRowCollection.html">Watir::TableRowCollection</a></li>
+				
+					<li><a href="../Watir/TableSection.html">Watir::TableSection</a></li>
+				
+					<li><a href="../Watir/TableSectionCollection.html">Watir::TableSectionCollection</a></li>
+				
+					<li><a href="../Watir/TextArea.html">Watir::TextArea</a></li>
+				
+					<li><a href="../Watir/TextAreaCollection.html">Watir::TextAreaCollection</a></li>
+				
+					<li><a href="../Watir/TextField.html">Watir::TextField</a></li>
+				
+					<li><a href="../Watir/TextFieldCollection.html">Watir::TextFieldCollection</a></li>
+				
+					<li><a href="../Watir/TextFieldLocator.html">Watir::TextFieldLocator</a></li>
+				
+					<li><a href="../Watir/Time.html">Watir::Time</a></li>
+				
+					<li><a href="../Watir/TimeCollection.html">Watir::TimeCollection</a></li>
+				
+					<li><a href="../Watir/Title.html">Watir::Title</a></li>
+				
+					<li><a href="../Watir/TitleCollection.html">Watir::TitleCollection</a></li>
+				
+					<li><a href="../Watir/Track.html">Watir::Track</a></li>
+				
+					<li><a href="../Watir/TrackCollection.html">Watir::TrackCollection</a></li>
+				
+					<li><a href="../Watir/UList.html">Watir::UList</a></li>
+				
+					<li><a href="../Watir/UListCollection.html">Watir::UListCollection</a></li>
+				
+					<li><a href="../Watir/Unknown.html">Watir::Unknown</a></li>
+				
+					<li><a href="../Watir/UnknownCollection.html">Watir::UnknownCollection</a></li>
+				
+					<li><a href="../Watir/UserEditable.html">Watir::UserEditable</a></li>
+				
+					<li><a href="../Watir/Video.html">Watir::Video</a></li>
+				
+					<li><a href="../Watir/VideoCollection.html">Watir::VideoCollection</a></li>
+				
+					<li><a href="../Watir/Wait.html">Watir::Wait</a></li>
+				
+					<li><a href="../Watir/Wait/TimeoutError.html">Watir::Wait::TimeoutError</a></li>
+				
+					<li><a href="../Watir/Waitable.html">Watir::Waitable</a></li>
+				
+					<li><a href="../Watir/WhenPresentDecorator.html">Watir::WhenPresentDecorator</a></li>
+				
+					<li><a href="../Watir/Window.html">Watir::Window</a></li>
+				
+					<li><a href="../Watir/XpathSupport.html">Watir::XpathSupport</a></li>
+				
+					<li><a href="../YARD.html">YARD</a></li>
+				
+					<li><a href="../YARD/Handlers.html">YARD::Handlers</a></li>
+				
+					<li><a href="../YARD/Handlers/Watir.html">YARD::Handlers::Watir</a></li>
+				
+					<li><a href="../YARD/Handlers/Watir/AttributesHandler.html">YARD::Handlers::Watir::AttributesHandler</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Watir::Element</h1>
+
+		<div id="description">
+			<p>
+<a href="Base.html">Base</a> class for <a href="HTML.html">HTML</a>
+elements.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(parent, selector)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 26</span>
+26:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-identifier">selector</span>)
+27:       <span class="ruby-ivar">@parent</span>   = <span class="ruby-identifier">parent</span>
+28:       <span class="ruby-ivar">@selector</span> = <span class="ruby-identifier">selector</span>
+29:       <span class="ruby-ivar">@element</span>  = <span class="ruby-keyword kw">nil</span>
+30: 
+31:       <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@selector</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Hash</span>
+32:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;invalid argument: #{selector.inspect}&quot;</span>
+33:       <span class="ruby-keyword kw">end</span>
+34:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-%3D%3D"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">==</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 52</span>
+52:     <span class="ruby-keyword kw">def</span> <span class="ruby-operator">==</span>(<span class="ruby-identifier">other</span>)
+53:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>
+54: 
+55:       <span class="ruby-identifier">assert_exists</span>
+56:       <span class="ruby-ivar">@element</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">other</span>.<span class="ruby-identifier">wd</span>
+57:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="Element.html#method-i-eql%3F">eql?</a>
+				</div>
+				
+
+				
+			</div>
+
+		
+			<div id="attribute-value-method" class="method-detail ">
+				<a name="method-i-attribute_value"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">attribute_value</span><span
+						class="method-args">(attribute_name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="attribute-value-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 215</span>
+215:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">attribute_value</span>(<span class="ruby-identifier">attribute_name</span>)
+216:       <span class="ruby-identifier">assert_exists</span>
+217:       <span class="ruby-ivar">@element</span>.<span class="ruby-identifier">attribute</span> <span class="ruby-identifier">attribute_name</span>
+218:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="browser-method" class="method-detail ">
+				<a name="method-i-browser"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">browser</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="browser-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 350</span>
+350:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">browser</span>
+351:       <span class="ruby-ivar">@parent</span>.<span class="ruby-identifier">browser</span>
+352:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="click-method" class="method-detail ">
+				<a name="method-i-click"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">click</span><span
+						class="method-args">(*modifiers)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Clicks the element, optionally while pressing the given mofifier keys. Note
+that support for holding a modifier key is currently experimental, and may
+not work at all.
+</p>
+<p>
+@example Click an element
+</p>
+<pre>
+  element.click
+</pre>
+<p>
+@example Click an element with shift key pressed
+</p>
+<pre>
+  element.click(:shift)
+</pre>
+<p>
+@example Click an element with several modifier keys pressed
+</p>
+<pre>
+  element.click(:shift, :control)
+</pre>
+<p>
+@param [:shift, :alt, :control, :command, :meta] Modifier key(s) to press
+while clicking.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="click-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 94</span>
+ 94:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">click</span>(*<span class="ruby-identifier">modifiers</span>)
+ 95:       <span class="ruby-identifier">assert_exists</span>
+ 96:       <span class="ruby-identifier">assert_enabled</span>
+ 97: 
+ 98:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">modifiers</span>.<span class="ruby-identifier">any?</span>
+ 99:         <span class="ruby-identifier">assert_has_input_devices_for</span> <span class="ruby-node">&quot;click(#{modifiers.join ', '})&quot;</span>
+100: 
+101:         <span class="ruby-identifier">action</span> = <span class="ruby-identifier">driver</span>.<span class="ruby-identifier">action</span>
+102:         <span class="ruby-identifier">modifiers</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">mod</span><span class="ruby-operator">|</span> <span class="ruby-identifier">action</span>.<span class="ruby-identifier">key_down</span> <span class="ruby-identifier">mod</span> }
+103:         <span class="ruby-identifier">action</span>.<span class="ruby-identifier">click</span> <span class="ruby-ivar">@element</span>
+104:         <span class="ruby-identifier">modifiers</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">mod</span><span class="ruby-operator">|</span> <span class="ruby-identifier">action</span>.<span class="ruby-identifier">key_up</span> <span class="ruby-identifier">mod</span> }
+105: 
+106:         <span class="ruby-identifier">action</span>.<span class="ruby-identifier">perform</span>
+107:       <span class="ruby-keyword kw">else</span>
+108:         <span class="ruby-ivar">@element</span>.<span class="ruby-identifier">click</span>
+109:       <span class="ruby-keyword kw">end</span>
+110: 
+111:       <span class="ruby-identifier">run_checkers</span>
+112:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="double-click-method" class="method-detail ">
+				<a name="method-i-double_click"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">double_click</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Double clicks the element.
+</p>
+<p>
+Note that browser support may vary.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="double-click-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 121</span>
+121:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">double_click</span>
+122:       <span class="ruby-identifier">assert_exists</span>
+123:       <span class="ruby-identifier">assert_has_input_devices_for</span> <span class="ruby-value">:double_click</span>
+124: 
+125:       <span class="ruby-identifier">driver</span>.<span class="ruby-identifier">action</span>.<span class="ruby-identifier">double_click</span>(<span class="ruby-ivar">@element</span>).<span class="ruby-identifier">perform</span>
+126:       <span class="ruby-identifier">run_checkers</span>
+127:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="drag-and-drop-by-method" class="method-detail ">
+				<a name="method-i-drag_and_drop_by"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">drag_and_drop_by</span><span
+						class="method-args">(right_by, down_by)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Drag and drop this element by the given offsets.
+</p>
+<p>
+Example:
+</p>
+<pre>
+   a = browser.div(:id =&gt; &quot;draggable&quot;)
+
+   a.drag_and_drop_by 100, -200</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="drag-and-drop-by-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 187</span>
+187:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">drag_and_drop_by</span>(<span class="ruby-identifier">right_by</span>, <span class="ruby-identifier">down_by</span>)
+188:       <span class="ruby-identifier">assert_exists</span>
+189:       <span class="ruby-identifier">assert_has_input_devices_for</span> <span class="ruby-value">:drag_and_drop_by</span>
+190: 
+191:       <span class="ruby-identifier">driver</span>.<span class="ruby-identifier">action</span>.
+192:              <span class="ruby-identifier">drag_and_drop_by</span>(<span class="ruby-ivar">@element</span>, <span class="ruby-identifier">right_by</span>, <span class="ruby-identifier">down_by</span>).
+193:              <span class="ruby-identifier">perform</span>
+194:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="drag-and-drop-on-method" class="method-detail ">
+				<a name="method-i-drag_and_drop_on"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">drag_and_drop_on</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Drag and drop this element on to another element instance.
+</p>
+<p>
+Example:
+</p>
+<pre>
+   a = browser.div(:id =&gt; &quot;draggable&quot;)
+   b = browser.div(:id =&gt; &quot;droppable&quot;)
+
+   a.drag_and_drop_on b</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="drag-and-drop-on-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 167</span>
+167:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">drag_and_drop_on</span>(<span class="ruby-identifier">other</span>)
+168:       <span class="ruby-identifier">assert_is_element</span> <span class="ruby-identifier">other</span>
+169:       <span class="ruby-identifier">assert_exists</span>
+170:       <span class="ruby-identifier">assert_has_input_devices_for</span> <span class="ruby-value">:drag_and_drop_on</span>
+171: 
+172:       <span class="ruby-identifier">driver</span>.<span class="ruby-identifier">action</span>.
+173:              <span class="ruby-identifier">drag_and_drop</span>(<span class="ruby-ivar">@element</span>, <span class="ruby-identifier">other</span>.<span class="ruby-identifier">wd</span>).
+174:              <span class="ruby-identifier">perform</span>
+175:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="driver-method" class="method-detail ">
+				<a name="method-i-driver"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">driver</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@api private
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="driver-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 267</span>
+267:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">driver</span>
+268:       <span class="ruby-ivar">@parent</span>.<span class="ruby-identifier">driver</span>
+269:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="eql--method" class="method-detail method-alias">
+				<a name="method-i-eql%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">eql?</span><span
+						class="method-args">(other)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="Element.html#method-i-%3D%3D">==</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="exist--method" class="method-detail method-alias">
+				<a name="method-i-exist%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">exist?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="Element.html#method-i-exists%3F">exists?</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="exists--method" class="method-detail ">
+				<a name="method-i-exists%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">exists?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="exists--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 36</span>
+36:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">exists?</span>
+37:       <span class="ruby-identifier">assert_exists</span>
+38:       <span class="ruby-keyword kw">true</span>
+39:     <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">UnknownObjectException</span>, <span class="ruby-constant">UnknownFrameException</span>
+40:       <span class="ruby-keyword kw">false</span>
+41:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="Element.html#method-i-exist%3F">exist?</a>
+				</div>
+				
+
+				
+			</div>
+
+		
+			<div id="fire-event-method" class="method-detail ">
+				<a name="method-i-fire_event"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">fire_event</span><span
+						class="method-args">(event_name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="fire-event-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 246</span>
+246:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">fire_event</span>(<span class="ruby-identifier">event_name</span>)
+247:       <span class="ruby-identifier">assert_exists</span>
+248:       <span class="ruby-identifier">event_name</span> = <span class="ruby-identifier">event_name</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-regexp re">/^on/</span>, <span class="ruby-value str">''</span>).<span class="ruby-identifier">downcase</span>
+249: 
+250:       <span class="ruby-identifier">execute_atom</span> <span class="ruby-value">:fireEvent</span>, <span class="ruby-ivar">@element</span>, <span class="ruby-identifier">event_name</span>
+251:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="flash-method" class="method-detail ">
+				<a name="method-i-flash"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">flash</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="flash-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 196</span>
+196:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">flash</span>
+197:       <span class="ruby-identifier">original_color</span> = <span class="ruby-identifier">style</span>(<span class="ruby-value str">&quot;backgroundColor&quot;</span>)
+198: 
+199:       <span class="ruby-value">10</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span>
+200:         <span class="ruby-identifier">color</span> = (<span class="ruby-identifier">n</span> <span class="ruby-operator">%</span> <span class="ruby-value">2</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>) <span class="ruby-operator">?</span> <span class="ruby-value str">&quot;red&quot;</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">original_color</span>
+201:         <span class="ruby-identifier">driver</span>.<span class="ruby-identifier">execute_script</span>(<span class="ruby-node">&quot;arguments[0].style.backgroundColor = '#{color}'&quot;</span>, <span class="ruby-ivar">@element</span>)
+202:       <span class="ruby-keyword kw">end</span>
+203:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="focus-method" class="method-detail ">
+				<a name="method-i-focus"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">focus</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Note: Firefox queues focus events until the window actually has focus.
+</p>
+<p>
+See <a
+href="http://code.google.com/p/selenium/issues/detail?id=157">code.google.com/p/selenium/issues/detail?id=157</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="focus-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 236</span>
+236:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">focus</span>
+237:       <span class="ruby-identifier">assert_exists</span>
+238:       <span class="ruby-identifier">driver</span>.<span class="ruby-identifier">execute_script</span> <span class="ruby-value str">&quot;return arguments[0].focus()&quot;</span>, <span class="ruby-ivar">@element</span>
+239:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="focused--method" class="method-detail ">
+				<a name="method-i-focused%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">focused?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="focused--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 241</span>
+241:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">focused?</span>
+242:       <span class="ruby-identifier">assert_exists</span>
+243:       <span class="ruby-ivar">@element</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">driver</span>.<span class="ruby-identifier">switch_to</span>.<span class="ruby-identifier">active_element</span>
+244:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="hash-method" class="method-detail ">
+				<a name="method-i-hash"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">hash</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="hash-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 60</span>
+60:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">hash</span>
+61:       <span class="ruby-ivar">@element</span> <span class="ruby-operator">?</span> <span class="ruby-ivar">@element</span>.<span class="ruby-identifier">hash</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">super</span>
+62:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="hover-method" class="method-detail ">
+				<a name="method-i-hover"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">hover</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Moves the mouse to the middle of this element.
+</p>
+<p>
+Note that browser/platform support may vary.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="hover-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 149</span>
+149:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">hover</span>
+150:       <span class="ruby-identifier">assert_exists</span>
+151:       <span class="ruby-identifier">assert_has_input_devices_for</span> <span class="ruby-value">:hover</span>
+152: 
+153:       <span class="ruby-identifier">driver</span>.<span class="ruby-identifier">action</span>.<span class="ruby-identifier">move_to</span>(<span class="ruby-ivar">@element</span>).<span class="ruby-identifier">perform</span>
+154:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="html-method" class="method-detail ">
+				<a name="method-i-html"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">html</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="html-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 220</span>
+220:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">html</span>
+221:       <span class="ruby-identifier">assert_exists</span>
+222:       <span class="ruby-identifier">execute_atom</span>(<span class="ruby-value">:getOuterHtml</span>, <span class="ruby-ivar">@element</span>).<span class="ruby-identifier">strip</span>
+223:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="inspect-method" class="method-detail ">
+				<a name="method-i-inspect"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">inspect</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="inspect-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 44</span>
+44:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">inspect</span>
+45:       <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@selector</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:element</span>)
+46:         <span class="ruby-value str">'#&lt;%s:0x%x located=%s selector=%s&gt;'</span> <span class="ruby-operator">%</span> [<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>, <span class="ruby-identifier">hash</span>*<span class="ruby-value">2</span>, <span class="ruby-operator">!</span><span class="ruby-operator">!</span><span class="ruby-ivar">@element</span>, <span class="ruby-value str">'{:element=&gt;(webdriver element)}'</span>]
+47:       <span class="ruby-keyword kw">else</span>
+48:         <span class="ruby-value str">'#&lt;%s:0x%x located=%s selector=%s&gt;'</span> <span class="ruby-operator">%</span> [<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>, <span class="ruby-identifier">hash</span>*<span class="ruby-value">2</span>, <span class="ruby-operator">!</span><span class="ruby-operator">!</span><span class="ruby-ivar">@element</span>, <span class="ruby-identifier">selector_string</span>]
+49:       <span class="ruby-keyword kw">end</span>
+50:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parent-method" class="method-detail ">
+				<a name="method-i-parent"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parent</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="parent-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 253</span>
+253:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parent</span>
+254:       <span class="ruby-identifier">assert_exists</span>
+255: 
+256:       <span class="ruby-identifier">e</span> = <span class="ruby-identifier">execute_atom</span> <span class="ruby-value">:getParentElement</span>, <span class="ruby-ivar">@element</span>
+257: 
+258:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Selenium</span><span class="ruby-operator">::</span><span class="ruby-constant">WebDriver</span><span class="ruby-operator">::</span><span class="ruby-constant">Element</span>)
+259:         <span class="ruby-constant">Watir</span>.<span class="ruby-identifier">element_class_for</span>(<span class="ruby-identifier">e</span>.<span class="ruby-identifier">tag_name</span>.<span class="ruby-identifier">downcase</span>).<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@parent</span>, <span class="ruby-value">:element</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>)
+260:       <span class="ruby-keyword kw">end</span>
+261:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="present--method" class="method-detail ">
+				<a name="method-i-present%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">present?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns true if the element exists and is visible on the page
+</p>
+<p>
+@see <a href="Wait.html">Watir::Wait</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="present--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 295</span>
+295:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">present?</span>
+296:       <span class="ruby-identifier">exists?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">visible?</span>
+297:     <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Selenium</span><span class="ruby-operator">::</span><span class="ruby-constant">WebDriver</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span><span class="ruby-operator">::</span><span class="ruby-constant">ObsoleteElementError</span>, <span class="ruby-constant">UnknownObjectException</span>
+298:       <span class="ruby-comment cmt"># if the element disappears between the exists? and visible? calls,</span>
+299:       <span class="ruby-comment cmt"># consider it not present.</span>
+300:       <span class="ruby-keyword kw">false</span>
+301:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="right-click-method" class="method-detail ">
+				<a name="method-i-right_click"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">right_click</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Right clicks the element.
+</p>
+<p>
+Note that browser support may vary.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="right-click-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 135</span>
+135:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">right_click</span>
+136:       <span class="ruby-identifier">assert_exists</span>
+137:       <span class="ruby-identifier">assert_has_input_devices_for</span> <span class="ruby-value">:right_click</span>
+138: 
+139:       <span class="ruby-identifier">driver</span>.<span class="ruby-identifier">action</span>.<span class="ruby-identifier">context_click</span>(<span class="ruby-ivar">@element</span>).<span class="ruby-identifier">perform</span>
+140:       <span class="ruby-identifier">run_checkers</span>
+141:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="run-checkers-method" class="method-detail ">
+				<a name="method-i-run_checkers"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">run_checkers</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="run-checkers-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 312</span>
+312:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">run_checkers</span>
+313:       <span class="ruby-ivar">@parent</span>.<span class="ruby-identifier">run_checkers</span>
+314:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="select-text-method" class="method-detail ">
+				<a name="method-i-select_text"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">select_text</span><span
+						class="method-args">(str)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="select-text-source">
+<pre>
+   <span class="ruby-comment cmt"># File lib/watir-webdriver/extensions/select_text.rb, line 5</span>
+5:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">select_text</span>(<span class="ruby-identifier">str</span>)
+6:       <span class="ruby-identifier">assert_exists</span>
+7:       <span class="ruby-identifier">execute_atom</span> <span class="ruby-value">:selectText</span>, <span class="ruby-ivar">@element</span>, <span class="ruby-identifier">str</span>
+8:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="send-keys-method" class="method-detail ">
+				<a name="method-i-send_keys"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">send_keys</span><span
+						class="method-args">(*args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="send-keys-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 225</span>
+225:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">send_keys</span>(*<span class="ruby-identifier">args</span>)
+226:       <span class="ruby-identifier">assert_exists</span>
+227:       <span class="ruby-ivar">@element</span>.<span class="ruby-identifier">send_keys</span>(*<span class="ruby-identifier">args</span>)
+228:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="style-method" class="method-detail ">
+				<a name="method-i-style"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">style</span><span
+						class="method-args">(property = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="style-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 303</span>
+303:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">style</span>(<span class="ruby-identifier">property</span> = <span class="ruby-keyword kw">nil</span>)
+304:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">property</span>
+305:         <span class="ruby-identifier">assert_exists</span>
+306:         <span class="ruby-ivar">@element</span>.<span class="ruby-identifier">style</span> <span class="ruby-identifier">property</span>
+307:       <span class="ruby-keyword kw">else</span>
+308:         <span class="ruby-identifier">attribute_value</span>(<span class="ruby-value str">&quot;style&quot;</span>).<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">strip</span>
+309:       <span class="ruby-keyword kw">end</span>
+310:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="tag-name-method" class="method-detail ">
+				<a name="method-i-tag_name"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">tag_name</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="tag-name-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 69</span>
+69:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">tag_name</span>
+70:       <span class="ruby-identifier">assert_exists</span>
+71:       <span class="ruby-ivar">@element</span>.<span class="ruby-identifier">tag_name</span>.<span class="ruby-identifier">downcase</span>
+72:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="text-method" class="method-detail ">
+				<a name="method-i-text"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">text</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="text-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 64</span>
+64:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">text</span>
+65:       <span class="ruby-identifier">assert_exists</span>
+66:       <span class="ruby-ivar">@element</span>.<span class="ruby-identifier">text</span>
+67:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-subtype-method" class="method-detail ">
+				<a name="method-i-to_subtype"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_subtype</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Cast this <a href="Element.html">Element</a> instance to a more specific
+subtype.
+</p>
+<p>
+Example:
+</p>
+<pre>
+  browser.element(:xpath =&gt; &quot;//input[@type='submit']&quot;).to_subtype #=&gt; #&lt;Watir::Button&gt;</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="to-subtype-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 324</span>
+324:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_subtype</span>
+325:       <span class="ruby-identifier">elem</span> = <span class="ruby-identifier">wd</span>()
+326:       <span class="ruby-identifier">tag_name</span> = <span class="ruby-identifier">elem</span>.<span class="ruby-identifier">tag_name</span>.<span class="ruby-identifier">downcase</span>
+327: 
+328:       <span class="ruby-identifier">klass</span> = <span class="ruby-keyword kw">nil</span>
+329: 
+330:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">tag_name</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;input&quot;</span>
+331:         <span class="ruby-identifier">klass</span> = <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">elem</span>.<span class="ruby-identifier">attribute</span>(<span class="ruby-value">:type</span>)
+332:           <span class="ruby-keyword kw">when</span> *<span class="ruby-constant">Button</span><span class="ruby-operator">::</span><span class="ruby-constant">VALID_TYPES</span>
+333:             <span class="ruby-constant">Button</span>
+334:           <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'checkbox'</span>
+335:             <span class="ruby-constant">CheckBox</span>
+336:           <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'radio'</span>
+337:             <span class="ruby-constant">Radio</span>
+338:           <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'file'</span>
+339:             <span class="ruby-constant">FileField</span>
+340:           <span class="ruby-keyword kw">else</span>
+341:             <span class="ruby-constant">TextField</span>
+342:           <span class="ruby-keyword kw">end</span>
+343:       <span class="ruby-keyword kw">else</span>
+344:         <span class="ruby-identifier">klass</span> = <span class="ruby-constant">Watir</span>.<span class="ruby-identifier">element_class_for</span>(<span class="ruby-identifier">tag_name</span>)
+345:       <span class="ruby-keyword kw">end</span>
+346: 
+347:       <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@parent</span>, <span class="ruby-value">:element</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">elem</span>)
+348:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="value-method" class="method-detail ">
+				<a name="method-i-value"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">value</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="value-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 205</span>
+205:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">value</span>
+206:       <span class="ruby-identifier">assert_exists</span>
+207: 
+208:       <span class="ruby-keyword kw">begin</span>
+209:         <span class="ruby-ivar">@element</span>.<span class="ruby-identifier">attribute</span>(<span class="ruby-value str">'value'</span>) <span class="ruby-operator">||</span> <span class="ruby-value str">''</span>
+210:       <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Selenium</span><span class="ruby-operator">::</span><span class="ruby-constant">WebDriver</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span><span class="ruby-operator">::</span><span class="ruby-constant">InvalidElementStateError</span>
+211:         <span class="ruby-value str">&quot;&quot;</span>
+212:       <span class="ruby-keyword kw">end</span>
+213:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="visible--method" class="method-detail ">
+				<a name="method-i-visible%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">visible?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns true if this element is visible on the page
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="visible--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 284</span>
+284:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">visible?</span>
+285:       <span class="ruby-identifier">assert_exists</span>
+286:       <span class="ruby-ivar">@element</span>.<span class="ruby-identifier">displayed?</span>
+287:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="wd-method" class="method-detail ">
+				<a name="method-i-wd"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">wd</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@api private
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="wd-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 275</span>
+275:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">wd</span>
+276:       <span class="ruby-identifier">assert_exists</span>
+277:       <span class="ruby-ivar">@element</span>
+278:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="protected-instance-method-details" class="method-section section">
+			<h3 class="section-header">Protected Instance Methods</h3>
+
+		
+			<div id="assert-exists-method" class="method-detail ">
+				<a name="method-i-assert_exists"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">assert_exists</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="assert-exists-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 356</span>
+356:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">assert_exists</span>
+357:       <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@element</span> <span class="ruby-keyword kw">and</span> <span class="ruby-keyword kw">not</span> <span class="ruby-constant">Watir</span>.<span class="ruby-identifier">always_locate?</span>
+358:         <span class="ruby-identifier">assert_not_stale</span>
+359:         <span class="ruby-keyword kw">return</span>
+360:       <span class="ruby-keyword kw">end</span>
+361: 
+362:       <span class="ruby-ivar">@element</span> = (<span class="ruby-ivar">@selector</span>[<span class="ruby-value">:element</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">locate</span>)
+363: 
+364:       <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@element</span>
+365:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">UnknownObjectException</span>, <span class="ruby-node">&quot;unable to locate element, using #{selector_string}&quot;</span>
+366:       <span class="ruby-keyword kw">end</span>
+367:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="assert-not-stale-method" class="method-detail ">
+				<a name="method-i-assert_not_stale"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">assert_not_stale</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="assert-not-stale-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 369</span>
+369:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">assert_not_stale</span>
+370:       <span class="ruby-ivar">@element</span>.<span class="ruby-identifier">enabled?</span> <span class="ruby-comment cmt"># do a staleness check - any wire call will do.</span>
+371:     <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Selenium</span><span class="ruby-operator">::</span><span class="ruby-constant">WebDriver</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span><span class="ruby-operator">::</span><span class="ruby-constant">ObsoleteElementError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ex</span>
+372:       <span class="ruby-comment cmt"># don't cache a stale element - it will never come back</span>
+373:       <span class="ruby-ivar">@element</span> = <span class="ruby-keyword kw">nil</span>
+374:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">UnknownObjectException</span>, <span class="ruby-node">&quot;#{ex.message} - #{selector_string}&quot;</span>
+375:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="locate-method" class="method-detail ">
+				<a name="method-i-locate"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">locate</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="locate-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 382</span>
+382:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">locate</span>
+383:       <span class="ruby-ivar">@parent</span>.<span class="ruby-identifier">assert_exists</span>
+384:       <span class="ruby-identifier">locator_class</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@parent</span>.<span class="ruby-identifier">wd</span>, <span class="ruby-ivar">@selector</span>, <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">attribute_list</span>).<span class="ruby-identifier">locate</span>
+385:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="reset--method" class="method-detail ">
+				<a name="method-i-reset%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">reset!</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="reset--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 377</span>
+377:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">reset!</span>
+378:       <span class="ruby-ivar">@parent</span>.<span class="ruby-identifier">reset!</span>
+379:       <span class="ruby-ivar">@element</span> = <span class="ruby-keyword kw">nil</span>
+380:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="assert-enabled-method" class="method-detail ">
+				<a name="method-i-assert_enabled"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">assert_enabled</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="assert-enabled-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 402</span>
+402:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">assert_enabled</span>
+403:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ObjectDisabledException</span>, <span class="ruby-node">&quot;object is disabled #{selector_string}&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@element</span>.<span class="ruby-identifier">enabled?</span>
+404:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="assert-has-input-devices-for-method" class="method-detail ">
+				<a name="method-i-assert_has_input_devices_for"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">assert_has_input_devices_for</span><span
+						class="method-args">(name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="assert-has-input-devices-for-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 411</span>
+411:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">assert_has_input_devices_for</span>(<span class="ruby-identifier">name</span>)
+412:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">driver</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Selenium</span><span class="ruby-operator">::</span><span class="ruby-constant">WebDriver</span><span class="ruby-operator">::</span><span class="ruby-constant">DriverExtensions</span><span class="ruby-operator">::</span><span class="ruby-constant">HasInputDevices</span>
+413:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">NotImplementedError</span>, <span class="ruby-node">&quot;#{self.class}##{name} is not supported by this driver&quot;</span>
+414:       <span class="ruby-keyword kw">end</span>
+415:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="assert-is-element-method" class="method-detail ">
+				<a name="method-i-assert_is_element"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">assert_is_element</span><span
+						class="method-args">(obj)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="assert-is-element-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 417</span>
+417:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">assert_is_element</span>(<span class="ruby-identifier">obj</span>)
+418:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">obj</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Watir</span><span class="ruby-operator">::</span><span class="ruby-constant">Element</span>
+419:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;execpted Watir::Element, got #{obj.inspect}:#{obj.class}&quot;</span>
+420:       <span class="ruby-keyword kw">end</span>
+421:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="assert-writable-method" class="method-detail ">
+				<a name="method-i-assert_writable"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">assert_writable</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="assert-writable-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 406</span>
+406:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">assert_writable</span>
+407:       <span class="ruby-identifier">assert_enabled</span>
+408:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ObjectReadOnlyException</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:readonly?</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">readonly?</span>
+409:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="attribute--method" class="method-detail ">
+				<a name="method-i-attribute%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">attribute?</span><span
+						class="method-args">(attribute)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="attribute--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 397</span>
+397:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">attribute?</span>(<span class="ruby-identifier">attribute</span>)
+398:       <span class="ruby-identifier">assert_exists</span>
+399:       <span class="ruby-operator">!</span><span class="ruby-operator">!</span><span class="ruby-identifier">execute_atom</span>(<span class="ruby-value">:getAttribute</span>, <span class="ruby-ivar">@element</span>, <span class="ruby-identifier">attribute</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">downcase</span>)
+400:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="locator-class-method" class="method-detail ">
+				<a name="method-i-locator_class"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">locator_class</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="locator-class-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 389</span>
+389:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">locator_class</span>
+390:       <span class="ruby-constant">ElementLocator</span>
+391:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="method-missing-method" class="method-detail ">
+				<a name="method-i-method_missing"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">method_missing</span><span
+						class="method-args">(meth, *args, &blk)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="method-missing-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 423</span>
+423:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">method_missing</span>(<span class="ruby-identifier">meth</span>, *<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">blk</span>)
+424:       <span class="ruby-identifier">method</span> = <span class="ruby-identifier">meth</span>.<span class="ruby-identifier">to_s</span>
+425:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">method</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^data_(.+)$/</span>
+426:         <span class="ruby-identifier">attribute_value</span>(<span class="ruby-identifier">method</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/_/</span>, <span class="ruby-value str">'-'</span>), *<span class="ruby-identifier">args</span>)
+427:       <span class="ruby-keyword kw">else</span>
+428:         <span class="ruby-keyword kw">super</span>
+429:       <span class="ruby-keyword kw">end</span>
+430:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="selector-string-method" class="method-detail ">
+				<a name="method-i-selector_string"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">selector_string</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="selector-string-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/elements/element.rb, line 393</span>
+393:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">selector_string</span>
+394:       <span class="ruby-ivar">@selector</span>.<span class="ruby-identifier">inspect</span>
+395:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

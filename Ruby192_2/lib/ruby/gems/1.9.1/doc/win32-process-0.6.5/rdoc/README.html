@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>File: README [win32-process-0.6.5 Documentation]</title>
+
+	<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+</head>
+
+<body class="file">
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="./CHANGES.html">CHANGES</a></li>
+				
+					<li class="file"><a href="./MANIFEST.html">MANIFEST</a></li>
+				
+					<li class="file"><a href="./README.html">README</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./Process.html">Process</a></li>
+				
+					<li><a href="./Process/Error.html">Process::Error</a></li>
+				
+					<li><a href="./Kernel.html">Kernel</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1>Description</h1>
+<pre>
+  This library provides the fork, wait, wait2, waitpid, and waitpid2 methods
+  for MS Windows. In addition, it provides a different implementation of the
+  kill method, a proper implementation of Process.ppid, and decent analogues
+  of Process.getpriority, Process.setpriority, Process.getrlimit and
+  Process.setrlimit.
+</pre>
+<h1>Prerequisites</h1>
+<pre>
+  * windows-pr
+  * sys-proctable (dev only)
+  * test-unit 2 (dev only)
+</pre>
+<h1>Supported Platforms</h1>
+<pre>
+  This library is supported on Windows 2000 or later.
+</pre>
+<h1>Installation</h1>
+<pre>
+  gem install win32-process
+</pre>
+<h1>Synopsis</h1>
+<pre>
+  require 'win32/process'
+
+  Process.fork{
+    3.times{
+      puts 'In the child'
+      sleep 1
+    }
+  }
+
+  Process.wait
+  puts 'Done'
+        
+</pre>
+<h1>Developer&#8217;s Notes</h1>
+<h2>The <a href="Process.html#method-i-fork">Process.fork</a> and <a href="Process.html#method-i-wait">Process.wait</a> methods</h2>
+<pre>
+   The fork method is emulated on Windows by spawning another Ruby process
+   against $PROGRAM_NAME via the CreateProcess() Win32 API function. It will
+   use its parent's environment and starting directory.
+        
+   The various wait methods are a wrapper for the WaitForSingleObject() or
+   WaitForMultipleObjects() Win32 API functions, for the wait* and waitpid*
+   methods, respectively.  In the case of wait2 and waitpid2, the exit value
+   is returned via the GetExitCodeProcess() Win32API function.
+        
+   For now the waitpid and waitpid2 calls do not accept a second argument.
+   That's because we haven't yet determined if there's a signal we should
+   allow to be sent.
+
+   IMPORTANT!   
+   Note that because fork is calling CreateProcess($PROGRAM_NAME), it will
+   start again from the top of the script instead of from the point of the
+   call. We will try to address this in a future release, if possible.
+        
+</pre>
+<h2>The <a href="Process.html#method-i-kill">Process.kill</a> method</h2>
+<pre>
+   Initially, the kill method will try to get a HANDLE on the PID using the
+   OpenProcess() function. If that succeeds, we know the process is running.
+
+   In the event of signal 2 or signal 3, the GenerateConsoleCtrlEvent()
+   function is used to send a signal to that process. These will not kill
+   GUI processes. It will not (currently) send a signal to remote
+   processes.
+
+   In the event of signal 1 or 4-8, the CreateRemoteThread() function is used
+   after the HANDLE's process has been identified to create a thread
+   within that process. The ExitProcess() function is then sent to that
+   thread.
+
+   In the event of signal 9, the TerminateProcess() function is called. This
+   will almost certainly kill the process, but doesn't give the process a
+   chance to necessarily do any cleanup it might otherwise do.
+   
+</pre>
+<h2>The <a href="Process.html#method-i-ppid">Process.ppid</a> method</h2>
+<pre>
+   In MRI the Process.ppid always returns 0 on MS Windows. With this library
+   it returns the actual parent pid.
+</pre>
+<h2>Differences between Ruby&#8217;s kill and the Win32 Utils kill</h2>
+<pre>
+   Ruby does not currently use the CreateRemoteThread() + ExitProcess()
+   approach which is, according to everything I've read, a cleaner approach.
+   This includes not only online research but also Jeffrey Richter's
+   &quot;Advanced Windows Programming, 3rd Edition.&quot;
+        
+   Also, the way Process.kill handles multiple pids works slightly differently
+   (and better IMHO) in the Win32 Utils version than the way Ruby currently
+   provides.
+
+   The reason Process.kill was originally added, in case anyone cares for
+   historical trivia, is that Ruby 1.6.x did not support Process.kill on
+   Windows at all.
+        
+</pre>
+<h1>Notes</h1>
+<pre>
+  It is unlikely you will be able to kill system processes with this module.
+  It's probably better that you don't.
+        
+</pre>
+<h1>Known Bugs    </h1>
+<pre>
+  None known (though please see the +Details+ section for quirks).  Any
+  bugs should be reported on the project page at
+  http://rubyforge.org/projects/win32utils.
+        
+</pre>
+<h1>Future Plans  </h1>
+<pre>
+  Train Process.fork to execute from the point of the call rather than the
+  top of the script (if possible).
+        
+  Other suggestions welcome.
+        
+</pre>
+<h1>License</h1>
+<pre>
+  Artistic 2.0
+        
+</pre>
+<h1>Copyright</h1>
+<pre>
+  (C) 2003-2011 Daniel J. Berger
+  All Rights Reserved
+                
+</pre>
+<h1>Warranty</h1>
+<pre>
+  This library is provided &quot;as is&quot; and without any express or
+  implied warranties, including, without limitation, the implied
+  warranties of merchantability and fitness for a particular purpose.
+        
+</pre>
+<h1>Author(s)</h1>
+<pre>
+  Park Heesob   
+  Daniel J. Berger</pre>
+
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+</body>
+</html>
+

@@ -1,0 +1,23 @@
+Wed, 11 Jul 2012 23:51:40 -0700
+lib/hoe/clean.rb	Wed, 11 Jul 2012 23:50:01 -0700
+lib/hoe/compiler.rb	Wed, 11 Jul 2012 23:50:01 -0700
+lib/hoe/debug.rb	Wed, 11 Jul 2012 23:50:01 -0700
+lib/hoe/deps.rb	Wed, 11 Jul 2012 23:50:01 -0700
+lib/hoe/flay.rb	Wed, 11 Jul 2012 23:50:01 -0700
+lib/hoe/flog.rb	Wed, 11 Jul 2012 23:50:01 -0700
+lib/hoe/gemcutter.rb	Wed, 11 Jul 2012 23:50:01 -0700
+lib/hoe/gem_prelude_sucks.rb	Wed, 11 Jul 2012 23:50:01 -0700
+lib/hoe/inline.rb	Wed, 11 Jul 2012 23:50:01 -0700
+lib/hoe/newb.rb	Wed, 11 Jul 2012 23:50:01 -0700
+lib/hoe/package.rb	Wed, 11 Jul 2012 23:50:01 -0700
+lib/hoe/publish.rb	Wed, 11 Jul 2012 23:50:01 -0700
+lib/hoe/racc.rb	Wed, 11 Jul 2012 23:50:01 -0700
+lib/hoe/rake.rb	Wed, 11 Jul 2012 23:50:01 -0700
+lib/hoe/rcov.rb	Wed, 11 Jul 2012 23:50:01 -0700
+lib/hoe/rubyforge.rb	Wed, 11 Jul 2012 23:50:01 -0700
+lib/hoe/signing.rb	Wed, 11 Jul 2012 23:50:01 -0700
+lib/hoe/test.rb	Wed, 11 Jul 2012 23:50:01 -0700
+lib/hoe.rb	Wed, 11 Jul 2012 23:50:01 -0700
+History.txt	Wed, 11 Jul 2012 23:50:01 -0700
+Manifest.txt	Wed, 11 Jul 2012 23:50:01 -0700
+README.txt	Wed, 11 Jul 2012 23:50:01 -0700

@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Watir::Table</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/watir-classic/table_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/watir-classic/table.rb">lib/watir-classic/table.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="Element.html">Watir::Element</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-column_count">#column_count</a></li>
+					
+					<li><a href="#method-i-column_values">#column_values</a></li>
+					
+					<li><a href="#method-i-hashes">#hashes</a></li>
+					
+					<li><a href="#method-i-highlight">#highlight</a></li>
+					
+					<li><a href="#method-i-row_count">#row_count</a></li>
+					
+					<li><a href="#method-i-row_values">#row_values</a></li>
+					
+					<li><a href="#method-i-table_string_creator">#table_string_creator</a></li>
+					
+					<li><a href="#method-i-to_s">#to_s</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+			<div id="includes-section" class="section">
+				<h3 class="section-header">Included Modules</h3>
+				<ul class="link-list">
+				
+				
+					<li><span class="include">TableContainer</span></li>
+				
+				
+				
+					<li><span class="include">TableRowsContainer</span></li>
+				
+				
+				
+					<li><span class="include">TableCellsContainer</span></li>
+				
+				
+				</ul>
+			</div>
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Watir.html">Watir</a></li>
+				
+					<li><a href="../Watir/Area.html">Watir::Area</a></li>
+				
+					<li><a href="../Watir/Assertions.html">Watir::Assertions</a></li>
+				
+					<li><a href="../Watir/Audio.html">Watir::Audio</a></li>
+				
+					<li><a href="../Watir/Base.html">Watir::Base</a></li>
+				
+					<li><a href="../Watir/Browser.html">Watir::Browser</a></li>
+				
+					<li><a href="../Watir/Button.html">Watir::Button</a></li>
+				
+					<li><a href="../Watir/CheckBox.html">Watir::CheckBox</a></li>
+				
+					<li><a href="../Watir/Command.html">Watir::Command</a></li>
+				
+					<li><a href="../Watir/Container.html">Watir::Container</a></li>
+				
+					<li><a href="../Watir/Cookies.html">Watir::Cookies</a></li>
+				
+					<li><a href="../Watir/Data.html">Watir::Data</a></li>
+				
+					<li><a href="../Watir/DefaultLogger.html">Watir::DefaultLogger</a></li>
+				
+					<li><a href="../Watir/DragAndDropHelper.html">Watir::DragAndDropHelper</a></li>
+				
+					<li><a href="../Watir/Element.html">Watir::Element</a></li>
+				
+					<li><a href="../Watir/ElementCollection.html">Watir::ElementCollection</a></li>
+				
+					<li><a href="../Watir/ElementExtensions.html">Watir::ElementExtensions</a></li>
+				
+					<li><a href="../Watir/ElementExtensions/WhenPresentDecorator.html">Watir::ElementExtensions::WhenPresentDecorator</a></li>
+				
+					<li><a href="../Watir/Embed.html">Watir::Embed</a></li>
+				
+					<li><a href="../Watir/Exception.html">Watir::Exception</a></li>
+				
+					<li><a href="../Watir/Exception/FrameAccessDeniedException.html">Watir::Exception::FrameAccessDeniedException</a></li>
+				
+					<li><a href="../Watir/Exception/MissingWayOfFindingObjectException.html">Watir::Exception::MissingWayOfFindingObjectException</a></li>
+				
+					<li><a href="../Watir/Exception/NavigationException.html">Watir::Exception::NavigationException</a></li>
+				
+					<li><a href="../Watir/Exception/NoMatchingWindowFoundException.html">Watir::Exception::NoMatchingWindowFoundException</a></li>
+				
+					<li><a href="../Watir/Exception/NoStatusBarException.html">Watir::Exception::NoStatusBarException</a></li>
+				
+					<li><a href="../Watir/Exception/NoValueFoundException.html">Watir::Exception::NoValueFoundException</a></li>
+				
+					<li><a href="../Watir/Exception/ObjectDisabledException.html">Watir::Exception::ObjectDisabledException</a></li>
+				
+					<li><a href="../Watir/Exception/ObjectReadOnlyException.html">Watir::Exception::ObjectReadOnlyException</a></li>
+				
+					<li><a href="../Watir/Exception/TimeOutException.html">Watir::Exception::TimeOutException</a></li>
+				
+					<li><a href="../Watir/Exception/UnhandledEventException.html">Watir::Exception::UnhandledEventException</a></li>
+				
+					<li><a href="../Watir/Exception/UnknownCellException.html">Watir::Exception::UnknownCellException</a></li>
+				
+					<li><a href="../Watir/Exception/UnknownFormException.html">Watir::Exception::UnknownFormException</a></li>
+				
+					<li><a href="../Watir/Exception/UnknownFrameException.html">Watir::Exception::UnknownFrameException</a></li>
+				
+					<li><a href="../Watir/Exception/UnknownObjectException.html">Watir::Exception::UnknownObjectException</a></li>
+				
+					<li><a href="../Watir/Exception/WatirException.html">Watir::Exception::WatirException</a></li>
+				
+					<li><a href="../Watir/FieldSet.html">Watir::FieldSet</a></li>
+				
+					<li><a href="../Watir/FileField.html">Watir::FileField</a></li>
+				
+					<li><a href="../Watir/Font.html">Watir::Font</a></li>
+				
+					<li><a href="../Watir/Form.html">Watir::Form</a></li>
+				
+					<li><a href="../Watir/FormLocator.html">Watir::FormLocator</a></li>
+				
+					<li><a href="../Watir/Frame.html">Watir::Frame</a></li>
+				
+					<li><a href="../Watir/FrameLocator.html">Watir::FrameLocator</a></li>
+				
+					<li><a href="../Watir/HTMLElementCollection.html">Watir::HTMLElementCollection</a></li>
+				
+					<li><a href="../Watir/Hidden.html">Watir::Hidden</a></li>
+				
+					<li><a href="../Watir/IE.html">Watir::IE</a></li>
+				
+					<li><a href="../Watir/IE/Process.html">Watir::IE::Process</a></li>
+				
+					<li><a href="../Watir/Image.html">Watir::Image</a></li>
+				
+					<li><a href="../Watir/InputElementCollection.html">Watir::InputElementCollection</a></li>
+				
+					<li><a href="../Watir/InputElementLocator.html">Watir::InputElementLocator</a></li>
+				
+					<li><a href="../Watir/JavascriptDialog.html">Watir::JavascriptDialog</a></li>
+				
+					<li><a href="../Watir/Keygen.html">Watir::Keygen</a></li>
+				
+					<li><a href="../Watir/Label.html">Watir::Label</a></li>
+				
+					<li><a href="../Watir/Li.html">Watir::Li</a></li>
+				
+					<li><a href="../Watir/Link.html">Watir::Link</a></li>
+				
+					<li><a href="../Watir/Locator.html">Watir::Locator</a></li>
+				
+					<li><a href="../Watir/Map.html">Watir::Map</a></li>
+				
+					<li><a href="../Watir/Menu.html">Watir::Menu</a></li>
+				
+					<li><a href="../Watir/Meta.html">Watir::Meta</a></li>
+				
+					<li><a href="../Watir/Meter.html">Watir::Meter</a></li>
+				
+					<li><a href="../Watir/ModalDialog.html">Watir::ModalDialog</a></li>
+				
+					<li><a href="../Watir/Object.html">Watir::Object</a></li>
+				
+					<li><a href="../Watir/Optgroup.html">Watir::Optgroup</a></li>
+				
+					<li><a href="../Watir/Option.html">Watir::Option</a></li>
+				
+					<li><a href="../Watir/Output.html">Watir::Output</a></li>
+				
+					<li><a href="../Watir/PageContainer.html">Watir::PageContainer</a></li>
+				
+					<li><a href="../Watir/Param.html">Watir::Param</a></li>
+				
+					<li><a href="../Watir/Process.html">Watir::Process</a></li>
+				
+					<li><a href="../Watir/Progress.html">Watir::Progress</a></li>
+				
+					<li><a href="../Watir/Radio.html">Watir::Radio</a></li>
+				
+					<li><a href="../Watir/RadioCheckCommon.html">Watir::RadioCheckCommon</a></li>
+				
+					<li><a href="../Watir/ScreenCapture.html">Watir::ScreenCapture</a></li>
+				
+					<li><a href="../Watir/Script.html">Watir::Script</a></li>
+				
+					<li><a href="../Watir/SelectList.html">Watir::SelectList</a></li>
+				
+					<li><a href="../Watir/Source.html">Watir::Source</a></li>
+				
+					<li><a href="../Watir/Style.html">Watir::Style</a></li>
+				
+					<li><a href="../Watir/Table.html">Watir::Table</a></li>
+				
+					<li><a href="../Watir/TableCell.html">Watir::TableCell</a></li>
+				
+					<li><a href="../Watir/TableCellCollection.html">Watir::TableCellCollection</a></li>
+				
+					<li><a href="../Watir/TableCellsContainer.html">Watir::TableCellsContainer</a></li>
+				
+					<li><a href="../Watir/TableContainer.html">Watir::TableContainer</a></li>
+				
+					<li><a href="../Watir/TableElementCollection.html">Watir::TableElementCollection</a></li>
+				
+					<li><a href="../Watir/TableElementsContainer.html">Watir::TableElementsContainer</a></li>
+				
+					<li><a href="../Watir/TableRow.html">Watir::TableRow</a></li>
+				
+					<li><a href="../Watir/TableRowCollection.html">Watir::TableRowCollection</a></li>
+				
+					<li><a href="../Watir/TableRowsContainer.html">Watir::TableRowsContainer</a></li>
+				
+					<li><a href="../Watir/TableSection.html">Watir::TableSection</a></li>
+				
+					<li><a href="../Watir/TaggedElementLocator.html">Watir::TaggedElementLocator</a></li>
+				
+					<li><a href="../Watir/TestCase.html">Watir::TestCase</a></li>
+				
+					<li><a href="../Watir/TextField.html">Watir::TextField</a></li>
+				
+					<li><a href="../Watir/TimeKeeper.html">Watir::TimeKeeper</a></li>
+				
+					<li><a href="../Watir/Track.html">Watir::Track</a></li>
+				
+					<li><a href="../Watir/Util.html">Watir::Util</a></li>
+				
+					<li><a href="../Watir/Video.html">Watir::Video</a></li>
+				
+					<li><a href="../Watir/Wait.html">Watir::Wait</a></li>
+				
+					<li><a href="../Watir/Wait/TimeoutError.html">Watir::Wait::TimeoutError</a></li>
+				
+					<li><a href="../Watir/WaitHelper.html">Watir::WaitHelper</a></li>
+				
+					<li><a href="../Watir/Waiter.html">Watir::Waiter</a></li>
+				
+					<li><a href="../Watir/WatirLogger.html">Watir::WatirLogger</a></li>
+				
+					<li><a href="../Watir/WatirOptions.html">Watir::WatirOptions</a></li>
+				
+					<li><a href="../Watir/Win32.html">Watir::Win32</a></li>
+				
+					<li><a href="../Watir/Window.html">Watir::Window</a></li>
+				
+					<li><a href="../Watir/XpathLocator.html">Watir::XpathLocator</a></li>
+				
+					<li><a href="../Test.html">Test</a></li>
+				
+					<li><a href="../Test/Unit.html">Test::Unit</a></li>
+				
+					<li><a href="../Test/Unit/Assertions.html">Test::Unit::Assertions</a></li>
+				
+					<li><a href="../Readline.html">Readline</a></li>
+				
+					<li><a href="../Readline/History.html">Readline::History</a></li>
+				
+					<li><a href="../IEProcess.html">IEProcess</a></li>
+				
+					<li><a href="../Integer.html">Integer</a></li>
+				
+					<li><a href="../Object.html">Object</a></li>
+				
+					<li><a href="../PageCheckers.html">PageCheckers</a></li>
+				
+					<li><a href="../Regexp.html">Regexp</a></li>
+				
+					<li><a href="../String.html">String</a></li>
+				
+					<li><a href="../WinClicker.html">WinClicker</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Watir::Table</h1>
+
+		<div id="description">
+			<p>
+This class is used for dealing with tables. Normally a user would not need
+to create this object as it is returned by the Watir::Container#table
+method
+</p>
+<p>
+many of the methods available to this object are inherited from the <a
+href="Element.html">Element</a> class 
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="column-count-method" class="method-detail ">
+				<a name="method-i-column_count"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">column_count</span><span
+						class="method-args">(index=0)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+This method returns the number of columns in a row of the table. Raises an
+UnknownObjectException if the table doesn&#8217;t exist.
+</p>
+<pre>
+  * index         - the index of the row</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="column-count-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-classic/table.rb, line 130</span>
+130:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">column_count</span>(<span class="ruby-identifier">index</span>=<span class="ruby-value">0</span>)
+131:       <span class="ruby-identifier">assert_exists</span>
+132:       <span class="ruby-identifier">rows</span>[<span class="ruby-identifier">index</span>].<span class="ruby-identifier">cells</span>.<span class="ruby-identifier">length</span>
+133:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="column-values-method" class="method-detail ">
+				<a name="method-i-column_values"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">column_values</span><span
+						class="method-args">(columnnumber)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns an array containing all the text values in the specified column
+Raises an UnknownCellException if the specified column does not exist in
+every Raises an UnknownObjectException if the table doesn&#8217;t exist.
+row of the table
+</p>
+<pre>
+  * columnnumber  - column index to extract values from</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="column-values-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-classic/table.rb, line 140</span>
+140:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">column_values</span>(<span class="ruby-identifier">columnnumber</span>)
+141:       <span class="ruby-keyword kw">return</span> (<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-identifier">row_count</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>).<span class="ruby-identifier">collect</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">i</span>][<span class="ruby-identifier">columnnumber</span>].<span class="ruby-identifier">text</span>}
+142:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="hashes-method" class="method-detail ">
+				<a name="method-i-hashes"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">hashes</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="hashes-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-classic/table.rb, line 151</span>
+151:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">hashes</span>
+152:       <span class="ruby-identifier">assert_exists</span>
+153: 
+154:       <span class="ruby-identifier">headers</span> = []
+155:       <span class="ruby-ivar">@o</span>.<span class="ruby-identifier">rows</span>.<span class="ruby-identifier">item</span>(<span class="ruby-value">0</span>).<span class="ruby-identifier">cells</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">cell</span><span class="ruby-operator">|</span>
+156:         <span class="ruby-identifier">headers</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-constant">TableCell</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-value">:ole_object</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">cell</span>).<span class="ruby-identifier">text</span>
+157:       <span class="ruby-keyword kw">end</span>
+158: 
+159:       <span class="ruby-identifier">rows_memo</span> = []
+160:       <span class="ruby-identifier">i</span> = <span class="ruby-value">0</span>
+161:       <span class="ruby-ivar">@o</span>.<span class="ruby-identifier">rows</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">row</span><span class="ruby-operator">|</span>
+162:         <span class="ruby-keyword kw">next</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">row</span>.<span class="ruby-identifier">uniqueID</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@o</span>.<span class="ruby-identifier">rows</span>.<span class="ruby-identifier">item</span>(<span class="ruby-value">0</span>).<span class="ruby-identifier">uniqueID</span>
+163: 
+164:         <span class="ruby-identifier">cells_memo</span> = {}
+165:         <span class="ruby-identifier">cells</span> = <span class="ruby-identifier">row</span>.<span class="ruby-identifier">cells</span>
+166:         <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;row at index #{i} has #{cells.length} cells, expected #{headers.length}&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">cells</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">headers</span>.<span class="ruby-identifier">length</span>
+167: 
+168:         <span class="ruby-identifier">j</span> = <span class="ruby-value">0</span>
+169:         <span class="ruby-identifier">cells</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">cell</span><span class="ruby-operator">|</span>
+170:           <span class="ruby-identifier">cells_memo</span>[<span class="ruby-identifier">headers</span>[<span class="ruby-identifier">j</span>]] = <span class="ruby-constant">TableCell</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-value">:ole_object</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">cell</span>).<span class="ruby-identifier">text</span>
+171:           <span class="ruby-identifier">j</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+172:         <span class="ruby-keyword kw">end</span>
+173: 
+174:         <span class="ruby-identifier">rows_memo</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">cells_memo</span>
+175:         <span class="ruby-identifier">i</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+176:       <span class="ruby-keyword kw">end</span>
+177:       <span class="ruby-identifier">rows_memo</span>
+178:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="highlight-method" class="method-detail ">
+				<a name="method-i-highlight"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">highlight</span><span
+						class="method-args">(set_or_clear)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+override the highlight method, as if the tables rows are set to have a
+background color, this will override the table background color, and the
+normal flash method won&#8217;t work
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="highlight-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-classic/table.rb, line 78</span>
+ 78:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">highlight</span>(<span class="ruby-identifier">set_or_clear</span>)
+ 79:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">set_or_clear</span> <span class="ruby-operator">==</span> <span class="ruby-value">:set</span>
+ 80:         <span class="ruby-keyword kw">begin</span>
+ 81:           <span class="ruby-ivar">@original_border</span> = <span class="ruby-ivar">@o</span>.<span class="ruby-identifier">border</span>.<span class="ruby-identifier">to_i</span>
+ 82:           <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@o</span>.<span class="ruby-identifier">border</span>.<span class="ruby-identifier">to_i</span><span class="ruby-operator">==</span><span class="ruby-value">1</span>
+ 83:             <span class="ruby-ivar">@o</span>.<span class="ruby-identifier">border</span> = <span class="ruby-value">2</span>
+ 84:           <span class="ruby-keyword kw">else</span>
+ 85:             <span class="ruby-ivar">@o</span>.<span class="ruby-identifier">border</span> = <span class="ruby-value">1</span>
+ 86:           <span class="ruby-keyword kw">end</span>
+ 87:         <span class="ruby-keyword kw">rescue</span>
+ 88:           <span class="ruby-ivar">@original_border</span> = <span class="ruby-keyword kw">nil</span>
+ 89:         <span class="ruby-keyword kw">end</span>
+ 90:       <span class="ruby-keyword kw">else</span>
+ 91:         <span class="ruby-keyword kw">begin</span>
+ 92:           <span class="ruby-ivar">@o</span>.<span class="ruby-identifier">border</span>= <span class="ruby-ivar">@original_border</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@original_border</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">nil</span>
+ 93:           <span class="ruby-ivar">@original_border</span> = <span class="ruby-keyword kw">nil</span>
+ 94:         <span class="ruby-keyword kw">rescue</span>
+ 95:           <span class="ruby-comment cmt"># we could be here for a number of reasons...</span>
+ 96:         <span class="ruby-keyword kw">ensure</span>
+ 97:           <span class="ruby-ivar">@original_border</span> = <span class="ruby-keyword kw">nil</span>
+ 98:         <span class="ruby-keyword kw">end</span>
+ 99:       <span class="ruby-keyword kw">end</span>
+100:       <span class="ruby-keyword kw">super</span>
+101:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="row-count-method" class="method-detail ">
+				<a name="method-i-row_count"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">row_count</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the number of rows inside the table, including rows in nested
+tables.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="row-count-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-classic/table.rb, line 122</span>
+122:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">row_count</span>
+123:       <span class="ruby-identifier">assert_exists</span>
+124:       <span class="ruby-identifier">rows</span>.<span class="ruby-identifier">length</span>
+125:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="row-values-method" class="method-detail ">
+				<a name="method-i-row_values"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">row_values</span><span
+						class="method-args">(rownumber)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns an array containing all the text values in the specified row
+Raises an UnknownObjectException if the table doesn&#8217;t exist.
+</p>
+<pre>
+  * rownumber  - row index to extract values from</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="row-values-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-classic/table.rb, line 147</span>
+147:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">row_values</span>(<span class="ruby-identifier">rownumber</span>)
+148:       <span class="ruby-keyword kw">return</span> (<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-identifier">column_count</span>(<span class="ruby-identifier">rownumber</span>) <span class="ruby-operator">-</span> <span class="ruby-value">1</span>).<span class="ruby-identifier">collect</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">self</span>[<span class="ruby-identifier">rownumber</span>][<span class="ruby-identifier">i</span>].<span class="ruby-identifier">text</span>}
+149:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-s-method" class="method-detail ">
+				<a name="method-i-to_s"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_s</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+returns the properties of the object in a string raises an ObjectNotFound
+exception if the object cannot be found
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="to-s-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-classic/table.rb, line 114</span>
+114:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_s</span>
+115:       <span class="ruby-identifier">assert_exists</span>
+116:       <span class="ruby-identifier">r</span> = <span class="ruby-identifier">string_creator</span>
+117:       <span class="ruby-identifier">r</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">table_string_creator</span>
+118:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">r</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;\n&quot;</span>)
+119:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="table-string-creator-method" class="method-detail ">
+				<a name="method-i-table_string_creator"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">table_string_creator</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+this method is used to populate the properties in the <a
+href="Table.html#method-i-to_s">to_s</a> method
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="table-string-creator-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-classic/table.rb, line 104</span>
+104:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">table_string_creator</span>
+105:       <span class="ruby-identifier">n</span> = []
+106:       <span class="ruby-identifier">n</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;rows:&quot;</span>.<span class="ruby-identifier">ljust</span>(<span class="ruby-constant">TO_S_SIZE</span>) <span class="ruby-operator">+</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">row_count</span>.<span class="ruby-identifier">to_s</span>
+107:       <span class="ruby-identifier">n</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;cols:&quot;</span>.<span class="ruby-identifier">ljust</span>(<span class="ruby-constant">TO_S_SIZE</span>) <span class="ruby-operator">+</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">column_count</span>.<span class="ruby-identifier">to_s</span>
+108:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">n</span>
+109:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

@@ -1,0 +1,6 @@
+U:RDoc::AnyMethod[iI"described_class:EFI".RSpec::Core::ExampleGroup#described_class;FF:publico:RDoc::Markup::Document:@parts[o:RDoc::Markup::Paragraph;	[I"LReturns the class or module passed to the `describe` method (or alias).;FI"9Returns nil if the subject is not a class or module.;FI"@example;Fo:RDoc::Markup::Verbatim;	[I"	    ;FI"describe Thing do;FI"
+;FI"      ;FI"it "does something" do;FI"
+;FI"        ;FI"described_class == Thing;FI"
+;FI"      ;FI"end;FI"
+;FI"	    ;FI"end;F00[[I"(RSpec::Core::ExampleGroup#describes;Fo;;	[o;
+;	[I"@private;FI"();F

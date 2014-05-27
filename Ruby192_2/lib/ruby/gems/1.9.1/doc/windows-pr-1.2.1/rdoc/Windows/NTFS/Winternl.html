@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Windows::NTFS::Winternl</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/windows/ntfs/winternl_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/windows/ntfs/winternl.rb">lib/windows/ntfs/winternl.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-GetFinalPathNameByHandle">#GetFinalPathNameByHandle</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+			<div id="includes-section" class="section">
+				<h3 class="section-header">Included Modules</h3>
+				<ul class="link-list">
+				
+				
+					<li><a class="include" href="../Handle.html">Windows::Handle</a></li>
+				
+				
+				
+					<li><a class="include" href="../Unicode.html">Windows::Unicode</a></li>
+				
+				
+				
+					<li><a class="include" href="../Volume.html">Windows::Volume</a></li>
+				
+				
+				</ul>
+			</div>
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../../CHANGES.html">CHANGES</a></li>
+				
+					<li class="file"><a href="../../MANIFEST.html">MANIFEST</a></li>
+				
+					<li class="file"><a href="../../README.html">README</a></li>
+				
+					<li class="file"><a href="../../doc/conversion_guide_txt.html">conversion_guide.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../Windows.html">Windows</a></li>
+				
+					<li><a href="../../Windows/COM.html">Windows::COM</a></li>
+				
+					<li><a href="../../Windows/COM/Accessibility.html">Windows::COM::Accessibility</a></li>
+				
+					<li><a href="../../Windows/COM/Automation.html">Windows::COM::Automation</a></li>
+				
+					<li><a href="../../Windows/COM/Variant.html">Windows::COM::Variant</a></li>
+				
+					<li><a href="../../Windows/Clipboard.html">Windows::Clipboard</a></li>
+				
+					<li><a href="../../Windows/Console.html">Windows::Console</a></li>
+				
+					<li><a href="../../Windows/Debug.html">Windows::Debug</a></li>
+				
+					<li><a href="../../Windows/DeviceIO.html">Windows::DeviceIO</a></li>
+				
+					<li><a href="../../Windows/Directory.html">Windows::Directory</a></li>
+				
+					<li><a href="../../Windows/Error.html">Windows::Error</a></li>
+				
+					<li><a href="../../Windows/EventLog.html">Windows::EventLog</a></li>
+				
+					<li><a href="../../Windows/File.html">Windows::File</a></li>
+				
+					<li><a href="../../Windows/FileMapping.html">Windows::FileMapping</a></li>
+				
+					<li><a href="../../Windows/FileSystem.html">Windows::FileSystem</a></li>
+				
+					<li><a href="../../Windows/GDI.html">Windows::GDI</a></li>
+				
+					<li><a href="../../Windows/GDI/Bitmap.html">Windows::GDI::Bitmap</a></li>
+				
+					<li><a href="../../Windows/GDI/DeviceContext.html">Windows::GDI::DeviceContext</a></li>
+				
+					<li><a href="../../Windows/GDI/MetaFile.html">Windows::GDI::MetaFile</a></li>
+				
+					<li><a href="../../Windows/GDI/PaintingDrawing.html">Windows::GDI::PaintingDrawing</a></li>
+				
+					<li><a href="../../Windows/Handle.html">Windows::Handle</a></li>
+				
+					<li><a href="../../Windows/Library.html">Windows::Library</a></li>
+				
+					<li><a href="../../Windows/Limits.html">Windows::Limits</a></li>
+				
+					<li><a href="../../Windows/MSVCRT.html">Windows::MSVCRT</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/Buffer.html">Windows::MSVCRT::Buffer</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/Directory.html">Windows::MSVCRT::Directory</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/File.html">Windows::MSVCRT::File</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/IO.html">Windows::MSVCRT::IO</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/String.html">Windows::MSVCRT::String</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/Time.html">Windows::MSVCRT::Time</a></li>
+				
+					<li><a href="../../Windows/Mailslot.html">Windows::Mailslot</a></li>
+				
+					<li><a href="../../Windows/Memory.html">Windows::Memory</a></li>
+				
+					<li><a href="../../Windows/NIO.html">Windows::NIO</a></li>
+				
+					<li><a href="../../Windows/NTFS.html">Windows::NTFS</a></li>
+				
+					<li><a href="../../Windows/NTFS/Winternl.html">Windows::NTFS::Winternl</a></li>
+				
+					<li><a href="../../Windows/National.html">Windows::National</a></li>
+				
+					<li><a href="../../Windows/Network.html">Windows::Network</a></li>
+				
+					<li><a href="../../Windows/Network/Management.html">Windows::Network::Management</a></li>
+				
+					<li><a href="../../Windows/Network/SNMP.html">Windows::Network::SNMP</a></li>
+				
+					<li><a href="../../Windows/Network/Winsock.html">Windows::Network::Winsock</a></li>
+				
+					<li><a href="../../Windows/Path.html">Windows::Path</a></li>
+				
+					<li><a href="../../Windows/Pipe.html">Windows::Pipe</a></li>
+				
+					<li><a href="../../Windows/Process.html">Windows::Process</a></li>
+				
+					<li><a href="../../Windows/Registry.html">Windows::Registry</a></li>
+				
+					<li><a href="../../Windows/Security.html">Windows::Security</a></li>
+				
+					<li><a href="../../Windows/Security/Authentication.html">Windows::Security::Authentication</a></li>
+				
+					<li><a href="../../Windows/Service.html">Windows::Service</a></li>
+				
+					<li><a href="../../Windows/Shell.html">Windows::Shell</a></li>
+				
+					<li><a href="../../Windows/Socket.html">Windows::Socket</a></li>
+				
+					<li><a href="../../Windows/Sound.html">Windows::Sound</a></li>
+				
+					<li><a href="../../Windows/Synchronize.html">Windows::Synchronize</a></li>
+				
+					<li><a href="../../Windows/SystemInfo.html">Windows::SystemInfo</a></li>
+				
+					<li><a href="../../Windows/Thread.html">Windows::Thread</a></li>
+				
+					<li><a href="../../Windows/Time.html">Windows::Time</a></li>
+				
+					<li><a href="../../Windows/ToolHelper.html">Windows::ToolHelper</a></li>
+				
+					<li><a href="../../Windows/Unicode.html">Windows::Unicode</a></li>
+				
+					<li><a href="../../Windows/Volume.html">Windows::Volume</a></li>
+				
+					<li><a href="../../Windows/WSA.html">Windows::WSA</a></li>
+				
+					<li><a href="../../Windows/Window.html">Windows::Window</a></li>
+				
+					<li><a href="../../Windows/Window/Classes.html">Windows::Window::Classes</a></li>
+				
+					<li><a href="../../Windows/Window/Dialog.html">Windows::Window::Dialog</a></li>
+				
+					<li><a href="../../Windows/Window/Menu.html">Windows::Window::Menu</a></li>
+				
+					<li><a href="../../Windows/Window/Message.html">Windows::Window::Message</a></li>
+				
+					<li><a href="../../Windows/Window/Properties.html">Windows::Window::Properties</a></li>
+				
+					<li><a href="../../Windows/Window/Timer.html">Windows::Window::Timer</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Windows::NTFS::Winternl</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="FileAccessInformation">FileAccessInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileAlignmentInformation">FileAlignmentInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileAllInformation">FileAllInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileAllocationInformation">FileAllocationInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileAlternateNameInformation">FileAlternateNameInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileAttributeTagInformation">FileAttributeTagInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileBasicInformation">FileBasicInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileBothDirectoryInformation">FileBothDirectoryInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileCompletionInformation">FileCompletionInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileCompressionInformation">FileCompressionInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileDirectoryInformation">FileDirectoryInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileDispositionInformation">FileDispositionInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileEaInformation">FileEaInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileEndOfFileInformation">FileEndOfFileInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileFullDirectoryInformation">FileFullDirectoryInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileFullEaInformation">FileFullEaInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileHardLinkInformation">FileHardLinkInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileIdBothDirectoryInformation">FileIdBothDirectoryInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileIdFullDirectoryInformation">FileIdFullDirectoryInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileInternalInformation">FileInternalInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileLinkInformation">FileLinkInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileMailslotQueryInformation">FileMailslotQueryInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileMailslotSetInformation">FileMailslotSetInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileModeInformation">FileModeInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileMoveClusterInformation">FileMoveClusterInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileNameInformation">FileNameInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileNamesInformation">FileNamesInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileNetworkOpenInformation">FileNetworkOpenInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileObjectIdInformation">FileObjectIdInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FilePipeInformation">FilePipeInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FilePipeLocalInformation">FilePipeLocalInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FilePipeRemoteInformation">FilePipeRemoteInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FilePositionInformation">FilePositionInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileQuotaInformation">FileQuotaInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileRenameInformation">FileRenameInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileReparsePointInformation">FileReparsePointInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileShortNameInformation">FileShortNameInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileStandardInformation">FileStandardInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileStreamInformation">FileStreamInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileTrackingInformation">FileTrackingInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FileValidDataLengthInformation">FileValidDataLengthInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ObjectNameInformation">ObjectNameInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="STATUS_SUCCESS">STATUS_SUCCESS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="-et-inal-ath-ame-y-andle-method" class="method-detail ">
+				<a name="method-i-GetFinalPathNameByHandle"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">GetFinalPathNameByHandle</span><span
+						class="method-args">(handle, buffer, size, flags)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Simulates the <a
+href="Winternl.html#method-i-GetFinalPathNameByHandle">GetFinalPathNameByHandle</a>
+method. Note that the <tt>size</tt> and <tt>flags</tt> arguments are
+ignored, but are required for interface compatibility. The buffer is an
+in/out parameter.
+</p>
+<p>
+The <tt>size</tt> argument simply isn&#8217;t used internally and the
+<tt>flags</tt> argument is currently assumed to always be VOLUME_NAME_NT.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="-et-inal-ath-ame-y-andle-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/ntfs/winternl.rb, line 90</span>
+ 90:         <span class="ruby-keyword kw">def</span> <span class="ruby-constant">GetFinalPathNameByHandle</span>(<span class="ruby-identifier">handle</span>, <span class="ruby-identifier">buffer</span>, <span class="ruby-identifier">size</span>, <span class="ruby-identifier">flags</span>)
+ 91:           <span class="ruby-identifier">mpath</span> = <span class="ruby-value">1024</span>
+ 92:           <span class="ruby-identifier">hfile</span> = <span class="ruby-identifier">get_osfhandle</span>(<span class="ruby-identifier">handle</span>.<span class="ruby-identifier">fileno</span>)
+ 93: 
+ 94:           <span class="ruby-identifier">object_name_information</span> = <span class="ruby-value">0</span>.<span class="ruby-identifier">chr</span> * (<span class="ruby-value">8</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">mpath</span> * <span class="ruby-value">2</span>))
+ 95: 
+ 96:           <span class="ruby-identifier">status</span> = <span class="ruby-constant">NtQueryObject</span>(
+ 97:             <span class="ruby-identifier">hfile</span>,
+ 98:             <span class="ruby-constant">ObjectNameInformation</span>,
+ 99:             <span class="ruby-identifier">object_name_information</span>,
+100:             <span class="ruby-identifier">object_name_information</span>.<span class="ruby-identifier">size</span>,
+101:             <span class="ruby-value">0</span>
+102:           )
+103: 
+104:           <span class="ruby-identifier">buffer</span>.<span class="ruby-identifier">replace</span>(<span class="ruby-identifier">wide_to_multi</span>(<span class="ruby-identifier">object_name_information</span>[<span class="ruby-value">8</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>]))
+105:           <span class="ruby-identifier">buffer</span>.<span class="ruby-identifier">size</span>
+106:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

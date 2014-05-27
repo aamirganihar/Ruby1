@@ -1,0 +1,3633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Windows::Network::Management</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/windows/network/management_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/windows/network/management.rb">lib/windows/network/management.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-GetNetScheduleAccountInformation">#GetNetScheduleAccountInformation</a></li>
+					
+					<li><a href="#method-i-NetAlertRaise">#NetAlertRaise</a></li>
+					
+					<li><a href="#method-i-NetAlertRaiseEx">#NetAlertRaiseEx</a></li>
+					
+					<li><a href="#method-i-NetApiBufferAllocate">#NetApiBufferAllocate</a></li>
+					
+					<li><a href="#method-i-NetApiBufferFree">#NetApiBufferFree</a></li>
+					
+					<li><a href="#method-i-NetApiBufferReallocate">#NetApiBufferReallocate</a></li>
+					
+					<li><a href="#method-i-NetApiBufferSize">#NetApiBufferSize</a></li>
+					
+					<li><a href="#method-i-NetGetAnyDCName">#NetGetAnyDCName</a></li>
+					
+					<li><a href="#method-i-NetGetDCName">#NetGetDCName</a></li>
+					
+					<li><a href="#method-i-NetGetDisplayInformationIndex">#NetGetDisplayInformationIndex</a></li>
+					
+					<li><a href="#method-i-NetGetJoinInformation">#NetGetJoinInformation</a></li>
+					
+					<li><a href="#method-i-NetGetJoinableOUs">#NetGetJoinableOUs</a></li>
+					
+					<li><a href="#method-i-NetGroupAdd">#NetGroupAdd</a></li>
+					
+					<li><a href="#method-i-NetGroupAddUser">#NetGroupAddUser</a></li>
+					
+					<li><a href="#method-i-NetGroupDel">#NetGroupDel</a></li>
+					
+					<li><a href="#method-i-NetGroupDelUser">#NetGroupDelUser</a></li>
+					
+					<li><a href="#method-i-NetGroupEnum">#NetGroupEnum</a></li>
+					
+					<li><a href="#method-i-NetGroupGetInfo">#NetGroupGetInfo</a></li>
+					
+					<li><a href="#method-i-NetGroupGetUsers">#NetGroupGetUsers</a></li>
+					
+					<li><a href="#method-i-NetGroupSetInfo">#NetGroupSetInfo</a></li>
+					
+					<li><a href="#method-i-NetGroupSetUsers">#NetGroupSetUsers</a></li>
+					
+					<li><a href="#method-i-NetJoinDomain">#NetJoinDomain</a></li>
+					
+					<li><a href="#method-i-NetLocalGroupAdd">#NetLocalGroupAdd</a></li>
+					
+					<li><a href="#method-i-NetLocalGroupAddMembers">#NetLocalGroupAddMembers</a></li>
+					
+					<li><a href="#method-i-NetLocalGroupDel">#NetLocalGroupDel</a></li>
+					
+					<li><a href="#method-i-NetLocalGroupDelMembers">#NetLocalGroupDelMembers</a></li>
+					
+					<li><a href="#method-i-NetLocalGroupEnum">#NetLocalGroupEnum</a></li>
+					
+					<li><a href="#method-i-NetLocalGroupGetInfo">#NetLocalGroupGetInfo</a></li>
+					
+					<li><a href="#method-i-NetLocalGroupGetMembers">#NetLocalGroupGetMembers</a></li>
+					
+					<li><a href="#method-i-NetLocalGroupSetInfo">#NetLocalGroupSetInfo</a></li>
+					
+					<li><a href="#method-i-NetLocalGroupSetMembers">#NetLocalGroupSetMembers</a></li>
+					
+					<li><a href="#method-i-NetMessageBufferSend">#NetMessageBufferSend</a></li>
+					
+					<li><a href="#method-i-NetMessageNameAdd">#NetMessageNameAdd</a></li>
+					
+					<li><a href="#method-i-NetMessageNameDel">#NetMessageNameDel</a></li>
+					
+					<li><a href="#method-i-NetMessageNameEnum">#NetMessageNameEnum</a></li>
+					
+					<li><a href="#method-i-NetMessageNameGetInfo">#NetMessageNameGetInfo</a></li>
+					
+					<li><a href="#method-i-NetQueryDisplayInformation">#NetQueryDisplayInformation</a></li>
+					
+					<li><a href="#method-i-NetRemoteComputerSupports">#NetRemoteComputerSupports</a></li>
+					
+					<li><a href="#method-i-NetRemoteTOD">#NetRemoteTOD</a></li>
+					
+					<li><a href="#method-i-NetRenameMachineInDomain">#NetRenameMachineInDomain</a></li>
+					
+					<li><a href="#method-i-NetScheduleJobAdd">#NetScheduleJobAdd</a></li>
+					
+					<li><a href="#method-i-NetScheduleJobDel">#NetScheduleJobDel</a></li>
+					
+					<li><a href="#method-i-NetScheduleJobEnum">#NetScheduleJobEnum</a></li>
+					
+					<li><a href="#method-i-NetScheduleJobGetInfo">#NetScheduleJobGetInfo</a></li>
+					
+					<li><a href="#method-i-NetServerComputerNameAdd">#NetServerComputerNameAdd</a></li>
+					
+					<li><a href="#method-i-NetServerComputerNameDel">#NetServerComputerNameDel</a></li>
+					
+					<li><a href="#method-i-NetServerDiskEnum">#NetServerDiskEnum</a></li>
+					
+					<li><a href="#method-i-NetServerEnum">#NetServerEnum</a></li>
+					
+					<li><a href="#method-i-NetServerGetInfo">#NetServerGetInfo</a></li>
+					
+					<li><a href="#method-i-NetServerSetInfo">#NetServerSetInfo</a></li>
+					
+					<li><a href="#method-i-NetServerTransportAdd">#NetServerTransportAdd</a></li>
+					
+					<li><a href="#method-i-NetServerTransportAddEx">#NetServerTransportAddEx</a></li>
+					
+					<li><a href="#method-i-NetServerTransportDel">#NetServerTransportDel</a></li>
+					
+					<li><a href="#method-i-NetServerTransportEnum">#NetServerTransportEnum</a></li>
+					
+					<li><a href="#method-i-NetUnjoinDomain">#NetUnjoinDomain</a></li>
+					
+					<li><a href="#method-i-NetUseAdd">#NetUseAdd</a></li>
+					
+					<li><a href="#method-i-NetUseDel">#NetUseDel</a></li>
+					
+					<li><a href="#method-i-NetUseEnum">#NetUseEnum</a></li>
+					
+					<li><a href="#method-i-NetUseGetInfo">#NetUseGetInfo</a></li>
+					
+					<li><a href="#method-i-NetUserAdd">#NetUserAdd</a></li>
+					
+					<li><a href="#method-i-NetUserChangePassword">#NetUserChangePassword</a></li>
+					
+					<li><a href="#method-i-NetUserDel">#NetUserDel</a></li>
+					
+					<li><a href="#method-i-NetUserEnum">#NetUserEnum</a></li>
+					
+					<li><a href="#method-i-NetUserGetGroups">#NetUserGetGroups</a></li>
+					
+					<li><a href="#method-i-NetUserGetInfo">#NetUserGetInfo</a></li>
+					
+					<li><a href="#method-i-NetUserGetLocalGroups">#NetUserGetLocalGroups</a></li>
+					
+					<li><a href="#method-i-NetUserModalsGet">#NetUserModalsGet</a></li>
+					
+					<li><a href="#method-i-NetUserModalsSet">#NetUserModalsSet</a></li>
+					
+					<li><a href="#method-i-NetUserSetGroups">#NetUserSetGroups</a></li>
+					
+					<li><a href="#method-i-NetUserSetInfo">#NetUserSetInfo</a></li>
+					
+					<li><a href="#method-i-NetValidateName">#NetValidateName</a></li>
+					
+					<li><a href="#method-i-NetWkstaGetInfo">#NetWkstaGetInfo</a></li>
+					
+					<li><a href="#method-i-NetWkstaSetInfo">#NetWkstaSetInfo</a></li>
+					
+					<li><a href="#method-i-NetWkstaTransportAdd">#NetWkstaTransportAdd</a></li>
+					
+					<li><a href="#method-i-NetWkstaTransportDel">#NetWkstaTransportDel</a></li>
+					
+					<li><a href="#method-i-NetWkstaTransportEnum">#NetWkstaTransportEnum</a></li>
+					
+					<li><a href="#method-i-NetWkstaUserEnum">#NetWkstaUserEnum</a></li>
+					
+					<li><a href="#method-i-NetWkstaUserGetInfo">#NetWkstaUserGetInfo</a></li>
+					
+					<li><a href="#method-i-NetWkstaUserSetInfo">#NetWkstaUserSetInfo</a></li>
+					
+					<li><a href="#method-i-SetNetScheduleAccountInformation">#SetNetScheduleAccountInformation</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../../CHANGES.html">CHANGES</a></li>
+				
+					<li class="file"><a href="../../MANIFEST.html">MANIFEST</a></li>
+				
+					<li class="file"><a href="../../README.html">README</a></li>
+				
+					<li class="file"><a href="../../doc/conversion_guide_txt.html">conversion_guide.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../Windows.html">Windows</a></li>
+				
+					<li><a href="../../Windows/COM.html">Windows::COM</a></li>
+				
+					<li><a href="../../Windows/COM/Accessibility.html">Windows::COM::Accessibility</a></li>
+				
+					<li><a href="../../Windows/COM/Automation.html">Windows::COM::Automation</a></li>
+				
+					<li><a href="../../Windows/COM/Variant.html">Windows::COM::Variant</a></li>
+				
+					<li><a href="../../Windows/Clipboard.html">Windows::Clipboard</a></li>
+				
+					<li><a href="../../Windows/Console.html">Windows::Console</a></li>
+				
+					<li><a href="../../Windows/Debug.html">Windows::Debug</a></li>
+				
+					<li><a href="../../Windows/DeviceIO.html">Windows::DeviceIO</a></li>
+				
+					<li><a href="../../Windows/Directory.html">Windows::Directory</a></li>
+				
+					<li><a href="../../Windows/Error.html">Windows::Error</a></li>
+				
+					<li><a href="../../Windows/EventLog.html">Windows::EventLog</a></li>
+				
+					<li><a href="../../Windows/File.html">Windows::File</a></li>
+				
+					<li><a href="../../Windows/FileMapping.html">Windows::FileMapping</a></li>
+				
+					<li><a href="../../Windows/FileSystem.html">Windows::FileSystem</a></li>
+				
+					<li><a href="../../Windows/GDI.html">Windows::GDI</a></li>
+				
+					<li><a href="../../Windows/GDI/Bitmap.html">Windows::GDI::Bitmap</a></li>
+				
+					<li><a href="../../Windows/GDI/DeviceContext.html">Windows::GDI::DeviceContext</a></li>
+				
+					<li><a href="../../Windows/GDI/MetaFile.html">Windows::GDI::MetaFile</a></li>
+				
+					<li><a href="../../Windows/GDI/PaintingDrawing.html">Windows::GDI::PaintingDrawing</a></li>
+				
+					<li><a href="../../Windows/Handle.html">Windows::Handle</a></li>
+				
+					<li><a href="../../Windows/Library.html">Windows::Library</a></li>
+				
+					<li><a href="../../Windows/Limits.html">Windows::Limits</a></li>
+				
+					<li><a href="../../Windows/MSVCRT.html">Windows::MSVCRT</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/Buffer.html">Windows::MSVCRT::Buffer</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/Directory.html">Windows::MSVCRT::Directory</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/File.html">Windows::MSVCRT::File</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/IO.html">Windows::MSVCRT::IO</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/String.html">Windows::MSVCRT::String</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/Time.html">Windows::MSVCRT::Time</a></li>
+				
+					<li><a href="../../Windows/Mailslot.html">Windows::Mailslot</a></li>
+				
+					<li><a href="../../Windows/Memory.html">Windows::Memory</a></li>
+				
+					<li><a href="../../Windows/NIO.html">Windows::NIO</a></li>
+				
+					<li><a href="../../Windows/NTFS.html">Windows::NTFS</a></li>
+				
+					<li><a href="../../Windows/NTFS/Winternl.html">Windows::NTFS::Winternl</a></li>
+				
+					<li><a href="../../Windows/National.html">Windows::National</a></li>
+				
+					<li><a href="../../Windows/Network.html">Windows::Network</a></li>
+				
+					<li><a href="../../Windows/Network/Management.html">Windows::Network::Management</a></li>
+				
+					<li><a href="../../Windows/Network/SNMP.html">Windows::Network::SNMP</a></li>
+				
+					<li><a href="../../Windows/Network/Winsock.html">Windows::Network::Winsock</a></li>
+				
+					<li><a href="../../Windows/Path.html">Windows::Path</a></li>
+				
+					<li><a href="../../Windows/Pipe.html">Windows::Pipe</a></li>
+				
+					<li><a href="../../Windows/Process.html">Windows::Process</a></li>
+				
+					<li><a href="../../Windows/Registry.html">Windows::Registry</a></li>
+				
+					<li><a href="../../Windows/Security.html">Windows::Security</a></li>
+				
+					<li><a href="../../Windows/Security/Authentication.html">Windows::Security::Authentication</a></li>
+				
+					<li><a href="../../Windows/Service.html">Windows::Service</a></li>
+				
+					<li><a href="../../Windows/Shell.html">Windows::Shell</a></li>
+				
+					<li><a href="../../Windows/Socket.html">Windows::Socket</a></li>
+				
+					<li><a href="../../Windows/Sound.html">Windows::Sound</a></li>
+				
+					<li><a href="../../Windows/Synchronize.html">Windows::Synchronize</a></li>
+				
+					<li><a href="../../Windows/SystemInfo.html">Windows::SystemInfo</a></li>
+				
+					<li><a href="../../Windows/Thread.html">Windows::Thread</a></li>
+				
+					<li><a href="../../Windows/Time.html">Windows::Time</a></li>
+				
+					<li><a href="../../Windows/ToolHelper.html">Windows::ToolHelper</a></li>
+				
+					<li><a href="../../Windows/Unicode.html">Windows::Unicode</a></li>
+				
+					<li><a href="../../Windows/Volume.html">Windows::Volume</a></li>
+				
+					<li><a href="../../Windows/WSA.html">Windows::WSA</a></li>
+				
+					<li><a href="../../Windows/Window.html">Windows::Window</a></li>
+				
+					<li><a href="../../Windows/Window/Classes.html">Windows::Window::Classes</a></li>
+				
+					<li><a href="../../Windows/Window/Dialog.html">Windows::Window::Dialog</a></li>
+				
+					<li><a href="../../Windows/Window/Menu.html">Windows::Window::Menu</a></li>
+				
+					<li><a href="../../Windows/Window/Message.html">Windows::Window::Message</a></li>
+				
+					<li><a href="../../Windows/Window/Properties.html">Windows::Window::Properties</a></li>
+				
+					<li><a href="../../Windows/Window/Timer.html">Windows::Window::Timer</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Windows::Network::Management</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="NERR_Success">NERR_Success</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_BASE">NERR_BASE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_NetNotStarted">NERR_NetNotStarted</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_UnknownServer">NERR_UnknownServer</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_ShareMem">NERR_ShareMem</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_NoNetworkResource">NERR_NoNetworkResource</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_RemoteOnly">NERR_RemoteOnly</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_DevNotRedirected">NERR_DevNotRedirected</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_AlreadyLoggedOn">NERR_AlreadyLoggedOn</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_NotLoggedOn">NERR_NotLoggedOn</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_BadUsername">NERR_BadUsername</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_BadPassword">NERR_BadPassword</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_UnableToAddName_W">NERR_UnableToAddName_W</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_UnableToAddName_F">NERR_UnableToAddName_F</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_UnableToDelName_W">NERR_UnableToDelName_W</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_UnableToDelName_F">NERR_UnableToDelName_F</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_LogonsPaused">NERR_LogonsPaused</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_LogonServerConflict">NERR_LogonServerConflict</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_LogonNoUserPath">NERR_LogonNoUserPath</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_LogonScriptError">NERR_LogonScriptError</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_StandaloneLogon">NERR_StandaloneLogon</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_LogonServerNotFound">NERR_LogonServerNotFound</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_LogonDomainExists">NERR_LogonDomainExists</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_NonValidatedLogon">NERR_NonValidatedLogon</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_ACFNotFound">NERR_ACFNotFound</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_GroupNotFound">NERR_GroupNotFound</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_UserNotFound">NERR_UserNotFound</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_ResourceNotFound">NERR_ResourceNotFound</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_GroupExists">NERR_GroupExists</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_UserExists">NERR_UserExists</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_ResourceExists">NERR_ResourceExists</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_NotPrimary">NERR_NotPrimary</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_ACFNotLoaded">NERR_ACFNotLoaded</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_ACFNoRoom">NERR_ACFNoRoom</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_ACFFileIOFail">NERR_ACFFileIOFail</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_ACFTooManyLists">NERR_ACFTooManyLists</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_UserLogon">NERR_UserLogon</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_ACFNoParent">NERR_ACFNoParent</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_CanNotGrowSegment">NERR_CanNotGrowSegment</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_SpeGroupOp">NERR_SpeGroupOp</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_NotInCache">NERR_NotInCache</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_UserInGroup">NERR_UserInGroup</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_UserNotInGroup">NERR_UserNotInGroup</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_AccountUndefined">NERR_AccountUndefined</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_AccountExpired">NERR_AccountExpired</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_InvalidWorkstation">NERR_InvalidWorkstation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_InvalidLogonHours">NERR_InvalidLogonHours</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_PasswordExpired">NERR_PasswordExpired</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_PasswordCantChange">NERR_PasswordCantChange</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_PasswordHistConflict">NERR_PasswordHistConflict</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_PasswordTooShort">NERR_PasswordTooShort</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_PasswordTooRecent">NERR_PasswordTooRecent</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_InvalidDatabase">NERR_InvalidDatabase</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_DatabaseUpToDate">NERR_DatabaseUpToDate</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_SyncRequired">NERR_SyncRequired</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_UseNotFound">NERR_UseNotFound</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_BadAsgType">NERR_BadAsgType</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NERR_DeviceIsShared">NERR_DeviceIsShared</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="MAX_PREFERRED_LENGTH">MAX_PREFERRED_LENGTH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SV_TYPE_WORKSTATION">SV_TYPE_WORKSTATION</a></dt>
+				
+				<dd class="description"><p>
+Taken from LMServer.h
+</p></dd>
+				
+			
+				<dt><a name="SV_TYPE_SERVER">SV_TYPE_SERVER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SV_TYPE_SQLSERVER">SV_TYPE_SQLSERVER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SV_TYPE_DOMAIN_CTRL">SV_TYPE_DOMAIN_CTRL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SV_TYPE_DOMAIN_BAKCTRL">SV_TYPE_DOMAIN_BAKCTRL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SV_TYPE_TIME_SOURCE">SV_TYPE_TIME_SOURCE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SV_TYPE_AFP">SV_TYPE_AFP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SV_TYPE_NOVELL">SV_TYPE_NOVELL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SV_TYPE_DOMAIN_MEMBER">SV_TYPE_DOMAIN_MEMBER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SV_TYPE_PRINTQ_SERVER">SV_TYPE_PRINTQ_SERVER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SV_TYPE_DIALIN_SERVER">SV_TYPE_DIALIN_SERVER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SV_TYPE_XENIX_SERVER">SV_TYPE_XENIX_SERVER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SV_TYPE_SERVER_UNIX">SV_TYPE_SERVER_UNIX</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SV_TYPE_NT">SV_TYPE_NT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SV_TYPE_WFW">SV_TYPE_WFW</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SV_TYPE_SERVER_MFPN">SV_TYPE_SERVER_MFPN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SV_TYPE_SERVER_NT">SV_TYPE_SERVER_NT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SV_TYPE_POTENTIAL_BROWSER">SV_TYPE_POTENTIAL_BROWSER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SV_TYPE_BACKUP_BROWSER">SV_TYPE_BACKUP_BROWSER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SV_TYPE_MASTER_BROWSER">SV_TYPE_MASTER_BROWSER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SV_TYPE_DOMAIN_MASTER">SV_TYPE_DOMAIN_MASTER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SV_TYPE_SERVER_OSF">SV_TYPE_SERVER_OSF</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SV_TYPE_SERVER_VMS">SV_TYPE_SERVER_VMS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SV_TYPE_WINDOWS">SV_TYPE_WINDOWS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SV_TYPE_DFS">SV_TYPE_DFS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SV_TYPE_CLUSTER_NT">SV_TYPE_CLUSTER_NT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SV_TYPE_TERMINALSERVER">SV_TYPE_TERMINALSERVER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SV_TYPE_CLUSTER_VS_NT">SV_TYPE_CLUSTER_VS_NT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SV_TYPE_DCE">SV_TYPE_DCE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SV_TYPE_ALTERNATE_XPORT">SV_TYPE_ALTERNATE_XPORT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SV_TYPE_LOCAL_LIST_ONLY">SV_TYPE_LOCAL_LIST_ONLY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SV_TYPE_DOMAIN_ENUM">SV_TYPE_DOMAIN_ENUM</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SV_TYPE_ALL">SV_TYPE_ALL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="-et-et-chedule-ccount-nformation-method" class="method-detail ">
+				<a name="method-i-GetNetScheduleAccountInformation"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">GetNetScheduleAccountInformation</span><span
+						class="method-args">(server, num_chars, chars)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-et-chedule-ccount-nformation-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 513</span>
+513:         <span class="ruby-keyword kw">def</span> <span class="ruby-constant">GetNetScheduleAccountInformation</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">num_chars</span>, <span class="ruby-identifier">chars</span>)
+514:           <span class="ruby-constant">GetNetScheduleAccountInformation</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">num_chars</span>, <span class="ruby-identifier">chars</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+515:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-lert-aise-method" class="method-detail ">
+				<a name="method-i-NetAlertRaise"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetAlertRaise</span><span
+						class="method-args">(name, buf, bufsize)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-lert-aise-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 199</span>
+199:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetAlertRaise</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">bufsize</span>)
+200:         <span class="ruby-constant">NetAlertRaise</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">bufsize</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+201:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-lert-aise-x-method" class="method-detail ">
+				<a name="method-i-NetAlertRaiseEx"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetAlertRaiseEx</span><span
+						class="method-args">(name, data, size, service)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-lert-aise-x-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 203</span>
+203:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetAlertRaiseEx</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">data</span>, <span class="ruby-identifier">size</span>, <span class="ruby-identifier">service</span>)
+204:         <span class="ruby-constant">NetAlertRaiseEx</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">data</span>, <span class="ruby-identifier">size</span>, <span class="ruby-identifier">service</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+205:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-pi-uffer-llocate-method" class="method-detail ">
+				<a name="method-i-NetApiBufferAllocate"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetApiBufferAllocate</span><span
+						class="method-args">(num_bytes, buf)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-pi-uffer-llocate-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 207</span>
+207:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetApiBufferAllocate</span>(<span class="ruby-identifier">num_bytes</span>, <span class="ruby-identifier">buf</span>)
+208:         <span class="ruby-constant">NetApiBufferAllocate</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">num_bytes</span>, <span class="ruby-identifier">buf</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+209:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-pi-uffer-ree-method" class="method-detail ">
+				<a name="method-i-NetApiBufferFree"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetApiBufferFree</span><span
+						class="method-args">(buf)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-pi-uffer-ree-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 211</span>
+211:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetApiBufferFree</span>(<span class="ruby-identifier">buf</span>)
+212:         <span class="ruby-constant">NetApiBufferFree</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">buf</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+213:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-pi-uffer-eallocate-method" class="method-detail ">
+				<a name="method-i-NetApiBufferReallocate"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetApiBufferReallocate</span><span
+						class="method-args">(old_buf, count, new_buf)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-pi-uffer-eallocate-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 215</span>
+215:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetApiBufferReallocate</span>(<span class="ruby-identifier">old_buf</span>, <span class="ruby-identifier">count</span>, <span class="ruby-identifier">new_buf</span>)
+216:         <span class="ruby-constant">NetApiBufferReallocate</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">old_buf</span>, <span class="ruby-identifier">count</span>, <span class="ruby-identifier">new_buf</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+217:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-pi-uffer-ize-method" class="method-detail ">
+				<a name="method-i-NetApiBufferSize"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetApiBufferSize</span><span
+						class="method-args">(buf, count)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-pi-uffer-ize-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 219</span>
+219:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetApiBufferSize</span>(<span class="ruby-identifier">buf</span>, <span class="ruby-identifier">count</span>)
+220:         <span class="ruby-constant">NetApiBufferSize</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">buf</span>, <span class="ruby-identifier">count</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+221:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-et-ny-ame-method" class="method-detail ">
+				<a name="method-i-NetGetAnyDCName"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetGetAnyDCName</span><span
+						class="method-args">(server, domain, buf)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-et-ny-ame-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 223</span>
+223:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetGetAnyDCName</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">domain</span>, <span class="ruby-identifier">buf</span>)
+224:         <span class="ruby-constant">NetGetAnyDCName</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">domain</span>, <span class="ruby-identifier">buf</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+225:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-et-ame-method" class="method-detail ">
+				<a name="method-i-NetGetDCName"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetGetDCName</span><span
+						class="method-args">(server, domain, buf)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-et-ame-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 227</span>
+227:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetGetDCName</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">domain</span>, <span class="ruby-identifier">buf</span>)
+228:         <span class="ruby-constant">NetGetDCName</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">domain</span>, <span class="ruby-identifier">buf</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+229:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-et-isplay-nformation-ndex-method" class="method-detail ">
+				<a name="method-i-NetGetDisplayInformationIndex"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetGetDisplayInformationIndex</span><span
+						class="method-args">(server, level, prefix, index)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-et-isplay-nformation-ndex-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 231</span>
+231:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetGetDisplayInformationIndex</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">prefix</span>, <span class="ruby-identifier">index</span>)
+232:         <span class="ruby-constant">NetGetDisplayInformationIndex</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">prefix</span>, <span class="ruby-identifier">index</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+233:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-et-oin-nformation-method" class="method-detail ">
+				<a name="method-i-NetGetJoinInformation"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetGetJoinInformation</span><span
+						class="method-args">(server, buf, buf_type)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-et-oin-nformation-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 239</span>
+239:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetGetJoinInformation</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">buf_type</span>)
+240:         <span class="ruby-constant">NetGetJoinInformation</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">buf_type</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+241:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-et-oinable-s-method" class="method-detail ">
+				<a name="method-i-NetGetJoinableOUs"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetGetJoinableOUs</span><span
+						class="method-args">(server, domain, account, password, count, ous)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-et-oinable-s-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 235</span>
+235:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetGetJoinableOUs</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">domain</span>, <span class="ruby-identifier">account</span>, <span class="ruby-identifier">password</span>, <span class="ruby-identifier">count</span>, <span class="ruby-identifier">ous</span>)
+236:         <span class="ruby-constant">NetGetJoinableOUs</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">domain</span>, <span class="ruby-identifier">account</span>, <span class="ruby-identifier">password</span>, <span class="ruby-identifier">count</span>, <span class="ruby-identifier">ous</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+237:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-roup-dd-method" class="method-detail ">
+				<a name="method-i-NetGroupAdd"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetGroupAdd</span><span
+						class="method-args">(server, level, buf, err)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-roup-dd-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 243</span>
+243:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetGroupAdd</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">err</span>)
+244:         <span class="ruby-constant">NetGroupAdd</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">err</span>).<span class="ruby-identifier">call</span> <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+245:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-roup-dd-ser-method" class="method-detail ">
+				<a name="method-i-NetGroupAddUser"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetGroupAddUser</span><span
+						class="method-args">(server, group, user)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-roup-dd-ser-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 247</span>
+247:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetGroupAddUser</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">group</span>, <span class="ruby-identifier">user</span>)
+248:         <span class="ruby-constant">NetGroupAddUser</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">group</span>, <span class="ruby-identifier">user</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+249:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-roup-el-method" class="method-detail ">
+				<a name="method-i-NetGroupDel"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetGroupDel</span><span
+						class="method-args">(server, group)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-roup-el-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 251</span>
+251:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetGroupDel</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">group</span>)
+252:         <span class="ruby-constant">NetGroupDel</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">group</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+253:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-roup-el-ser-method" class="method-detail ">
+				<a name="method-i-NetGroupDelUser"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetGroupDelUser</span><span
+						class="method-args">(server, group, user)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-roup-el-ser-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 255</span>
+255:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetGroupDelUser</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">group</span>, <span class="ruby-identifier">user</span>)
+256:         <span class="ruby-constant">NetGroupDelUser</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">group</span>, <span class="ruby-identifier">user</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+257:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-roup-num-method" class="method-detail ">
+				<a name="method-i-NetGroupEnum"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetGroupEnum</span><span
+						class="method-args">(server, level, buf, max, entries, total_entries, resume)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-roup-num-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 259</span>
+259:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetGroupEnum</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">entries</span>, <span class="ruby-identifier">total_entries</span>, <span class="ruby-identifier">resume</span>)
+260:         <span class="ruby-constant">NetGroupEnum</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">entries</span>, <span class="ruby-identifier">total_entries</span>, <span class="ruby-identifier">resume</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+261:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-roup-et-nfo-method" class="method-detail ">
+				<a name="method-i-NetGroupGetInfo"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetGroupGetInfo</span><span
+						class="method-args">(server, group, level, buf)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-roup-et-nfo-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 263</span>
+263:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetGroupGetInfo</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">group</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>)
+264:         <span class="ruby-constant">NetGroupGetInfo</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">group</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+265:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-roup-et-sers-method" class="method-detail ">
+				<a name="method-i-NetGroupGetUsers"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetGroupGetUsers</span><span
+						class="method-args">(server, group, level, buf, max, entries, total_entries, resume)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-roup-et-sers-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 267</span>
+267:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetGroupGetUsers</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">group</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">entries</span>, <span class="ruby-identifier">total_entries</span>, <span class="ruby-identifier">resume</span>)
+268:         <span class="ruby-constant">NetGroupGetUsers</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">group</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">entries</span>, <span class="ruby-identifier">total_entries</span>, <span class="ruby-identifier">resume</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+269:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-roup-et-nfo-method" class="method-detail ">
+				<a name="method-i-NetGroupSetInfo"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetGroupSetInfo</span><span
+						class="method-args">(server, group, level, buf, err)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-roup-et-nfo-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 271</span>
+271:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetGroupSetInfo</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">group</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">err</span>)
+272:         <span class="ruby-constant">NetGroupSetInfo</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">group</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">err</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+273:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-roup-et-sers-method" class="method-detail ">
+				<a name="method-i-NetGroupSetUsers"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetGroupSetUsers</span><span
+						class="method-args">(server, group, level, buf, total)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-roup-et-sers-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 275</span>
+275:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetGroupSetUsers</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">group</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">total</span>)
+276:         <span class="ruby-constant">NetGroupSetUsers</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">group</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">total</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+277:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-oin-omain-method" class="method-detail ">
+				<a name="method-i-NetJoinDomain"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetJoinDomain</span><span
+						class="method-args">(server, domain, account_ou, account, password, opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-oin-omain-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 279</span>
+279:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetJoinDomain</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">domain</span>, <span class="ruby-identifier">account_ou</span>, <span class="ruby-identifier">account</span>, <span class="ruby-identifier">password</span>, <span class="ruby-identifier">opts</span>)
+280:         <span class="ruby-constant">NetJoinDomain</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">domain</span>, <span class="ruby-identifier">account_ou</span>, <span class="ruby-identifier">account</span>, <span class="ruby-identifier">password</span>, <span class="ruby-identifier">opts</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+281:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-ocal-roup-dd-method" class="method-detail ">
+				<a name="method-i-NetLocalGroupAdd"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetLocalGroupAdd</span><span
+						class="method-args">(server, level, buf, err)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-ocal-roup-dd-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 283</span>
+283:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetLocalGroupAdd</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">err</span>)
+284:         <span class="ruby-constant">NetLocalGroupAdd</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">err</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+285:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-ocal-roup-dd-embers-method" class="method-detail ">
+				<a name="method-i-NetLocalGroupAddMembers"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetLocalGroupAddMembers</span><span
+						class="method-args">(server, group, level, buf, total)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-ocal-roup-dd-embers-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 287</span>
+287:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetLocalGroupAddMembers</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">group</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">total</span>)
+288:         <span class="ruby-constant">NetLocalGroupAddMembers</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">group</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">total</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+289:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-ocal-roup-el-method" class="method-detail ">
+				<a name="method-i-NetLocalGroupDel"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetLocalGroupDel</span><span
+						class="method-args">(server, group)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-ocal-roup-el-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 291</span>
+291:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetLocalGroupDel</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">group</span>)
+292:         <span class="ruby-constant">NetLocalGroupDel</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">group</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+293:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-ocal-roup-el-embers-method" class="method-detail ">
+				<a name="method-i-NetLocalGroupDelMembers"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetLocalGroupDelMembers</span><span
+						class="method-args">(server, group, level, buf, total)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-ocal-roup-el-embers-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 295</span>
+295:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetLocalGroupDelMembers</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">group</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">total</span>)
+296:         <span class="ruby-constant">NetLocalGroupDelMembers</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">group</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">total</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+297:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-ocal-roup-num-method" class="method-detail ">
+				<a name="method-i-NetLocalGroupEnum"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetLocalGroupEnum</span><span
+						class="method-args">(server, level, buf, max, entries, total_entries, resume)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-ocal-roup-num-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 299</span>
+299:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetLocalGroupEnum</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">entries</span>, <span class="ruby-identifier">total_entries</span>, <span class="ruby-identifier">resume</span>)
+300:         <span class="ruby-constant">NetLocalGroupEnum</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">entries</span>, <span class="ruby-identifier">total_entries</span>, <span class="ruby-identifier">resume</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+301:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-ocal-roup-et-nfo-method" class="method-detail ">
+				<a name="method-i-NetLocalGroupGetInfo"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetLocalGroupGetInfo</span><span
+						class="method-args">(server, group, level, buf)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-ocal-roup-et-nfo-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 303</span>
+303:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetLocalGroupGetInfo</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">group</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>)
+304:         <span class="ruby-constant">NetLocalGroupGetInfo</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">group</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+305:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-ocal-roup-et-embers-method" class="method-detail ">
+				<a name="method-i-NetLocalGroupGetMembers"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetLocalGroupGetMembers</span><span
+						class="method-args">(server, group, level, buf, max, entries, total_entries, resume)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-ocal-roup-et-embers-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 307</span>
+307:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetLocalGroupGetMembers</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">group</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">entries</span>, <span class="ruby-identifier">total_entries</span>, <span class="ruby-identifier">resume</span>)
+308:         <span class="ruby-constant">NetLocalGroupGetMembers</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">group</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">entries</span>, <span class="ruby-identifier">total_entries</span>, <span class="ruby-identifier">resume</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+309:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-ocal-roup-et-nfo-method" class="method-detail ">
+				<a name="method-i-NetLocalGroupSetInfo"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetLocalGroupSetInfo</span><span
+						class="method-args">(server, group, level, buf, err)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-ocal-roup-et-nfo-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 311</span>
+311:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetLocalGroupSetInfo</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">group</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">err</span>)
+312:         <span class="ruby-constant">NetLocalGroupSetInfo</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">group</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">err</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+313:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-ocal-roup-et-embers-method" class="method-detail ">
+				<a name="method-i-NetLocalGroupSetMembers"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetLocalGroupSetMembers</span><span
+						class="method-args">(server, group, level, buf, total)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-ocal-roup-et-embers-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 315</span>
+315:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetLocalGroupSetMembers</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">group</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">total</span>)
+316:         <span class="ruby-constant">NetLocalGroupSetMembers</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">group</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">total</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+317:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-essage-uffer-end-method" class="method-detail ">
+				<a name="method-i-NetMessageBufferSend"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetMessageBufferSend</span><span
+						class="method-args">(server, msg, from, buf, bufsize)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-essage-uffer-end-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 319</span>
+319:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetMessageBufferSend</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">msg</span>, <span class="ruby-identifier">from</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">bufsize</span>)
+320:         <span class="ruby-constant">NetMessageBufferSend</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">msg</span>, <span class="ruby-identifier">from</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">bufsize</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+321:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-essage-ame-dd-method" class="method-detail ">
+				<a name="method-i-NetMessageNameAdd"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetMessageNameAdd</span><span
+						class="method-args">(server, msg)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-essage-ame-dd-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 323</span>
+323:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetMessageNameAdd</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">msg</span>)
+324:         <span class="ruby-constant">NetMessageNameAdd</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">msg</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+325:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-essage-ame-el-method" class="method-detail ">
+				<a name="method-i-NetMessageNameDel"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetMessageNameDel</span><span
+						class="method-args">(server, msg)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-essage-ame-el-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 327</span>
+327:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetMessageNameDel</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">msg</span>)
+328:         <span class="ruby-constant">NetMessageNameDel</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">msg</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+329:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-essage-ame-num-method" class="method-detail ">
+				<a name="method-i-NetMessageNameEnum"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetMessageNameEnum</span><span
+						class="method-args">(server, level, buf, max, entries, total_entries, resume)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-essage-ame-num-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 331</span>
+331:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetMessageNameEnum</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">entries</span>, <span class="ruby-identifier">total_entries</span>, <span class="ruby-identifier">resume</span>)
+332:         <span class="ruby-constant">NetMessageNameEnum</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">entries</span>, <span class="ruby-identifier">total_entries</span>, <span class="ruby-identifier">resume</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+333:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-essage-ame-et-nfo-method" class="method-detail ">
+				<a name="method-i-NetMessageNameGetInfo"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetMessageNameGetInfo</span><span
+						class="method-args">(server, msg, level, buf)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-essage-ame-et-nfo-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 335</span>
+335:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetMessageNameGetInfo</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">msg</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>)
+336:         <span class="ruby-constant">NetMessageNameGetInfo</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">msg</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+337:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-uery-isplay-nformation-method" class="method-detail ">
+				<a name="method-i-NetQueryDisplayInformation"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetQueryDisplayInformation</span><span
+						class="method-args">(server, level, index, entries, max, count, buf)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-uery-isplay-nformation-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 339</span>
+339:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetQueryDisplayInformation</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">index</span>, <span class="ruby-identifier">entries</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">count</span>, <span class="ruby-identifier">buf</span>)
+340:         <span class="ruby-constant">NetQueryDisplayInformation</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">index</span>, <span class="ruby-identifier">entries</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">count</span>, <span class="ruby-identifier">buf</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+341:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-emote-omputer-upports-method" class="method-detail ">
+				<a name="method-i-NetRemoteComputerSupports"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetRemoteComputerSupports</span><span
+						class="method-args">(server, level, index, entries, max, count, buf)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-emote-omputer-upports-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 343</span>
+343:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetRemoteComputerSupports</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">index</span>, <span class="ruby-identifier">entries</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">count</span>, <span class="ruby-identifier">buf</span>)
+344:         <span class="ruby-constant">NetRemoteComputerSupports</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">index</span>, <span class="ruby-identifier">entries</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">count</span>, <span class="ruby-identifier">buf</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+345:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-emote--method" class="method-detail ">
+				<a name="method-i-NetRemoteTOD"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetRemoteTOD</span><span
+						class="method-args">(server, buf)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-emote--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 347</span>
+347:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetRemoteTOD</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">buf</span>)
+348:         <span class="ruby-constant">NetRemoteTOD</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">buf</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+349:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-ename-achine-n-omain-method" class="method-detail ">
+				<a name="method-i-NetRenameMachineInDomain"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetRenameMachineInDomain</span><span
+						class="method-args">(server, machine, account, password, options)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-ename-achine-n-omain-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 351</span>
+351:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetRenameMachineInDomain</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">machine</span>, <span class="ruby-identifier">account</span>, <span class="ruby-identifier">password</span>, <span class="ruby-identifier">options</span>)
+352:         <span class="ruby-constant">NetRenameMachineInDomain</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">machine</span>, <span class="ruby-identifier">account</span>, <span class="ruby-identifier">password</span>, <span class="ruby-identifier">options</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+353:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-chedule-ob-dd-method" class="method-detail ">
+				<a name="method-i-NetScheduleJobAdd"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetScheduleJobAdd</span><span
+						class="method-args">(server, buf, job)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-chedule-ob-dd-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 355</span>
+355:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetScheduleJobAdd</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">job</span>)
+356:         <span class="ruby-constant">NetScheduleJobAdd</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">job</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+357:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-chedule-ob-el-method" class="method-detail ">
+				<a name="method-i-NetScheduleJobDel"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetScheduleJobDel</span><span
+						class="method-args">(server, min, max)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-chedule-ob-el-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 359</span>
+359:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetScheduleJobDel</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">min</span>, <span class="ruby-identifier">max</span>)
+360:         <span class="ruby-constant">NetScheduleJobDel</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">min</span>, <span class="ruby-identifier">max</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+361:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-chedule-ob-num-method" class="method-detail ">
+				<a name="method-i-NetScheduleJobEnum"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetScheduleJobEnum</span><span
+						class="method-args">(server, buf, max, entries, total_entries, resume)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-chedule-ob-num-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 363</span>
+363:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetScheduleJobEnum</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">entries</span>, <span class="ruby-identifier">total_entries</span>, <span class="ruby-identifier">resume</span>)
+364:         <span class="ruby-constant">NetScheduleJobEnum</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">entries</span>, <span class="ruby-identifier">total_entries</span>, <span class="ruby-identifier">resume</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+365:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-chedule-ob-et-nfo-method" class="method-detail ">
+				<a name="method-i-NetScheduleJobGetInfo"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetScheduleJobGetInfo</span><span
+						class="method-args">(server, job, buf)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-chedule-ob-et-nfo-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 367</span>
+367:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetScheduleJobGetInfo</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">job</span>, <span class="ruby-identifier">buf</span>)
+368:         <span class="ruby-constant">NetScheduleJobGetInfo</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">job</span>, <span class="ruby-identifier">buf</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+369:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-erver-omputer-ame-dd-method" class="method-detail ">
+				<a name="method-i-NetServerComputerNameAdd"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetServerComputerNameAdd</span><span
+						class="method-args">(server, em_domain, em_server)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-erver-omputer-ame-dd-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 371</span>
+371:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetServerComputerNameAdd</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">em_domain</span>, <span class="ruby-identifier">em_server</span>)
+372:         <span class="ruby-constant">NetServerComputerNameAdd</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">em_domain</span>, <span class="ruby-identifier">em_server</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+373:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-erver-omputer-ame-el-method" class="method-detail ">
+				<a name="method-i-NetServerComputerNameDel"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetServerComputerNameDel</span><span
+						class="method-args">(server, em_server)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-erver-omputer-ame-el-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 375</span>
+375:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetServerComputerNameDel</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">em_server</span>)
+376:         <span class="ruby-constant">NetServerComputerNameDel</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">em_server</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+377:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-erver-isk-num-method" class="method-detail ">
+				<a name="method-i-NetServerDiskEnum"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetServerDiskEnum</span><span
+						class="method-args">(server, level, buf, maxlen, entries, total_entries, resume)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-erver-isk-num-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 379</span>
+379:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetServerDiskEnum</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">maxlen</span>, <span class="ruby-identifier">entries</span>, <span class="ruby-identifier">total_entries</span>, <span class="ruby-identifier">resume</span>)
+380:         <span class="ruby-constant">NetServerDiskEnum</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">maxlen</span>, <span class="ruby-identifier">entries</span>, <span class="ruby-identifier">total_entries</span>, <span class="ruby-identifier">resume</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+381:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-erver-num-method" class="method-detail ">
+				<a name="method-i-NetServerEnum"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetServerEnum</span><span
+						class="method-args">(server, level, ptr, maxlen, num, total, stype, domain, handle)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-erver-num-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 383</span>
+383:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetServerEnum</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">ptr</span>, <span class="ruby-identifier">maxlen</span>, <span class="ruby-identifier">num</span>, <span class="ruby-identifier">total</span>, <span class="ruby-identifier">stype</span>, <span class="ruby-identifier">domain</span>, <span class="ruby-identifier">handle</span>)
+384:         <span class="ruby-constant">NetServerEnum</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">ptr</span>, <span class="ruby-identifier">maxlen</span>, <span class="ruby-identifier">num</span>, <span class="ruby-identifier">total</span>, <span class="ruby-identifier">stype</span>, <span class="ruby-identifier">domain</span>, <span class="ruby-identifier">handle</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+385:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-erver-et-nfo-method" class="method-detail ">
+				<a name="method-i-NetServerGetInfo"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetServerGetInfo</span><span
+						class="method-args">(server, level, buf)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-erver-et-nfo-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 387</span>
+387:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetServerGetInfo</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>)
+388:         <span class="ruby-constant">NetServerGetInfo</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+389:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-erver-et-nfo-method" class="method-detail ">
+				<a name="method-i-NetServerSetInfo"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetServerSetInfo</span><span
+						class="method-args">(server, level, buf, error)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-erver-et-nfo-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 391</span>
+391:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetServerSetInfo</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">error</span>)
+392:         <span class="ruby-constant">NetServerSetInfo</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">error</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+393:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-erver-ransport-dd-method" class="method-detail ">
+				<a name="method-i-NetServerTransportAdd"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetServerTransportAdd</span><span
+						class="method-args">(server, level, buf)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-erver-ransport-dd-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 395</span>
+395:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetServerTransportAdd</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>)
+396:         <span class="ruby-constant">NetServerTransportAdd</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+397:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-erver-ransport-dd-x-method" class="method-detail ">
+				<a name="method-i-NetServerTransportAddEx"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetServerTransportAddEx</span><span
+						class="method-args">(server, level, buf)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-erver-ransport-dd-x-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 399</span>
+399:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetServerTransportAddEx</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>)
+400:         <span class="ruby-constant">NetServerTransportAddEx</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+401:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-erver-ransport-el-method" class="method-detail ">
+				<a name="method-i-NetServerTransportDel"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetServerTransportDel</span><span
+						class="method-args">(server, level, buf)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-erver-ransport-el-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 403</span>
+403:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetServerTransportDel</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>)
+404:         <span class="ruby-constant">NetServerTransportDel</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+405:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-erver-ransport-num-method" class="method-detail ">
+				<a name="method-i-NetServerTransportEnum"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetServerTransportEnum</span><span
+						class="method-args">(server, level, buf, maxlen, entries, total_entries, resume)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-erver-ransport-num-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 407</span>
+407:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetServerTransportEnum</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">maxlen</span>, <span class="ruby-identifier">entries</span>, <span class="ruby-identifier">total_entries</span>, <span class="ruby-identifier">resume</span>)
+408:         <span class="ruby-constant">NetServerTransportEnum</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">maxlen</span>, <span class="ruby-identifier">entries</span>, <span class="ruby-identifier">total_entries</span>, <span class="ruby-identifier">resume</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+409:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-njoin-omain-method" class="method-detail ">
+				<a name="method-i-NetUnjoinDomain"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetUnjoinDomain</span><span
+						class="method-args">(server, account, password, options)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-njoin-omain-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 411</span>
+411:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetUnjoinDomain</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">account</span>, <span class="ruby-identifier">password</span>, <span class="ruby-identifier">options</span>)
+412:         <span class="ruby-constant">NetUnjoinDomain</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">account</span>, <span class="ruby-identifier">password</span>, <span class="ruby-identifier">options</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+413:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-se-dd-method" class="method-detail ">
+				<a name="method-i-NetUseAdd"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetUseAdd</span><span
+						class="method-args">(server, level, buf, error)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-se-dd-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 415</span>
+415:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetUseAdd</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">error</span>)
+416:         <span class="ruby-constant">NetUseAdd</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">error</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+417:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-se-el-method" class="method-detail ">
+				<a name="method-i-NetUseDel"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetUseDel</span><span
+						class="method-args">(server, name, conn)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-se-el-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 419</span>
+419:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetUseDel</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">conn</span>)
+420:         <span class="ruby-constant">NetUseDel</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">conn</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+421:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-se-num-method" class="method-detail ">
+				<a name="method-i-NetUseEnum"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetUseEnum</span><span
+						class="method-args">(server, level, buf, max, entries, total_entries, resume)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-se-num-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 423</span>
+423:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetUseEnum</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">entries</span>, <span class="ruby-identifier">total_entries</span>, <span class="ruby-identifier">resume</span>)
+424:         <span class="ruby-constant">NetUseEnum</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">entries</span>, <span class="ruby-identifier">total_entries</span>, <span class="ruby-identifier">resume</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+425:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-se-et-nfo-method" class="method-detail ">
+				<a name="method-i-NetUseGetInfo"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetUseGetInfo</span><span
+						class="method-args">(server, name, level, buf)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-se-et-nfo-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 427</span>
+427:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetUseGetInfo</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>)
+428:         <span class="ruby-constant">NetUseGetInfo</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+429:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-ser-dd-method" class="method-detail ">
+				<a name="method-i-NetUserAdd"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetUserAdd</span><span
+						class="method-args">(server, level, buf, error)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-ser-dd-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 431</span>
+431:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetUserAdd</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">error</span>)
+432:         <span class="ruby-constant">NetUserAdd</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">error</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+433:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-ser-hange-assword-method" class="method-detail ">
+				<a name="method-i-NetUserChangePassword"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetUserChangePassword</span><span
+						class="method-args">(domain, user, old, new)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-ser-hange-assword-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 435</span>
+435:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetUserChangePassword</span>(<span class="ruby-identifier">domain</span>, <span class="ruby-identifier">user</span>, <span class="ruby-identifier">old</span>, <span class="ruby-identifier">new</span>)
+436:         <span class="ruby-constant">NetUserChangePassword</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">domain</span>, <span class="ruby-identifier">user</span>, <span class="ruby-identifier">old</span>, <span class="ruby-identifier">new</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+437:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-ser-el-method" class="method-detail ">
+				<a name="method-i-NetUserDel"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetUserDel</span><span
+						class="method-args">(server, user)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-ser-el-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 439</span>
+439:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetUserDel</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">user</span>)
+440:         <span class="ruby-constant">NetUserDel</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">user</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+441:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-ser-num-method" class="method-detail ">
+				<a name="method-i-NetUserEnum"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetUserEnum</span><span
+						class="method-args">(server, level, filter, buf, max, entries, total_entries, resume)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-ser-num-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 443</span>
+443:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetUserEnum</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">filter</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">entries</span>, <span class="ruby-identifier">total_entries</span>, <span class="ruby-identifier">resume</span>)
+444:         <span class="ruby-constant">NetUserEnum</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">filter</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">entries</span>, <span class="ruby-identifier">total_entries</span>, <span class="ruby-identifier">resume</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+445:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-ser-et-roups-method" class="method-detail ">
+				<a name="method-i-NetUserGetGroups"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetUserGetGroups</span><span
+						class="method-args">(server, user, level, buf, max, entries, total_entries)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-ser-et-roups-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 447</span>
+447:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetUserGetGroups</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">user</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">entries</span>, <span class="ruby-identifier">total_entries</span>)
+448:         <span class="ruby-constant">NetUserGetGroups</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">user</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">entries</span>, <span class="ruby-identifier">total_entries</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+449:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-ser-et-nfo-method" class="method-detail ">
+				<a name="method-i-NetUserGetInfo"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetUserGetInfo</span><span
+						class="method-args">(server, user, level, buf)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-ser-et-nfo-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 451</span>
+451:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetUserGetInfo</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">user</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>)
+452:         <span class="ruby-constant">NetUserGetInfo</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">user</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+453:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-ser-et-ocal-roups-method" class="method-detail ">
+				<a name="method-i-NetUserGetLocalGroups"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetUserGetLocalGroups</span><span
+						class="method-args">(server, user, level, flags, buf, max, entries, total_entries)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-ser-et-ocal-roups-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 455</span>
+455:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetUserGetLocalGroups</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">user</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">flags</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">entries</span>, <span class="ruby-identifier">total_entries</span>)
+456:         <span class="ruby-constant">NetUserGetLocalGroups</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">user</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">flags</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">max</span>, <span class="ruby-identifier">entries</span>, <span class="ruby-identifier">total_entries</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+457:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-ser-odals-et-method" class="method-detail ">
+				<a name="method-i-NetUserModalsGet"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetUserModalsGet</span><span
+						class="method-args">(server, level, buf)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-ser-odals-et-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 459</span>
+459:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetUserModalsGet</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>)
+460:         <span class="ruby-constant">NetUserModalsGet</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+461:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-ser-odals-et-method" class="method-detail ">
+				<a name="method-i-NetUserModalsSet"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetUserModalsSet</span><span
+						class="method-args">(server, level, buf, error)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-ser-odals-et-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 463</span>
+463:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetUserModalsSet</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">error</span>)
+464:         <span class="ruby-constant">NetUserModalsSet</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">error</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+465:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-ser-et-roups-method" class="method-detail ">
+				<a name="method-i-NetUserSetGroups"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetUserSetGroups</span><span
+						class="method-args">(server, user, level, buf, num)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-ser-et-roups-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 467</span>
+467:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetUserSetGroups</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">user</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">num</span>)
+468:         <span class="ruby-constant">NetUserSetGroups</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">user</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">num</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+469:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-ser-et-nfo-method" class="method-detail ">
+				<a name="method-i-NetUserSetInfo"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetUserSetInfo</span><span
+						class="method-args">(server, user, level, buf, error)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-ser-et-nfo-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 471</span>
+471:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetUserSetInfo</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">user</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">error</span>)
+472:         <span class="ruby-constant">NetUserSetInfo</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">user</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">error</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+473:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-alidate-ame-method" class="method-detail ">
+				<a name="method-i-NetValidateName"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetValidateName</span><span
+						class="method-args">(server, name, account, password, name_type)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-alidate-ame-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 475</span>
+475:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetValidateName</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">account</span>, <span class="ruby-identifier">password</span>, <span class="ruby-identifier">name_type</span>)
+476:         <span class="ruby-constant">NetValidateName</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">account</span>, <span class="ruby-identifier">password</span>, <span class="ruby-identifier">name_type</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+477:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-ksta-et-nfo-method" class="method-detail ">
+				<a name="method-i-NetWkstaGetInfo"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetWkstaGetInfo</span><span
+						class="method-args">(server, level, buf)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-ksta-et-nfo-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 479</span>
+479:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetWkstaGetInfo</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>)
+480:         <span class="ruby-constant">NetWkstaGetInfo</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+481:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-ksta-et-nfo-method" class="method-detail ">
+				<a name="method-i-NetWkstaSetInfo"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetWkstaSetInfo</span><span
+						class="method-args">(server, level, buf, error)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-ksta-et-nfo-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 483</span>
+483:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetWkstaSetInfo</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">error</span>)
+484:         <span class="ruby-constant">NetWkstaSetInfo</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">error</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+485:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-ksta-ransport-dd-method" class="method-detail ">
+				<a name="method-i-NetWkstaTransportAdd"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetWkstaTransportAdd</span><span
+						class="method-args">(server, level, buf, error)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-ksta-ransport-dd-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 487</span>
+487:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetWkstaTransportAdd</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">error</span>)
+488:         <span class="ruby-constant">NetWkstaTransportAdd</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">error</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+489:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-ksta-ransport-el-method" class="method-detail ">
+				<a name="method-i-NetWkstaTransportDel"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetWkstaTransportDel</span><span
+						class="method-args">(server, name, cond)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-ksta-ransport-el-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 491</span>
+491:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetWkstaTransportDel</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">cond</span>)
+492:         <span class="ruby-constant">NetWkstaTransportDel</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">cond</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+493:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-ksta-ransport-num-method" class="method-detail ">
+				<a name="method-i-NetWkstaTransportEnum"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetWkstaTransportEnum</span><span
+						class="method-args">(server, level, buf, maxlen, entries, total_entries, resume)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-ksta-ransport-num-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 495</span>
+495:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetWkstaTransportEnum</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">maxlen</span>, <span class="ruby-identifier">entries</span>, <span class="ruby-identifier">total_entries</span>, <span class="ruby-identifier">resume</span>)
+496:         <span class="ruby-constant">NetWkstaTransportEnum</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">maxlen</span>, <span class="ruby-identifier">entries</span>, <span class="ruby-identifier">total_entries</span>, <span class="ruby-identifier">resume</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+497:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-ksta-ser-num-method" class="method-detail ">
+				<a name="method-i-NetWkstaUserEnum"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetWkstaUserEnum</span><span
+						class="method-args">(server, level, buf, maxlen, entries, total_entries, resume)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-ksta-ser-num-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 499</span>
+499:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetWkstaUserEnum</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">maxlen</span>, <span class="ruby-identifier">entries</span>, <span class="ruby-identifier">total_entries</span>, <span class="ruby-identifier">resume</span>)
+500:         <span class="ruby-constant">NetWkstaUserEnum</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">maxlen</span>, <span class="ruby-identifier">entries</span>, <span class="ruby-identifier">total_entries</span>, <span class="ruby-identifier">resume</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+501:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-ksta-ser-et-nfo-method" class="method-detail ">
+				<a name="method-i-NetWkstaUserGetInfo"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetWkstaUserGetInfo</span><span
+						class="method-args">(res, level, buf)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-ksta-ser-et-nfo-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 503</span>
+503:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetWkstaUserGetInfo</span>(<span class="ruby-identifier">res</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>)
+504:         <span class="ruby-constant">NetWkstaUserGetInfo</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">res</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+505:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-ksta-ser-et-nfo-method" class="method-detail ">
+				<a name="method-i-NetWkstaUserSetInfo"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">NetWkstaUserSetInfo</span><span
+						class="method-args">(res, level, buf, error)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-ksta-ser-et-nfo-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 507</span>
+507:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">NetWkstaUserSetInfo</span>(<span class="ruby-identifier">res</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">error</span>)
+508:         <span class="ruby-constant">NetWkstaUserSetInfo</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">res</span>, <span class="ruby-identifier">level</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">error</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+509:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="-et-et-chedule-ccount-nformation-method" class="method-detail ">
+				<a name="method-i-SetNetScheduleAccountInformation"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">SetNetScheduleAccountInformation</span><span
+						class="method-args">(server, account, password)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="-et-et-chedule-ccount-nformation-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/network/management.rb, line 517</span>
+517:         <span class="ruby-keyword kw">def</span> <span class="ruby-constant">SetNetScheduleAccountInformation</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">account</span>, <span class="ruby-identifier">password</span>)
+518:           <span class="ruby-constant">SetNetScheduleAccountInformation</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">server</span>, <span class="ruby-identifier">account</span>, <span class="ruby-identifier">password</span>) <span class="ruby-operator">==</span> <span class="ruby-constant">NERR_Success</span>
+519:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

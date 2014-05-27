@@ -1,0 +1,1946 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Windows::DeviceIO</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/windows/device_io_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/windows/device_io.rb">lib/windows/device_io.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-CTL_CODE">#CTL_CODE</a></li>
+					
+					<li><a href="#method-i-FSCTL_CREATE_USN_JOURNAL">#FSCTL_CREATE_USN_JOURNAL</a></li>
+					
+					<li><a href="#method-i-FSCTL_DELETE_USN_JOURNAL">#FSCTL_DELETE_USN_JOURNAL</a></li>
+					
+					<li><a href="#method-i-FSCTL_ENUM_USN_DATA">#FSCTL_ENUM_USN_DATA</a></li>
+					
+					<li><a href="#method-i-FSCTL_EXTEND_VOLUME">#FSCTL_EXTEND_VOLUME</a></li>
+					
+					<li><a href="#method-i-FSCTL_QUERY_USN_JOURNAL">#FSCTL_QUERY_USN_JOURNAL</a></li>
+					
+					<li><a href="#method-i-FSCTL_READ_FILE_USN_DATA">#FSCTL_READ_FILE_USN_DATA</a></li>
+					
+					<li><a href="#method-i-FSCTL_READ_USN_JOURNAL">#FSCTL_READ_USN_JOURNAL</a></li>
+					
+					<li><a href="#method-i-FSCTL_SET_COMPRESSION">#FSCTL_SET_COMPRESSION</a></li>
+					
+					<li><a href="#method-i-FSCTL_SET_SPARSE">#FSCTL_SET_SPARSE</a></li>
+					
+					<li><a href="#method-i-FSCTL_WRITE_USN_CLOSE_RECORD">#FSCTL_WRITE_USN_CLOSE_RECORD</a></li>
+					
+					<li><a href="#method-i-IOCTL_DISK_CREATE_DISK">#IOCTL_DISK_CREATE_DISK</a></li>
+					
+					<li><a href="#method-i-IOCTL_DISK_FORMAT_TRACKS">#IOCTL_DISK_FORMAT_TRACKS</a></li>
+					
+					<li><a href="#method-i-IOCTL_DISK_FORMAT_TRACKS_EX">#IOCTL_DISK_FORMAT_TRACKS_EX</a></li>
+					
+					<li><a href="#method-i-IOCTL_DISK_GET_DRIVE_GEOMETRY">#IOCTL_DISK_GET_DRIVE_GEOMETRY</a></li>
+					
+					<li><a href="#method-i-IOCTL_DISK_GET_DRIVE_GEOMETRY_EX">#IOCTL_DISK_GET_DRIVE_GEOMETRY_EX</a></li>
+					
+					<li><a href="#method-i-IOCTL_DISK_GET_DRIVE_LAYOUT">#IOCTL_DISK_GET_DRIVE_LAYOUT</a></li>
+					
+					<li><a href="#method-i-IOCTL_DISK_GET_DRIVE_LAYOUT_EX">#IOCTL_DISK_GET_DRIVE_LAYOUT_EX</a></li>
+					
+					<li><a href="#method-i-IOCTL_DISK_GET_LENGTH_INFO">#IOCTL_DISK_GET_LENGTH_INFO</a></li>
+					
+					<li><a href="#method-i-IOCTL_DISK_GET_PARTITION_INFO">#IOCTL_DISK_GET_PARTITION_INFO</a></li>
+					
+					<li><a href="#method-i-IOCTL_DISK_GET_PARTITION_INFO_EX">#IOCTL_DISK_GET_PARTITION_INFO_EX</a></li>
+					
+					<li><a href="#method-i-IOCTL_DISK_HISTOGRAM_DATA">#IOCTL_DISK_HISTOGRAM_DATA</a></li>
+					
+					<li><a href="#method-i-IOCTL_DISK_HISTOGRAM_RESET">#IOCTL_DISK_HISTOGRAM_RESET</a></li>
+					
+					<li><a href="#method-i-IOCTL_DISK_HISTOGRAM_STRUCTURE">#IOCTL_DISK_HISTOGRAM_STRUCTURE</a></li>
+					
+					<li><a href="#method-i-IOCTL_DISK_IS_WRITABLE">#IOCTL_DISK_IS_WRITABLE</a></li>
+					
+					<li><a href="#method-i-IOCTL_DISK_LOGGING">#IOCTL_DISK_LOGGING</a></li>
+					
+					<li><a href="#method-i-IOCTL_DISK_PERFORMANCE">#IOCTL_DISK_PERFORMANCE</a></li>
+					
+					<li><a href="#method-i-IOCTL_DISK_PERFORMANCE_OFF">#IOCTL_DISK_PERFORMANCE_OFF</a></li>
+					
+					<li><a href="#method-i-IOCTL_DISK_REASSIGN_BLOCKS">#IOCTL_DISK_REASSIGN_BLOCKS</a></li>
+					
+					<li><a href="#method-i-IOCTL_DISK_REQUEST_DATA">#IOCTL_DISK_REQUEST_DATA</a></li>
+					
+					<li><a href="#method-i-IOCTL_DISK_REQUEST_STRUCTURE">#IOCTL_DISK_REQUEST_STRUCTURE</a></li>
+					
+					<li><a href="#method-i-IOCTL_DISK_SET_DRIVE_LAYOUT">#IOCTL_DISK_SET_DRIVE_LAYOUT</a></li>
+					
+					<li><a href="#method-i-IOCTL_DISK_SET_DRIVE_LAYOUT_EX">#IOCTL_DISK_SET_DRIVE_LAYOUT_EX</a></li>
+					
+					<li><a href="#method-i-IOCTL_DISK_SET_PARTITION_INFO">#IOCTL_DISK_SET_PARTITION_INFO</a></li>
+					
+					<li><a href="#method-i-IOCTL_DISK_SET_PARTITION_INFO_EX">#IOCTL_DISK_SET_PARTITION_INFO_EX</a></li>
+					
+					<li><a href="#method-i-IOCTL_DISK_VERIFY">#IOCTL_DISK_VERIFY</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../CHANGES.html">CHANGES</a></li>
+				
+					<li class="file"><a href="../MANIFEST.html">MANIFEST</a></li>
+				
+					<li class="file"><a href="../README.html">README</a></li>
+				
+					<li class="file"><a href="../doc/conversion_guide_txt.html">conversion_guide.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Windows.html">Windows</a></li>
+				
+					<li><a href="../Windows/COM.html">Windows::COM</a></li>
+				
+					<li><a href="../Windows/COM/Accessibility.html">Windows::COM::Accessibility</a></li>
+				
+					<li><a href="../Windows/COM/Automation.html">Windows::COM::Automation</a></li>
+				
+					<li><a href="../Windows/COM/Variant.html">Windows::COM::Variant</a></li>
+				
+					<li><a href="../Windows/Clipboard.html">Windows::Clipboard</a></li>
+				
+					<li><a href="../Windows/Console.html">Windows::Console</a></li>
+				
+					<li><a href="../Windows/Debug.html">Windows::Debug</a></li>
+				
+					<li><a href="../Windows/DeviceIO.html">Windows::DeviceIO</a></li>
+				
+					<li><a href="../Windows/Directory.html">Windows::Directory</a></li>
+				
+					<li><a href="../Windows/Error.html">Windows::Error</a></li>
+				
+					<li><a href="../Windows/EventLog.html">Windows::EventLog</a></li>
+				
+					<li><a href="../Windows/File.html">Windows::File</a></li>
+				
+					<li><a href="../Windows/FileMapping.html">Windows::FileMapping</a></li>
+				
+					<li><a href="../Windows/FileSystem.html">Windows::FileSystem</a></li>
+				
+					<li><a href="../Windows/GDI.html">Windows::GDI</a></li>
+				
+					<li><a href="../Windows/GDI/Bitmap.html">Windows::GDI::Bitmap</a></li>
+				
+					<li><a href="../Windows/GDI/DeviceContext.html">Windows::GDI::DeviceContext</a></li>
+				
+					<li><a href="../Windows/GDI/MetaFile.html">Windows::GDI::MetaFile</a></li>
+				
+					<li><a href="../Windows/GDI/PaintingDrawing.html">Windows::GDI::PaintingDrawing</a></li>
+				
+					<li><a href="../Windows/Handle.html">Windows::Handle</a></li>
+				
+					<li><a href="../Windows/Library.html">Windows::Library</a></li>
+				
+					<li><a href="../Windows/Limits.html">Windows::Limits</a></li>
+				
+					<li><a href="../Windows/MSVCRT.html">Windows::MSVCRT</a></li>
+				
+					<li><a href="../Windows/MSVCRT/Buffer.html">Windows::MSVCRT::Buffer</a></li>
+				
+					<li><a href="../Windows/MSVCRT/Directory.html">Windows::MSVCRT::Directory</a></li>
+				
+					<li><a href="../Windows/MSVCRT/File.html">Windows::MSVCRT::File</a></li>
+				
+					<li><a href="../Windows/MSVCRT/IO.html">Windows::MSVCRT::IO</a></li>
+				
+					<li><a href="../Windows/MSVCRT/String.html">Windows::MSVCRT::String</a></li>
+				
+					<li><a href="../Windows/MSVCRT/Time.html">Windows::MSVCRT::Time</a></li>
+				
+					<li><a href="../Windows/Mailslot.html">Windows::Mailslot</a></li>
+				
+					<li><a href="../Windows/Memory.html">Windows::Memory</a></li>
+				
+					<li><a href="../Windows/NIO.html">Windows::NIO</a></li>
+				
+					<li><a href="../Windows/NTFS.html">Windows::NTFS</a></li>
+				
+					<li><a href="../Windows/NTFS/Winternl.html">Windows::NTFS::Winternl</a></li>
+				
+					<li><a href="../Windows/National.html">Windows::National</a></li>
+				
+					<li><a href="../Windows/Network.html">Windows::Network</a></li>
+				
+					<li><a href="../Windows/Network/Management.html">Windows::Network::Management</a></li>
+				
+					<li><a href="../Windows/Network/SNMP.html">Windows::Network::SNMP</a></li>
+				
+					<li><a href="../Windows/Network/Winsock.html">Windows::Network::Winsock</a></li>
+				
+					<li><a href="../Windows/Path.html">Windows::Path</a></li>
+				
+					<li><a href="../Windows/Pipe.html">Windows::Pipe</a></li>
+				
+					<li><a href="../Windows/Process.html">Windows::Process</a></li>
+				
+					<li><a href="../Windows/Registry.html">Windows::Registry</a></li>
+				
+					<li><a href="../Windows/Security.html">Windows::Security</a></li>
+				
+					<li><a href="../Windows/Security/Authentication.html">Windows::Security::Authentication</a></li>
+				
+					<li><a href="../Windows/Service.html">Windows::Service</a></li>
+				
+					<li><a href="../Windows/Shell.html">Windows::Shell</a></li>
+				
+					<li><a href="../Windows/Socket.html">Windows::Socket</a></li>
+				
+					<li><a href="../Windows/Sound.html">Windows::Sound</a></li>
+				
+					<li><a href="../Windows/Synchronize.html">Windows::Synchronize</a></li>
+				
+					<li><a href="../Windows/SystemInfo.html">Windows::SystemInfo</a></li>
+				
+					<li><a href="../Windows/Thread.html">Windows::Thread</a></li>
+				
+					<li><a href="../Windows/Time.html">Windows::Time</a></li>
+				
+					<li><a href="../Windows/ToolHelper.html">Windows::ToolHelper</a></li>
+				
+					<li><a href="../Windows/Unicode.html">Windows::Unicode</a></li>
+				
+					<li><a href="../Windows/Volume.html">Windows::Volume</a></li>
+				
+					<li><a href="../Windows/WSA.html">Windows::WSA</a></li>
+				
+					<li><a href="../Windows/Window.html">Windows::Window</a></li>
+				
+					<li><a href="../Windows/Window/Classes.html">Windows::Window::Classes</a></li>
+				
+					<li><a href="../Windows/Window/Dialog.html">Windows::Window::Dialog</a></li>
+				
+					<li><a href="../Windows/Window/Menu.html">Windows::Window::Menu</a></li>
+				
+					<li><a href="../Windows/Window/Message.html">Windows::Window::Message</a></li>
+				
+					<li><a href="../Windows/Window/Properties.html">Windows::Window::Properties</a></li>
+				
+					<li><a href="../Windows/Window/Timer.html">Windows::Window::Timer</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Windows::DeviceIO</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="FILE_DEVICE_BEEP">FILE_DEVICE_BEEP</a></dt>
+				
+				<dd class="description"><p>
+Device Types
+</p></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_CD_ROM">FILE_DEVICE_CD_ROM</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_CD_ROM_FILE_SYSTEM">FILE_DEVICE_CD_ROM_FILE_SYSTEM</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_CONTROLLER">FILE_DEVICE_CONTROLLER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_DATALINK">FILE_DEVICE_DATALINK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_DFS">FILE_DEVICE_DFS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_DISK">FILE_DEVICE_DISK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_DISK_FILE_SYSTEM">FILE_DEVICE_DISK_FILE_SYSTEM</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_FILE_SYSTEM">FILE_DEVICE_FILE_SYSTEM</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_INPORT_PORT">FILE_DEVICE_INPORT_PORT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_KEYBOARD">FILE_DEVICE_KEYBOARD</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_MAILSLOT">FILE_DEVICE_MAILSLOT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_MIDI_IN">FILE_DEVICE_MIDI_IN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_MIDI_OUT">FILE_DEVICE_MIDI_OUT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_MOUSE">FILE_DEVICE_MOUSE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_MULTI_UNC_PROVIDER">FILE_DEVICE_MULTI_UNC_PROVIDER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_NAMED_PIPE">FILE_DEVICE_NAMED_PIPE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_NETWORK">FILE_DEVICE_NETWORK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_NETWORK_BROWSER">FILE_DEVICE_NETWORK_BROWSER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_NETWORK_FILE_SYSTEM">FILE_DEVICE_NETWORK_FILE_SYSTEM</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_NULL">FILE_DEVICE_NULL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_PARALLEL_PORT">FILE_DEVICE_PARALLEL_PORT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_PHYSICAL_NETCARD">FILE_DEVICE_PHYSICAL_NETCARD</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_PRINTER">FILE_DEVICE_PRINTER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_SCANNER">FILE_DEVICE_SCANNER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_SERIAL_MOUSE_PORT">FILE_DEVICE_SERIAL_MOUSE_PORT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_SERIAL_PORT">FILE_DEVICE_SERIAL_PORT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_SCREEN">FILE_DEVICE_SCREEN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_SOUND">FILE_DEVICE_SOUND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_STREAMS">FILE_DEVICE_STREAMS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_TAPE">FILE_DEVICE_TAPE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_TAPE_FILE_SYSTEM">FILE_DEVICE_TAPE_FILE_SYSTEM</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_TRANSPORT">FILE_DEVICE_TRANSPORT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_UNKNOWN">FILE_DEVICE_UNKNOWN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_VIDEO">FILE_DEVICE_VIDEO</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_VIRTUAL_DISK">FILE_DEVICE_VIRTUAL_DISK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_WAVE_IN">FILE_DEVICE_WAVE_IN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_WAVE_OUT">FILE_DEVICE_WAVE_OUT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_8042_PORT">FILE_DEVICE_8042_PORT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_NETWORK_REDIRECTOR">FILE_DEVICE_NETWORK_REDIRECTOR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_BATTERY">FILE_DEVICE_BATTERY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_BUS_EXTENDER">FILE_DEVICE_BUS_EXTENDER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_MODEM">FILE_DEVICE_MODEM</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_VDM">FILE_DEVICE_VDM</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_MASS_STORAGE">FILE_DEVICE_MASS_STORAGE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_SMB">FILE_DEVICE_SMB</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_KS">FILE_DEVICE_KS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_CHANGER">FILE_DEVICE_CHANGER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_SMARTCARD">FILE_DEVICE_SMARTCARD</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_ACPI">FILE_DEVICE_ACPI</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_DVD">FILE_DEVICE_DVD</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_FULLSCREEN_VIDEO">FILE_DEVICE_FULLSCREEN_VIDEO</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_DFS_FILE_SYSTEM">FILE_DEVICE_DFS_FILE_SYSTEM</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_DFS_VOLUME">FILE_DEVICE_DFS_VOLUME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_SERENUM">FILE_DEVICE_SERENUM</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_TERMSRV">FILE_DEVICE_TERMSRV</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_KSEC">FILE_DEVICE_KSEC</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_FIPS">FILE_DEVICE_FIPS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_DEVICE_INFINIBAND">FILE_DEVICE_INFINIBAND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="IOCTL_DISK_BASE">IOCTL_DISK_BASE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_ANY_ACCESS">FILE_ANY_ACCESS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_READ_ACCESS">FILE_READ_ACCESS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_WRITE_ACCESS">FILE_WRITE_ACCESS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FILE_SPECIAL_ACCESS">FILE_SPECIAL_ACCESS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="METHOD_BUFFERED">METHOD_BUFFERED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="METHOD_IN_DIRECT">METHOD_IN_DIRECT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="METHOD_OUT_DIRECT">METHOD_OUT_DIRECT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="METHOD_NEITHER">METHOD_NEITHER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-CTL_CODE"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">CTL_CODE</span><span
+						class="method-args">(device, function, method, access)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Macros from WinIoCtl.h
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 89</span>
+89:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-identifier">device</span>, <span class="ruby-identifier">function</span>, <span class="ruby-identifier">method</span>, <span class="ruby-identifier">access</span>)
+90:          ((<span class="ruby-identifier">device</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">16</span>) <span class="ruby-operator">|</span> ((<span class="ruby-identifier">access</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">14</span>) <span class="ruby-operator">|</span> ((<span class="ruby-identifier">function</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">2</span>) <span class="ruby-operator">|</span> (<span class="ruby-identifier">method</span>)
+91:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-FSCTL_CREATE_USN_JOURNAL"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">FSCTL_CREATE_USN_JOURNAL</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 109</span>
+109:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">FSCTL_CREATE_USN_JOURNAL</span>
+110:          <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-constant">FILE_DEVICE_FILE_SYSTEM</span>, <span class="ruby-value">57</span>,  <span class="ruby-constant">METHOD_NEITHER</span>, <span class="ruby-value">0</span>)
+111:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-FSCTL_DELETE_USN_JOURNAL"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">FSCTL_DELETE_USN_JOURNAL</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 129</span>
+129:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">FSCTL_DELETE_USN_JOURNAL</span>
+130:          <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-constant">FILE_DEVICE_FILE_SYSTEM</span>, <span class="ruby-value">62</span>, <span class="ruby-constant">METHOD_BUFFERED</span>, <span class="ruby-value">0</span>)
+131:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-FSCTL_ENUM_USN_DATA"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">FSCTL_ENUM_USN_DATA</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 97</span>
+97:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">FSCTL_ENUM_USN_DATA</span>
+98:          <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-constant">FILE_DEVICE_FILE_SYSTEM</span>, <span class="ruby-value">44</span>,  <span class="ruby-constant">METHOD_NEITHER</span>, <span class="ruby-value">0</span>)
+99:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-FSCTL_EXTEND_VOLUME"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">FSCTL_EXTEND_VOLUME</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 121</span>
+121:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">FSCTL_EXTEND_VOLUME</span>
+122:          <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-constant">FILE_DEVICE_FILE_SYSTEM</span>, <span class="ruby-value">60</span>, <span class="ruby-constant">METHOD_BUFFERED</span>, <span class="ruby-value">0</span>)
+123:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-FSCTL_QUERY_USN_JOURNAL"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">FSCTL_QUERY_USN_JOURNAL</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 125</span>
+125:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">FSCTL_QUERY_USN_JOURNAL</span>
+126:          <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-constant">FILE_DEVICE_FILE_SYSTEM</span>, <span class="ruby-value">61</span>, <span class="ruby-constant">METHOD_BUFFERED</span>, <span class="ruby-value">0</span>)
+127:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-FSCTL_READ_FILE_USN_DATA"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">FSCTL_READ_FILE_USN_DATA</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 113</span>
+113:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">FSCTL_READ_FILE_USN_DATA</span>
+114:          <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-constant">FILE_DEVICE_FILE_SYSTEM</span>, <span class="ruby-value">58</span>,  <span class="ruby-constant">METHOD_NEITHER</span>, <span class="ruby-value">0</span>)
+115:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-FSCTL_READ_USN_JOURNAL"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">FSCTL_READ_USN_JOURNAL</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 101</span>
+101:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">FSCTL_READ_USN_JOURNAL</span>
+102:          <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-constant">FILE_DEVICE_FILE_SYSTEM</span>, <span class="ruby-value">46</span>,  <span class="ruby-constant">METHOD_NEITHER</span>, <span class="ruby-value">0</span>)
+103:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-FSCTL_SET_COMPRESSION"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">FSCTL_SET_COMPRESSION</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 93</span>
+93:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">FSCTL_SET_COMPRESSION</span> 
+94:          <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-constant">FILE_DEVICE_FILE_SYSTEM</span>, <span class="ruby-value">16</span>, <span class="ruby-constant">METHOD_BUFFERED</span>, <span class="ruby-value">3</span>)
+95:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-FSCTL_SET_SPARSE"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">FSCTL_SET_SPARSE</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 105</span>
+105:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">FSCTL_SET_SPARSE</span>
+106:          <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-constant">FILE_DEVICE_FILE_SYSTEM</span>, <span class="ruby-value">49</span>, <span class="ruby-constant">METHOD_BUFFERED</span>, <span class="ruby-value">0</span>)
+107:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-FSCTL_WRITE_USN_CLOSE_RECORD"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">FSCTL_WRITE_USN_CLOSE_RECORD</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 117</span>
+117:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">FSCTL_WRITE_USN_CLOSE_RECORD</span>
+118:          <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-constant">FILE_DEVICE_FILE_SYSTEM</span>, <span class="ruby-value">59</span>,  <span class="ruby-constant">METHOD_NEITHER</span>, <span class="ruby-value">0</span>)
+119:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-IOCTL_DISK_CREATE_DISK"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">IOCTL_DISK_CREATE_DISK</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 234</span>
+234:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">IOCTL_DISK_CREATE_DISK</span>
+235:          <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-constant">IOCTL_DISK_BASE</span>, <span class="ruby-value">0x0016</span>, <span class="ruby-constant">METHOD_BUFFERED</span>,
+236:             <span class="ruby-constant">FILE_READ_ACCESS</span> <span class="ruby-operator">|</span> <span class="ruby-constant">FILE_WRITE_ACCESS</span>
+237:          )
+238:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-IOCTL_DISK_FORMAT_TRACKS"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">IOCTL_DISK_FORMAT_TRACKS</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 160</span>
+160:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">IOCTL_DISK_FORMAT_TRACKS</span>
+161:          <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-constant">IOCTL_DISK_BASE</span>, <span class="ruby-value">0x0006</span>, <span class="ruby-constant">METHOD_BUFFERED</span>,
+162:             <span class="ruby-constant">FILE_READ_ACCESS</span> <span class="ruby-operator">|</span> <span class="ruby-constant">FILE_WRITE_ACCESS</span>
+163:          )
+164:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-IOCTL_DISK_FORMAT_TRACKS_EX"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">IOCTL_DISK_FORMAT_TRACKS_EX</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 184</span>
+184:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">IOCTL_DISK_FORMAT_TRACKS_EX</span>  
+185:          <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-constant">IOCTL_DISK_BASE</span>, <span class="ruby-value">0x000b</span>, <span class="ruby-constant">METHOD_BUFFERED</span>,
+186:             <span class="ruby-constant">FILE_READ_ACCESS</span> <span class="ruby-operator">|</span> <span class="ruby-constant">FILE_WRITE_ACCESS</span>
+187:          )
+188:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-IOCTL_DISK_GET_DRIVE_GEOMETRY"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">IOCTL_DISK_GET_DRIVE_GEOMETRY</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 133</span>
+133:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">IOCTL_DISK_GET_DRIVE_GEOMETRY</span>
+134:          <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-constant">IOCTL_DISK_BASE</span>, <span class="ruby-value">0x0000</span>, <span class="ruby-constant">METHOD_BUFFERED</span>, <span class="ruby-constant">FILE_ANY_ACCESS</span>)
+135:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-IOCTL_DISK_GET_DRIVE_GEOMETRY_EX"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">IOCTL_DISK_GET_DRIVE_GEOMETRY_EX</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 244</span>
+244:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">IOCTL_DISK_GET_DRIVE_GEOMETRY_EX</span>
+245:          <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-constant">IOCTL_DISK_BASE</span>, <span class="ruby-value">0x0028</span>, <span class="ruby-constant">METHOD_BUFFERED</span>, <span class="ruby-constant">FILE_ANY_ACCESS</span>)
+246:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-IOCTL_DISK_GET_DRIVE_LAYOUT"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">IOCTL_DISK_GET_DRIVE_LAYOUT</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 147</span>
+147:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">IOCTL_DISK_GET_DRIVE_LAYOUT</span>
+148:          <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-constant">IOCTL_DISK_BASE</span>, <span class="ruby-value">0x0003</span>, <span class="ruby-constant">METHOD_BUFFERED</span>, <span class="ruby-constant">FILE_READ_ACCESS</span>)
+149:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-IOCTL_DISK_GET_DRIVE_LAYOUT_EX"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">IOCTL_DISK_GET_DRIVE_LAYOUT_EX</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 224</span>
+224:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">IOCTL_DISK_GET_DRIVE_LAYOUT_EX</span>
+225:          <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-constant">IOCTL_DISK_BASE</span>, <span class="ruby-value">0x0014</span>, <span class="ruby-constant">METHOD_BUFFERED</span>, <span class="ruby-constant">FILE_ANY_ACCESS</span>)
+226:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-IOCTL_DISK_GET_LENGTH_INFO"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">IOCTL_DISK_GET_LENGTH_INFO</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 240</span>
+240:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">IOCTL_DISK_GET_LENGTH_INFO</span>
+241:          <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-constant">IOCTL_DISK_BASE</span>, <span class="ruby-value">0x0017</span>, <span class="ruby-constant">METHOD_BUFFERED</span>, <span class="ruby-constant">FILE_READ_ACCESS</span>)
+242:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-IOCTL_DISK_GET_PARTITION_INFO"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">IOCTL_DISK_GET_PARTITION_INFO</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 137</span>
+137:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">IOCTL_DISK_GET_PARTITION_INFO</span>
+138:          <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-constant">IOCTL_DISK_BASE</span>, <span class="ruby-value">0x0001</span>, <span class="ruby-constant">METHOD_BUFFERED</span>, <span class="ruby-constant">FILE_READ_ACCESS</span>)
+139:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-IOCTL_DISK_GET_PARTITION_INFO_EX"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">IOCTL_DISK_GET_PARTITION_INFO_EX</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 214</span>
+214:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">IOCTL_DISK_GET_PARTITION_INFO_EX</span>
+215:          <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-constant">IOCTL_DISK_BASE</span>, <span class="ruby-value">0x0012</span>, <span class="ruby-constant">METHOD_BUFFERED</span>, <span class="ruby-constant">FILE_ANY_ACCESS</span>)
+216:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-IOCTL_DISK_HISTOGRAM_DATA"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">IOCTL_DISK_HISTOGRAM_DATA</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 194</span>
+194:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">IOCTL_DISK_HISTOGRAM_DATA</span>
+195:          <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-constant">IOCTL_DISK_BASE</span>, <span class="ruby-value">0x000d</span>, <span class="ruby-constant">METHOD_BUFFERED</span>, <span class="ruby-constant">FILE_ANY_ACCESS</span>)
+196:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-IOCTL_DISK_HISTOGRAM_RESET"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">IOCTL_DISK_HISTOGRAM_RESET</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 198</span>
+198:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">IOCTL_DISK_HISTOGRAM_RESET</span>
+199:          <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-constant">IOCTL_DISK_BASE</span>, <span class="ruby-value">0x000e</span>, <span class="ruby-constant">METHOD_BUFFERED</span>, <span class="ruby-constant">FILE_ANY_ACCESS</span>)
+200:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-IOCTL_DISK_HISTOGRAM_STRUCTURE"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">IOCTL_DISK_HISTOGRAM_STRUCTURE</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 190</span>
+190:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">IOCTL_DISK_HISTOGRAM_STRUCTURE</span>  
+191:          <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-constant">IOCTL_DISK_BASE</span>, <span class="ruby-value">0x000c</span>, <span class="ruby-constant">METHOD_BUFFERED</span>, <span class="ruby-constant">FILE_ANY_ACCESS</span>)
+192:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-IOCTL_DISK_IS_WRITABLE"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">IOCTL_DISK_IS_WRITABLE</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 176</span>
+176:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">IOCTL_DISK_IS_WRITABLE</span>
+177:          <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-constant">IOCTL_DISK_BASE</span>, <span class="ruby-value">0x0009</span>, <span class="ruby-constant">METHOD_BUFFERED</span>, <span class="ruby-constant">FILE_ANY_ACCESS</span>)
+178:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-IOCTL_DISK_LOGGING"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">IOCTL_DISK_LOGGING</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 180</span>
+180:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">IOCTL_DISK_LOGGING</span>
+181:          <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-constant">IOCTL_DISK_BASE</span>, <span class="ruby-value">0x000a</span>, <span class="ruby-constant">METHOD_BUFFERED</span>, <span class="ruby-constant">FILE_ANY_ACCESS</span>)
+182:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-IOCTL_DISK_PERFORMANCE"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">IOCTL_DISK_PERFORMANCE</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 172</span>
+172:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">IOCTL_DISK_PERFORMANCE</span>
+173:          <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-constant">IOCTL_DISK_BASE</span>, <span class="ruby-value">0x0008</span>, <span class="ruby-constant">METHOD_BUFFERED</span>, <span class="ruby-constant">FILE_ANY_ACCESS</span>)
+174:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-IOCTL_DISK_PERFORMANCE_OFF"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">IOCTL_DISK_PERFORMANCE_OFF</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 210</span>
+210:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">IOCTL_DISK_PERFORMANCE_OFF</span>
+211:          <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-constant">IOCTL_DISK_BASE</span>, <span class="ruby-value">0x0018</span>, <span class="ruby-constant">METHOD_BUFFERED</span>, <span class="ruby-constant">FILE_ANY_ACCESS</span>)
+212:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-IOCTL_DISK_REASSIGN_BLOCKS"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">IOCTL_DISK_REASSIGN_BLOCKS</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 166</span>
+166:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">IOCTL_DISK_REASSIGN_BLOCKS</span>
+167:          <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-constant">IOCTL_DISK_BASE</span>, <span class="ruby-value">0x0007</span>, <span class="ruby-constant">METHOD_BUFFERED</span>,
+168:             <span class="ruby-constant">FILE_READ_ACCESS</span> <span class="ruby-operator">|</span> <span class="ruby-constant">FILE_WRITE_ACCESS</span>
+169:          )
+170:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-IOCTL_DISK_REQUEST_DATA"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">IOCTL_DISK_REQUEST_DATA</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 206</span>
+206:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">IOCTL_DISK_REQUEST_DATA</span>
+207:          <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-constant">IOCTL_DISK_BASE</span>, <span class="ruby-value">0x0010</span>, <span class="ruby-constant">METHOD_BUFFERED</span>, <span class="ruby-constant">FILE_ANY_ACCESS</span>)
+208:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-IOCTL_DISK_REQUEST_STRUCTURE"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">IOCTL_DISK_REQUEST_STRUCTURE</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 202</span>
+202:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">IOCTL_DISK_REQUEST_STRUCTURE</span>
+203:          <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-constant">IOCTL_DISK_BASE</span>, <span class="ruby-value">0x000f</span>, <span class="ruby-constant">METHOD_BUFFERED</span>, <span class="ruby-constant">FILE_ANY_ACCESS</span>)
+204:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-IOCTL_DISK_SET_DRIVE_LAYOUT"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">IOCTL_DISK_SET_DRIVE_LAYOUT</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 151</span>
+151:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">IOCTL_DISK_SET_DRIVE_LAYOUT</span>
+152:          <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-constant">IOCTL_DISK_BASE</span>, <span class="ruby-value">0x0004</span>, <span class="ruby-constant">METHOD_BUFFERED</span>,
+153:             <span class="ruby-constant">FILE_READ_ACCESS</span> <span class="ruby-operator">|</span> <span class="ruby-constant">FILE_WRITE_ACCESS</span>)
+154:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-IOCTL_DISK_SET_DRIVE_LAYOUT_EX"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">IOCTL_DISK_SET_DRIVE_LAYOUT_EX</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 228</span>
+228:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">IOCTL_DISK_SET_DRIVE_LAYOUT_EX</span>
+229:          <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-constant">IOCTL_DISK_BASE</span>, <span class="ruby-value">0x0015</span>, <span class="ruby-constant">METHOD_BUFFERED</span>,
+230:             <span class="ruby-constant">FILE_READ_ACCESS</span> <span class="ruby-operator">|</span> <span class="ruby-constant">FILE_WRITE_ACCESS</span>
+231:          )
+232:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-IOCTL_DISK_SET_PARTITION_INFO"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">IOCTL_DISK_SET_PARTITION_INFO</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 141</span>
+141:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">IOCTL_DISK_SET_PARTITION_INFO</span>
+142:          <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-constant">IOCTL_DISK_BASE</span>, <span class="ruby-value">0x0002</span>, <span class="ruby-constant">METHOD_BUFFERED</span>,
+143:             <span class="ruby-constant">FILE_READ_ACCESS</span> <span class="ruby-operator">|</span> <span class="ruby-constant">FILE_WRITE_ACCESS</span>
+144:          )
+145:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-IOCTL_DISK_SET_PARTITION_INFO_EX"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">IOCTL_DISK_SET_PARTITION_INFO_EX</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 218</span>
+218:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">IOCTL_DISK_SET_PARTITION_INFO_EX</span>
+219:          <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-constant">IOCTL_DISK_BASE</span>, <span class="ruby-value">0x0013</span>, <span class="ruby-constant">METHOD_BUFFERED</span>,
+220:             <span class="ruby-constant">FILE_READ_ACCESS</span> <span class="ruby-operator">|</span> <span class="ruby-constant">FILE_WRITE_ACCESS</span>
+221:          )
+222:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-IOCTL_DISK_VERIFY"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">IOCTL_DISK_VERIFY</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/device_io.rb, line 156</span>
+156:       <span class="ruby-keyword kw">def</span> <span class="ruby-constant">IOCTL_DISK_VERIFY</span>
+157:          <span class="ruby-constant">CTL_CODE</span>(<span class="ruby-constant">IOCTL_DISK_BASE</span>, <span class="ruby-value">0x0005</span>, <span class="ruby-constant">METHOD_BUFFERED</span>, <span class="ruby-constant">FILE_ANY_ACCESS</span>)
+158:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

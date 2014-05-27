@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: RAutomation::Adapter::MsUia::KeystrokeConverter</title>
+
+	<link rel="stylesheet" href="../../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../../index.html">Home</a>
+          <a href="../../../index.html#classes">Classes</a>
+          <a href="../../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../../lib/rautomation/adapter/ms_uia/keystroke_converter_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/rautomation/adapter/ms_uia/keystroke_converter.rb">lib/rautomation/adapter/ms_uia/keystroke_converter.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-convert">::convert</a></li>
+					
+					<li><a href="#method-c-convert_characters">::convert_characters</a></li>
+					
+					<li><a href="#method-c-convert_special_characters">::convert_special_characters</a></li>
+					
+					<li><a href="#method-c-in_upcase">::in_upcase</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../../RAutomation.html">RAutomation</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter.html">RAutomation::Adapter</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Autoit.html">RAutomation::Adapter::Autoit</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Autoit/Button.html">RAutomation::Adapter::Autoit::Button</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Autoit/Locators.html">RAutomation::Adapter::Autoit::Locators</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Autoit/Mouse.html">RAutomation::Adapter::Autoit::Mouse</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Autoit/TextField.html">RAutomation::Adapter::Autoit::TextField</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Autoit/Window.html">RAutomation::Adapter::Autoit::Window</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Helper.html">RAutomation::Adapter::Helper</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia.html">RAutomation::Adapter::MsUia</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/Button.html">RAutomation::Adapter::MsUia::Button</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/ButtonHelper.html">RAutomation::Adapter::MsUia::ButtonHelper</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/Checkbox.html">RAutomation::Adapter::MsUia::Checkbox</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/Constants.html">RAutomation::Adapter::MsUia::Constants</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/Control.html">RAutomation::Adapter::MsUia::Control</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/Functions.html">RAutomation::Adapter::MsUia::Functions</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/KeystrokeConverter.html">RAutomation::Adapter::MsUia::KeystrokeConverter</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/Label.html">RAutomation::Adapter::MsUia::Label</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/ListBox.html">RAutomation::Adapter::MsUia::ListBox</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/ListItem.html">RAutomation::Adapter::MsUia::ListItem</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/Locators.html">RAutomation::Adapter::MsUia::Locators</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/Radio.html">RAutomation::Adapter::MsUia::Radio</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/SelectList.html">RAutomation::Adapter::MsUia::SelectList</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/SelectList/SelectListOption.html">RAutomation::Adapter::MsUia::SelectList::SelectListOption</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/Table.html">RAutomation::Adapter::MsUia::Table</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/TextField.html">RAutomation::Adapter::MsUia::TextField</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/UiaDll.html">RAutomation::Adapter::MsUia::UiaDll</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/Window.html">RAutomation::Adapter::MsUia::Window</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32.html">RAutomation::Adapter::Win32</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Button.html">RAutomation::Adapter::Win32::Button</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/ButtonHelper.html">RAutomation::Adapter::Win32::ButtonHelper</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Checkbox.html">RAutomation::Adapter::Win32::Checkbox</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Constants.html">RAutomation::Adapter::Win32::Constants</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Control.html">RAutomation::Adapter::Win32::Control</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Functions.html">RAutomation::Adapter::Win32::Functions</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Keys.html">RAutomation::Adapter::Win32::Keys</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Label.html">RAutomation::Adapter::Win32::Label</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/ListBox.html">RAutomation::Adapter::Win32::ListBox</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Locators.html">RAutomation::Adapter::Win32::Locators</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Mouse.html">RAutomation::Adapter::Win32::Mouse</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Radio.html">RAutomation::Adapter::Win32::Radio</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/SelectList.html">RAutomation::Adapter::Win32::SelectList</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/SelectList/SelectListOption.html">RAutomation::Adapter::Win32::SelectList::SelectListOption</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Table.html">RAutomation::Adapter::Win32::Table</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/TextField.html">RAutomation::Adapter::Win32::TextField</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Window.html">RAutomation::Adapter::Win32::Window</a></li>
+				
+					<li><a href="../../../RAutomation/Button.html">RAutomation::Button</a></li>
+				
+					<li><a href="../../../RAutomation/ElementCollections.html">RAutomation::ElementCollections</a></li>
+				
+					<li><a href="../../../RAutomation/ElementCollections/UnsupportedLocatorException.html">RAutomation::ElementCollections::UnsupportedLocatorException</a></li>
+				
+					<li><a href="../../../RAutomation/TextField.html">RAutomation::TextField</a></li>
+				
+					<li><a href="../../../RAutomation/UnknownButtonException.html">RAutomation::UnknownButtonException</a></li>
+				
+					<li><a href="../../../RAutomation/UnknownElementException.html">RAutomation::UnknownElementException</a></li>
+				
+					<li><a href="../../../RAutomation/UnknownTextFieldException.html">RAutomation::UnknownTextFieldException</a></li>
+				
+					<li><a href="../../../RAutomation/UnknownWindowException.html">RAutomation::UnknownWindowException</a></li>
+				
+					<li><a href="../../../RAutomation/WaitHelper.html">RAutomation::WaitHelper</a></li>
+				
+					<li><a href="../../../RAutomation/WaitHelper/TimeoutError.html">RAutomation::WaitHelper::TimeoutError</a></li>
+				
+					<li><a href="../../../RAutomation/Window.html">RAutomation::Window</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">RAutomation::Adapter::MsUia::KeystrokeConverter</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="convert-method" class="method-detail ">
+				<a name="method-c-convert"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">convert</span><span
+						class="method-args">(str)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="convert-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rautomation/adapter/ms_uia/keystroke_converter.rb, line 8</span>
+ 8:           <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">convert</span>(<span class="ruby-identifier">str</span>)
+ 9:             <span class="ruby-identifier">special_characters</span> = <span class="ruby-value str">&quot;&quot;</span>
+10: 
+11:             <span class="ruby-identifier">str</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/([{}])/</span>).<span class="ruby-identifier">inject</span>([]) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">converted_keys</span>, <span class="ruby-identifier">str</span><span class="ruby-operator">|</span>
+12:               <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">str</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;}&quot;</span>
+13:                 <span class="ruby-identifier">converted_keys</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">convert_special_characters</span>(<span class="ruby-identifier">special_characters</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">str</span>)
+14:                 <span class="ruby-identifier">special_characters</span> = <span class="ruby-value str">&quot;&quot;</span>
+15:               <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">str</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;{&quot;</span> <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">special_characters</span>.<span class="ruby-identifier">empty?</span>
+16:                 <span class="ruby-identifier">special_characters</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">str</span>
+17:               <span class="ruby-keyword kw">else</span>
+18:                 <span class="ruby-identifier">converted_keys</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">convert_characters</span>(<span class="ruby-identifier">str</span>)
+19:               <span class="ruby-keyword kw">end</span>
+20:               <span class="ruby-identifier">converted_keys</span>
+21:             <span class="ruby-keyword kw">end</span>.<span class="ruby-identifier">flatten</span>
+22:           <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-class-method-details" class="method-section section">
+			<h3 class="section-header">Private Class Methods</h3>
+
+		
+			<div id="convert-characters-method" class="method-detail ">
+				<a name="method-c-convert_characters"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">convert_characters</span><span
+						class="method-args">(element)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="convert-characters-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/adapter/ms_uia/keystroke_converter.rb, line 61</span>
+ 61:           <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">convert_characters</span>(<span class="ruby-identifier">element</span>)
+ 62:             <span class="ruby-identifier">element</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp re">//</span>).<span class="ruby-identifier">inject</span>([]) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">chars</span>, <span class="ruby-identifier">char</span><span class="ruby-operator">|</span>
+ 63:               <span class="ruby-identifier">char_code</span> = <span class="ruby-identifier">char</span>.<span class="ruby-identifier">upcase</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-value str">&quot;c&quot;</span>)[<span class="ruby-value">0</span>]
+ 64:               <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">char</span>
+ 65:                 <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;!&quot;</span>
+ 66:                   <span class="ruby-identifier">chars</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">in_upcase</span>(<span class="ruby-value">49</span>)
+ 67:                 <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;@&quot;</span>
+ 68:                   <span class="ruby-identifier">chars</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">in_upcase</span>(<span class="ruby-value">50</span>)
+ 69:                 <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;\#&quot;</span>
+ 70:                   <span class="ruby-identifier">chars</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">in_upcase</span>(<span class="ruby-value">51</span>)
+ 71:                 <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;$&quot;</span>
+ 72:                   <span class="ruby-identifier">chars</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">in_upcase</span>(<span class="ruby-value">52</span>)
+ 73:                 <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;%&quot;</span>
+ 74:                   <span class="ruby-identifier">chars</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">in_upcase</span>(<span class="ruby-value">53</span>)
+ 75:                 <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;^&quot;</span>
+ 76:                   <span class="ruby-identifier">chars</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">in_upcase</span>(<span class="ruby-value">54</span>)
+ 77:                 <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;&amp;&quot;</span>
+ 78:                   <span class="ruby-identifier">chars</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">in_upcase</span>(<span class="ruby-value">55</span>)
+ 79:                 <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;*&quot;</span>
+ 80:                   <span class="ruby-identifier">chars</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">in_upcase</span>(<span class="ruby-value">56</span>)
+ 81:                 <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;(&quot;</span>
+ 82:                   <span class="ruby-identifier">chars</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">in_upcase</span>(<span class="ruby-value">57</span>)
+ 83:                 <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;)&quot;</span>
+ 84:                   <span class="ruby-identifier">chars</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">in_upcase</span>(<span class="ruby-value">48</span>)
+ 85:                 <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;\&quot;&quot;</span>
+ 86:                   <span class="ruby-identifier">chars</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">in_upcase</span>(<span class="ruby-value">0xDE</span>)
+ 87:                 <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;'&quot;</span>
+ 88:                   <span class="ruby-identifier">chars</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">0xDE</span>
+ 89:                 <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;/&quot;</span>
+ 90:                   <span class="ruby-identifier">chars</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">0xBF</span>
+ 91:                 <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;-&quot;</span>
+ 92:                   <span class="ruby-identifier">chars</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">0xBD</span>
+ 93:                 <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;,&quot;</span>
+ 94:                   <span class="ruby-identifier">chars</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">0xBC</span>
+ 95:                 <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;'&quot;</span>
+ 96:                   <span class="ruby-identifier">chars</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">0xDE</span>
+ 97:                 <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;&amp;&quot;</span>
+ 98:                   <span class="ruby-identifier">chars</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">in_upcase</span>(<span class="ruby-value">0x37</span>)
+ 99:                 <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;_&quot;</span>
+100:                   <span class="ruby-identifier">chars</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">in_upcase</span>(<span class="ruby-value">0xBD</span>)
+101:                 <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;&lt;&quot;</span>
+102:                   <span class="ruby-identifier">chars</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">in_upcase</span>(<span class="ruby-value">0xBC</span>)
+103:                 <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;&gt;&quot;</span>
+104:                   <span class="ruby-identifier">chars</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">in_upcase</span>(<span class="ruby-value">0xBE</span>)
+105:                 <span class="ruby-keyword kw">else</span>
+106:                   <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">char</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/[A-Z]/</span>
+107:                     <span class="ruby-identifier">chars</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">in_upcase</span>(<span class="ruby-identifier">char_code</span>)
+108:                   <span class="ruby-keyword kw">else</span>
+109:                     <span class="ruby-identifier">chars</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">char_code</span>
+110:                   <span class="ruby-keyword kw">end</span>
+111:               <span class="ruby-keyword kw">end</span>
+112:             <span class="ruby-keyword kw">end</span>
+113:           <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="convert-special-characters-method" class="method-detail ">
+				<a name="method-c-convert_special_characters"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">convert_special_characters</span><span
+						class="method-args">(chars)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="convert-special-characters-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rautomation/adapter/ms_uia/keystroke_converter.rb, line 26</span>
+26:           <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">convert_special_characters</span> <span class="ruby-identifier">chars</span>
+27:             <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">chars</span>.<span class="ruby-identifier">downcase</span>
+28:               <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;{tab}&quot;</span>
+29:                 <span class="ruby-constant">Constants</span><span class="ruby-operator">::</span><span class="ruby-constant">VK_TAB</span>
+30:               <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;{backspace}&quot;</span>
+31:                 <span class="ruby-constant">Constants</span><span class="ruby-operator">::</span><span class="ruby-constant">VK_BACK</span>
+32:               <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;{enter}&quot;</span>
+33:                 <span class="ruby-constant">Constants</span><span class="ruby-operator">::</span><span class="ruby-constant">VK_RETURN</span>
+34:               <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;{left}&quot;</span>
+35:                 <span class="ruby-constant">Constants</span><span class="ruby-operator">::</span><span class="ruby-constant">VK_LEFT</span>
+36:               <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;{right}&quot;</span>
+37:                 <span class="ruby-constant">Constants</span><span class="ruby-operator">::</span><span class="ruby-constant">VK_RIGHT</span>
+38:               <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;{down}&quot;</span>
+39:                 <span class="ruby-constant">Constants</span><span class="ruby-operator">::</span><span class="ruby-constant">VK_DOWN</span>
+40:               <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;{up}&quot;</span>
+41:                 <span class="ruby-constant">Constants</span><span class="ruby-operator">::</span><span class="ruby-constant">VK_UP</span>
+42:               <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;{home}&quot;</span>
+43:                 <span class="ruby-constant">Constants</span><span class="ruby-operator">::</span><span class="ruby-constant">VK_HOME</span>
+44:               <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;{end}&quot;</span>
+45:                 <span class="ruby-constant">Constants</span><span class="ruby-operator">::</span><span class="ruby-constant">VK_END</span>
+46:               <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;{delete}&quot;</span>
+47:                 <span class="ruby-constant">Constants</span><span class="ruby-operator">::</span><span class="ruby-constant">VK_DELETE</span>
+48:               <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;{pgdown}&quot;</span>
+49:                 <span class="ruby-constant">Constants</span><span class="ruby-operator">::</span><span class="ruby-constant">VK_NEXT</span>
+50:               <span class="ruby-keyword kw">when</span> <span class="ruby-value str">&quot;{pgup}&quot;</span>
+51:                 <span class="ruby-constant">Constants</span><span class="ruby-operator">::</span><span class="ruby-constant">VK_PRIOR</span>
+52:               <span class="ruby-keyword kw">else</span>
+53:                 <span class="ruby-comment cmt"># unsupported special tag, ignore the tag itself, but convert the</span>
+54:                 <span class="ruby-comment cmt"># characters inside the tag</span>
+55:                 <span class="ruby-identifier">convert_characters</span>(<span class="ruby-identifier">chars</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/[{}]/</span>, <span class="ruby-value str">&quot;&quot;</span>))
+56:             <span class="ruby-keyword kw">end</span>
+57:           <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="in-upcase-method" class="method-detail ">
+				<a name="method-c-in_upcase"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">in_upcase</span><span
+						class="method-args">(char_code)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="in-upcase-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/adapter/ms_uia/keystroke_converter.rb, line 115</span>
+115:           <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">in_upcase</span>(<span class="ruby-identifier">char_code</span>)
+116:             [<span class="ruby-constant">Constants</span><span class="ruby-operator">::</span><span class="ruby-constant">VK_LSHIFT</span>, <span class="ruby-identifier">char_code</span>]
+117:           <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

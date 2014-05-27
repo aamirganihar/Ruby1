@@ -1,0 +1,1209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+	<title>Class: RSpec::Mocks::AnyInstance::Recorder</title>
+
+	<link rel="stylesheet" href="../../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../../index.html">Home</a>
+          <a href="../../../index.html#classes">Classes</a>
+          <a href="../../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../../lib/rspec/mocks/any_instance/recorder_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/rspec/mocks/any_instance/recorder.rb">lib/rspec/mocks/any_instance/recorder.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-already_observing%3F">#already_observing?</a></li>
+					
+					<li><a href="#method-i-backup_method%21">#backup_method!</a></li>
+					
+					<li><a href="#method-i-build_alias_method_name">#build_alias_method_name</a></li>
+					
+					<li><a href="#method-i-instance_that_received">#instance_that_received</a></li>
+					
+					<li><a href="#method-i-mark_invoked%21">#mark_invoked!</a></li>
+					
+					<li><a href="#method-i-normalize_chain">#normalize_chain</a></li>
+					
+					<li><a href="#method-i-observe%21">#observe!</a></li>
+					
+					<li><a href="#method-i-playback%21">#playback!</a></li>
+					
+					<li><a href="#method-i-public_protected_or_private_method_defined%3F">#public_protected_or_private_method_defined?</a></li>
+					
+					<li><a href="#method-i-received_expected_message%21">#received_expected_message!</a></li>
+					
+					<li><a href="#method-i-remove_dummy_method%21">#remove_dummy_method!</a></li>
+					
+					<li><a href="#method-i-restore_method%21">#restore_method!</a></li>
+					
+					<li><a href="#method-i-restore_original_method%21">#restore_original_method!</a></li>
+					
+					<li><a href="#method-i-should_not_receive">#should_not_receive</a></li>
+					
+					<li><a href="#method-i-should_receive">#should_receive</a></li>
+					
+					<li><a href="#method-i-stop_all_observation%21">#stop_all_observation!</a></li>
+					
+					<li><a href="#method-i-stop_observing%21">#stop_observing!</a></li>
+					
+					<li><a href="#method-i-stub">#stub</a></li>
+					
+					<li><a href="#method-i-stub%21">#stub!</a></li>
+					
+					<li><a href="#method-i-stub_chain">#stub_chain</a></li>
+					
+					<li><a href="#method-i-unstub">#unstub</a></li>
+					
+					<li><a href="#method-i-verify">#verify</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../../RSpec.html">RSpec</a></li>
+				
+					<li><a href="../../../RSpec/Mocks.html">RSpec::Mocks</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/AmbiguousReturnError.html">RSpec::Mocks::AmbiguousReturnError</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/AnyInstance.html">RSpec::Mocks::AnyInstance</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/AnyInstance/Chain.html">RSpec::Mocks::AnyInstance::Chain</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/AnyInstance/ExpectationChain.html">RSpec::Mocks::AnyInstance::ExpectationChain</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/AnyInstance/MessageChains.html">RSpec::Mocks::AnyInstance::MessageChains</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/AnyInstance/NegativeExpectationChain.html">RSpec::Mocks::AnyInstance::NegativeExpectationChain</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/AnyInstance/PositiveExpectationChain.html">RSpec::Mocks::AnyInstance::PositiveExpectationChain</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/AnyInstance/Recorder.html">RSpec::Mocks::AnyInstance::Recorder</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/AnyInstance/StubChain.html">RSpec::Mocks::AnyInstance::StubChain</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/AnyInstance/StubChainChain.html">RSpec::Mocks::AnyInstance::StubChainChain</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/ArgumentListMatcher.html">RSpec::Mocks::ArgumentListMatcher</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/ArgumentMatchers.html">RSpec::Mocks::ArgumentMatchers</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/ArgumentMatchers/AnyArgMatcher.html">RSpec::Mocks::ArgumentMatchers::AnyArgMatcher</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/ArgumentMatchers/AnyArgsMatcher.html">RSpec::Mocks::ArgumentMatchers::AnyArgsMatcher</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/ArgumentMatchers/BooleanMatcher.html">RSpec::Mocks::ArgumentMatchers::BooleanMatcher</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/ArgumentMatchers/DuckTypeMatcher.html">RSpec::Mocks::ArgumentMatchers::DuckTypeMatcher</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/ArgumentMatchers/EqualityProxy.html">RSpec::Mocks::ArgumentMatchers::EqualityProxy</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/ArgumentMatchers/HashExcludingMatcher.html">RSpec::Mocks::ArgumentMatchers::HashExcludingMatcher</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/ArgumentMatchers/HashIncludingMatcher.html">RSpec::Mocks::ArgumentMatchers::HashIncludingMatcher</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/ArgumentMatchers/InstanceOf.html">RSpec::Mocks::ArgumentMatchers::InstanceOf</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/ArgumentMatchers/KindOf.html">RSpec::Mocks::ArgumentMatchers::KindOf</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/ArgumentMatchers/MatcherMatcher.html">RSpec::Mocks::ArgumentMatchers::MatcherMatcher</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/ArgumentMatchers/NoArgsMatcher.html">RSpec::Mocks::ArgumentMatchers::NoArgsMatcher</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/ArgumentMatchers/RegexpMatcher.html">RSpec::Mocks::ArgumentMatchers::RegexpMatcher</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/Constant.html">RSpec::Mocks::Constant</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/ConstantStubber.html">RSpec::Mocks::ConstantStubber</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/ConstantStubber/BaseStubber.html">RSpec::Mocks::ConstantStubber::BaseStubber</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/ConstantStubber/DefinedConstantReplacer.html">RSpec::Mocks::ConstantStubber::DefinedConstantReplacer</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/ConstantStubber/UndefinedConstantSetter.html">RSpec::Mocks::ConstantStubber::UndefinedConstantSetter</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/ErrorGenerator.html">RSpec::Mocks::ErrorGenerator</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/ExampleMethods.html">RSpec::Mocks::ExampleMethods</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/InstanceExec.html">RSpec::Mocks::InstanceExec</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/MessageExpectation.html">RSpec::Mocks::MessageExpectation</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/MethodDouble.html">RSpec::Mocks::MethodDouble</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/Methods.html">RSpec::Mocks::Methods</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/Mock.html">RSpec::Mocks::Mock</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/MockExpectationError.html">RSpec::Mocks::MockExpectationError</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/NegativeMessageExpectation.html">RSpec::Mocks::NegativeMessageExpectation</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/OrderGroup.html">RSpec::Mocks::OrderGroup</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/Proxy.html">RSpec::Mocks::Proxy</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/RecursiveConstMethods.html">RSpec::Mocks::RecursiveConstMethods</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/Serialization.html">RSpec::Mocks::Serialization</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/Serialization/YAML.html">RSpec::Mocks::Serialization::YAML</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/Space.html">RSpec::Mocks::Space</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/TestDouble.html">RSpec::Mocks::TestDouble</a></li>
+				
+					<li><a href="../../../RSpec/Mocks/Version.html">RSpec::Mocks::Version</a></li>
+				
+					<li><a href="../../../Marshal.html">Marshal</a></li>
+				
+					<li><a href="../../../Psych.html">Psych</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">RSpec::Mocks::AnyInstance::Recorder</h1>
+
+		<div id="description">
+			<p>
+Given a class `TheClass`, `TheClass.any_instance` returns a `Recorder`,
+which records stubs and message expectations for later playback on
+instances of `TheClass`.
+</p>
+<p>
+Further constraints are stored in instances of [Chain](<a
+href="Chain.html">Chain</a>).
+</p>
+<p>
+@see <a href="../AnyInstance.html">AnyInstance</a> @see <a
+href="Chain.html">Chain</a>
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="message-chains-attribute-method" class="method-detail">
+				<a name="message_chains"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">message_chains</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+@private
+</p>
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(klass)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rspec/mocks/any_instance/recorder.rb, line 16</span>
+16:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">klass</span>)
+17:           <span class="ruby-ivar">@message_chains</span> = <span class="ruby-constant">MessageChains</span>.<span class="ruby-identifier">new</span>
+18:           <span class="ruby-ivar">@observed_methods</span> = []
+19:           <span class="ruby-ivar">@played_methods</span> = {}
+20:           <span class="ruby-ivar">@klass</span> = <span class="ruby-identifier">klass</span>
+21:           <span class="ruby-ivar">@expectation_set</span> = <span class="ruby-keyword kw">false</span>
+22:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="instance-that-received-method" class="method-detail ">
+				<a name="method-i-instance_that_received"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">instance_that_received</span><span
+						class="method-args">(method_name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@private
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="instance-that-received-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rspec/mocks/any_instance/recorder.rb, line 108</span>
+108:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">instance_that_received</span>(<span class="ruby-identifier">method_name</span>)
+109:           <span class="ruby-ivar">@played_methods</span>[<span class="ruby-identifier">method_name</span>]
+110:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="playback--method" class="method-detail ">
+				<a name="method-i-playback%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">playback!</span><span
+						class="method-args">(instance, method_name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@private
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="playback--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rspec/mocks/any_instance/recorder.rb, line 100</span>
+100:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">playback!</span>(<span class="ruby-identifier">instance</span>, <span class="ruby-identifier">method_name</span>)
+101:           <span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Mocks</span><span class="ruby-operator">::</span><span class="ruby-identifier">space</span>.<span class="ruby-identifier">add</span>(<span class="ruby-identifier">instance</span>)
+102:           <span class="ruby-identifier">message_chains</span>.<span class="ruby-identifier">playback!</span>(<span class="ruby-identifier">instance</span>, <span class="ruby-identifier">method_name</span>)
+103:           <span class="ruby-ivar">@played_methods</span>[<span class="ruby-identifier">method_name</span>] = <span class="ruby-identifier">instance</span>
+104:           <span class="ruby-identifier">received_expected_message!</span>(<span class="ruby-identifier">method_name</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">message_chains</span>.<span class="ruby-identifier">has_expectation?</span>(<span class="ruby-identifier">method_name</span>)
+105:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="should-not-receive-method" class="method-detail ">
+				<a name="method-i-should_not_receive"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">should_not_receive</span><span
+						class="method-args">(method_name, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="should-not-receive-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rspec/mocks/any_instance/recorder.rb, line 62</span>
+62:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">should_not_receive</span>(<span class="ruby-identifier">method_name</span>, &amp;<span class="ruby-identifier">block</span>)
+63:           <span class="ruby-identifier">observe!</span>(<span class="ruby-identifier">method_name</span>)
+64:           <span class="ruby-identifier">message_chains</span>.<span class="ruby-identifier">add</span>(<span class="ruby-identifier">method_name</span>, <span class="ruby-constant">NegativeExpectationChain</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">method_name</span>, &amp;<span class="ruby-identifier">block</span>))
+65:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="should-receive-method" class="method-detail ">
+				<a name="method-i-should_receive"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">should_receive</span><span
+						class="method-args">(method_name, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Initializes the recording a message expectation to be played back against
+any instance of this object that invokes the submitted method.
+</p>
+<p>
+@see <a
+href="../Methods.html#method-i-should_receive">Methods#should_receive</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="should-receive-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rspec/mocks/any_instance/recorder.rb, line 56</span>
+56:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">should_receive</span>(<span class="ruby-identifier">method_name</span>, &amp;<span class="ruby-identifier">block</span>)
+57:           <span class="ruby-ivar">@expectation_set</span> = <span class="ruby-keyword kw">true</span>
+58:           <span class="ruby-identifier">observe!</span>(<span class="ruby-identifier">method_name</span>)
+59:           <span class="ruby-identifier">message_chains</span>.<span class="ruby-identifier">add</span>(<span class="ruby-identifier">method_name</span>, <span class="ruby-constant">PositiveExpectationChain</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">method_name</span>, &amp;<span class="ruby-identifier">block</span>))
+60:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="stop-all-observation--method" class="method-detail ">
+				<a name="method-i-stop_all_observation%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">stop_all_observation!</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@private
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="stop-all-observation--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rspec/mocks/any_instance/recorder.rb, line 95</span>
+95:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">stop_all_observation!</span>
+96:           <span class="ruby-ivar">@observed_methods</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">method_name</span><span class="ruby-operator">|</span> <span class="ruby-identifier">restore_method!</span>(<span class="ruby-identifier">method_name</span>)}
+97:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="stub-method" class="method-detail ">
+				<a name="method-i-stub"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">stub</span><span
+						class="method-args">(method_name_or_method_map, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Initializes the recording a stub to be played back against any instance of
+this object that invokes the submitted method.
+</p>
+<p>
+@see <a href="../Methods.html#method-i-stub">Methods#stub</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="stub-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rspec/mocks/any_instance/recorder.rb, line 28</span>
+28:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">stub</span>(<span class="ruby-identifier">method_name_or_method_map</span>, &amp;<span class="ruby-identifier">block</span>)
+29:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">method_name_or_method_map</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+30:             <span class="ruby-identifier">method_name_or_method_map</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">method_name</span>, <span class="ruby-identifier">return_value</span><span class="ruby-operator">|</span>
+31:               <span class="ruby-identifier">stub</span>(<span class="ruby-identifier">method_name</span>).<span class="ruby-identifier">and_return</span>(<span class="ruby-identifier">return_value</span>)
+32:             <span class="ruby-keyword kw">end</span>
+33:           <span class="ruby-keyword kw">else</span>
+34:             <span class="ruby-identifier">observe!</span>(<span class="ruby-identifier">method_name_or_method_map</span>)
+35:             <span class="ruby-identifier">message_chains</span>.<span class="ruby-identifier">add</span>(<span class="ruby-identifier">method_name_or_method_map</span>, <span class="ruby-constant">StubChain</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">method_name_or_method_map</span>, &amp;<span class="ruby-identifier">block</span>))
+36:           <span class="ruby-keyword kw">end</span>
+37:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="stub--method" class="method-detail ">
+				<a name="method-i-stub%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">stub!</span><span
+						class="method-args">(*)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@private
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="stub--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rspec/mocks/any_instance/recorder.rb, line 90</span>
+90:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">stub!</span>(*)
+91:           <span class="ruby-identifier">raise</span> <span class="ruby-value str">&quot;stub! is not supported on any_instance. Use stub instead.&quot;</span>
+92:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="stub-chain-method" class="method-detail ">
+				<a name="method-i-stub_chain"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">stub_chain</span><span
+						class="method-args">(*method_names_and_optional_return_values, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Initializes the recording a stub chain to be played back against any
+instance of this object that invokes the method matching the first
+argument.
+</p>
+<p>
+@see <a href="../Methods.html#method-i-stub_chain">Methods#stub_chain</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="stub-chain-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rspec/mocks/any_instance/recorder.rb, line 44</span>
+44:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">stub_chain</span>(*<span class="ruby-identifier">method_names_and_optional_return_values</span>, &amp;<span class="ruby-identifier">block</span>)
+45:           <span class="ruby-identifier">normalize_chain</span>(*<span class="ruby-identifier">method_names_and_optional_return_values</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">method_name</span>, <span class="ruby-identifier">args</span><span class="ruby-operator">|</span>
+46:             <span class="ruby-identifier">observe!</span>(<span class="ruby-identifier">method_name</span>)
+47:             <span class="ruby-identifier">message_chains</span>.<span class="ruby-identifier">add</span>(<span class="ruby-identifier">method_name</span>, <span class="ruby-constant">StubChainChain</span>.<span class="ruby-identifier">new</span>(*<span class="ruby-identifier">args</span>, &amp;<span class="ruby-identifier">block</span>))
+48:           <span class="ruby-keyword kw">end</span>
+49:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="unstub-method" class="method-detail ">
+				<a name="method-i-unstub"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">unstub</span><span
+						class="method-args">(method_name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Removes any previously recorded stubs, stub_chains or message expectations
+that use `method_name`.
+</p>
+<p>
+@see <a href="../Methods.html#method-i-unstub">Methods#unstub</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="unstub-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rspec/mocks/any_instance/recorder.rb, line 71</span>
+71:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">unstub</span>(<span class="ruby-identifier">method_name</span>)
+72:           <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@observed_methods</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">method_name</span>.<span class="ruby-identifier">to_sym</span>)
+73:             <span class="ruby-identifier">raise</span> <span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Mocks</span><span class="ruby-operator">::</span><span class="ruby-constant">MockExpectationError</span>, <span class="ruby-node">&quot;The method `#{method_name}` was not stubbed or was already unstubbed&quot;</span>
+74:           <span class="ruby-keyword kw">end</span>
+75:           <span class="ruby-identifier">message_chains</span>.<span class="ruby-identifier">remove_stub_chains_for!</span>(<span class="ruby-identifier">method_name</span>)
+76:           <span class="ruby-identifier">stop_observing!</span>(<span class="ruby-identifier">method_name</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">message_chains</span>.<span class="ruby-identifier">has_expectation?</span>(<span class="ruby-identifier">method_name</span>)
+77:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="verify-method" class="method-detail ">
+				<a name="method-i-verify"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">verify</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@api private
+</p>
+<p>
+Used internally to verify that message expectations have been fulfilled.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="verify-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rspec/mocks/any_instance/recorder.rb, line 83</span>
+83:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">verify</span>
+84:           <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@expectation_set</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">message_chains</span>.<span class="ruby-identifier">all_expectations_fulfilled?</span>
+85:             <span class="ruby-identifier">raise</span> <span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Mocks</span><span class="ruby-operator">::</span><span class="ruby-constant">MockExpectationError</span>, <span class="ruby-node">&quot;Exactly one instance should have received the following message(s) but didn't: #{message_chains.unfulfilled_expectations.sort.join(', ')}&quot;</span>
+86:           <span class="ruby-keyword kw">end</span>
+87:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="already-observing--method" class="method-detail ">
+				<a name="method-i-already_observing%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">already_observing?</span><span
+						class="method-args">(method_name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="already-observing--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rspec/mocks/any_instance/recorder.rb, line 168</span>
+168:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">already_observing?</span>(<span class="ruby-identifier">method_name</span>)
+169:           <span class="ruby-ivar">@observed_methods</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">method_name</span>)
+170:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="backup-method--method" class="method-detail ">
+				<a name="method-i-backup_method%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">backup_method!</span><span
+						class="method-args">(method_name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="backup-method--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rspec/mocks/any_instance/recorder.rb, line 152</span>
+152:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">backup_method!</span>(<span class="ruby-identifier">method_name</span>)
+153:           <span class="ruby-identifier">alias_method_name</span> = <span class="ruby-identifier">build_alias_method_name</span>(<span class="ruby-identifier">method_name</span>)
+154:           <span class="ruby-ivar">@klass</span>.<span class="ruby-identifier">class_eval</span> <span class="ruby-keyword kw">do</span>
+155:             <span class="ruby-identifier">alias_method</span> <span class="ruby-identifier">alias_method_name</span>, <span class="ruby-identifier">method_name</span>
+156:           <span class="ruby-keyword kw">end</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">public_protected_or_private_method_defined?</span>(<span class="ruby-identifier">method_name</span>)
+157:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="build-alias-method-name-method" class="method-detail ">
+				<a name="method-i-build_alias_method_name"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">build_alias_method_name</span><span
+						class="method-args">(method_name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="build-alias-method-name-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rspec/mocks/any_instance/recorder.rb, line 133</span>
+133:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">build_alias_method_name</span>(<span class="ruby-identifier">method_name</span>)
+134:           <span class="ruby-node">&quot;__#{method_name}_without_any_instance__&quot;</span>
+135:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="mark-invoked--method" class="method-detail ">
+				<a name="method-i-mark_invoked%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">mark_invoked!</span><span
+						class="method-args">(method_name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="mark-invoked--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rspec/mocks/any_instance/recorder.rb, line 184</span>
+184:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mark_invoked!</span>(<span class="ruby-identifier">method_name</span>)
+185:           <span class="ruby-identifier">backup_method!</span>(<span class="ruby-identifier">method_name</span>)
+186:           <span class="ruby-ivar">@klass</span>.<span class="ruby-identifier">class_eval</span>(<span class="ruby-value str">            def #{method_name}(*args, &amp;blk)              method_name = :#{method_name}              invoked_instance = self.class.__recorder.instance_that_received(method_name)              raise RSpec::Mocks::MockExpectationError, &quot;The message '#{method_name}' was received by \#{self.inspect} but has already been received by \#{invoked_instance}&quot;            end</span>, <span class="ruby-keyword kw">__FILE__</span>, <span class="ruby-keyword kw">__LINE__</span>)
+187:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="normalize-chain-method" class="method-detail ">
+				<a name="method-i-normalize_chain"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">normalize_chain</span><span
+						class="method-args">(*args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="normalize-chain-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rspec/mocks/any_instance/recorder.rb, line 114</span>
+114:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">normalize_chain</span>(*<span class="ruby-identifier">args</span>)
+115:           <span class="ruby-identifier">args</span>.<span class="ruby-identifier">shift</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">'.'</span>).<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">to_sym</span>}.<span class="ruby-identifier">reverse</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">a</span><span class="ruby-operator">|</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">unshift</span> <span class="ruby-identifier">a</span>}
+116:           <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">args</span>.<span class="ruby-identifier">first</span>, <span class="ruby-identifier">args</span>
+117:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="observe--method" class="method-detail ">
+				<a name="method-i-observe%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">observe!</span><span
+						class="method-args">(method_name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="observe--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rspec/mocks/any_instance/recorder.rb, line 172</span>
+172:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">observe!</span>(<span class="ruby-identifier">method_name</span>)
+173:           <span class="ruby-identifier">stop_observing!</span>(<span class="ruby-identifier">method_name</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">already_observing?</span>(<span class="ruby-identifier">method_name</span>)
+174:           <span class="ruby-ivar">@observed_methods</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">method_name</span>
+175:           <span class="ruby-identifier">backup_method!</span>(<span class="ruby-identifier">method_name</span>)
+176:           <span class="ruby-ivar">@klass</span>.<span class="ruby-identifier">class_eval</span>(<span class="ruby-value str">            def #{method_name}(*args, &amp;blk)              self.class.__recorder.playback!(self, :#{method_name})              self.__send__(:#{method_name}, *args, &amp;blk)            end</span>, <span class="ruby-keyword kw">__FILE__</span>, <span class="ruby-keyword kw">__LINE__</span>)
+177:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="public-protected-or-private-method-defined--method" class="method-detail ">
+				<a name="method-i-public_protected_or_private_method_defined%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">public_protected_or_private_method_defined?</span><span
+						class="method-args">(method_name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="public-protected-or-private-method-defined--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rspec/mocks/any_instance/recorder.rb, line 159</span>
+159:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">public_protected_or_private_method_defined?</span>(<span class="ruby-identifier">method_name</span>)
+160:           <span class="ruby-ivar">@klass</span>.<span class="ruby-identifier">method_defined?</span>(<span class="ruby-identifier">method_name</span>) <span class="ruby-operator">||</span> <span class="ruby-ivar">@klass</span>.<span class="ruby-identifier">private_method_defined?</span>(<span class="ruby-identifier">method_name</span>)
+161:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="received-expected-message--method" class="method-detail ">
+				<a name="method-i-received_expected_message%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">received_expected_message!</span><span
+						class="method-args">(method_name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="received-expected-message--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rspec/mocks/any_instance/recorder.rb, line 119</span>
+119:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">received_expected_message!</span>(<span class="ruby-identifier">method_name</span>)
+120:           <span class="ruby-identifier">message_chains</span>.<span class="ruby-identifier">received_expected_message!</span>(<span class="ruby-identifier">method_name</span>)
+121:           <span class="ruby-identifier">restore_method!</span>(<span class="ruby-identifier">method_name</span>)
+122:           <span class="ruby-identifier">mark_invoked!</span>(<span class="ruby-identifier">method_name</span>)
+123:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="remove-dummy-method--method" class="method-detail ">
+				<a name="method-i-remove_dummy_method%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">remove_dummy_method!</span><span
+						class="method-args">(method_name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="remove-dummy-method--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rspec/mocks/any_instance/recorder.rb, line 146</span>
+146:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">remove_dummy_method!</span>(<span class="ruby-identifier">method_name</span>)
+147:           <span class="ruby-ivar">@klass</span>.<span class="ruby-identifier">class_eval</span> <span class="ruby-keyword kw">do</span>
+148:             <span class="ruby-identifier">remove_method</span> <span class="ruby-identifier">method_name</span>
+149:           <span class="ruby-keyword kw">end</span>
+150:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="restore-method--method" class="method-detail ">
+				<a name="method-i-restore_method%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">restore_method!</span><span
+						class="method-args">(method_name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="restore-method--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rspec/mocks/any_instance/recorder.rb, line 125</span>
+125:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">restore_method!</span>(<span class="ruby-identifier">method_name</span>)
+126:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">public_protected_or_private_method_defined?</span>(<span class="ruby-identifier">build_alias_method_name</span>(<span class="ruby-identifier">method_name</span>))
+127:             <span class="ruby-identifier">restore_original_method!</span>(<span class="ruby-identifier">method_name</span>)
+128:           <span class="ruby-keyword kw">else</span>
+129:             <span class="ruby-identifier">remove_dummy_method!</span>(<span class="ruby-identifier">method_name</span>)
+130:           <span class="ruby-keyword kw">end</span>
+131:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="restore-original-method--method" class="method-detail ">
+				<a name="method-i-restore_original_method%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">restore_original_method!</span><span
+						class="method-args">(method_name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="restore-original-method--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rspec/mocks/any_instance/recorder.rb, line 137</span>
+137:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">restore_original_method!</span>(<span class="ruby-identifier">method_name</span>)
+138:           <span class="ruby-identifier">alias_method_name</span> = <span class="ruby-identifier">build_alias_method_name</span>(<span class="ruby-identifier">method_name</span>)
+139:           <span class="ruby-ivar">@klass</span>.<span class="ruby-identifier">class_eval</span> <span class="ruby-keyword kw">do</span>
+140:             <span class="ruby-identifier">remove_method</span> <span class="ruby-identifier">method_name</span>
+141:             <span class="ruby-identifier">alias_method</span>  <span class="ruby-identifier">method_name</span>, <span class="ruby-identifier">alias_method_name</span>
+142:             <span class="ruby-identifier">remove_method</span> <span class="ruby-identifier">alias_method_name</span>
+143:           <span class="ruby-keyword kw">end</span>
+144:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="stop-observing--method" class="method-detail ">
+				<a name="method-i-stop_observing%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">stop_observing!</span><span
+						class="method-args">(method_name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="stop-observing--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rspec/mocks/any_instance/recorder.rb, line 163</span>
+163:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">stop_observing!</span>(<span class="ruby-identifier">method_name</span>)
+164:           <span class="ruby-identifier">restore_method!</span>(<span class="ruby-identifier">method_name</span>)
+165:           <span class="ruby-ivar">@observed_methods</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">method_name</span>)
+166:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

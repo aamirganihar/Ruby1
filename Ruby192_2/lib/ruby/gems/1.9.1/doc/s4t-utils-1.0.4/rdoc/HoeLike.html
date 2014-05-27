@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: HoeLike</title>
+
+	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="./lib/s4t-utils/hoelike_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/s4t-utils/hoelike.rb">lib/s4t-utils/hoelike.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-pull">#pull</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="./History_txt.html">History.txt</a></li>
+				
+					<li class="file"><a href="./LICENSE_txt.html">LICENSE.txt</a></li>
+				
+					<li class="file"><a href="./Manifest_txt.html">Manifest.txt</a></li>
+				
+					<li class="file"><a href="./NOTES_txt.html">NOTES.txt</a></li>
+				
+					<li class="file"><a href="./README_txt.html">README.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./S4tUtils.html">S4tUtils</a></li>
+				
+					<li><a href="./S4tUtils/ArgForwarder.html">S4tUtils::ArgForwarder</a></li>
+				
+					<li><a href="./Test.html">Test</a></li>
+				
+					<li><a href="./Test/Unit.html">Test::Unit</a></li>
+				
+					<li><a href="./Test/Unit/Assertions.html">Test::Unit::Assertions</a></li>
+				
+					<li><a href="./HoeLike.html">HoeLike</a></li>
+				
+					<li><a href="./String.html">String</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">HoeLike</h1>
+
+		<div id="description">
+			<p>
+<a href="HoeLike.html">HoeLike</a> is intended to be used with the Hoe gem.
+It adds some  Rake tasks.
+</p>
+<ul>
+<li><p>
+slow: Runs tests whose filenames are &#8217;*-slowtests.rb&#8216;
+</p>
+</li>
+<li><p>
+fast: Runs all tests, skipping slow tests.
+</p>
+</li>
+<li><p>
+upload_pages: copy website pages up to Rubyforge
+</p>
+</li>
+<li><p>
+export_and_upload_pages: upload_pages without any garbage or .svn files
+lying around.
+</p>
+</li>
+<li><p>
+tag_release: Make a Subversion tag called rel-X.Y.Z. Release number is
+gotten from lib/name/version.rb.
+</p>
+</li>
+<li><p>
+export: export entire project to pristine temp directory.
+</p>
+</li>
+<li><p>
+release_everything: Release code, rdoc, and website to rubyforge.
+</p>
+</li>
+</ul>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(keys)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/s4t-utils/hoelike.rb, line 40</span>
+ 40:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">keys</span>)
+ 41:     <span class="ruby-ivar">@keys</span> = <span class="ruby-identifier">keys</span>
+ 42:     <span class="ruby-identifier">project</span> = <span class="ruby-identifier">pull</span>(<span class="ruby-value">:project</span>)
+ 43:     <span class="ruby-identifier">this_release</span> = <span class="ruby-identifier">pull</span>(<span class="ruby-value">:this_release</span>)
+ 44:     <span class="ruby-identifier">login</span> = <span class="ruby-identifier">pull</span>(<span class="ruby-value">:login</span>)
+ 45:     <span class="ruby-identifier">web_site_root</span> = <span class="ruby-identifier">pull</span>(<span class="ruby-value">:web_site_root</span>)
+ 46:     <span class="ruby-identifier">export_root</span> = <span class="ruby-identifier">pull</span>(<span class="ruby-value">:export_root</span>)
+ 47:     
+ 48:     <span class="ruby-identifier">root</span> = <span class="ruby-node">&quot;svn+ssh://#{login}/var/svn/#{project}&quot;</span>
+ 49:     <span class="ruby-identifier">project_exports</span> = <span class="ruby-node">&quot;#{export_root}/#{project}&quot;</span>
+ 50:     
+ 51:     <span class="ruby-identifier">desc</span> <span class="ruby-value str">&quot;Run fast tests.&quot;</span>
+ 52:     <span class="ruby-identifier">task</span> <span class="ruby-value str">'fast'</span> <span class="ruby-keyword kw">do</span>
+ 53:       <span class="ruby-constant">S4tUtils</span>.<span class="ruby-identifier">run_particular_tests</span>(<span class="ruby-value str">'test'</span>, <span class="ruby-value str">'fast'</span>)
+ 54:     <span class="ruby-keyword kw">end</span>
+ 55:     
+ 56:     <span class="ruby-identifier">desc</span> <span class="ruby-value str">&quot;Run slow tests.&quot;</span>
+ 57:     <span class="ruby-identifier">task</span> <span class="ruby-value str">'slow'</span> <span class="ruby-keyword kw">do</span>
+ 58:       <span class="ruby-constant">S4tUtils</span>.<span class="ruby-identifier">run_particular_tests</span>(<span class="ruby-value str">'test'</span>, <span class="ruby-value str">'slow'</span>)
+ 59:     <span class="ruby-keyword kw">end</span>
+ 60:     
+ 61:     <span class="ruby-identifier">desc</span> <span class="ruby-value str">&quot;Upload all the web pages (as part of release)&quot;</span>
+ 62:     <span class="ruby-identifier">task</span> <span class="ruby-value str">'upload_pages'</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">task</span> <span class="ruby-operator">|</span>
+ 63:       <span class="ruby-identifier">assert_in</span>(<span class="ruby-identifier">project_exports</span>, <span class="ruby-identifier">task</span>.<span class="ruby-identifier">name</span>)
+ 64:       <span class="ruby-identifier">exec</span> = <span class="ruby-node">&quot;scp -r #{web_site_root}/* #{login}:/var/www/gforge-projects/#{project}/&quot;</span>
+ 65:       <span class="ruby-identifier">puts</span> <span class="ruby-identifier">exec</span>
+ 66:       <span class="ruby-identifier">system</span>(<span class="ruby-identifier">exec</span>)
+ 67:     <span class="ruby-keyword kw">end</span>
+ 68:     
+ 69:     <span class="ruby-identifier">desc</span> <span class="ruby-value str">&quot;Upload all the web pages (not as part of release)&quot;</span>
+ 70:     <span class="ruby-identifier">task</span> <span class="ruby-value str">'export_and_upload_pages'</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'export'</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">task</span> <span class="ruby-operator">|</span>
+ 71:       <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">chdir</span>(<span class="ruby-identifier">project_exports</span>) <span class="ruby-keyword kw">do</span>
+ 72:         <span class="ruby-identifier">exec</span> = <span class="ruby-node">&quot;scp -r #{web_site_root}/* #{login}:/var/www/gforge-projects/#{project}/&quot;</span>
+ 73:         <span class="ruby-identifier">puts</span> <span class="ruby-identifier">exec</span>
+ 74:         <span class="ruby-identifier">system</span>(<span class="ruby-identifier">exec</span>)
+ 75:       <span class="ruby-keyword kw">end</span>
+ 76:     <span class="ruby-keyword kw">end</span>
+ 77: 
+ 78:     <span class="ruby-identifier">desc</span> <span class="ruby-value str">&quot;Tag release with current version.&quot;</span>
+ 79:     <span class="ruby-identifier">task</span> <span class="ruby-value str">'tag_release'</span> <span class="ruby-keyword kw">do</span>
+ 80:       <span class="ruby-identifier">from</span> = <span class="ruby-node">&quot;#{root}/trunk&quot;</span>
+ 81:       <span class="ruby-identifier">to</span> = <span class="ruby-node">&quot;#{root}/tags/rel-#{this_release}&quot;</span>
+ 82:       <span class="ruby-identifier">message</span> = <span class="ruby-node">&quot;Release #{this_release}&quot;</span>
+ 83:       <span class="ruby-identifier">exec</span> = <span class="ruby-node">&quot;svn copy -m '#{message}' #{from} #{to}&quot;</span>
+ 84:       <span class="ruby-identifier">puts</span> <span class="ruby-identifier">exec</span>
+ 85:       <span class="ruby-identifier">system</span>(<span class="ruby-identifier">exec</span>)
+ 86:     <span class="ruby-keyword kw">end</span>
+ 87:     
+ 88:     <span class="ruby-identifier">desc</span> <span class="ruby-node">&quot;Export to #{project_exports}&quot;</span>
+ 89:     <span class="ruby-identifier">task</span> <span class="ruby-value str">'export'</span> <span class="ruby-keyword kw">do</span> 
+ 90:       <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">chdir</span>(<span class="ruby-identifier">export_root</span>) <span class="ruby-keyword kw">do</span>
+ 91:         <span class="ruby-identifier">rm_rf</span> <span class="ruby-identifier">project</span>
+ 92:         <span class="ruby-identifier">exec</span> = <span class="ruby-node">&quot;svn export #{root}/trunk #{project}&quot;</span>
+ 93:         <span class="ruby-identifier">puts</span> <span class="ruby-identifier">exec</span>
+ 94:         <span class="ruby-identifier">system</span> <span class="ruby-identifier">exec</span>
+ 95:       <span class="ruby-keyword kw">end</span>
+ 96:     <span class="ruby-keyword kw">end</span>
+ 97:     
+ 98: 
+ 99:     <span class="ruby-identifier">desc</span> <span class="ruby-value str">&quot;Complete release of everything - asks for confirmation after steps&quot;</span>
+100:     <span class="ruby-comment cmt"># Because in Ruby 1.8.6, Rake doesn't notice subtask failures, so it</span>
+101:     <span class="ruby-comment cmt"># won't stop for us.</span>
+102:     <span class="ruby-identifier">task</span> <span class="ruby-value str">'release_everything'</span> <span class="ruby-keyword kw">do</span>  
+103:       <span class="ruby-identifier">confirmed_step</span> <span class="ruby-value str">'check_manifest'</span>
+104:       <span class="ruby-identifier">confirmed_step</span> <span class="ruby-value str">'export'</span>
+105:       <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">chdir</span>(<span class="ruby-identifier">project_exports</span>) <span class="ruby-keyword kw">do</span>
+106:         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Working in #{Dir.pwd}&quot;</span>
+107:         <span class="ruby-identifier">confirmed_step</span> <span class="ruby-value str">'test'</span>
+108:         <span class="ruby-identifier">confirmed_step</span> <span class="ruby-value str">'upload_pages'</span>
+109:         <span class="ruby-identifier">confirmed_step</span> <span class="ruby-value str">'publish_docs'</span>
+110:         <span class="ruby-constant">ENV</span>[<span class="ruby-value str">'VERSION'</span>] = <span class="ruby-identifier">this_release</span>
+111:         <span class="ruby-identifier">confirmed_step</span> <span class="ruby-value str">'release'</span>
+112:       <span class="ruby-keyword kw">end</span>
+113:       <span class="ruby-identifier">confirmed_step</span> <span class="ruby-value str">'tag_release'</span>
+114:     <span class="ruby-keyword kw">end</span>
+115: 
+116:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="pull-method" class="method-detail ">
+				<a name="method-i-pull"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">pull</span><span
+						class="method-args">(key)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="pull-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/s4t-utils/hoelike.rb, line 120</span>
+120:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pull</span>(<span class="ruby-identifier">key</span>)
+121:     <span class="ruby-ivar">@keys</span>[<span class="ruby-identifier">key</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">raise</span>(<span class="ruby-node">&quot;Missing key #{key.inspect}&quot;</span>)
+122:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+
