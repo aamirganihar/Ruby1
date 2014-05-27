@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Win32::Screenshot::BitmapMaker</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/win32/screenshot/bitmap_maker_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/win32/screenshot/bitmap_maker.rb">lib/win32/screenshot/bitmap_maker.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-capture_all">::capture_all</a></li>
+					
+					<li><a href="#method-c-capture_area">::capture_area</a></li>
+					
+					<li><a href="#method-c-dimensions_for">::dimensions_for</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../Win32.html">Win32</a></li>
+				
+					<li><a href="../../Win32/Screenshot.html">Win32::Screenshot</a></li>
+				
+					<li><a href="../../Win32/Screenshot/BitmapMaker.html">Win32::Screenshot::BitmapMaker</a></li>
+				
+					<li><a href="../../Win32/Screenshot/Image.html">Win32::Screenshot::Image</a></li>
+				
+					<li><a href="../../Win32/Screenshot/Take.html">Win32::Screenshot::Take</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Win32::Screenshot::BitmapMaker</h1>
+
+		<div id="description">
+			<p>
+@private This is an internal class for taking the actual screenshots and
+not part of a public API.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="SRCCOPY">SRCCOPY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DIB_RGB_COLORS">DIB_RGB_COLORS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="capture-all-method" class="method-detail ">
+				<a name="method-c-capture_all"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">capture_all</span><span
+						class="method-args">(hwnd, context)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="capture-all-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/win32/screenshot/bitmap_maker.rb, line 44</span>
+44:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">capture_all</span>(<span class="ruby-identifier">hwnd</span>, <span class="ruby-identifier">context</span>)
+45:           <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span> = <span class="ruby-identifier">dimensions_for</span>(<span class="ruby-identifier">hwnd</span>, <span class="ruby-identifier">context</span>)
+46:           <span class="ruby-identifier">capture_area</span>(<span class="ruby-identifier">hwnd</span>, <span class="ruby-identifier">context</span>, <span class="ruby-value">0</span>, <span class="ruby-value">0</span>, <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>)
+47:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="capture-area-method" class="method-detail ">
+				<a name="method-c-capture_area"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">capture_area</span><span
+						class="method-args">(hwnd, context, x1, y1, x2, y2)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="capture-area-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/win32/screenshot/bitmap_maker.rb, line 52</span>
+52:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">capture_area</span>(<span class="ruby-identifier">hwnd</span>, <span class="ruby-identifier">context</span>, <span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-identifier">x2</span>, <span class="ruby-identifier">y2</span>)
+53:           <span class="ruby-identifier">hScreenDC</span> = <span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{context}_dc&quot;</span>, <span class="ruby-identifier">hwnd</span>)
+54:           <span class="ruby-identifier">w</span> = <span class="ruby-identifier">x2</span><span class="ruby-operator">-</span><span class="ruby-identifier">x1</span>
+55:           <span class="ruby-identifier">h</span> = <span class="ruby-identifier">y2</span><span class="ruby-operator">-</span><span class="ruby-identifier">y1</span>
+56: 
+57:           <span class="ruby-identifier">hmemDC</span> = <span class="ruby-identifier">create_compatible_dc</span>(<span class="ruby-identifier">hScreenDC</span>)
+58:           <span class="ruby-identifier">hmemBM</span> = <span class="ruby-identifier">create_compatible_bitmap</span>(<span class="ruby-identifier">hScreenDC</span>, <span class="ruby-identifier">w</span>, <span class="ruby-identifier">h</span>)
+59:           <span class="ruby-identifier">select_object</span>(<span class="ruby-identifier">hmemDC</span>, <span class="ruby-identifier">hmemBM</span>)
+60:           <span class="ruby-identifier">bit_blt</span>(<span class="ruby-identifier">hmemDC</span>, <span class="ruby-value">0</span>, <span class="ruby-value">0</span>, <span class="ruby-identifier">w</span>, <span class="ruby-identifier">h</span>, <span class="ruby-identifier">hScreenDC</span>, <span class="ruby-identifier">x1</span>, <span class="ruby-identifier">y1</span>, <span class="ruby-constant">SRCCOPY</span>)
+61:           <span class="ruby-identifier">bitmap_size</span> = <span class="ruby-identifier">w</span> * <span class="ruby-identifier">h</span> * <span class="ruby-value">3</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">w</span> <span class="ruby-operator">%</span> <span class="ruby-value">4</span> * <span class="ruby-identifier">h</span>
+62:           <span class="ruby-identifier">lpvpxldata</span> = <span class="ruby-constant">FFI</span><span class="ruby-operator">::</span><span class="ruby-constant">MemoryPointer</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">bitmap_size</span>)
+63: 
+64:           <span class="ruby-comment cmt"># Bitmap header</span>
+65:           <span class="ruby-comment cmt"># http://www.fortunecity.com/skyscraper/windows/364/bmpffrmt.html</span>
+66:           <span class="ruby-identifier">bmInfo</span> = [<span class="ruby-value">40</span>, <span class="ruby-identifier">w</span>, <span class="ruby-identifier">h</span>, <span class="ruby-value">1</span>, <span class="ruby-value">24</span>, <span class="ruby-value">0</span>, <span class="ruby-value">0</span>, <span class="ruby-value">0</span>, <span class="ruby-value">0</span>, <span class="ruby-value">0</span>, <span class="ruby-value">0</span>, <span class="ruby-value">0</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-value str">'L3S2L6'</span>)
+67:           <span class="ruby-identifier">di_bits</span>(<span class="ruby-identifier">hmemDC</span>, <span class="ruby-identifier">hmemBM</span>, <span class="ruby-value">0</span>, <span class="ruby-identifier">h</span>, <span class="ruby-identifier">lpvpxldata</span>, <span class="ruby-identifier">bmInfo</span>, <span class="ruby-constant">DIB_RGB_COLORS</span>)
+68: 
+69:           <span class="ruby-identifier">bmFileHeader</span> = [
+70:                   <span class="ruby-value">19778</span>,
+71:                   <span class="ruby-identifier">bitmap_size</span> <span class="ruby-operator">+</span> <span class="ruby-value">40</span> <span class="ruby-operator">+</span> <span class="ruby-value">14</span>,
+72:                   <span class="ruby-value">0</span>,
+73:                   <span class="ruby-value">0</span>,
+74:                   <span class="ruby-value">54</span>
+75:           ].<span class="ruby-identifier">pack</span>(<span class="ruby-value str">'SLSSL'</span>)
+76: 
+77:           <span class="ruby-constant">Image</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">bmFileHeader</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">bmInfo</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">lpvpxldata</span>.<span class="ruby-identifier">read_string</span>(<span class="ruby-identifier">bitmap_size</span>), <span class="ruby-identifier">w</span>, <span class="ruby-identifier">h</span>)
+78:         <span class="ruby-keyword kw">ensure</span>
+79:           <span class="ruby-identifier">lpvpxldata</span>.<span class="ruby-identifier">free</span>
+80:           <span class="ruby-identifier">delete_object</span>(<span class="ruby-identifier">hmemBM</span>)
+81:           <span class="ruby-identifier">delete_dc</span>(<span class="ruby-identifier">hmemDC</span>)
+82:           <span class="ruby-identifier">release_dc</span>(<span class="ruby-value">0</span>, <span class="ruby-identifier">hScreenDC</span>)
+83:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="dimensions-for-method" class="method-detail ">
+				<a name="method-c-dimensions_for"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">dimensions_for</span><span
+						class="method-args">(hwnd, context)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="dimensions-for-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/win32/screenshot/bitmap_maker.rb, line 85</span>
+85:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">dimensions_for</span>(<span class="ruby-identifier">hwnd</span>, <span class="ruby-identifier">context</span>)
+86:           <span class="ruby-identifier">rect</span> = [<span class="ruby-value">0</span>, <span class="ruby-value">0</span>, <span class="ruby-value">0</span>, <span class="ruby-value">0</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-value str">'l4'</span>)
+87:           <span class="ruby-constant">BitmapMaker</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{context}_rect&quot;</span>, <span class="ruby-identifier">hwnd</span>.<span class="ruby-identifier">to_i</span>, <span class="ruby-identifier">rect</span>)
+88:           <span class="ruby-identifier">left</span>, <span class="ruby-identifier">top</span>, <span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span> = <span class="ruby-identifier">rect</span>.<span class="ruby-identifier">unpack</span>(<span class="ruby-value str">'l4'</span>)
+89: 
+90:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">context</span> <span class="ruby-operator">==</span> <span class="ruby-value">:window</span>
+91:             [<span class="ruby-identifier">width</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">left</span>, <span class="ruby-identifier">height</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">top</span>]
+92:           <span class="ruby-keyword kw">else</span>
+93:             [<span class="ruby-identifier">width</span>, <span class="ruby-identifier">height</span>]
+94:           <span class="ruby-keyword kw">end</span>
+95:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

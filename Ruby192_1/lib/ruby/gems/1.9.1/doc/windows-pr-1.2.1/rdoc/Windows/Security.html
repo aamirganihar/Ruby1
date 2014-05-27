@@ -1,0 +1,1924 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Windows::Security</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/windows/security/authentication_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/windows/security/authentication.rb">lib/windows/security/authentication.rb</a></li>
+					
+						<li><a href="../lib/windows/security_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/windows/security.rb">lib/windows/security.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+			<div id="namespace-list-section" class="section">
+				<h3 class="section-header">Namespace</h3>
+				<ul class="link-list">
+					
+					<li><span class="type">MODULE</span> <a href="Security/Authentication.html">Windows::Security::Authentication</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Method Quickref -->
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../CHANGES.html">CHANGES</a></li>
+				
+					<li class="file"><a href="../MANIFEST.html">MANIFEST</a></li>
+				
+					<li class="file"><a href="../README.html">README</a></li>
+				
+					<li class="file"><a href="../doc/conversion_guide_txt.html">conversion_guide.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Windows.html">Windows</a></li>
+				
+					<li><a href="../Windows/COM.html">Windows::COM</a></li>
+				
+					<li><a href="../Windows/COM/Accessibility.html">Windows::COM::Accessibility</a></li>
+				
+					<li><a href="../Windows/COM/Automation.html">Windows::COM::Automation</a></li>
+				
+					<li><a href="../Windows/COM/Variant.html">Windows::COM::Variant</a></li>
+				
+					<li><a href="../Windows/Clipboard.html">Windows::Clipboard</a></li>
+				
+					<li><a href="../Windows/Console.html">Windows::Console</a></li>
+				
+					<li><a href="../Windows/Debug.html">Windows::Debug</a></li>
+				
+					<li><a href="../Windows/DeviceIO.html">Windows::DeviceIO</a></li>
+				
+					<li><a href="../Windows/Directory.html">Windows::Directory</a></li>
+				
+					<li><a href="../Windows/Error.html">Windows::Error</a></li>
+				
+					<li><a href="../Windows/EventLog.html">Windows::EventLog</a></li>
+				
+					<li><a href="../Windows/File.html">Windows::File</a></li>
+				
+					<li><a href="../Windows/FileMapping.html">Windows::FileMapping</a></li>
+				
+					<li><a href="../Windows/FileSystem.html">Windows::FileSystem</a></li>
+				
+					<li><a href="../Windows/GDI.html">Windows::GDI</a></li>
+				
+					<li><a href="../Windows/GDI/Bitmap.html">Windows::GDI::Bitmap</a></li>
+				
+					<li><a href="../Windows/GDI/DeviceContext.html">Windows::GDI::DeviceContext</a></li>
+				
+					<li><a href="../Windows/GDI/MetaFile.html">Windows::GDI::MetaFile</a></li>
+				
+					<li><a href="../Windows/GDI/PaintingDrawing.html">Windows::GDI::PaintingDrawing</a></li>
+				
+					<li><a href="../Windows/Handle.html">Windows::Handle</a></li>
+				
+					<li><a href="../Windows/Library.html">Windows::Library</a></li>
+				
+					<li><a href="../Windows/Limits.html">Windows::Limits</a></li>
+				
+					<li><a href="../Windows/MSVCRT.html">Windows::MSVCRT</a></li>
+				
+					<li><a href="../Windows/MSVCRT/Buffer.html">Windows::MSVCRT::Buffer</a></li>
+				
+					<li><a href="../Windows/MSVCRT/Directory.html">Windows::MSVCRT::Directory</a></li>
+				
+					<li><a href="../Windows/MSVCRT/File.html">Windows::MSVCRT::File</a></li>
+				
+					<li><a href="../Windows/MSVCRT/IO.html">Windows::MSVCRT::IO</a></li>
+				
+					<li><a href="../Windows/MSVCRT/String.html">Windows::MSVCRT::String</a></li>
+				
+					<li><a href="../Windows/MSVCRT/Time.html">Windows::MSVCRT::Time</a></li>
+				
+					<li><a href="../Windows/Mailslot.html">Windows::Mailslot</a></li>
+				
+					<li><a href="../Windows/Memory.html">Windows::Memory</a></li>
+				
+					<li><a href="../Windows/NIO.html">Windows::NIO</a></li>
+				
+					<li><a href="../Windows/NTFS.html">Windows::NTFS</a></li>
+				
+					<li><a href="../Windows/NTFS/Winternl.html">Windows::NTFS::Winternl</a></li>
+				
+					<li><a href="../Windows/National.html">Windows::National</a></li>
+				
+					<li><a href="../Windows/Network.html">Windows::Network</a></li>
+				
+					<li><a href="../Windows/Network/Management.html">Windows::Network::Management</a></li>
+				
+					<li><a href="../Windows/Network/SNMP.html">Windows::Network::SNMP</a></li>
+				
+					<li><a href="../Windows/Network/Winsock.html">Windows::Network::Winsock</a></li>
+				
+					<li><a href="../Windows/Path.html">Windows::Path</a></li>
+				
+					<li><a href="../Windows/Pipe.html">Windows::Pipe</a></li>
+				
+					<li><a href="../Windows/Process.html">Windows::Process</a></li>
+				
+					<li><a href="../Windows/Registry.html">Windows::Registry</a></li>
+				
+					<li><a href="../Windows/Security.html">Windows::Security</a></li>
+				
+					<li><a href="../Windows/Security/Authentication.html">Windows::Security::Authentication</a></li>
+				
+					<li><a href="../Windows/Service.html">Windows::Service</a></li>
+				
+					<li><a href="../Windows/Shell.html">Windows::Shell</a></li>
+				
+					<li><a href="../Windows/Socket.html">Windows::Socket</a></li>
+				
+					<li><a href="../Windows/Sound.html">Windows::Sound</a></li>
+				
+					<li><a href="../Windows/Synchronize.html">Windows::Synchronize</a></li>
+				
+					<li><a href="../Windows/SystemInfo.html">Windows::SystemInfo</a></li>
+				
+					<li><a href="../Windows/Thread.html">Windows::Thread</a></li>
+				
+					<li><a href="../Windows/Time.html">Windows::Time</a></li>
+				
+					<li><a href="../Windows/ToolHelper.html">Windows::ToolHelper</a></li>
+				
+					<li><a href="../Windows/Unicode.html">Windows::Unicode</a></li>
+				
+					<li><a href="../Windows/Volume.html">Windows::Volume</a></li>
+				
+					<li><a href="../Windows/WSA.html">Windows::WSA</a></li>
+				
+					<li><a href="../Windows/Window.html">Windows::Window</a></li>
+				
+					<li><a href="../Windows/Window/Classes.html">Windows::Window::Classes</a></li>
+				
+					<li><a href="../Windows/Window/Dialog.html">Windows::Window::Dialog</a></li>
+				
+					<li><a href="../Windows/Window/Menu.html">Windows::Window::Menu</a></li>
+				
+					<li><a href="../Windows/Window/Message.html">Windows::Window::Message</a></li>
+				
+					<li><a href="../Windows/Window/Properties.html">Windows::Window::Properties</a></li>
+				
+					<li><a href="../Windows/Window/Timer.html">Windows::Window::Timer</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Windows::Security</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="ACL_REVISION">ACL_REVISION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ACL_REVISION1">ACL_REVISION1</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ACL_REVISION2">ACL_REVISION2</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ACL_REVISION3">ACL_REVISION3</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ACL_REVISION4">ACL_REVISION4</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ALLOW_ACE_LENGTH">ALLOW_ACE_LENGTH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DACL_SECURITY_INFORMATION">DACL_SECURITY_INFORMATION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_DACL_PRESENT">SE_DACL_PRESENT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_DESCRIPTOR_MIN_LENGTH">SECURITY_DESCRIPTOR_MIN_LENGTH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_DESCRIPTOR_REVISION">SECURITY_DESCRIPTOR_REVISION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_DESCRIPTOR_REVISION1">SECURITY_DESCRIPTOR_REVISION1</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_NULL_SID_AUTHORITY">SECURITY_NULL_SID_AUTHORITY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_WORLD_SID_AUTHORITY">SECURITY_WORLD_SID_AUTHORITY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_LOCAL_SID_AUTHORITY">SECURITY_LOCAL_SID_AUTHORITY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_CREATOR_SID_AUTHORITY">SECURITY_CREATOR_SID_AUTHORITY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_NON_UNIQUE_AUTHORITY">SECURITY_NON_UNIQUE_AUTHORITY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_NT_AUTHORITY">SECURITY_NT_AUTHORITY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_RESOURCE_MANAGER_AUTHORITY">SECURITY_RESOURCE_MANAGER_AUTHORITY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_NULL_RID">SECURITY_NULL_RID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_WORLD_RID">SECURITY_WORLD_RID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_LOCAL_RID">SECURITY_LOCAL_RID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_CREATOR_OWNER_RID">SECURITY_CREATOR_OWNER_RID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_CREATOR_GROUP_RID">SECURITY_CREATOR_GROUP_RID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_CREATOR_OWNER_SERVER_RID">SECURITY_CREATOR_OWNER_SERVER_RID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_CREATOR_GROUP_SERVER_RID">SECURITY_CREATOR_GROUP_SERVER_RID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_DIALUP_RID">SECURITY_DIALUP_RID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_NETWORK_RID">SECURITY_NETWORK_RID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_BATCH_RID">SECURITY_BATCH_RID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_INTERACTIVE_RID">SECURITY_INTERACTIVE_RID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_LOGON_IDS_RID">SECURITY_LOGON_IDS_RID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_LOGON_IDS_RID_COUNT">SECURITY_LOGON_IDS_RID_COUNT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_SERVICE_RID">SECURITY_SERVICE_RID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_ANONYMOUS_LOGON_RID">SECURITY_ANONYMOUS_LOGON_RID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_PROXY_RID">SECURITY_PROXY_RID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_ENTERPRISE_CONTROLLERS_RID">SECURITY_ENTERPRISE_CONTROLLERS_RID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_SERVER_LOGON_RID">SECURITY_SERVER_LOGON_RID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_PRINCIPAL_SELF_RID">SECURITY_PRINCIPAL_SELF_RID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_AUTHENTICATED_USER_RID">SECURITY_AUTHENTICATED_USER_RID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_RESTRICTED_CODE_RID">SECURITY_RESTRICTED_CODE_RID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_TERMINAL_SERVER_RID">SECURITY_TERMINAL_SERVER_RID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_REMOTE_LOGON_RID">SECURITY_REMOTE_LOGON_RID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_THIS_ORGANIZATION_RID">SECURITY_THIS_ORGANIZATION_RID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_LOCAL_SYSTEM_RID">SECURITY_LOCAL_SYSTEM_RID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_LOCAL_SERVICE_RID">SECURITY_LOCAL_SERVICE_RID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_NETWORK_SERVICE_RID">SECURITY_NETWORK_SERVICE_RID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_NT_NON_UNIQUE">SECURITY_NT_NON_UNIQUE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_NT_NON_UNIQUE_SUB_AUTH_COUNT">SECURITY_NT_NON_UNIQUE_SUB_AUTH_COUNT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_BUILTIN_DOMAIN_RID">SECURITY_BUILTIN_DOMAIN_RID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_PACKAGE_BASE_RID">SECURITY_PACKAGE_BASE_RID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_PACKAGE_RID_COUNT">SECURITY_PACKAGE_RID_COUNT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_PACKAGE_NTLM_RID">SECURITY_PACKAGE_NTLM_RID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_PACKAGE_SCHANNEL_RID">SECURITY_PACKAGE_SCHANNEL_RID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_PACKAGE_DIGEST_RID">SECURITY_PACKAGE_DIGEST_RID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_MAX_ALWAYS_FILTERED">SECURITY_MAX_ALWAYS_FILTERED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_MIN_NEVER_FILTERED">SECURITY_MIN_NEVER_FILTERED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SECURITY_OTHER_ORGANIZATION_RID">SECURITY_OTHER_ORGANIZATION_RID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FOREST_USER_RID_MAX">FOREST_USER_RID_MAX</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DOMAIN_USER_RID_ADMIN">DOMAIN_USER_RID_ADMIN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DOMAIN_USER_RID_GUEST">DOMAIN_USER_RID_GUEST</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DOMAIN_USER_RID_KRBTGT">DOMAIN_USER_RID_KRBTGT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DOMAIN_USER_RID_MAX">DOMAIN_USER_RID_MAX</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DOMAIN_GROUP_RID_ADMINS">DOMAIN_GROUP_RID_ADMINS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DOMAIN_GROUP_RID_USERS">DOMAIN_GROUP_RID_USERS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DOMAIN_GROUP_RID_GUESTS">DOMAIN_GROUP_RID_GUESTS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DOMAIN_GROUP_RID_COMPUTERS">DOMAIN_GROUP_RID_COMPUTERS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DOMAIN_GROUP_RID_CONTROLLERS">DOMAIN_GROUP_RID_CONTROLLERS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DOMAIN_GROUP_RID_CERT_ADMINS">DOMAIN_GROUP_RID_CERT_ADMINS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DOMAIN_GROUP_RID_SCHEMA_ADMINS">DOMAIN_GROUP_RID_SCHEMA_ADMINS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DOMAIN_GROUP_RID_ENTERPRISE_ADMINS">DOMAIN_GROUP_RID_ENTERPRISE_ADMINS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DOMAIN_GROUP_RID_POLICY_ADMINS">DOMAIN_GROUP_RID_POLICY_ADMINS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DOMAIN_ALIAS_RID_ADMINS">DOMAIN_ALIAS_RID_ADMINS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DOMAIN_ALIAS_RID_USERS">DOMAIN_ALIAS_RID_USERS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DOMAIN_ALIAS_RID_GUESTS">DOMAIN_ALIAS_RID_GUESTS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DOMAIN_ALIAS_RID_POWER_USERS">DOMAIN_ALIAS_RID_POWER_USERS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DOMAIN_ALIAS_RID_ACCOUNT_OPS">DOMAIN_ALIAS_RID_ACCOUNT_OPS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DOMAIN_ALIAS_RID_SYSTEM_OPS">DOMAIN_ALIAS_RID_SYSTEM_OPS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DOMAIN_ALIAS_RID_PRINT_OPS">DOMAIN_ALIAS_RID_PRINT_OPS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DOMAIN_ALIAS_RID_BACKUP_OPS">DOMAIN_ALIAS_RID_BACKUP_OPS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DOMAIN_ALIAS_RID_REPLICATOR">DOMAIN_ALIAS_RID_REPLICATOR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DOMAIN_ALIAS_RID_RAS_SERVERS">DOMAIN_ALIAS_RID_RAS_SERVERS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DOMAIN_ALIAS_RID_PREW2KCOMPACCESS">DOMAIN_ALIAS_RID_PREW2KCOMPACCESS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DOMAIN_ALIAS_RID_REMOTE_DESKTOP_USERS">DOMAIN_ALIAS_RID_REMOTE_DESKTOP_USERS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DOMAIN_ALIAS_RID_NETWORK_CONFIGURATION_OPS">DOMAIN_ALIAS_RID_NETWORK_CONFIGURATION_OPS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DOMAIN_ALIAS_RID_INCOMING_FOREST_TRUST_BUILDERS">DOMAIN_ALIAS_RID_INCOMING_FOREST_TRUST_BUILDERS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DOMAIN_ALIAS_RID_MONITORING_USERS">DOMAIN_ALIAS_RID_MONITORING_USERS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DOMAIN_ALIAS_RID_LOGGING_USERS">DOMAIN_ALIAS_RID_LOGGING_USERS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DOMAIN_ALIAS_RID_AUTHORIZATIONACCESS">DOMAIN_ALIAS_RID_AUTHORIZATIONACCESS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DOMAIN_ALIAS_RID_TS_LICENSE_SERVERS">DOMAIN_ALIAS_RID_TS_LICENSE_SERVERS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DOMAIN_ALIAS_RID_DCOM_USERS">DOMAIN_ALIAS_RID_DCOM_USERS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="GENERIC_RIGHTS_MASK">GENERIC_RIGHTS_MASK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="GENERIC_RIGHTS_CHK">GENERIC_RIGHTS_CHK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="REST_RIGHTS_MASK">REST_RIGHTS_MASK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TOKEN_READ">TOKEN_READ</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TOKEN_WRITE">TOKEN_WRITE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TOKEN_EXECUTE">TOKEN_EXECUTE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TOKEN_ASSIGN_PRIMARY">TOKEN_ASSIGN_PRIMARY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TOKEN_DUPLICATE">TOKEN_DUPLICATE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TOKEN_IMPERSONATE">TOKEN_IMPERSONATE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TOKEN_QUERY">TOKEN_QUERY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TOKEN_QUERY_SOURCE">TOKEN_QUERY_SOURCE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TOKEN_ADJUST_PRIVILEGES">TOKEN_ADJUST_PRIVILEGES</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TOKEN_ADJUST_GROUPS">TOKEN_ADJUST_GROUPS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TOKEN_ADJUST_DEFAULT">TOKEN_ADJUST_DEFAULT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TOKEN_ADJUST_SESSIONID">TOKEN_ADJUST_SESSIONID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TOKEN_ALL_ACCESS_P">TOKEN_ALL_ACCESS_P</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TOKEN_ALL_ACCESS">TOKEN_ALL_ACCESS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_PRIVILEGE_ENABLED_BY_DEFAULT">SE_PRIVILEGE_ENABLED_BY_DEFAULT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_PRIVILEGE_ENABLED">SE_PRIVILEGE_ENABLED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_PRIVILEGE_REMOVED">SE_PRIVILEGE_REMOVED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_PRIVILEGE_USED_FOR_ACCESS">SE_PRIVILEGE_USED_FOR_ACCESS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="OWNER_SECURITY_INFORMATION">OWNER_SECURITY_INFORMATION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="GROUP_SECURITY_INFORMATION">GROUP_SECURITY_INFORMATION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_UNKNOWN_OBJECT_TYPE">SE_UNKNOWN_OBJECT_TYPE</a></dt>
+				
+				<dd class="description"><p>
+SE_OBJECT_TYPE Enumeration
+</p></dd>
+				
+			
+				<dt><a name="SE_FILE_OBJECT">SE_FILE_OBJECT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_SERVICE">SE_SERVICE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_PRINTER">SE_PRINTER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_REGISTRY_KEY">SE_REGISTRY_KEY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_LMSHARE">SE_LMSHARE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_KERNEL_OBJECT">SE_KERNEL_OBJECT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_WINDOW_OBJECT">SE_WINDOW_OBJECT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_DS_OBJECT">SE_DS_OBJECT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_DS_OBJECT_ALL">SE_DS_OBJECT_ALL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_PROVIDER_DEFINED_OBJECT">SE_PROVIDER_DEFINED_OBJECT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_WMIGUID_OBJECT">SE_WMIGUID_OBJECT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_REGISTRY_WOW64_32KEY">SE_REGISTRY_WOW64_32KEY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_CREATE_TOKEN_NAME">SE_CREATE_TOKEN_NAME</a></dt>
+				
+				<dd class="description"><p>
+Defined Privileges
+</p></dd>
+				
+			
+				<dt><a name="SE_ASSIGNPRIMARYTOKEN_NAME">SE_ASSIGNPRIMARYTOKEN_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_LOCK_MEMORY_NAME">SE_LOCK_MEMORY_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_INCREASE_QUOTA_NAME">SE_INCREASE_QUOTA_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_UNSOLICITED_INPUT_NAME">SE_UNSOLICITED_INPUT_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_MACHINE_ACCOUNT_NAME">SE_MACHINE_ACCOUNT_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_TCB_NAME">SE_TCB_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_SECURITY_NAME">SE_SECURITY_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_TAKE_OWNERSHIP_NAME">SE_TAKE_OWNERSHIP_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_LOAD_DRIVER_NAME">SE_LOAD_DRIVER_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_SYSTEM_PROFILE_NAME">SE_SYSTEM_PROFILE_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_SYSTEMTIME_NAME">SE_SYSTEMTIME_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_PROF_SINGLE_PROCESS_NAME">SE_PROF_SINGLE_PROCESS_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_INC_BASE_PRIORITY_NAME">SE_INC_BASE_PRIORITY_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_CREATE_PAGEFILE_NAME">SE_CREATE_PAGEFILE_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_CREATE_PERMANENT_NAME">SE_CREATE_PERMANENT_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_BACKUP_NAME">SE_BACKUP_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_RESTORE_NAME">SE_RESTORE_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_SHUTDOWN_NAME">SE_SHUTDOWN_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_DEBUG_NAME">SE_DEBUG_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_AUDIT_NAME">SE_AUDIT_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_SYSTEM_ENVIRONMENT_NAME">SE_SYSTEM_ENVIRONMENT_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_CHANGE_NOTIFY_NAME">SE_CHANGE_NOTIFY_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_REMOTE_SHUTDOWN_NAME">SE_REMOTE_SHUTDOWN_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_UNDOCK_NAME">SE_UNDOCK_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_SYNC_AGENT_NAME">SE_SYNC_AGENT_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_ENABLE_DELEGATION_NAME">SE_ENABLE_DELEGATION_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_MANAGE_VOLUME_NAME">SE_MANAGE_VOLUME_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_IMPERSONATE_NAME">SE_IMPERSONATE_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SE_CREATE_GLOBAL_NAME">SE_CREATE_GLOBAL_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ACCESS_MIN_MS_ACE_TYPE">ACCESS_MIN_MS_ACE_TYPE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ACCESS_ALLOWED_ACE_TYPE">ACCESS_ALLOWED_ACE_TYPE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ACCESS_DENIED_ACE_TYPE">ACCESS_DENIED_ACE_TYPE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SYSTEM_AUDIT_ACE_TYPE">SYSTEM_AUDIT_ACE_TYPE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SYSTEM_ALARM_ACE_TYPE">SYSTEM_ALARM_ACE_TYPE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ACCESS_MAX_MS_V2_ACE_TYPE">ACCESS_MAX_MS_V2_ACE_TYPE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ACCESS_ALLOWED_COMPOUND_ACE_TYPE">ACCESS_ALLOWED_COMPOUND_ACE_TYPE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ACCESS_MAX_MS_V3_ACE_TYPE">ACCESS_MAX_MS_V3_ACE_TYPE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ACCESS_MIN_MS_OBJECT_ACE_TYPE">ACCESS_MIN_MS_OBJECT_ACE_TYPE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ACCESS_ALLOWED_OBJECT_ACE_TYPE">ACCESS_ALLOWED_OBJECT_ACE_TYPE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ACCESS_DENIED_OBJECT_ACE_TYPE">ACCESS_DENIED_OBJECT_ACE_TYPE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SYSTEM_AUDIT_OBJECT_ACE_TYPE">SYSTEM_AUDIT_OBJECT_ACE_TYPE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SYSTEM_ALARM_OBJECT_ACE_TYPE">SYSTEM_ALARM_OBJECT_ACE_TYPE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ACCESS_MAX_MS_OBJECT_ACE_TYPE">ACCESS_MAX_MS_OBJECT_ACE_TYPE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ACCESS_MAX_MS_V4_ACE_TYPE">ACCESS_MAX_MS_V4_ACE_TYPE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ACCESS_MAX_MS_ACE_TYPE">ACCESS_MAX_MS_ACE_TYPE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ACCESS_ALLOWED_CALLBACK_ACE_TYPE">ACCESS_ALLOWED_CALLBACK_ACE_TYPE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ACCESS_DENIED_CALLBACK_ACE_TYPE">ACCESS_DENIED_CALLBACK_ACE_TYPE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ACCESS_ALLOWED_CALLBACK_OBJECT_ACE_TYPE">ACCESS_ALLOWED_CALLBACK_OBJECT_ACE_TYPE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ACCESS_DENIED_CALLBACK_OBJECT_ACE_TYPE">ACCESS_DENIED_CALLBACK_OBJECT_ACE_TYPE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SYSTEM_AUDIT_CALLBACK_ACE_TYPE">SYSTEM_AUDIT_CALLBACK_ACE_TYPE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SYSTEM_ALARM_CALLBACK_ACE_TYPE">SYSTEM_ALARM_CALLBACK_ACE_TYPE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SYSTEM_AUDIT_CALLBACK_OBJECT_ACE_TYPE">SYSTEM_AUDIT_CALLBACK_OBJECT_ACE_TYPE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SYSTEM_ALARM_CALLBACK_OBJECT_ACE_TYPE">SYSTEM_ALARM_CALLBACK_OBJECT_ACE_TYPE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ACCESS_MAX_MS_V5_ACE_TYPE">ACCESS_MAX_MS_V5_ACE_TYPE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="OBJECT_INHERIT_ACE">OBJECT_INHERIT_ACE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CONTAINER_INHERIT_ACE">CONTAINER_INHERIT_ACE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NO_PROPAGATE_INHERIT_ACE">NO_PROPAGATE_INHERIT_ACE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="INHERIT_ONLY_ACE">INHERIT_ONLY_ACE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="INHERITED_ACE">INHERITED_ACE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="VALID_INHERIT_FLAGS">VALID_INHERIT_FLAGS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SUCCESSFUL_ACCESS_ACE_FLAG">SUCCESSFUL_ACCESS_ACE_FLAG</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FAILED_ACCESS_ACE_FLAG">FAILED_ACCESS_ACE_FLAG</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DELETE">DELETE</a></dt>
+				
+				<dd class="description"><p>
+Standard Access Rights
+</p></dd>
+				
+			
+				<dt><a name="READ_CONTROL">READ_CONTROL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WRITE_DAC">WRITE_DAC</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WRITE_OWNER">WRITE_OWNER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SYNCHRONIZE">SYNCHRONIZE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="STANDARD_RIGHTS_REQUIRED">STANDARD_RIGHTS_REQUIRED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="STANDARD_RIGHTS_READ">STANDARD_RIGHTS_READ</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="STANDARD_RIGHTS_WRITE">STANDARD_RIGHTS_WRITE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="STANDARD_RIGHTS_EXECUTE">STANDARD_RIGHTS_EXECUTE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="STANDARD_RIGHTS_ALL">STANDARD_RIGHTS_ALL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SPECIFIC_RIGHTS_ALL">SPECIFIC_RIGHTS_ALL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ACCESS_SYSTEM_SECURITY">ACCESS_SYSTEM_SECURITY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="MAXIMUM_ALLOWED">MAXIMUM_ALLOWED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="GENERIC_READ">GENERIC_READ</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="GENERIC_WRITE">GENERIC_WRITE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="GENERIC_EXECUTE">GENERIC_EXECUTE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="GENERIC_ALL">GENERIC_ALL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SidTypeUser">SidTypeUser</a></dt>
+				
+				<dd class="description"><p>
+Enum SidNameUse
+</p></dd>
+				
+			
+				<dt><a name="SidTypeGroup">SidTypeGroup</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SidTypeDomain">SidTypeDomain</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SidTypeAlias">SidTypeAlias</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SidTypeWellKnownGroup">SidTypeWellKnownGroup</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SidTypeDeletedAccount">SidTypeDeletedAccount</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SidTypeInvalid">SidTypeInvalid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SidTypeUnknown">SidTypeUnknown</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SidTypeComputer">SidTypeComputer</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TokenUser">TokenUser</a></dt>
+				
+				<dd class="description"><p>
+Enum TokenInformationClass
+</p></dd>
+				
+			
+				<dt><a name="TokenGroups">TokenGroups</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TokenPrivileges">TokenPrivileges</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TokenOwner">TokenOwner</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TokenPrimaryGroup">TokenPrimaryGroup</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TokenDefaultDacl">TokenDefaultDacl</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TokenSource">TokenSource</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TokenType">TokenType</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TokenImpersonationLevel">TokenImpersonationLevel</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TokenStatistics">TokenStatistics</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TokenRestrictedSids">TokenRestrictedSids</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TokenSessionId">TokenSessionId</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TokenGroupsAndPrivileges">TokenGroupsAndPrivileges</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TokenSessionReference">TokenSessionReference</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TokenSandBoxInert">TokenSandBoxInert</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TokenAuditPolicy">TokenAuditPolicy</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TokenOrigin">TokenOrigin</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TokenElevationType">TokenElevationType</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TokenLinkedToken">TokenLinkedToken</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TokenElevation">TokenElevation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TokenHasRestrictions">TokenHasRestrictions</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TokenAccessInformation">TokenAccessInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TokenVirtualizationAllowed">TokenVirtualizationAllowed</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TokenVirtualizationEnabled">TokenVirtualizationEnabled</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TokenIntegrityLevel">TokenIntegrityLevel</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TokenUIAccess">TokenUIAccess</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TokenMandatoryPolicy">TokenMandatoryPolicy</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TokenLogonSid">TokenLogonSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="MaxTokenInfoClass">MaxTokenInfoClass</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinNullSid">WinNullSid</a></dt>
+				
+				<dd class="description"><p>
+Enum WellKnownSidType
+</p></dd>
+				
+			
+				<dt><a name="WinWorldSid">WinWorldSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinLocalSid">WinLocalSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinCreatorOwnerSid">WinCreatorOwnerSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinCreatorGroupSid">WinCreatorGroupSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinCreatorOwnerServerSid">WinCreatorOwnerServerSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinCreatorGroupServerSid">WinCreatorGroupServerSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinNtAuthoritySid">WinNtAuthoritySid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinDialupSid">WinDialupSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinNetworkSid">WinNetworkSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinBatchSid">WinBatchSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinInteractiveSid">WinInteractiveSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinServiceSid">WinServiceSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinAnonymousSid">WinAnonymousSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinProxySid">WinProxySid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinEnterpriseControllersSid">WinEnterpriseControllersSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinSelfSid">WinSelfSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinAuthenticatedUserSid">WinAuthenticatedUserSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinRestrictedCodeSid">WinRestrictedCodeSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinTerminalServerSid">WinTerminalServerSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinRemoteLogonIdSid">WinRemoteLogonIdSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinLogonIdsSid">WinLogonIdsSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinLocalSystemSid">WinLocalSystemSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinLocalServiceSid">WinLocalServiceSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinNetworkServiceSid">WinNetworkServiceSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinBuiltinDomainSid">WinBuiltinDomainSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinBuiltinAdministratorsSid">WinBuiltinAdministratorsSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinBuiltinUsersSid">WinBuiltinUsersSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinBuiltinGuestsSid">WinBuiltinGuestsSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinBuiltinPowerUsersSid">WinBuiltinPowerUsersSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinBuiltinAccountOperatorsSid">WinBuiltinAccountOperatorsSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinBuiltinSystemOperatorsSid">WinBuiltinSystemOperatorsSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinBuiltinPrintOperatorsSid">WinBuiltinPrintOperatorsSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinBuiltinBackupOperatorsSid">WinBuiltinBackupOperatorsSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinBuiltinReplicatorSid">WinBuiltinReplicatorSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinBuiltinPreWindows2000CompatibleAccessSid">WinBuiltinPreWindows2000CompatibleAccessSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinBuiltinRemoteDesktopUsersSid">WinBuiltinRemoteDesktopUsersSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinBuiltinNetworkConfigurationOperatorsSid">WinBuiltinNetworkConfigurationOperatorsSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinAccountAdministratorSid">WinAccountAdministratorSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinAccountGuestSid">WinAccountGuestSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinAccountKrbtgtSid">WinAccountKrbtgtSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinAccountDomainAdminsSid">WinAccountDomainAdminsSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinAccountDomainUsersSid">WinAccountDomainUsersSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinAccountDomainGuestsSid">WinAccountDomainGuestsSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinAccountComputersSid">WinAccountComputersSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinAccountControllersSid">WinAccountControllersSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinAccountCertAdminsSid">WinAccountCertAdminsSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinAccountSchemaAdminsSid">WinAccountSchemaAdminsSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinAccountEnterpriseAdminsSid">WinAccountEnterpriseAdminsSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinAccountPolicyAdminsSid">WinAccountPolicyAdminsSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinAccountRasAndIasServersSid">WinAccountRasAndIasServersSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinNTLMAuthenticationSid">WinNTLMAuthenticationSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinDigestAuthenticationSid">WinDigestAuthenticationSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinSChannelAuthenticationSid">WinSChannelAuthenticationSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinThisOrganizationSid">WinThisOrganizationSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinOtherOrganizationSid">WinOtherOrganizationSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinBuiltinIncomingForestTrustBuildersSid">WinBuiltinIncomingForestTrustBuildersSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinBuiltinPerfMonitoringUsersSid">WinBuiltinPerfMonitoringUsersSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinBuiltinPerfLoggingUsersSid">WinBuiltinPerfLoggingUsersSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinBuiltinAuthorizationAccessSid">WinBuiltinAuthorizationAccessSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinBuiltinTerminalServerLicenseServersSid">WinBuiltinTerminalServerLicenseServersSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinBuiltinDCOMUsersSid">WinBuiltinDCOMUsersSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinBuiltinIUsersSid">WinBuiltinIUsersSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinIUserSid">WinIUserSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinBuiltinCryptoOperatorsSid">WinBuiltinCryptoOperatorsSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinUntrustedLabelSid">WinUntrustedLabelSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinLowLabelSid">WinLowLabelSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinMediumLabelSid">WinMediumLabelSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinHighLabelSid">WinHighLabelSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinSystemLabelSid">WinSystemLabelSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinWriteRestrictedCodeSid">WinWriteRestrictedCodeSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinCreatorOwnerRightsSid">WinCreatorOwnerRightsSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinCacheablePrincipalsGroupSid">WinCacheablePrincipalsGroupSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinNonCacheablePrincipalsGroupSid">WinNonCacheablePrincipalsGroupSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinEnterpriseReadonlyControllersSid">WinEnterpriseReadonlyControllersSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinAccountReadonlyControllersSid">WinAccountReadonlyControllersSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinBuiltinEventLogReadersGroup">WinBuiltinEventLogReadersGroup</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinNewEnterpriseReadonlyControllersSid">WinNewEnterpriseReadonlyControllersSid</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinBuiltinCertSvcDComAccessGroup">WinBuiltinCertSvcDComAccessGroup</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="AclRevisionInformation">AclRevisionInformation</a></dt>
+				
+				<dd class="description"><p>
+Enum AclInformationClass
+</p></dd>
+				
+			
+				<dt><a name="AclSizeInformation">AclSizeInformation</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

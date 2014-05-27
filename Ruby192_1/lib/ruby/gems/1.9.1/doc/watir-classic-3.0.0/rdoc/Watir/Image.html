@@ -1,0 +1,790 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Watir::Image</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/watir-classic/image_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/watir-classic/image.rb">lib/watir-classic/image.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="Element.html">Watir::Element</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-file_size">#file_size</a></li>
+					
+					<li><a href="#method-i-fill_save_image_dialog">#fill_save_image_dialog</a></li>
+					
+					<li><a href="#method-i-height">#height</a></li>
+					
+					<li><a href="#method-i-highlight">#highlight</a></li>
+					
+					<li><a href="#method-i-image_string_creator">#image_string_creator</a></li>
+					
+					<li><a href="#method-i-loaded%3F">#loaded?</a></li>
+					
+					<li><a href="#method-i-save">#save</a></li>
+					
+					<li><a href="#method-i-to_s">#to_s</a></li>
+					
+					<li><a href="#method-i-width">#width</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Watir.html">Watir</a></li>
+				
+					<li><a href="../Watir/Area.html">Watir::Area</a></li>
+				
+					<li><a href="../Watir/Assertions.html">Watir::Assertions</a></li>
+				
+					<li><a href="../Watir/Audio.html">Watir::Audio</a></li>
+				
+					<li><a href="../Watir/Base.html">Watir::Base</a></li>
+				
+					<li><a href="../Watir/Browser.html">Watir::Browser</a></li>
+				
+					<li><a href="../Watir/Button.html">Watir::Button</a></li>
+				
+					<li><a href="../Watir/CheckBox.html">Watir::CheckBox</a></li>
+				
+					<li><a href="../Watir/Command.html">Watir::Command</a></li>
+				
+					<li><a href="../Watir/Container.html">Watir::Container</a></li>
+				
+					<li><a href="../Watir/Cookies.html">Watir::Cookies</a></li>
+				
+					<li><a href="../Watir/Data.html">Watir::Data</a></li>
+				
+					<li><a href="../Watir/DefaultLogger.html">Watir::DefaultLogger</a></li>
+				
+					<li><a href="../Watir/DragAndDropHelper.html">Watir::DragAndDropHelper</a></li>
+				
+					<li><a href="../Watir/Element.html">Watir::Element</a></li>
+				
+					<li><a href="../Watir/ElementCollection.html">Watir::ElementCollection</a></li>
+				
+					<li><a href="../Watir/ElementExtensions.html">Watir::ElementExtensions</a></li>
+				
+					<li><a href="../Watir/ElementExtensions/WhenPresentDecorator.html">Watir::ElementExtensions::WhenPresentDecorator</a></li>
+				
+					<li><a href="../Watir/Embed.html">Watir::Embed</a></li>
+				
+					<li><a href="../Watir/Exception.html">Watir::Exception</a></li>
+				
+					<li><a href="../Watir/Exception/FrameAccessDeniedException.html">Watir::Exception::FrameAccessDeniedException</a></li>
+				
+					<li><a href="../Watir/Exception/MissingWayOfFindingObjectException.html">Watir::Exception::MissingWayOfFindingObjectException</a></li>
+				
+					<li><a href="../Watir/Exception/NavigationException.html">Watir::Exception::NavigationException</a></li>
+				
+					<li><a href="../Watir/Exception/NoMatchingWindowFoundException.html">Watir::Exception::NoMatchingWindowFoundException</a></li>
+				
+					<li><a href="../Watir/Exception/NoStatusBarException.html">Watir::Exception::NoStatusBarException</a></li>
+				
+					<li><a href="../Watir/Exception/NoValueFoundException.html">Watir::Exception::NoValueFoundException</a></li>
+				
+					<li><a href="../Watir/Exception/ObjectDisabledException.html">Watir::Exception::ObjectDisabledException</a></li>
+				
+					<li><a href="../Watir/Exception/ObjectReadOnlyException.html">Watir::Exception::ObjectReadOnlyException</a></li>
+				
+					<li><a href="../Watir/Exception/TimeOutException.html">Watir::Exception::TimeOutException</a></li>
+				
+					<li><a href="../Watir/Exception/UnhandledEventException.html">Watir::Exception::UnhandledEventException</a></li>
+				
+					<li><a href="../Watir/Exception/UnknownCellException.html">Watir::Exception::UnknownCellException</a></li>
+				
+					<li><a href="../Watir/Exception/UnknownFormException.html">Watir::Exception::UnknownFormException</a></li>
+				
+					<li><a href="../Watir/Exception/UnknownFrameException.html">Watir::Exception::UnknownFrameException</a></li>
+				
+					<li><a href="../Watir/Exception/UnknownObjectException.html">Watir::Exception::UnknownObjectException</a></li>
+				
+					<li><a href="../Watir/Exception/WatirException.html">Watir::Exception::WatirException</a></li>
+				
+					<li><a href="../Watir/FieldSet.html">Watir::FieldSet</a></li>
+				
+					<li><a href="../Watir/FileField.html">Watir::FileField</a></li>
+				
+					<li><a href="../Watir/Font.html">Watir::Font</a></li>
+				
+					<li><a href="../Watir/Form.html">Watir::Form</a></li>
+				
+					<li><a href="../Watir/FormLocator.html">Watir::FormLocator</a></li>
+				
+					<li><a href="../Watir/Frame.html">Watir::Frame</a></li>
+				
+					<li><a href="../Watir/FrameLocator.html">Watir::FrameLocator</a></li>
+				
+					<li><a href="../Watir/HTMLElementCollection.html">Watir::HTMLElementCollection</a></li>
+				
+					<li><a href="../Watir/Hidden.html">Watir::Hidden</a></li>
+				
+					<li><a href="../Watir/IE.html">Watir::IE</a></li>
+				
+					<li><a href="../Watir/IE/Process.html">Watir::IE::Process</a></li>
+				
+					<li><a href="../Watir/Image.html">Watir::Image</a></li>
+				
+					<li><a href="../Watir/InputElementCollection.html">Watir::InputElementCollection</a></li>
+				
+					<li><a href="../Watir/InputElementLocator.html">Watir::InputElementLocator</a></li>
+				
+					<li><a href="../Watir/JavascriptDialog.html">Watir::JavascriptDialog</a></li>
+				
+					<li><a href="../Watir/Keygen.html">Watir::Keygen</a></li>
+				
+					<li><a href="../Watir/Label.html">Watir::Label</a></li>
+				
+					<li><a href="../Watir/Li.html">Watir::Li</a></li>
+				
+					<li><a href="../Watir/Link.html">Watir::Link</a></li>
+				
+					<li><a href="../Watir/Locator.html">Watir::Locator</a></li>
+				
+					<li><a href="../Watir/Map.html">Watir::Map</a></li>
+				
+					<li><a href="../Watir/Menu.html">Watir::Menu</a></li>
+				
+					<li><a href="../Watir/Meta.html">Watir::Meta</a></li>
+				
+					<li><a href="../Watir/Meter.html">Watir::Meter</a></li>
+				
+					<li><a href="../Watir/ModalDialog.html">Watir::ModalDialog</a></li>
+				
+					<li><a href="../Watir/Object.html">Watir::Object</a></li>
+				
+					<li><a href="../Watir/Optgroup.html">Watir::Optgroup</a></li>
+				
+					<li><a href="../Watir/Option.html">Watir::Option</a></li>
+				
+					<li><a href="../Watir/Output.html">Watir::Output</a></li>
+				
+					<li><a href="../Watir/PageContainer.html">Watir::PageContainer</a></li>
+				
+					<li><a href="../Watir/Param.html">Watir::Param</a></li>
+				
+					<li><a href="../Watir/Process.html">Watir::Process</a></li>
+				
+					<li><a href="../Watir/Progress.html">Watir::Progress</a></li>
+				
+					<li><a href="../Watir/Radio.html">Watir::Radio</a></li>
+				
+					<li><a href="../Watir/RadioCheckCommon.html">Watir::RadioCheckCommon</a></li>
+				
+					<li><a href="../Watir/ScreenCapture.html">Watir::ScreenCapture</a></li>
+				
+					<li><a href="../Watir/Script.html">Watir::Script</a></li>
+				
+					<li><a href="../Watir/SelectList.html">Watir::SelectList</a></li>
+				
+					<li><a href="../Watir/Source.html">Watir::Source</a></li>
+				
+					<li><a href="../Watir/Style.html">Watir::Style</a></li>
+				
+					<li><a href="../Watir/Table.html">Watir::Table</a></li>
+				
+					<li><a href="../Watir/TableCell.html">Watir::TableCell</a></li>
+				
+					<li><a href="../Watir/TableCellCollection.html">Watir::TableCellCollection</a></li>
+				
+					<li><a href="../Watir/TableCellsContainer.html">Watir::TableCellsContainer</a></li>
+				
+					<li><a href="../Watir/TableContainer.html">Watir::TableContainer</a></li>
+				
+					<li><a href="../Watir/TableElementCollection.html">Watir::TableElementCollection</a></li>
+				
+					<li><a href="../Watir/TableElementsContainer.html">Watir::TableElementsContainer</a></li>
+				
+					<li><a href="../Watir/TableRow.html">Watir::TableRow</a></li>
+				
+					<li><a href="../Watir/TableRowCollection.html">Watir::TableRowCollection</a></li>
+				
+					<li><a href="../Watir/TableRowsContainer.html">Watir::TableRowsContainer</a></li>
+				
+					<li><a href="../Watir/TableSection.html">Watir::TableSection</a></li>
+				
+					<li><a href="../Watir/TaggedElementLocator.html">Watir::TaggedElementLocator</a></li>
+				
+					<li><a href="../Watir/TestCase.html">Watir::TestCase</a></li>
+				
+					<li><a href="../Watir/TextField.html">Watir::TextField</a></li>
+				
+					<li><a href="../Watir/TimeKeeper.html">Watir::TimeKeeper</a></li>
+				
+					<li><a href="../Watir/Track.html">Watir::Track</a></li>
+				
+					<li><a href="../Watir/Util.html">Watir::Util</a></li>
+				
+					<li><a href="../Watir/Video.html">Watir::Video</a></li>
+				
+					<li><a href="../Watir/Wait.html">Watir::Wait</a></li>
+				
+					<li><a href="../Watir/Wait/TimeoutError.html">Watir::Wait::TimeoutError</a></li>
+				
+					<li><a href="../Watir/WaitHelper.html">Watir::WaitHelper</a></li>
+				
+					<li><a href="../Watir/Waiter.html">Watir::Waiter</a></li>
+				
+					<li><a href="../Watir/WatirLogger.html">Watir::WatirLogger</a></li>
+				
+					<li><a href="../Watir/WatirOptions.html">Watir::WatirOptions</a></li>
+				
+					<li><a href="../Watir/Win32.html">Watir::Win32</a></li>
+				
+					<li><a href="../Watir/Window.html">Watir::Window</a></li>
+				
+					<li><a href="../Watir/XpathLocator.html">Watir::XpathLocator</a></li>
+				
+					<li><a href="../Test.html">Test</a></li>
+				
+					<li><a href="../Test/Unit.html">Test::Unit</a></li>
+				
+					<li><a href="../Test/Unit/Assertions.html">Test::Unit::Assertions</a></li>
+				
+					<li><a href="../Readline.html">Readline</a></li>
+				
+					<li><a href="../Readline/History.html">Readline::History</a></li>
+				
+					<li><a href="../IEProcess.html">IEProcess</a></li>
+				
+					<li><a href="../Integer.html">Integer</a></li>
+				
+					<li><a href="../Object.html">Object</a></li>
+				
+					<li><a href="../PageCheckers.html">PageCheckers</a></li>
+				
+					<li><a href="../Regexp.html">Regexp</a></li>
+				
+					<li><a href="../String.html">String</a></li>
+				
+					<li><a href="../WinClicker.html">WinClicker</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Watir::Image</h1>
+
+		<div id="description">
+			<p>
+This class is the means of accessing an image on a page. Normally a user
+would not need to create this object as it is returned by the
+Watir::Container#image method
+</p>
+<p>
+many of the methods available to this object are inherited from the <a
+href="Element.html">Element</a> class 
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="file-size-method" class="method-detail ">
+				<a name="method-i-file_size"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">file_size</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+this method returns the filesize of the image, as an int
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="file-size-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-classic/image.rb, line 35</span>
+35:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">file_size</span>
+36:       <span class="ruby-identifier">assert_exists</span>
+37:       <span class="ruby-ivar">@o</span>.<span class="ruby-identifier">invoke</span>(<span class="ruby-value str">&quot;fileSize&quot;</span>).<span class="ruby-identifier">to_i</span>
+38:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="height-method" class="method-detail ">
+				<a name="method-i-height"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">height</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+returns the height in pixels of the image, as an int
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="height-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-classic/image.rb, line 47</span>
+47:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">height</span>
+48:       <span class="ruby-identifier">assert_exists</span>
+49:       <span class="ruby-ivar">@o</span>.<span class="ruby-identifier">invoke</span>(<span class="ruby-value str">&quot;height&quot;</span>).<span class="ruby-identifier">to_i</span>
+50:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="loaded--method" class="method-detail ">
+				<a name="method-i-loaded%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">loaded?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+This method attempts to find out if the image was actually loaded by the
+web browser. If the image was not loaded, the browser is unable to
+determine some of the properties. We look for these missing properties to
+see if the image is really there or not. If the Disk cache is full (tools
+menu -> Internet options -> Temporary Internet Files), it may produce
+incorrect responses.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="loaded--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-classic/image.rb, line 56</span>
+56:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">loaded?</span>
+57:       <span class="ruby-identifier">assert_exists</span>
+58:       <span class="ruby-operator">!</span><span class="ruby-identifier">file_created_date</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">file_size</span> <span class="ruby-operator">!=</span> <span class="ruby-value">1</span>
+59:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="save-method" class="method-detail ">
+				<a name="method-i-save"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">save</span><span
+						class="method-args">(path)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+This method saves the image to the file path that is given.  The path must
+be in windows format (c:\dirnamesomename.gif).  This method will not
+overwrite a previously existing image.  If an image already exists at the
+given path then a dialog will be displayed prompting for overwrite. path
+- directory path and file name of where image should be saved
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="save-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-classic/image.rb, line 90</span>
+90:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">save</span>(<span class="ruby-identifier">path</span>)
+91:       <span class="ruby-ivar">@container</span>.<span class="ruby-identifier">goto</span>(<span class="ruby-identifier">src</span>)
+92:       <span class="ruby-keyword kw">begin</span>
+93:         <span class="ruby-identifier">fill_save_image_dialog</span>(<span class="ruby-identifier">path</span>)
+94:         <span class="ruby-ivar">@container</span>.<span class="ruby-identifier">document</span>.<span class="ruby-identifier">execCommand</span>(<span class="ruby-value str">&quot;SaveAs&quot;</span>)
+95:       <span class="ruby-keyword kw">ensure</span>
+96:         <span class="ruby-ivar">@container</span>.<span class="ruby-identifier">back</span>
+97:       <span class="ruby-keyword kw">end</span>
+98:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-s-method" class="method-detail ">
+				<a name="method-i-to_s"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_s</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+returns a string representation of the object
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="to-s-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-classic/image.rb, line 27</span>
+27:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_s</span>
+28:       <span class="ruby-identifier">assert_exists</span>
+29:       <span class="ruby-identifier">r</span> = <span class="ruby-identifier">string_creator</span>
+30:       <span class="ruby-identifier">r</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">image_string_creator</span>
+31:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">r</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;\n&quot;</span>)
+32:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="width-method" class="method-detail ">
+				<a name="method-i-width"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">width</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+returns the width in pixels of the image, as an int
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="width-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-classic/image.rb, line 41</span>
+41:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">width</span>
+42:       <span class="ruby-identifier">assert_exists</span>
+43:       <span class="ruby-ivar">@o</span>.<span class="ruby-identifier">invoke</span>(<span class="ruby-value str">&quot;width&quot;</span>).<span class="ruby-identifier">to_i</span>
+44:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="fill-save-image-dialog-method" class="method-detail ">
+				<a name="method-i-fill_save_image_dialog"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">fill_save_image_dialog</span><span
+						class="method-args">(path)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="fill-save-image-dialog-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-classic/image.rb, line 100</span>
+100:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">fill_save_image_dialog</span>(<span class="ruby-identifier">path</span>)
+101:       <span class="ruby-identifier">command</span> = <span class="ruby-value str">&quot;require 'rubygems';require 'rautomation';&quot;</span> <span class="ruby-operator">&lt;&lt;</span>
+102:                 <span class="ruby-value str">&quot;window=::RAutomation::Window.new(:title =&gt; 'Save Picture');&quot;</span> <span class="ruby-operator">&lt;&lt;</span>
+103:                 <span class="ruby-node">&quot;window.text_field(:class =&gt; 'Edit', :index =&gt; 0).set('#{path.gsub(File::SEPARATOR, File::ALT_SEPARATOR)}');&quot;</span> <span class="ruby-operator">&lt;&lt;</span>
+104:                 <span class="ruby-value str">&quot;window.button(:value =&gt; '&amp;Save').click&quot;</span>
+105:       <span class="ruby-constant">IO</span>.<span class="ruby-identifier">popen</span>(<span class="ruby-node">&quot;ruby -e \&quot;#{command}\&quot;&quot;</span>)
+106:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="highlight-method" class="method-detail ">
+				<a name="method-i-highlight"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">highlight</span><span
+						class="method-args">(set_or_clear)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+this method highlights the image (in fact it adds or removes a border
+around the image)
+</p>
+<pre>
+ * set_or_clear   - symbol - :set to set the border, :clear to remove it</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="highlight-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-classic/image.rb, line 63</span>
+63:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">highlight</span>(<span class="ruby-identifier">set_or_clear</span>)
+64:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">set_or_clear</span> <span class="ruby-operator">==</span> <span class="ruby-value">:set</span>
+65:         <span class="ruby-keyword kw">begin</span>
+66:           <span class="ruby-ivar">@original_border</span> = <span class="ruby-ivar">@o</span>.<span class="ruby-identifier">border</span>
+67:           <span class="ruby-ivar">@o</span>.<span class="ruby-identifier">border</span> = <span class="ruby-value">1</span>
+68:         <span class="ruby-keyword kw">rescue</span>
+69:           <span class="ruby-ivar">@original_border</span> = <span class="ruby-keyword kw">nil</span>
+70:         <span class="ruby-keyword kw">end</span>
+71:       <span class="ruby-keyword kw">else</span>
+72:         <span class="ruby-keyword kw">begin</span>
+73:           <span class="ruby-ivar">@o</span>.<span class="ruby-identifier">border</span> = <span class="ruby-ivar">@original_border</span>
+74:           <span class="ruby-ivar">@original_border</span> = <span class="ruby-keyword kw">nil</span>
+75:         <span class="ruby-keyword kw">rescue</span>
+76:           <span class="ruby-comment cmt"># we could be here for a number of reasons...</span>
+77:         <span class="ruby-keyword kw">ensure</span>
+78:           <span class="ruby-ivar">@original_border</span> = <span class="ruby-keyword kw">nil</span>
+79:         <span class="ruby-keyword kw">end</span>
+80:       <span class="ruby-keyword kw">end</span>
+81:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="image-string-creator-method" class="method-detail ">
+				<a name="method-i-image_string_creator"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">image_string_creator</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+this method produces the properties for an image as an array
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="image-string-creator-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-classic/image.rb, line 14</span>
+14:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">image_string_creator</span>
+15:       <span class="ruby-identifier">n</span> = []
+16:       <span class="ruby-identifier">n</span> <span class="ruby-operator">&lt;&lt;</span>   <span class="ruby-value str">&quot;src:&quot;</span>.<span class="ruby-identifier">ljust</span>(<span class="ruby-constant">TO_S_SIZE</span>) <span class="ruby-operator">+</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">src</span>.<span class="ruby-identifier">to_s</span>
+17:       <span class="ruby-identifier">n</span> <span class="ruby-operator">&lt;&lt;</span>   <span class="ruby-value str">&quot;file date:&quot;</span>.<span class="ruby-identifier">ljust</span>(<span class="ruby-constant">TO_S_SIZE</span>) <span class="ruby-operator">+</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">fileCreatedDate</span>.<span class="ruby-identifier">to_s</span>
+18:       <span class="ruby-identifier">n</span> <span class="ruby-operator">&lt;&lt;</span>   <span class="ruby-value str">&quot;file size:&quot;</span>.<span class="ruby-identifier">ljust</span>(<span class="ruby-constant">TO_S_SIZE</span>) <span class="ruby-operator">+</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">fileSize</span>.<span class="ruby-identifier">to_s</span>
+19:       <span class="ruby-identifier">n</span> <span class="ruby-operator">&lt;&lt;</span>   <span class="ruby-value str">&quot;width:&quot;</span>.<span class="ruby-identifier">ljust</span>(<span class="ruby-constant">TO_S_SIZE</span>) <span class="ruby-operator">+</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">width</span>.<span class="ruby-identifier">to_s</span>
+20:       <span class="ruby-identifier">n</span> <span class="ruby-operator">&lt;&lt;</span>   <span class="ruby-value str">&quot;height:&quot;</span>.<span class="ruby-identifier">ljust</span>(<span class="ruby-constant">TO_S_SIZE</span>) <span class="ruby-operator">+</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">height</span>.<span class="ruby-identifier">to_s</span>
+21:       <span class="ruby-identifier">n</span> <span class="ruby-operator">&lt;&lt;</span>   <span class="ruby-value str">&quot;alt:&quot;</span>.<span class="ruby-identifier">ljust</span>(<span class="ruby-constant">TO_S_SIZE</span>) <span class="ruby-operator">+</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">alt</span>.<span class="ruby-identifier">to_s</span>
+22:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">n</span>
+23:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

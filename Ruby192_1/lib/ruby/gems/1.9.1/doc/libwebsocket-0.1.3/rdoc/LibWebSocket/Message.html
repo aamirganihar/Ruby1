@@ -1,0 +1,918 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: LibWebSocket::Message</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/libwebsocket/message_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/libwebsocket/message.rb">lib/libwebsocket/message.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-append">#append</a></li>
+					
+					<li><a href="#method-i-checksum">#checksum</a></li>
+					
+					<li><a href="#method-i-error%3D">#error=</a></li>
+					
+					<li><a href="#method-i-extract_number">#extract_number</a></li>
+					
+					<li><a href="#method-i-field">#field</a></li>
+					
+					<li><a href="#method-i-get_line">#get_line</a></li>
+					
+					<li><a href="#method-i-number">#number</a></li>
+					
+					<li><a href="#method-i-parse">#parse</a></li>
+					
+					<li><a href="#method-i-parse_body">#parse_body</a></li>
+					
+					<li><a href="#method-i-parse_field">#parse_field</a></li>
+					
+					<li><a href="#method-i-parse_first_line">#parse_first_line</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+			<div id="includes-section" class="section">
+				<h3 class="section-header">Included Modules</h3>
+				<ul class="link-list">
+				
+				
+					<li><span class="include">Stateful</span></li>
+				
+				
+				</ul>
+			</div>
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../LibWebSocket.html">LibWebSocket</a></li>
+				
+					<li><a href="../LibWebSocket/Cookie.html">LibWebSocket::Cookie</a></li>
+				
+					<li><a href="../LibWebSocket/Cookie/Request.html">LibWebSocket::Cookie::Request</a></li>
+				
+					<li><a href="../LibWebSocket/Cookie/Response.html">LibWebSocket::Cookie::Response</a></li>
+				
+					<li><a href="../LibWebSocket/Frame.html">LibWebSocket::Frame</a></li>
+				
+					<li><a href="../LibWebSocket/Message.html">LibWebSocket::Message</a></li>
+				
+					<li><a href="../LibWebSocket/OpeningHandshake.html">LibWebSocket::OpeningHandshake</a></li>
+				
+					<li><a href="../LibWebSocket/OpeningHandshake/Client.html">LibWebSocket::OpeningHandshake::Client</a></li>
+				
+					<li><a href="../LibWebSocket/OpeningHandshake/Server.html">LibWebSocket::OpeningHandshake::Server</a></li>
+				
+					<li><a href="../LibWebSocket/Request.html">LibWebSocket::Request</a></li>
+				
+					<li><a href="../LibWebSocket/Response.html">LibWebSocket::Response</a></li>
+				
+					<li><a href="../LibWebSocket/Stateful.html">LibWebSocket::Stateful</a></li>
+				
+					<li><a href="../LibWebSocket/URL.html">LibWebSocket::URL</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">LibWebSocket::Message</h1>
+
+		<div id="description">
+			<p>
+A base class for <a href="Request.html">LibWebSocket::Request</a> and <a
+href="Response.html">LibWebSocket::Response</a>.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="fields-attribute-method" class="method-detail">
+				<a name="fields"></a>
+				
+				<a name="fields="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">fields</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="error-attribute-method" class="method-detail">
+				<a name="error"></a>
+				
+				<a name="error="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">error</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="subprotocol-attribute-method" class="method-detail">
+				<a name="subprotocol"></a>
+				
+				<a name="subprotocol="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">subprotocol</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="host-attribute-method" class="method-detail">
+				<a name="host"></a>
+				
+				<a name="host="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">host</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="origin-attribute-method" class="method-detail">
+				<a name="origin"></a>
+				
+				<a name="origin="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">origin</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="version-attribute-method" class="method-detail">
+				<a name="version"></a>
+				
+				<a name="version="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">version</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="number--attribute-method" class="method-detail">
+				<a name="number1"></a>
+				
+				<a name="number1="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">number1</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="number--attribute-method" class="method-detail">
+				<a name="number2"></a>
+				
+				<a name="number2="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">number2</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="challenge-attribute-method" class="method-detail">
+				<a name="challenge"></a>
+				
+				<a name="challenge="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">challenge</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="checksum-attribute-method" class="method-detail">
+				<a name="checksum"></a>
+				
+				<a name="checksum="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">checksum</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(hash = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+A new instance of <a href="Message.html">Message</a>. Instance variables
+will be set from hash. @example
+</p>
+<pre>
+  msg = LibMessage.new( :host =&gt; 'example.org' )
+  msg.host # =&gt; 'example.org'</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/libwebsocket/message.rb, line 15</span>
+15:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">hash</span> = {})
+16:       <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+17:         <span class="ruby-identifier">instance_variable_set</span>(<span class="ruby-node">&quot;@#{k}&quot;</span>,<span class="ruby-identifier">v</span>)
+18:       <span class="ruby-keyword kw">end</span>
+19: 
+20:       <span class="ruby-ivar">@version</span> <span class="ruby-operator">||=</span> <span class="ruby-value">76</span>
+21:       <span class="ruby-ivar">@buffer</span> = <span class="ruby-value str">''</span>
+22:       <span class="ruby-ivar">@fields</span> <span class="ruby-operator">||=</span> {}
+23:       <span class="ruby-ivar">@max_message_size</span> <span class="ruby-operator">||=</span> <span class="ruby-value">2048</span>
+24:       <span class="ruby-ivar">@cookies</span> <span class="ruby-operator">||=</span> []
+25:       <span class="ruby-ivar">@state</span> = <span class="ruby-value str">'first_line'</span>
+26:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="checksum-method" class="method-detail ">
+				<a name="method-i-checksum"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">checksum</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Calculate Draft 76 checksum
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="checksum-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/libwebsocket/message.rb, line 47</span>
+47:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">checksum</span>
+48:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@checksum</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@checksum</span>
+49: 
+50:       <span class="ruby-identifier">raise</span> <span class="ruby-value str">'number1 is required'</span>   <span class="ruby-keyword kw">unless</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">number1</span>
+51:       <span class="ruby-identifier">raise</span> <span class="ruby-value str">'number2 is required'</span>   <span class="ruby-keyword kw">unless</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">number2</span>
+52:       <span class="ruby-identifier">raise</span> <span class="ruby-value str">'challenge is required'</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">challenge</span>
+53: 
+54:       <span class="ruby-identifier">checksum</span> = <span class="ruby-value str">''</span>
+55:       <span class="ruby-identifier">checksum</span> <span class="ruby-operator">+=</span> [<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">number1</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-value str">'N'</span>)
+56:       <span class="ruby-identifier">checksum</span> <span class="ruby-operator">+=</span> [<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">number2</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-value str">'N'</span>)
+57:       <span class="ruby-identifier">checksum</span> <span class="ruby-operator">+=</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">challenge</span>
+58:       <span class="ruby-identifier">checksum</span> = <span class="ruby-constant">Digest</span><span class="ruby-operator">::</span><span class="ruby-constant">MD5</span>.<span class="ruby-identifier">digest</span>(<span class="ruby-identifier">checksum</span>)
+59: 
+60:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@checksum</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">checksum</span>
+61:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="error--method" class="method-detail ">
+				<a name="method-i-error%3D"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">error=</span><span
+						class="method-args">(val)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Set state to &#8216;error&#8217; and write error message
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="error--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/libwebsocket/message.rb, line 41</span>
+41:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">error=</span>(<span class="ruby-identifier">val</span>)
+42:       <span class="ruby-ivar">@error</span> = <span class="ruby-identifier">val</span>
+43:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">state</span> = <span class="ruby-value str">'error'</span>
+44:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="field-method" class="method-detail ">
+				<a name="method-i-field"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">field</span><span
+						class="method-args">(f, val = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Alias for fields. Use this instead of fields directly to preserve
+normalization(lowercase etc.)
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="field-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/libwebsocket/message.rb, line 30</span>
+30:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">field</span>(<span class="ruby-identifier">f</span>, <span class="ruby-identifier">val</span> = <span class="ruby-keyword kw">nil</span>)
+31:       <span class="ruby-identifier">name</span> = <span class="ruby-identifier">f</span>.<span class="ruby-identifier">downcase</span>
+32: 
+33:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">fields</span>[<span class="ruby-identifier">name</span>] <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">val</span>
+34: 
+35:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">fields</span>[<span class="ruby-identifier">name</span>] = <span class="ruby-identifier">val</span>
+36: 
+37:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>
+38:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parse-method" class="method-detail ">
+				<a name="method-i-parse"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse</span><span
+						class="method-args">(string)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Parse string @see <a
+href="Request.html#method-i-parse">LibWebSocket::Request#parse</a> @see <a
+href="Response.html#method-i-parse">LibWebSocket::Response#parse</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="parse-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/libwebsocket/message.rb, line 66</span>
+66:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse</span>(<span class="ruby-identifier">string</span>)
+67:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">string</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)
+68: 
+69:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">error</span>
+70: 
+71:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">append</span>(<span class="ruby-identifier">string</span>)
+72: 
+73:       <span class="ruby-keyword kw">while</span>(<span class="ruby-operator">!</span><span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">state?</span>(<span class="ruby-value str">'body'</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">line</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">get_line</span>)
+74:         <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">state?</span>(<span class="ruby-value str">'first_line'</span>)
+75:           <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">parse_first_line</span>(<span class="ruby-identifier">line</span>)
+76: 
+77:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">state</span> = <span class="ruby-value str">'fields'</span>
+78:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">line</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">''</span>
+79:           <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">parse_field</span>(<span class="ruby-identifier">line</span>)
+80:         <span class="ruby-keyword kw">else</span>
+81:           <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">state</span> = <span class="ruby-value str">'body'</span>
+82:           <span class="ruby-keyword kw">break</span>
+83:         <span class="ruby-keyword kw">end</span>
+84:       <span class="ruby-keyword kw">end</span>
+85: 
+86:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">state?</span>(<span class="ruby-value str">'body'</span>)
+87: 
+88:       <span class="ruby-identifier">rv</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">parse_body</span>
+89:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">rv</span>
+90: 
+91:       <span class="ruby-comment cmt"># Need more data</span>
+92:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">rv</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">rv</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword kw">true</span>
+93: 
+94:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">done</span>
+95:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="protected-instance-method-details" class="method-section section">
+			<h3 class="section-header">Protected Instance Methods</h3>
+
+		
+			<div id="append-method" class="method-detail ">
+				<a name="method-i-append"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">append</span><span
+						class="method-args">(data)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="append-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/libwebsocket/message.rb, line 126</span>
+126:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">append</span>(<span class="ruby-identifier">data</span>)
+127:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">error</span>
+128: 
+129:       <span class="ruby-ivar">@buffer</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">data</span>
+130: 
+131:       <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@buffer</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@max_message_size</span>
+132:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">error</span> = <span class="ruby-value str">'Message is too long'</span>
+133:         <span class="ruby-keyword kw">return</span>
+134:       <span class="ruby-keyword kw">end</span>
+135: 
+136:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>
+137:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="extract-number-method" class="method-detail ">
+				<a name="method-i-extract_number"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">extract_number</span><span
+						class="method-args">(key)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="extract-number-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/libwebsocket/message.rb, line 109</span>
+109:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">extract_number</span>(<span class="ruby-identifier">key</span>)
+110:       <span class="ruby-identifier">number</span> = <span class="ruby-value str">''</span>
+111:       <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">slice!</span>(<span class="ruby-regexp re">/(\d)/</span>)
+112:         <span class="ruby-identifier">number</span> <span class="ruby-operator">+=</span> <span class="ruby-node">$1</span>
+113:       <span class="ruby-keyword kw">end</span>
+114:       <span class="ruby-identifier">number</span> = <span class="ruby-identifier">number</span>.<span class="ruby-identifier">to_i</span>
+115: 
+116:       <span class="ruby-identifier">spaces</span> = <span class="ruby-value">0</span>
+117:       <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">slice!</span>(<span class="ruby-regexp re">/ /</span>)
+118:         <span class="ruby-identifier">spaces</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+119:       <span class="ruby-keyword kw">end</span>
+120: 
+121:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">spaces</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+122: 
+123:       <span class="ruby-keyword kw">return</span> (<span class="ruby-identifier">number</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">spaces</span>).<span class="ruby-identifier">to_i</span>
+124:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="get-line-method" class="method-detail ">
+				<a name="method-i-get_line"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">get_line</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="get-line-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/libwebsocket/message.rb, line 139</span>
+139:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_line</span>
+140:       <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@buffer</span>.<span class="ruby-identifier">slice!</span>(<span class="ruby-regexp re">/\A(.*?)\x0d?\x0a/</span>)
+141:         <span class="ruby-keyword kw">return</span> <span class="ruby-node">$1</span>
+142:       <span class="ruby-keyword kw">end</span>
+143:       <span class="ruby-keyword kw">return</span>
+144:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="number-method" class="method-detail ">
+				<a name="method-i-number"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">number</span><span
+						class="method-args">(name, key, value = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="number-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/libwebsocket/message.rb, line 99</span>
+ 99:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">number</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span> = <span class="ruby-keyword kw">nil</span>)
+100:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">value</span>
+101:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">instance_variable_set</span>(<span class="ruby-node">&quot;@#{name}&quot;</span>, <span class="ruby-identifier">value</span>)
+102:       <span class="ruby-keyword kw">end</span>
+103: 
+104:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">instance_variable_get</span>(<span class="ruby-node">&quot;@#{name}&quot;</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">instance_variable_get</span>(<span class="ruby-node">&quot;@#{name}&quot;</span>)
+105: 
+106:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">instance_variable_set</span>(<span class="ruby-node">&quot;@#{name}&quot;</span>, <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">extract_number</span>(<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">key</span>)))
+107:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parse-body-method" class="method-detail ">
+				<a name="method-i-parse_body"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse_body</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="parse-body-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/libwebsocket/message.rb, line 162</span>
+162:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse_body</span>
+163:       <span class="ruby-keyword kw">self</span>
+164:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parse-field-method" class="method-detail ">
+				<a name="method-i-parse_field"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse_field</span><span
+						class="method-args">(line)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="parse-field-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/libwebsocket/message.rb, line 150</span>
+150:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse_field</span>(<span class="ruby-identifier">line</span>)
+151:       <span class="ruby-identifier">name</span>, <span class="ruby-identifier">value</span> = <span class="ruby-identifier">line</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">': '</span>, <span class="ruby-value">2</span>)
+152:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">value</span>
+153:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">error</span> = <span class="ruby-value str">'Invalid field'</span>
+154:         <span class="ruby-keyword kw">return</span>
+155:       <span class="ruby-keyword kw">end</span>
+156: 
+157:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">field</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">value</span>)
+158: 
+159:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>
+160:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parse-first-line-method" class="method-detail ">
+				<a name="method-i-parse_first_line"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse_first_line</span><span
+						class="method-args">(line)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="parse-first-line-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/libwebsocket/message.rb, line 146</span>
+146:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse_first_line</span>(<span class="ruby-identifier">line</span>)
+147:       <span class="ruby-keyword kw">self</span>
+148:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

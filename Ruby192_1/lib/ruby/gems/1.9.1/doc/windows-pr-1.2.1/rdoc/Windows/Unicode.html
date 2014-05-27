@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Windows::Unicode</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/windows/unicode_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/windows/unicode.rb">lib/windows/unicode.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-multi_to_wide">#multi_to_wide</a></li>
+					
+					<li><a href="#method-i-wide_to_multi">#wide_to_multi</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+			<div id="includes-section" class="section">
+				<h3 class="section-header">Included Modules</h3>
+				<ul class="link-list">
+				
+				
+					<li><a class="include" href="MSVCRT/String.html">Windows::MSVCRT::String</a></li>
+				
+				
+				
+					<li><a class="include" href="Error.html">Windows::Error</a></li>
+				
+				
+				</ul>
+			</div>
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../CHANGES.html">CHANGES</a></li>
+				
+					<li class="file"><a href="../MANIFEST.html">MANIFEST</a></li>
+				
+					<li class="file"><a href="../README.html">README</a></li>
+				
+					<li class="file"><a href="../doc/conversion_guide_txt.html">conversion_guide.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Windows.html">Windows</a></li>
+				
+					<li><a href="../Windows/COM.html">Windows::COM</a></li>
+				
+					<li><a href="../Windows/COM/Accessibility.html">Windows::COM::Accessibility</a></li>
+				
+					<li><a href="../Windows/COM/Automation.html">Windows::COM::Automation</a></li>
+				
+					<li><a href="../Windows/COM/Variant.html">Windows::COM::Variant</a></li>
+				
+					<li><a href="../Windows/Clipboard.html">Windows::Clipboard</a></li>
+				
+					<li><a href="../Windows/Console.html">Windows::Console</a></li>
+				
+					<li><a href="../Windows/Debug.html">Windows::Debug</a></li>
+				
+					<li><a href="../Windows/DeviceIO.html">Windows::DeviceIO</a></li>
+				
+					<li><a href="../Windows/Directory.html">Windows::Directory</a></li>
+				
+					<li><a href="../Windows/Error.html">Windows::Error</a></li>
+				
+					<li><a href="../Windows/EventLog.html">Windows::EventLog</a></li>
+				
+					<li><a href="../Windows/File.html">Windows::File</a></li>
+				
+					<li><a href="../Windows/FileMapping.html">Windows::FileMapping</a></li>
+				
+					<li><a href="../Windows/FileSystem.html">Windows::FileSystem</a></li>
+				
+					<li><a href="../Windows/GDI.html">Windows::GDI</a></li>
+				
+					<li><a href="../Windows/GDI/Bitmap.html">Windows::GDI::Bitmap</a></li>
+				
+					<li><a href="../Windows/GDI/DeviceContext.html">Windows::GDI::DeviceContext</a></li>
+				
+					<li><a href="../Windows/GDI/MetaFile.html">Windows::GDI::MetaFile</a></li>
+				
+					<li><a href="../Windows/GDI/PaintingDrawing.html">Windows::GDI::PaintingDrawing</a></li>
+				
+					<li><a href="../Windows/Handle.html">Windows::Handle</a></li>
+				
+					<li><a href="../Windows/Library.html">Windows::Library</a></li>
+				
+					<li><a href="../Windows/Limits.html">Windows::Limits</a></li>
+				
+					<li><a href="../Windows/MSVCRT.html">Windows::MSVCRT</a></li>
+				
+					<li><a href="../Windows/MSVCRT/Buffer.html">Windows::MSVCRT::Buffer</a></li>
+				
+					<li><a href="../Windows/MSVCRT/Directory.html">Windows::MSVCRT::Directory</a></li>
+				
+					<li><a href="../Windows/MSVCRT/File.html">Windows::MSVCRT::File</a></li>
+				
+					<li><a href="../Windows/MSVCRT/IO.html">Windows::MSVCRT::IO</a></li>
+				
+					<li><a href="../Windows/MSVCRT/String.html">Windows::MSVCRT::String</a></li>
+				
+					<li><a href="../Windows/MSVCRT/Time.html">Windows::MSVCRT::Time</a></li>
+				
+					<li><a href="../Windows/Mailslot.html">Windows::Mailslot</a></li>
+				
+					<li><a href="../Windows/Memory.html">Windows::Memory</a></li>
+				
+					<li><a href="../Windows/NIO.html">Windows::NIO</a></li>
+				
+					<li><a href="../Windows/NTFS.html">Windows::NTFS</a></li>
+				
+					<li><a href="../Windows/NTFS/Winternl.html">Windows::NTFS::Winternl</a></li>
+				
+					<li><a href="../Windows/National.html">Windows::National</a></li>
+				
+					<li><a href="../Windows/Network.html">Windows::Network</a></li>
+				
+					<li><a href="../Windows/Network/Management.html">Windows::Network::Management</a></li>
+				
+					<li><a href="../Windows/Network/SNMP.html">Windows::Network::SNMP</a></li>
+				
+					<li><a href="../Windows/Network/Winsock.html">Windows::Network::Winsock</a></li>
+				
+					<li><a href="../Windows/Path.html">Windows::Path</a></li>
+				
+					<li><a href="../Windows/Pipe.html">Windows::Pipe</a></li>
+				
+					<li><a href="../Windows/Process.html">Windows::Process</a></li>
+				
+					<li><a href="../Windows/Registry.html">Windows::Registry</a></li>
+				
+					<li><a href="../Windows/Security.html">Windows::Security</a></li>
+				
+					<li><a href="../Windows/Security/Authentication.html">Windows::Security::Authentication</a></li>
+				
+					<li><a href="../Windows/Service.html">Windows::Service</a></li>
+				
+					<li><a href="../Windows/Shell.html">Windows::Shell</a></li>
+				
+					<li><a href="../Windows/Socket.html">Windows::Socket</a></li>
+				
+					<li><a href="../Windows/Sound.html">Windows::Sound</a></li>
+				
+					<li><a href="../Windows/Synchronize.html">Windows::Synchronize</a></li>
+				
+					<li><a href="../Windows/SystemInfo.html">Windows::SystemInfo</a></li>
+				
+					<li><a href="../Windows/Thread.html">Windows::Thread</a></li>
+				
+					<li><a href="../Windows/Time.html">Windows::Time</a></li>
+				
+					<li><a href="../Windows/ToolHelper.html">Windows::ToolHelper</a></li>
+				
+					<li><a href="../Windows/Unicode.html">Windows::Unicode</a></li>
+				
+					<li><a href="../Windows/Volume.html">Windows::Volume</a></li>
+				
+					<li><a href="../Windows/WSA.html">Windows::WSA</a></li>
+				
+					<li><a href="../Windows/Window.html">Windows::Window</a></li>
+				
+					<li><a href="../Windows/Window/Classes.html">Windows::Window::Classes</a></li>
+				
+					<li><a href="../Windows/Window/Dialog.html">Windows::Window::Dialog</a></li>
+				
+					<li><a href="../Windows/Window/Menu.html">Windows::Window::Menu</a></li>
+				
+					<li><a href="../Windows/Window/Message.html">Windows::Window::Message</a></li>
+				
+					<li><a href="../Windows/Window/Properties.html">Windows::Window::Properties</a></li>
+				
+					<li><a href="../Windows/Window/Timer.html">Windows::Window::Timer</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Windows::Unicode</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="CP_ACP">CP_ACP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CP_OEMCP">CP_OEMCP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CP_MACCP">CP_MACCP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CP_THREAD_ACP">CP_THREAD_ACP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CP_SYMBOL">CP_SYMBOL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CP_UTF7">CP_UTF7</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CP_UTF8">CP_UTF8</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="MB_PRECOMPOSED">MB_PRECOMPOSED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="MB_COMPOSITE">MB_COMPOSITE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="MB_USEGLYPHCHARS">MB_USEGLYPHCHARS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="MB_ERR_INVALID_CHARS">MB_ERR_INVALID_CHARS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WC_COMPOSITECHECK">WC_COMPOSITECHECK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WC_DISCARDNS">WC_DISCARDNS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WC_SEPCHARS">WC_SEPCHARS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WC_DEFAULTCHAR">WC_DEFAULTCHAR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WC_NO_BEST_FIT_CHARS">WC_NO_BEST_FIT_CHARS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ANSI_CHARSET">ANSI_CHARSET</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DEFAULT_CHARSET">DEFAULT_CHARSET</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SYMBOL_CHARSET">SYMBOL_CHARSET</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SHIFTJIS_CHARSET">SHIFTJIS_CHARSET</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="HANGEUL_CHARSET">HANGEUL_CHARSET</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="HANGUL_CHARSET">HANGUL_CHARSET</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="GB2312_CHARSET">GB2312_CHARSET</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CHINESEBIG5_CHARSET">CHINESEBIG5_CHARSET</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="OEM_CHARSET">OEM_CHARSET</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="JOHAB_CHARSET">JOHAB_CHARSET</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="HEBREW_CHARSET">HEBREW_CHARSET</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ARABIC_CHARSET">ARABIC_CHARSET</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="GREEK_CHARSET">GREEK_CHARSET</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TURKISH_CHARSET">TURKISH_CHARSET</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="VIETNAMESE_CHARSET">VIETNAMESE_CHARSET</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="THAI_CHARSET">THAI_CHARSET</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="EASTEUROPE_CHARSET">EASTEUROPE_CHARSET</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="RUSSIAN_CHARSET">RUSSIAN_CHARSET</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="IS_TEXT_UNICODE_ASCII16">IS_TEXT_UNICODE_ASCII16</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="IS_TEXT_UNICODE_REVERSE_ASCII16">IS_TEXT_UNICODE_REVERSE_ASCII16</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="IS_TEXT_UNICODE_STATISTICS">IS_TEXT_UNICODE_STATISTICS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="IS_TEXT_UNICODE_REVERSE_STATISTICS">IS_TEXT_UNICODE_REVERSE_STATISTICS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="IS_TEXT_UNICODE_CONTROLS">IS_TEXT_UNICODE_CONTROLS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="IS_TEXT_UNICODE_REVERSE_CONTROLS">IS_TEXT_UNICODE_REVERSE_CONTROLS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="IS_TEXT_UNICODE_SIGNATURE">IS_TEXT_UNICODE_SIGNATURE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="IS_TEXT_UNICODE_REVERSE_SIGNATURE">IS_TEXT_UNICODE_REVERSE_SIGNATURE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="IS_TEXT_UNICODE_ILLEGAL_CHARS">IS_TEXT_UNICODE_ILLEGAL_CHARS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="IS_TEXT_UNICODE_ODD_LENGTH">IS_TEXT_UNICODE_ODD_LENGTH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="IS_TEXT_UNICODE_DBCS_LEADBYTE">IS_TEXT_UNICODE_DBCS_LEADBYTE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="IS_TEXT_UNICODE_NULL_BYTES">IS_TEXT_UNICODE_NULL_BYTES</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="IS_TEXT_UNICODE_UNICODE_MASK">IS_TEXT_UNICODE_UNICODE_MASK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="IS_TEXT_UNICODE_REVERSE_MASK">IS_TEXT_UNICODE_REVERSE_MASK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="IS_TEXT_UNICODE_NOT_UNICODE_MASK">IS_TEXT_UNICODE_NOT_UNICODE_MASK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="IS_TEXT_UNICODE_NOT_ASCII_MASK">IS_TEXT_UNICODE_NOT_ASCII_MASK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TCI_SRCCHARSET">TCI_SRCCHARSET</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TCI_SRCCODEPAGE">TCI_SRCCODEPAGE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TCI_SRCFONTSIG">TCI_SRCFONTSIG</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TCI_SRCLOCALE">TCI_SRCLOCALE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="multi-to-wide-method" class="method-detail ">
+				<a name="method-i-multi_to_wide"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">multi_to_wide</span><span
+						class="method-args">(string, encoding=nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Maps a wide character string to a new character string using the specified
+<tt>encoding</tt>.  If no encoding is specified, then <a
+href="Unicode.html#CP_UTF8">CP_UTF8</a>  is used if $KCODE (or the encoding
+name in Ruby 1.9.x) is set to UTF8. Otherwise, <a
+href="Unicode.html#CP_ACP">CP_ACP</a> is used.
+</p>
+<p>
+If the function fails it simply returns the string as-is.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="multi-to-wide-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/unicode.rb, line 96</span>
+ 96:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">multi_to_wide</span>(<span class="ruby-identifier">string</span>, <span class="ruby-identifier">encoding</span>=<span class="ruby-keyword kw">nil</span>)
+ 97:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">string</span>
+ 98:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">string</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)
+ 99:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">string</span> <span class="ruby-keyword kw">if</span> <span class="ruby-constant">IsTextUnicode</span>(<span class="ruby-identifier">string</span>, <span class="ruby-identifier">string</span>.<span class="ruby-identifier">size</span>, <span class="ruby-keyword kw">nil</span>)
+100:        
+101:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">encoding</span>
+102:         <span class="ruby-keyword kw">if</span> <span class="ruby-constant">RUBY_VERSION</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">1.9</span>
+103:           <span class="ruby-identifier">encoding</span> = (<span class="ruby-identifier">string</span>.<span class="ruby-identifier">encoding</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'UTF-8'</span>) <span class="ruby-operator">?</span> <span class="ruby-constant">CP_UTF8</span> <span class="ruby-operator">:</span> <span class="ruby-constant">CP_ACP</span>
+104:         <span class="ruby-keyword kw">else</span>
+105:           <span class="ruby-identifier">encoding</span> = (<span class="ruby-identifier">$KCODE</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'UTF8'</span>) <span class="ruby-operator">?</span> <span class="ruby-constant">CP_UTF8</span> <span class="ruby-operator">:</span> <span class="ruby-constant">CP_ACP</span>
+106:         <span class="ruby-keyword kw">end</span>
+107:       <span class="ruby-keyword kw">end</span>
+108:        
+109:       <span class="ruby-identifier">int</span> = <span class="ruby-constant">MultiByteToWideChar</span>(<span class="ruby-identifier">encoding</span>, <span class="ruby-value">0</span>, <span class="ruby-identifier">string</span>, <span class="ruby-value">1</span>, <span class="ruby-keyword kw">nil</span>, <span class="ruby-value">0</span>)
+110:        
+111:       <span class="ruby-comment cmt"># Trailing nulls are retained</span>
+112:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">int</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+113:         <span class="ruby-identifier">buf</span> = <span class="ruby-value str">' '</span> * <span class="ruby-identifier">int</span> * <span class="ruby-value">2</span>
+114:         <span class="ruby-constant">MultiByteToWideChar</span>(<span class="ruby-identifier">encoding</span>, <span class="ruby-value">0</span>, <span class="ruby-identifier">string</span>, <span class="ruby-value">1</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">int</span>)
+115:         <span class="ruby-identifier">buf</span>
+116:       <span class="ruby-keyword kw">else</span>
+117:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-identifier">get_last_error</span>
+118:       <span class="ruby-keyword kw">end</span>         
+119:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="wide-to-multi-method" class="method-detail ">
+				<a name="method-i-wide_to_multi"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">wide_to_multi</span><span
+						class="method-args">(wstring, encoding=nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Maps a wide character string to a new character string using the specified
+<tt>encoding</tt>. If no encoding is specified, then <a
+href="Unicode.html#CP_UTF8">CP_UTF8</a>  is used if $KCODE (or the encoding
+name in Ruby 1.9.x) is set to UTF8. Otherwise, <a
+href="Unicode.html#CP_ACP">CP_ACP</a> is used.
+</p>
+<p>
+If the function fails it simply returns the string as-is.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="wide-to-multi-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/unicode.rb, line 128</span>
+128:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">wide_to_multi</span>(<span class="ruby-identifier">wstring</span>, <span class="ruby-identifier">encoding</span>=<span class="ruby-keyword kw">nil</span>)
+129:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">wstring</span>
+130:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">wstring</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)
+131:        
+132:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">encoding</span>
+133:         <span class="ruby-keyword kw">if</span> <span class="ruby-constant">RUBY_VERSION</span>.<span class="ruby-identifier">to_f</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">1.9</span>
+134:           <span class="ruby-identifier">encoding</span> = (<span class="ruby-identifier">wstring</span>.<span class="ruby-identifier">encoding</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'UTF-8'</span>) <span class="ruby-operator">?</span> <span class="ruby-constant">CP_UTF8</span> <span class="ruby-operator">:</span> <span class="ruby-constant">CP_ACP</span>
+135:         <span class="ruby-keyword kw">else</span>
+136:           <span class="ruby-identifier">encoding</span> = (<span class="ruby-identifier">$KCODE</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'UTF8'</span>) <span class="ruby-operator">?</span> <span class="ruby-constant">CP_UTF8</span> <span class="ruby-operator">:</span> <span class="ruby-constant">CP_ACP</span>
+137:         <span class="ruby-keyword kw">end</span>
+138:       <span class="ruby-keyword kw">end</span>
+139: 
+140:       <span class="ruby-comment cmt"># Add a trailing double null if necessary</span>
+141:       <span class="ruby-identifier">wstring</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;\0000\0000&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">wstring</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">chr</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">&quot;\0000&quot;</span>
+142: 
+143:       <span class="ruby-identifier">int</span> = <span class="ruby-constant">WideCharToMultiByte</span>(<span class="ruby-identifier">encoding</span>, <span class="ruby-value">0</span>, <span class="ruby-identifier">wstring</span>, <span class="ruby-value">1</span>, <span class="ruby-value">0</span>, <span class="ruby-value">0</span>, <span class="ruby-keyword kw">nil</span>, <span class="ruby-keyword kw">nil</span>)
+144:        
+145:       <span class="ruby-comment cmt"># Trailing nulls are stripped</span>
+146:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">int</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+147:         <span class="ruby-identifier">buf</span> = <span class="ruby-value str">' '</span> * <span class="ruby-identifier">int</span>
+148:         <span class="ruby-constant">WideCharToMultiByte</span>(<span class="ruby-identifier">encoding</span>, <span class="ruby-value">0</span>, <span class="ruby-identifier">wstring</span>, <span class="ruby-value">1</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">strlen</span>(<span class="ruby-identifier">buf</span>), <span class="ruby-keyword kw">nil</span>, <span class="ruby-keyword kw">nil</span>)
+149:         <span class="ruby-identifier">buf</span>[ <span class="ruby-regexp re">/^[^\00]]*/</span> ]
+150:       <span class="ruby-keyword kw">else</span>
+151:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-identifier">get_last_error</span>
+152:       <span class="ruby-keyword kw">end</span>         
+153:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

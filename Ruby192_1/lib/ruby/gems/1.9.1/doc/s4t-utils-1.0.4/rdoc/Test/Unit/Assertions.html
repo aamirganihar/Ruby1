@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Test::Unit::Assertions</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/s4t-utils/more-assertions_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/s4t-utils/more-assertions.rb">lib/s4t-utils/more-assertions.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-assert_false">#assert_false</a></li>
+					
+					<li><a href="#method-i-assert_raise_with_matching_message">#assert_raise_with_matching_message</a></li>
+					
+					<li><a href="#method-i-assert_raises_with_matching_message">#assert_raises_with_matching_message</a></li>
+					
+					<li><a href="#method-i-assert_true">#assert_true</a></li>
+					
+					<li><a href="#method-i-assert_wants_to_exit">#assert_wants_to_exit</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../../History_txt.html">History.txt</a></li>
+				
+					<li class="file"><a href="../../LICENSE_txt.html">LICENSE.txt</a></li>
+				
+					<li class="file"><a href="../../Manifest_txt.html">Manifest.txt</a></li>
+				
+					<li class="file"><a href="../../NOTES_txt.html">NOTES.txt</a></li>
+				
+					<li class="file"><a href="../../README_txt.html">README.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../S4tUtils.html">S4tUtils</a></li>
+				
+					<li><a href="../../S4tUtils/ArgForwarder.html">S4tUtils::ArgForwarder</a></li>
+				
+					<li><a href="../../Test.html">Test</a></li>
+				
+					<li><a href="../../Test/Unit.html">Test::Unit</a></li>
+				
+					<li><a href="../../Test/Unit/Assertions.html">Test::Unit::Assertions</a></li>
+				
+					<li><a href="../../HoeLike.html">HoeLike</a></li>
+				
+					<li><a href="../../String.html">String</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Test::Unit::Assertions</h1>
+
+		<div id="description">
+			<p>
+Some additional <a href="../Unit.html">Test::Unit</a> assertions.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="assert-false-method" class="method-detail ">
+				<a name="method-i-assert_false"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">assert_false</span><span
+						class="method-args">(boolean, message = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Assert that the <em>boolean</em> is false.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="assert-false-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/s4t-utils/more-assertions.rb, line 12</span>
+12:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">assert_false</span>(<span class="ruby-identifier">boolean</span>, <span class="ruby-identifier">message</span> = <span class="ruby-keyword kw">nil</span>)
+13:         <span class="ruby-identifier">_wrap_assertion</span> <span class="ruby-keyword kw">do</span>
+14:           <span class="ruby-identifier">assert_block</span>(<span class="ruby-identifier">build_message</span>(<span class="ruby-identifier">message</span>, <span class="ruby-value str">&quot;&lt;?&gt; should be false or nil.&quot;</span>, <span class="ruby-identifier">boolean</span>)) { <span class="ruby-operator">!</span><span class="ruby-identifier">boolean</span> }
+15:         <span class="ruby-keyword kw">end</span>
+16:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="assert-raise-with-matching-message-method" class="method-detail ">
+				<a name="method-i-assert_raise_with_matching_message"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">assert_raise_with_matching_message</span><span
+						class="method-args">(exception_class, message, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Like <tt>assert_raise</tt>, but the raised exception must contain a
+<tt>message</tt> matching (as in <tt>assert_match</tt>) the
+<em>message</em> argument.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="assert-raise-with-matching-message-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/s4t-utils/more-assertions.rb, line 20</span>
+20:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">assert_raise_with_matching_message</span>(<span class="ruby-identifier">exception_class</span>, <span class="ruby-identifier">message</span>, &amp;<span class="ruby-identifier">block</span>)
+21:         <span class="ruby-identifier">exception</span> = <span class="ruby-identifier">assert_raise</span>(<span class="ruby-identifier">exception_class</span>, &amp;<span class="ruby-identifier">block</span>)
+22:         <span class="ruby-identifier">assert_match</span>(<span class="ruby-identifier">message</span>, <span class="ruby-identifier">exception</span>.<span class="ruby-identifier">message</span>)
+23:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="Assertions.html#method-i-assert_raises_with_matching_message">assert_raises_with_matching_message</a>
+				</div>
+				
+
+				
+			</div>
+
+		
+			<div id="assert-raises-with-matching-message-method" class="method-detail method-alias">
+				<a name="method-i-assert_raises_with_matching_message"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">assert_raises_with_matching_message</span><span
+						class="method-args">(exception_class, message, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="Assertions.html#method-i-assert_raise_with_matching_message">assert_raise_with_matching_message</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="assert-true-method" class="method-detail ">
+				<a name="method-i-assert_true"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">assert_true</span><span
+						class="method-args">(boolean, message = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Same as <tt>assert</tt>. I just like it better.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="assert-true-source">
+<pre>
+   <span class="ruby-comment cmt"># File lib/s4t-utils/more-assertions.rb, line 7</span>
+7:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">assert_true</span>(<span class="ruby-identifier">boolean</span>, <span class="ruby-identifier">message</span> = <span class="ruby-keyword kw">nil</span>)
+8:         <span class="ruby-identifier">assert</span>(<span class="ruby-identifier">boolean</span>, <span class="ruby-identifier">message</span>)
+9:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="assert-wants-to-exit-method" class="method-detail ">
+				<a name="method-i-assert_wants_to_exit"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">assert_wants_to_exit</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Assert that the block tried to <tt>exit</tt>. 
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="assert-wants-to-exit-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/s4t-utils/more-assertions.rb, line 28</span>
+28:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">assert_wants_to_exit</span>
+29:         <span class="ruby-identifier">assert_raise</span>(<span class="ruby-constant">SystemExit</span>) <span class="ruby-keyword kw">do</span>
+30:           <span class="ruby-keyword kw">yield</span>
+31:         <span class="ruby-keyword kw">end</span>
+32:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

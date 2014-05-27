@@ -1,0 +1,2330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Hoe</title>
+
+	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="./lib/hoe_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/hoe.rb">lib/hoe.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+			<div id="namespace-list-section" class="section">
+				<h3 class="section-header">Namespace</h3>
+				<ul class="link-list">
+					
+					<li><span class="type">MODULE</span> <a href="Hoe/Clean.html">Hoe::Clean</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="Hoe/Compiler.html">Hoe::Compiler</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="Hoe/Debug.html">Hoe::Debug</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="Hoe/Deps.html">Hoe::Deps</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="Hoe/Flay.html">Hoe::Flay</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="Hoe/Flog.html">Hoe::Flog</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="Hoe/GemPreludeSucks.html">Hoe::GemPreludeSucks</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="Hoe/Gemcutter.html">Hoe::Gemcutter</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="Hoe/Inline.html">Hoe::Inline</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="Hoe/Newb.html">Hoe::Newb</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="Hoe/Package.html">Hoe::Package</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="Hoe/Publish.html">Hoe::Publish</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="Hoe/RCov.html">Hoe::RCov</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="Hoe/Racc.html">Hoe::Racc</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="Hoe/RubyForge.html">Hoe::RubyForge</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="Hoe/Signing.html">Hoe::Signing</a></li>
+					
+					<li><span class="type">MODULE</span> <a href="Hoe/Test.html">Hoe::Test</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-add_include_dirs">::add_include_dirs</a></li>
+					
+					<li><a href="#method-c-bad_plugins">::bad_plugins</a></li>
+					
+					<li><a href="#method-c-load_plugins">::load_plugins</a></li>
+					
+					<li><a href="#method-c-plugin">::plugin</a></li>
+					
+					<li><a href="#method-c-plugins">::plugins</a></li>
+					
+					<li><a href="#method-c-spec">::spec</a></li>
+					
+					<li><a href="#method-i-activate_plugin_deps">#activate_plugin_deps</a></li>
+					
+					<li><a href="#method-i-activate_plugins">#activate_plugins</a></li>
+					
+					<li><a href="#method-i-add_dependencies">#add_dependencies</a></li>
+					
+					<li><a href="#method-i-define_spec">#define_spec</a></li>
+					
+					<li><a href="#method-i-dependency">#dependency</a></li>
+					
+					<li><a href="#method-i-dependency_target">#dependency_target</a></li>
+					
+					<li><a href="#method-i-developer">#developer</a></li>
+					
+					<li><a href="#method-i-have_gem%3F">#have_gem?</a></li>
+					
+					<li><a href="#method-i-initialize_plugins">#initialize_plugins</a></li>
+					
+					<li><a href="#method-i-intuit_values">#intuit_values</a></li>
+					
+					<li><a href="#method-i-load_plugin_tasks">#load_plugin_tasks</a></li>
+					
+					<li><a href="#method-i-missing">#missing</a></li>
+					
+					<li><a href="#method-i-normalize_deps">#normalize_deps</a></li>
+					
+					<li><a href="#method-i-paragraphs_of">#paragraphs_of</a></li>
+					
+					<li><a href="#method-i-parse_urls">#parse_urls</a></li>
+					
+					<li><a href="#method-i-pluggable%21">#pluggable!</a></li>
+					
+					<li><a href="#method-i-plugin%3F">#plugin?</a></li>
+					
+					<li><a href="#method-i-post_initialize">#post_initialize</a></li>
+					
+					<li><a href="#method-i-read_manifest">#read_manifest</a></li>
+					
+					<li><a href="#method-i-require_ruby_version">#require_ruby_version</a></li>
+					
+					<li><a href="#method-i-require_rubygems_version">#require_rubygems_version</a></li>
+					
+					<li><a href="#method-i-timebomb">#timebomb</a></li>
+					
+					<li><a href="#method-i-url">#url</a></li>
+					
+					<li><a href="#method-i-url%3D">#url=</a></li>
+					
+					<li><a href="#method-i-validate_fields">#validate_fields</a></li>
+					
+					<li><a href="#method-i-with_config">#with_config</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+			<div id="includes-section" class="section">
+				<h3 class="section-header">Included Modules</h3>
+				<ul class="link-list">
+				
+				
+					<li><span class="include">Rake::DSL</span></li>
+				
+				
+				</ul>
+			</div>
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="./History_txt.html">History.txt</a></li>
+				
+					<li class="file"><a href="./Manifest_txt.html">Manifest.txt</a></li>
+				
+					<li class="file"><a href="./README_txt.html">README.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./Hoe.html">Hoe</a></li>
+				
+					<li><a href="./Hoe/Clean.html">Hoe::Clean</a></li>
+				
+					<li><a href="./Hoe/Compiler.html">Hoe::Compiler</a></li>
+				
+					<li><a href="./Hoe/Debug.html">Hoe::Debug</a></li>
+				
+					<li><a href="./Hoe/Deps.html">Hoe::Deps</a></li>
+				
+					<li><a href="./Hoe/Flay.html">Hoe::Flay</a></li>
+				
+					<li><a href="./Hoe/Flog.html">Hoe::Flog</a></li>
+				
+					<li><a href="./Hoe/GemPreludeSucks.html">Hoe::GemPreludeSucks</a></li>
+				
+					<li><a href="./Hoe/Gemcutter.html">Hoe::Gemcutter</a></li>
+				
+					<li><a href="./Hoe/Inline.html">Hoe::Inline</a></li>
+				
+					<li><a href="./Hoe/Newb.html">Hoe::Newb</a></li>
+				
+					<li><a href="./Hoe/Package.html">Hoe::Package</a></li>
+				
+					<li><a href="./Hoe/Publish.html">Hoe::Publish</a></li>
+				
+					<li><a href="./Hoe/RCov.html">Hoe::RCov</a></li>
+				
+					<li><a href="./Hoe/Racc.html">Hoe::Racc</a></li>
+				
+					<li><a href="./Hoe/RubyForge.html">Hoe::RubyForge</a></li>
+				
+					<li><a href="./Hoe/Signing.html">Hoe::Signing</a></li>
+				
+					<li><a href="./Hoe/Test.html">Hoe::Test</a></li>
+				
+					<li><a href="./Rake.html">Rake</a></li>
+				
+					<li><a href="./Rake/Task.html">Rake::Task</a></li>
+				
+					<li><a href="./Rake/TaskManager.html">Rake::TaskManager</a></li>
+				
+					<li><a href="./File.html">File</a></li>
+				
+					<li><a href="./Gem.html">Gem</a></li>
+				
+					<li><a href="./String.html">String</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Hoe</h1>
+
+		<div id="description">
+			<p>
+<a href="Hoe.html">Hoe</a> is a simple rake/rubygems helper for project
+Rakefiles. It helps generate rubygems and includes a dynamic plug-in system
+allowing for easy extensibility. <a href="Hoe.html">Hoe</a> ships with
+plug-ins for all your usual project tasks including rdoc generation,
+testing, packaging, and deployment.
+</p>
+<h2>Using <a href="Hoe.html">Hoe</a></h2>
+<h3>Basics</h3>
+<p>
+Sow generates a new project from scratch. Sow uses a simple ERB templating
+system allowing you to capture patterns common to your projects. Run `sow`
+and then see ~/.hoe_template for more info:
+</p>
+<pre>
+  % sow project_name
+  ...
+  % cd project_name
+</pre>
+<p>
+and have at it.
+</p>
+<h3>Extra Configuration Options:</h3>
+<p>
+<a href="Hoe.html">Hoe</a> maintains a config file for cross-project
+values. The file is located at <tt>~/.hoerc</tt>. The file is a YAML
+formatted config file with the following settings (extended by plugins):
+</p>
+<table>
+<tr><td valign="top">exclude</td><td><p>
+A regular expression of files to exclude from <tt>check_manifest</tt>.
+</p>
+</td></tr>
+</table>
+<p>
+Run <tt>`rake config_hoe`</tt> and see ~/.hoerc for examples.
+</p>
+<h2>Extending <a href="Hoe.html">Hoe</a></h2>
+<p>
+<a href="Hoe.html">Hoe</a> can be extended via its plugin system. <a
+href="Hoe.html">Hoe</a> searches out all installed files matching
+<tt>'hoe/*.rb'</tt> and loads them. Those files are expected to define a
+module matching the file name. The module must define a define task method
+and can optionally define an initialize method. Both methods must be named
+to match the file. eg
+</p>
+<pre>
+  module Hoe::Blah
+    def initialize_blah # optional
+      # ...
+    end
+
+    def define_blah_tasks
+      # ...
+    end
+  end
+</pre>
+<h3><a href="Hoe.html">Hoe</a> Plugin Loading Sequence</h3>
+<pre>
+  Hoe.spec
+    Hoe.load_plugins
+      require
+    activate_plugins
+      extend plugin_module
+      initialize_plugins
+        initialize_XXX
+      activate_plugin_deps
+        activate_XXX_deps
+    yield spec
+    post_initialize
+      define_spec # gemspec, not hoespec
+      load_plugin_tasks
+      add_dependencies</pre>
+
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="VERSION">VERSION</a></dt>
+				
+				<dd class="description"><p>
+duh
+</p></dd>
+				
+			
+				<dt><a name="RUBY_DEBUG">RUBY_DEBUG</a></dt>
+				
+				<dd class="description"><p>
+Used to add extra flags to <a href="Hoe.html#RUBY_FLAGS">RUBY_FLAGS</a>.
+</p></dd>
+				
+			
+				<dt><a name="RUBY_FLAGS">RUBY_FLAGS</a></dt>
+				
+				<dd class="description"><p>
+Used to specify flags to ruby [has smart default].
+</p></dd>
+				
+			
+				<dt><a name="DEFAULT_CONFIG">DEFAULT_CONFIG</a></dt>
+				
+				<dd class="description"><p>
+Default configuration values for .hoerc. Plugins should populate this on
+load.
+</p></dd>
+				
+			
+				<dt><a name="WINDOZE">WINDOZE</a></dt>
+				
+				<dd class="description"><p>
+True if you&#8217;re a masochistic developer. Used for building commands.
+</p></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="author-attribute-method" class="method-detail">
+				<a name="author"></a>
+				
+				<a name="author="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">author</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+<b>MANDATORY</b>: The author(s) of the package. (can be array)
+</p>
+<p>
+Use the <a href="Hoe.html#method-i-developer">#</a> method to fill in both
+author and email cleanly.
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="changes-attribute-method" class="method-detail">
+				<a name="changes"></a>
+				
+				<a name="changes="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">changes</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Optional: A description of the release&#8217;s latest changes.
+Auto-populates to the top entry of <a
+href="History_txt.html">History.txt</a>.
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="description-attribute-method" class="method-detail">
+				<a name="description"></a>
+				
+				<a name="description="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">description</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Optional: A description of the project. Auto-populates from the first
+paragraph of the DESCRIPTION section of <a
+href="README_txt.html">README.txt</a>.
+</p>
+<p>
+See also: Hoe#summary and <a
+href="Hoe.html#method-i-paragraphs_of">Hoe.paragraphs_of</a>.
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="description-sections-attribute-method" class="method-detail">
+				<a name="description_sections"></a>
+				
+				<a name="description_sections="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">description_sections</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Optional: What sections from the readme to use for auto-description.
+Defaults to %w(description).
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="email-attribute-method" class="method-detail">
+				<a name="email"></a>
+				
+				<a name="email="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">email</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+<b>MANDATORY</b>: The author&#8217;s email address(es). (can be array)
+</p>
+<p>
+Use the <a href="Hoe.html#method-i-developer">#</a> method to fill in both
+author and email cleanly.
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="extra-deps-attribute-method" class="method-detail">
+				<a name="extra_deps"></a>
+				
+				<a name="extra_deps="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">extra_deps</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Optional: An array of rubygem dependencies.
+</p>
+<pre>
+  extra_deps &lt;&lt; ['blah', '~&gt; 1.0']</pre>
+				
+				</div>
+			</div>
+			
+			<div id="extra-dev-deps-attribute-method" class="method-detail">
+				<a name="extra_dev_deps"></a>
+				
+				<a name="extra_dev_deps="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">extra_dev_deps</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Optional: An array of rubygem developer dependencies.
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="extra-rdoc-files-attribute-method" class="method-detail">
+				<a name="extra_rdoc_files"></a>
+				
+				<a name="extra_rdoc_files="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">extra_rdoc_files</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Optional: Extra files you want to add to RDoc.
+</p>
+<p>
+.txt files are automatically included (excluding the obvious).
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="history-file-attribute-method" class="method-detail">
+				<a name="history_file"></a>
+				
+				<a name="history_file="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">history_file</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Optional: The filename for the project history. [default: <a
+href="History_txt.html">History.txt</a>]
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="name-attribute-method" class="method-detail">
+				<a name="name"></a>
+				
+				<a name="name="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">name</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+<b>MANDATORY</b>: The name of the release.
+</p>
+<p>
+Set via Hoe.spec.
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="post-install-message-attribute-method" class="method-detail">
+				<a name="post_install_message"></a>
+				
+				<a name="post_install_message="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">post_install_message</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Optional: A post-install message to be displayed when gem is installed.
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="readme-file-attribute-method" class="method-detail">
+				<a name="readme_file"></a>
+				
+				<a name="readme_file="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">readme_file</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Optional: The filename for the project readme. [default: <a
+href="README_txt.html">README.txt</a>]
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="rubyforge-name-attribute-method" class="method-detail">
+				<a name="rubyforge_name"></a>
+				
+				<a name="rubyforge_name="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">rubyforge_name</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Optional: The name of the rubyforge project. [default: name.downcase]
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="spec-extras-attribute-method" class="method-detail">
+				<a name="spec_extras"></a>
+				
+				<a name="spec_extras="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">spec_extras</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Optional: A hash of extra values to set in the gemspec. Value may be a
+proc.
+</p>
+<pre>
+  spec_extras[:required_rubygems_version] = '&gt;= 1.3.2'
+</pre>
+<p>
+(tho, see <a href="Hoe.html#method-i-pluggable%21">#</a> if that&#8217;s
+all you want to do)
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="summary-attribute-method" class="method-detail">
+				<a name="summary"></a>
+				
+				<a name="summary="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">summary</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Optional: A short summary of the project. Auto-populates from the first
+sentence of the description.
+</p>
+<p>
+See also: Hoe#description and <a
+href="Hoe.html#method-i-paragraphs_of">Hoe.paragraphs_of</a>.
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="summary-sentences-attribute-method" class="method-detail">
+				<a name="summary_sentences"></a>
+				
+				<a name="summary_sentences="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">summary_sentences</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Optional: Number of sentences from description for summary. Defaults to 1.
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="test-globs-attribute-method" class="method-detail">
+				<a name="test_globs"></a>
+				
+				<a name="test_globs="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">test_globs</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Optional: An array of test file patterns [default: test/*<b>/test_</b>.rb]
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="urls-attribute-method" class="method-detail">
+				<a name="urls"></a>
+				
+				<a name="urls="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">urls</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Optional: The urls of the project. This can be an array or (preferably) a
+hash. Auto-populates to the urls read from the beginning of <a
+href="README_txt.html">README.txt</a>.
+</p>
+<p>
+See <a href="Hoe.html#method-i-parse_urls">parse_urls</a> for more details
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="version-attribute-method" class="method-detail">
+				<a name="version"></a>
+				
+				<a name="version="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">version</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+<b>MANDATORY</b>: The version. Don&#8217;t hardcode! use a constant in the
+project.
+</p>
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="add-include-dirs-method" class="method-detail ">
+				<a name="method-c-add_include_dirs"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">add_include_dirs</span><span
+						class="method-args">(*dirs)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Add extra dirs to both $: and <a href="Hoe.html#RUBY_FLAGS">RUBY_FLAGS</a>
+(for test runs and rakefile deps)
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="add-include-dirs-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe.rb, line 274</span>
+274:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">add_include_dirs</span>(*<span class="ruby-identifier">dirs</span>)
+275:     <span class="ruby-identifier">dirs</span> = <span class="ruby-identifier">dirs</span>.<span class="ruby-identifier">flatten</span>
+276:     <span class="ruby-identifier">$:</span>.<span class="ruby-identifier">unshift</span>(*<span class="ruby-identifier">dirs</span>)
+277:     <span class="ruby-identifier">s</span> = <span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-constant">PATH_SEPARATOR</span>
+278:     <span class="ruby-constant">RUBY_FLAGS</span>.<span class="ruby-identifier">sub!</span>(<span class="ruby-regexp re">/-I/</span>, <span class="ruby-node">&quot;-I#{dirs.join(s)}#{s}&quot;</span>)
+279:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="bad-plugins-method" class="method-detail ">
+				<a name="method-c-bad_plugins"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">bad_plugins</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns plugins that could not be loaded by Hoe.load_plugins.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="bad-plugins-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe.rb, line 284</span>
+284:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">bad_plugins</span>
+285:     <span class="ruby-ivar">@bad_plugins</span>
+286:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="load-plugins-method" class="method-detail ">
+				<a name="method-c-load_plugins"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">load_plugins</span><span
+						class="method-args">(plugins = Hoe.plugins)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Find and load all plugin files.
+</p>
+<p>
+It is called at the end of hoe.rb
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="load-plugins-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe.rb, line 293</span>
+293:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">load_plugins</span> <span class="ruby-identifier">plugins</span> = <span class="ruby-constant">Hoe</span>.<span class="ruby-identifier">plugins</span>
+294:     <span class="ruby-ivar">@found</span>  <span class="ruby-operator">||=</span> {}
+295:     <span class="ruby-ivar">@loaded</span> <span class="ruby-operator">||=</span> {}
+296:     <span class="ruby-ivar">@files</span>  <span class="ruby-operator">||=</span> <span class="ruby-constant">Gem</span>.<span class="ruby-identifier">find_files</span> <span class="ruby-value str">&quot;hoe/*.rb&quot;</span>
+297: 
+298:     <span class="ruby-ivar">@files</span>.<span class="ruby-identifier">reverse</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span>
+299:       <span class="ruby-ivar">@found</span>[<span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-identifier">path</span>, <span class="ruby-value str">&quot;.rb&quot;</span>).<span class="ruby-identifier">intern</span>] = <span class="ruby-identifier">path</span>
+300:     <span class="ruby-keyword kw">end</span>
+301: 
+302:     <span class="ruby-value">:keep_doing_this</span> <span class="ruby-keyword kw">while</span> <span class="ruby-ivar">@found</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">name</span>, <span class="ruby-identifier">plugin</span><span class="ruby-operator">|</span>
+303:       <span class="ruby-keyword kw">next</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">plugins</span>.<span class="ruby-identifier">include?</span> <span class="ruby-identifier">name</span>
+304:       <span class="ruby-keyword kw">next</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@loaded</span>[<span class="ruby-identifier">name</span>]
+305:       <span class="ruby-keyword kw">begin</span>
+306:         <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;loading #{plugin}&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">$DEBUG</span>
+307:         <span class="ruby-ivar">@loaded</span>[<span class="ruby-identifier">name</span>] = <span class="ruby-identifier">require</span> <span class="ruby-identifier">plugin</span>
+308:       <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">LoadError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+309:         <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;error loading #{plugin.inspect}: #{e.message}. skipping...&quot;</span>
+310:       <span class="ruby-keyword kw">end</span>
+311:     }.<span class="ruby-identifier">any?</span>
+312: 
+313:     <span class="ruby-identifier">bad_plugins</span> = <span class="ruby-identifier">plugins</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@loaded</span>.<span class="ruby-identifier">keys</span>
+314:     <span class="ruby-identifier">bad_plugins</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">bad_plugin</span><span class="ruby-operator">|</span>
+315:       <span class="ruby-identifier">plugins</span>.<span class="ruby-identifier">delete</span> <span class="ruby-identifier">bad_plugin</span>
+316:     <span class="ruby-keyword kw">end</span>
+317: 
+318:     <span class="ruby-ivar">@bad_plugins</span>.<span class="ruby-identifier">concat</span> <span class="ruby-identifier">bad_plugins</span>
+319:     <span class="ruby-ivar">@bad_plugins</span>.<span class="ruby-identifier">uniq!</span>
+320: 
+321:     <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@loaded</span>, <span class="ruby-ivar">@found</span>
+322:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="plugin-method" class="method-detail ">
+				<a name="method-c-plugin"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">plugin</span><span
+						class="method-args">(*plugins)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Activates <tt>plugins</tt>.  If a plugin cannot be loaded it will be
+ignored.
+</p>
+<p>
+Plugins may also be activated through a <tt>plugins</tt> array in
+<tt>~/.hoerc</tt>.  This should only be used for plugins that aren&#8217;t
+critical to your project and plugins that you want to use on other
+projects.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="plugin-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe.rb, line 353</span>
+353:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">plugin</span> *<span class="ruby-identifier">plugins</span>
+354:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">plugins</span>.<span class="ruby-identifier">concat</span> <span class="ruby-identifier">plugins</span>
+355:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">plugins</span>.<span class="ruby-identifier">uniq!</span>
+356:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="plugins-method" class="method-detail ">
+				<a name="method-c-plugins"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">plugins</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The list of active plugins.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="plugins-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe.rb, line 361</span>
+361:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">plugins</span>
+362:     <span class="ruby-identifier">@@plugins</span>
+363:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="spec-method" class="method-detail ">
+				<a name="method-c-spec"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">spec</span><span
+						class="method-args">(name, &block)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Execute the <a href="Hoe.html">Hoe</a> DSL to define your project&#8217;s
+<a href="Hoe.html">Hoe</a> specification (which interally creates a gem
+specification). All hoe attributes and methods are available within
+<tt>block</tt>. Eg:
+</p>
+<pre>
+  Hoe.spec name do
+    # ... project specific data ...
+  end</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="spec-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe.rb, line 374</span>
+374:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">spec</span> <span class="ruby-identifier">name</span>, &amp;<span class="ruby-identifier">block</span>
+375:     <span class="ruby-constant">Hoe</span>.<span class="ruby-identifier">load_plugins</span>
+376: 
+377:     <span class="ruby-identifier">spec</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">name</span>
+378:     <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">activate_plugins</span>
+379:     <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">instance_eval</span>(&amp;<span class="ruby-identifier">block</span>)
+380:     <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">post_initialize</span>
+381:     <span class="ruby-identifier">spec</span> <span class="ruby-comment cmt"># TODO: remove?</span>
+382:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="activate-plugin-deps-method" class="method-detail ">
+				<a name="method-i-activate_plugin_deps"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">activate_plugin_deps</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="activate-plugin-deps-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe.rb, line 417</span>
+417:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">activate_plugin_deps</span>
+418:     <span class="ruby-constant">Hoe</span>.<span class="ruby-identifier">plugins</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">plugin</span><span class="ruby-operator">|</span>
+419:       <span class="ruby-identifier">msg</span> = <span class="ruby-node">&quot;activate_#{plugin}_deps&quot;</span>
+420:       <span class="ruby-identifier">warn</span> <span class="ruby-identifier">msg</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">$DEBUG</span>
+421:       <span class="ruby-identifier">send</span> <span class="ruby-identifier">msg</span> <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-identifier">msg</span>
+422:     <span class="ruby-keyword kw">end</span>
+423:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="activate-plugins-method" class="method-detail ">
+				<a name="method-i-activate_plugins"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">activate_plugins</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Activate plugin modules and add them to the current instance.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="activate-plugins-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe.rb, line 387</span>
+387:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">activate_plugins</span>
+388:     <span class="ruby-identifier">with_config</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">config</span>, <span class="ruby-identifier">_</span><span class="ruby-operator">|</span>
+389:       <span class="ruby-identifier">config_plugins</span> = <span class="ruby-identifier">config</span>[<span class="ruby-value str">'plugins'</span>]
+390:       <span class="ruby-keyword kw">break</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">config_plugins</span>
+391:       <span class="ruby-constant">Hoe</span>.<span class="ruby-identifier">plugins</span>.<span class="ruby-identifier">concat</span> <span class="ruby-identifier">config_plugins</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">plugin</span><span class="ruby-operator">|</span> <span class="ruby-identifier">plugin</span>.<span class="ruby-identifier">intern</span> }
+392:     <span class="ruby-keyword kw">end</span>
+393: 
+394:     <span class="ruby-constant">Hoe</span>.<span class="ruby-identifier">load_plugins</span> <span class="ruby-constant">Hoe</span>.<span class="ruby-identifier">plugins</span>
+395: 
+396:     <span class="ruby-identifier">names</span> = <span class="ruby-constant">Hoe</span>.<span class="ruby-identifier">constants</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">to_s</span> }
+397:     <span class="ruby-identifier">names</span>.<span class="ruby-identifier">reject!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^[A-Z_]+$/</span> }
+398: 
+399:     <span class="ruby-identifier">names</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span><span class="ruby-operator">|</span>
+400:       <span class="ruby-keyword kw">next</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-constant">Hoe</span>.<span class="ruby-identifier">plugins</span>.<span class="ruby-identifier">include?</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">downcase</span>.<span class="ruby-identifier">intern</span>
+401:       <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;extend #{name}&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">$DEBUG</span>
+402:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">extend</span> <span class="ruby-constant">Hoe</span>.<span class="ruby-identifier">const_get</span>(<span class="ruby-identifier">name</span>)
+403:     <span class="ruby-keyword kw">end</span>
+404: 
+405:     <span class="ruby-identifier">initialize_plugins</span>
+406:     <span class="ruby-identifier">activate_plugin_deps</span>
+407:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="add-dependencies-method" class="method-detail ">
+				<a name="method-i-add_dependencies"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">add_dependencies</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Add standard and user defined dependencies to the spec.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="add-dependencies-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe.rb, line 445</span>
+445:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">add_dependencies</span>
+446:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">extra_deps</span>     = <span class="ruby-identifier">normalize_deps</span> <span class="ruby-identifier">extra_deps</span>
+447:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">extra_dev_deps</span> = <span class="ruby-identifier">normalize_deps</span> <span class="ruby-identifier">extra_dev_deps</span>
+448: 
+449:     <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">name</span>
+450:     <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'hoe'</span> <span class="ruby-keyword kw">then</span>
+451:       <span class="ruby-identifier">dependency</span> <span class="ruby-value str">&quot;rake&quot;</span>, <span class="ruby-value str">&quot;~&gt; 0.8&quot;</span>
+452:     <span class="ruby-keyword kw">else</span>
+453:       <span class="ruby-identifier">version</span> = <span class="ruby-constant">VERSION</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\./</span>).<span class="ruby-identifier">first</span>(<span class="ruby-value">2</span>).<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;.&quot;</span>)
+454:       <span class="ruby-identifier">dependency</span> <span class="ruby-value str">&quot;hoe&quot;</span>, <span class="ruby-node">&quot;~&gt; #{version}&quot;</span>, <span class="ruby-value">:development</span>
+455:     <span class="ruby-keyword kw">end</span>
+456: 
+457:     <span class="ruby-identifier">seen</span> = {}
+458: 
+459:     <span class="ruby-identifier">extra_deps</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">dep</span><span class="ruby-operator">|</span>
+460:       <span class="ruby-keyword kw">next</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">seen</span>[<span class="ruby-identifier">dep</span>.<span class="ruby-identifier">first</span>]
+461:       <span class="ruby-identifier">seen</span>[<span class="ruby-identifier">dep</span>.<span class="ruby-identifier">first</span>] = <span class="ruby-keyword kw">true</span>
+462: 
+463:       <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">add_dependency</span>(*<span class="ruby-identifier">dep</span>)
+464:     <span class="ruby-keyword kw">end</span>
+465: 
+466:     <span class="ruby-identifier">extra_dev_deps</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">dep</span><span class="ruby-operator">|</span>
+467:       <span class="ruby-keyword kw">next</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">seen</span>[<span class="ruby-identifier">dep</span>.<span class="ruby-identifier">first</span>]
+468:       <span class="ruby-identifier">seen</span>[<span class="ruby-identifier">dep</span>.<span class="ruby-identifier">first</span>] = <span class="ruby-keyword kw">true</span>
+469: 
+470:       <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">add_development_dependency</span>(*<span class="ruby-identifier">dep</span>)
+471:     <span class="ruby-keyword kw">end</span>
+472:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="define-spec-method" class="method-detail ">
+				<a name="method-i-define_spec"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">define_spec</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Define the Gem::Specification.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="define-spec-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe.rb, line 484</span>
+484:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">define_spec</span>
+485:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">spec</span> = <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">Specification</span>.<span class="ruby-identifier">new</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span>
+486:       <span class="ruby-identifier">dirs</span> = <span class="ruby-constant">Dir</span>[<span class="ruby-value str">'lib'</span>]
+487: 
+488:       <span class="ruby-identifier">manifest</span> = <span class="ruby-identifier">read_manifest</span>
+489: 
+490:       <span class="ruby-identifier">abort</span> [
+491:              <span class="ruby-value str">&quot;Manifest is missing or couldn't be read.&quot;</span>,
+492:              <span class="ruby-value str">&quot;The Manifest is kind of a big deal.&quot;</span>,
+493:              <span class="ruby-value str">&quot;Maybe you're using a gem packaged by a linux project.&quot;</span>,
+494:              <span class="ruby-value str">&quot;It seems like they enjoy breaking other people's code.&quot;</span>
+495:              ].<span class="ruby-identifier">join</span> <span class="ruby-value str">&quot;\n&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">manifest</span>
+496: 
+497:       <span class="ruby-identifier">s</span>.<span class="ruby-identifier">name</span>                 = <span class="ruby-identifier">name</span>
+498:       <span class="ruby-identifier">s</span>.<span class="ruby-identifier">version</span>              = <span class="ruby-identifier">version</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">version</span>
+499:       <span class="ruby-identifier">s</span>.<span class="ruby-identifier">summary</span>              = <span class="ruby-identifier">summary</span>
+500:       <span class="ruby-identifier">s</span>.<span class="ruby-identifier">email</span>                = <span class="ruby-identifier">email</span>
+501:       <span class="ruby-identifier">s</span>.<span class="ruby-identifier">homepage</span>             = <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">urls</span>
+502:                                <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Hash</span> <span class="ruby-keyword kw">then</span>
+503:                                  <span class="ruby-identifier">urls</span>[<span class="ruby-value str">&quot;home&quot;</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">urls</span>.<span class="ruby-identifier">values</span>.<span class="ruby-identifier">first</span>
+504:                                <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Array</span> <span class="ruby-keyword kw">then</span>
+505:                                  <span class="ruby-identifier">urls</span>.<span class="ruby-identifier">first</span>
+506:                                <span class="ruby-keyword kw">else</span>
+507:                                  <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;unknown urls format: #{urls.inspect}&quot;</span>
+508:                                <span class="ruby-keyword kw">end</span>
+509:       <span class="ruby-identifier">s</span>.<span class="ruby-identifier">rubyforge_project</span>    = <span class="ruby-identifier">rubyforge_name</span>
+510:       <span class="ruby-identifier">s</span>.<span class="ruby-identifier">description</span>          = <span class="ruby-identifier">description</span>
+511:       <span class="ruby-identifier">s</span>.<span class="ruby-identifier">files</span>                = <span class="ruby-identifier">manifest</span>
+512:       <span class="ruby-identifier">s</span>.<span class="ruby-identifier">executables</span>          = <span class="ruby-identifier">s</span>.<span class="ruby-identifier">files</span>.<span class="ruby-identifier">grep</span>(<span class="ruby-regexp re">/^bin/</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-identifier">f</span>) }
+513:       <span class="ruby-identifier">s</span>.<span class="ruby-identifier">bindir</span>               = <span class="ruby-value str">&quot;bin&quot;</span>
+514:       <span class="ruby-identifier">s</span>.<span class="ruby-identifier">require_paths</span>        = <span class="ruby-identifier">dirs</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">dirs</span>.<span class="ruby-identifier">empty?</span>
+515:       <span class="ruby-identifier">s</span>.<span class="ruby-identifier">rdoc_options</span>         = [<span class="ruby-value str">'--main'</span>, <span class="ruby-identifier">readme_file</span>]
+516:       <span class="ruby-identifier">s</span>.<span class="ruby-identifier">post_install_message</span> = <span class="ruby-identifier">post_install_message</span>
+517:       <span class="ruby-identifier">s</span>.<span class="ruby-identifier">test_files</span>           = <span class="ruby-constant">Dir</span>[*<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">test_globs</span>]
+518: 
+519:       <span class="ruby-identifier">missing</span> <span class="ruby-value str">&quot;Manifest.txt&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">files</span>.<span class="ruby-identifier">empty?</span>
+520: 
+521:       <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">author</span>
+522:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Array</span>
+523:         <span class="ruby-identifier">s</span>.<span class="ruby-identifier">authors</span> = <span class="ruby-identifier">author</span>
+524:       <span class="ruby-keyword kw">else</span>
+525:         <span class="ruby-identifier">s</span>.<span class="ruby-identifier">author</span>  = <span class="ruby-identifier">author</span>
+526:       <span class="ruby-keyword kw">end</span>
+527: 
+528:       <span class="ruby-identifier">s</span>.<span class="ruby-identifier">extra_rdoc_files</span> <span class="ruby-operator">+=</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">files</span>.<span class="ruby-identifier">grep</span>(<span class="ruby-regexp re">/(txt|rdoc)$/</span>)
+529:       <span class="ruby-identifier">s</span>.<span class="ruby-identifier">extra_rdoc_files</span>.<span class="ruby-identifier">reject!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-identifier">f</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">%^(test|spec|vendor|template|data|tmp)/%</span> }
+530:       <span class="ruby-identifier">s</span>.<span class="ruby-identifier">extra_rdoc_files</span> <span class="ruby-operator">+=</span> <span class="ruby-ivar">@extra_rdoc_files</span>
+531:     <span class="ruby-keyword kw">end</span>
+532: 
+533:     <span class="ruby-keyword kw">unless</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">version</span> <span class="ruby-keyword kw">then</span>
+534:       <span class="ruby-identifier">version</span>    = <span class="ruby-keyword kw">nil</span>
+535:       <span class="ruby-identifier">version_re</span> = <span class="ruby-regexp re">/VERSION += +([\&quot;\'])([\d][\w\.]+)\11//</span>
+536: 
+537:       <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">files</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span>
+538:         <span class="ruby-keyword kw">next</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span> <span class="ruby-identifier">file</span>
+539:         <span class="ruby-identifier">version</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">read_utf</span>(<span class="ruby-identifier">file</span>)[<span class="ruby-identifier">version_re</span>, <span class="ruby-value">2</span>] <span class="ruby-keyword kw">rescue</span> <span class="ruby-keyword kw">nil</span>
+540:         <span class="ruby-keyword kw">break</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">version</span>
+541:       <span class="ruby-keyword kw">end</span>
+542: 
+543:       <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">version</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">version</span> = <span class="ruby-identifier">version</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">version</span>
+544: 
+545:       <span class="ruby-keyword kw">unless</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">version</span> <span class="ruby-keyword kw">then</span>
+546:         <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">version</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">version</span> = <span class="ruby-value str">&quot;0.borked&quot;</span>
+547:         <span class="ruby-identifier">warn</span> <span class="ruby-value str">&quot;** Add 'VERSION = \&quot;x.y.z\&quot;' to your code,&quot;</span>
+548:         <span class="ruby-identifier">warn</span> <span class="ruby-value str">&quot;   add a version to your hoe spec,&quot;</span>
+549:         <span class="ruby-identifier">warn</span> <span class="ruby-value str">&quot;   or fix your Manifest.txt&quot;</span>
+550:       <span class="ruby-keyword kw">end</span>
+551:     <span class="ruby-keyword kw">end</span>
+552: 
+553:     <span class="ruby-comment cmt"># Do any extra stuff the user wants</span>
+554:     <span class="ruby-identifier">spec_extras</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">msg</span>, <span class="ruby-identifier">val</span><span class="ruby-operator">|</span>
+555:       <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">val</span>
+556:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Proc</span>
+557:         <span class="ruby-identifier">val</span>.<span class="ruby-identifier">call</span> <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">msg</span>)
+558:       <span class="ruby-keyword kw">else</span>
+559:         <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">send</span> <span class="ruby-node">&quot;#{msg}=&quot;</span>, <span class="ruby-identifier">val</span>
+560:       <span class="ruby-keyword kw">end</span>
+561:     <span class="ruby-keyword kw">end</span>
+562:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="dependency-method" class="method-detail ">
+				<a name="method-i-dependency"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">dependency</span><span
+						class="method-args">(name, version, type = :runtime)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Add a dependency declaration to your spec. Pass :dev to <tt>type</tt> for
+developer dependencies.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="dependency-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe.rb, line 429</span>
+429:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">dependency</span> <span class="ruby-identifier">name</span>, <span class="ruby-identifier">version</span>, <span class="ruby-identifier">type</span> = <span class="ruby-value">:runtime</span>
+430:     <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;Unknown dependency type: #{type}&quot;</span> <span class="ruby-keyword kw">unless</span>
+431:       [<span class="ruby-value">:runtime</span>, <span class="ruby-value">:dev</span>, <span class="ruby-value">:development</span>, <span class="ruby-value">:developer</span>].<span class="ruby-identifier">include?</span> <span class="ruby-identifier">type</span>
+432: 
+433:     <span class="ruby-identifier">ary</span> = <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">type</span> <span class="ruby-operator">==</span> <span class="ruby-value">:runtime</span> <span class="ruby-keyword kw">then</span>
+434:             <span class="ruby-identifier">extra_deps</span>
+435:           <span class="ruby-keyword kw">else</span>
+436:             <span class="ruby-identifier">extra_dev_deps</span>
+437:           <span class="ruby-keyword kw">end</span>
+438: 
+439:     <span class="ruby-identifier">ary</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-identifier">name</span>, <span class="ruby-identifier">version</span>]
+440:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="dependency-target-method" class="method-detail ">
+				<a name="method-i-dependency_target"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">dependency_target</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the proper dependency list for the thingy.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="dependency-target-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe.rb, line 477</span>
+477:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">dependency_target</span>
+478:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'hoe'</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">extra_deps</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">extra_dev_deps</span>
+479:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="developer-method" class="method-detail ">
+				<a name="method-i-developer"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">developer</span><span
+						class="method-args">(name, email)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Convenience method to set add to both the author and email fields.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="developer-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe.rb, line 567</span>
+567:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">developer</span> <span class="ruby-identifier">name</span>, <span class="ruby-identifier">email</span>
+568:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">author</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">name</span>
+569:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">email</span>  <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">email</span>
+570:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="have-gem--method" class="method-detail ">
+				<a name="method-i-have_gem%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">have_gem?</span><span
+						class="method-args">(name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns true if the gem <tt>name</tt> is installed.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="have-gem--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe.rb, line 575</span>
+575:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">have_gem?</span> <span class="ruby-identifier">name</span>
+576:     <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">Specification</span>.<span class="ruby-identifier">find_by_name</span> <span class="ruby-identifier">name</span>
+577:   <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">LoadError</span>
+578:     <span class="ruby-keyword kw">false</span>
+579:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="initialize-plugins-method" class="method-detail ">
+				<a name="method-i-initialize_plugins"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">initialize_plugins</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="initialize-plugins-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe.rb, line 409</span>
+409:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize_plugins</span>
+410:     <span class="ruby-constant">Hoe</span>.<span class="ruby-identifier">plugins</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">plugin</span><span class="ruby-operator">|</span>
+411:       <span class="ruby-identifier">msg</span> = <span class="ruby-node">&quot;initialize_#{plugin}&quot;</span>
+412:       <span class="ruby-identifier">warn</span> <span class="ruby-identifier">msg</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">$DEBUG</span>
+413:       <span class="ruby-identifier">send</span> <span class="ruby-identifier">msg</span> <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-identifier">msg</span>
+414:     <span class="ruby-keyword kw">end</span>
+415:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="intuit-values-method" class="method-detail ">
+				<a name="method-i-intuit_values"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">intuit_values</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Intuit values from the readme and history files.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="intuit-values-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe.rb, line 618</span>
+618:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">intuit_values</span>
+619:     <span class="ruby-identifier">header_re</span> = <span class="ruby-node">/^((?:=+|#+) .*)$/</span>
+620:     <span class="ruby-identifier">readme</span>    = <span class="ruby-constant">File</span>.<span class="ruby-identifier">read_utf</span>(<span class="ruby-identifier">readme_file</span>).<span class="ruby-identifier">split</span>(<span class="ruby-identifier">header_re</span>)[<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>] <span class="ruby-keyword kw">rescue</span> <span class="ruby-value str">''</span>
+621: 
+622:     <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">readme</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-keyword kw">then</span>
+623:       <span class="ruby-identifier">sections</span> = <span class="ruby-constant">Hash</span>[*<span class="ruby-identifier">readme</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span>
+624:         <span class="ruby-identifier">s</span> <span class="ruby-operator">=~</span> <span class="ruby-node">/^[=#]/</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">downcase</span>.<span class="ruby-identifier">chomp</span>(<span class="ruby-value str">':'</span>).<span class="ruby-identifier">split</span>.<span class="ruby-identifier">last</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">strip</span>
+625:       }]
+626:       <span class="ruby-identifier">desc</span>     = <span class="ruby-identifier">sections</span>.<span class="ruby-identifier">values_at</span>(*<span class="ruby-identifier">description_sections</span>).<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;\n\n&quot;</span>)
+627:       <span class="ruby-identifier">summ</span>     = <span class="ruby-identifier">desc</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\.\s+/</span>).<span class="ruby-identifier">first</span>(<span class="ruby-identifier">summary_sentences</span>).<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;. &quot;</span>)
+628:       <span class="ruby-identifier">urls</span>     = <span class="ruby-identifier">parse_urls</span>(<span class="ruby-identifier">readme</span>[<span class="ruby-value">1</span>])
+629: 
+630:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">urls</span>        <span class="ruby-operator">||=</span> <span class="ruby-identifier">urls</span>
+631:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">description</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">desc</span>
+632:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">summary</span>     <span class="ruby-operator">||=</span> <span class="ruby-identifier">summ</span>
+633:     <span class="ruby-keyword kw">else</span>
+634:       <span class="ruby-identifier">missing</span> <span class="ruby-identifier">readme_file</span>
+635:     <span class="ruby-keyword kw">end</span>
+636: 
+637:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">changes</span> <span class="ruby-operator">||=</span> <span class="ruby-keyword kw">begin</span>
+638:                        <span class="ruby-identifier">h</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">read_utf</span>(<span class="ruby-identifier">history_file</span>)
+639:                        <span class="ruby-identifier">h</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/^(={2,}|\#{2,})/</span>)[<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">2</span>].<span class="ruby-identifier">join</span>.<span class="ruby-identifier">strip</span>
+640:                      <span class="ruby-keyword kw">rescue</span>
+641:                        <span class="ruby-identifier">missing</span> <span class="ruby-identifier">history_file</span>
+642:                        <span class="ruby-value str">''</span>
+643:                      <span class="ruby-keyword kw">end</span>
+644:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="load-plugin-tasks-method" class="method-detail ">
+				<a name="method-i-load_plugin_tasks"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">load_plugin_tasks</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Load activated plugins by calling their define tasks method.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="load-plugin-tasks-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe.rb, line 676</span>
+676:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">load_plugin_tasks</span>
+677:     <span class="ruby-identifier">bad</span> = []
+678: 
+679:     <span class="ruby-identifier">$plugin_max</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">plugins</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">s</span><span class="ruby-operator">|</span> <span class="ruby-identifier">s</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">size</span> }.<span class="ruby-identifier">max</span>
+680: 
+681:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">plugins</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">plugin</span><span class="ruby-operator">|</span>
+682:       <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;define: #{plugin}&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">$DEBUG</span>
+683: 
+684:       <span class="ruby-identifier">old_tasks</span> = <span class="ruby-constant">Rake</span><span class="ruby-operator">::</span><span class="ruby-constant">Task</span>.<span class="ruby-identifier">tasks</span>.<span class="ruby-identifier">dup</span>
+685: 
+686:       <span class="ruby-keyword kw">begin</span>
+687:         <span class="ruby-identifier">send</span> <span class="ruby-node">&quot;define_#{plugin}_tasks&quot;</span>
+688:       <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">NoMethodError</span>
+689:         <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;warning: couldn't activate the #{plugin} plugin, skipping&quot;</span>
+690: 
+691:         <span class="ruby-identifier">bad</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">plugin</span>
+692:         <span class="ruby-keyword kw">next</span>
+693:       <span class="ruby-keyword kw">end</span>
+694: 
+695:       (<span class="ruby-constant">Rake</span><span class="ruby-operator">::</span><span class="ruby-constant">Task</span>.<span class="ruby-identifier">tasks</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">old_tasks</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">task</span><span class="ruby-operator">|</span>
+696:         <span class="ruby-identifier">task</span>.<span class="ruby-identifier">plugin</span> = <span class="ruby-identifier">plugin</span>
+697:       <span class="ruby-keyword kw">end</span>
+698:     <span class="ruby-keyword kw">end</span>
+699:     <span class="ruby-identifier">@@plugins</span> <span class="ruby-operator">-=</span> <span class="ruby-identifier">bad</span>
+700:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="missing-method" class="method-detail ">
+				<a name="method-i-missing"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">missing</span><span
+						class="method-args">(name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Bitch about a file that is missing data or unparsable for intuiting values.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="missing-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe.rb, line 705</span>
+705:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">missing</span> <span class="ruby-identifier">name</span>
+706:     <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;** #{name} is missing or in the wrong format for auto-intuiting.&quot;</span>
+707:     <span class="ruby-identifier">warn</span> <span class="ruby-value str">&quot;   run `sow blah` and look at its text files&quot;</span>
+708:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="normalize-deps-method" class="method-detail ">
+				<a name="method-i-normalize_deps"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">normalize_deps</span><span
+						class="method-args">(deps)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Normalize the dependencies.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="normalize-deps-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe.rb, line 713</span>
+713:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">normalize_deps</span> <span class="ruby-identifier">deps</span>
+714:     <span class="ruby-identifier">deps</span> = <span class="ruby-constant">Array</span>(<span class="ruby-identifier">deps</span>)
+715: 
+716:     <span class="ruby-identifier">deps</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">o</span><span class="ruby-operator">|</span>
+717:       <span class="ruby-identifier">abort</span> <span class="ruby-node">&quot;ERROR: Add '~&gt; x.y' to the '#{o}' dependency.&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-constant">String</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">o</span>
+718:     <span class="ruby-keyword kw">end</span>
+719: 
+720:     <span class="ruby-identifier">deps</span>
+721:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="paragraphs-of-method" class="method-detail ">
+				<a name="method-i-paragraphs_of"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">paragraphs_of</span><span
+						class="method-args">(path, *paragraphs)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Reads a file at <tt>path</tt> and spits out an array of the
+<tt>paragraphs</tt> specified.
+</p>
+<pre>
+  changes = p.paragraphs_of('History.txt', 0..1).join(&quot;\n\n&quot;)
+  summary, *description = p.paragraphs_of('README.txt', 3, 3..8)</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="paragraphs-of-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe.rb, line 729</span>
+729:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">paragraphs_of</span> <span class="ruby-identifier">path</span>, *<span class="ruby-identifier">paragraphs</span>
+730:     <span class="ruby-constant">File</span>.<span class="ruby-identifier">read_utf</span>(<span class="ruby-identifier">path</span>).<span class="ruby-identifier">delete</span>(<span class="ruby-value str">&quot;\r&quot;</span>).<span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\n\n+/</span>).<span class="ruby-identifier">values_at</span>(*<span class="ruby-identifier">paragraphs</span>)
+731:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parse-urls-method" class="method-detail ">
+				<a name="method-i-parse_urls"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse_urls</span><span
+						class="method-args">(text)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Parse the urls section of the readme file. Returns a hash or an array
+depending on the format of the section.
+</p>
+<pre>
+    label1 :: url1
+    label2 :: url2
+    label3 :: url3
+</pre>
+<p>
+vs:
+</p>
+<pre>
+    * url1
+    * url2
+    * url3
+</pre>
+<p>
+The hash format is preferred as it will be used to populate gem metadata.
+The array format will work, but will warn that you should update the
+readme.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="parse-urls-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe.rb, line 664</span>
+664:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse_urls</span> <span class="ruby-identifier">text</span>
+665:     <span class="ruby-identifier">lines</span> = <span class="ruby-identifier">text</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/^\* /</span>, <span class="ruby-value str">''</span>).<span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\n/</span>).<span class="ruby-identifier">grep</span>(<span class="ruby-regexp re">/\S+/</span>)
+666:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">lines</span>.<span class="ruby-identifier">first</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/::/</span> <span class="ruby-keyword kw">then</span>
+667:       <span class="ruby-constant">Hash</span>[<span class="ruby-identifier">lines</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\s*::\s*/</span>) }]
+668:     <span class="ruby-keyword kw">else</span>
+669:       <span class="ruby-identifier">lines</span>
+670:     <span class="ruby-keyword kw">end</span>
+671:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="pluggable--method" class="method-detail ">
+				<a name="method-i-pluggable%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">pluggable!</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Tell the world you&#8217;re a pluggable package (ie you require rubygems
+1.3.1+)
+</p>
+<p>
+This uses require_rubygems_version. Last one wins. Make sure you account
+for that.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="pluggable--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe.rb, line 739</span>
+739:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pluggable!</span>
+740:     <span class="ruby-identifier">abort</span> <span class="ruby-value str">&quot;update rubygems to &gt;= 1.3.1&quot;</span> <span class="ruby-keyword kw">unless</span>  <span class="ruby-constant">Gem</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:find_files</span>
+741:     <span class="ruby-identifier">require_rubygems_version</span> <span class="ruby-value str">'&gt;= 1.3.1'</span>
+742:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="plugin--method" class="method-detail ">
+				<a name="method-i-plugin%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">plugin?</span><span
+						class="method-args">(name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Is a plugin activated? Used for guarding missing plugins in your hoe spec:
+</p>
+<pre>
+  Hoe.spec &quot;blah&quot; do
+    if plugin? :enhancement then
+      self.enhancement = true # or whatever...
+    end
+  end</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="plugin--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe.rb, line 754</span>
+754:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">plugin?</span> <span class="ruby-identifier">name</span>
+755:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">plugins</span>.<span class="ruby-identifier">include?</span> <span class="ruby-identifier">name</span>
+756:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="post-initialize-method" class="method-detail ">
+				<a name="method-i-post_initialize"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">post_initialize</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Finalize configuration
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="post-initialize-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe.rb, line 761</span>
+761:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">post_initialize</span>
+762:     <span class="ruby-identifier">intuit_values</span>
+763:     <span class="ruby-identifier">validate_fields</span>
+764:     <span class="ruby-identifier">define_spec</span>
+765:     <span class="ruby-identifier">load_plugin_tasks</span>
+766:     <span class="ruby-identifier">add_dependencies</span>
+767:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="read-manifest-method" class="method-detail ">
+				<a name="method-i-read_manifest"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">read_manifest</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Reads <a href="Manifest_txt.html">Manifest.txt</a> and returns an Array of
+lines in the manifest.
+</p>
+<p>
+Returns nil if no manifest was found.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="read-manifest-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe.rb, line 774</span>
+774:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">read_manifest</span>
+775:     <span class="ruby-constant">File</span>.<span class="ruby-identifier">read_utf</span>(<span class="ruby-value str">&quot;Manifest.txt&quot;</span>).<span class="ruby-identifier">split</span>(<span class="ruby-regexp re">/\r?\n\r?/</span>) <span class="ruby-keyword kw">rescue</span> <span class="ruby-keyword kw">nil</span>
+776:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="require-ruby-version-method" class="method-detail ">
+				<a name="method-i-require_ruby_version"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">require_ruby_version</span><span
+						class="method-args">(version)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Declare that your gem requires a specific ruby version. Last one wins.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="require-ruby-version-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe.rb, line 788</span>
+788:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">require_ruby_version</span> <span class="ruby-identifier">version</span>
+789:     <span class="ruby-identifier">spec_extras</span>[<span class="ruby-value">:required_ruby_version</span>] = <span class="ruby-identifier">version</span>
+790:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="require-rubygems-version-method" class="method-detail ">
+				<a name="method-i-require_rubygems_version"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">require_rubygems_version</span><span
+						class="method-args">(version)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Declare that your gem requires a specific rubygems version. Last one wins.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="require-rubygems-version-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe.rb, line 781</span>
+781:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">require_rubygems_version</span> <span class="ruby-identifier">version</span>
+782:     <span class="ruby-identifier">spec_extras</span>[<span class="ruby-value">:required_rubygems_version</span>] = <span class="ruby-identifier">version</span>
+783:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="timebomb-method" class="method-detail ">
+				<a name="method-i-timebomb"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">timebomb</span><span
+						class="method-args">(n, m, finis = '2010-04-01', start = '2009-03-14')</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Provide a linear degrading value from n to m over start to finis dates.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="timebomb-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe.rb, line 795</span>
+795:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">timebomb</span> <span class="ruby-identifier">n</span>, <span class="ruby-identifier">m</span>, <span class="ruby-identifier">finis</span> = <span class="ruby-value str">'2010-04-01'</span>, <span class="ruby-identifier">start</span> = <span class="ruby-value str">'2009-03-14'</span>
+796:     <span class="ruby-identifier">require</span> <span class="ruby-value str">'time'</span>
+797:     <span class="ruby-identifier">finis</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">parse</span> <span class="ruby-identifier">finis</span>
+798:     <span class="ruby-identifier">start</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">parse</span> <span class="ruby-identifier">start</span>
+799:     <span class="ruby-identifier">rest</span>  = (<span class="ruby-identifier">finis</span> <span class="ruby-operator">-</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span>)
+800:     <span class="ruby-identifier">full</span>  = (<span class="ruby-identifier">finis</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">start</span>)
+801: 
+802:     [((<span class="ruby-identifier">n</span> <span class="ruby-operator">-</span> <span class="ruby-identifier">m</span>) * <span class="ruby-identifier">rest</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">full</span>).<span class="ruby-identifier">to_i</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">m</span>, <span class="ruby-identifier">m</span>].<span class="ruby-identifier">max</span>
+803:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="url-method" class="method-detail ">
+				<a name="method-i-url"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">url</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Deprecated: Optional: The url(s) of the project. (can be array).
+Auto-populates to a list of urls read from the beginning of <a
+href="README_txt.html">README.txt</a>.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="url-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe.rb, line 245</span>
+245:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">url</span>
+246:     <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;NOTE: Hoe#url is deprecated, use urls. It will be removed on or after 2012-06-01.&quot;</span>
+247:     <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;Used from #{caller.first}&quot;</span>
+248:     <span class="ruby-ivar">@url</span>
+249:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="url--method" class="method-detail ">
+				<a name="method-i-url%3D"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">url=</span><span
+						class="method-args">(o)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="url--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe.rb, line 251</span>
+251:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">url=</span><span class="ruby-identifier">o</span>
+252:     <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;NOTE: Hoe#url= is deprecated, use urls=. It will be removed on or after 2012-06-01.&quot;</span>
+253:     <span class="ruby-identifier">warn</span> <span class="ruby-node">&quot;Used from #{caller.first}&quot;</span>
+254:     <span class="ruby-ivar">@url</span>=<span class="ruby-identifier">o</span>
+255:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="validate-fields-method" class="method-detail ">
+				<a name="method-i-validate_fields"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">validate_fields</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Verify that mandatory fields are set.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="validate-fields-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe.rb, line 808</span>
+808:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">validate_fields</span>
+809:     <span class="ruby-node">%(email author)</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">field</span><span class="ruby-operator">|</span>
+810:       <span class="ruby-identifier">value</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">field</span>)
+811:       <span class="ruby-identifier">abort</span> <span class="ruby-node">&quot;Hoe #{field} value not set. aborting&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">empty?</span>
+812:     <span class="ruby-keyword kw">end</span>
+813:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="with-config-method" class="method-detail ">
+				<a name="method-i-with_config"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">with_config</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Loads ~/.hoerc, merges it with a .hoerc in the current pwd (if any) and
+yields the configuration and its path
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="with-config-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe.rb, line 819</span>
+819:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">with_config</span>
+820:     <span class="ruby-identifier">config</span> = <span class="ruby-constant">Hoe</span><span class="ruby-operator">::</span><span class="ruby-constant">DEFAULT_CONFIG</span>
+821: 
+822:     <span class="ruby-identifier">rc</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-value str">&quot;~/.hoerc&quot;</span>)
+823:     <span class="ruby-identifier">exists</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span> <span class="ruby-identifier">rc</span>
+824:     <span class="ruby-identifier">homeconfig</span> = <span class="ruby-identifier">exists</span> <span class="ruby-operator">?</span> <span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load_file</span>(<span class="ruby-identifier">rc</span>) <span class="ruby-operator">:</span> {}
+825: 
+826:     <span class="ruby-identifier">config</span> = <span class="ruby-identifier">config</span>.<span class="ruby-identifier">merge</span> <span class="ruby-identifier">homeconfig</span>
+827: 
+828:     <span class="ruby-identifier">localrc</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">join</span> <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">pwd</span>, <span class="ruby-value str">'.hoerc'</span>
+829:     <span class="ruby-identifier">exists</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">exist?</span> <span class="ruby-identifier">localrc</span>
+830:     <span class="ruby-identifier">localconfig</span> = <span class="ruby-identifier">exists</span> <span class="ruby-operator">?</span> <span class="ruby-constant">YAML</span>.<span class="ruby-identifier">load_file</span>(<span class="ruby-identifier">localrc</span>) <span class="ruby-operator">:</span> {}
+831: 
+832:     <span class="ruby-identifier">config</span> = <span class="ruby-identifier">config</span>.<span class="ruby-identifier">merge</span> <span class="ruby-identifier">localconfig</span>
+833: 
+834:     <span class="ruby-keyword kw">yield</span> <span class="ruby-identifier">config</span>, <span class="ruby-identifier">rc</span>
+835:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

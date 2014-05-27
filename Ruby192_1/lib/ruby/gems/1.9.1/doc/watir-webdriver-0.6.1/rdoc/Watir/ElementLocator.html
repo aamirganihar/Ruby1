@@ -1,0 +1,2086 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Watir::ElementLocator</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/watir-webdriver/locators/element_locator_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/watir-webdriver/locators/element_locator.rb">lib/watir-webdriver/locators/element_locator.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="Object.html">Watir::Object</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-all_elements">#all_elements</a></li>
+					
+					<li><a href="#method-i-assert_valid_as_attribute">#assert_valid_as_attribute</a></li>
+					
+					<li><a href="#method-i-attribute_expression">#attribute_expression</a></li>
+					
+					<li><a href="#method-i-build_css">#build_css</a></li>
+					
+					<li><a href="#method-i-build_wd_selector">#build_wd_selector</a></li>
+					
+					<li><a href="#method-i-build_xpath">#build_xpath</a></li>
+					
+					<li><a href="#method-i-by_id">#by_id</a></li>
+					
+					<li><a href="#method-i-can_be_combined_with_xpath%3F">#can_be_combined_with_xpath?</a></li>
+					
+					<li><a href="#method-i-check_type">#check_type</a></li>
+					
+					<li><a href="#method-i-css_escape">#css_escape</a></li>
+					
+					<li><a href="#method-i-delete_regexps_from">#delete_regexps_from</a></li>
+					
+					<li><a href="#method-i-equal_pair">#equal_pair</a></li>
+					
+					<li><a href="#method-i-fetch_value">#fetch_value</a></li>
+					
+					<li><a href="#method-i-find_all_by_multiple">#find_all_by_multiple</a></li>
+					
+					<li><a href="#method-i-find_all_by_one">#find_all_by_one</a></li>
+					
+					<li><a href="#method-i-find_first_by_multiple">#find_first_by_multiple</a></li>
+					
+					<li><a href="#method-i-find_first_by_one">#find_first_by_one</a></li>
+					
+					<li><a href="#method-i-given_xpath">#given_xpath</a></li>
+					
+					<li><a href="#method-i-id_from_label">#id_from_label</a></li>
+					
+					<li><a href="#method-i-lhs_for">#lhs_for</a></li>
+					
+					<li><a href="#method-i-locate">#locate</a></li>
+					
+					<li><a href="#method-i-locate_all">#locate_all</a></li>
+					
+					<li><a href="#method-i-matches_selector%3F">#matches_selector?</a></li>
+					
+					<li><a href="#method-i-normalize_selector">#normalize_selector</a></li>
+					
+					<li><a href="#method-i-normalized_selector">#normalized_selector</a></li>
+					
+					<li><a href="#method-i-should_use_label_element%3F">#should_use_label_element?</a></li>
+					
+					<li><a href="#method-i-tag_name_matches%3F">#tag_name_matches?</a></li>
+					
+					<li><a href="#method-i-use_css%3F">#use_css?</a></li>
+					
+					<li><a href="#method-i-valid_attribute%3F">#valid_attribute?</a></li>
+					
+					<li><a href="#method-i-validate_element">#validate_element</a></li>
+					
+					<li><a href="#method-i-wd_find_all_by">#wd_find_all_by</a></li>
+					
+					<li><a href="#method-i-wd_find_by_regexp_selector">#wd_find_by_regexp_selector</a></li>
+					
+					<li><a href="#method-i-wd_find_first_by">#wd_find_first_by</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+			<div id="includes-section" class="section">
+				<h3 class="section-header">Included Modules</h3>
+				<ul class="link-list">
+				
+				
+					<li><a class="include" href="Exception.html">Watir::Exception</a></li>
+				
+				
+				</ul>
+			</div>
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../lib/watir-webdriver/atoms/README.html">README</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Watir.html">Watir</a></li>
+				
+					<li><a href="../Watir/Alert.html">Watir::Alert</a></li>
+				
+					<li><a href="../Watir/AlertHelper.html">Watir::AlertHelper</a></li>
+				
+					<li><a href="../Watir/Anchor.html">Watir::Anchor</a></li>
+				
+					<li><a href="../Watir/AnchorCollection.html">Watir::AnchorCollection</a></li>
+				
+					<li><a href="../Watir/Applet.html">Watir::Applet</a></li>
+				
+					<li><a href="../Watir/AppletCollection.html">Watir::AppletCollection</a></li>
+				
+					<li><a href="../Watir/Area.html">Watir::Area</a></li>
+				
+					<li><a href="../Watir/AreaCollection.html">Watir::AreaCollection</a></li>
+				
+					<li><a href="../Watir/Atoms.html">Watir::Atoms</a></li>
+				
+					<li><a href="../Watir/AttributeHelper.html">Watir::AttributeHelper</a></li>
+				
+					<li><a href="../Watir/Audio.html">Watir::Audio</a></li>
+				
+					<li><a href="../Watir/AudioCollection.html">Watir::AudioCollection</a></li>
+				
+					<li><a href="../Watir/BR.html">Watir::BR</a></li>
+				
+					<li><a href="../Watir/BRCollection.html">Watir::BRCollection</a></li>
+				
+					<li><a href="../Watir/Base.html">Watir::Base</a></li>
+				
+					<li><a href="../Watir/BaseCollection.html">Watir::BaseCollection</a></li>
+				
+					<li><a href="../Watir/BaseFont.html">Watir::BaseFont</a></li>
+				
+					<li><a href="../Watir/BaseFontCollection.html">Watir::BaseFontCollection</a></li>
+				
+					<li><a href="../Watir/Body.html">Watir::Body</a></li>
+				
+					<li><a href="../Watir/BodyCollection.html">Watir::BodyCollection</a></li>
+				
+					<li><a href="../Watir/Browser.html">Watir::Browser</a></li>
+				
+					<li><a href="../Watir/Button.html">Watir::Button</a></li>
+				
+					<li><a href="../Watir/ButtonCollection.html">Watir::ButtonCollection</a></li>
+				
+					<li><a href="../Watir/ButtonLocator.html">Watir::ButtonLocator</a></li>
+				
+					<li><a href="../Watir/Canvas.html">Watir::Canvas</a></li>
+				
+					<li><a href="../Watir/CanvasCollection.html">Watir::CanvasCollection</a></li>
+				
+					<li><a href="../Watir/CellContainer.html">Watir::CellContainer</a></li>
+				
+					<li><a href="../Watir/CheckBox.html">Watir::CheckBox</a></li>
+				
+					<li><a href="../Watir/CheckBoxCollection.html">Watir::CheckBoxCollection</a></li>
+				
+					<li><a href="../Watir/ChildCellLocator.html">Watir::ChildCellLocator</a></li>
+				
+					<li><a href="../Watir/ChildRowLocator.html">Watir::ChildRowLocator</a></li>
+				
+					<li><a href="../Watir/Command.html">Watir::Command</a></li>
+				
+					<li><a href="../Watir/CommandCollection.html">Watir::CommandCollection</a></li>
+				
+					<li><a href="../Watir/Container.html">Watir::Container</a></li>
+				
+					<li><a href="../Watir/Cookies.html">Watir::Cookies</a></li>
+				
+					<li><a href="../Watir/DList.html">Watir::DList</a></li>
+				
+					<li><a href="../Watir/DListCollection.html">Watir::DListCollection</a></li>
+				
+					<li><a href="../Watir/Data.html">Watir::Data</a></li>
+				
+					<li><a href="../Watir/DataCollection.html">Watir::DataCollection</a></li>
+				
+					<li><a href="../Watir/DataList.html">Watir::DataList</a></li>
+				
+					<li><a href="../Watir/DataListCollection.html">Watir::DataListCollection</a></li>
+				
+					<li><a href="../Watir/Details.html">Watir::Details</a></li>
+				
+					<li><a href="../Watir/DetailsCollection.html">Watir::DetailsCollection</a></li>
+				
+					<li><a href="../Watir/Dialog.html">Watir::Dialog</a></li>
+				
+					<li><a href="../Watir/DialogCollection.html">Watir::DialogCollection</a></li>
+				
+					<li><a href="../Watir/Directory.html">Watir::Directory</a></li>
+				
+					<li><a href="../Watir/DirectoryCollection.html">Watir::DirectoryCollection</a></li>
+				
+					<li><a href="../Watir/Div.html">Watir::Div</a></li>
+				
+					<li><a href="../Watir/DivCollection.html">Watir::DivCollection</a></li>
+				
+					<li><a href="../Watir/Element.html">Watir::Element</a></li>
+				
+					<li><a href="../Watir/ElementCollection.html">Watir::ElementCollection</a></li>
+				
+					<li><a href="../Watir/ElementLocator.html">Watir::ElementLocator</a></li>
+				
+					<li><a href="../Watir/Embed.html">Watir::Embed</a></li>
+				
+					<li><a href="../Watir/EmbedCollection.html">Watir::EmbedCollection</a></li>
+				
+					<li><a href="../Watir/EventuallyPresent.html">Watir::EventuallyPresent</a></li>
+				
+					<li><a href="../Watir/Exception.html">Watir::Exception</a></li>
+				
+					<li><a href="../Watir/Exception/Error.html">Watir::Exception::Error</a></li>
+				
+					<li><a href="../Watir/Exception/MissingWayOfFindingObjectException.html">Watir::Exception::MissingWayOfFindingObjectException</a></li>
+				
+					<li><a href="../Watir/Exception/NavigationException.html">Watir::Exception::NavigationException</a></li>
+				
+					<li><a href="../Watir/Exception/NoMatchingWindowFoundException.html">Watir::Exception::NoMatchingWindowFoundException</a></li>
+				
+					<li><a href="../Watir/Exception/NoStatusBarException.html">Watir::Exception::NoStatusBarException</a></li>
+				
+					<li><a href="../Watir/Exception/NoValueFoundException.html">Watir::Exception::NoValueFoundException</a></li>
+				
+					<li><a href="../Watir/Exception/ObjectDisabledException.html">Watir::Exception::ObjectDisabledException</a></li>
+				
+					<li><a href="../Watir/Exception/ObjectReadOnlyException.html">Watir::Exception::ObjectReadOnlyException</a></li>
+				
+					<li><a href="../Watir/Exception/UnknownCellException.html">Watir::Exception::UnknownCellException</a></li>
+				
+					<li><a href="../Watir/Exception/UnknownFrameException.html">Watir::Exception::UnknownFrameException</a></li>
+				
+					<li><a href="../Watir/Exception/UnknownObjectException.html">Watir::Exception::UnknownObjectException</a></li>
+				
+					<li><a href="../Watir/Exception/UnknownRowException.html">Watir::Exception::UnknownRowException</a></li>
+				
+					<li><a href="../Watir/FieldSet.html">Watir::FieldSet</a></li>
+				
+					<li><a href="../Watir/FieldSetCollection.html">Watir::FieldSetCollection</a></li>
+				
+					<li><a href="../Watir/FileField.html">Watir::FileField</a></li>
+				
+					<li><a href="../Watir/FileFieldCollection.html">Watir::FileFieldCollection</a></li>
+				
+					<li><a href="../Watir/Font.html">Watir::Font</a></li>
+				
+					<li><a href="../Watir/FontCollection.html">Watir::FontCollection</a></li>
+				
+					<li><a href="../Watir/Form.html">Watir::Form</a></li>
+				
+					<li><a href="../Watir/FormCollection.html">Watir::FormCollection</a></li>
+				
+					<li><a href="../Watir/Frame.html">Watir::Frame</a></li>
+				
+					<li><a href="../Watir/FrameCollection.html">Watir::FrameCollection</a></li>
+				
+					<li><a href="../Watir/FrameSet.html">Watir::FrameSet</a></li>
+				
+					<li><a href="../Watir/FrameSetCollection.html">Watir::FrameSetCollection</a></li>
+				
+					<li><a href="../Watir/FramedDriver.html">Watir::FramedDriver</a></li>
+				
+					<li><a href="../Watir/HR.html">Watir::HR</a></li>
+				
+					<li><a href="../Watir/HRCollection.html">Watir::HRCollection</a></li>
+				
+					<li><a href="../Watir/HTML.html">Watir::HTML</a></li>
+				
+					<li><a href="../Watir/HTML/Generator.html">Watir::HTML::Generator</a></li>
+				
+					<li><a href="../Watir/HTML/IDLSorter.html">Watir::HTML::IDLSorter</a></li>
+				
+					<li><a href="../Watir/HTML/SpecExtractor.html">Watir::HTML::SpecExtractor</a></li>
+				
+					<li><a href="../Watir/HTML/Util.html">Watir::HTML::Util</a></li>
+				
+					<li><a href="../Watir/HTML/Visitor.html">Watir::HTML::Visitor</a></li>
+				
+					<li><a href="../Watir/HTMLElement.html">Watir::HTMLElement</a></li>
+				
+					<li><a href="../Watir/HTMLElementCollection.html">Watir::HTMLElementCollection</a></li>
+				
+					<li><a href="../Watir/HasWindow.html">Watir::HasWindow</a></li>
+				
+					<li><a href="../Watir/Head.html">Watir::Head</a></li>
+				
+					<li><a href="../Watir/HeadCollection.html">Watir::HeadCollection</a></li>
+				
+					<li><a href="../Watir/Heading.html">Watir::Heading</a></li>
+				
+					<li><a href="../Watir/HeadingCollection.html">Watir::HeadingCollection</a></li>
+				
+					<li><a href="../Watir/Hidden.html">Watir::Hidden</a></li>
+				
+					<li><a href="../Watir/HiddenCollection.html">Watir::HiddenCollection</a></li>
+				
+					<li><a href="../Watir/Html.html">Watir::Html</a></li>
+				
+					<li><a href="../Watir/HtmlCollection.html">Watir::HtmlCollection</a></li>
+				
+					<li><a href="../Watir/IFrame.html">Watir::IFrame</a></li>
+				
+					<li><a href="../Watir/IFrameCollection.html">Watir::IFrameCollection</a></li>
+				
+					<li><a href="../Watir/Image.html">Watir::Image</a></li>
+				
+					<li><a href="../Watir/ImageCollection.html">Watir::ImageCollection</a></li>
+				
+					<li><a href="../Watir/Input.html">Watir::Input</a></li>
+				
+					<li><a href="../Watir/InputCollection.html">Watir::InputCollection</a></li>
+				
+					<li><a href="../Watir/Keygen.html">Watir::Keygen</a></li>
+				
+					<li><a href="../Watir/KeygenCollection.html">Watir::KeygenCollection</a></li>
+				
+					<li><a href="../Watir/LI.html">Watir::LI</a></li>
+				
+					<li><a href="../Watir/LICollection.html">Watir::LICollection</a></li>
+				
+					<li><a href="../Watir/Label.html">Watir::Label</a></li>
+				
+					<li><a href="../Watir/LabelCollection.html">Watir::LabelCollection</a></li>
+				
+					<li><a href="../Watir/Legend.html">Watir::Legend</a></li>
+				
+					<li><a href="../Watir/LegendCollection.html">Watir::LegendCollection</a></li>
+				
+					<li><a href="../Watir/Map.html">Watir::Map</a></li>
+				
+					<li><a href="../Watir/MapCollection.html">Watir::MapCollection</a></li>
+				
+					<li><a href="../Watir/Marquee.html">Watir::Marquee</a></li>
+				
+					<li><a href="../Watir/MarqueeCollection.html">Watir::MarqueeCollection</a></li>
+				
+					<li><a href="../Watir/Media.html">Watir::Media</a></li>
+				
+					<li><a href="../Watir/MediaCollection.html">Watir::MediaCollection</a></li>
+				
+					<li><a href="../Watir/Menu.html">Watir::Menu</a></li>
+				
+					<li><a href="../Watir/MenuCollection.html">Watir::MenuCollection</a></li>
+				
+					<li><a href="../Watir/Meta.html">Watir::Meta</a></li>
+				
+					<li><a href="../Watir/MetaCollection.html">Watir::MetaCollection</a></li>
+				
+					<li><a href="../Watir/Meter.html">Watir::Meter</a></li>
+				
+					<li><a href="../Watir/MeterCollection.html">Watir::MeterCollection</a></li>
+				
+					<li><a href="../Watir/Mod.html">Watir::Mod</a></li>
+				
+					<li><a href="../Watir/ModCollection.html">Watir::ModCollection</a></li>
+				
+					<li><a href="../Watir/OList.html">Watir::OList</a></li>
+				
+					<li><a href="../Watir/OListCollection.html">Watir::OListCollection</a></li>
+				
+					<li><a href="../Watir/Object.html">Watir::Object</a></li>
+				
+					<li><a href="../Watir/ObjectCollection.html">Watir::ObjectCollection</a></li>
+				
+					<li><a href="../Watir/OptGroup.html">Watir::OptGroup</a></li>
+				
+					<li><a href="../Watir/OptGroupCollection.html">Watir::OptGroupCollection</a></li>
+				
+					<li><a href="../Watir/Option.html">Watir::Option</a></li>
+				
+					<li><a href="../Watir/OptionCollection.html">Watir::OptionCollection</a></li>
+				
+					<li><a href="../Watir/Output.html">Watir::Output</a></li>
+				
+					<li><a href="../Watir/OutputCollection.html">Watir::OutputCollection</a></li>
+				
+					<li><a href="../Watir/Paragraph.html">Watir::Paragraph</a></li>
+				
+					<li><a href="../Watir/ParagraphCollection.html">Watir::ParagraphCollection</a></li>
+				
+					<li><a href="../Watir/Param.html">Watir::Param</a></li>
+				
+					<li><a href="../Watir/ParamCollection.html">Watir::ParamCollection</a></li>
+				
+					<li><a href="../Watir/Pre.html">Watir::Pre</a></li>
+				
+					<li><a href="../Watir/PreCollection.html">Watir::PreCollection</a></li>
+				
+					<li><a href="../Watir/Progress.html">Watir::Progress</a></li>
+				
+					<li><a href="../Watir/ProgressCollection.html">Watir::ProgressCollection</a></li>
+				
+					<li><a href="../Watir/Quote.html">Watir::Quote</a></li>
+				
+					<li><a href="../Watir/QuoteCollection.html">Watir::QuoteCollection</a></li>
+				
+					<li><a href="../Watir/Radio.html">Watir::Radio</a></li>
+				
+					<li><a href="../Watir/RadioCollection.html">Watir::RadioCollection</a></li>
+				
+					<li><a href="../Watir/RowContainer.html">Watir::RowContainer</a></li>
+				
+					<li><a href="../Watir/Screenshot.html">Watir::Screenshot</a></li>
+				
+					<li><a href="../Watir/Script.html">Watir::Script</a></li>
+				
+					<li><a href="../Watir/ScriptCollection.html">Watir::ScriptCollection</a></li>
+				
+					<li><a href="../Watir/Select.html">Watir::Select</a></li>
+				
+					<li><a href="../Watir/SelectCollection.html">Watir::SelectCollection</a></li>
+				
+					<li><a href="../Watir/Source.html">Watir::Source</a></li>
+				
+					<li><a href="../Watir/SourceCollection.html">Watir::SourceCollection</a></li>
+				
+					<li><a href="../Watir/Span.html">Watir::Span</a></li>
+				
+					<li><a href="../Watir/SpanCollection.html">Watir::SpanCollection</a></li>
+				
+					<li><a href="../Watir/Style.html">Watir::Style</a></li>
+				
+					<li><a href="../Watir/StyleCollection.html">Watir::StyleCollection</a></li>
+				
+					<li><a href="../Watir/Table.html">Watir::Table</a></li>
+				
+					<li><a href="../Watir/TableCaption.html">Watir::TableCaption</a></li>
+				
+					<li><a href="../Watir/TableCaptionCollection.html">Watir::TableCaptionCollection</a></li>
+				
+					<li><a href="../Watir/TableCell.html">Watir::TableCell</a></li>
+				
+					<li><a href="../Watir/TableCellCollection.html">Watir::TableCellCollection</a></li>
+				
+					<li><a href="../Watir/TableCol.html">Watir::TableCol</a></li>
+				
+					<li><a href="../Watir/TableColCollection.html">Watir::TableColCollection</a></li>
+				
+					<li><a href="../Watir/TableCollection.html">Watir::TableCollection</a></li>
+				
+					<li><a href="../Watir/TableDataCell.html">Watir::TableDataCell</a></li>
+				
+					<li><a href="../Watir/TableDataCellCollection.html">Watir::TableDataCellCollection</a></li>
+				
+					<li><a href="../Watir/TableHeaderCell.html">Watir::TableHeaderCell</a></li>
+				
+					<li><a href="../Watir/TableHeaderCellCollection.html">Watir::TableHeaderCellCollection</a></li>
+				
+					<li><a href="../Watir/TableRow.html">Watir::TableRow</a></li>
+				
+					<li><a href="../Watir/TableRowCollection.html">Watir::TableRowCollection</a></li>
+				
+					<li><a href="../Watir/TableSection.html">Watir::TableSection</a></li>
+				
+					<li><a href="../Watir/TableSectionCollection.html">Watir::TableSectionCollection</a></li>
+				
+					<li><a href="../Watir/TextArea.html">Watir::TextArea</a></li>
+				
+					<li><a href="../Watir/TextAreaCollection.html">Watir::TextAreaCollection</a></li>
+				
+					<li><a href="../Watir/TextField.html">Watir::TextField</a></li>
+				
+					<li><a href="../Watir/TextFieldCollection.html">Watir::TextFieldCollection</a></li>
+				
+					<li><a href="../Watir/TextFieldLocator.html">Watir::TextFieldLocator</a></li>
+				
+					<li><a href="../Watir/Time.html">Watir::Time</a></li>
+				
+					<li><a href="../Watir/TimeCollection.html">Watir::TimeCollection</a></li>
+				
+					<li><a href="../Watir/Title.html">Watir::Title</a></li>
+				
+					<li><a href="../Watir/TitleCollection.html">Watir::TitleCollection</a></li>
+				
+					<li><a href="../Watir/Track.html">Watir::Track</a></li>
+				
+					<li><a href="../Watir/TrackCollection.html">Watir::TrackCollection</a></li>
+				
+					<li><a href="../Watir/UList.html">Watir::UList</a></li>
+				
+					<li><a href="../Watir/UListCollection.html">Watir::UListCollection</a></li>
+				
+					<li><a href="../Watir/Unknown.html">Watir::Unknown</a></li>
+				
+					<li><a href="../Watir/UnknownCollection.html">Watir::UnknownCollection</a></li>
+				
+					<li><a href="../Watir/UserEditable.html">Watir::UserEditable</a></li>
+				
+					<li><a href="../Watir/Video.html">Watir::Video</a></li>
+				
+					<li><a href="../Watir/VideoCollection.html">Watir::VideoCollection</a></li>
+				
+					<li><a href="../Watir/Wait.html">Watir::Wait</a></li>
+				
+					<li><a href="../Watir/Wait/TimeoutError.html">Watir::Wait::TimeoutError</a></li>
+				
+					<li><a href="../Watir/Waitable.html">Watir::Waitable</a></li>
+				
+					<li><a href="../Watir/WhenPresentDecorator.html">Watir::WhenPresentDecorator</a></li>
+				
+					<li><a href="../Watir/Window.html">Watir::Window</a></li>
+				
+					<li><a href="../Watir/XpathSupport.html">Watir::XpathSupport</a></li>
+				
+					<li><a href="../YARD.html">YARD</a></li>
+				
+					<li><a href="../YARD/Handlers.html">YARD::Handlers</a></li>
+				
+					<li><a href="../YARD/Handlers/Watir.html">YARD::Handlers::Watir</a></li>
+				
+					<li><a href="../YARD/Handlers/Watir/AttributesHandler.html">YARD::Handlers::Watir::AttributesHandler</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Watir::ElementLocator</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="WD_FINDERS">WD_FINDERS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="VALID_WHATS">VALID_WHATS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(wd, selector, valid_attributes)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-webdriver/locators/element_locator.rb, line 19</span>
+19:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">wd</span>, <span class="ruby-identifier">selector</span>, <span class="ruby-identifier">valid_attributes</span>)
+20:       <span class="ruby-ivar">@wd</span>               = <span class="ruby-identifier">wd</span>
+21:       <span class="ruby-ivar">@selector</span>         = <span class="ruby-identifier">selector</span>.<span class="ruby-identifier">dup</span>
+22:       <span class="ruby-ivar">@valid_attributes</span> = <span class="ruby-identifier">valid_attributes</span>
+23:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="locate-method" class="method-detail ">
+				<a name="method-i-locate"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">locate</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="locate-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-webdriver/locators/element_locator.rb, line 25</span>
+25:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">locate</span>
+26:       <span class="ruby-identifier">e</span> = <span class="ruby-identifier">by_id</span> <span class="ruby-keyword kw">and</span> <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">e</span> <span class="ruby-comment cmt"># short-circuit if :id is given</span>
+27: 
+28: 
+29:       <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@selector</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+30:         <span class="ruby-identifier">element</span> = <span class="ruby-identifier">find_first_by_one</span>
+31:       <span class="ruby-keyword kw">else</span>
+32:         <span class="ruby-identifier">element</span> = <span class="ruby-identifier">find_first_by_multiple</span>
+33:       <span class="ruby-keyword kw">end</span>
+34: 
+35:       <span class="ruby-comment cmt"># this actually only applies when finding by xpath - browser.text_field(:xpath, &quot;//input[@type='radio']&quot;)</span>
+36:       <span class="ruby-comment cmt"># we don't need to validate the element if we built the xpath ourselves.</span>
+37:       <span class="ruby-identifier">validate_element</span>(<span class="ruby-identifier">element</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">element</span>
+38:     <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Selenium</span><span class="ruby-operator">::</span><span class="ruby-constant">WebDriver</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span><span class="ruby-operator">::</span><span class="ruby-constant">NoSuchElementError</span>
+39:       <span class="ruby-keyword kw">nil</span>
+40:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="locate-all-method" class="method-detail ">
+				<a name="method-i-locate_all"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">locate_all</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="locate-all-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-webdriver/locators/element_locator.rb, line 42</span>
+42:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">locate_all</span>
+43:       <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@selector</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+44:         <span class="ruby-identifier">find_all_by_one</span>
+45:       <span class="ruby-keyword kw">else</span>
+46:         <span class="ruby-identifier">find_all_by_multiple</span>
+47:       <span class="ruby-keyword kw">end</span>
+48:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="all-elements-method" class="method-detail ">
+				<a name="method-i-all_elements"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">all_elements</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="all-elements-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/locators/element_locator.rb, line 255</span>
+255:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">all_elements</span>
+256:       <span class="ruby-ivar">@wd</span>.<span class="ruby-identifier">find_elements</span>(<span class="ruby-value">:xpath</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">&quot;.//*&quot;</span>)
+257:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="assert-valid-as-attribute-method" class="method-detail ">
+				<a name="method-i-assert_valid_as_attribute"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">assert_valid_as_attribute</span><span
+						class="method-args">(attribute)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="assert-valid-as-attribute-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/locators/element_locator.rb, line 232</span>
+232:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">assert_valid_as_attribute</span>(<span class="ruby-identifier">attribute</span>)
+233:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">valid_attribute?</span> <span class="ruby-identifier">attribute</span> <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">attribute</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^data_.+$/</span>
+234:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">MissingWayOfFindingObjectException</span>, <span class="ruby-node">&quot;invalid attribute: #{attribute.inspect}&quot;</span>
+235:       <span class="ruby-keyword kw">end</span>
+236:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="attribute-expression-method" class="method-detail ">
+				<a name="method-i-attribute_expression"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">attribute_expression</span><span
+						class="method-args">(selectors)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="attribute-expression-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/locators/element_locator.rb, line 339</span>
+339:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">attribute_expression</span>(<span class="ruby-identifier">selectors</span>)
+340:       <span class="ruby-identifier">selectors</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">val</span><span class="ruby-operator">|</span>
+341:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">val</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+342:           <span class="ruby-value str">&quot;(&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">val</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">equal_pair</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">v</span>) }.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot; or &quot;</span>) <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;)&quot;</span>
+343:         <span class="ruby-keyword kw">else</span>
+344:           <span class="ruby-identifier">equal_pair</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">val</span>)
+345:         <span class="ruby-keyword kw">end</span>
+346:       <span class="ruby-keyword kw">end</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot; and &quot;</span>)
+347:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="build-css-method" class="method-detail ">
+				<a name="method-i-build_css"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">build_css</span><span
+						class="method-args">(selectors)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="build-css-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/locators/element_locator.rb, line 297</span>
+297:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">build_css</span>(<span class="ruby-identifier">selectors</span>)
+298:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">use_css?</span>(<span class="ruby-identifier">selectors</span>)
+299: 
+300:       <span class="ruby-identifier">css</span> = <span class="ruby-value str">''</span>
+301:       <span class="ruby-identifier">css</span> <span class="ruby-operator">&lt;&lt;</span> (<span class="ruby-identifier">selectors</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:tag_name</span>) <span class="ruby-operator">||</span> <span class="ruby-value str">''</span>)
+302: 
+303:       <span class="ruby-identifier">klass</span> = <span class="ruby-identifier">selectors</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:class</span>)
+304:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">klass</span>
+305:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">include?</span> <span class="ruby-value str">' '</span>
+306:           <span class="ruby-identifier">css</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">%([class=&quot;#{css_escape klass}&quot;])</span>
+307:         <span class="ruby-keyword kw">else</span>
+308:           <span class="ruby-identifier">css</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;.#{klass}&quot;</span>
+309:         <span class="ruby-keyword kw">end</span>
+310:       <span class="ruby-keyword kw">end</span>
+311: 
+312:       <span class="ruby-identifier">href</span> = <span class="ruby-identifier">selectors</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:href</span>)
+313:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">href</span>
+314:         <span class="ruby-identifier">css</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">%([href~=&quot;#{css_escape href}&quot;])</span>
+315:       <span class="ruby-keyword kw">end</span>
+316: 
+317:       <span class="ruby-identifier">selectors</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+318:         <span class="ruby-identifier">key</span> = <span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-value str">&quot;_&quot;</span>, <span class="ruby-value str">&quot;-&quot;</span>)
+319:         <span class="ruby-identifier">css</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">%([#{key}=&quot;#{css_escape value}&quot;])</span> <span class="ruby-comment cmt"># TODO: proper escaping</span>
+320:       <span class="ruby-keyword kw">end</span>
+321: 
+322:       [<span class="ruby-value">:css</span>, <span class="ruby-identifier">css</span>]
+323:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="build-wd-selector-method" class="method-detail ">
+				<a name="method-i-build_wd_selector"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">build_wd_selector</span><span
+						class="method-args">(selectors)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="build-wd-selector-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/locators/element_locator.rb, line 271</span>
+271:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">build_wd_selector</span>(<span class="ruby-identifier">selectors</span>)
+272:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">selectors</span>.<span class="ruby-identifier">values</span>.<span class="ruby-identifier">any?</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Regexp</span> }
+273:         <span class="ruby-identifier">build_css</span>(<span class="ruby-identifier">selectors</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">build_xpath</span>(<span class="ruby-identifier">selectors</span>)
+274:       <span class="ruby-keyword kw">end</span>
+275:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="build-xpath-method" class="method-detail ">
+				<a name="method-i-build_xpath"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">build_xpath</span><span
+						class="method-args">(selectors)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="build-xpath-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/locators/element_locator.rb, line 277</span>
+277:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">build_xpath</span>(<span class="ruby-identifier">selectors</span>)
+278:       <span class="ruby-identifier">xpath</span> = <span class="ruby-value str">&quot;.//&quot;</span>
+279:       <span class="ruby-identifier">xpath</span> <span class="ruby-operator">&lt;&lt;</span> (<span class="ruby-identifier">selectors</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:tag_name</span>) <span class="ruby-operator">||</span> <span class="ruby-value str">'*'</span>).<span class="ruby-identifier">to_s</span>
+280: 
+281:       <span class="ruby-identifier">idx</span> = <span class="ruby-identifier">selectors</span>.<span class="ruby-identifier">delete</span> <span class="ruby-value">:index</span>
+282: 
+283:       <span class="ruby-comment cmt"># the remaining entries should be attributes</span>
+284:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">selectors</span>.<span class="ruby-identifier">empty?</span>
+285:         <span class="ruby-identifier">xpath</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;[&quot;</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">attribute_expression</span>(<span class="ruby-identifier">selectors</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;]&quot;</span>
+286:       <span class="ruby-keyword kw">end</span>
+287: 
+288:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">idx</span>
+289:         <span class="ruby-identifier">xpath</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;[#{idx + 1}]&quot;</span>
+290:       <span class="ruby-keyword kw">end</span>
+291: 
+292:       <span class="ruby-identifier">p</span> <span class="ruby-value">:xpath</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">xpath</span>, <span class="ruby-value">:selectors</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">selectors</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">$DEBUG</span>
+293: 
+294:       [<span class="ruby-value">:xpath</span>, <span class="ruby-identifier">xpath</span>]
+295:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="by-id-method" class="method-detail ">
+				<a name="method-i-by_id"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">by_id</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="by-id-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/locators/element_locator.rb, line 238</span>
+238:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">by_id</span>
+239:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">id</span> = <span class="ruby-ivar">@selector</span>[<span class="ruby-value">:id</span>] <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">id</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">String</span>
+240: 
+241:       <span class="ruby-identifier">selector</span> = <span class="ruby-ivar">@selector</span>.<span class="ruby-identifier">dup</span>
+242:       <span class="ruby-identifier">selector</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:id</span>)
+243: 
+244:       <span class="ruby-identifier">tag_name</span> = <span class="ruby-identifier">selector</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:tag_name</span>)
+245:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">selector</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-comment cmt"># multiple attributes</span>
+246: 
+247:       <span class="ruby-identifier">element</span> = <span class="ruby-ivar">@wd</span>.<span class="ruby-identifier">find_element</span>(<span class="ruby-value">:id</span>, <span class="ruby-identifier">id</span>)
+248:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">tag_name</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">tag_name_matches?</span>(<span class="ruby-identifier">element</span>.<span class="ruby-identifier">tag_name</span>.<span class="ruby-identifier">downcase</span>, <span class="ruby-identifier">tag_name</span>)
+249: 
+250:       <span class="ruby-identifier">element</span>
+251:     <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Selenium</span><span class="ruby-operator">::</span><span class="ruby-constant">WebDriver</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span><span class="ruby-operator">::</span><span class="ruby-constant">NoSuchElementError</span>
+252:       <span class="ruby-keyword kw">nil</span>
+253:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="can-be-combined-with-xpath--method" class="method-detail ">
+				<a name="method-i-can_be_combined_with_xpath%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">can_be_combined_with_xpath?</span><span
+						class="method-args">(selector)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="can-be-combined-with-xpath--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/locators/element_locator.rb, line 400</span>
+400:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">can_be_combined_with_xpath?</span>(<span class="ruby-identifier">selector</span>)
+401:       <span class="ruby-comment cmt"># ouch - is this worth it?</span>
+402:       <span class="ruby-identifier">keys</span> = <span class="ruby-identifier">selector</span>.<span class="ruby-identifier">keys</span>
+403:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">keys</span> <span class="ruby-operator">==</span> [<span class="ruby-value">:tag_name</span>]
+404: 
+405:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">selector</span>[<span class="ruby-value">:tag_name</span>] <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;input&quot;</span>
+406:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">keys</span> <span class="ruby-operator">==</span> [<span class="ruby-value">:tag_name</span>, <span class="ruby-value">:type</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">keys</span> <span class="ruby-operator">==</span> [<span class="ruby-value">:type</span>, <span class="ruby-value">:tag_name</span>]
+407:       <span class="ruby-keyword kw">end</span>
+408: 
+409:       <span class="ruby-keyword kw">false</span>
+410:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="check-type-method" class="method-detail ">
+				<a name="method-i-check_type"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">check_type</span><span
+						class="method-args">(how, what)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="check-type-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/locators/element_locator.rb, line 147</span>
+147:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">check_type</span>(<span class="ruby-identifier">how</span>, <span class="ruby-identifier">what</span>)
+148:       <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">how</span>
+149:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">:index</span>
+150:         <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">what</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Fixnum</span>)
+151:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;expected Fixnum, got #{what.inspect}:#{what.class}&quot;</span>
+152:         <span class="ruby-keyword kw">end</span>
+153:       <span class="ruby-keyword kw">else</span>
+154:         <span class="ruby-keyword kw">unless</span> <span class="ruby-constant">VALID_WHATS</span>.<span class="ruby-identifier">any?</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-identifier">what</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-identifier">t</span> }
+155:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;expected one of #{VALID_WHATS.inspect}, got #{what.inspect}:#{what.class}&quot;</span>
+156:         <span class="ruby-keyword kw">end</span>
+157:       <span class="ruby-keyword kw">end</span>
+158:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="css-escape-method" class="method-detail ">
+				<a name="method-i-css_escape"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">css_escape</span><span
+						class="method-args">(str)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="css-escape-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/locators/element_locator.rb, line 349</span>
+349:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">css_escape</span>(<span class="ruby-identifier">str</span>)
+350:       <span class="ruby-identifier">str</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-value str">'&quot;'</span>, <span class="ruby-value str">'\&quot;'</span>)
+351:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="delete-regexps-from-method" class="method-detail ">
+				<a name="method-i-delete_regexps_from"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">delete_regexps_from</span><span
+						class="method-args">(selector)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="delete-regexps-from-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/locators/element_locator.rb, line 220</span>
+220:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">delete_regexps_from</span>(<span class="ruby-identifier">selector</span>)
+221:       <span class="ruby-identifier">rx_selector</span> = {}
+222: 
+223:       <span class="ruby-identifier">selector</span>.<span class="ruby-identifier">dup</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">how</span>, <span class="ruby-identifier">what</span><span class="ruby-operator">|</span>
+224:         <span class="ruby-keyword kw">next</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">what</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Regexp</span>)
+225:         <span class="ruby-identifier">rx_selector</span>[<span class="ruby-identifier">how</span>] = <span class="ruby-identifier">what</span>
+226:         <span class="ruby-identifier">selector</span>.<span class="ruby-identifier">delete</span> <span class="ruby-identifier">how</span>
+227:       <span class="ruby-keyword kw">end</span>
+228: 
+229:       <span class="ruby-identifier">rx_selector</span>
+230:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="equal-pair-method" class="method-detail ">
+				<a name="method-i-equal_pair"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">equal_pair</span><span
+						class="method-args">(key, value)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="equal-pair-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/locators/element_locator.rb, line 353</span>
+353:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">equal_pair</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span>)
+354:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">key</span> <span class="ruby-operator">==</span> <span class="ruby-value">:class</span>
+355:         <span class="ruby-identifier">klass</span> = <span class="ruby-constant">XpathSupport</span>.<span class="ruby-identifier">escape</span> <span class="ruby-node">&quot; #{value} &quot;</span>
+356:         <span class="ruby-node">&quot;contains(concat(' ', @class, ' '), #{klass})&quot;</span>
+357:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">key</span> <span class="ruby-operator">==</span> <span class="ruby-value">:label</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">should_use_label_element?</span>
+358:         <span class="ruby-comment cmt"># we assume :label means a corresponding label element, not the attribute</span>
+359:         <span class="ruby-node">&quot;@id=//label[normalize-space()=#{XpathSupport.escape value}]/@for&quot;</span>
+360:       <span class="ruby-keyword kw">else</span>
+361:         <span class="ruby-node">&quot;#{lhs_for(key)}=#{XpathSupport.escape value}&quot;</span>
+362:       <span class="ruby-keyword kw">end</span>
+363:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="fetch-value-method" class="method-detail ">
+				<a name="method-i-fetch_value"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">fetch_value</span><span
+						class="method-args">(element, how)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="fetch-value-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/locators/element_locator.rb, line 169</span>
+169:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">fetch_value</span>(<span class="ruby-identifier">element</span>, <span class="ruby-identifier">how</span>)
+170:       <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">how</span>
+171:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">:text</span>
+172:         <span class="ruby-identifier">element</span>.<span class="ruby-identifier">text</span>
+173:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">:tag_name</span>
+174:         <span class="ruby-identifier">element</span>.<span class="ruby-identifier">tag_name</span>.<span class="ruby-identifier">downcase</span>
+175:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">:href</span>
+176:         (<span class="ruby-identifier">href</span> = <span class="ruby-identifier">element</span>.<span class="ruby-identifier">attribute</span>(<span class="ruby-value">:href</span>)) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">href</span>.<span class="ruby-identifier">strip</span>
+177:       <span class="ruby-keyword kw">else</span>
+178:         <span class="ruby-identifier">element</span>.<span class="ruby-identifier">attribute</span>(<span class="ruby-identifier">how</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-value str">&quot;_&quot;</span>, <span class="ruby-value str">&quot;-&quot;</span>).<span class="ruby-identifier">to_sym</span>)
+179:       <span class="ruby-keyword kw">end</span>
+180:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="find-all-by-multiple-method" class="method-detail ">
+				<a name="method-i-find_all_by_multiple"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">find_all_by_multiple</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="find-all-by-multiple-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/locators/element_locator.rb, line 97</span>
+ 97:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">find_all_by_multiple</span>
+ 98:       <span class="ruby-identifier">selector</span> = <span class="ruby-identifier">normalized_selector</span>
+ 99: 
+100:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">selector</span>.<span class="ruby-identifier">has_key?</span> <span class="ruby-value">:index</span>
+101:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;can't locate all elements by :index&quot;</span>
+102:       <span class="ruby-keyword kw">end</span>
+103: 
+104:       <span class="ruby-identifier">how</span>, <span class="ruby-identifier">what</span> = <span class="ruby-identifier">given_xpath</span>(<span class="ruby-identifier">selector</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">build_wd_selector</span>(<span class="ruby-identifier">selector</span>)
+105:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">how</span>
+106:         <span class="ruby-ivar">@wd</span>.<span class="ruby-identifier">find_elements</span>(<span class="ruby-identifier">how</span>, <span class="ruby-identifier">what</span>)
+107:       <span class="ruby-keyword kw">else</span>
+108:         <span class="ruby-identifier">wd_find_by_regexp_selector</span>(<span class="ruby-identifier">selector</span>, <span class="ruby-value">:select</span>)
+109:       <span class="ruby-keyword kw">end</span>
+110:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="find-all-by-one-method" class="method-detail ">
+				<a name="method-i-find_all_by_one"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">find_all_by_one</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="find-all-by-one-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-webdriver/locators/element_locator.rb, line 63</span>
+63:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">find_all_by_one</span>
+64:       <span class="ruby-identifier">how</span>, <span class="ruby-identifier">what</span> = <span class="ruby-ivar">@selector</span>.<span class="ruby-identifier">to_a</span>.<span class="ruby-identifier">first</span>
+65:       <span class="ruby-identifier">check_type</span> <span class="ruby-identifier">how</span>, <span class="ruby-identifier">what</span>
+66: 
+67:       <span class="ruby-keyword kw">if</span> <span class="ruby-constant">WD_FINDERS</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">how</span>)
+68:         <span class="ruby-identifier">wd_find_all_by</span>(<span class="ruby-identifier">how</span>, <span class="ruby-identifier">what</span>)
+69:       <span class="ruby-keyword kw">else</span>
+70:         <span class="ruby-identifier">find_all_by_multiple</span>
+71:       <span class="ruby-keyword kw">end</span>
+72:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="find-first-by-multiple-method" class="method-detail ">
+				<a name="method-i-find_first_by_multiple"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">find_first_by_multiple</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="find-first-by-multiple-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-webdriver/locators/element_locator.rb, line 74</span>
+74:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">find_first_by_multiple</span>
+75:       <span class="ruby-identifier">selector</span> = <span class="ruby-identifier">normalized_selector</span>
+76: 
+77:       <span class="ruby-identifier">idx</span>   = <span class="ruby-identifier">selector</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:index</span>)
+78:       <span class="ruby-identifier">how</span>, <span class="ruby-identifier">what</span> = <span class="ruby-identifier">given_xpath</span>(<span class="ruby-identifier">selector</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">build_wd_selector</span>(<span class="ruby-identifier">selector</span>)
+79: 
+80:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">how</span>
+81:         <span class="ruby-comment cmt"># could build xpath for selector</span>
+82:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">idx</span>
+83:           <span class="ruby-ivar">@wd</span>.<span class="ruby-identifier">find_elements</span>(<span class="ruby-identifier">how</span>, <span class="ruby-identifier">what</span>)[<span class="ruby-identifier">idx</span>]
+84:         <span class="ruby-keyword kw">else</span>
+85:           <span class="ruby-ivar">@wd</span>.<span class="ruby-identifier">find_element</span>(<span class="ruby-identifier">how</span>, <span class="ruby-identifier">what</span>)
+86:         <span class="ruby-keyword kw">end</span>
+87:       <span class="ruby-keyword kw">else</span>
+88:         <span class="ruby-comment cmt"># can't use xpath, probably a regexp in there</span>
+89:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">idx</span>
+90:           <span class="ruby-identifier">wd_find_by_regexp_selector</span>(<span class="ruby-identifier">selector</span>, <span class="ruby-value">:select</span>)[<span class="ruby-identifier">idx</span>]
+91:         <span class="ruby-keyword kw">else</span>
+92:           <span class="ruby-identifier">wd_find_by_regexp_selector</span>(<span class="ruby-identifier">selector</span>, <span class="ruby-value">:find</span>)
+93:         <span class="ruby-keyword kw">end</span>
+94:       <span class="ruby-keyword kw">end</span>
+95:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="find-first-by-one-method" class="method-detail ">
+				<a name="method-i-find_first_by_one"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">find_first_by_one</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="find-first-by-one-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-webdriver/locators/element_locator.rb, line 52</span>
+52:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">find_first_by_one</span>
+53:       <span class="ruby-identifier">how</span>, <span class="ruby-identifier">what</span> = <span class="ruby-ivar">@selector</span>.<span class="ruby-identifier">to_a</span>.<span class="ruby-identifier">first</span>
+54:       <span class="ruby-identifier">check_type</span> <span class="ruby-identifier">how</span>, <span class="ruby-identifier">what</span>
+55: 
+56:       <span class="ruby-keyword kw">if</span> <span class="ruby-constant">WD_FINDERS</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">how</span>)
+57:         <span class="ruby-identifier">wd_find_first_by</span>(<span class="ruby-identifier">how</span>, <span class="ruby-identifier">what</span>)
+58:       <span class="ruby-keyword kw">else</span>
+59:         <span class="ruby-identifier">find_first_by_multiple</span>
+60:       <span class="ruby-keyword kw">end</span>
+61:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="given-xpath-method" class="method-detail ">
+				<a name="method-i-given_xpath"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">given_xpath</span><span
+						class="method-args">(selector)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="given-xpath-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/locators/element_locator.rb, line 390</span>
+390:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">given_xpath</span>(<span class="ruby-identifier">selector</span>)
+391:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">xpath</span> = <span class="ruby-identifier">selector</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:xpath</span>)
+392: 
+393:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">selector</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">can_be_combined_with_xpath?</span>(<span class="ruby-identifier">selector</span>)
+394:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;:xpath cannot be combined with other selectors (#{selector.inspect})&quot;</span>
+395:       <span class="ruby-keyword kw">end</span>
+396: 
+397:       [<span class="ruby-value">:xpath</span>, <span class="ruby-identifier">xpath</span>]
+398:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="id-from-label-method" class="method-detail ">
+				<a name="method-i-id_from_label"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">id_from_label</span><span
+						class="method-args">(label_exp)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="id-from-label-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/locators/element_locator.rb, line 160</span>
+160:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">id_from_label</span>(<span class="ruby-identifier">label_exp</span>)
+161:       <span class="ruby-comment cmt"># TODO: this won't work correctly if @wd is a sub-element</span>
+162:       <span class="ruby-identifier">label</span> = <span class="ruby-ivar">@wd</span>.<span class="ruby-identifier">find_elements</span>(<span class="ruby-value">:tag_name</span>, <span class="ruby-value str">'label'</span>).<span class="ruby-identifier">find</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">el</span><span class="ruby-operator">|</span>
+163:         <span class="ruby-identifier">matches_selector?</span>(<span class="ruby-identifier">el</span>, <span class="ruby-value">:text</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">label_exp</span>)
+164:       <span class="ruby-keyword kw">end</span>
+165: 
+166:       <span class="ruby-identifier">label</span>.<span class="ruby-identifier">attribute</span>(<span class="ruby-value">:for</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">label</span>
+167:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="lhs-for-method" class="method-detail ">
+				<a name="method-i-lhs_for"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">lhs_for</span><span
+						class="method-args">(key)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="lhs-for-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/locators/element_locator.rb, line 365</span>
+365:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">lhs_for</span>(<span class="ruby-identifier">key</span>)
+366:       <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">key</span>
+367:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">:text</span>, <span class="ruby-value str">'text'</span>
+368:         <span class="ruby-value str">'normalize-space()'</span>
+369:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">:href</span>
+370:         <span class="ruby-comment cmt"># TODO: change this behaviour?</span>
+371:         <span class="ruby-value str">'normalize-space(@href)'</span>
+372:       <span class="ruby-keyword kw">else</span>
+373:         <span class="ruby-node">&quot;@#{key.to_s.gsub(&quot;_&quot;, &quot;-&quot;)}&quot;</span>
+374:       <span class="ruby-keyword kw">end</span>
+375:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="matches-selector--method" class="method-detail ">
+				<a name="method-i-matches_selector%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">matches_selector?</span><span
+						class="method-args">(element, selector)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="matches-selector--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/locators/element_locator.rb, line 182</span>
+182:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">matches_selector?</span>(<span class="ruby-identifier">element</span>, <span class="ruby-identifier">selector</span>)
+183:       <span class="ruby-identifier">selector</span>.<span class="ruby-identifier">all?</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">how</span>, <span class="ruby-identifier">what</span><span class="ruby-operator">|</span>
+184:         <span class="ruby-identifier">what</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">fetch_value</span>(<span class="ruby-identifier">element</span>, <span class="ruby-identifier">how</span>)
+185:       <span class="ruby-keyword kw">end</span>
+186:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="normalize-selector-method" class="method-detail ">
+				<a name="method-i-normalize_selector"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">normalize_selector</span><span
+						class="method-args">(how, what)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="normalize-selector-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/locators/element_locator.rb, line 201</span>
+201:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">normalize_selector</span>(<span class="ruby-identifier">how</span>, <span class="ruby-identifier">what</span>)
+202:       <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">how</span>
+203:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">:tag_name</span>, <span class="ruby-value">:text</span>, <span class="ruby-value">:xpath</span>, <span class="ruby-value">:index</span>, <span class="ruby-value">:class</span>, <span class="ruby-value">:label</span>
+204:         <span class="ruby-comment cmt"># include :class since the valid attribute is 'class_name'</span>
+205:         <span class="ruby-comment cmt"># include :for since the valid attribute is 'html_for'</span>
+206:         [<span class="ruby-identifier">how</span>, <span class="ruby-identifier">what</span>]
+207:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">:class_name</span>
+208:         [<span class="ruby-value">:class</span>, <span class="ruby-identifier">what</span>]
+209:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">:caption</span>
+210:         [<span class="ruby-value">:text</span>, <span class="ruby-identifier">what</span>]
+211:       <span class="ruby-keyword kw">when</span> <span class="ruby-value">:for</span>
+212:         <span class="ruby-identifier">assert_valid_as_attribute</span> <span class="ruby-value">:html_for</span>
+213:         [<span class="ruby-identifier">how</span>, <span class="ruby-identifier">what</span>]
+214:       <span class="ruby-keyword kw">else</span>
+215:         <span class="ruby-identifier">assert_valid_as_attribute</span> <span class="ruby-identifier">how</span>
+216:         [<span class="ruby-identifier">how</span>, <span class="ruby-identifier">what</span>]
+217:       <span class="ruby-keyword kw">end</span>
+218:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="normalized-selector-method" class="method-detail ">
+				<a name="method-i-normalized_selector"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">normalized_selector</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="normalized-selector-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/locators/element_locator.rb, line 188</span>
+188:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">normalized_selector</span>
+189:       <span class="ruby-identifier">selector</span> = {}
+190: 
+191:       <span class="ruby-ivar">@selector</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">how</span>, <span class="ruby-identifier">what</span><span class="ruby-operator">|</span>
+192:         <span class="ruby-identifier">check_type</span>(<span class="ruby-identifier">how</span>, <span class="ruby-identifier">what</span>)
+193: 
+194:         <span class="ruby-identifier">how</span>, <span class="ruby-identifier">what</span> = <span class="ruby-identifier">normalize_selector</span>(<span class="ruby-identifier">how</span>, <span class="ruby-identifier">what</span>)
+195:         <span class="ruby-identifier">selector</span>[<span class="ruby-identifier">how</span>] = <span class="ruby-identifier">what</span>
+196:       <span class="ruby-keyword kw">end</span>
+197: 
+198:       <span class="ruby-identifier">selector</span>
+199:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="should-use-label-element--method" class="method-detail ">
+				<a name="method-i-should_use_label_element%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">should_use_label_element?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="should-use-label-element--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/locators/element_locator.rb, line 267</span>
+267:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">should_use_label_element?</span>
+268:       <span class="ruby-ivar">@selector</span>[<span class="ruby-value">:tag_name</span>] <span class="ruby-operator">!=</span> <span class="ruby-value str">&quot;option&quot;</span>
+269:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="tag-name-matches--method" class="method-detail ">
+				<a name="method-i-tag_name_matches%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">tag_name_matches?</span><span
+						class="method-args">(element_tag_name, tag_name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="tag-name-matches--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/locators/element_locator.rb, line 259</span>
+259:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">tag_name_matches?</span>(<span class="ruby-identifier">element_tag_name</span>, <span class="ruby-identifier">tag_name</span>)
+260:       <span class="ruby-identifier">tag_name</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">element_tag_name</span>
+261:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="use-css--method" class="method-detail ">
+				<a name="method-i-use_css%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">use_css?</span><span
+						class="method-args">(selectors)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="use-css--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/locators/element_locator.rb, line 325</span>
+325:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">use_css?</span>(<span class="ruby-identifier">selectors</span>)
+326:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-constant">Watir</span>.<span class="ruby-identifier">prefer_css?</span>
+327: 
+328:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">selectors</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:text</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">selectors</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:label</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">selectors</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:index</span>)
+329:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span>
+330:       <span class="ruby-keyword kw">end</span>
+331: 
+332:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">selectors</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:class</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">selectors</span>[<span class="ruby-value">:class</span>] <span class="ruby-operator">!~</span> <span class="ruby-regexp re">/^[\w-]+$/</span><span class="ruby-identifier">i</span>
+333:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span>
+334:       <span class="ruby-keyword kw">end</span>
+335: 
+336:       <span class="ruby-keyword kw">true</span>
+337:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="valid-attribute--method" class="method-detail ">
+				<a name="method-i-valid_attribute%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">valid_attribute?</span><span
+						class="method-args">(attribute)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="valid-attribute--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/locators/element_locator.rb, line 263</span>
+263:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">valid_attribute?</span>(<span class="ruby-identifier">attribute</span>)
+264:       <span class="ruby-ivar">@valid_attributes</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@valid_attributes</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">attribute</span>)
+265:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="validate-element-method" class="method-detail ">
+				<a name="method-i-validate_element"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">validate_element</span><span
+						class="method-args">(element)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="validate-element-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/locators/element_locator.rb, line 377</span>
+377:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">validate_element</span>(<span class="ruby-identifier">element</span>)
+378:       <span class="ruby-identifier">tn</span> = <span class="ruby-ivar">@selector</span>[<span class="ruby-value">:tag_name</span>]
+379:       <span class="ruby-identifier">element_tag_name</span> = <span class="ruby-identifier">element</span>.<span class="ruby-identifier">tag_name</span>.<span class="ruby-identifier">downcase</span>
+380: 
+381:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">tn</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">tag_name_matches?</span>(<span class="ruby-identifier">element_tag_name</span>, <span class="ruby-identifier">tn</span>)
+382: 
+383:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">element_tag_name</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'input'</span>
+384:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@selector</span>[<span class="ruby-value">:type</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@selector</span>[<span class="ruby-value">:type</span>] <span class="ruby-operator">!=</span> <span class="ruby-identifier">element</span>.<span class="ruby-identifier">attribute</span>(<span class="ruby-value">:type</span>)
+385:       <span class="ruby-keyword kw">end</span>
+386: 
+387:       <span class="ruby-identifier">element</span>
+388:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="wd-find-all-by-method" class="method-detail ">
+				<a name="method-i-wd_find_all_by"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">wd_find_all_by</span><span
+						class="method-args">(how, what)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="wd-find-all-by-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/locators/element_locator.rb, line 120</span>
+120:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">wd_find_all_by</span>(<span class="ruby-identifier">how</span>, <span class="ruby-identifier">what</span>)
+121:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">what</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">String</span>
+122:         <span class="ruby-ivar">@wd</span>.<span class="ruby-identifier">find_elements</span>(<span class="ruby-identifier">how</span>, <span class="ruby-identifier">what</span>)
+123:       <span class="ruby-keyword kw">else</span>
+124:         <span class="ruby-identifier">all_elements</span>.<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">element</span><span class="ruby-operator">|</span> <span class="ruby-identifier">fetch_value</span>(<span class="ruby-identifier">element</span>, <span class="ruby-identifier">how</span>) <span class="ruby-operator">=~</span> <span class="ruby-identifier">what</span> }
+125:       <span class="ruby-keyword kw">end</span>
+126:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="wd-find-by-regexp-selector-method" class="method-detail ">
+				<a name="method-i-wd_find_by_regexp_selector"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">wd_find_by_regexp_selector</span><span
+						class="method-args">(selector, method = :find)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="wd-find-by-regexp-selector-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/locators/element_locator.rb, line 128</span>
+128:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">wd_find_by_regexp_selector</span>(<span class="ruby-identifier">selector</span>, <span class="ruby-identifier">method</span> = <span class="ruby-value">:find</span>)
+129:       <span class="ruby-identifier">rx_selector</span> = <span class="ruby-identifier">delete_regexps_from</span>(<span class="ruby-identifier">selector</span>)
+130: 
+131:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">rx_selector</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value">:label</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">should_use_label_element?</span>
+132:         <span class="ruby-identifier">selector</span>[<span class="ruby-value">:id</span>] = <span class="ruby-identifier">id_from_label</span>(<span class="ruby-identifier">rx_selector</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:label</span>)) <span class="ruby-operator">||</span> <span class="ruby-keyword kw">return</span>
+133:       <span class="ruby-keyword kw">end</span>
+134: 
+135:       <span class="ruby-identifier">how</span>, <span class="ruby-identifier">what</span> = <span class="ruby-identifier">build_wd_selector</span>(<span class="ruby-identifier">selector</span>)
+136: 
+137:       <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">how</span>
+138:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">Error</span>, <span class="ruby-node">&quot;internal error: unable to build WebDriver selector from #{selector.inspect}&quot;</span>
+139:       <span class="ruby-keyword kw">end</span>
+140: 
+141:       <span class="ruby-identifier">elements</span> = <span class="ruby-ivar">@wd</span>.<span class="ruby-identifier">find_elements</span>(<span class="ruby-identifier">how</span>, <span class="ruby-identifier">what</span>)
+142:       <span class="ruby-identifier">elements</span>.<span class="ruby-identifier">__send__</span>(<span class="ruby-identifier">method</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">el</span><span class="ruby-operator">|</span> <span class="ruby-identifier">matches_selector?</span>(<span class="ruby-identifier">el</span>, <span class="ruby-identifier">rx_selector</span>) }
+143:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="wd-find-first-by-method" class="method-detail ">
+				<a name="method-i-wd_find_first_by"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">wd_find_first_by</span><span
+						class="method-args">(how, what)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="wd-find-first-by-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/locators/element_locator.rb, line 112</span>
+112:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">wd_find_first_by</span>(<span class="ruby-identifier">how</span>, <span class="ruby-identifier">what</span>)
+113:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">what</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">String</span>
+114:         <span class="ruby-ivar">@wd</span>.<span class="ruby-identifier">find_element</span>(<span class="ruby-identifier">how</span>, <span class="ruby-identifier">what</span>)
+115:       <span class="ruby-keyword kw">else</span>
+116:         <span class="ruby-identifier">all_elements</span>.<span class="ruby-identifier">find</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">element</span><span class="ruby-operator">|</span> <span class="ruby-identifier">fetch_value</span>(<span class="ruby-identifier">element</span>, <span class="ruby-identifier">how</span>) <span class="ruby-operator">=~</span> <span class="ruby-identifier">what</span> }
+117:       <span class="ruby-keyword kw">end</span>
+118:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

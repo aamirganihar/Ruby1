@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: LibWebSocket::OpeningHandshake</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/libwebsocket/opening_handshake/client_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/libwebsocket/opening_handshake/client.rb">lib/libwebsocket/opening_handshake/client.rb</a></li>
+					
+						<li><a href="../lib/libwebsocket/opening_handshake/server_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/libwebsocket/opening_handshake/server.rb">lib/libwebsocket/opening_handshake/server.rb</a></li>
+					
+						<li><a href="../lib/libwebsocket/opening_handshake_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/libwebsocket/opening_handshake.rb">lib/libwebsocket/opening_handshake.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+			<div id="namespace-list-section" class="section">
+				<h3 class="section-header">Namespace</h3>
+				<ul class="link-list">
+					
+					<li><span class="type">CLASS</span> <a href="OpeningHandshake/Client.html">LibWebSocket::OpeningHandshake::Client</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="OpeningHandshake/Server.html">LibWebSocket::OpeningHandshake::Server</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-req">#req</a></li>
+					
+					<li><a href="#method-i-res">#res</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../LibWebSocket.html">LibWebSocket</a></li>
+				
+					<li><a href="../LibWebSocket/Cookie.html">LibWebSocket::Cookie</a></li>
+				
+					<li><a href="../LibWebSocket/Cookie/Request.html">LibWebSocket::Cookie::Request</a></li>
+				
+					<li><a href="../LibWebSocket/Cookie/Response.html">LibWebSocket::Cookie::Response</a></li>
+				
+					<li><a href="../LibWebSocket/Frame.html">LibWebSocket::Frame</a></li>
+				
+					<li><a href="../LibWebSocket/Message.html">LibWebSocket::Message</a></li>
+				
+					<li><a href="../LibWebSocket/OpeningHandshake.html">LibWebSocket::OpeningHandshake</a></li>
+				
+					<li><a href="../LibWebSocket/OpeningHandshake/Client.html">LibWebSocket::OpeningHandshake::Client</a></li>
+				
+					<li><a href="../LibWebSocket/OpeningHandshake/Server.html">LibWebSocket::OpeningHandshake::Server</a></li>
+				
+					<li><a href="../LibWebSocket/Request.html">LibWebSocket::Request</a></li>
+				
+					<li><a href="../LibWebSocket/Response.html">LibWebSocket::Response</a></li>
+				
+					<li><a href="../LibWebSocket/Stateful.html">LibWebSocket::Stateful</a></li>
+				
+					<li><a href="../LibWebSocket/URL.html">LibWebSocket::URL</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">LibWebSocket::OpeningHandshake</h1>
+
+		<div id="description">
+			<p>
+This is a base class for <a
+href="OpeningHandshake/Client.html">LibWebSocket::OpeningHandshake::Client</a>
+and <a
+href="OpeningHandshake/Server.html">LibWebSocket::OpeningHandshake::Server</a>.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="secure-attribute-method" class="method-detail">
+				<a name="secure"></a>
+				
+				<a name="secure="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">secure</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="error-attribute-method" class="method-detail">
+				<a name="error"></a>
+				
+				<a name="error="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">error</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(hash = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Convert all hash keys to instance variables.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/libwebsocket/opening_handshake.rb, line 11</span>
+11:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">hash</span> = {})
+12:       <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span>
+13:         <span class="ruby-identifier">instance_variable_set</span>(<span class="ruby-node">&quot;@#{k}&quot;</span>,<span class="ruby-identifier">v</span>)
+14:       <span class="ruby-keyword kw">end</span>
+15:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="req-method" class="method-detail ">
+				<a name="method-i-req"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">req</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+WebSocket request object.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="req-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/libwebsocket/opening_handshake.rb, line 18</span>
+18:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">req</span>
+19:       <span class="ruby-ivar">@req</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Request</span>.<span class="ruby-identifier">new</span>
+20:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="res-method" class="method-detail ">
+				<a name="method-i-res"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">res</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+WebSocket response object.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="res-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/libwebsocket/opening_handshake.rb, line 23</span>
+23:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">res</span>
+24:       <span class="ruby-ivar">@res</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Response</span>.<span class="ruby-identifier">new</span>
+25:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

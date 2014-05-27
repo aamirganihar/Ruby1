@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>File: CHANGELOG [fastercsv-1.5.5 Documentation]</title>
+
+	<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+</head>
+
+<body class="file">
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="./AUTHORS.html">AUTHORS</a></li>
+				
+					<li class="file"><a href="./CHANGELOG.html">CHANGELOG</a></li>
+				
+					<li class="file"><a href="./COPYING.html">COPYING</a></li>
+				
+					<li class="file"><a href="./INSTALL.html">INSTALL</a></li>
+				
+					<li class="file"><a href="./LICENSE.html">LICENSE</a></li>
+				
+					<li class="file"><a href="./README.html">README</a></li>
+				
+					<li class="file"><a href="./TODO.html">TODO</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./FasterCSV.html">FasterCSV</a></li>
+				
+					<li><a href="./FasterCSV/MalformedCSVError.html">FasterCSV::MalformedCSVError</a></li>
+				
+					<li><a href="./FasterCSV/Row.html">FasterCSV::Row</a></li>
+				
+					<li><a href="./FasterCSV/Table.html">FasterCSV::Table</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1>Change Log</h1>
+<p>
+Below is a complete listing of changes for each revision of <a
+href="FasterCSV.html">FasterCSV</a>.
+</p>
+<h2>1.5.5</h2>
+<ul>
+<li><p>
+Removed setup.rb due to licensing concerns.
+</p>
+</li>
+<li><p>
+Updated and clarified Copyright notices.
+</p>
+</li>
+<li><p>
+Improved stray quoting error message (patch by Edvard Majakari).
+</p>
+</li>
+<li><p>
+Improved line ending detection algorithm (patch by Alexey Smolianinov).
+</p>
+</li>
+</ul>
+<h2>1.5.4</h2>
+<ul>
+<li><p>
+Improved test coverage for the parser.
+</p>
+</li>
+<li><p>
+Improved documentation.
+</p>
+</li>
+<li><p>
+Fixed a bug that prevented <tt>^</tt> from being used as
+<tt>:quote_char</tt>.
+</p>
+</li>
+<li><p>
+Switched from abort() to throwing exceptions on Ruby 1.9.
+</p>
+</li>
+</ul>
+<h2>1.5.3</h2>
+<ul>
+<li><p>
+A bug fix from Timothy Elliott to return the new parser to its strict quote
+tolerance.
+</p>
+</li>
+</ul>
+<h2>1.5.2</h2>
+<ul>
+<li><p>
+A bug fix to allow IO Exceptions to reach the calling code from Moses
+Hohman.
+</p>
+</li>
+<li><p>
+Added support for <tt>:write_headers =&gt; false</tt> to Table.to_csv().
+</p>
+</li>
+</ul>
+<h2>1.5.1</h2>
+<ul>
+<li><p>
+A bug fix for deleting blank Table rows from Andy Hartford.
+</p>
+</li>
+<li><p>
+Added gem build instructions.
+</p>
+</li>
+</ul>
+<h2>1.5.0</h2>
+<ul>
+<li><p>
+The main parser has been rewritten by Timothy Elliott to avoid big input
+issues with Ruby 1.8&#8217;s regex engine.  This makes <a
+href="FasterCSV.html">FasterCSV</a> handle more inputs gracefully.
+</p>
+</li>
+<li><p>
+<a href="FasterCSV.html">FasterCSV</a> will now exit with a notice to
+upgrade if required in Ruby 1.9.
+</p>
+</li>
+<li><p>
+Included a missing file so the tests will run in source packages.
+</p>
+</li>
+</ul>
+<h2>1.4.0</h2>
+<ul>
+<li><p>
+Added encoding support patch from Michael Reinsch.
+</p>
+</li>
+<li><p>
+Improved inspect() messages for better IRb support.
+</p>
+</li>
+<li><p>
+Fixed header writing bug reported by Dov Murik.
+</p>
+</li>
+<li><p>
+Use custom separators in parsing header Strings as suggested by Shmulik
+Regev.
+</p>
+</li>
+<li><p>
+Added a <tt>:write_headers</tt> option for outputting headers.
+</p>
+</li>
+<li><p>
+Handle open() calls in binary mode whenever we can to workaround a Windows
+issue where line-ending translation can cause an off-by-one error in
+seeking back to a non-zero starting position after auto-discovery for
+<tt>:row_sep</tt> as suggested by Robert Battle.
+</p>
+</li>
+<li><p>
+Improved the parser to fail faster when fed some forms of invalid CSV that
+can be detected without reading ahead.
+</p>
+</li>
+<li><p>
+Added a <tt>:field_size_limit</tt> option to control FasterCSV&#8217;s
+lookahead and prevent the parser from biting off more data than it can
+chew.
+</p>
+</li>
+</ul>
+<h2>1.2.3</h2>
+<ul>
+<li><p>
+Default to the system line ending when passed a GzipWriter object to wrap.
+</p>
+</li>
+</ul>
+<h2>1.2.2</h2>
+<ul>
+<li><p>
+Worked around GzipReader&#8217;s lack of a seek() method so we could still
+use automatic row separator detection with them.
+</p>
+</li>
+</ul>
+<h2>1.2.1</h2>
+<ul>
+<li><p>
+Worked around an odd incompatibility with the Regexps used to remove line
+endings in some (seemingly rare) Ruby environments.
+</p>
+</li>
+<li><p>
+Made FasterCSV::lineno() writer aware.
+</p>
+</li>
+<li><p>
+Support Hashes in FasterCSV#<<(), by detecting headers when writing.
+</p>
+</li>
+<li><p>
+Added limited support for switching the quote character.
+</p>
+</li>
+<li><p>
+Refining Data and DateTime matching for built-in convertors.
+</p>
+</li>
+</ul>
+<h2>1.2.0</h2>
+<ul>
+<li><p>
+Added the <a href="FasterCSV.html#method-c-table">FasterCSV::table()</a>
+shortcut.
+</p>
+</li>
+</ul>
+<h2>1.1.1</h2>
+<ul>
+<li><p>
+Added a <tt>:force_quotes</tt> output option.
+</p>
+</li>
+</ul>
+<h2>1.1.0</h2>
+<ul>
+<li><p>
+Added empty?(), length(), and size() methods to <a
+href="FasterCSV/Row.html">FasterCSV::Row</a> and <a
+href="FasterCSV/Table.html">FasterCSV::Table</a>.
+</p>
+</li>
+<li><p>
+Cleaned up bug fix regression tests.
+</p>
+</li>
+<li><p>
+Fixed bug causing Arrays to be returned for blank rows when header
+processing is active.
+</p>
+</li>
+<li><p>
+Added a <tt>:skip_blanks</tt> option for ignoring empty rows.
+</p>
+</li>
+</ul>
+<h2>1.0.0</h2>
+<ul>
+<li><p>
+Fixed <a href="FasterCSV.html#method-i-rewind">FasterCSV.rewind()</a> to
+reset the FasterCSV.lineno() counter.
+</p>
+</li>
+<li><p>
+Fixed <a href="FasterCSV.html#method-i-rewind">FasterCSV.rewind()</a> to
+reset the header processing.
+</p>
+</li>
+<li><p>
+Fixed documentation typos.
+</p>
+</li>
+<li><p>
+Switched STDOUT and STDERR usage to $stdout and $stderr where appropriate.
+</p>
+</li>
+<li><p>
+Added <a href="FasterCSV/Row.html">FasterCSV::Row</a>.==().
+</p>
+</li>
+<li><p>
+Enhanced <a
+href="FasterCSV/Row.html#method-i-fields">FasterCSV::Row.fields()</a> to
+support Ranges, even for headers.
+</p>
+</li>
+<li><p>
+The slurping methods now return the new <a
+href="FasterCSV/Table.html">FasterCSV::Table</a> objects.
+</p>
+</li>
+<li><p>
+Fixed parser so multibyte <tt>:col_sep</tt> works now.
+</p>
+</li>
+<li><p>
+Added a few examples for usage.
+</p>
+</li>
+</ul>
+<h2>0.2.1</h2>
+<ul>
+<li><p>
+Removed autorequire from GemSpec.
+</p>
+</li>
+<li><p>
+Made Rakefile VERSION aware.
+</p>
+</li>
+<li><p>
+General Rakefile cleanup.
+</p>
+</li>
+</ul>
+<h2>0.2.0</h2>
+<ul>
+<li><p>
+Added VERSION constant.
+</p>
+</li>
+<li><p>
+Significantly improved test speed.
+</p>
+</li>
+<li><p>
+Worked around Date::parse() bug so tests will pass on Windows.
+</p>
+</li>
+<li><p>
+Documented test procedure.
+</p>
+</li>
+<li><p>
+Made FasterCSV.lineno() CSV aware.
+</p>
+</li>
+<li><p>
+Added line numbers to MalformedCSVError messages.
+</p>
+</li>
+<li><p>
+<tt>:headers</tt> can now be set to an Array of headers to use.
+</p>
+</li>
+<li><p>
+<tt>:headers</tt> can now be set to an external CSV String of headers to
+use.
+</p>
+</li>
+<li><p>
+Added an <tt>:unconverted_fields</tt> options, so those can be returned
+when needed.
+</p>
+</li>
+<li><p>
+Provided support for the serialization of custom Ruby objects using CSV.
+</p>
+</li>
+<li><p>
+Added CSV drop-in interface.
+</p>
+</li>
+<li><p>
+Added header information to FieldInfo Struct for conversions by header.
+</p>
+</li>
+<li><p>
+Added an alias to support <tt>require &quot;fastercsv&quot;</tt>.
+</p>
+</li>
+<li><p>
+Added FCSV alias for <a href="FasterCSV.html">FasterCSV</a>.
+</p>
+</li>
+<li><p>
+Added <a href="FasterCSV.html#method-c-instance">FasterCSV::instance()</a>
+and FasterCSV()/FCSV() shortcuts for easy output.
+</p>
+</li>
+</ul>
+<h2>0.1.9</h2>
+<ul>
+<li><p>
+Fixing the require &#8220;English&#8221; bug.
+</p>
+</li>
+</ul>
+<h2>0.1.8</h2>
+<ul>
+<li><p>
+Converted FasterCSV.filter() to use ARGF for input.
+</p>
+</li>
+<li><p>
+Made <a href="FasterCSV.html">FasterCSV</a>.<<() aware of <a
+href="FasterCSV/Row.html">FasterCSV::Row</a> objects.
+</p>
+</li>
+<li><p>
+Switched header rows to include the unconverted headers as fields.
+</p>
+</li>
+<li><p>
+Rescued IOError when trying to auto detect a line-ending on an output
+stream and used the default system line-ending.
+</p>
+</li>
+<li><p>
+Added <a
+href="FasterCSV/Row.html#method-i-header_row%3F">FasterCSV::Row.header_row?()</a>
+and <a
+href="FasterCSV/Row.html#method-i-field_row%3F">FasterCSV::Row.field_row?()</a>.
+</p>
+</li>
+</ul>
+<h2>0.1.6</h2>
+<ul>
+<li><p>
+Began using a forked development/stable versioning system.
+</p>
+</li>
+<li><p>
+Reorganized initialization code for easier additions and maintenance.
+</p>
+</li>
+<li><p>
+Added a check for unknown options.  Exceptions will now be thrown for them.
+</p>
+</li>
+<li><p>
+Added built-in and custom data converters.  Built-in handle numbers and
+dates.
+</p>
+</li>
+<li><p>
+Added Array#to_csv and String#parse_csv.  Both accept normal options.
+</p>
+</li>
+<li><p>
+Project moved to RubyForge Subversion.
+</p>
+</li>
+<li><p>
+Added auto-discovery for <tt>:row_sep</tt> (now the default).
+</p>
+</li>
+<li><p>
+Added <a href="FasterCSV.html#method-c-filter">FasterCSV::filter()</a> for
+easy Unix-like CSV filters.
+</p>
+</li>
+<li><p>
+Added support for accessing fields by headers.
+</p>
+<ul>
+<li><p>
+Headers can have their own converters.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+Headers can be skipped or returned as needed.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+<a href="FasterCSV/Row.html">FasterCSV::Row</a> allows index or header
+access while retaining order and allowing for duplicate headers.
+</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2>0.1.4</h2>
+<ul>
+<li><p>
+Fixed <tt>:col_sep</tt> escaping bug (reported by Kev Jackson).
+</p>
+</li>
+<li><p>
+Switched to the use of named parsers internally.
+</p>
+</li>
+</ul>
+<h2>0.1.3</h2>
+<ul>
+<li><p>
+Fixed typo in gem spec causing a require bug.
+</p>
+</li>
+</ul>
+<h2>0.1.2</h2>
+<ul>
+<li><p>
+Built gem with Ruby 1.8.2, to bypass YAML/RubyGems issue.
+</p>
+</li>
+</ul>
+<h2>0.1.1</h2>
+<ul>
+<li><p>
+Built gem with Ruby 1.8.4 Preview 1, to <em>try</em> and bypass
+YAML/RubyGems issue.
+</p>
+</li>
+<li><p>
+Added missing test file to released packages.
+</p>
+</li>
+<li><p>
+Clarified call-seq documentation for open() and parse().
+</p>
+</li>
+<li><p>
+Clarified passed String positions for new(), in documentation.
+</p>
+</li>
+<li><p>
+Expanded generate() to handle appending to an existing String.
+</p>
+</li>
+</ul>
+<h2>0.1.0</h2>
+<ul>
+<li><p>
+Initial public release.
+</p>
+</li>
+</ul>
+
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+</body>
+</html>
+

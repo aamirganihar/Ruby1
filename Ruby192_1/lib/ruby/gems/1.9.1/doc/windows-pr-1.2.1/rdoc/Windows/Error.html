@@ -1,0 +1,2437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Windows::Error</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/windows/error_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/windows/error.rb">lib/windows/error.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-FAILED">#FAILED</a></li>
+					
+					<li><a href="#method-i-HRESULT_CODE">#HRESULT_CODE</a></li>
+					
+					<li><a href="#method-i-HRESULT_FACILITY">#HRESULT_FACILITY</a></li>
+					
+					<li><a href="#method-i-HRESULT_FROM_NT">#HRESULT_FROM_NT</a></li>
+					
+					<li><a href="#method-i-HRESULT_FROM_WIN32">#HRESULT_FROM_WIN32</a></li>
+					
+					<li><a href="#method-i-HRESULT_SEVERITY">#HRESULT_SEVERITY</a></li>
+					
+					<li><a href="#method-i-IS_ERROR">#IS_ERROR</a></li>
+					
+					<li><a href="#method-i-MAKE_HRESULT">#MAKE_HRESULT</a></li>
+					
+					<li><a href="#method-i-MAKE_SCODE">#MAKE_SCODE</a></li>
+					
+					<li><a href="#method-i-SUCCEEDED">#SUCCEEDED</a></li>
+					
+					<li><a href="#method-i-get_last_error">#get_last_error</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../CHANGES.html">CHANGES</a></li>
+				
+					<li class="file"><a href="../MANIFEST.html">MANIFEST</a></li>
+				
+					<li class="file"><a href="../README.html">README</a></li>
+				
+					<li class="file"><a href="../doc/conversion_guide_txt.html">conversion_guide.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Windows.html">Windows</a></li>
+				
+					<li><a href="../Windows/COM.html">Windows::COM</a></li>
+				
+					<li><a href="../Windows/COM/Accessibility.html">Windows::COM::Accessibility</a></li>
+				
+					<li><a href="../Windows/COM/Automation.html">Windows::COM::Automation</a></li>
+				
+					<li><a href="../Windows/COM/Variant.html">Windows::COM::Variant</a></li>
+				
+					<li><a href="../Windows/Clipboard.html">Windows::Clipboard</a></li>
+				
+					<li><a href="../Windows/Console.html">Windows::Console</a></li>
+				
+					<li><a href="../Windows/Debug.html">Windows::Debug</a></li>
+				
+					<li><a href="../Windows/DeviceIO.html">Windows::DeviceIO</a></li>
+				
+					<li><a href="../Windows/Directory.html">Windows::Directory</a></li>
+				
+					<li><a href="../Windows/Error.html">Windows::Error</a></li>
+				
+					<li><a href="../Windows/EventLog.html">Windows::EventLog</a></li>
+				
+					<li><a href="../Windows/File.html">Windows::File</a></li>
+				
+					<li><a href="../Windows/FileMapping.html">Windows::FileMapping</a></li>
+				
+					<li><a href="../Windows/FileSystem.html">Windows::FileSystem</a></li>
+				
+					<li><a href="../Windows/GDI.html">Windows::GDI</a></li>
+				
+					<li><a href="../Windows/GDI/Bitmap.html">Windows::GDI::Bitmap</a></li>
+				
+					<li><a href="../Windows/GDI/DeviceContext.html">Windows::GDI::DeviceContext</a></li>
+				
+					<li><a href="../Windows/GDI/MetaFile.html">Windows::GDI::MetaFile</a></li>
+				
+					<li><a href="../Windows/GDI/PaintingDrawing.html">Windows::GDI::PaintingDrawing</a></li>
+				
+					<li><a href="../Windows/Handle.html">Windows::Handle</a></li>
+				
+					<li><a href="../Windows/Library.html">Windows::Library</a></li>
+				
+					<li><a href="../Windows/Limits.html">Windows::Limits</a></li>
+				
+					<li><a href="../Windows/MSVCRT.html">Windows::MSVCRT</a></li>
+				
+					<li><a href="../Windows/MSVCRT/Buffer.html">Windows::MSVCRT::Buffer</a></li>
+				
+					<li><a href="../Windows/MSVCRT/Directory.html">Windows::MSVCRT::Directory</a></li>
+				
+					<li><a href="../Windows/MSVCRT/File.html">Windows::MSVCRT::File</a></li>
+				
+					<li><a href="../Windows/MSVCRT/IO.html">Windows::MSVCRT::IO</a></li>
+				
+					<li><a href="../Windows/MSVCRT/String.html">Windows::MSVCRT::String</a></li>
+				
+					<li><a href="../Windows/MSVCRT/Time.html">Windows::MSVCRT::Time</a></li>
+				
+					<li><a href="../Windows/Mailslot.html">Windows::Mailslot</a></li>
+				
+					<li><a href="../Windows/Memory.html">Windows::Memory</a></li>
+				
+					<li><a href="../Windows/NIO.html">Windows::NIO</a></li>
+				
+					<li><a href="../Windows/NTFS.html">Windows::NTFS</a></li>
+				
+					<li><a href="../Windows/NTFS/Winternl.html">Windows::NTFS::Winternl</a></li>
+				
+					<li><a href="../Windows/National.html">Windows::National</a></li>
+				
+					<li><a href="../Windows/Network.html">Windows::Network</a></li>
+				
+					<li><a href="../Windows/Network/Management.html">Windows::Network::Management</a></li>
+				
+					<li><a href="../Windows/Network/SNMP.html">Windows::Network::SNMP</a></li>
+				
+					<li><a href="../Windows/Network/Winsock.html">Windows::Network::Winsock</a></li>
+				
+					<li><a href="../Windows/Path.html">Windows::Path</a></li>
+				
+					<li><a href="../Windows/Pipe.html">Windows::Pipe</a></li>
+				
+					<li><a href="../Windows/Process.html">Windows::Process</a></li>
+				
+					<li><a href="../Windows/Registry.html">Windows::Registry</a></li>
+				
+					<li><a href="../Windows/Security.html">Windows::Security</a></li>
+				
+					<li><a href="../Windows/Security/Authentication.html">Windows::Security::Authentication</a></li>
+				
+					<li><a href="../Windows/Service.html">Windows::Service</a></li>
+				
+					<li><a href="../Windows/Shell.html">Windows::Shell</a></li>
+				
+					<li><a href="../Windows/Socket.html">Windows::Socket</a></li>
+				
+					<li><a href="../Windows/Sound.html">Windows::Sound</a></li>
+				
+					<li><a href="../Windows/Synchronize.html">Windows::Synchronize</a></li>
+				
+					<li><a href="../Windows/SystemInfo.html">Windows::SystemInfo</a></li>
+				
+					<li><a href="../Windows/Thread.html">Windows::Thread</a></li>
+				
+					<li><a href="../Windows/Time.html">Windows::Time</a></li>
+				
+					<li><a href="../Windows/ToolHelper.html">Windows::ToolHelper</a></li>
+				
+					<li><a href="../Windows/Unicode.html">Windows::Unicode</a></li>
+				
+					<li><a href="../Windows/Volume.html">Windows::Volume</a></li>
+				
+					<li><a href="../Windows/WSA.html">Windows::WSA</a></li>
+				
+					<li><a href="../Windows/Window.html">Windows::Window</a></li>
+				
+					<li><a href="../Windows/Window/Classes.html">Windows::Window::Classes</a></li>
+				
+					<li><a href="../Windows/Window/Dialog.html">Windows::Window::Dialog</a></li>
+				
+					<li><a href="../Windows/Window/Menu.html">Windows::Window::Menu</a></li>
+				
+					<li><a href="../Windows/Window/Message.html">Windows::Window::Message</a></li>
+				
+					<li><a href="../Windows/Window/Properties.html">Windows::Window::Properties</a></li>
+				
+					<li><a href="../Windows/Window/Timer.html">Windows::Window::Timer</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Windows::Error</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="FORMAT_MESSAGE_ALLOCATE_BUFFER">FORMAT_MESSAGE_ALLOCATE_BUFFER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FORMAT_MESSAGE_IGNORE_INSERTS">FORMAT_MESSAGE_IGNORE_INSERTS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FORMAT_MESSAGE_FROM_STRING">FORMAT_MESSAGE_FROM_STRING</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FORMAT_MESSAGE_FROM_HMODULE">FORMAT_MESSAGE_FROM_HMODULE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FORMAT_MESSAGE_FROM_SYSTEM">FORMAT_MESSAGE_FROM_SYSTEM</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FORMAT_MESSAGE_ARGUMENT_ARRAY">FORMAT_MESSAGE_ARGUMENT_ARRAY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="FORMAT_MESSAGE_MAX_WIDTH_MASK">FORMAT_MESSAGE_MAX_WIDTH_MASK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SEM_FAILCRITICALERRORS">SEM_FAILCRITICALERRORS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SEM_NOALIGNMENTFAULTEXCEPT">SEM_NOALIGNMENTFAULTEXCEPT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SEM_NOGPFAULTERRORBOX">SEM_NOGPFAULTERRORBOX</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SEM_NOOPENFILEERRORBOX">SEM_NOOPENFILEERRORBOX</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="S_OK">S_OK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="NO_ERROR">NO_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_SUCCESS">ERROR_SUCCESS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_INVALID_FUNCTION">ERROR_INVALID_FUNCTION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_FILE_NOT_FOUND">ERROR_FILE_NOT_FOUND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_PATH_NOT_FOUND">ERROR_PATH_NOT_FOUND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_TOO_MANY_OPEN_FILES">ERROR_TOO_MANY_OPEN_FILES</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_ACCESS_DENIED">ERROR_ACCESS_DENIED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_INVALID_HANDLE">ERROR_INVALID_HANDLE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_ARENA_TRASHED">ERROR_ARENA_TRASHED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_NOT_ENOUGH_MEMORY">ERROR_NOT_ENOUGH_MEMORY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_INVALID_BLOCK">ERROR_INVALID_BLOCK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_BAD_ENVIRONMENT">ERROR_BAD_ENVIRONMENT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_BAD_FORMAT">ERROR_BAD_FORMAT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_INVALID_ACCESS">ERROR_INVALID_ACCESS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_INVALID_DATA">ERROR_INVALID_DATA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_INVALID_DRIVE">ERROR_INVALID_DRIVE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_CURRENT_DIRECTORY">ERROR_CURRENT_DIRECTORY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_NOT_SAME_DEVICE">ERROR_NOT_SAME_DEVICE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_NO_MORE_FILES">ERROR_NO_MORE_FILES</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_WRITE_PROTECT">ERROR_WRITE_PROTECT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_BAD_UNIT">ERROR_BAD_UNIT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_NOT_READY">ERROR_NOT_READY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_BAD_COMMAND">ERROR_BAD_COMMAND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_CRC">ERROR_CRC</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_BAD_LENGTH">ERROR_BAD_LENGTH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_SEEK">ERROR_SEEK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_NOT_DOS_DISK">ERROR_NOT_DOS_DISK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_SECTOR_NOT_FOUND">ERROR_SECTOR_NOT_FOUND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_OUT_OF_PAPER">ERROR_OUT_OF_PAPER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_WRITE_FAULT">ERROR_WRITE_FAULT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_READ_FAULT">ERROR_READ_FAULT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_GEN_FAILURE">ERROR_GEN_FAILURE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_SHARING_VIOLATION">ERROR_SHARING_VIOLATION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_LOCK_VIOLATION">ERROR_LOCK_VIOLATION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_WRONG_DISK">ERROR_WRONG_DISK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_FCB_UNAVAILABLE">ERROR_FCB_UNAVAILABLE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_SHARING_BUFFER_EXCEEDED">ERROR_SHARING_BUFFER_EXCEEDED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_HANDLE_EOF">ERROR_HANDLE_EOF</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_HANDLE_DISK_FULL">ERROR_HANDLE_DISK_FULL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_NOT_SUPPORTED">ERROR_NOT_SUPPORTED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_FILE_EXISTS">ERROR_FILE_EXISTS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_DUP_FCB">ERROR_DUP_FCB</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_CANNOT_MAKE">ERROR_CANNOT_MAKE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_FAIL_I24">ERROR_FAIL_I24</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_OUT_OF_STRUCTURES">ERROR_OUT_OF_STRUCTURES</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_ALREADY_ASSIGNED">ERROR_ALREADY_ASSIGNED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_INVALID_PASSWORD">ERROR_INVALID_PASSWORD</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_INVALID_PARAMETER">ERROR_INVALID_PARAMETER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_NET_WRITE_FAULT">ERROR_NET_WRITE_FAULT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_NO_PROC_SLOTS">ERROR_NO_PROC_SLOTS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_NOT_FROZEN">ERROR_NOT_FROZEN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERR_TSTOVFL">ERR_TSTOVFL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERR_TSTDUP">ERR_TSTDUP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_NO_ITEMS">ERROR_NO_ITEMS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_INTERRUPT">ERROR_INTERRUPT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_TOO_MANY_SEMAPHORES">ERROR_TOO_MANY_SEMAPHORES</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_EXCL_SEM_ALREADY_OWNED">ERROR_EXCL_SEM_ALREADY_OWNED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_SEM_IS_SET">ERROR_SEM_IS_SET</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_TOO_MANY_SEM_REQUESTS">ERROR_TOO_MANY_SEM_REQUESTS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_INVALID_AT_INTERRUPT_TIME">ERROR_INVALID_AT_INTERRUPT_TIME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_SEM_OWNER_DIED">ERROR_SEM_OWNER_DIED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_SEM_USER_LIMIT">ERROR_SEM_USER_LIMIT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_DISK_CHANGE">ERROR_DISK_CHANGE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_DRIVE_LOCKED">ERROR_DRIVE_LOCKED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_BROKEN_PIPE">ERROR_BROKEN_PIPE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_OPEN_FAILED">ERROR_OPEN_FAILED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_DISK_FULL">ERROR_DISK_FULL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_NO_MORE_SEARCH_HANDLES">ERROR_NO_MORE_SEARCH_HANDLES</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_INVALID_TARGET_HANDLE">ERROR_INVALID_TARGET_HANDLE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_PROTECTION_VIOLATION">ERROR_PROTECTION_VIOLATION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_VIOKBD_REQUEST">ERROR_VIOKBD_REQUEST</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_INVALID_CATEGORY">ERROR_INVALID_CATEGORY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_INVALID_VERIFY_SWITCH">ERROR_INVALID_VERIFY_SWITCH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_BAD_DRIVER_LEVEL">ERROR_BAD_DRIVER_LEVEL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_CALL_NOT_IMPLEMENTED">ERROR_CALL_NOT_IMPLEMENTED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_SEM_TIMEOUT">ERROR_SEM_TIMEOUT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_INSUFFICIENT_BUFFER">ERROR_INSUFFICIENT_BUFFER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_INVALID_NAME">ERROR_INVALID_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_INVALID_LEVEL">ERROR_INVALID_LEVEL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_NO_VOLUME_LABEL">ERROR_NO_VOLUME_LABEL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_MOD_NOT_FOUND">ERROR_MOD_NOT_FOUND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_PROC_NOT_FOUND">ERROR_PROC_NOT_FOUND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_WAIT_NO_CHILDREN">ERROR_WAIT_NO_CHILDREN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_CHILD_NOT_COMPLETE">ERROR_CHILD_NOT_COMPLETE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_DIRECT_ACCESS_HANDLE">ERROR_DIRECT_ACCESS_HANDLE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_NEGATIVE_SEEK">ERROR_NEGATIVE_SEEK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_SEEK_ON_DEVICE">ERROR_SEEK_ON_DEVICE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_IS_JOIN_TARGET">ERROR_IS_JOIN_TARGET</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_IS_JOINED">ERROR_IS_JOINED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_IS_SUBSTED">ERROR_IS_SUBSTED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_NOT_JOINED">ERROR_NOT_JOINED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_NOT_SUBSTED">ERROR_NOT_SUBSTED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_JOIN_TO_JOIN">ERROR_JOIN_TO_JOIN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_SUBST_TO_SUBST">ERROR_SUBST_TO_SUBST</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_JOIN_TO_SUBST">ERROR_JOIN_TO_SUBST</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_SUBST_TO_JOIN">ERROR_SUBST_TO_JOIN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_BUSY_DRIVE">ERROR_BUSY_DRIVE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_SAME_DRIVE">ERROR_SAME_DRIVE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_DIR_NOT_ROOT">ERROR_DIR_NOT_ROOT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_DIR_NOT_EMPTY">ERROR_DIR_NOT_EMPTY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_IS_SUBST_PATH">ERROR_IS_SUBST_PATH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_IS_JOIN_PATH">ERROR_IS_JOIN_PATH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_PATH_BUSY">ERROR_PATH_BUSY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_IS_SUBST_TARGET">ERROR_IS_SUBST_TARGET</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_SYSTEM_TRACE">ERROR_SYSTEM_TRACE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_INVALID_EVENT_COUNT">ERROR_INVALID_EVENT_COUNT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_TOO_MANY_MUXWAITERS">ERROR_TOO_MANY_MUXWAITERS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_INVALID_LIST_FORMAT">ERROR_INVALID_LIST_FORMAT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_LABEL_TOO_LONG">ERROR_LABEL_TOO_LONG</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_TOO_MANY_TCBS">ERROR_TOO_MANY_TCBS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_SIGNAL_REFUSED">ERROR_SIGNAL_REFUSED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_DISCARDED">ERROR_DISCARDED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_NOT_LOCKED">ERROR_NOT_LOCKED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_BAD_THREADID_ADDR">ERROR_BAD_THREADID_ADDR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_BAD_ARGUMENTS">ERROR_BAD_ARGUMENTS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_BAD_PATHNAME">ERROR_BAD_PATHNAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_SIGNAL_PENDING">ERROR_SIGNAL_PENDING</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_UNCERTAIN_MEDIA">ERROR_UNCERTAIN_MEDIA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_MAX_THRDS_REACHED">ERROR_MAX_THRDS_REACHED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_MONITORS_NOT_SUPPORTED">ERROR_MONITORS_NOT_SUPPORTED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_INVALID_SEGMENT_NUMBER">ERROR_INVALID_SEGMENT_NUMBER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_INVALID_CALLGATE">ERROR_INVALID_CALLGATE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_INVALID_ORDINAL">ERROR_INVALID_ORDINAL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_ALREADY_EXISTS">ERROR_ALREADY_EXISTS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_NO_CHILD_PROCESS">ERROR_NO_CHILD_PROCESS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_CHILD_ALIVE_NOWAIT">ERROR_CHILD_ALIVE_NOWAIT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_INVALID_FLAG_NUMBER">ERROR_INVALID_FLAG_NUMBER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_SEM_NOT_FOUND">ERROR_SEM_NOT_FOUND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_INVALID_STARTING_CODESEG">ERROR_INVALID_STARTING_CODESEG</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_INVALID_STACKSEG">ERROR_INVALID_STACKSEG</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_INVALID_MODULETYPE">ERROR_INVALID_MODULETYPE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_INVALID_EXE_SIGNATURE">ERROR_INVALID_EXE_SIGNATURE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_EXE_MARKED_INVALID">ERROR_EXE_MARKED_INVALID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_BAD_EXE_FORMAT">ERROR_BAD_EXE_FORMAT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_ITERATED_DATA_EXCEEDS_64k">ERROR_ITERATED_DATA_EXCEEDS_64k</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_INVALID_MINALLOCSIZE">ERROR_INVALID_MINALLOCSIZE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_DYNLINK_FROM_INVALID_RING">ERROR_DYNLINK_FROM_INVALID_RING</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_IOPL_NOT_ENABLED">ERROR_IOPL_NOT_ENABLED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_INVALID_SEGDPL">ERROR_INVALID_SEGDPL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_AUTODATASEG_EXCEEDS_64k">ERROR_AUTODATASEG_EXCEEDS_64k</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_RING2SEG_MUST_BE_MOVABLE">ERROR_RING2SEG_MUST_BE_MOVABLE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_RELOC_CHAIN_XEEDS_SEGLIM">ERROR_RELOC_CHAIN_XEEDS_SEGLIM</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_INFLOOP_IN_RELOC_CHAIN">ERROR_INFLOOP_IN_RELOC_CHAIN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_ENVVAR_NOT_FOUND">ERROR_ENVVAR_NOT_FOUND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_NOT_CURRENT_CTRY">ERROR_NOT_CURRENT_CTRY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_NO_SIGNAL_SENT">ERROR_NO_SIGNAL_SENT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_FILENAME_EXCED_RANGE">ERROR_FILENAME_EXCED_RANGE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_RING2_STACK_IN_USE">ERROR_RING2_STACK_IN_USE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_META_EXPANSION_TOO_LONG">ERROR_META_EXPANSION_TOO_LONG</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_INVALID_SIGNAL_NUMBER">ERROR_INVALID_SIGNAL_NUMBER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_THREAD_1_INACTIVE">ERROR_THREAD_1_INACTIVE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_INFO_NOT_AVAIL">ERROR_INFO_NOT_AVAIL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_LOCKED">ERROR_LOCKED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_BAD_DYNALINK">ERROR_BAD_DYNALINK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_TOO_MANY_MODULES">ERROR_TOO_MANY_MODULES</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_NESTING_NOT_ALLOWED">ERROR_NESTING_NOT_ALLOWED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_BAD_PIPE">ERROR_BAD_PIPE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_PIPE_BUSY">ERROR_PIPE_BUSY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_NO_DATA">ERROR_NO_DATA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_PIPE_NOT_CONNECTED">ERROR_PIPE_NOT_CONNECTED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_MORE_DATA">ERROR_MORE_DATA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_PIPE_CONNECTED">ERROR_PIPE_CONNECTED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_PIPE_LISTENING">ERROR_PIPE_LISTENING</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_OPERATION_ABORTED">ERROR_OPERATION_ABORTED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_IO_INCOMPLETE">ERROR_IO_INCOMPLETE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_IO_PENDING">ERROR_IO_PENDING</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_USER_DEFINED_BASE">ERROR_USER_DEFINED_BASE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_I24_WRITE_PROTECT">ERROR_I24_WRITE_PROTECT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_I24_BAD_UNIT">ERROR_I24_BAD_UNIT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_I24_NOT_READY">ERROR_I24_NOT_READY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_I24_BAD_COMMAND">ERROR_I24_BAD_COMMAND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_I24_CRC">ERROR_I24_CRC</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_I24_BAD_LENGTH">ERROR_I24_BAD_LENGTH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_I24_SEEK">ERROR_I24_SEEK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_I24_NOT_DOS_DISK">ERROR_I24_NOT_DOS_DISK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_I24_SECTOR_NOT_FOUND">ERROR_I24_SECTOR_NOT_FOUND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_I24_OUT_OF_PAPER">ERROR_I24_OUT_OF_PAPER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_I24_WRITE_FAULT">ERROR_I24_WRITE_FAULT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_I24_READ_FAULT">ERROR_I24_READ_FAULT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_I24_GEN_FAILURE">ERROR_I24_GEN_FAILURE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_I24_DISK_CHANGE">ERROR_I24_DISK_CHANGE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_I24_WRONG_DISK">ERROR_I24_WRONG_DISK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_I24_UNCERTAIN_MEDIA">ERROR_I24_UNCERTAIN_MEDIA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_I24_CHAR_CALL_INTERRUPTED">ERROR_I24_CHAR_CALL_INTERRUPTED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_I24_NO_MONITOR_SUPPORT">ERROR_I24_NO_MONITOR_SUPPORT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_I24_INVALID_PARAMETER">ERROR_I24_INVALID_PARAMETER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="APPLICATION_ERROR_MASK">APPLICATION_ERROR_MASK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_SEVERITY_SUCCESS">ERROR_SEVERITY_SUCCESS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_SEVERITY_INFORMATIONAL">ERROR_SEVERITY_INFORMATIONAL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_SEVERITY_WARNING">ERROR_SEVERITY_WARNING</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_SEVERITY_ERROR">ERROR_SEVERITY_ERROR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ALLOWED_FAIL">ALLOWED_FAIL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ALLOWED_ABORT">ALLOWED_ABORT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ALLOWED_RETRY">ALLOWED_RETRY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ALLOWED_IGNORE">ALLOWED_IGNORE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="I24_OPERATION">I24_OPERATION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="I24_AREA">I24_AREA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="I24_CLASS">I24_CLASS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERRCLASS_OUTRES">ERRCLASS_OUTRES</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERRCLASS_TEMPSIT">ERRCLASS_TEMPSIT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERRCLASS_AUTH">ERRCLASS_AUTH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERRCLASS_INTRN">ERRCLASS_INTRN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERRCLASS_HRDFAIL">ERRCLASS_HRDFAIL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERRCLASS_SYSFAIL">ERRCLASS_SYSFAIL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERRCLASS_APPERR">ERRCLASS_APPERR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERRCLASS_NOTFND">ERRCLASS_NOTFND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERRCLASS_BADFMT">ERRCLASS_BADFMT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERRCLASS_LOCKED">ERRCLASS_LOCKED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERRCLASS_MEDIA">ERRCLASS_MEDIA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERRCLASS_ALREADY">ERRCLASS_ALREADY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERRCLASS_UNK">ERRCLASS_UNK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERRCLASS_CANT">ERRCLASS_CANT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERRCLASS_TIME">ERRCLASS_TIME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERRACT_RETRY">ERRACT_RETRY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERRACT_DLYRET">ERRACT_DLYRET</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERRACT_USER">ERRACT_USER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERRACT_ABORT">ERRACT_ABORT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERRACT_PANIC">ERRACT_PANIC</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERRACT_IGNORE">ERRACT_IGNORE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERRACT_INTRET">ERRACT_INTRET</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERRLOC_UNK">ERRLOC_UNK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERRLOC_DISK">ERRLOC_DISK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERRLOC_NET">ERRLOC_NET</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERRLOC_SERDEV">ERRLOC_SERDEV</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERRLOC_MEM">ERRLOC_MEM</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TC_NORMAL">TC_NORMAL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TC_HARDERR">TC_HARDERR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TC_GP_TRAP">TC_GP_TRAP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="TC_SIGNAL">TC_SIGNAL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ERROR_INVALID_FLAGS">ERROR_INVALID_FLAGS</a></dt>
+				
+				<dd class="description"><p>
+From WinError.h
+</p></dd>
+				
+			
+				<dt><a name="ERROR_NO_UNICODE_TRANSLATION">ERROR_NO_UNICODE_TRANSLATION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="E_INVALIDARG">E_INVALIDARG</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="E_NOINTERFACE">E_NOINTERFACE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="E_NOTIMPL">E_NOTIMPL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="E_OUTOFMEMORY">E_OUTOFMEMORY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="E_UNEXPECTED">E_UNEXPECTED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="RPC_E_TIMEOUT">RPC_E_TIMEOUT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CO_E_NOT_SUPPORTED">CO_E_NOT_SUPPORTED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="CLASS_E_NOAGGREGATION">CLASS_E_NOAGGREGATION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DISP_E_BADINDEX">DISP_E_BADINDEX</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DISP_E_PARAMNOTFOUND">DISP_E_PARAMNOTFOUND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DISP_E_EXCEPTION">DISP_E_EXCEPTION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DISP_E_MEMBERNOTFOUND">DISP_E_MEMBERNOTFOUND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="REGDB_E_CLASSNOTREG">REGDB_E_CLASSNOTREG</a></dt>
+				
+				<dd class="description"><p>
+<a href="Registry.html">Registry</a> errors
+</p></dd>
+				
+			
+				<dt><a name="SCHED_S_TASK_READY">SCHED_S_TASK_READY</a></dt>
+				
+				<dd class="description"><p>
+msterr.h
+</p></dd>
+				
+			
+				<dt><a name="SCHED_S_TASK_RUNNING">SCHED_S_TASK_RUNNING</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SCHED_S_TASK_DISABLED">SCHED_S_TASK_DISABLED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SCHED_S_TASK_HAS_NOT_RUN">SCHED_S_TASK_HAS_NOT_RUN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SCHED_S_TASK_HAS_NO_MORE_RUNS">SCHED_S_TASK_HAS_NO_MORE_RUNS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SCHED_S_TASK_NOT_SCHEDULED">SCHED_S_TASK_NOT_SCHEDULED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SCHED_S_TASK_TERMINATED">SCHED_S_TASK_TERMINATED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SCHED_S_TASK_NO_VALID_TRIGGERS">SCHED_S_TASK_NO_VALID_TRIGGERS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SCHED_S_EVENT_TRIGGER">SCHED_S_EVENT_TRIGGER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SCHED_E_TRIGGER_NOT_FOUND">SCHED_E_TRIGGER_NOT_FOUND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SCHED_E_TASK_NOT_READY">SCHED_E_TASK_NOT_READY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SCHED_E_TASK_NOT_RUNNING">SCHED_E_TASK_NOT_RUNNING</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SCHED_E_SERVICE_NOT_INSTALLED">SCHED_E_SERVICE_NOT_INSTALLED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SCHED_E_CANNOT_OPEN_TASK">SCHED_E_CANNOT_OPEN_TASK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SCHED_E_INVALID_TASK">SCHED_E_INVALID_TASK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SCHED_E_ACCOUNT_INFORMATION_NOT_SET">SCHED_E_ACCOUNT_INFORMATION_NOT_SET</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SCHED_E_ACCOUNT_NAME_NOT_FOUND">SCHED_E_ACCOUNT_NAME_NOT_FOUND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SCHED_E_ACCOUNT_DBASE_CORRUPT">SCHED_E_ACCOUNT_DBASE_CORRUPT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SCHED_E_NO_SECURITY_SERVICES">SCHED_E_NO_SECURITY_SERVICES</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="SCHED_E_UNKNOWN_OBJECT_VERSION">SCHED_E_UNKNOWN_OBJECT_VERSION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSA_INVALID_HANDLE">WSA_INVALID_HANDLE</a></dt>
+				
+				<dd class="description"><p>
+<a href="Socket.html">Socket</a> errors
+</p></dd>
+				
+			
+				<dt><a name="WSA_NOT_ENOUGH_MEMORY">WSA_NOT_ENOUGH_MEMORY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSA_INVALID_PARAMETER">WSA_INVALID_PARAMETER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSA_OPERATION_ABORTED">WSA_OPERATION_ABORTED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSA_IO_INCOMPLETE">WSA_IO_INCOMPLETE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSA_IO_PENDING">WSA_IO_PENDING</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAEINTR">WSAEINTR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAEBADF">WSAEBADF</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAEACCESS">WSAEACCESS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAEFAULT">WSAEFAULT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAEINVAL">WSAEINVAL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAEMFILE">WSAEMFILE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAEWOULDBLOCK">WSAEWOULDBLOCK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAEINPROGRESS">WSAEINPROGRESS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAEALREADY">WSAEALREADY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAENOTSOCK">WSAENOTSOCK</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAEDESTADDRREQ">WSAEDESTADDRREQ</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAEMSGSIZE">WSAEMSGSIZE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAEPROTOTYPE">WSAEPROTOTYPE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAENOPROTOOPT">WSAENOPROTOOPT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAEPROTONOSUPPORT">WSAEPROTONOSUPPORT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAESOCKTNOSUPPORT">WSAESOCKTNOSUPPORT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAEOPNOTSUPP">WSAEOPNOTSUPP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAEPFNOSUPPORT">WSAEPFNOSUPPORT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAEAFNOSUPPORT">WSAEAFNOSUPPORT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAEADDRINUSE">WSAEADDRINUSE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAEADDRNOTAVAIL">WSAEADDRNOTAVAIL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAENETDOWN">WSAENETDOWN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAENETUNREACH">WSAENETUNREACH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAENETRESET">WSAENETRESET</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAECONNABORTED">WSAECONNABORTED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAECONNRESET">WSAECONNRESET</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAENOBUFS">WSAENOBUFS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAEISCONN">WSAEISCONN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAENOTCONN">WSAENOTCONN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAESHUTDOWN">WSAESHUTDOWN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAETOOMANYREFS">WSAETOOMANYREFS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSATIMEDOUT">WSATIMEDOUT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAECONNREFUSED">WSAECONNREFUSED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAELOOP">WSAELOOP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAENAMETOOLONG">WSAENAMETOOLONG</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAEHOSTDOWN">WSAEHOSTDOWN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAEHOSTUNREACH">WSAEHOSTUNREACH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAENOEMPTY">WSAENOEMPTY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAEPROCLIM">WSAEPROCLIM</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAEUSERS">WSAEUSERS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAEDQUOT">WSAEDQUOT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAESTALE">WSAESTALE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAEREMOTE">WSAEREMOTE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSASYSNOTREADY">WSASYSNOTREADY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAVERNOTSUPPORTED">WSAVERNOTSUPPORTED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSANOTINITIALISED">WSANOTINITIALISED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAEDISCON">WSAEDISCON</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAENOMORE">WSAENOMORE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAECANCELLED">WSAECANCELLED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAEINVALIDPROCTABLE">WSAEINVALIDPROCTABLE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAEINVALIDPROVIDER">WSAEINVALIDPROVIDER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAEPROVIDERFAILEDINIT">WSAEPROVIDERFAILEDINIT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSASYSCALLFAILURE">WSASYSCALLFAILURE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSASERVICE_NOT_FOUND">WSASERVICE_NOT_FOUND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSATYPE_NOT_FOUND">WSATYPE_NOT_FOUND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSA_E_NO_MORE">WSA_E_NO_MORE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSA_E_CANCELLED">WSA_E_CANCELLED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAEREFUSED">WSAEREFUSED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSAHOST_NOT_FOUND">WSAHOST_NOT_FOUND</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSATRY_AGAIN">WSATRY_AGAIN</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSANO_RECOVERY">WSANO_RECOVERY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSANO_DATA">WSANO_DATA</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSA_QOS_RECEIVERS">WSA_QOS_RECEIVERS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WSA_QOS_SENDERS">WSA_QOS_SENDERS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-FAILED"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">FAILED</span><span
+						class="method-args">(status)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/error.rb, line 476</span>
+476:     <span class="ruby-keyword kw">def</span> <span class="ruby-constant">FAILED</span>(<span class="ruby-identifier">status</span>)
+477:       <span class="ruby-identifier">status</span> <span class="ruby-operator">&lt;</span> <span class="ruby-value">0</span>
+478:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-HRESULT_CODE"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">HRESULT_CODE</span><span
+						class="method-args">(hr)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/error.rb, line 452</span>
+452:     <span class="ruby-keyword kw">def</span> <span class="ruby-constant">HRESULT_CODE</span>(<span class="ruby-identifier">hr</span>)
+453:       <span class="ruby-identifier">hr</span> &amp; <span class="ruby-value">0xFFFF</span>
+454:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-HRESULT_FACILITY"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">HRESULT_FACILITY</span><span
+						class="method-args">(hr)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/error.rb, line 456</span>
+456:     <span class="ruby-keyword kw">def</span> <span class="ruby-constant">HRESULT_FACILITY</span>(<span class="ruby-identifier">hr</span>)
+457:       (<span class="ruby-identifier">hr</span> <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">16</span>) &amp; <span class="ruby-value">0x1fff</span>
+458:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-HRESULT_FROM_NT"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">HRESULT_FROM_NT</span><span
+						class="method-args">(x)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/error.rb, line 460</span>
+460:     <span class="ruby-keyword kw">def</span> <span class="ruby-constant">HRESULT_FROM_NT</span>(<span class="ruby-identifier">x</span>)
+461:       <span class="ruby-identifier">x</span> <span class="ruby-operator">|</span> <span class="ruby-value">0x10000000</span> <span class="ruby-comment cmt"># FACILITY_NT_BIT</span>
+462:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-HRESULT_FROM_WIN32"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">HRESULT_FROM_WIN32</span><span
+						class="method-args">(x)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/error.rb, line 464</span>
+464:     <span class="ruby-keyword kw">def</span> <span class="ruby-constant">HRESULT_FROM_WIN32</span>(<span class="ruby-identifier">x</span>)
+465:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">x</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">0</span>
+466:         <span class="ruby-identifier">x</span>
+467:       <span class="ruby-keyword kw">else</span>
+468:         (<span class="ruby-identifier">x</span> &amp; <span class="ruby-value">0x0000FFFF</span>) <span class="ruby-operator">|</span> (<span class="ruby-value">7</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">16</span>) <span class="ruby-operator">|</span> <span class="ruby-value">0x80000000</span>
+469:       <span class="ruby-keyword kw">end</span>
+470:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-HRESULT_SEVERITY"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">HRESULT_SEVERITY</span><span
+						class="method-args">(hr)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/error.rb, line 472</span>
+472:     <span class="ruby-keyword kw">def</span> <span class="ruby-constant">HRESULT_SEVERITY</span>(<span class="ruby-identifier">hr</span>)
+473:       (<span class="ruby-identifier">hr</span> <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">31</span>) &amp; <span class="ruby-value">0x1</span>
+474:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-IS_ERROR"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">IS_ERROR</span><span
+						class="method-args">(status)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Macros from WinError.h
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/error.rb, line 440</span>
+440:     <span class="ruby-keyword kw">def</span> <span class="ruby-constant">IS_ERROR</span>(<span class="ruby-identifier">status</span>)
+441:       <span class="ruby-identifier">status</span> <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">31</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+442:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-MAKE_HRESULT"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">MAKE_HRESULT</span><span
+						class="method-args">(sev, fac, code)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/error.rb, line 444</span>
+444:     <span class="ruby-keyword kw">def</span> <span class="ruby-constant">MAKE_HRESULT</span>(<span class="ruby-identifier">sev</span>, <span class="ruby-identifier">fac</span>, <span class="ruby-identifier">code</span>)
+445:       <span class="ruby-identifier">sev</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">31</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">fac</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">16</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">code</span>
+446:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-MAKE_SCODE"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">MAKE_SCODE</span><span
+						class="method-args">(sev, fac, code)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/error.rb, line 448</span>
+448:     <span class="ruby-keyword kw">def</span> <span class="ruby-constant">MAKE_SCODE</span>(<span class="ruby-identifier">sev</span>, <span class="ruby-identifier">fac</span>, <span class="ruby-identifier">code</span>)
+449:       <span class="ruby-identifier">sev</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">31</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">fac</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">16</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">code</span>
+450:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-SUCCEEDED"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">SUCCEEDED</span><span
+						class="method-args">(status)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/error.rb, line 480</span>
+480:     <span class="ruby-keyword kw">def</span> <span class="ruby-constant">SUCCEEDED</span>(<span class="ruby-identifier">status</span>)
+481:       <span class="ruby-identifier">status</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value">0</span>
+482:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="get-last-error-method" class="method-detail ">
+				<a name="method-i-get_last_error"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">get_last_error</span><span
+						class="method-args">(err_num = GetLastError.call)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Convenience method that wraps FormatMessage with some sane defaults and
+returns a human readable string.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="get-last-error-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/error.rb, line 431</span>
+431:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_last_error</span>(<span class="ruby-identifier">err_num</span> = <span class="ruby-constant">GetLastError</span>.<span class="ruby-identifier">call</span>)
+432:       <span class="ruby-identifier">buf</span>   = <span class="ruby-value">0</span>.<span class="ruby-identifier">chr</span> * <span class="ruby-value">260</span>
+433:       <span class="ruby-identifier">flags</span> = <span class="ruby-constant">FORMAT_MESSAGE_FROM_SYSTEM</span> <span class="ruby-operator">|</span> <span class="ruby-constant">FORMAT_MESSAGE_ARGUMENT_ARRAY</span>
+434:       <span class="ruby-constant">FormatMessageA</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">flags</span>, <span class="ruby-value">0</span>, <span class="ruby-identifier">err_num</span>, <span class="ruby-value">0</span>, <span class="ruby-identifier">buf</span>, <span class="ruby-identifier">buf</span>.<span class="ruby-identifier">size</span>, <span class="ruby-value">0</span>)
+435:       <span class="ruby-identifier">buf</span>.<span class="ruby-identifier">strip</span>
+436:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

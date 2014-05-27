@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>File: signing.rb [hoe-3.0.6 Documentation]</title>
+
+	<link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+</head>
+
+<body class="file file-popup">
+	<div id="metadata">
+		<dl>
+			<dt class="modified-date">Last Modified</dt>
+			<dd class="modified-date">2012-07-11 23:50:01 -0700</dd>
+
+			
+			<dt class="requires">Requires</dt>
+			<dd class="requires">
+				<ul>
+				
+				</ul>
+			</dd>
+			
+
+			
+		</dl>
+	</div>
+
+	<div id="documentation">
+		
+		<div class="description">
+			<h2>Description</h2>
+			<p>
+Signing plugin for hoe.
+</p>
+<h3>Tasks Provided:</h3>
+<table>
+<tr><td valign="top">generate_key</td><td><p>
+Generate a key for signing your gems.
+</p>
+</td></tr>
+</table>
+<h3>Extra Configuration Options:</h3>
+<table>
+<tr><td valign="top">signing_key_file</td><td><p>
+Signs your gems with this private key.
+</p>
+</td></tr>
+<tr><td valign="top">signing_cert_file</td><td><p>
+Signs your gem with this certificate.
+</p>
+</td></tr>
+</table>
+<h3>Usage:</h3>
+<p>
+Run the &#8216;generate_key&#8217; task.  This will:
+</p>
+<ol>
+<li><p>
+Configure your ~/.hoerc.
+</p>
+</li>
+<li><p>
+Generate a signing key and certificate.
+</p>
+</li>
+<li><p>
+Install the private key and public certificate files into ~/.gem.
+</p>
+</li>
+<li><p>
+Upload the certificate to RubyForge.
+</p>
+</li>
+</ol>
+<p>
+<a href="../../Hoe.html">Hoe</a> will now generate signed gems when the
+package task is run.  If you have multiple machines you build gems on, be
+sure to install your key and certificate on each machine.
+</p>
+<p>
+Keep your private key secret!  Keep your private key safe!
+</p>
+<p>
+To make sure your gems are signed run:
+</p>
+<pre>
+  rake package; tar tf pkg/yourproject-1.2.3.gem
+</pre>
+<p>
+If your gem is signed you will see:
+</p>
+<pre>
+  data.tar.gz
+  data.tar.gz.sig
+  metadata.gz
+  metadata.gz.sig</pre>
+
+		</div>
+		
+	</div>
+</body>
+</html>
+

@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: LibWebSocket::OpeningHandshake::Client</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/libwebsocket/opening_handshake/client_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/libwebsocket/opening_handshake/client.rb">lib/libwebsocket/opening_handshake/client.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="../OpeningHandshake.html">LibWebSocket::OpeningHandshake</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-build_url">#build_url</a></li>
+					
+					<li><a href="#method-i-done%3F">#done?</a></li>
+					
+					<li><a href="#method-i-parse">#parse</a></li>
+					
+					<li><a href="#method-i-set_url">#set_url</a></li>
+					
+					<li><a href="#method-i-to_s">#to_s</a></li>
+					
+					<li><a href="#method-i-url%3D">#url=</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../LibWebSocket.html">LibWebSocket</a></li>
+				
+					<li><a href="../../LibWebSocket/Cookie.html">LibWebSocket::Cookie</a></li>
+				
+					<li><a href="../../LibWebSocket/Cookie/Request.html">LibWebSocket::Cookie::Request</a></li>
+				
+					<li><a href="../../LibWebSocket/Cookie/Response.html">LibWebSocket::Cookie::Response</a></li>
+				
+					<li><a href="../../LibWebSocket/Frame.html">LibWebSocket::Frame</a></li>
+				
+					<li><a href="../../LibWebSocket/Message.html">LibWebSocket::Message</a></li>
+				
+					<li><a href="../../LibWebSocket/OpeningHandshake.html">LibWebSocket::OpeningHandshake</a></li>
+				
+					<li><a href="../../LibWebSocket/OpeningHandshake/Client.html">LibWebSocket::OpeningHandshake::Client</a></li>
+				
+					<li><a href="../../LibWebSocket/OpeningHandshake/Server.html">LibWebSocket::OpeningHandshake::Server</a></li>
+				
+					<li><a href="../../LibWebSocket/Request.html">LibWebSocket::Request</a></li>
+				
+					<li><a href="../../LibWebSocket/Response.html">LibWebSocket::Response</a></li>
+				
+					<li><a href="../../LibWebSocket/Stateful.html">LibWebSocket::Stateful</a></li>
+				
+					<li><a href="../../LibWebSocket/URL.html">LibWebSocket::URL</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">LibWebSocket::OpeningHandshake::Client</h1>
+
+		<div id="description">
+			<p>
+Construct or parse a client WebSocket handshake. This module is written for
+convenience, since using request and response directly requires the same
+code again and again.
+</p>
+<p>
+SYNOPSIS
+</p>
+<pre>
+  h = LibWebSocket::OpeningHandshake::Client.new(:url =&gt; 'ws://example.com')
+
+  # Create request
+  h.to_s # GET /demo HTTP/1.1
+         # Upgrade: WebSocket
+         # Connection: Upgrade
+         # Host: example.com
+         # Origin: http://example.com
+         # Sec-WebSocket-Key1: 18x 6]8vM;54 *(5:  {   U1]8  z [  8
+         # Sec-WebSocket-Key2: 1_ tx7X d  &lt;  nw  334J702) 7]o}` 0
+         #
+         # Tm[K T2u
+
+  # Parse server response
+  h.parse \&lt;&lt;EOF
+  HTTP/1.1 101 WebSocket Protocol Handshake
+  Upgrade: WebSocket
+  Connection: Upgrade
+  Sec-WebSocket-Origin: http://example.com
+  Sec-WebSocket-Location: ws://example.com/demo
+
+  fQJ,fN/4F4!~K~MH
+  EOF
+
+  h.error # Check if there were any errors
+  h.done? # Returns true</pre>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="url-attribute-method" class="method-detail">
+				<a name="url"></a>
+				
+				<a name="url="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">url</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(hash = {})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/libwebsocket/opening_handshake/client.rb, line 39</span>
+39:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">hash</span> = {})
+40:         <span class="ruby-keyword kw">super</span>
+41: 
+42:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">set_url</span>(<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">url</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">url</span>
+43:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="done--method" class="method-detail ">
+				<a name="method-i-done%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">done?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Check if response is correct
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="done--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/libwebsocket/opening_handshake/client.rb, line 88</span>
+88:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">done?</span>
+89:         <span class="ruby-identifier">res</span>.<span class="ruby-identifier">done?</span>
+90:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parse-method" class="method-detail ">
+				<a name="method-i-parse"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse</span><span
+						class="method-args">(opts)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Parse server response @example
+</p>
+<pre>
+  h.parse \&lt;&lt;EOF
+  HTTP/1.1 101 WebSocket Protocol Handshake
+  Upgrade: WebSocket
+  Connection: Upgrade
+  Sec-WebSocket-Origin: http://example.com
+  Sec-WebSocket-Location: ws://example.com/demo
+
+  fQJ,fN/4F4!~K~MH
+  EOF</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="parse-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/libwebsocket/opening_handshake/client.rb, line 66</span>
+66:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse</span>(<span class="ruby-identifier">opts</span>)
+67:         <span class="ruby-identifier">req</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">req</span>
+68:         <span class="ruby-identifier">res</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">res</span>
+69: 
+70:         <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">res</span>.<span class="ruby-identifier">done?</span>
+71:           <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">res</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">opts</span>)
+72:             <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">error</span> = <span class="ruby-identifier">res</span>.<span class="ruby-identifier">error</span>
+73:             <span class="ruby-keyword kw">return</span>
+74:           <span class="ruby-keyword kw">end</span>
+75: 
+76:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">res</span>.<span class="ruby-identifier">done?</span>
+77:             <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">req</span>.<span class="ruby-identifier">version</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">75</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">req</span>.<span class="ruby-identifier">checksum</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">res</span>.<span class="ruby-identifier">checksum</span>
+78:               <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">error</span> = <span class="ruby-value str">'Checksum is wrong.'</span>
+79:               <span class="ruby-keyword kw">return</span>
+80:             <span class="ruby-keyword kw">end</span>
+81:           <span class="ruby-keyword kw">end</span>
+82:         <span class="ruby-keyword kw">end</span>
+83: 
+84:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span>
+85:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="to-s-method" class="method-detail ">
+				<a name="method-i-to_s"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">to_s</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Create request @example
+</p>
+<pre>
+  h.to_s # GET /demo HTTP/1.1
+         # Upgrade: WebSocket
+         # Connection: Upgrade
+         # Host: example.com
+         # Origin: http://example.com
+         # Sec-WebSocket-Key1: 18x 6]8vM;54 *(5:  {   U1]8  z [  8
+         # Sec-WebSocket-Key2: 1_ tx7X d  &lt;  nw  334J702) 7]o}` 0
+         #
+         # Tm[K T2u</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="to-s-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/libwebsocket/opening_handshake/client.rb, line 103</span>
+103:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">to_s</span>
+104:         <span class="ruby-identifier">req</span>.<span class="ruby-identifier">to_s</span>
+105:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="url--method" class="method-detail ">
+				<a name="method-i-url%3D"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">url=</span><span
+						class="method-args">(val)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Set or get WebSocket url. @see LibWebSocket::URL#initialize @example
+</p>
+<pre>
+  handshake.url = 'ws://example.com/demo'</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="url--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/libwebsocket/opening_handshake/client.rb, line 49</span>
+49:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">url=</span>(<span class="ruby-identifier">val</span>)
+50:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">set_url</span>(<span class="ruby-identifier">val</span>)
+51: 
+52:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>
+53:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="protected-instance-method-details" class="method-section section">
+			<h3 class="section-header">Protected Instance Methods</h3>
+
+		
+			<div id="build-url-method" class="method-detail ">
+				<a name="method-i-build_url"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">build_url</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="build-url-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/libwebsocket/opening_handshake/client.rb, line 109</span>
+109:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">build_url</span>
+110:         <span class="ruby-constant">LibWebSocket</span><span class="ruby-operator">::</span><span class="ruby-constant">URL</span>.<span class="ruby-identifier">new</span>
+111:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="set-url-method" class="method-detail ">
+				<a name="method-i-set_url"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">set_url</span><span
+						class="method-args">(url)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="set-url-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/libwebsocket/opening_handshake/client.rb, line 113</span>
+113:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">set_url</span>(<span class="ruby-identifier">url</span>)
+114:         <span class="ruby-ivar">@url</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">build_url</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">url</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">url</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">LibWebSocket</span><span class="ruby-operator">::</span><span class="ruby-constant">URL</span>)
+115: 
+116:         <span class="ruby-identifier">req</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">req</span>
+117: 
+118:         <span class="ruby-identifier">host</span> = <span class="ruby-ivar">@url</span>.<span class="ruby-identifier">host</span>
+119:         <span class="ruby-identifier">host</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">':'</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@url</span>.<span class="ruby-identifier">port</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@url</span>.<span class="ruby-identifier">port</span>
+120:         <span class="ruby-identifier">req</span>.<span class="ruby-identifier">host</span> = <span class="ruby-identifier">host</span>
+121: 
+122:         <span class="ruby-identifier">req</span>.<span class="ruby-identifier">resource_name</span> = <span class="ruby-ivar">@url</span>.<span class="ruby-identifier">resource_name</span>
+123: 
+124:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">self</span>
+125:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

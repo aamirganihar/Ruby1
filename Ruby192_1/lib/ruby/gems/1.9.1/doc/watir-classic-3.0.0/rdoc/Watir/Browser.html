@@ -1,0 +1,899 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Watir::Browser</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/watir-classic/browser_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/watir-classic/browser.rb">lib/watir-classic/browser.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-activate_gem">::activate_gem</a></li>
+					
+					<li><a href="#method-c-attach">::attach</a></li>
+					
+					<li><a href="#method-c-autoload">::autoload</a></li>
+					
+					<li><a href="#method-c-browser_names">::browser_names</a></li>
+					
+					<li><a href="#method-c-default">::default</a></li>
+					
+					<li><a href="#method-c-default%3D">::default=</a></li>
+					
+					<li><a href="#method-c-klass">::klass</a></li>
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-c-options">::options</a></li>
+					
+					<li><a href="#method-c-set_options">::set_options</a></li>
+					
+					<li><a href="#method-c-set_sub_options">::set_sub_options</a></li>
+					
+					<li><a href="#method-c-start">::start</a></li>
+					
+					<li><a href="#method-c-support">::support</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Watir.html">Watir</a></li>
+				
+					<li><a href="../Watir/Area.html">Watir::Area</a></li>
+				
+					<li><a href="../Watir/Assertions.html">Watir::Assertions</a></li>
+				
+					<li><a href="../Watir/Audio.html">Watir::Audio</a></li>
+				
+					<li><a href="../Watir/Base.html">Watir::Base</a></li>
+				
+					<li><a href="../Watir/Browser.html">Watir::Browser</a></li>
+				
+					<li><a href="../Watir/Button.html">Watir::Button</a></li>
+				
+					<li><a href="../Watir/CheckBox.html">Watir::CheckBox</a></li>
+				
+					<li><a href="../Watir/Command.html">Watir::Command</a></li>
+				
+					<li><a href="../Watir/Container.html">Watir::Container</a></li>
+				
+					<li><a href="../Watir/Cookies.html">Watir::Cookies</a></li>
+				
+					<li><a href="../Watir/Data.html">Watir::Data</a></li>
+				
+					<li><a href="../Watir/DefaultLogger.html">Watir::DefaultLogger</a></li>
+				
+					<li><a href="../Watir/DragAndDropHelper.html">Watir::DragAndDropHelper</a></li>
+				
+					<li><a href="../Watir/Element.html">Watir::Element</a></li>
+				
+					<li><a href="../Watir/ElementCollection.html">Watir::ElementCollection</a></li>
+				
+					<li><a href="../Watir/ElementExtensions.html">Watir::ElementExtensions</a></li>
+				
+					<li><a href="../Watir/ElementExtensions/WhenPresentDecorator.html">Watir::ElementExtensions::WhenPresentDecorator</a></li>
+				
+					<li><a href="../Watir/Embed.html">Watir::Embed</a></li>
+				
+					<li><a href="../Watir/Exception.html">Watir::Exception</a></li>
+				
+					<li><a href="../Watir/Exception/FrameAccessDeniedException.html">Watir::Exception::FrameAccessDeniedException</a></li>
+				
+					<li><a href="../Watir/Exception/MissingWayOfFindingObjectException.html">Watir::Exception::MissingWayOfFindingObjectException</a></li>
+				
+					<li><a href="../Watir/Exception/NavigationException.html">Watir::Exception::NavigationException</a></li>
+				
+					<li><a href="../Watir/Exception/NoMatchingWindowFoundException.html">Watir::Exception::NoMatchingWindowFoundException</a></li>
+				
+					<li><a href="../Watir/Exception/NoStatusBarException.html">Watir::Exception::NoStatusBarException</a></li>
+				
+					<li><a href="../Watir/Exception/NoValueFoundException.html">Watir::Exception::NoValueFoundException</a></li>
+				
+					<li><a href="../Watir/Exception/ObjectDisabledException.html">Watir::Exception::ObjectDisabledException</a></li>
+				
+					<li><a href="../Watir/Exception/ObjectReadOnlyException.html">Watir::Exception::ObjectReadOnlyException</a></li>
+				
+					<li><a href="../Watir/Exception/TimeOutException.html">Watir::Exception::TimeOutException</a></li>
+				
+					<li><a href="../Watir/Exception/UnhandledEventException.html">Watir::Exception::UnhandledEventException</a></li>
+				
+					<li><a href="../Watir/Exception/UnknownCellException.html">Watir::Exception::UnknownCellException</a></li>
+				
+					<li><a href="../Watir/Exception/UnknownFormException.html">Watir::Exception::UnknownFormException</a></li>
+				
+					<li><a href="../Watir/Exception/UnknownFrameException.html">Watir::Exception::UnknownFrameException</a></li>
+				
+					<li><a href="../Watir/Exception/UnknownObjectException.html">Watir::Exception::UnknownObjectException</a></li>
+				
+					<li><a href="../Watir/Exception/WatirException.html">Watir::Exception::WatirException</a></li>
+				
+					<li><a href="../Watir/FieldSet.html">Watir::FieldSet</a></li>
+				
+					<li><a href="../Watir/FileField.html">Watir::FileField</a></li>
+				
+					<li><a href="../Watir/Font.html">Watir::Font</a></li>
+				
+					<li><a href="../Watir/Form.html">Watir::Form</a></li>
+				
+					<li><a href="../Watir/FormLocator.html">Watir::FormLocator</a></li>
+				
+					<li><a href="../Watir/Frame.html">Watir::Frame</a></li>
+				
+					<li><a href="../Watir/FrameLocator.html">Watir::FrameLocator</a></li>
+				
+					<li><a href="../Watir/HTMLElementCollection.html">Watir::HTMLElementCollection</a></li>
+				
+					<li><a href="../Watir/Hidden.html">Watir::Hidden</a></li>
+				
+					<li><a href="../Watir/IE.html">Watir::IE</a></li>
+				
+					<li><a href="../Watir/IE/Process.html">Watir::IE::Process</a></li>
+				
+					<li><a href="../Watir/Image.html">Watir::Image</a></li>
+				
+					<li><a href="../Watir/InputElementCollection.html">Watir::InputElementCollection</a></li>
+				
+					<li><a href="../Watir/InputElementLocator.html">Watir::InputElementLocator</a></li>
+				
+					<li><a href="../Watir/JavascriptDialog.html">Watir::JavascriptDialog</a></li>
+				
+					<li><a href="../Watir/Keygen.html">Watir::Keygen</a></li>
+				
+					<li><a href="../Watir/Label.html">Watir::Label</a></li>
+				
+					<li><a href="../Watir/Li.html">Watir::Li</a></li>
+				
+					<li><a href="../Watir/Link.html">Watir::Link</a></li>
+				
+					<li><a href="../Watir/Locator.html">Watir::Locator</a></li>
+				
+					<li><a href="../Watir/Map.html">Watir::Map</a></li>
+				
+					<li><a href="../Watir/Menu.html">Watir::Menu</a></li>
+				
+					<li><a href="../Watir/Meta.html">Watir::Meta</a></li>
+				
+					<li><a href="../Watir/Meter.html">Watir::Meter</a></li>
+				
+					<li><a href="../Watir/ModalDialog.html">Watir::ModalDialog</a></li>
+				
+					<li><a href="../Watir/Object.html">Watir::Object</a></li>
+				
+					<li><a href="../Watir/Optgroup.html">Watir::Optgroup</a></li>
+				
+					<li><a href="../Watir/Option.html">Watir::Option</a></li>
+				
+					<li><a href="../Watir/Output.html">Watir::Output</a></li>
+				
+					<li><a href="../Watir/PageContainer.html">Watir::PageContainer</a></li>
+				
+					<li><a href="../Watir/Param.html">Watir::Param</a></li>
+				
+					<li><a href="../Watir/Process.html">Watir::Process</a></li>
+				
+					<li><a href="../Watir/Progress.html">Watir::Progress</a></li>
+				
+					<li><a href="../Watir/Radio.html">Watir::Radio</a></li>
+				
+					<li><a href="../Watir/RadioCheckCommon.html">Watir::RadioCheckCommon</a></li>
+				
+					<li><a href="../Watir/ScreenCapture.html">Watir::ScreenCapture</a></li>
+				
+					<li><a href="../Watir/Script.html">Watir::Script</a></li>
+				
+					<li><a href="../Watir/SelectList.html">Watir::SelectList</a></li>
+				
+					<li><a href="../Watir/Source.html">Watir::Source</a></li>
+				
+					<li><a href="../Watir/Style.html">Watir::Style</a></li>
+				
+					<li><a href="../Watir/Table.html">Watir::Table</a></li>
+				
+					<li><a href="../Watir/TableCell.html">Watir::TableCell</a></li>
+				
+					<li><a href="../Watir/TableCellCollection.html">Watir::TableCellCollection</a></li>
+				
+					<li><a href="../Watir/TableCellsContainer.html">Watir::TableCellsContainer</a></li>
+				
+					<li><a href="../Watir/TableContainer.html">Watir::TableContainer</a></li>
+				
+					<li><a href="../Watir/TableElementCollection.html">Watir::TableElementCollection</a></li>
+				
+					<li><a href="../Watir/TableElementsContainer.html">Watir::TableElementsContainer</a></li>
+				
+					<li><a href="../Watir/TableRow.html">Watir::TableRow</a></li>
+				
+					<li><a href="../Watir/TableRowCollection.html">Watir::TableRowCollection</a></li>
+				
+					<li><a href="../Watir/TableRowsContainer.html">Watir::TableRowsContainer</a></li>
+				
+					<li><a href="../Watir/TableSection.html">Watir::TableSection</a></li>
+				
+					<li><a href="../Watir/TaggedElementLocator.html">Watir::TaggedElementLocator</a></li>
+				
+					<li><a href="../Watir/TestCase.html">Watir::TestCase</a></li>
+				
+					<li><a href="../Watir/TextField.html">Watir::TextField</a></li>
+				
+					<li><a href="../Watir/TimeKeeper.html">Watir::TimeKeeper</a></li>
+				
+					<li><a href="../Watir/Track.html">Watir::Track</a></li>
+				
+					<li><a href="../Watir/Util.html">Watir::Util</a></li>
+				
+					<li><a href="../Watir/Video.html">Watir::Video</a></li>
+				
+					<li><a href="../Watir/Wait.html">Watir::Wait</a></li>
+				
+					<li><a href="../Watir/Wait/TimeoutError.html">Watir::Wait::TimeoutError</a></li>
+				
+					<li><a href="../Watir/WaitHelper.html">Watir::WaitHelper</a></li>
+				
+					<li><a href="../Watir/Waiter.html">Watir::Waiter</a></li>
+				
+					<li><a href="../Watir/WatirLogger.html">Watir::WatirLogger</a></li>
+				
+					<li><a href="../Watir/WatirOptions.html">Watir::WatirOptions</a></li>
+				
+					<li><a href="../Watir/Win32.html">Watir::Win32</a></li>
+				
+					<li><a href="../Watir/Window.html">Watir::Window</a></li>
+				
+					<li><a href="../Watir/XpathLocator.html">Watir::XpathLocator</a></li>
+				
+					<li><a href="../Test.html">Test</a></li>
+				
+					<li><a href="../Test/Unit.html">Test::Unit</a></li>
+				
+					<li><a href="../Test/Unit/Assertions.html">Test::Unit::Assertions</a></li>
+				
+					<li><a href="../Readline.html">Readline</a></li>
+				
+					<li><a href="../Readline/History.html">Readline::History</a></li>
+				
+					<li><a href="../IEProcess.html">IEProcess</a></li>
+				
+					<li><a href="../Integer.html">Integer</a></li>
+				
+					<li><a href="../Object.html">Object</a></li>
+				
+					<li><a href="../PageCheckers.html">PageCheckers</a></li>
+				
+					<li><a href="../Regexp.html">Regexp</a></li>
+				
+					<li><a href="../String.html">String</a></li>
+				
+					<li><a href="../WinClicker.html">WinClicker</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Watir::Browser</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="attach-method" class="method-detail ">
+				<a name="method-c-attach"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">attach</span><span
+						class="method-args">(how, what)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Attach to an existing browser.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="attach-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-classic/browser.rb, line 74</span>
+74:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">attach</span>(<span class="ruby-identifier">how</span>, <span class="ruby-identifier">what</span>)
+75:         <span class="ruby-identifier">set_sub_options</span>
+76:         <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">attach</span>(<span class="ruby-identifier">how</span>, <span class="ruby-identifier">what</span>)
+77:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="browser-names-method" class="method-detail ">
+				<a name="method-c-browser_names"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">browser_names</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the names of the browsers that are supported by this module. These
+are the options for &#8216;watir_browser&#8217; (env var) or
+&#8216;browser:&#8217; (yaml).
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="browser-names-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-classic/browser.rb, line 120</span>
+120:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">browser_names</span>
+121:         <span class="ruby-identifier">@@browser_classes</span>.<span class="ruby-identifier">keys</span>
+122:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="default-method" class="method-detail ">
+				<a name="method-c-default"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">default</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="default-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-classic/browser.rb, line 111</span>
+111:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">default</span>
+112:         <span class="ruby-identifier">@@default</span>
+113:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="default--method" class="method-detail ">
+				<a name="method-c-default%3D"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">default=</span><span
+						class="method-args">(option)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Specifies a default browser. Must be specified before options are parsed.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="default--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-classic/browser.rb, line 115</span>
+115:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">default=</span> <span class="ruby-identifier">option</span>
+116:         <span class="ruby-identifier">@@default</span> = <span class="ruby-identifier">option</span>
+117:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Create a new instance of a browser driver, as determined by the
+configuration settings. (Don&#8217;t be fooled: this is not actually  an
+instance of <a href="Browser.html">Browser</a> class.)
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-classic/browser.rb, line 63</span>
+63:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">new</span>
+64:         <span class="ruby-identifier">set_sub_options</span>
+65:         <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">new</span>
+66:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="options-method" class="method-detail ">
+				<a name="method-c-options"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">options</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="options-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-classic/browser.rb, line 82</span>
+82:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">options</span>
+83:         <span class="ruby-keyword kw">return</span> {} <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:options</span>)
+84:         <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">options</span>
+85:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="set-options-method" class="method-detail ">
+				<a name="method-c-set_options"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">set_options</span><span
+						class="method-args">(options)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="set-options-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-classic/browser.rb, line 78</span>
+78:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">set_options</span> <span class="ruby-identifier">options</span>
+79:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:set_options</span>)
+80:         <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">set_options</span> <span class="ruby-identifier">options</span>
+81:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="start-method" class="method-detail ">
+				<a name="method-c-start"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">start</span><span
+						class="method-args">(url)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Create a new instance as with # and start the browser on the specified
+url.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="start-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-classic/browser.rb, line 69</span>
+69:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">start</span> <span class="ruby-identifier">url</span>
+70:         <span class="ruby-identifier">set_sub_options</span>
+71:         <span class="ruby-identifier">klass</span>.<span class="ruby-identifier">start</span> <span class="ruby-identifier">url</span>
+72:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="support-method" class="method-detail ">
+				<a name="method-c-support"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">support</span><span
+						class="method-args">(hash_args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Add support for the browser option, using the specified class,  provided
+as a string. Optionally, additional options supported by the class can be
+specified as an array of symbols. Options specified by the user and
+included in this list will be passed (as a hash) to  the <a
+href="Browser.html#method-c-set_options">set_options</a> class method (if
+defined) before creating an instance.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="support-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-classic/browser.rb, line 97</span>
+ 97:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">support</span> <span class="ruby-identifier">hash_args</span>
+ 98:         <span class="ruby-identifier">option</span> = <span class="ruby-identifier">hash_args</span>[<span class="ruby-value">:name</span>]
+ 99:         <span class="ruby-identifier">class_string</span> = <span class="ruby-identifier">hash_args</span>[<span class="ruby-value">:class</span>]
+100:         <span class="ruby-identifier">additional_options</span> = <span class="ruby-identifier">hash_args</span>[<span class="ruby-value">:options</span>]
+101:         <span class="ruby-identifier">library</span> = <span class="ruby-identifier">hash_args</span>[<span class="ruby-value">:library</span>]
+102:         <span class="ruby-identifier">gem</span> = <span class="ruby-identifier">hash_args</span>[<span class="ruby-value">:gem</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">library</span>
+103: 
+104:         <span class="ruby-identifier">@@browser_classes</span>[<span class="ruby-identifier">option</span>] = <span class="ruby-identifier">class_string</span>        
+105:         <span class="ruby-identifier">@@sub_options</span>[<span class="ruby-identifier">option</span>] = <span class="ruby-identifier">additional_options</span>
+106: 
+107:         <span class="ruby-identifier">autoload</span> <span class="ruby-identifier">class_string</span>, <span class="ruby-identifier">library</span>
+108:         <span class="ruby-identifier">activate_gem</span> <span class="ruby-identifier">gem</span>, <span class="ruby-identifier">option</span>
+109:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-class-method-details" class="method-section section">
+			<h3 class="section-header">Private Class Methods</h3>
+
+		
+			<div id="activate-gem-method" class="method-detail ">
+				<a name="method-c-activate_gem"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">activate_gem</span><span
+						class="method-args">(gem_name, option)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Activate the gem (if installed). The default browser will be set to the
+first gem that activates.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="activate-gem-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-classic/browser.rb, line 131</span>
+131:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">activate_gem</span> <span class="ruby-identifier">gem_name</span>, <span class="ruby-identifier">option</span>
+132:         <span class="ruby-keyword kw">begin</span>
+133:           <span class="ruby-identifier">gem</span> <span class="ruby-identifier">gem_name</span> 
+134:           <span class="ruby-identifier">@@default</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">option</span>
+135:         <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">LoadError</span>
+136:         <span class="ruby-keyword kw">end</span>
+137:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="autoload-method" class="method-detail ">
+				<a name="method-c-autoload"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">autoload</span><span
+						class="method-args">(class_string, library)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="autoload-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-classic/browser.rb, line 125</span>
+125:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">autoload</span> <span class="ruby-identifier">class_string</span>, <span class="ruby-identifier">library</span>
+126:         <span class="ruby-identifier">mod</span>, <span class="ruby-identifier">klass</span> = <span class="ruby-identifier">class_string</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">'::'</span>)
+127:         <span class="ruby-identifier">eval</span> <span class="ruby-node">&quot;module ::#{mod}; autoload :#{klass}, '#{library}'; end&quot;</span>
+128:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="klass-method" class="method-detail ">
+				<a name="method-c-klass"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">klass</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="klass-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-classic/browser.rb, line 87</span>
+87:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">klass</span>
+88:         <span class="ruby-identifier">key</span> = <span class="ruby-constant">Watir</span>.<span class="ruby-identifier">options</span>[<span class="ruby-value">:browser</span>]
+89:         <span class="ruby-identifier">eval</span> <span class="ruby-identifier">@@browser_classes</span>[<span class="ruby-identifier">key</span>] <span class="ruby-comment cmt"># this triggers the autoload</span>
+90:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="set-sub-options-method" class="method-detail ">
+				<a name="method-c-set_sub_options"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">set_sub_options</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="set-sub-options-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-classic/browser.rb, line 138</span>
+138:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">set_sub_options</span>
+139:         <span class="ruby-identifier">sub_options</span> = <span class="ruby-identifier">@@sub_options</span>[<span class="ruby-constant">Watir</span>.<span class="ruby-identifier">options</span>[<span class="ruby-value">:browser</span>]]
+140:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">sub_options</span>.<span class="ruby-identifier">nil?</span>
+141:         <span class="ruby-identifier">specified_options</span> = <span class="ruby-constant">Watir</span>.<span class="ruby-identifier">options</span>.<span class="ruby-identifier">reject</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-operator">!</span><span class="ruby-identifier">sub_options</span>.<span class="ruby-identifier">include?</span> <span class="ruby-identifier">k</span>}
+142:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">set_options</span> <span class="ruby-identifier">specified_options</span>
+143:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

@@ -1,0 +1,1263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Windows::MSVCRT::String</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/windows/msvcrt/string_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/windows/msvcrt/string.rb">lib/windows/msvcrt/string.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-mbscmp">#mbscmp</a></li>
+					
+					<li><a href="#method-i-mbscpy">#mbscpy</a></li>
+					
+					<li><a href="#method-i-mbslen">#mbslen</a></li>
+					
+					<li><a href="#method-i-mbsrev">#mbsrev</a></li>
+					
+					<li><a href="#method-i-strchr">#strchr</a></li>
+					
+					<li><a href="#method-i-strcmp">#strcmp</a></li>
+					
+					<li><a href="#method-i-strcpy">#strcpy</a></li>
+					
+					<li><a href="#method-i-strcspn">#strcspn</a></li>
+					
+					<li><a href="#method-i-strlen">#strlen</a></li>
+					
+					<li><a href="#method-i-strncpy">#strncpy</a></li>
+					
+					<li><a href="#method-i-strpbrk">#strpbrk</a></li>
+					
+					<li><a href="#method-i-strrchr">#strrchr</a></li>
+					
+					<li><a href="#method-i-strrev">#strrev</a></li>
+					
+					<li><a href="#method-i-strspn">#strspn</a></li>
+					
+					<li><a href="#method-i-strstr">#strstr</a></li>
+					
+					<li><a href="#method-i-strtok">#strtok</a></li>
+					
+					<li><a href="#method-i-strtok_s">#strtok_s</a></li>
+					
+					<li><a href="#method-i-wcscmp">#wcscmp</a></li>
+					
+					<li><a href="#method-i-wcscpy">#wcscpy</a></li>
+					
+					<li><a href="#method-i-wcslen">#wcslen</a></li>
+					
+					<li><a href="#method-i-wcsncpy">#wcsncpy</a></li>
+					
+					<li><a href="#method-i-wcsrev">#wcsrev</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../../CHANGES.html">CHANGES</a></li>
+				
+					<li class="file"><a href="../../MANIFEST.html">MANIFEST</a></li>
+				
+					<li class="file"><a href="../../README.html">README</a></li>
+				
+					<li class="file"><a href="../../doc/conversion_guide_txt.html">conversion_guide.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../Windows.html">Windows</a></li>
+				
+					<li><a href="../../Windows/COM.html">Windows::COM</a></li>
+				
+					<li><a href="../../Windows/COM/Accessibility.html">Windows::COM::Accessibility</a></li>
+				
+					<li><a href="../../Windows/COM/Automation.html">Windows::COM::Automation</a></li>
+				
+					<li><a href="../../Windows/COM/Variant.html">Windows::COM::Variant</a></li>
+				
+					<li><a href="../../Windows/Clipboard.html">Windows::Clipboard</a></li>
+				
+					<li><a href="../../Windows/Console.html">Windows::Console</a></li>
+				
+					<li><a href="../../Windows/Debug.html">Windows::Debug</a></li>
+				
+					<li><a href="../../Windows/DeviceIO.html">Windows::DeviceIO</a></li>
+				
+					<li><a href="../../Windows/Directory.html">Windows::Directory</a></li>
+				
+					<li><a href="../../Windows/Error.html">Windows::Error</a></li>
+				
+					<li><a href="../../Windows/EventLog.html">Windows::EventLog</a></li>
+				
+					<li><a href="../../Windows/File.html">Windows::File</a></li>
+				
+					<li><a href="../../Windows/FileMapping.html">Windows::FileMapping</a></li>
+				
+					<li><a href="../../Windows/FileSystem.html">Windows::FileSystem</a></li>
+				
+					<li><a href="../../Windows/GDI.html">Windows::GDI</a></li>
+				
+					<li><a href="../../Windows/GDI/Bitmap.html">Windows::GDI::Bitmap</a></li>
+				
+					<li><a href="../../Windows/GDI/DeviceContext.html">Windows::GDI::DeviceContext</a></li>
+				
+					<li><a href="../../Windows/GDI/MetaFile.html">Windows::GDI::MetaFile</a></li>
+				
+					<li><a href="../../Windows/GDI/PaintingDrawing.html">Windows::GDI::PaintingDrawing</a></li>
+				
+					<li><a href="../../Windows/Handle.html">Windows::Handle</a></li>
+				
+					<li><a href="../../Windows/Library.html">Windows::Library</a></li>
+				
+					<li><a href="../../Windows/Limits.html">Windows::Limits</a></li>
+				
+					<li><a href="../../Windows/MSVCRT.html">Windows::MSVCRT</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/Buffer.html">Windows::MSVCRT::Buffer</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/Directory.html">Windows::MSVCRT::Directory</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/File.html">Windows::MSVCRT::File</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/IO.html">Windows::MSVCRT::IO</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/String.html">Windows::MSVCRT::String</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/Time.html">Windows::MSVCRT::Time</a></li>
+				
+					<li><a href="../../Windows/Mailslot.html">Windows::Mailslot</a></li>
+				
+					<li><a href="../../Windows/Memory.html">Windows::Memory</a></li>
+				
+					<li><a href="../../Windows/NIO.html">Windows::NIO</a></li>
+				
+					<li><a href="../../Windows/NTFS.html">Windows::NTFS</a></li>
+				
+					<li><a href="../../Windows/NTFS/Winternl.html">Windows::NTFS::Winternl</a></li>
+				
+					<li><a href="../../Windows/National.html">Windows::National</a></li>
+				
+					<li><a href="../../Windows/Network.html">Windows::Network</a></li>
+				
+					<li><a href="../../Windows/Network/Management.html">Windows::Network::Management</a></li>
+				
+					<li><a href="../../Windows/Network/SNMP.html">Windows::Network::SNMP</a></li>
+				
+					<li><a href="../../Windows/Network/Winsock.html">Windows::Network::Winsock</a></li>
+				
+					<li><a href="../../Windows/Path.html">Windows::Path</a></li>
+				
+					<li><a href="../../Windows/Pipe.html">Windows::Pipe</a></li>
+				
+					<li><a href="../../Windows/Process.html">Windows::Process</a></li>
+				
+					<li><a href="../../Windows/Registry.html">Windows::Registry</a></li>
+				
+					<li><a href="../../Windows/Security.html">Windows::Security</a></li>
+				
+					<li><a href="../../Windows/Security/Authentication.html">Windows::Security::Authentication</a></li>
+				
+					<li><a href="../../Windows/Service.html">Windows::Service</a></li>
+				
+					<li><a href="../../Windows/Shell.html">Windows::Shell</a></li>
+				
+					<li><a href="../../Windows/Socket.html">Windows::Socket</a></li>
+				
+					<li><a href="../../Windows/Sound.html">Windows::Sound</a></li>
+				
+					<li><a href="../../Windows/Synchronize.html">Windows::Synchronize</a></li>
+				
+					<li><a href="../../Windows/SystemInfo.html">Windows::SystemInfo</a></li>
+				
+					<li><a href="../../Windows/Thread.html">Windows::Thread</a></li>
+				
+					<li><a href="../../Windows/Time.html">Windows::Time</a></li>
+				
+					<li><a href="../../Windows/ToolHelper.html">Windows::ToolHelper</a></li>
+				
+					<li><a href="../../Windows/Unicode.html">Windows::Unicode</a></li>
+				
+					<li><a href="../../Windows/Volume.html">Windows::Volume</a></li>
+				
+					<li><a href="../../Windows/WSA.html">Windows::WSA</a></li>
+				
+					<li><a href="../../Windows/Window.html">Windows::Window</a></li>
+				
+					<li><a href="../../Windows/Window/Classes.html">Windows::Window::Classes</a></li>
+				
+					<li><a href="../../Windows/Window/Dialog.html">Windows::Window::Dialog</a></li>
+				
+					<li><a href="../../Windows/Window/Menu.html">Windows::Window::Menu</a></li>
+				
+					<li><a href="../../Windows/Window/Message.html">Windows::Window::Message</a></li>
+				
+					<li><a href="../../Windows/Window/Properties.html">Windows::Window::Properties</a></li>
+				
+					<li><a href="../../Windows/Window/Timer.html">Windows::Window::Timer</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Windows::MSVCRT::String</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="Strchr">Strchr</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Strcmp">Strcmp</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Strcpy">Strcpy</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Strcspn">Strcspn</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Strlen">Strlen</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Strncpy">Strncpy</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Strpbrk">Strpbrk</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Strrchr">Strrchr</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Strrev">Strrev</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Strspn">Strspn</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Strstr">Strstr</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Strtok">Strtok</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="StrcpyPL">StrcpyPL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="StrcpyPP">StrcpyPP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Mbscmp">Mbscmp</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Mbscpy">Mbscpy</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Mbslen">Mbslen</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Mbsrev">Mbsrev</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="MbscpyPL">MbscpyPL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="MbscpyPP">MbscpyPP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Wcscmp">Wcscmp</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Wcscpy">Wcscpy</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Wcslen">Wcslen</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Wcsncpy">Wcsncpy</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Wcsrev">Wcsrev</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WcscpyPL">WcscpyPL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WcscpyPP">WcscpyPP</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Strtok_s">Strtok_s</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="mbscmp-method" class="method-detail ">
+				<a name="method-i-mbscmp"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">mbscmp</span><span
+						class="method-args">(str1, str2)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="mbscmp-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/msvcrt/string.rb, line 124</span>
+124:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mbscmp</span>(<span class="ruby-identifier">str1</span>, <span class="ruby-identifier">str2</span>)
+125:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">str1</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">str2</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+126:           <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>
+127:         <span class="ruby-keyword kw">end</span>
+128:         <span class="ruby-constant">Mbscmp</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">str1</span>, <span class="ruby-identifier">str2</span>)
+129:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="mbscpy-method" class="method-detail ">
+				<a name="method-i-mbscpy"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">mbscpy</span><span
+						class="method-args">(dest, src)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="mbscpy-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/msvcrt/string.rb, line 131</span>
+131:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mbscpy</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-identifier">src</span>)
+132:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">src</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Numeric</span>)
+133:           <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">src</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+134:           <span class="ruby-constant">MbscpyPL</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-identifier">src</span>)
+135:         <span class="ruby-keyword kw">else</span>
+136:           <span class="ruby-constant">MbscpyPP</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-identifier">src</span>)
+137:         <span class="ruby-keyword kw">end</span>
+138:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="mbslen-method" class="method-detail ">
+				<a name="method-i-mbslen"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">mbslen</span><span
+						class="method-args">(string)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="mbslen-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/msvcrt/string.rb, line 140</span>
+140:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mbslen</span>(<span class="ruby-identifier">string</span>)
+141:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">string</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+142:         <span class="ruby-constant">Mbslen</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">string</span>)
+143:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="mbsrev-method" class="method-detail ">
+				<a name="method-i-mbsrev"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">mbsrev</span><span
+						class="method-args">(str)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="mbsrev-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/msvcrt/string.rb, line 145</span>
+145:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mbsrev</span>(<span class="ruby-identifier">str</span>)
+146:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">str</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+147:         <span class="ruby-constant">Mbsrev</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">str</span>)
+148:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="strchr-method" class="method-detail ">
+				<a name="method-i-strchr"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">strchr</span><span
+						class="method-args">(string, char)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="strchr-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/windows/msvcrt/string.rb, line 51</span>
+51:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">strchr</span>(<span class="ruby-identifier">string</span>, <span class="ruby-identifier">char</span>)
+52:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">string</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">char</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+53:         <span class="ruby-constant">Strchr</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">string</span>, <span class="ruby-identifier">char</span>)
+54:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="strcmp-method" class="method-detail ">
+				<a name="method-i-strcmp"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">strcmp</span><span
+						class="method-args">(str1, str2)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="strcmp-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/windows/msvcrt/string.rb, line 56</span>
+56:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">strcmp</span>(<span class="ruby-identifier">str1</span>, <span class="ruby-identifier">str2</span>)
+57:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">str1</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">str2</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+58:           <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>
+59:         <span class="ruby-keyword kw">end</span>
+60:          <span class="ruby-constant">Strcmp</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">str1</span>, <span class="ruby-identifier">str2</span>)
+61:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="strcpy-method" class="method-detail ">
+				<a name="method-i-strcpy"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">strcpy</span><span
+						class="method-args">(dest, src)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="strcpy-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/windows/msvcrt/string.rb, line 63</span>
+63:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">strcpy</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-identifier">src</span>)
+64:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">src</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Numeric</span>)
+65:           <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">src</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+66:           <span class="ruby-constant">StrcpyPL</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-identifier">src</span>)
+67:         <span class="ruby-keyword kw">else</span>
+68:           <span class="ruby-constant">StrcpyPP</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-identifier">src</span>)
+69:         <span class="ruby-keyword kw">end</span>
+70:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="strcspn-method" class="method-detail ">
+				<a name="method-i-strcspn"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">strcspn</span><span
+						class="method-args">(string, charset)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="strcspn-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/windows/msvcrt/string.rb, line 77</span>
+77:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">strcspn</span>(<span class="ruby-identifier">string</span>, <span class="ruby-identifier">charset</span>)
+78:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">string</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+79:         <span class="ruby-constant">Strcspn</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">string</span>, <span class="ruby-identifier">charset</span>)
+80:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="strlen-method" class="method-detail ">
+				<a name="method-i-strlen"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">strlen</span><span
+						class="method-args">(string)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="strlen-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/windows/msvcrt/string.rb, line 72</span>
+72:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">strlen</span>(<span class="ruby-identifier">string</span>)
+73:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">string</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+74:         <span class="ruby-constant">Strlen</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">string</span>)
+75:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="strncpy-method" class="method-detail ">
+				<a name="method-i-strncpy"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">strncpy</span><span
+						class="method-args">(dest, source, count)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="strncpy-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/windows/msvcrt/string.rb, line 82</span>
+82:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">strncpy</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-identifier">source</span>, <span class="ruby-identifier">count</span>)
+83:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">source</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+84:         <span class="ruby-constant">Strncpy</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-identifier">source</span>, <span class="ruby-identifier">count</span>)
+85:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="strpbrk-method" class="method-detail ">
+				<a name="method-i-strpbrk"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">strpbrk</span><span
+						class="method-args">(string, charset)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="strpbrk-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/windows/msvcrt/string.rb, line 87</span>
+87:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">strpbrk</span>(<span class="ruby-identifier">string</span>, <span class="ruby-identifier">charset</span>)
+88:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">string</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">charset</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+89:         <span class="ruby-constant">Strpbrk</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">string</span>, <span class="ruby-identifier">charset</span>)
+90:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="strrchr-method" class="method-detail ">
+				<a name="method-i-strrchr"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">strrchr</span><span
+						class="method-args">(string, int)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="strrchr-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/windows/msvcrt/string.rb, line 92</span>
+92:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">strrchr</span>(<span class="ruby-identifier">string</span>, <span class="ruby-identifier">int</span>)
+93:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">string</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+94:         <span class="ruby-constant">Strrchr</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">string</span>, <span class="ruby-identifier">int</span>)
+95:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="strrev-method" class="method-detail ">
+				<a name="method-i-strrev"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">strrev</span><span
+						class="method-args">(str)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="strrev-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/msvcrt/string.rb, line 97</span>
+ 97:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">strrev</span>(<span class="ruby-identifier">str</span>)
+ 98:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">str</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+ 99:         <span class="ruby-constant">Strrev</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">str</span>)
+100:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="strspn-method" class="method-detail ">
+				<a name="method-i-strspn"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">strspn</span><span
+						class="method-args">(string, charset)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="strspn-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/msvcrt/string.rb, line 102</span>
+102:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">strspn</span>(<span class="ruby-identifier">string</span>, <span class="ruby-identifier">charset</span>)
+103:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">string</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">charset</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+104:         <span class="ruby-constant">Strspn</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">string</span>, <span class="ruby-identifier">charset</span>)
+105:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="strstr-method" class="method-detail ">
+				<a name="method-i-strstr"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">strstr</span><span
+						class="method-args">(string, search)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="strstr-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/msvcrt/string.rb, line 107</span>
+107:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">strstr</span>(<span class="ruby-identifier">string</span>, <span class="ruby-identifier">search</span>)
+108:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">string</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">search</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+109:         <span class="ruby-constant">Strstr</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">string</span>, <span class="ruby-identifier">search</span>)
+110:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="strtok-method" class="method-detail ">
+				<a name="method-i-strtok"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">strtok</span><span
+						class="method-args">(token, delimeter)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="strtok-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/msvcrt/string.rb, line 112</span>
+112:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">strtok</span>(<span class="ruby-identifier">token</span>, <span class="ruby-identifier">delimeter</span>)
+113:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">token</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">delimeter</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+114:         <span class="ruby-constant">Strtok</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">token</span>, <span class="ruby-identifier">delimeter</span>)
+115:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="strtok-s-method" class="method-detail ">
+				<a name="method-i-strtok_s"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">strtok_s</span><span
+						class="method-args">(token, delimeter, context)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="strtok-s-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/msvcrt/string.rb, line 118</span>
+118:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">strtok_s</span>(<span class="ruby-identifier">token</span>, <span class="ruby-identifier">delimeter</span>, <span class="ruby-identifier">context</span>)
+119:           <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">if</span> [<span class="ruby-identifier">token</span>, <span class="ruby-identifier">delimter</span>, <span class="ruby-identifier">context</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-value">0</span>)
+120:           <span class="ruby-constant">Strtok_s</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">token</span>, <span class="ruby-identifier">delimeter</span>, <span class="ruby-identifier">context</span>)
+121:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="wcscmp-method" class="method-detail ">
+				<a name="method-i-wcscmp"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">wcscmp</span><span
+						class="method-args">(str1, str2)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="wcscmp-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/msvcrt/string.rb, line 150</span>
+150:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">wcscmp</span>(<span class="ruby-identifier">str1</span>, <span class="ruby-identifier">str2</span>)
+151:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">str1</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">str2</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+152:           <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>
+153:         <span class="ruby-keyword kw">end</span>
+154:         <span class="ruby-constant">Wcscmp</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">str1</span>, <span class="ruby-identifier">str2</span>)
+155:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="wcscpy-method" class="method-detail ">
+				<a name="method-i-wcscpy"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">wcscpy</span><span
+						class="method-args">(dest, src)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="wcscpy-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/msvcrt/string.rb, line 157</span>
+157:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">wcscpy</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-identifier">src</span>)
+158:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">src</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Numeric</span>)
+159:           <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">src</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+160:           <span class="ruby-constant">WcscpyPL</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-identifier">src</span>)
+161:         <span class="ruby-keyword kw">else</span>
+162:           <span class="ruby-constant">WcscpyPP</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-identifier">src</span>)
+163:         <span class="ruby-keyword kw">end</span>
+164:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="wcslen-method" class="method-detail ">
+				<a name="method-i-wcslen"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">wcslen</span><span
+						class="method-args">(string)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="wcslen-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/msvcrt/string.rb, line 166</span>
+166:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">wcslen</span>(<span class="ruby-identifier">string</span>)
+167:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">string</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+168:         <span class="ruby-constant">Wcslen</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">string</span>)
+169:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="wcsncpy-method" class="method-detail ">
+				<a name="method-i-wcsncpy"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">wcsncpy</span><span
+						class="method-args">(dest, source, count)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="wcsncpy-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/msvcrt/string.rb, line 171</span>
+171:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">wcsncpy</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-identifier">source</span>, <span class="ruby-identifier">count</span>)
+172:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">source</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+173:         <span class="ruby-constant">Wcsncpy</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-identifier">source</span>, <span class="ruby-identifier">count</span>)
+174:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="wcsrev-method" class="method-detail ">
+				<a name="method-i-wcsrev"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">wcsrev</span><span
+						class="method-args">(str)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="wcsrev-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/msvcrt/string.rb, line 176</span>
+176:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">wcsrev</span>(<span class="ruby-identifier">str</span>)
+177:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">str</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+178:         <span class="ruby-constant">Wcsrev</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">str</span>)
+179:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

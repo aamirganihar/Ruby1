@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: TCPSocket</title>
+
+	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="./lib/tcp_socket_extension_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/tcp_socket_extension.rb">lib/tcp_socket_extension.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-listening_service%3F">::listening_service?</a></li>
+					
+					<li><a href="#method-c-verbose_wait">::verbose_wait</a></li>
+					
+					<li><a href="#method-c-wait_for_service">::wait_for_service</a></li>
+					
+					<li><a href="#method-c-wait_for_service_termination">::wait_for_service_termination</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./Selenium.html">Selenium</a></li>
+				
+					<li><a href="./Selenium/Client.html">Selenium::Client</a></li>
+				
+					<li><a href="./Selenium/Client/Base.html">Selenium::Client::Base</a></li>
+				
+					<li><a href="./Selenium/Client/Driver.html">Selenium::Client::Driver</a></li>
+				
+					<li><a href="./Selenium/Client/Driver.html">Selenium::Client::Driver</a></li>
+				
+					<li><a href="./Selenium/Client/Extensions.html">Selenium::Client::Extensions</a></li>
+				
+					<li><a href="./Selenium/Client/GeneratedDriver.html">Selenium::Client::GeneratedDriver</a></li>
+				
+					<li><a href="./Selenium/Client/Idiomatic.html">Selenium::Client::Idiomatic</a></li>
+				
+					<li><a href="./Selenium/Client/JavascriptExpressionBuilder.html">Selenium::Client::JavascriptExpressionBuilder</a></li>
+				
+					<li><a href="./Selenium/Client/JavascriptFrameworks.html">Selenium::Client::JavascriptFrameworks</a></li>
+				
+					<li><a href="./Selenium/Client/JavascriptFrameworks/JQuery.html">Selenium::Client::JavascriptFrameworks::JQuery</a></li>
+				
+					<li><a href="./Selenium/Client/JavascriptFrameworks/Prototype.html">Selenium::Client::JavascriptFrameworks::Prototype</a></li>
+				
+					<li><a href="./Selenium/Client/Protocol.html">Selenium::Client::Protocol</a></li>
+				
+					<li><a href="./Selenium/Client/SeleniumHelper.html">Selenium::Client::SeleniumHelper</a></li>
+				
+					<li><a href="./Selenium/Client/SeleniumHelper.html">Selenium::Client::SeleniumHelper</a></li>
+				
+					<li><a href="./Selenium/CommandError.html">Selenium::CommandError</a></li>
+				
+					<li><a href="./Selenium/CommandError.html">Selenium::CommandError</a></li>
+				
+					<li><a href="./Selenium/ProtocolError.html">Selenium::ProtocolError</a></li>
+				
+					<li><a href="./Selenium/RSpec.html">Selenium::RSpec</a></li>
+				
+					<li><a href="./Selenium/RSpec/Reporting.html">Selenium::RSpec::Reporting</a></li>
+				
+					<li><a href="./Selenium/RSpec/Reporting/FilePathStrategy.html">Selenium::RSpec::Reporting::FilePathStrategy</a></li>
+				
+					<li><a href="./Selenium/RSpec/Reporting/HtmlReport.html">Selenium::RSpec::Reporting::HtmlReport</a></li>
+				
+					<li><a href="./Selenium/RSpec/Reporting/SystemCapture.html">Selenium::RSpec::Reporting::SystemCapture</a></li>
+				
+					<li><a href="./Selenium/RSpec/SeleniumTestReportFormatter.html">Selenium::RSpec::SeleniumTestReportFormatter</a></li>
+				
+					<li><a href="./Selenium/Rake.html">Selenium::Rake</a></li>
+				
+					<li><a href="./Selenium/Rake/RemoteControlStartTask.html">Selenium::Rake::RemoteControlStartTask</a></li>
+				
+					<li><a href="./Selenium/Rake/RemoteControlStopTask.html">Selenium::Rake::RemoteControlStopTask</a></li>
+				
+					<li><a href="./Selenium/RemoteControl.html">Selenium::RemoteControl</a></li>
+				
+					<li><a href="./Selenium/RemoteControl/RemoteControl.html">Selenium::RemoteControl::RemoteControl</a></li>
+				
+					<li><a href="./Spec.html">Spec</a></li>
+				
+					<li><a href="./Spec/Example.html">Spec::Example</a></li>
+				
+					<li><a href="./Spec/Example/ExampleMethods.html">Spec::Example::ExampleMethods</a></li>
+				
+					<li><a href="./Spec/Example/ExampleProxy.html">Spec::Example::ExampleProxy</a></li>
+				
+					<li><a href="./Nautilus.html">Nautilus</a></li>
+				
+					<li><a href="./Nautilus/Shell.html">Nautilus::Shell</a></li>
+				
+					<li><a href="./TCPSocket.html">TCPSocket</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">TCPSocket</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="listening-service--method" class="method-detail ">
+				<a name="method-c-listening_service%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">listening_service?</span><span
+						class="method-args">(options)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="listening-service--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/tcp_socket_extension.rb, line 14</span>
+14:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">listening_service?</span>(<span class="ruby-identifier">options</span>)
+15:     <span class="ruby-constant">Timeout</span><span class="ruby-operator">::</span><span class="ruby-identifier">timeout</span>(<span class="ruby-identifier">options</span>[<span class="ruby-value">:timeout</span>] <span class="ruby-operator">||</span> <span class="ruby-value">20</span>) <span class="ruby-keyword kw">do</span>
+16:       <span class="ruby-keyword kw">begin</span>
+17:         <span class="ruby-identifier">socket</span> = <span class="ruby-constant">TCPSocket</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">options</span>[<span class="ruby-value">:host</span>], <span class="ruby-identifier">options</span>[<span class="ruby-value">:port</span>])
+18:         <span class="ruby-identifier">socket</span>.<span class="ruby-identifier">close</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">socket</span>.<span class="ruby-identifier">nil?</span>
+19:         <span class="ruby-keyword kw">true</span>
+20:       <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ECONNREFUSED</span>, 
+21:              <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">EBADF</span>           <span class="ruby-comment cmt"># Windows</span>
+22:         <span class="ruby-keyword kw">false</span>
+23:       <span class="ruby-keyword kw">end</span>
+24:     <span class="ruby-keyword kw">end</span>
+25:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="verbose-wait-method" class="method-detail ">
+				<a name="method-c-verbose_wait"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">verbose_wait</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="verbose-wait-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/tcp_socket_extension.rb, line 27</span>
+27:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">verbose_wait</span>
+28:     <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;.\n&quot;</span>
+29:     <span class="ruby-identifier">sleep</span> <span class="ruby-value">2</span>
+30:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="wait-for-service-method" class="method-detail ">
+				<a name="method-c-wait_for_service"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">wait_for_service</span><span
+						class="method-args">(options)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="wait-for-service-source">
+<pre>
+   <span class="ruby-comment cmt"># File lib/tcp_socket_extension.rb, line 6</span>
+6:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">wait_for_service</span>(<span class="ruby-identifier">options</span>)
+7:     <span class="ruby-identifier">verbose_wait</span> <span class="ruby-keyword kw">until</span> <span class="ruby-identifier">listening_service?</span>(<span class="ruby-identifier">options</span>)
+8:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="wait-for-service-termination-method" class="method-detail ">
+				<a name="method-c-wait_for_service_termination"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">wait_for_service_termination</span><span
+						class="method-args">(options)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="wait-for-service-termination-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/tcp_socket_extension.rb, line 10</span>
+10:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">wait_for_service_termination</span>(<span class="ruby-identifier">options</span>)
+11:     <span class="ruby-identifier">verbose_wait</span> <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">listening_service?</span>(<span class="ruby-identifier">options</span>)
+12:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

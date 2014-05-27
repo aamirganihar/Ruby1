@@ -1,0 +1,1562 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Windows::MSVCRT::Time</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/windows/msvcrt/time_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/windows/msvcrt/time.rb">lib/windows/msvcrt/time.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-asctime">#asctime</a></li>
+					
+					<li><a href="#method-i-clock">#clock</a></li>
+					
+					<li><a href="#method-i-ctime">#ctime</a></li>
+					
+					<li><a href="#method-i-ctime64">#ctime64</a></li>
+					
+					<li><a href="#method-i-difftime">#difftime</a></li>
+					
+					<li><a href="#method-i-ftime">#ftime</a></li>
+					
+					<li><a href="#method-i-ftime64">#ftime64</a></li>
+					
+					<li><a href="#method-i-futime">#futime</a></li>
+					
+					<li><a href="#method-i-futime64">#futime64</a></li>
+					
+					<li><a href="#method-i-gmtime">#gmtime</a></li>
+					
+					<li><a href="#method-i-gmtime64">#gmtime64</a></li>
+					
+					<li><a href="#method-i-localtime">#localtime</a></li>
+					
+					<li><a href="#method-i-localtime64">#localtime64</a></li>
+					
+					<li><a href="#method-i-mktime">#mktime</a></li>
+					
+					<li><a href="#method-i-mktime64">#mktime64</a></li>
+					
+					<li><a href="#method-i-strdate">#strdate</a></li>
+					
+					<li><a href="#method-i-strftime">#strftime</a></li>
+					
+					<li><a href="#method-i-strtime">#strtime</a></li>
+					
+					<li><a href="#method-i-time">#time</a></li>
+					
+					<li><a href="#method-i-time64">#time64</a></li>
+					
+					<li><a href="#method-i-tzset">#tzset</a></li>
+					
+					<li><a href="#method-i-utime">#utime</a></li>
+					
+					<li><a href="#method-i-utime64">#utime64</a></li>
+					
+					<li><a href="#method-i-wasctime">#wasctime</a></li>
+					
+					<li><a href="#method-i-wcsftime">#wcsftime</a></li>
+					
+					<li><a href="#method-i-wctime">#wctime</a></li>
+					
+					<li><a href="#method-i-wctime64">#wctime64</a></li>
+					
+					<li><a href="#method-i-wstrdate">#wstrdate</a></li>
+					
+					<li><a href="#method-i-wstrtime">#wstrtime</a></li>
+					
+					<li><a href="#method-i-wutime">#wutime</a></li>
+					
+					<li><a href="#method-i-wutime64">#wutime64</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../../CHANGES.html">CHANGES</a></li>
+				
+					<li class="file"><a href="../../MANIFEST.html">MANIFEST</a></li>
+				
+					<li class="file"><a href="../../README.html">README</a></li>
+				
+					<li class="file"><a href="../../doc/conversion_guide_txt.html">conversion_guide.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../Windows.html">Windows</a></li>
+				
+					<li><a href="../../Windows/COM.html">Windows::COM</a></li>
+				
+					<li><a href="../../Windows/COM/Accessibility.html">Windows::COM::Accessibility</a></li>
+				
+					<li><a href="../../Windows/COM/Automation.html">Windows::COM::Automation</a></li>
+				
+					<li><a href="../../Windows/COM/Variant.html">Windows::COM::Variant</a></li>
+				
+					<li><a href="../../Windows/Clipboard.html">Windows::Clipboard</a></li>
+				
+					<li><a href="../../Windows/Console.html">Windows::Console</a></li>
+				
+					<li><a href="../../Windows/Debug.html">Windows::Debug</a></li>
+				
+					<li><a href="../../Windows/DeviceIO.html">Windows::DeviceIO</a></li>
+				
+					<li><a href="../../Windows/Directory.html">Windows::Directory</a></li>
+				
+					<li><a href="../../Windows/Error.html">Windows::Error</a></li>
+				
+					<li><a href="../../Windows/EventLog.html">Windows::EventLog</a></li>
+				
+					<li><a href="../../Windows/File.html">Windows::File</a></li>
+				
+					<li><a href="../../Windows/FileMapping.html">Windows::FileMapping</a></li>
+				
+					<li><a href="../../Windows/FileSystem.html">Windows::FileSystem</a></li>
+				
+					<li><a href="../../Windows/GDI.html">Windows::GDI</a></li>
+				
+					<li><a href="../../Windows/GDI/Bitmap.html">Windows::GDI::Bitmap</a></li>
+				
+					<li><a href="../../Windows/GDI/DeviceContext.html">Windows::GDI::DeviceContext</a></li>
+				
+					<li><a href="../../Windows/GDI/MetaFile.html">Windows::GDI::MetaFile</a></li>
+				
+					<li><a href="../../Windows/GDI/PaintingDrawing.html">Windows::GDI::PaintingDrawing</a></li>
+				
+					<li><a href="../../Windows/Handle.html">Windows::Handle</a></li>
+				
+					<li><a href="../../Windows/Library.html">Windows::Library</a></li>
+				
+					<li><a href="../../Windows/Limits.html">Windows::Limits</a></li>
+				
+					<li><a href="../../Windows/MSVCRT.html">Windows::MSVCRT</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/Buffer.html">Windows::MSVCRT::Buffer</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/Directory.html">Windows::MSVCRT::Directory</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/File.html">Windows::MSVCRT::File</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/IO.html">Windows::MSVCRT::IO</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/String.html">Windows::MSVCRT::String</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/Time.html">Windows::MSVCRT::Time</a></li>
+				
+					<li><a href="../../Windows/Mailslot.html">Windows::Mailslot</a></li>
+				
+					<li><a href="../../Windows/Memory.html">Windows::Memory</a></li>
+				
+					<li><a href="../../Windows/NIO.html">Windows::NIO</a></li>
+				
+					<li><a href="../../Windows/NTFS.html">Windows::NTFS</a></li>
+				
+					<li><a href="../../Windows/NTFS/Winternl.html">Windows::NTFS::Winternl</a></li>
+				
+					<li><a href="../../Windows/National.html">Windows::National</a></li>
+				
+					<li><a href="../../Windows/Network.html">Windows::Network</a></li>
+				
+					<li><a href="../../Windows/Network/Management.html">Windows::Network::Management</a></li>
+				
+					<li><a href="../../Windows/Network/SNMP.html">Windows::Network::SNMP</a></li>
+				
+					<li><a href="../../Windows/Network/Winsock.html">Windows::Network::Winsock</a></li>
+				
+					<li><a href="../../Windows/Path.html">Windows::Path</a></li>
+				
+					<li><a href="../../Windows/Pipe.html">Windows::Pipe</a></li>
+				
+					<li><a href="../../Windows/Process.html">Windows::Process</a></li>
+				
+					<li><a href="../../Windows/Registry.html">Windows::Registry</a></li>
+				
+					<li><a href="../../Windows/Security.html">Windows::Security</a></li>
+				
+					<li><a href="../../Windows/Security/Authentication.html">Windows::Security::Authentication</a></li>
+				
+					<li><a href="../../Windows/Service.html">Windows::Service</a></li>
+				
+					<li><a href="../../Windows/Shell.html">Windows::Shell</a></li>
+				
+					<li><a href="../../Windows/Socket.html">Windows::Socket</a></li>
+				
+					<li><a href="../../Windows/Sound.html">Windows::Sound</a></li>
+				
+					<li><a href="../../Windows/Synchronize.html">Windows::Synchronize</a></li>
+				
+					<li><a href="../../Windows/SystemInfo.html">Windows::SystemInfo</a></li>
+				
+					<li><a href="../../Windows/Thread.html">Windows::Thread</a></li>
+				
+					<li><a href="../../Windows/Time.html">Windows::Time</a></li>
+				
+					<li><a href="../../Windows/ToolHelper.html">Windows::ToolHelper</a></li>
+				
+					<li><a href="../../Windows/Unicode.html">Windows::Unicode</a></li>
+				
+					<li><a href="../../Windows/Volume.html">Windows::Volume</a></li>
+				
+					<li><a href="../../Windows/WSA.html">Windows::WSA</a></li>
+				
+					<li><a href="../../Windows/Window.html">Windows::Window</a></li>
+				
+					<li><a href="../../Windows/Window/Classes.html">Windows::Window::Classes</a></li>
+				
+					<li><a href="../../Windows/Window/Dialog.html">Windows::Window::Dialog</a></li>
+				
+					<li><a href="../../Windows/Window/Menu.html">Windows::Window::Menu</a></li>
+				
+					<li><a href="../../Windows/Window/Message.html">Windows::Window::Message</a></li>
+				
+					<li><a href="../../Windows/Window/Properties.html">Windows::Window::Properties</a></li>
+				
+					<li><a href="../../Windows/Window/Timer.html">Windows::Window::Timer</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Windows::MSVCRT::Time</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="Asctime">Asctime</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Clock">Clock</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Ctime">Ctime</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Ctime64">Ctime64</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Difftime">Difftime</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Ftime">Ftime</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Ftime64">Ftime64</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Futime">Futime</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Futime64">Futime64</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Gmtime">Gmtime</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Gmtime64">Gmtime64</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Localtime">Localtime</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Localtime64">Localtime64</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Mktime">Mktime</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Mktime64">Mktime64</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Strdate">Strdate</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Strftime">Strftime</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Strtime">Strtime</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinTime">WinTime</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="WinTime64">WinTime64</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Tzset">Tzset</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Utime">Utime</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Utime64">Utime64</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Wasctime">Wasctime</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Wctime">Wctime</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Wctime64">Wctime64</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Wstrdate">Wstrdate</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Wcsftime">Wcsftime</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Wstrtime">Wstrtime</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Wutime">Wutime</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Wutime64">Wutime64</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="asctime-method" class="method-detail ">
+				<a name="method-i-asctime"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">asctime</span><span
+						class="method-args">(timeptr)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="asctime-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/windows/msvcrt/time.rb, line 44</span>
+44:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">asctime</span>(<span class="ruby-identifier">timeptr</span>)
+45:         <span class="ruby-constant">Asctime</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">timeptr</span>)
+46:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="clock-method" class="method-detail ">
+				<a name="method-i-clock"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">clock</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="clock-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/windows/msvcrt/time.rb, line 48</span>
+48:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">clock</span>
+49:         <span class="ruby-constant">Clock</span>.<span class="ruby-identifier">call</span>
+50:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="ctime-method" class="method-detail ">
+				<a name="method-i-ctime"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">ctime</span><span
+						class="method-args">(timer)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="ctime-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/windows/msvcrt/time.rb, line 52</span>
+52:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ctime</span>(<span class="ruby-identifier">timer</span>)
+53:         <span class="ruby-constant">Ctime</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">timer</span>)
+54:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="ctime--method" class="method-detail ">
+				<a name="method-i-ctime64"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">ctime64</span><span
+						class="method-args">(timer)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="ctime--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/windows/msvcrt/time.rb, line 56</span>
+56:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ctime64</span>(<span class="ruby-identifier">timer</span>)
+57:         <span class="ruby-constant">Ctime64</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">timer</span>)
+58:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="difftime-method" class="method-detail ">
+				<a name="method-i-difftime"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">difftime</span><span
+						class="method-args">(timer1, timer0)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="difftime-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/windows/msvcrt/time.rb, line 60</span>
+60:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">difftime</span>(<span class="ruby-identifier">timer1</span>, <span class="ruby-identifier">timer0</span>)
+61:         <span class="ruby-constant">Difftime</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">timer1</span>, <span class="ruby-identifier">timer0</span>)
+62:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="ftime-method" class="method-detail ">
+				<a name="method-i-ftime"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">ftime</span><span
+						class="method-args">(timeptr)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="ftime-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/windows/msvcrt/time.rb, line 64</span>
+64:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ftime</span>(<span class="ruby-identifier">timeptr</span>)
+65:         <span class="ruby-constant">Ftime</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">timeptr</span>)
+66:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="ftime--method" class="method-detail ">
+				<a name="method-i-ftime64"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">ftime64</span><span
+						class="method-args">(timeptr)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="ftime--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/windows/msvcrt/time.rb, line 68</span>
+68:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ftime64</span>(<span class="ruby-identifier">timeptr</span>)
+69:         <span class="ruby-constant">Ftime64</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">timeptr</span>)
+70:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="futime-method" class="method-detail ">
+				<a name="method-i-futime"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">futime</span><span
+						class="method-args">(fd, filetime)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="futime-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/windows/msvcrt/time.rb, line 72</span>
+72:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">futime</span>(<span class="ruby-identifier">fd</span>, <span class="ruby-identifier">filetime</span>)
+73:         <span class="ruby-constant">Futime</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">fd</span>, <span class="ruby-identifier">filetime</span>)
+74:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="futime--method" class="method-detail ">
+				<a name="method-i-futime64"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">futime64</span><span
+						class="method-args">(fd, filetime)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="futime--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/windows/msvcrt/time.rb, line 76</span>
+76:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">futime64</span>(<span class="ruby-identifier">fd</span>, <span class="ruby-identifier">filetime</span>)
+77:         <span class="ruby-constant">Futime64</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">fd</span>, <span class="ruby-identifier">filetime</span>)
+78:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="gmtime-method" class="method-detail ">
+				<a name="method-i-gmtime"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">gmtime</span><span
+						class="method-args">(timer)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="gmtime-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/windows/msvcrt/time.rb, line 80</span>
+80:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">gmtime</span>(<span class="ruby-identifier">timer</span>)
+81:         <span class="ruby-constant">Gmtime</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">timer</span>)
+82:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="gmtime--method" class="method-detail ">
+				<a name="method-i-gmtime64"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">gmtime64</span><span
+						class="method-args">(timer)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="gmtime--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/windows/msvcrt/time.rb, line 84</span>
+84:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">gmtime64</span>(<span class="ruby-identifier">timer</span>)
+85:         <span class="ruby-constant">Gmtime64</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">timer</span>)
+86:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="localtime-method" class="method-detail ">
+				<a name="method-i-localtime"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">localtime</span><span
+						class="method-args">(timer)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="localtime-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/windows/msvcrt/time.rb, line 88</span>
+88:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">localtime</span>(<span class="ruby-identifier">timer</span>)
+89:         <span class="ruby-constant">Localtime</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">timer</span>)
+90:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="localtime--method" class="method-detail ">
+				<a name="method-i-localtime64"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">localtime64</span><span
+						class="method-args">(timer)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="localtime--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/windows/msvcrt/time.rb, line 92</span>
+92:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">localtime64</span>(<span class="ruby-identifier">timer</span>)
+93:         <span class="ruby-constant">Localtime64</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">timer</span>)
+94:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="mktime-method" class="method-detail ">
+				<a name="method-i-mktime"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">mktime</span><span
+						class="method-args">(timeptr)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="mktime-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/windows/msvcrt/time.rb, line 96</span>
+96:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mktime</span>(<span class="ruby-identifier">timeptr</span>)
+97:         <span class="ruby-constant">Mktime</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">timeptr</span>)
+98:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="mktime--method" class="method-detail ">
+				<a name="method-i-mktime64"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">mktime64</span><span
+						class="method-args">(timeptr)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="mktime--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/msvcrt/time.rb, line 100</span>
+100:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mktime64</span>(<span class="ruby-identifier">timeptr</span>)
+101:         <span class="ruby-constant">Mktime64</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">timeptr</span>)
+102:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="strdate-method" class="method-detail ">
+				<a name="method-i-strdate"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">strdate</span><span
+						class="method-args">(datestr)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="strdate-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/msvcrt/time.rb, line 104</span>
+104:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">strdate</span>(<span class="ruby-identifier">datestr</span>)
+105:         <span class="ruby-constant">Strdate</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">datestr</span>)
+106:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="strftime-method" class="method-detail ">
+				<a name="method-i-strftime"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">strftime</span><span
+						class="method-args">(dest, maxsize, format, timeptr)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="strftime-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/msvcrt/time.rb, line 108</span>
+108:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">strftime</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-identifier">maxsize</span>, <span class="ruby-identifier">format</span>, <span class="ruby-identifier">timeptr</span>)
+109:         <span class="ruby-constant">Strftime</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-identifier">maxsize</span>, <span class="ruby-identifier">format</span>, <span class="ruby-identifier">timeptr</span>)
+110:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="strtime-method" class="method-detail ">
+				<a name="method-i-strtime"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">strtime</span><span
+						class="method-args">(timestr)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="strtime-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/msvcrt/time.rb, line 112</span>
+112:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">strtime</span>(<span class="ruby-identifier">timestr</span>)
+113:         <span class="ruby-constant">Strtime</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">timestr</span>)
+114:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="time-method" class="method-detail ">
+				<a name="method-i-time"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">time</span><span
+						class="method-args">(timer)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="time-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/msvcrt/time.rb, line 116</span>
+116:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">time</span>(<span class="ruby-identifier">timer</span>)
+117:         <span class="ruby-constant">WinTime</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">timer</span>)
+118:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="time--method" class="method-detail ">
+				<a name="method-i-time64"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">time64</span><span
+						class="method-args">(timer)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="time--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/msvcrt/time.rb, line 120</span>
+120:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">time64</span>(<span class="ruby-identifier">timer</span>)
+121:         <span class="ruby-constant">WinTime64</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">timer</span>)
+122:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="tzset-method" class="method-detail ">
+				<a name="method-i-tzset"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">tzset</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="tzset-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/msvcrt/time.rb, line 124</span>
+124:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">tzset</span>
+125:         <span class="ruby-constant">Tzset</span>.<span class="ruby-identifier">call</span>
+126:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="utime-method" class="method-detail ">
+				<a name="method-i-utime"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">utime</span><span
+						class="method-args">(filename, times)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="utime-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/msvcrt/time.rb, line 128</span>
+128:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">utime</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-identifier">times</span>)
+129:         <span class="ruby-constant">Utime</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-identifier">times</span>)
+130:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="utime--method" class="method-detail ">
+				<a name="method-i-utime64"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">utime64</span><span
+						class="method-args">(filename, times)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="utime--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/msvcrt/time.rb, line 132</span>
+132:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">utime64</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-identifier">times</span>)
+133:         <span class="ruby-constant">Utime64</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-identifier">times</span>)
+134:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="wasctime-method" class="method-detail ">
+				<a name="method-i-wasctime"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">wasctime</span><span
+						class="method-args">(timeptr)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="wasctime-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/msvcrt/time.rb, line 136</span>
+136:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">wasctime</span>(<span class="ruby-identifier">timeptr</span>)
+137:         <span class="ruby-constant">Wasctime</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">timeptr</span>)
+138:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="wcsftime-method" class="method-detail ">
+				<a name="method-i-wcsftime"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">wcsftime</span><span
+						class="method-args">(dest, maxsize, format, timeptr)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="wcsftime-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/msvcrt/time.rb, line 140</span>
+140:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">wcsftime</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-identifier">maxsize</span>, <span class="ruby-identifier">format</span>, <span class="ruby-identifier">timeptr</span>)
+141:         <span class="ruby-constant">Wcsftime</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-identifier">maxsize</span>, <span class="ruby-identifier">format</span>, <span class="ruby-identifier">timeptr</span>)
+142:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="wctime-method" class="method-detail ">
+				<a name="method-i-wctime"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">wctime</span><span
+						class="method-args">(timer)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="wctime-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/msvcrt/time.rb, line 144</span>
+144:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">wctime</span>(<span class="ruby-identifier">timer</span>)
+145:         <span class="ruby-constant">Wctime</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">timer</span>)
+146:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="wctime--method" class="method-detail ">
+				<a name="method-i-wctime64"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">wctime64</span><span
+						class="method-args">(timer)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="wctime--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/msvcrt/time.rb, line 148</span>
+148:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">wctime64</span>(<span class="ruby-identifier">timer</span>)
+149:         <span class="ruby-constant">Wctime64</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">timer</span>)
+150:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="wstrdate-method" class="method-detail ">
+				<a name="method-i-wstrdate"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">wstrdate</span><span
+						class="method-args">(datestr)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="wstrdate-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/msvcrt/time.rb, line 152</span>
+152:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">wstrdate</span>(<span class="ruby-identifier">datestr</span>)
+153:         <span class="ruby-constant">Wstrdate</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">datestr</span>)
+154:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="wstrtime-method" class="method-detail ">
+				<a name="method-i-wstrtime"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">wstrtime</span><span
+						class="method-args">(timestr)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="wstrtime-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/msvcrt/time.rb, line 156</span>
+156:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">wstrtime</span>(<span class="ruby-identifier">timestr</span>)
+157:         <span class="ruby-constant">Wstrtime</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">timestr</span>)
+158:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="wutime-method" class="method-detail ">
+				<a name="method-i-wutime"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">wutime</span><span
+						class="method-args">(filename, times)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="wutime-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/msvcrt/time.rb, line 160</span>
+160:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">wutime</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-identifier">times</span>)
+161:         <span class="ruby-constant">Wutime</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-identifier">times</span>)
+162:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="wutime--method" class="method-detail ">
+				<a name="method-i-wutime64"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">wutime64</span><span
+						class="method-args">(filename, times)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="wutime--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/msvcrt/time.rb, line 164</span>
+164:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">wutime64</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-identifier">times</span>)
+165:         <span class="ruby-constant">Wutime64</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">filename</span>, <span class="ruby-identifier">times</span>)
+166:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

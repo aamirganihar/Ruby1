@@ -1,0 +1,2067 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Addressable::Template</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/addressable/template_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/addressable/template.rb">lib/addressable/template.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+			<div id="namespace-list-section" class="section">
+				<h3 class="section-header">Namespace</h3>
+				<ul class="link-list">
+					
+					<li><span class="type">CLASS</span> <a href="Template/InvalidTemplateOperatorError.html">Addressable::Template::InvalidTemplateOperatorError</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Template/InvalidTemplateValueError.html">Addressable::Template::InvalidTemplateValueError</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Template/MatchData.html">Addressable::Template::MatchData</a></li>
+					
+					<li><span class="type">CLASS</span> <a href="Template/TemplateOperatorAbortedError.html">Addressable::Template::TemplateOperatorAbortedError</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-expand">#expand</a></li>
+					
+					<li><a href="#method-i-expand_join_operator">#expand_join_operator</a></li>
+					
+					<li><a href="#method-i-expand_list_operator">#expand_list_operator</a></li>
+					
+					<li><a href="#method-i-expand_neg_operator">#expand_neg_operator</a></li>
+					
+					<li><a href="#method-i-expand_opt_operator">#expand_opt_operator</a></li>
+					
+					<li><a href="#method-i-expand_prefix_operator">#expand_prefix_operator</a></li>
+					
+					<li><a href="#method-i-expand_suffix_operator">#expand_suffix_operator</a></li>
+					
+					<li><a href="#method-i-extract">#extract</a></li>
+					
+					<li><a href="#method-i-extract_join_operator">#extract_join_operator</a></li>
+					
+					<li><a href="#method-i-extract_list_operator">#extract_list_operator</a></li>
+					
+					<li><a href="#method-i-extract_neg_operator">#extract_neg_operator</a></li>
+					
+					<li><a href="#method-i-extract_opt_operator">#extract_opt_operator</a></li>
+					
+					<li><a href="#method-i-extract_prefix_operator">#extract_prefix_operator</a></li>
+					
+					<li><a href="#method-i-extract_suffix_operator">#extract_suffix_operator</a></li>
+					
+					<li><a href="#method-i-inspect">#inspect</a></li>
+					
+					<li><a href="#method-i-keys">#keys</a></li>
+					
+					<li><a href="#method-i-match">#match</a></li>
+					
+					<li><a href="#method-i-ordered_variable_defaults">#ordered_variable_defaults</a></li>
+					
+					<li><a href="#method-i-parse_template_expansion">#parse_template_expansion</a></li>
+					
+					<li><a href="#method-i-parse_template_pattern">#parse_template_pattern</a></li>
+					
+					<li><a href="#method-i-partial_expand">#partial_expand</a></li>
+					
+					<li><a href="#method-i-transform_mapping">#transform_mapping</a></li>
+					
+					<li><a href="#method-i-variable_defaults">#variable_defaults</a></li>
+					
+					<li><a href="#method-i-variables">#variables</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Addressable.html">Addressable</a></li>
+				
+					<li><a href="../Addressable/IDNA.html">Addressable::IDNA</a></li>
+				
+					<li><a href="../Addressable/IDNA/PunycodeBadInput.html">Addressable::IDNA::PunycodeBadInput</a></li>
+				
+					<li><a href="../Addressable/IDNA/PunycodeBigOutput.html">Addressable::IDNA::PunycodeBigOutput</a></li>
+				
+					<li><a href="../Addressable/IDNA/PunycodeOverflow.html">Addressable::IDNA::PunycodeOverflow</a></li>
+				
+					<li><a href="../Addressable/Template.html">Addressable::Template</a></li>
+				
+					<li><a href="../Addressable/Template/InvalidTemplateOperatorError.html">Addressable::Template::InvalidTemplateOperatorError</a></li>
+				
+					<li><a href="../Addressable/Template/InvalidTemplateValueError.html">Addressable::Template::InvalidTemplateValueError</a></li>
+				
+					<li><a href="../Addressable/Template/MatchData.html">Addressable::Template::MatchData</a></li>
+				
+					<li><a href="../Addressable/Template/TemplateOperatorAbortedError.html">Addressable::Template::TemplateOperatorAbortedError</a></li>
+				
+					<li><a href="../Addressable/URI.html">Addressable::URI</a></li>
+				
+					<li><a href="../Addressable/URI/CharacterClasses.html">Addressable::URI::CharacterClasses</a></li>
+				
+					<li><a href="../Addressable/URI/InvalidURIError.html">Addressable::URI::InvalidURIError</a></li>
+				
+					<li><a href="../Addressable/VERSION.html">Addressable::VERSION</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Addressable::Template</h1>
+
+		<div id="description">
+			<p>
+This is an implementation of a <a href="URI.html">URI</a> template based on
+<a href=&#8220;<a
+href="http://tinyurl.com/uritemplatedraft03">URI">tinyurl.com/uritemplatedraft03">URI</a>
+<a href="Template.html">Template</a> draft 03</a>.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="OPERATOR_EXPANSION">OPERATOR_EXPANSION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="VARIABLE_EXPANSION">VARIABLE_EXPANSION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="pattern-attribute-method" class="method-detail">
+				<a name="pattern"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">pattern</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+@return [String] The <a href="Template.html">Template</a> object&#8217;s
+pattern.
+</p>
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(pattern)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Creates a new <tt>Addressable::Template</tt> object.
+</p>
+<p>
+@param [#] pattern The <a href="URI.html">URI</a> <a
+href="Template.html">Template</a> pattern.
+</p>
+<p>
+@return [Addressable::Template] The initialized <a
+href="Template.html">Template</a> object.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/addressable/template.rb, line 123</span>
+123:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">pattern</span>)
+124:       <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">pattern</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:to_str</span>)
+125:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>, <span class="ruby-node">&quot;Can't convert #{pattern.class} into String.&quot;</span>
+126:       <span class="ruby-keyword kw">end</span>
+127:       <span class="ruby-ivar">@pattern</span> = <span class="ruby-identifier">pattern</span>.<span class="ruby-identifier">to_str</span>.<span class="ruby-identifier">freeze</span>
+128:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="expand-method" class="method-detail ">
+				<a name="method-i-expand"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">expand</span><span
+						class="method-args">(mapping, processor=nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Expands a <a href="URI.html">URI</a> template into a full <a
+href="URI.html">URI</a>.
+</p>
+<p>
+@param [Hash] mapping The mapping that corresponds to the pattern. @param
+[#, #] processor
+</p>
+<pre>
+  An optional processor object may be supplied.
+</pre>
+<p>
+The object should respond to either the <tt>validate</tt> or
+<tt>transform</tt> messages or both. Both the <tt>validate</tt> and
+<tt>transform</tt> methods should take two parameters: <tt>name</tt> and
+<tt>value</tt>. The <tt>validate</tt> method should return <tt>true</tt> or
+<tt>false</tt>; <tt>true</tt> if the value of the variable is valid,
+<tt>false</tt> otherwise. An <tt>InvalidTemplateValueError</tt> exception
+will be raised if the value is invalid. The <tt>transform</tt> method
+should return the transformed variable value as a <tt>String</tt>. If a
+<tt>transform</tt> method is used, the value will not be percent encoded
+automatically. Unicode normalization will be performed both before and
+after sending the value to the transform method.
+</p>
+<p>
+@return [Addressable::URI] The expanded <a href="URI.html">URI</a>
+template.
+</p>
+<p>
+@example
+</p>
+<pre>
+  class ExampleProcessor
+    def self.validate(name, value)
+      return !!(value =~ /^[\w ]+$/) if name == &quot;query&quot;
+      return true
+    end
+
+    def self.transform(name, value)
+      return value.gsub(/ /, &quot;+&quot;) if name == &quot;query&quot;
+      return value
+    end
+  end
+
+  Addressable::Template.new(
+    &quot;http://example.com/search/{query}/&quot;
+  ).expand(
+    {&quot;query&quot; =&gt; &quot;an example search query&quot;},
+    ExampleProcessor
+  ).to_str
+  #=&gt; &quot;http://example.com/search/an+example+search+query/&quot;
+
+  Addressable::Template.new(
+    &quot;http://example.com/search/{-list|+|query}/&quot;
+  ).expand(
+    {&quot;query&quot; =&gt; &quot;an example search query&quot;.split(&quot; &quot;)}
+  ).to_str
+  #=&gt; &quot;http://example.com/search/an+example+search+query/&quot;
+
+  Addressable::Template.new(
+    &quot;http://example.com/search/{query}/&quot;
+  ).expand(
+    {&quot;query&quot; =&gt; &quot;bogus!&quot;},
+    ExampleProcessor
+  ).to_str
+  #=&gt; Addressable::Template::InvalidTemplateValueError</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="expand-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/addressable/template.rb, line 454</span>
+454:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">expand</span>(<span class="ruby-identifier">mapping</span>, <span class="ruby-identifier">processor</span>=<span class="ruby-keyword kw">nil</span>)
+455:       <span class="ruby-identifier">result</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">pattern</span>.<span class="ruby-identifier">dup</span>
+456:       <span class="ruby-identifier">transformed_mapping</span> = <span class="ruby-identifier">transform_mapping</span>(<span class="ruby-identifier">mapping</span>, <span class="ruby-identifier">processor</span>)
+457:       <span class="ruby-identifier">result</span>.<span class="ruby-identifier">gsub!</span>(
+458:         <span class="ruby-node">/#{OPERATOR_EXPANSION}|#{VARIABLE_EXPANSION}/</span>
+459:       ) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">capture</span><span class="ruby-operator">|</span>
+460:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">capture</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">OPERATOR_EXPANSION</span>
+461:           <span class="ruby-identifier">operator</span>, <span class="ruby-identifier">argument</span>, <span class="ruby-identifier">variables</span>, <span class="ruby-identifier">default_mapping</span> =
+462:             <span class="ruby-identifier">parse_template_expansion</span>(<span class="ruby-identifier">capture</span>, <span class="ruby-identifier">transformed_mapping</span>)
+463:           <span class="ruby-identifier">expand_method</span> = <span class="ruby-node">&quot;expand_#{operator}_operator&quot;</span>
+464:           <span class="ruby-keyword kw">if</span> ([<span class="ruby-identifier">expand_method</span>, <span class="ruby-identifier">expand_method</span>.<span class="ruby-identifier">to_sym</span>] &amp; <span class="ruby-identifier">private_methods</span>).<span class="ruby-identifier">empty?</span>
+465:             <span class="ruby-identifier">raise</span> <span class="ruby-constant">InvalidTemplateOperatorError</span>,
+466:               <span class="ruby-node">&quot;Invalid template operator: #{operator}&quot;</span>
+467:           <span class="ruby-keyword kw">else</span>
+468:             <span class="ruby-identifier">send</span>(<span class="ruby-identifier">expand_method</span>.<span class="ruby-identifier">to_sym</span>, <span class="ruby-identifier">argument</span>, <span class="ruby-identifier">variables</span>, <span class="ruby-identifier">default_mapping</span>)
+469:           <span class="ruby-keyword kw">end</span>
+470:         <span class="ruby-keyword kw">else</span>
+471:           <span class="ruby-identifier">varname</span>, <span class="ruby-identifier">_</span>, <span class="ruby-identifier">vardefault</span> = <span class="ruby-identifier">capture</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp re">/^\{(.+?)(=(.*))?\}$/</span>)[<span class="ruby-value">0</span>]
+472:           <span class="ruby-identifier">transformed_mapping</span>[<span class="ruby-identifier">varname</span>] <span class="ruby-operator">||</span> <span class="ruby-identifier">vardefault</span>
+473:         <span class="ruby-keyword kw">end</span>
+474:       <span class="ruby-keyword kw">end</span>
+475:       <span class="ruby-keyword kw">return</span> <span class="ruby-constant">Addressable</span><span class="ruby-operator">::</span><span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">result</span>)
+476:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="extract-method" class="method-detail ">
+				<a name="method-i-extract"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">extract</span><span
+						class="method-args">(uri, processor=nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Extracts a mapping from the <a href="URI.html">URI</a> using a <a
+href="URI.html">URI</a> <a href="Template.html">Template</a> pattern.
+</p>
+<p>
+@param [<a href="URI.html">Addressable::URI</a>, #] uri
+</p>
+<pre>
+  The URI to extract from.
+</pre>
+<p>
+@param [#, <a href="Template.html#method-i-match">#</a>] processor
+</p>
+<pre>
+  A template processor object may optionally be supplied.
+  
+  The object should respond to either the &lt;tt&gt;restore&lt;/tt&gt; or
+  &lt;tt&gt;match&lt;/tt&gt; messages or both. The &lt;tt&gt;restore&lt;/tt&gt; method should
+  take two parameters: `[String] name` and `[String] value`.
+  The &lt;tt&gt;restore&lt;/tt&gt; method should reverse any transformations that
+  have been performed on the value to ensure a valid URI.
+  The &lt;tt&gt;match&lt;/tt&gt; method should take a single
+  parameter: `[String] name`.  The &lt;tt&gt;match&lt;/tt&gt; method should return
+  a &lt;tt&gt;String&lt;/tt&gt; containing a regular expression capture group for
+  matching on that particular variable. The default value is `&quot;.*?&quot;`.
+  The &lt;tt&gt;match&lt;/tt&gt; method has no effect on multivariate operator
+  expansions.
+</pre>
+<p>
+@return [Hash, NilClass]
+</p>
+<pre>
+  The &lt;tt&gt;Hash&lt;/tt&gt; mapping that was extracted from the URI, or
+  &lt;tt&gt;nil&lt;/tt&gt; if the URI didn't match the template.
+</pre>
+<p>
+@example
+</p>
+<pre>
+  class ExampleProcessor
+    def self.restore(name, value)
+      return value.gsub(/\+/, &quot; &quot;) if name == &quot;query&quot;
+      return value
+    end
+
+    def self.match(name)
+      return &quot;.*?&quot; if name == &quot;first&quot;
+      return &quot;.*&quot;
+    end
+  end
+
+  uri = Addressable::URI.parse(
+    &quot;http://example.com/search/an+example+search+query/&quot;
+  )
+  Addressable::Template.new(
+    &quot;http://example.com/search/{query}/&quot;
+  ).extract(uri, ExampleProcessor)
+  #=&gt; {&quot;query&quot; =&gt; &quot;an example search query&quot;}
+
+  uri = Addressable::URI.parse(&quot;http://example.com/a/b/c/&quot;)
+  Addressable::Template.new(
+    &quot;http://example.com/{first}/{second}/&quot;
+  ).extract(uri, ExampleProcessor)
+  #=&gt; {&quot;first&quot; =&gt; &quot;a&quot;, &quot;second&quot; =&gt; &quot;b/c&quot;}
+
+  uri = Addressable::URI.parse(&quot;http://example.com/a/b/c/&quot;)
+  Addressable::Template.new(
+    &quot;http://example.com/{first}/{-list|/|second}/&quot;
+  ).extract(uri)
+  #=&gt; {&quot;first&quot; =&gt; &quot;a&quot;, &quot;second&quot; =&gt; [&quot;b&quot;, &quot;c&quot;]}</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="extract-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/addressable/template.rb, line 200</span>
+200:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">extract</span>(<span class="ruby-identifier">uri</span>, <span class="ruby-identifier">processor</span>=<span class="ruby-keyword kw">nil</span>)
+201:       <span class="ruby-identifier">match_data</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">match</span>(<span class="ruby-identifier">uri</span>, <span class="ruby-identifier">processor</span>)
+202:       <span class="ruby-keyword kw">return</span> (<span class="ruby-identifier">match_data</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">match_data</span>.<span class="ruby-identifier">mapping</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">nil</span>)
+203:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="inspect-method" class="method-detail ">
+				<a name="method-i-inspect"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">inspect</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns a <tt>String</tt> representation of the <a
+href="Template.html">Template</a> object&#8217;s state.
+</p>
+<p>
+@return [String] The <a href="Template.html">Template</a> object&#8217;s
+state, as a <tt>String</tt>.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="inspect-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/addressable/template.rb, line 138</span>
+138:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">inspect</span>
+139:       <span class="ruby-identifier">sprintf</span>(<span class="ruby-node">&quot;#&lt;%s:%#0x PATTERN:%s&gt;&quot;</span>,
+140:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">object_id</span>, <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">pattern</span>)
+141:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="keys-method" class="method-detail method-alias">
+				<a name="method-i-keys"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">keys</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+				</div>
+
+				
+
+				
+				<div class="aliases">
+          Alias for: <a href="Template.html#method-i-variables">variables</a>
+				</div>
+				
+			</div>
+
+		
+			<div id="match-method" class="method-detail ">
+				<a name="method-i-match"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">match</span><span
+						class="method-args">(uri, processor=nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Extracts match data from the <a href="URI.html">URI</a> using a <a
+href="URI.html">URI</a> <a href="Template.html">Template</a> pattern.
+</p>
+<p>
+@param [<a href="URI.html">Addressable::URI</a>, #] uri
+</p>
+<pre>
+  The URI to extract from.
+</pre>
+<p>
+@param [#, <a href="Template.html#method-i-match">#</a>] processor
+</p>
+<pre>
+  A template processor object may optionally be supplied.
+  
+  The object should respond to either the &lt;tt&gt;restore&lt;/tt&gt; or
+  &lt;tt&gt;match&lt;/tt&gt; messages or both. The &lt;tt&gt;restore&lt;/tt&gt; method should
+  take two parameters: `[String] name` and `[String] value`.
+  The &lt;tt&gt;restore&lt;/tt&gt; method should reverse any transformations that
+  have been performed on the value to ensure a valid URI.
+  The &lt;tt&gt;match&lt;/tt&gt; method should take a single
+  parameter: `[String] name`. The &lt;tt&gt;match&lt;/tt&gt; method should return
+  a &lt;tt&gt;String&lt;/tt&gt; containing a regular expression capture group for
+  matching on that particular variable. The default value is `&quot;.*?&quot;`.
+  The &lt;tt&gt;match&lt;/tt&gt; method has no effect on multivariate operator
+  expansions.
+</pre>
+<p>
+@return [Hash, NilClass]
+</p>
+<pre>
+  The &lt;tt&gt;Hash&lt;/tt&gt; mapping that was extracted from the URI, or
+  &lt;tt&gt;nil&lt;/tt&gt; if the URI didn't match the template.
+</pre>
+<p>
+@example
+</p>
+<pre>
+  class ExampleProcessor
+    def self.restore(name, value)
+      return value.gsub(/\+/, &quot; &quot;) if name == &quot;query&quot;
+      return value
+    end
+
+    def self.match(name)
+      return &quot;.*?&quot; if name == &quot;first&quot;
+      return &quot;.*&quot;
+    end
+  end
+
+  uri = Addressable::URI.parse(
+    &quot;http://example.com/search/an+example+search+query/&quot;
+  )
+  match = Addressable::Template.new(
+    &quot;http://example.com/search/{query}/&quot;
+  ).match(uri, ExampleProcessor)
+  match.variables
+  #=&gt; [&quot;query&quot;]
+  match.captures
+  #=&gt; [&quot;an example search query&quot;]
+
+  uri = Addressable::URI.parse(&quot;http://example.com/a/b/c/&quot;)
+  match = Addressable::Template.new(
+    &quot;http://example.com/{first}/{second}/&quot;
+  ).match(uri, ExampleProcessor)
+  match.variables
+  #=&gt; [&quot;first&quot;, &quot;second&quot;]
+  match.captures
+  #=&gt; [&quot;a&quot;, &quot;b/c&quot;]
+
+  uri = Addressable::URI.parse(&quot;http://example.com/a/b/c/&quot;)
+  match = Addressable::Template.new(
+    &quot;http://example.com/{first}/{-list|/|second}/&quot;
+  ).match(uri)
+  match.variables
+  #=&gt; [&quot;first&quot;, &quot;second&quot;]
+  match.captures
+  #=&gt; [&quot;a&quot;, [&quot;b&quot;, &quot;c&quot;]]</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="match-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/addressable/template.rb, line 271</span>
+271:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">match</span>(<span class="ruby-identifier">uri</span>, <span class="ruby-identifier">processor</span>=<span class="ruby-keyword kw">nil</span>)
+272:       <span class="ruby-identifier">uri</span> = <span class="ruby-constant">Addressable</span><span class="ruby-operator">::</span><span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-identifier">uri</span>)
+273:       <span class="ruby-identifier">mapping</span> = {}
+274: 
+275:       <span class="ruby-comment cmt"># First, we need to process the pattern, and extract the values.</span>
+276:       <span class="ruby-identifier">expansions</span>, <span class="ruby-identifier">expansion_regexp</span> =
+277:         <span class="ruby-identifier">parse_template_pattern</span>(<span class="ruby-identifier">pattern</span>, <span class="ruby-identifier">processor</span>)
+278:       <span class="ruby-identifier">unparsed_values</span> = <span class="ruby-identifier">uri</span>.<span class="ruby-identifier">to_str</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-identifier">expansion_regexp</span>).<span class="ruby-identifier">flatten</span>
+279: 
+280:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">uri</span>.<span class="ruby-identifier">to_str</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">pattern</span>
+281:         <span class="ruby-keyword kw">return</span> <span class="ruby-constant">Addressable</span><span class="ruby-operator">::</span><span class="ruby-constant">Template</span><span class="ruby-operator">::</span><span class="ruby-constant">MatchData</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">uri</span>, <span class="ruby-keyword kw">self</span>, <span class="ruby-identifier">mapping</span>)
+282:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">expansions</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">expansions</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">unparsed_values</span>.<span class="ruby-identifier">size</span>
+283:         <span class="ruby-identifier">expansions</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">expansion</span>, <span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+284:           <span class="ruby-identifier">unparsed_value</span> = <span class="ruby-identifier">unparsed_values</span>[<span class="ruby-identifier">index</span>]
+285:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">expansion</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">OPERATOR_EXPANSION</span>
+286:             <span class="ruby-identifier">operator</span>, <span class="ruby-identifier">argument</span>, <span class="ruby-identifier">variables</span> =
+287:               <span class="ruby-identifier">parse_template_expansion</span>(<span class="ruby-identifier">expansion</span>)
+288:             <span class="ruby-identifier">extract_method</span> = <span class="ruby-node">&quot;extract_#{operator}_operator&quot;</span>
+289:             <span class="ruby-keyword kw">if</span> ([<span class="ruby-identifier">extract_method</span>, <span class="ruby-identifier">extract_method</span>.<span class="ruby-identifier">to_sym</span>] &amp;
+290:                 <span class="ruby-identifier">private_methods</span>).<span class="ruby-identifier">empty?</span>
+291:               <span class="ruby-identifier">raise</span> <span class="ruby-constant">InvalidTemplateOperatorError</span>,
+292:                 <span class="ruby-node">&quot;Invalid template operator: #{operator}&quot;</span>
+293:             <span class="ruby-keyword kw">else</span>
+294:               <span class="ruby-keyword kw">begin</span>
+295:                 <span class="ruby-identifier">send</span>(
+296:                   <span class="ruby-identifier">extract_method</span>.<span class="ruby-identifier">to_sym</span>, <span class="ruby-identifier">unparsed_value</span>, <span class="ruby-identifier">processor</span>,
+297:                   <span class="ruby-identifier">argument</span>, <span class="ruby-identifier">variables</span>, <span class="ruby-identifier">mapping</span>
+298:                 )
+299:               <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">TemplateOperatorAbortedError</span>
+300:                 <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>
+301:               <span class="ruby-keyword kw">end</span>
+302:             <span class="ruby-keyword kw">end</span>
+303:           <span class="ruby-keyword kw">else</span>
+304:             <span class="ruby-identifier">name</span> = <span class="ruby-identifier">expansion</span>[<span class="ruby-constant">VARIABLE_EXPANSION</span>, <span class="ruby-value">1</span>]
+305:             <span class="ruby-identifier">value</span> = <span class="ruby-identifier">unparsed_value</span>
+306:             <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">processor</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">processor</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:restore</span>)
+307:               <span class="ruby-identifier">value</span> = <span class="ruby-identifier">processor</span>.<span class="ruby-identifier">restore</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">value</span>)
+308:             <span class="ruby-keyword kw">end</span>
+309:             <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">mapping</span>[<span class="ruby-identifier">name</span>] <span class="ruby-operator">==</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">mapping</span>[<span class="ruby-identifier">name</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">value</span>
+310:               <span class="ruby-identifier">mapping</span>[<span class="ruby-identifier">name</span>] = <span class="ruby-identifier">value</span>
+311:             <span class="ruby-keyword kw">else</span>
+312:               <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>
+313:             <span class="ruby-keyword kw">end</span>
+314:           <span class="ruby-keyword kw">end</span>
+315:         <span class="ruby-keyword kw">end</span>
+316:         <span class="ruby-keyword kw">return</span> <span class="ruby-constant">Addressable</span><span class="ruby-operator">::</span><span class="ruby-constant">Template</span><span class="ruby-operator">::</span><span class="ruby-constant">MatchData</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">uri</span>, <span class="ruby-keyword kw">self</span>, <span class="ruby-identifier">mapping</span>)
+317:       <span class="ruby-keyword kw">else</span>
+318:         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>
+319:       <span class="ruby-keyword kw">end</span>
+320:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="partial-expand-method" class="method-detail ">
+				<a name="method-i-partial_expand"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">partial_expand</span><span
+						class="method-args">(mapping, processor=nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Expands a <a href="URI.html">URI</a> template into another <a
+href="URI.html">URI</a> template.
+</p>
+<p>
+@param [Hash] mapping The mapping that corresponds to the pattern. @param
+[#, #] processor
+</p>
+<pre>
+  An optional processor object may be supplied. 
+</pre>
+<p>
+The object should respond to either the <tt>validate</tt> or
+<tt>transform</tt> messages or both. Both the <tt>validate</tt> and
+<tt>transform</tt> methods should take two parameters: <tt>name</tt> and
+<tt>value</tt>. The <tt>validate</tt> method should return <tt>true</tt> or
+<tt>false</tt>; <tt>true</tt> if the value of the variable is valid,
+<tt>false</tt> otherwise. An <tt>InvalidTemplateValueError</tt> exception
+will be raised if the value is invalid. The <tt>transform</tt> method
+should return the transformed variable value as a <tt>String</tt>. If a
+<tt>transform</tt> method is used, the value will not be percent encoded
+automatically. Unicode normalization will be performed both before and
+after sending the value to the transform method.
+</p>
+<p>
+@return [Addressable::Template] The partially expanded <a
+href="URI.html">URI</a> template.
+</p>
+<p>
+@example
+</p>
+<pre>
+  Addressable::Template.new(
+    &quot;http://example.com/{one}/{two}/&quot;
+  ).partial_expand({&quot;one&quot; =&gt; &quot;1&quot;}).pattern
+  #=&gt; &quot;http://example.com/1/{two}/&quot;
+
+  Addressable::Template.new(
+    &quot;http://example.com/search/{-list|+|query}/&quot;
+  ).partial_expand(
+    {&quot;query&quot; =&gt; &quot;an example search query&quot;.split(&quot; &quot;)}
+  ).pattern
+  #=&gt; &quot;http://example.com/search/an+example+search+query/&quot;
+
+  Addressable::Template.new(
+    &quot;http://example.com/{-join|&amp;|one,two}/&quot;
+  ).partial_expand({&quot;one&quot; =&gt; &quot;1&quot;}).pattern
+  #=&gt; &quot;http://example.com/?one=1{-prefix|&amp;two=|two}&quot;
+
+  Addressable::Template.new(
+    &quot;http://example.com/{-join|&amp;|one,two,three}/&quot;
+  ).partial_expand({&quot;one&quot; =&gt; &quot;1&quot;, &quot;three&quot; =&gt; 3}).pattern
+  #=&gt; &quot;http://example.com/?one=1{-prefix|&amp;two=|two}&amp;three=3&quot;</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="partial-expand-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/addressable/template.rb, line 365</span>
+365:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">partial_expand</span>(<span class="ruby-identifier">mapping</span>, <span class="ruby-identifier">processor</span>=<span class="ruby-keyword kw">nil</span>)
+366:       <span class="ruby-identifier">result</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">pattern</span>.<span class="ruby-identifier">dup</span>
+367:       <span class="ruby-identifier">transformed_mapping</span> = <span class="ruby-identifier">transform_mapping</span>(<span class="ruby-identifier">mapping</span>, <span class="ruby-identifier">processor</span>)
+368:       <span class="ruby-identifier">result</span>.<span class="ruby-identifier">gsub!</span>(
+369:         <span class="ruby-node">/#{OPERATOR_EXPANSION}|#{VARIABLE_EXPANSION}/</span>
+370:       ) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">capture</span><span class="ruby-operator">|</span>
+371:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">capture</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">OPERATOR_EXPANSION</span>
+372:           <span class="ruby-identifier">operator</span>, <span class="ruby-identifier">argument</span>, <span class="ruby-identifier">variables</span>, <span class="ruby-identifier">default_mapping</span> =
+373:             <span class="ruby-identifier">parse_template_expansion</span>(<span class="ruby-identifier">capture</span>, <span class="ruby-identifier">transformed_mapping</span>)
+374:           <span class="ruby-identifier">expand_method</span> = <span class="ruby-node">&quot;expand_#{operator}_operator&quot;</span>
+375:           <span class="ruby-keyword kw">if</span> ([<span class="ruby-identifier">expand_method</span>, <span class="ruby-identifier">expand_method</span>.<span class="ruby-identifier">to_sym</span>] &amp; <span class="ruby-identifier">private_methods</span>).<span class="ruby-identifier">empty?</span>
+376:             <span class="ruby-identifier">raise</span> <span class="ruby-constant">InvalidTemplateOperatorError</span>,
+377:               <span class="ruby-node">&quot;Invalid template operator: #{operator}&quot;</span>
+378:           <span class="ruby-keyword kw">else</span>
+379:             <span class="ruby-identifier">send</span>(
+380:               <span class="ruby-identifier">expand_method</span>.<span class="ruby-identifier">to_sym</span>, <span class="ruby-identifier">argument</span>, <span class="ruby-identifier">variables</span>,
+381:               <span class="ruby-identifier">default_mapping</span>, <span class="ruby-keyword kw">true</span>
+382:             )
+383:           <span class="ruby-keyword kw">end</span>
+384:         <span class="ruby-keyword kw">else</span>
+385:           <span class="ruby-identifier">varname</span>, <span class="ruby-identifier">_</span>, <span class="ruby-identifier">vardefault</span> = <span class="ruby-identifier">capture</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp re">/^\{(.+?)(=(.*))?\}$/</span>)[<span class="ruby-value">0</span>]
+386:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">transformed_mapping</span>[<span class="ruby-identifier">varname</span>]
+387:             <span class="ruby-identifier">transformed_mapping</span>[<span class="ruby-identifier">varname</span>]
+388:           <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">vardefault</span>
+389:             <span class="ruby-node">&quot;{#{varname}=#{vardefault}}&quot;</span>
+390:           <span class="ruby-keyword kw">else</span>
+391:             <span class="ruby-node">&quot;{#{varname}}&quot;</span>
+392:           <span class="ruby-keyword kw">end</span>
+393:         <span class="ruby-keyword kw">end</span>
+394:       <span class="ruby-keyword kw">end</span>
+395:       <span class="ruby-keyword kw">return</span> <span class="ruby-constant">Addressable</span><span class="ruby-operator">::</span><span class="ruby-constant">Template</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">result</span>)
+396:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="variable-defaults-method" class="method-detail ">
+				<a name="method-i-variable_defaults"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">variable_defaults</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns a mapping of variables to their default values specified in the
+template. Variables without defaults are not returned.
+</p>
+<p>
+@return [Hash] Mapping of template variables to their defaults
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="variable-defaults-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/addressable/template.rb, line 495</span>
+495:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">variable_defaults</span>
+496:       <span class="ruby-ivar">@variable_defaults</span> <span class="ruby-operator">||=</span>
+497:         <span class="ruby-constant">Hash</span>[*<span class="ruby-identifier">ordered_variable_defaults</span>.<span class="ruby-identifier">reject</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">v</span>.<span class="ruby-identifier">nil?</span> }.<span class="ruby-identifier">flatten</span>]
+498:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="variables-method" class="method-detail ">
+				<a name="method-i-variables"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">variables</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns an Array of variables used within the template pattern. The
+variables are listed in the Array in the order they appear within the
+pattern.  Multiple occurrences of a variable within a pattern are not
+represented in this Array.
+</p>
+<p>
+@return [Array] The variables present in the template&#8217;s pattern.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="variables-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/addressable/template.rb, line 485</span>
+485:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">variables</span>
+486:       <span class="ruby-ivar">@variables</span> <span class="ruby-operator">||=</span> <span class="ruby-identifier">ordered_variable_defaults</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">var</span>, <span class="ruby-identifier">val</span><span class="ruby-operator">|</span> <span class="ruby-identifier">var</span> }.<span class="ruby-identifier">uniq</span>
+487:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+				<div class="aliases">
+					Also aliased as: <a href="Template.html#method-i-keys">keys</a>
+				</div>
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="expand-join-operator-method" class="method-detail ">
+				<a name="method-i-expand_join_operator"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">expand_join_operator</span><span
+						class="method-args">(argument, variables, mapping, partial=false)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Expands a <a href="URI.html">URI</a> <a href="Template.html">Template</a>
+join operator.
+</p>
+<p>
+@param [String] argument The argument to the operator. @param [Array]
+variables The variables the operator is working on. @param [Hash] mapping
+The mapping of variables to values.
+</p>
+<p>
+@return [String] The expanded result.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="expand-join-operator-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/addressable/template.rb, line 708</span>
+708:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">expand_join_operator</span>(<span class="ruby-identifier">argument</span>, <span class="ruby-identifier">variables</span>, <span class="ruby-identifier">mapping</span>, <span class="ruby-identifier">partial</span>=<span class="ruby-keyword kw">false</span>)
+709:       <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">partial</span>
+710:         <span class="ruby-identifier">variable_values</span> = <span class="ruby-identifier">variables</span>.<span class="ruby-identifier">inject</span>([]) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">accu</span>, <span class="ruby-identifier">variable</span><span class="ruby-operator">|</span>
+711:           <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">mapping</span>[<span class="ruby-identifier">variable</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+712:             <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">mapping</span>[<span class="ruby-identifier">variable</span>]
+713:               <span class="ruby-identifier">accu</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">variable</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;=&quot;</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">mapping</span>[<span class="ruby-identifier">variable</span>])
+714:             <span class="ruby-keyword kw">end</span>
+715:           <span class="ruby-keyword kw">else</span>
+716:             <span class="ruby-identifier">raise</span> <span class="ruby-constant">InvalidTemplateOperatorError</span>,
+717:               <span class="ruby-value str">&quot;Template operator 'join' does not accept Array values.&quot;</span>
+718:           <span class="ruby-keyword kw">end</span>
+719:           <span class="ruby-identifier">accu</span>
+720:         <span class="ruby-keyword kw">end</span>
+721:         <span class="ruby-identifier">variable_values</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">argument</span>)
+722:       <span class="ruby-keyword kw">else</span>
+723:         <span class="ruby-identifier">buffer</span> = <span class="ruby-value str">&quot;&quot;</span>
+724:         <span class="ruby-identifier">state</span> = <span class="ruby-value">:suffix</span>
+725:         <span class="ruby-identifier">variables</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">variable</span>, <span class="ruby-identifier">index</span><span class="ruby-operator">|</span>
+726:           <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">mapping</span>[<span class="ruby-identifier">variable</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+727:             <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">mapping</span>[<span class="ruby-identifier">variable</span>]
+728:               <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">buffer</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">buffer</span>[<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>] <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;}&quot;</span>
+729:                 <span class="ruby-identifier">buffer</span> <span class="ruby-operator">&lt;&lt;</span> (<span class="ruby-identifier">variable</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;=&quot;</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">mapping</span>[<span class="ruby-identifier">variable</span>]))
+730:               <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">state</span> <span class="ruby-operator">==</span> <span class="ruby-value">:suffix</span>
+731:                 <span class="ruby-identifier">buffer</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">argument</span>
+732:                 <span class="ruby-identifier">buffer</span> <span class="ruby-operator">&lt;&lt;</span> (<span class="ruby-identifier">variable</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;=&quot;</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">mapping</span>[<span class="ruby-identifier">variable</span>]))
+733:               <span class="ruby-keyword kw">else</span>
+734:                 <span class="ruby-identifier">buffer</span> <span class="ruby-operator">&lt;&lt;</span> (<span class="ruby-identifier">variable</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;=&quot;</span> <span class="ruby-operator">+</span> (<span class="ruby-identifier">mapping</span>[<span class="ruby-identifier">variable</span>]))
+735:               <span class="ruby-keyword kw">end</span>
+736:             <span class="ruby-keyword kw">else</span>
+737:               <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">buffer</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">buffer</span>[<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>] <span class="ruby-operator">!=</span> <span class="ruby-value str">&quot;}&quot;</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">state</span> <span class="ruby-operator">==</span> <span class="ruby-value">:prefix</span>)
+738:                 <span class="ruby-identifier">buffer</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;{-opt|#{argument}|#{variable}}&quot;</span>
+739:                 <span class="ruby-identifier">state</span> = <span class="ruby-value">:prefix</span>
+740:               <span class="ruby-keyword kw">end</span>
+741:               <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">buffer</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">variables</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+742:                 <span class="ruby-comment cmt"># Evaluates back to itself</span>
+743:                 <span class="ruby-identifier">buffer</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;{-join|#{argument}|#{variable}}&quot;</span>
+744:               <span class="ruby-keyword kw">else</span>
+745:                 <span class="ruby-identifier">buffer</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;{-prefix|#{variable}=|#{variable}}&quot;</span>
+746:               <span class="ruby-keyword kw">end</span>
+747:               <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">index</span> <span class="ruby-operator">!=</span> (<span class="ruby-identifier">variables</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">state</span> <span class="ruby-operator">==</span> <span class="ruby-value">:suffix</span>)
+748:                 <span class="ruby-identifier">buffer</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;{-opt|#{argument}|#{variable}}&quot;</span>
+749:               <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">index</span> <span class="ruby-operator">!=</span> (<span class="ruby-identifier">variables</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>) <span class="ruby-operator">&amp;&amp;</span>
+750:                   <span class="ruby-identifier">mapping</span>[<span class="ruby-identifier">variables</span>[<span class="ruby-identifier">index</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>]]
+751:                 <span class="ruby-identifier">buffer</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">argument</span>
+752:                 <span class="ruby-identifier">state</span> = <span class="ruby-value">:prefix</span>
+753:               <span class="ruby-keyword kw">end</span>
+754:             <span class="ruby-keyword kw">end</span>
+755:           <span class="ruby-keyword kw">else</span>
+756:             <span class="ruby-identifier">raise</span> <span class="ruby-constant">InvalidTemplateOperatorError</span>,
+757:               <span class="ruby-value str">&quot;Template operator 'join' does not accept Array values.&quot;</span>
+758:           <span class="ruby-keyword kw">end</span>
+759:         <span class="ruby-keyword kw">end</span>
+760:         <span class="ruby-identifier">buffer</span>
+761:       <span class="ruby-keyword kw">end</span>
+762:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="expand-list-operator-method" class="method-detail ">
+				<a name="method-i-expand_list_operator"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">expand_list_operator</span><span
+						class="method-args">(argument, variables, mapping, partial=false)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Expands a <a href="URI.html">URI</a> <a href="Template.html">Template</a>
+list operator.
+</p>
+<p>
+@param [String] argument The argument to the operator. @param [Array]
+variables The variables the operator is working on. @param [Hash] mapping
+The mapping of variables to values.
+</p>
+<p>
+@return [String] The expanded result.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="expand-list-operator-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/addressable/template.rb, line 772</span>
+772:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">expand_list_operator</span>(<span class="ruby-identifier">argument</span>, <span class="ruby-identifier">variables</span>, <span class="ruby-identifier">mapping</span>, <span class="ruby-identifier">partial</span>=<span class="ruby-keyword kw">false</span>)
+773:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">variables</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">!=</span> <span class="ruby-value">1</span>
+774:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">InvalidTemplateOperatorError</span>,
+775:           <span class="ruby-value str">&quot;Template operator 'list' takes exactly one variable.&quot;</span>
+776:       <span class="ruby-keyword kw">end</span>
+777:       <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">partial</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">mapping</span>[<span class="ruby-identifier">variables</span>.<span class="ruby-identifier">first</span>]
+778:         <span class="ruby-identifier">values</span> = <span class="ruby-identifier">mapping</span>[<span class="ruby-identifier">variables</span>.<span class="ruby-identifier">first</span>]
+779:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">values</span>
+780:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">values</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+781:             <span class="ruby-identifier">values</span>.<span class="ruby-identifier">join</span>(<span class="ruby-identifier">argument</span>)
+782:           <span class="ruby-keyword kw">else</span>
+783:             <span class="ruby-identifier">raise</span> <span class="ruby-constant">InvalidTemplateOperatorError</span>,
+784:               <span class="ruby-value str">&quot;Template operator 'list' only accepts Array values.&quot;</span>
+785:           <span class="ruby-keyword kw">end</span>
+786:         <span class="ruby-keyword kw">end</span>
+787:       <span class="ruby-keyword kw">else</span>
+788:         <span class="ruby-node">&quot;{-list|#{argument}|#{variables.first}}&quot;</span>
+789:       <span class="ruby-keyword kw">end</span>
+790:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="expand-neg-operator-method" class="method-detail ">
+				<a name="method-i-expand_neg_operator"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">expand_neg_operator</span><span
+						class="method-args">(argument, variables, mapping, partial=false)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Expands a <a href="URI.html">URI</a> <a href="Template.html">Template</a>
+neg operator.
+</p>
+<p>
+@param [String] argument The argument to the operator. @param [Array]
+variables The variables the operator is working on. @param [Hash] mapping
+The mapping of variables to values.
+</p>
+<p>
+@return [String] The expanded result.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="expand-neg-operator-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/addressable/template.rb, line 636</span>
+636:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">expand_neg_operator</span>(<span class="ruby-identifier">argument</span>, <span class="ruby-identifier">variables</span>, <span class="ruby-identifier">mapping</span>, <span class="ruby-identifier">partial</span>=<span class="ruby-keyword kw">false</span>)
+637:       <span class="ruby-identifier">variables_present</span> = <span class="ruby-identifier">variables</span>.<span class="ruby-identifier">any?</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">variable</span><span class="ruby-operator">|</span>
+638:         <span class="ruby-identifier">mapping</span>[<span class="ruby-identifier">variable</span>] <span class="ruby-operator">!=</span> [] <span class="ruby-operator">&amp;&amp;</span>
+639:         <span class="ruby-identifier">mapping</span>[<span class="ruby-identifier">variable</span>]
+640:       <span class="ruby-keyword kw">end</span>
+641:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">partial</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">variables_present</span>
+642:         <span class="ruby-node">&quot;{-neg|#{argument}|#{variables.join(&quot;,&quot;)}}&quot;</span>
+643:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">variables_present</span>
+644:         <span class="ruby-value str">&quot;&quot;</span>
+645:       <span class="ruby-keyword kw">else</span>
+646:         <span class="ruby-identifier">argument</span>
+647:       <span class="ruby-keyword kw">end</span>
+648:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="expand-opt-operator-method" class="method-detail ">
+				<a name="method-i-expand_opt_operator"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">expand_opt_operator</span><span
+						class="method-args">(argument, variables, mapping, partial=false)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Expands a <a href="URI.html">URI</a> <a href="Template.html">Template</a>
+opt operator.
+</p>
+<p>
+@param [String] argument The argument to the operator. @param [Array]
+variables The variables the operator is working on. @param [Hash] mapping
+The mapping of variables to values.
+</p>
+<p>
+@return [String] The expanded result.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="expand-opt-operator-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/addressable/template.rb, line 614</span>
+614:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">expand_opt_operator</span>(<span class="ruby-identifier">argument</span>, <span class="ruby-identifier">variables</span>, <span class="ruby-identifier">mapping</span>, <span class="ruby-identifier">partial</span>=<span class="ruby-keyword kw">false</span>)
+615:       <span class="ruby-identifier">variables_present</span> = <span class="ruby-identifier">variables</span>.<span class="ruby-identifier">any?</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">variable</span><span class="ruby-operator">|</span>
+616:         <span class="ruby-identifier">mapping</span>[<span class="ruby-identifier">variable</span>] <span class="ruby-operator">!=</span> [] <span class="ruby-operator">&amp;&amp;</span>
+617:         <span class="ruby-identifier">mapping</span>[<span class="ruby-identifier">variable</span>]
+618:       <span class="ruby-keyword kw">end</span>
+619:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">partial</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">variables_present</span>
+620:         <span class="ruby-node">&quot;{-opt|#{argument}|#{variables.join(&quot;,&quot;)}}&quot;</span>
+621:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">variables_present</span>
+622:         <span class="ruby-identifier">argument</span>
+623:       <span class="ruby-keyword kw">else</span>
+624:         <span class="ruby-value str">&quot;&quot;</span>
+625:       <span class="ruby-keyword kw">end</span>
+626:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="expand-prefix-operator-method" class="method-detail ">
+				<a name="method-i-expand_prefix_operator"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">expand_prefix_operator</span><span
+						class="method-args">(argument, variables, mapping, partial=false)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Expands a <a href="URI.html">URI</a> <a href="Template.html">Template</a>
+prefix operator.
+</p>
+<p>
+@param [String] argument The argument to the operator. @param [Array]
+variables The variables the operator is working on. @param [Hash] mapping
+The mapping of variables to values.
+</p>
+<p>
+@return [String] The expanded result.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="expand-prefix-operator-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/addressable/template.rb, line 658</span>
+658:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">expand_prefix_operator</span>(<span class="ruby-identifier">argument</span>, <span class="ruby-identifier">variables</span>, <span class="ruby-identifier">mapping</span>, <span class="ruby-identifier">partial</span>=<span class="ruby-keyword kw">false</span>)
+659:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">variables</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">!=</span> <span class="ruby-value">1</span>
+660:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">InvalidTemplateOperatorError</span>,
+661:           <span class="ruby-value str">&quot;Template operator 'prefix' takes exactly one variable.&quot;</span>
+662:       <span class="ruby-keyword kw">end</span>
+663:       <span class="ruby-identifier">value</span> = <span class="ruby-identifier">mapping</span>[<span class="ruby-identifier">variables</span>.<span class="ruby-identifier">first</span>]
+664:       <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">partial</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">value</span>
+665:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+666:           (<span class="ruby-identifier">value</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">list_value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">argument</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">list_value</span> }).<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;&quot;</span>)
+667:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">value</span>
+668:           <span class="ruby-identifier">argument</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_s</span>
+669:         <span class="ruby-keyword kw">end</span>
+670:       <span class="ruby-keyword kw">else</span>
+671:         <span class="ruby-node">&quot;{-prefix|#{argument}|#{variables.first}}&quot;</span>
+672:       <span class="ruby-keyword kw">end</span>
+673:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="expand-suffix-operator-method" class="method-detail ">
+				<a name="method-i-expand_suffix_operator"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">expand_suffix_operator</span><span
+						class="method-args">(argument, variables, mapping, partial=false)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Expands a <a href="URI.html">URI</a> <a href="Template.html">Template</a>
+suffix operator.
+</p>
+<p>
+@param [String] argument The argument to the operator. @param [Array]
+variables The variables the operator is working on. @param [Hash] mapping
+The mapping of variables to values.
+</p>
+<p>
+@return [String] The expanded result.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="expand-suffix-operator-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/addressable/template.rb, line 683</span>
+683:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">expand_suffix_operator</span>(<span class="ruby-identifier">argument</span>, <span class="ruby-identifier">variables</span>, <span class="ruby-identifier">mapping</span>, <span class="ruby-identifier">partial</span>=<span class="ruby-keyword kw">false</span>)
+684:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">variables</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">!=</span> <span class="ruby-value">1</span>
+685:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">InvalidTemplateOperatorError</span>,
+686:           <span class="ruby-value str">&quot;Template operator 'suffix' takes exactly one variable.&quot;</span>
+687:       <span class="ruby-keyword kw">end</span>
+688:       <span class="ruby-identifier">value</span> = <span class="ruby-identifier">mapping</span>[<span class="ruby-identifier">variables</span>.<span class="ruby-identifier">first</span>]
+689:       <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">partial</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">value</span>
+690:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+691:           (<span class="ruby-identifier">value</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">list_value</span><span class="ruby-operator">|</span> <span class="ruby-identifier">list_value</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">argument</span> }).<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;&quot;</span>)
+692:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">value</span>
+693:           <span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">argument</span>
+694:         <span class="ruby-keyword kw">end</span>
+695:       <span class="ruby-keyword kw">else</span>
+696:         <span class="ruby-node">&quot;{-suffix|#{argument}|#{variables.first}}&quot;</span>
+697:       <span class="ruby-keyword kw">end</span>
+698:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="extract-join-operator-method" class="method-detail ">
+				<a name="method-i-extract_join_operator"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">extract_join_operator</span><span
+						class="method-args">(value, processor, argument, variables, mapping)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Extracts a <a href="URI.html">URI</a> <a href="Template.html">Template</a>
+join operator.
+</p>
+<p>
+@param [String] value The unparsed value to extract from. @param [#]
+processor The processor object. @param [String] argument The argument to
+the operator. @param [Array] variables The variables the operator is
+working on. @param [Hash] mapping The mapping of variables to values.
+</p>
+<p>
+@return [String] The extracted result.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="extract-join-operator-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/addressable/template.rb, line 989</span>
+ 989:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">extract_join_operator</span>(<span class="ruby-identifier">value</span>, <span class="ruby-identifier">processor</span>, <span class="ruby-identifier">argument</span>, <span class="ruby-identifier">variables</span>, <span class="ruby-identifier">mapping</span>)
+ 990:       <span class="ruby-identifier">unparsed_values</span> = <span class="ruby-identifier">value</span>.<span class="ruby-identifier">split</span>(<span class="ruby-identifier">argument</span>)
+ 991:       <span class="ruby-identifier">parsed_variables</span> = []
+ 992:       <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">unparsed_value</span> <span class="ruby-keyword kw">in</span> <span class="ruby-identifier">unparsed_values</span>
+ 993:         <span class="ruby-identifier">name</span> = <span class="ruby-identifier">unparsed_value</span>[<span class="ruby-regexp re">/^(.+?)=(.+)$/</span>, <span class="ruby-value">1</span>]
+ 994:         <span class="ruby-identifier">parsed_variables</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">name</span>
+ 995:         <span class="ruby-identifier">parsed_value</span> = <span class="ruby-identifier">unparsed_value</span>[<span class="ruby-regexp re">/^(.+?)=(.+)$/</span>, <span class="ruby-value">2</span>]
+ 996:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">processor</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">processor</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:restore</span>)
+ 997:           <span class="ruby-identifier">parsed_value</span> = <span class="ruby-identifier">processor</span>.<span class="ruby-identifier">restore</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">parsed_value</span>)
+ 998:         <span class="ruby-keyword kw">end</span>
+ 999:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">mapping</span>[<span class="ruby-identifier">name</span>] <span class="ruby-operator">==</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">mapping</span>[<span class="ruby-identifier">name</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">parsed_value</span>
+1000:           <span class="ruby-identifier">mapping</span>[<span class="ruby-identifier">name</span>] = <span class="ruby-identifier">parsed_value</span>
+1001:         <span class="ruby-keyword kw">else</span>
+1002:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">TemplateOperatorAbortedError</span>,
+1003:             <span class="ruby-value str">&quot;Value mismatch for repeated variable.&quot;</span>
+1004:         <span class="ruby-keyword kw">end</span>
+1005:       <span class="ruby-keyword kw">end</span>
+1006:       <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">variable</span> <span class="ruby-keyword kw">in</span> <span class="ruby-identifier">variables</span>
+1007:         <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">parsed_variables</span>.<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">variable</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">mapping</span>[<span class="ruby-identifier">variable</span>] <span class="ruby-operator">!=</span> <span class="ruby-keyword kw">nil</span>
+1008:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">TemplateOperatorAbortedError</span>,
+1009:             <span class="ruby-value str">&quot;Value mismatch for repeated variable.&quot;</span>
+1010:         <span class="ruby-keyword kw">end</span>
+1011:       <span class="ruby-keyword kw">end</span>
+1012:       <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">parsed_variables</span> &amp; <span class="ruby-identifier">variables</span>) <span class="ruby-operator">!=</span> <span class="ruby-identifier">parsed_variables</span>
+1013:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">TemplateOperatorAbortedError</span>,
+1014:           <span class="ruby-value str">&quot;Template operator 'join' variable mismatch: &quot;</span> <span class="ruby-operator">+</span>
+1015:           <span class="ruby-node">&quot;#{parsed_variables.inspect}, #{variables.inspect}&quot;</span>
+1016:       <span class="ruby-keyword kw">end</span>
+1017:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="extract-list-operator-method" class="method-detail ">
+				<a name="method-i-extract_list_operator"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">extract_list_operator</span><span
+						class="method-args">(value, processor, argument, variables, mapping)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Extracts a <a href="URI.html">URI</a> <a href="Template.html">Template</a>
+list operator.
+</p>
+<p>
+@param [String] value The unparsed value to extract from. @param [#]
+processor The processor object. @param [String] argument The argument to
+the operator. @param [Array] variables The variables the operator is
+working on. @param [Hash] mapping The mapping of variables to values.
+</p>
+<p>
+@return [String] The extracted result.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="extract-list-operator-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/addressable/template.rb, line 1029</span>
+1029:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">extract_list_operator</span>(<span class="ruby-identifier">value</span>, <span class="ruby-identifier">processor</span>, <span class="ruby-identifier">argument</span>, <span class="ruby-identifier">variables</span>, <span class="ruby-identifier">mapping</span>)
+1030:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">variables</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">!=</span> <span class="ruby-value">1</span>
+1031:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">InvalidTemplateOperatorError</span>,
+1032:           <span class="ruby-value str">&quot;Template operator 'list' takes exactly one variable.&quot;</span>
+1033:       <span class="ruby-keyword kw">end</span>
+1034:       <span class="ruby-identifier">values</span> = <span class="ruby-identifier">value</span>.<span class="ruby-identifier">split</span>(<span class="ruby-identifier">argument</span>, <span class="ruby-value">1</span>)
+1035:       <span class="ruby-identifier">values</span>.<span class="ruby-identifier">pop</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">values</span>[<span class="ruby-value">1</span>] <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;&quot;</span>
+1036:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">processor</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">processor</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:restore</span>)
+1037:         <span class="ruby-identifier">values</span>.<span class="ruby-identifier">map!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">val</span><span class="ruby-operator">|</span> <span class="ruby-identifier">processor</span>.<span class="ruby-identifier">restore</span>(<span class="ruby-identifier">variables</span>.<span class="ruby-identifier">first</span>, <span class="ruby-identifier">val</span>) }
+1038:       <span class="ruby-keyword kw">end</span>
+1039:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">mapping</span>[<span class="ruby-identifier">variables</span>.<span class="ruby-identifier">first</span>] <span class="ruby-operator">==</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">mapping</span>[<span class="ruby-identifier">variables</span>.<span class="ruby-identifier">first</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">values</span>
+1040:         <span class="ruby-identifier">mapping</span>[<span class="ruby-identifier">variables</span>.<span class="ruby-identifier">first</span>] = <span class="ruby-identifier">values</span>
+1041:       <span class="ruby-keyword kw">else</span>
+1042:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">TemplateOperatorAbortedError</span>,
+1043:           <span class="ruby-value str">&quot;Value mismatch for repeated variable.&quot;</span>
+1044:       <span class="ruby-keyword kw">end</span>
+1045:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="extract-neg-operator-method" class="method-detail ">
+				<a name="method-i-extract_neg_operator"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">extract_neg_operator</span><span
+						class="method-args">( value, processor, argument, variables, mapping)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Extracts a <a href="URI.html">URI</a> <a href="Template.html">Template</a>
+neg operator.
+</p>
+<p>
+@param [String] value The unparsed value to extract from. @param [#]
+processor The processor object. @param [String] argument The argument to
+the operator. @param [Array] variables The variables the operator is
+working on. @param [Hash] mapping The mapping of variables to values.
+</p>
+<p>
+@return [String] The extracted result.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="extract-neg-operator-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/addressable/template.rb, line 900</span>
+900:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">extract_neg_operator</span>(
+901:         <span class="ruby-identifier">value</span>, <span class="ruby-identifier">processor</span>, <span class="ruby-identifier">argument</span>, <span class="ruby-identifier">variables</span>, <span class="ruby-identifier">mapping</span>)
+902:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">&quot;&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">argument</span>
+903:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">TemplateOperatorAbortedError</span>,
+904:           <span class="ruby-value str">&quot;Value for template operator 'neg' was unexpected.&quot;</span>
+905:       <span class="ruby-keyword kw">end</span>
+906:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="extract-opt-operator-method" class="method-detail ">
+				<a name="method-i-extract_opt_operator"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">extract_opt_operator</span><span
+						class="method-args">( value, processor, argument, variables, mapping)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Extracts a <a href="URI.html">URI</a> <a href="Template.html">Template</a>
+opt operator.
+</p>
+<p>
+@param [String] value The unparsed value to extract from. @param [#]
+processor The processor object. @param [String] argument The argument to
+the operator. @param [Array] variables The variables the operator is
+working on. @param [Hash] mapping The mapping of variables to values.
+</p>
+<p>
+@return [String] The extracted result.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="extract-opt-operator-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/addressable/template.rb, line 882</span>
+882:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">extract_opt_operator</span>(
+883:         <span class="ruby-identifier">value</span>, <span class="ruby-identifier">processor</span>, <span class="ruby-identifier">argument</span>, <span class="ruby-identifier">variables</span>, <span class="ruby-identifier">mapping</span>)
+884:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">&quot;&quot;</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">argument</span>
+885:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">TemplateOperatorAbortedError</span>,
+886:           <span class="ruby-value str">&quot;Value for template operator 'opt' was unexpected.&quot;</span>
+887:       <span class="ruby-keyword kw">end</span>
+888:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="extract-prefix-operator-method" class="method-detail ">
+				<a name="method-i-extract_prefix_operator"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">extract_prefix_operator</span><span
+						class="method-args">( value, processor, argument, variables, mapping)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Extracts a <a href="URI.html">URI</a> <a href="Template.html">Template</a>
+prefix operator.
+</p>
+<p>
+@param [String] value The unparsed value to extract from. @param [#]
+processor The processor object. @param [String] argument The argument to
+the operator. @param [Array] variables The variables the operator is
+working on. @param [Hash] mapping The mapping of variables to values.
+</p>
+<p>
+@return [String] The extracted result.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="extract-prefix-operator-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/addressable/template.rb, line 918</span>
+918:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">extract_prefix_operator</span>(
+919:         <span class="ruby-identifier">value</span>, <span class="ruby-identifier">processor</span>, <span class="ruby-identifier">argument</span>, <span class="ruby-identifier">variables</span>, <span class="ruby-identifier">mapping</span>)
+920:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">variables</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">!=</span> <span class="ruby-value">1</span>
+921:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">InvalidTemplateOperatorError</span>,
+922:           <span class="ruby-value str">&quot;Template operator 'prefix' takes exactly one variable.&quot;</span>
+923:       <span class="ruby-keyword kw">end</span>
+924:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">value</span>[<span class="ruby-value">0</span><span class="ruby-operator">...</span><span class="ruby-identifier">argument</span>.<span class="ruby-identifier">size</span>] <span class="ruby-operator">!=</span> <span class="ruby-identifier">argument</span>
+925:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">TemplateOperatorAbortedError</span>,
+926:           <span class="ruby-value str">&quot;Value for template operator 'prefix' missing expected prefix.&quot;</span>
+927:       <span class="ruby-keyword kw">end</span>
+928:       <span class="ruby-identifier">values</span> = <span class="ruby-identifier">value</span>.<span class="ruby-identifier">split</span>(<span class="ruby-identifier">argument</span>, <span class="ruby-value">1</span>)
+929:       <span class="ruby-identifier">values</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">value</span>[<span class="ruby-operator">-</span><span class="ruby-identifier">argument</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">argument</span>
+930:       <span class="ruby-identifier">values</span>.<span class="ruby-identifier">shift</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">values</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;&quot;</span>
+931:       <span class="ruby-identifier">values</span>.<span class="ruby-identifier">pop</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">values</span>[<span class="ruby-value">1</span>] <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;&quot;</span>
+932: 
+933:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">processor</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">processor</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:restore</span>)
+934:         <span class="ruby-identifier">values</span>.<span class="ruby-identifier">map!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">val</span><span class="ruby-operator">|</span> <span class="ruby-identifier">processor</span>.<span class="ruby-identifier">restore</span>(<span class="ruby-identifier">variables</span>.<span class="ruby-identifier">first</span>, <span class="ruby-identifier">val</span>) }
+935:       <span class="ruby-keyword kw">end</span>
+936:       <span class="ruby-identifier">values</span> = <span class="ruby-identifier">values</span>.<span class="ruby-identifier">first</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">values</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+937:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">mapping</span>[<span class="ruby-identifier">variables</span>.<span class="ruby-identifier">first</span>] <span class="ruby-operator">==</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">mapping</span>[<span class="ruby-identifier">variables</span>.<span class="ruby-identifier">first</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">values</span>
+938:         <span class="ruby-identifier">mapping</span>[<span class="ruby-identifier">variables</span>.<span class="ruby-identifier">first</span>] = <span class="ruby-identifier">values</span>
+939:       <span class="ruby-keyword kw">else</span>
+940:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">TemplateOperatorAbortedError</span>,
+941:           <span class="ruby-value str">&quot;Value mismatch for repeated variable.&quot;</span>
+942:       <span class="ruby-keyword kw">end</span>
+943:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="extract-suffix-operator-method" class="method-detail ">
+				<a name="method-i-extract_suffix_operator"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">extract_suffix_operator</span><span
+						class="method-args">( value, processor, argument, variables, mapping)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Extracts a <a href="URI.html">URI</a> <a href="Template.html">Template</a>
+suffix operator.
+</p>
+<p>
+@param [String] value The unparsed value to extract from. @param [#]
+processor The processor object. @param [String] argument The argument to
+the operator. @param [Array] variables The variables the operator is
+working on. @param [Hash] mapping The mapping of variables to values.
+</p>
+<p>
+@return [String] The extracted result.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="extract-suffix-operator-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/addressable/template.rb, line 955</span>
+955:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">extract_suffix_operator</span>(
+956:         <span class="ruby-identifier">value</span>, <span class="ruby-identifier">processor</span>, <span class="ruby-identifier">argument</span>, <span class="ruby-identifier">variables</span>, <span class="ruby-identifier">mapping</span>)
+957:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">variables</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">!=</span> <span class="ruby-value">1</span>
+958:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">InvalidTemplateOperatorError</span>,
+959:           <span class="ruby-value str">&quot;Template operator 'suffix' takes exactly one variable.&quot;</span>
+960:       <span class="ruby-keyword kw">end</span>
+961:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">value</span>[<span class="ruby-operator">-</span><span class="ruby-identifier">argument</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">..</span><span class="ruby-value">1</span>] <span class="ruby-operator">!=</span> <span class="ruby-identifier">argument</span>
+962:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">TemplateOperatorAbortedError</span>,
+963:           <span class="ruby-value str">&quot;Value for template operator 'suffix' missing expected suffix.&quot;</span>
+964:       <span class="ruby-keyword kw">end</span>
+965:       <span class="ruby-identifier">values</span> = <span class="ruby-identifier">value</span>.<span class="ruby-identifier">split</span>(<span class="ruby-identifier">argument</span>, <span class="ruby-value">1</span>)
+966:       <span class="ruby-identifier">values</span>.<span class="ruby-identifier">pop</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">values</span>[<span class="ruby-value">1</span>] <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;&quot;</span>
+967:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">processor</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">processor</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:restore</span>)
+968:         <span class="ruby-identifier">values</span>.<span class="ruby-identifier">map!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">val</span><span class="ruby-operator">|</span> <span class="ruby-identifier">processor</span>.<span class="ruby-identifier">restore</span>(<span class="ruby-identifier">variables</span>.<span class="ruby-identifier">first</span>, <span class="ruby-identifier">val</span>) }
+969:       <span class="ruby-keyword kw">end</span>
+970:       <span class="ruby-identifier">values</span> = <span class="ruby-identifier">values</span>.<span class="ruby-identifier">first</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">values</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+971:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">mapping</span>[<span class="ruby-identifier">variables</span>.<span class="ruby-identifier">first</span>] <span class="ruby-operator">==</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">mapping</span>[<span class="ruby-identifier">variables</span>.<span class="ruby-identifier">first</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">values</span>
+972:         <span class="ruby-identifier">mapping</span>[<span class="ruby-identifier">variables</span>.<span class="ruby-identifier">first</span>] = <span class="ruby-identifier">values</span>
+973:       <span class="ruby-keyword kw">else</span>
+974:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">TemplateOperatorAbortedError</span>,
+975:           <span class="ruby-value str">&quot;Value mismatch for repeated variable.&quot;</span>
+976:       <span class="ruby-keyword kw">end</span>
+977:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="ordered-variable-defaults-method" class="method-detail ">
+				<a name="method-i-ordered_variable_defaults"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">ordered_variable_defaults</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="ordered-variable-defaults-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/addressable/template.rb, line 501</span>
+501:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">ordered_variable_defaults</span>
+502:       <span class="ruby-ivar">@ordered_variable_defaults</span> <span class="ruby-operator">||=</span> (<span class="ruby-keyword kw">begin</span>
+503:         <span class="ruby-identifier">expansions</span>, <span class="ruby-identifier">expansion_regexp</span> = <span class="ruby-identifier">parse_template_pattern</span>(<span class="ruby-identifier">pattern</span>)
+504: 
+505:         <span class="ruby-identifier">expansions</span>.<span class="ruby-identifier">inject</span>([]) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">result</span>, <span class="ruby-identifier">expansion</span><span class="ruby-operator">|</span>
+506:           <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">expansion</span>
+507:           <span class="ruby-keyword kw">when</span> <span class="ruby-constant">OPERATOR_EXPANSION</span>
+508:             <span class="ruby-identifier">_</span>, <span class="ruby-identifier">_</span>, <span class="ruby-identifier">variables</span>, <span class="ruby-identifier">mapping</span> = <span class="ruby-identifier">parse_template_expansion</span>(<span class="ruby-identifier">expansion</span>)
+509:             <span class="ruby-identifier">result</span>.<span class="ruby-identifier">concat</span> <span class="ruby-identifier">variables</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">var</span><span class="ruby-operator">|</span> [<span class="ruby-identifier">var</span>, <span class="ruby-identifier">mapping</span>[<span class="ruby-identifier">var</span>]] }
+510:           <span class="ruby-keyword kw">when</span> <span class="ruby-constant">VARIABLE_EXPANSION</span>
+511:             <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> [<span class="ruby-node">$1</span>, <span class="ruby-node">$2</span>]
+512:           <span class="ruby-keyword kw">end</span>
+513:           <span class="ruby-identifier">result</span>
+514:         <span class="ruby-keyword kw">end</span>
+515:       <span class="ruby-keyword kw">end</span>)
+516:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parse-template-expansion-method" class="method-detail ">
+				<a name="method-i-parse_template_expansion"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse_template_expansion</span><span
+						class="method-args">(capture, mapping={})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Parses a <a href="URI.html">URI</a> template expansion <tt>String</tt>.
+</p>
+<p>
+@param [String] expansion The operator <tt>String</tt>. @param [Hash]
+mapping An optional mapping to merge defaults into.
+</p>
+<p>
+@return [Array]
+</p>
+<pre>
+  A tuple of the operator, argument, variables, and mapping.</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="parse-template-expansion-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/addressable/template.rb, line 800</span>
+800:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse_template_expansion</span>(<span class="ruby-identifier">capture</span>, <span class="ruby-identifier">mapping</span>={})
+801:       <span class="ruby-identifier">operator</span>, <span class="ruby-identifier">argument</span>, <span class="ruby-identifier">variables</span> = <span class="ruby-identifier">capture</span>[<span class="ruby-value">1</span><span class="ruby-operator">...</span><span class="ruby-value">1</span>].<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;|&quot;</span>, <span class="ruby-value">1</span>)
+802:       <span class="ruby-identifier">operator</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-regexp re">/^\-/</span>, <span class="ruby-value str">&quot;&quot;</span>)
+803:       <span class="ruby-identifier">variables</span> = <span class="ruby-identifier">variables</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;,&quot;</span>, <span class="ruby-value">1</span>)
+804:       <span class="ruby-identifier">mapping</span> = (<span class="ruby-identifier">variables</span>.<span class="ruby-identifier">inject</span>({}) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">accu</span>, <span class="ruby-identifier">var</span><span class="ruby-operator">|</span>
+805:         <span class="ruby-identifier">varname</span>, <span class="ruby-identifier">_</span>, <span class="ruby-identifier">vardefault</span> = <span class="ruby-identifier">var</span>.<span class="ruby-identifier">scan</span>(<span class="ruby-regexp re">/^(.+?)(=(.*))?$/</span>)[<span class="ruby-value">0</span>]
+806:         <span class="ruby-identifier">accu</span>[<span class="ruby-identifier">varname</span>] = <span class="ruby-identifier">vardefault</span>
+807:         <span class="ruby-identifier">accu</span>
+808:       <span class="ruby-keyword kw">end</span>).<span class="ruby-identifier">merge</span>(<span class="ruby-identifier">mapping</span>)
+809:       <span class="ruby-identifier">variables</span> = <span class="ruby-identifier">variables</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">var</span><span class="ruby-operator">|</span> <span class="ruby-identifier">var</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/=.*$/</span>, <span class="ruby-value str">&quot;&quot;</span>) }
+810:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">operator</span>, <span class="ruby-identifier">argument</span>, <span class="ruby-identifier">variables</span>, <span class="ruby-identifier">mapping</span>
+811:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parse-template-pattern-method" class="method-detail ">
+				<a name="method-i-parse_template_pattern"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse_template_pattern</span><span
+						class="method-args">(pattern, processor=nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Generates the <tt>Regexp</tt> that parses a template pattern.
+</p>
+<p>
+@param [String] pattern The <a href="URI.html">URI</a> template pattern.
+@param [<a href="Template.html#method-i-match">#</a>] processor The
+template processor to use.
+</p>
+<p>
+@return [Regexp]
+</p>
+<pre>
+  A regular expression which may be used to parse a template pattern.</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="parse-template-pattern-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/addressable/template.rb, line 821</span>
+821:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse_template_pattern</span>(<span class="ruby-identifier">pattern</span>, <span class="ruby-identifier">processor</span>=<span class="ruby-keyword kw">nil</span>)
+822:       <span class="ruby-comment cmt"># Escape the pattern. The two gsubs restore the escaped curly braces</span>
+823:       <span class="ruby-comment cmt"># back to their original form. Basically, escape everything that isn't</span>
+824:       <span class="ruby-comment cmt"># within an expansion.</span>
+825:       <span class="ruby-identifier">escaped_pattern</span> = <span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">escape</span>(
+826:         <span class="ruby-identifier">pattern</span>
+827:       ).<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/\\\{(.*?)\\\}/</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">escaped</span><span class="ruby-operator">|</span>
+828:         <span class="ruby-identifier">escaped</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/\\(.)/</span>, <span class="ruby-value str">&quot;\\1&quot;</span>)
+829:       <span class="ruby-keyword kw">end</span>
+830: 
+831:       <span class="ruby-identifier">expansions</span> = []
+832: 
+833:       <span class="ruby-comment cmt"># Create a regular expression that captures the values of the</span>
+834:       <span class="ruby-comment cmt"># variables in the URI.</span>
+835:       <span class="ruby-identifier">regexp_string</span> = <span class="ruby-identifier">escaped_pattern</span>.<span class="ruby-identifier">gsub</span>(
+836:         <span class="ruby-node">/#{OPERATOR_EXPANSION}|#{VARIABLE_EXPANSION}/</span>
+837:       ) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">expansion</span><span class="ruby-operator">|</span>
+838:         <span class="ruby-identifier">expansions</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">expansion</span>
+839:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">expansion</span> <span class="ruby-operator">=~</span> <span class="ruby-constant">OPERATOR_EXPANSION</span>
+840:           <span class="ruby-identifier">capture_group</span> = <span class="ruby-value str">&quot;(.*)&quot;</span>
+841:           <span class="ruby-identifier">operator</span>, <span class="ruby-identifier">argument</span>, <span class="ruby-identifier">names</span>, <span class="ruby-identifier">_</span> =
+842:             <span class="ruby-identifier">parse_template_expansion</span>(<span class="ruby-identifier">expansion</span>)
+843:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">processor</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">processor</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:match</span>)
+844:             <span class="ruby-comment cmt"># We can only lookup the match values for single variable</span>
+845:             <span class="ruby-comment cmt"># operator expansions. Besides, &quot;.*&quot; is usually the only</span>
+846:             <span class="ruby-comment cmt"># reasonable value for multivariate operators anyways.</span>
+847:             <span class="ruby-keyword kw">if</span> [<span class="ruby-value str">&quot;prefix&quot;</span>, <span class="ruby-value str">&quot;suffix&quot;</span>, <span class="ruby-value str">&quot;list&quot;</span>].<span class="ruby-identifier">include?</span>(<span class="ruby-identifier">operator</span>)
+848:               <span class="ruby-identifier">capture_group</span> = <span class="ruby-node">&quot;(#{processor.match(names.first)})&quot;</span>
+849:             <span class="ruby-keyword kw">end</span>
+850:           <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">operator</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;prefix&quot;</span>
+851:             <span class="ruby-identifier">capture_group</span> = <span class="ruby-node">&quot;(#{Regexp.escape(argument)}.*?)&quot;</span>
+852:           <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">operator</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;suffix&quot;</span>
+853:             <span class="ruby-identifier">capture_group</span> = <span class="ruby-node">&quot;(.*?#{Regexp.escape(argument)})&quot;</span>
+854:           <span class="ruby-keyword kw">end</span>
+855:           <span class="ruby-identifier">capture_group</span>
+856:         <span class="ruby-keyword kw">else</span>
+857:           <span class="ruby-identifier">capture_group</span> = <span class="ruby-value str">&quot;(.*?)&quot;</span>
+858:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">processor</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">processor</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:match</span>)
+859:             <span class="ruby-identifier">name</span> = <span class="ruby-identifier">expansion</span>[<span class="ruby-regexp re">/\{([^\}=]+)(=[^\}]+)?\}/</span>, <span class="ruby-value">1</span>]
+860:             <span class="ruby-identifier">capture_group</span> = <span class="ruby-node">&quot;(#{processor.match(name)})&quot;</span>
+861:           <span class="ruby-keyword kw">end</span>
+862:           <span class="ruby-identifier">capture_group</span>
+863:         <span class="ruby-keyword kw">end</span>
+864:       <span class="ruby-keyword kw">end</span>
+865: 
+866:       <span class="ruby-comment cmt"># Ensure that the regular expression matches the whole URI.</span>
+867:       <span class="ruby-identifier">regexp_string</span> = <span class="ruby-node">&quot;^#{regexp_string}$&quot;</span>
+868: 
+869:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">expansions</span>, <span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">regexp_string</span>)
+870:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="transform-mapping-method" class="method-detail ">
+				<a name="method-i-transform_mapping"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">transform_mapping</span><span
+						class="method-args">(mapping, processor=nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Transforms a mapping so that values can be substituted into the template.
+</p>
+<p>
+@param [Hash] mapping The mapping of variables to values. @param [#, #]
+processor
+</p>
+<pre>
+  An optional processor object may be supplied.
+</pre>
+<p>
+The object should respond to either the <tt>validate</tt> or
+<tt>transform</tt> messages or both. Both the <tt>validate</tt> and
+<tt>transform</tt> methods should take two parameters: <tt>name</tt> and
+<tt>value</tt>. The <tt>validate</tt> method should return <tt>true</tt> or
+<tt>false</tt>; <tt>true</tt> if the value of the variable is valid,
+<tt>false</tt> otherwise. An <tt>InvalidTemplateValueError</tt> exception
+will be raised if the value is invalid. The <tt>transform</tt> method
+should return the transformed variable value as a <tt>String</tt>. If a
+<tt>transform</tt> method is used, the value will not be percent encoded
+automatically. Unicode normalization will be performed both before and
+after sending the value to the transform method.
+</p>
+<p>
+@return [Hash] The transformed mapping.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="transform-mapping-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/addressable/template.rb, line 539</span>
+539:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">transform_mapping</span>(<span class="ruby-identifier">mapping</span>, <span class="ruby-identifier">processor</span>=<span class="ruby-keyword kw">nil</span>)
+540:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">mapping</span>.<span class="ruby-identifier">inject</span>({}) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">accu</span>, <span class="ruby-identifier">pair</span><span class="ruby-operator">|</span>
+541:         <span class="ruby-identifier">name</span>, <span class="ruby-identifier">value</span> = <span class="ruby-identifier">pair</span>
+542:         <span class="ruby-identifier">value</span> = <span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-keyword kw">if</span> <span class="ruby-constant">Numeric</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">||</span> <span class="ruby-constant">Symbol</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">value</span>
+543: 
+544:         <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:to_ary</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:to_str</span>)
+545:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>,
+546:             <span class="ruby-node">&quot;Can't convert #{value.class} into String or Array.&quot;</span>
+547:         <span class="ruby-keyword kw">end</span>
+548: 
+549:         <span class="ruby-keyword kw">if</span> <span class="ruby-constant">Symbol</span> <span class="ruby-operator">===</span> <span class="ruby-identifier">name</span>
+550:           <span class="ruby-identifier">name</span> = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span>
+551:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:to_str</span>)
+552:           <span class="ruby-identifier">name</span> = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_str</span>
+553:         <span class="ruby-keyword kw">else</span>
+554:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">TypeError</span>,
+555:             <span class="ruby-node">&quot;Can't convert #{name.class} into String.&quot;</span>
+556:         <span class="ruby-keyword kw">end</span>
+557:         <span class="ruby-identifier">value</span> = <span class="ruby-identifier">value</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:to_ary</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_ary</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_str</span>
+558: 
+559:         <span class="ruby-comment cmt"># Handle unicode normalization</span>
+560:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+561:           <span class="ruby-identifier">value</span>.<span class="ruby-identifier">map!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">val</span><span class="ruby-operator">|</span> <span class="ruby-constant">Addressable</span><span class="ruby-operator">::</span><span class="ruby-constant">IDNA</span>.<span class="ruby-identifier">unicode_normalize_kc</span>(<span class="ruby-identifier">val</span>) }
+562:         <span class="ruby-keyword kw">else</span>
+563:           <span class="ruby-identifier">value</span> = <span class="ruby-constant">Addressable</span><span class="ruby-operator">::</span><span class="ruby-constant">IDNA</span>.<span class="ruby-identifier">unicode_normalize_kc</span>(<span class="ruby-identifier">value</span>)
+564:         <span class="ruby-keyword kw">end</span>
+565: 
+566:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">processor</span> <span class="ruby-operator">==</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">processor</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:transform</span>)
+567:           <span class="ruby-comment cmt"># Handle percent escaping</span>
+568:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+569:             <span class="ruby-identifier">transformed_value</span> = <span class="ruby-identifier">value</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">val</span><span class="ruby-operator">|</span>
+570:               <span class="ruby-constant">Addressable</span><span class="ruby-operator">::</span><span class="ruby-constant">URI</span>.<span class="ruby-identifier">encode_component</span>(
+571:                 <span class="ruby-identifier">val</span>, <span class="ruby-constant">Addressable</span><span class="ruby-operator">::</span><span class="ruby-constant">URI</span><span class="ruby-operator">::</span><span class="ruby-constant">CharacterClasses</span><span class="ruby-operator">::</span><span class="ruby-constant">UNRESERVED</span>)
+572:             <span class="ruby-keyword kw">end</span>
+573:           <span class="ruby-keyword kw">else</span>
+574:             <span class="ruby-identifier">transformed_value</span> = <span class="ruby-constant">Addressable</span><span class="ruby-operator">::</span><span class="ruby-constant">URI</span>.<span class="ruby-identifier">encode_component</span>(
+575:               <span class="ruby-identifier">value</span>, <span class="ruby-constant">Addressable</span><span class="ruby-operator">::</span><span class="ruby-constant">URI</span><span class="ruby-operator">::</span><span class="ruby-constant">CharacterClasses</span><span class="ruby-operator">::</span><span class="ruby-constant">UNRESERVED</span>)
+576:           <span class="ruby-keyword kw">end</span>
+577:         <span class="ruby-keyword kw">end</span>
+578: 
+579:         <span class="ruby-comment cmt"># Process, if we've got a processor</span>
+580:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">processor</span> <span class="ruby-operator">!=</span> <span class="ruby-keyword kw">nil</span>
+581:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">processor</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:validate</span>)
+582:             <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">processor</span>.<span class="ruby-identifier">validate</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">value</span>)
+583:               <span class="ruby-identifier">display_value</span> = <span class="ruby-identifier">value</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">inspect</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">value</span>
+584:               <span class="ruby-identifier">raise</span> <span class="ruby-constant">InvalidTemplateValueError</span>,
+585:                 <span class="ruby-node">&quot;#{name}=#{display_value} is an invalid template value.&quot;</span>
+586:             <span class="ruby-keyword kw">end</span>
+587:           <span class="ruby-keyword kw">end</span>
+588:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">processor</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:transform</span>)
+589:             <span class="ruby-identifier">transformed_value</span> = <span class="ruby-identifier">processor</span>.<span class="ruby-identifier">transform</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">value</span>)
+590:             <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">transformed_value</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>)
+591:               <span class="ruby-identifier">transformed_value</span>.<span class="ruby-identifier">map!</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">val</span><span class="ruby-operator">|</span>
+592:                 <span class="ruby-constant">Addressable</span><span class="ruby-operator">::</span><span class="ruby-constant">IDNA</span>.<span class="ruby-identifier">unicode_normalize_kc</span>(<span class="ruby-identifier">val</span>)
+593:               <span class="ruby-keyword kw">end</span>
+594:             <span class="ruby-keyword kw">else</span>
+595:               <span class="ruby-identifier">transformed_value</span> =
+596:                 <span class="ruby-constant">Addressable</span><span class="ruby-operator">::</span><span class="ruby-constant">IDNA</span>.<span class="ruby-identifier">unicode_normalize_kc</span>(<span class="ruby-identifier">transformed_value</span>)
+597:             <span class="ruby-keyword kw">end</span>
+598:           <span class="ruby-keyword kw">end</span>
+599:         <span class="ruby-keyword kw">end</span>
+600: 
+601:         <span class="ruby-identifier">accu</span>[<span class="ruby-identifier">name</span>] = <span class="ruby-identifier">transformed_value</span>
+602:         <span class="ruby-identifier">accu</span>
+603:       <span class="ruby-keyword kw">end</span>
+604:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

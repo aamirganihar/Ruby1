@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Subexec</title>
+
+	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="./lib/subexec_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/subexec.rb">lib/subexec.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-c-run">::run</a></li>
+					
+					<li><a href="#method-i-exec">#exec</a></li>
+					
+					<li><a href="#method-i-run%21">#run!</a></li>
+					
+					<li><a href="#method-i-spawn">#spawn</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./Subexec.html">Subexec</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Subexec</h1>
+
+		<div id="description">
+			<h1><a href="Subexec.html">Subexec</a></h1>
+<ul>
+<li><p>
+by Peter Kieltyka
+</p>
+</li>
+<li><p>
+<a href="http://github/nulayer/subprocess">github/nulayer/subprocess</a>
+</p>
+</li>
+</ul>
+<h3>Description</h3>
+<p>
+<a href="Subexec.html">Subexec</a> is a simple library that spawns an
+external command with an optional timeout parameter. It relies on Ruby
+1.9&#8217;s Process.spawn method. Also, it works with synchronous and
+asynchronous code.
+</p>
+<p>
+Useful for libraries that are Ruby wrappers for CLI&#8217;s. For example,
+resizing images with ImageMagick&#8217;s mogrify command sometimes stalls
+and never returns control back to the original process. <a
+href="Subexec.html">Subexec</a> executes mogrify and preempts if gets lost.
+</p>
+<h3>Usage</h3>
+<p>
+# Print hello sub = Subexec.run &#8220;echo &#8216;hello&#8217; &amp;&amp;
+sleep 3&#8221;, :timeout => 5 puts sub.output     # returns: hello puts
+sub.exitstatus # returns: 0
+</p>
+<p>
+# Timeout process after a second sub = Subexec.run &#8220;echo
+&#8216;hello&#8217; &amp;&amp; sleep 3&#8221;, :timeout => 1 puts
+sub.output     # returns:  puts sub.exitstatus # returns:
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="pid-attribute-method" class="method-detail">
+				<a name="pid"></a>
+				
+				<a name="pid="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">pid</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="command-attribute-method" class="method-detail">
+				<a name="command"></a>
+				
+				<a name="command="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">command</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="timeout-attribute-method" class="method-detail">
+				<a name="timeout"></a>
+				
+				<a name="timeout="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">timeout</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="timer-attribute-method" class="method-detail">
+				<a name="timer"></a>
+				
+				<a name="timer="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">timer</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="output-attribute-method" class="method-detail">
+				<a name="output"></a>
+				
+				<a name="output="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">output</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+			<div id="exitstatus-attribute-method" class="method-detail">
+				<a name="exitstatus"></a>
+				
+				<a name="exitstatus="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">exitstatus</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(command, options={})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/subexec.rb, line 43</span>
+43:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">command</span>, <span class="ruby-identifier">options</span>={})
+44:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">command</span>  = <span class="ruby-identifier">command</span>
+45:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">timeout</span>  = <span class="ruby-identifier">options</span>[<span class="ruby-value">:timeout</span>] <span class="ruby-operator">||</span> <span class="ruby-value">1</span> <span class="ruby-comment cmt"># default is to never timeout</span>
+46:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="run-method" class="method-detail ">
+				<a name="method-c-run"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">run</span><span
+						class="method-args">(command, options={})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="run-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/subexec.rb, line 37</span>
+37:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">run</span>(<span class="ruby-identifier">command</span>, <span class="ruby-identifier">options</span>={})
+38:     <span class="ruby-identifier">sub</span> = <span class="ruby-identifier">new</span>(<span class="ruby-identifier">command</span>, <span class="ruby-identifier">options</span>)
+39:     <span class="ruby-identifier">sub</span>.<span class="ruby-identifier">run!</span>
+40:     <span class="ruby-identifier">sub</span>
+41:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="run--method" class="method-detail ">
+				<a name="method-i-run%21"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">run!</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="run--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/subexec.rb, line 48</span>
+48:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">run!</span>
+49:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">timeout</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">RUBY_VERSION</span> <span class="ruby-operator">&gt;=</span> <span class="ruby-value str">'1.9'</span>
+50:       <span class="ruby-identifier">spawn</span>
+51:     <span class="ruby-keyword kw">else</span>
+52:       <span class="ruby-identifier">exec</span>
+53:     <span class="ruby-keyword kw">end</span>
+54:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="exec-method" class="method-detail ">
+				<a name="method-i-exec"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">exec</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="exec-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/subexec.rb, line 97</span>
+ 97:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">exec</span>
+ 98:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">output</span> = <span class="ruby-node">`#{command} 2&gt;&amp;1`</span>
+ 99:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">exitstatus</span> = <span class="ruby-identifier">$?</span>.<span class="ruby-identifier">exitstatus</span>
+100:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="spawn-method" class="method-detail ">
+				<a name="method-i-spawn"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">spawn</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="spawn-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/subexec.rb, line 59</span>
+59:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">spawn</span>
+60:       <span class="ruby-identifier">r</span>, <span class="ruby-identifier">w</span> = <span class="ruby-constant">IO</span>.<span class="ruby-identifier">pipe</span>
+61:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">pid</span> = <span class="ruby-constant">Process</span>.<span class="ruby-identifier">spawn</span>(<span class="ruby-identifier">command</span>, <span class="ruby-constant">STDERR</span>=<span class="ruby-operator">&gt;</span><span class="ruby-identifier">w</span>, <span class="ruby-constant">STDOUT</span>=<span class="ruby-operator">&gt;</span><span class="ruby-identifier">w</span>)
+62:       <span class="ruby-identifier">w</span>.<span class="ruby-identifier">close</span>
+63: 
+64:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">timer</span> = <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">timeout</span>
+65:       <span class="ruby-identifier">timed_out</span> = <span class="ruby-keyword kw">false</span>
+66: 
+67:       <span class="ruby-identifier">loop</span> <span class="ruby-keyword kw">do</span>
+68:         <span class="ruby-keyword kw">begin</span>
+69:           <span class="ruby-identifier">flags</span> = (<span class="ruby-identifier">timeout</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">?</span> <span class="ruby-constant">Process</span><span class="ruby-operator">::</span><span class="ruby-constant">WUNTRACED</span><span class="ruby-operator">|</span><span class="ruby-constant">Process</span><span class="ruby-operator">::</span><span class="ruby-constant">WNOHANG</span> <span class="ruby-operator">:</span> <span class="ruby-value">0</span>)
+70:           <span class="ruby-identifier">ret</span> = <span class="ruby-constant">Process</span>.<span class="ruby-identifier">waitpid</span>(<span class="ruby-identifier">pid</span>, <span class="ruby-identifier">flags</span>)
+71:         <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ECHILD</span>
+72:           <span class="ruby-keyword kw">break</span>
+73:         <span class="ruby-keyword kw">end</span>
+74: 
+75:         <span class="ruby-keyword kw">break</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">ret</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">pid</span>
+76:         <span class="ruby-identifier">sleep</span> <span class="ruby-value">0.01</span>
+77:         <span class="ruby-keyword kw">if</span> <span class="ruby-constant">Time</span>.<span class="ruby-identifier">now</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">timer</span>
+78:           <span class="ruby-identifier">timed_out</span> = <span class="ruby-keyword kw">true</span>
+79:           <span class="ruby-keyword kw">break</span>
+80:         <span class="ruby-keyword kw">end</span>
+81:       <span class="ruby-keyword kw">end</span>
+82: 
+83:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">timed_out</span>
+84:         <span class="ruby-comment cmt"># The subprocess timed out -- kill it</span>
+85:         <span class="ruby-constant">Process</span>.<span class="ruby-identifier">kill</span>(<span class="ruby-value">9</span>, <span class="ruby-identifier">pid</span>) <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">Errno</span><span class="ruby-operator">::</span><span class="ruby-constant">ESRCH</span>
+86:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">exitstatus</span> = <span class="ruby-keyword kw">nil</span>
+87:       <span class="ruby-keyword kw">else</span>
+88:         <span class="ruby-comment cmt"># The subprocess exited on its own</span>
+89:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">exitstatus</span> = <span class="ruby-identifier">$?</span>.<span class="ruby-identifier">exitstatus</span>
+90:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">output</span> = <span class="ruby-identifier">r</span>.<span class="ruby-identifier">readlines</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;&quot;</span>)
+91:       <span class="ruby-keyword kw">end</span>
+92:       <span class="ruby-identifier">r</span>.<span class="ruby-identifier">close</span>
+93:       
+94:       <span class="ruby-keyword kw">self</span>
+95:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

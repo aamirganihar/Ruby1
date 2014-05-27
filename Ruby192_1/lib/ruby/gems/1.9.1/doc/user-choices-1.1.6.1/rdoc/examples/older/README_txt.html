@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>File: README.txt [user-choices-1.1.6.1 Documentation]</title>
+
+	<link type="text/css" media="screen" href="../../rdoc.css" rel="stylesheet" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+</head>
+
+<body class="file">
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../../History_txt.html">History.txt</a></li>
+				
+					<li class="file"><a href="../../LICENSE_txt.html">LICENSE.txt</a></li>
+				
+					<li class="file"><a href="../../Manifest_txt.html">Manifest.txt</a></li>
+				
+					<li class="file"><a href="../../README_txt.html">README.txt</a></li>
+				
+					<li class="file"><a href="../../examples/older/README_txt.html">README.txt</a></li>
+				
+					<li class="file"><a href="../../examples/tutorial/css/LICENSE_txt.html">LICENSE.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../UserChoices/ChoicesBuilder.html">UserChoices::ChoicesBuilder</a></li>
+				
+					<li><a href="../../UserChoices/Command.html">UserChoices::Command</a></li>
+				
+					<li><a href="../../UserChoices/CommandLineSource.html">UserChoices::CommandLineSource</a></li>
+				
+					<li><a href="../../UserChoices/EnvironmentSource.html">UserChoices::EnvironmentSource</a></li>
+				
+					<li><a href="../../UserChoices/PosixCommandLineSource.html">UserChoices::PosixCommandLineSource</a></li>
+				
+					<li><a href="../../UserChoices/XmlConfigFileSource.html">UserChoices::XmlConfigFileSource</a></li>
+				
+					<li><a href="../../UserChoices/YamlConfigFileSource.html">UserChoices::YamlConfigFileSource</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<p>
+Here are brief instructions for using the different scripts in this
+directory. The tutorial files aren&#8217;t described here; instead, the
+tutorial (on the website) describes them. 
+</p>
+<pre>
+                      == Command-line arguments ==
+</pre>
+<p>
++ Help is generated for you:
+</p>
+<p>
+prompt> ruby command-line.rb &#8212;help
+</p>
+<p>
++ Options are placed into a hash, as is the argument list
+</p>
+<p>
+prompt> ruby command-line.rb &#8212;choice cho sophie paul dawn me
+</p>
+<p>
++ The usual variant ways of specifying options
+</p>
+<p>
+prompt> ruby command-line.rb -c choice prompt> ruby command-line.rb
+-cchoice prompt> ruby command-line.rb &#8212;choi choice prompt> ruby
+command-line.rb &#8212;choi choice &#8212; -name1- -name2-
+</p>
+<p>
++ There are error messages for extra and malformed options
+</p>
+<p>
+prompt> ruby command-line.rb &#8212;choice prompt> ruby command-line.rb
+&#8212;other 3 &#8212; choice
+</p>
+<pre>
+                         == Default values ==
+</pre>
+<p>
++ You can specify default values when you define choices.
+</p>
+<p>
+prompt> ruby default-values.rb &#8212;choice specific prompt> ruby
+default-values.rb
+</p>
+<p>
++ Note: defaulting behavior applies to other sources of choices, not
+</p>
+<pre>
+   just command lines.
+
+                       == Optional arguments ==
+</pre>
+<p>
++ When single optional arguments are required, the result is not a
+</p>
+<pre>
+  list - it's either the value or nothing. 
+</pre>
+<p>
+prompt> ruby default-values.rb only-arg
+</p>
+<h2>Type checks and conversions</h2>
+<p>
++ There are ways to describe what kind of thing an argument
+</p>
+<pre>
+   is. (Currently limited.)
+</pre>
+<p>
+prompt> ruby types.rb &#8212;a-or-b not-a  argument prompt> ruby types.rb
+&#8212;must-be-integer 1d argument prompt> ruby types.rb &#8212;option-list
+first,second argument
+</p>
+<p>
++ Integer-valued options are converted into integers, not left as
+</p>
+<pre>
+   strings:
+</pre>
+<p>
+prompt> ruby types.rb &#8212;must-be-integer 3 argument
+</p>
+<p>
++ Type-checking and type conversions apply to all sources, not just
+</p>
+<pre>
+   command lines. 
+
+                       == Required Arguments ==
+</pre>
+<p>
++ You can require exactly one argument:
+</p>
+<p>
+prompt> ruby types.rb prompt> ruby types.rb argument extra-argument
+</p>
+<pre>
+              == Switches (values without arguments) ==
+</pre>
+<p>
++ Switches can also be specified.  Typically, their values are either
+</p>
+<pre>
+   true or false (rather than strings or numbers). 
+</pre>
+<p>
++ How they are given on the command line may be unfamiliar to you:
+</p>
+<p>
+prompt> ruby switches.rb &#8212;help
+</p>
+<p>
++ Examples of use:
+</p>
+<p>
+prompt> ruby switches.rb 1 2 prompt> ruby switches.rb &#8212;switch 1 2
+prompt> ruby switches.rb -s 2 1  prompt> ruby switches.rb &#8212;no-switch
+1 2
+</p>
+<h2>A range of arguments == </h2>
+<p>
++ You can require that the number of arguments be in a range. In this
+</p>
+<pre>
+   case, it's 2-4:
+</pre>
+<p>
+prompt> ruby switches.rb 1  prompt> ruby switches.rb 1  2  prompt> ruby
+switches.rb 1  2  3 4 prompt> ruby switches.rb 1  2  3 4 5
+</p>
+<p>
++ You can also require any particular exact number of arguments:
+</p>
+<p>
+prompt> ruby two-args.rb 1 prompt> ruby two-args.rb 1 2  prompt> ruby
+two-args.rb 1 2 3 
+</p>
+<pre>
+                         == Postprocessing ==
+</pre>
+<p>
++ You can also postprocess choices into a form more convenient for the
+</p>
+<pre>
+  rest of the program.
+</pre>
+<p>
+prompt> ruby postprocess.rb 1 2
+</p>
+<pre>
+                        == Multiple Sources ==
+</pre>
+<p>
++ First see what happens when no arguments are given.
+</p>
+<p>
+prompt> ruby command-line.rb
+</p>
+<p>
++ Create a file named ms-config.xml in your home / login folder, and
+</p>
+<pre>
+  put the following in it. (Note the underscore in &quot;ordinary_choice&quot; -
+  this is the name of the choice, not the representation of that choice
+  on the command line.)
+
+       &lt;config&gt;
+         &lt;ordinary_choice&gt;greetings&lt;/ordinary_choice&gt;
+       &lt;/config&gt;
+</pre>
+<p>
+prompt> ruby multiple-sources.rb 
+</p>
+<p>
+Set an environment variable ms_ordinary_choice with value &#8216;hi&#8217;.
+</p>
+<p>
+prompt> ruby multiple-sources.rb
+</p>
+<p>
+Which takes precedence, the environment or the configuration file? (This is
+configurable.) 
+</p>
+<p>
+The command line arguments have highest precedence of all:
+</p>
+<p>
+prompt> ruby multiple-sources.rb &#8212;ordinary-choice hello
+</p>
+
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+</body>
+</html>
+

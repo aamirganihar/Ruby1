@@ -1,0 +1,16 @@
+Thu, 12 Jul 2012 00:00:17 -0700
+lib/diff/lcs/array.rb	Wed, 11 Jul 2012 23:59:44 -0700
+lib/diff/lcs/block.rb	Wed, 11 Jul 2012 23:59:44 -0700
+lib/diff/lcs/callbacks.rb	Wed, 11 Jul 2012 23:59:44 -0700
+lib/diff/lcs/change.rb	Wed, 11 Jul 2012 23:59:44 -0700
+lib/diff/lcs/htmldiff.rb	Wed, 11 Jul 2012 23:59:44 -0700
+lib/diff/lcs/hunk.rb	Wed, 11 Jul 2012 23:59:44 -0700
+lib/diff/lcs/ldiff.rb	Wed, 11 Jul 2012 23:59:44 -0700
+lib/diff/lcs/string.rb	Wed, 11 Jul 2012 23:59:44 -0700
+lib/diff/lcs.rb	Wed, 11 Jul 2012 23:59:44 -0700
+lib/diff-lcs.rb	Wed, 11 Jul 2012 23:59:44 -0700
+Manifest.txt	Wed, 11 Jul 2012 23:59:44 -0700
+docs/COPYING.txt	Wed, 11 Jul 2012 23:59:44 -0700
+History.rdoc	Wed, 11 Jul 2012 23:59:44 -0700
+License.rdoc	Wed, 11 Jul 2012 23:59:44 -0700
+README.rdoc	Wed, 11 Jul 2012 23:59:44 -0700

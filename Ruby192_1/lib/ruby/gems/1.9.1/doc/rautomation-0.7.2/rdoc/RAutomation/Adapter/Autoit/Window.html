@@ -1,0 +1,1264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: RAutomation::Adapter::Autoit::Window</title>
+
+	<link rel="stylesheet" href="../../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../../index.html">Home</a>
+          <a href="../../../index.html#classes">Classes</a>
+          <a href="../../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../../lib/rautomation/adapter/autoit/window_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/rautomation/adapter/autoit/window.rb">lib/rautomation/adapter/autoit/window.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-autoit">::autoit</a></li>
+					
+					<li><a href="#method-c-load_autoit">::load_autoit</a></li>
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-activate">#activate</a></li>
+					
+					<li><a href="#method-i-active%3F">#active?</a></li>
+					
+					<li><a href="#method-i-button">#button</a></li>
+					
+					<li><a href="#method-i-class_names">#class_names</a></li>
+					
+					<li><a href="#method-i-close">#close</a></li>
+					
+					<li><a href="#method-i-exists%3F">#exists?</a></li>
+					
+					<li><a href="#method-i-hwnd">#hwnd</a></li>
+					
+					<li><a href="#method-i-locator_hwnd">#locator_hwnd</a></li>
+					
+					<li><a href="#method-i-maximize">#maximize</a></li>
+					
+					<li><a href="#method-i-method_missing">#method_missing</a></li>
+					
+					<li><a href="#method-i-minimize">#minimize</a></li>
+					
+					<li><a href="#method-i-minimized%3F">#minimized?</a></li>
+					
+					<li><a href="#method-i-mouse">#mouse</a></li>
+					
+					<li><a href="#method-i-pid">#pid</a></li>
+					
+					<li><a href="#method-i-restore">#restore</a></li>
+					
+					<li><a href="#method-i-send_keys">#send_keys</a></li>
+					
+					<li><a href="#method-i-text">#text</a></li>
+					
+					<li><a href="#method-i-text_field">#text_field</a></li>
+					
+					<li><a href="#method-i-title">#title</a></li>
+					
+					<li><a href="#method-i-visible%3F">#visible?</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+			<div id="includes-section" class="section">
+				<h3 class="section-header">Included Modules</h3>
+				<ul class="link-list">
+				
+				
+					<li><span class="include">WaitHelper</span></li>
+				
+				
+				
+					<li><span class="include">Locators</span></li>
+				
+				
+				</ul>
+			</div>
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../../RAutomation.html">RAutomation</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter.html">RAutomation::Adapter</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Autoit.html">RAutomation::Adapter::Autoit</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Autoit/Button.html">RAutomation::Adapter::Autoit::Button</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Autoit/Locators.html">RAutomation::Adapter::Autoit::Locators</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Autoit/Mouse.html">RAutomation::Adapter::Autoit::Mouse</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Autoit/TextField.html">RAutomation::Adapter::Autoit::TextField</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Autoit/Window.html">RAutomation::Adapter::Autoit::Window</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Helper.html">RAutomation::Adapter::Helper</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia.html">RAutomation::Adapter::MsUia</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/Button.html">RAutomation::Adapter::MsUia::Button</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/ButtonHelper.html">RAutomation::Adapter::MsUia::ButtonHelper</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/Checkbox.html">RAutomation::Adapter::MsUia::Checkbox</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/Constants.html">RAutomation::Adapter::MsUia::Constants</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/Control.html">RAutomation::Adapter::MsUia::Control</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/Functions.html">RAutomation::Adapter::MsUia::Functions</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/KeystrokeConverter.html">RAutomation::Adapter::MsUia::KeystrokeConverter</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/Label.html">RAutomation::Adapter::MsUia::Label</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/ListBox.html">RAutomation::Adapter::MsUia::ListBox</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/ListItem.html">RAutomation::Adapter::MsUia::ListItem</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/Locators.html">RAutomation::Adapter::MsUia::Locators</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/Radio.html">RAutomation::Adapter::MsUia::Radio</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/SelectList.html">RAutomation::Adapter::MsUia::SelectList</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/SelectList/SelectListOption.html">RAutomation::Adapter::MsUia::SelectList::SelectListOption</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/Table.html">RAutomation::Adapter::MsUia::Table</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/TextField.html">RAutomation::Adapter::MsUia::TextField</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/UiaDll.html">RAutomation::Adapter::MsUia::UiaDll</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/MsUia/Window.html">RAutomation::Adapter::MsUia::Window</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32.html">RAutomation::Adapter::Win32</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Button.html">RAutomation::Adapter::Win32::Button</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/ButtonHelper.html">RAutomation::Adapter::Win32::ButtonHelper</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Checkbox.html">RAutomation::Adapter::Win32::Checkbox</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Constants.html">RAutomation::Adapter::Win32::Constants</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Control.html">RAutomation::Adapter::Win32::Control</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Functions.html">RAutomation::Adapter::Win32::Functions</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Keys.html">RAutomation::Adapter::Win32::Keys</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Label.html">RAutomation::Adapter::Win32::Label</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/ListBox.html">RAutomation::Adapter::Win32::ListBox</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Locators.html">RAutomation::Adapter::Win32::Locators</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Mouse.html">RAutomation::Adapter::Win32::Mouse</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Radio.html">RAutomation::Adapter::Win32::Radio</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/SelectList.html">RAutomation::Adapter::Win32::SelectList</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/SelectList/SelectListOption.html">RAutomation::Adapter::Win32::SelectList::SelectListOption</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Table.html">RAutomation::Adapter::Win32::Table</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/TextField.html">RAutomation::Adapter::Win32::TextField</a></li>
+				
+					<li><a href="../../../RAutomation/Adapter/Win32/Window.html">RAutomation::Adapter::Win32::Window</a></li>
+				
+					<li><a href="../../../RAutomation/Button.html">RAutomation::Button</a></li>
+				
+					<li><a href="../../../RAutomation/ElementCollections.html">RAutomation::ElementCollections</a></li>
+				
+					<li><a href="../../../RAutomation/ElementCollections/UnsupportedLocatorException.html">RAutomation::ElementCollections::UnsupportedLocatorException</a></li>
+				
+					<li><a href="../../../RAutomation/TextField.html">RAutomation::TextField</a></li>
+				
+					<li><a href="../../../RAutomation/UnknownButtonException.html">RAutomation::UnknownButtonException</a></li>
+				
+					<li><a href="../../../RAutomation/UnknownElementException.html">RAutomation::UnknownElementException</a></li>
+				
+					<li><a href="../../../RAutomation/UnknownTextFieldException.html">RAutomation::UnknownTextFieldException</a></li>
+				
+					<li><a href="../../../RAutomation/UnknownWindowException.html">RAutomation::UnknownWindowException</a></li>
+				
+					<li><a href="../../../RAutomation/WaitHelper.html">RAutomation::WaitHelper</a></li>
+				
+					<li><a href="../../../RAutomation/WaitHelper/TimeoutError.html">RAutomation::WaitHelper::TimeoutError</a></li>
+				
+					<li><a href="../../../RAutomation/Window.html">RAutomation::Window</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">RAutomation::Adapter::Autoit::Window</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="LOCATORS">LOCATORS</a></dt>
+				
+				<dd class="description"><p>
+@private Special-cased locators
+</p></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="locators-attribute-method" class="method-detail">
+				<a name="locators"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">locators</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+<a href="Locators.html">Locators</a> of the window.
+</p>
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="autoit-method" class="method-detail ">
+				<a name="method-c-autoit"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">autoit</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@private
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="autoit-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rautomation/adapter/autoit/window.rb, line 10</span>
+10:           <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">autoit</span>
+11:             <span class="ruby-identifier">@@autoit</span>
+12:           <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="load-autoit-method" class="method-detail ">
+				<a name="method-c-load_autoit"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">load_autoit</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@private
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="load-autoit-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rautomation/adapter/autoit/window.rb, line 15</span>
+15:           <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">load_autoit</span>
+16:             <span class="ruby-identifier">@@autoit</span> = <span class="ruby-constant">WIN32OLE</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">'AutoItX3.Control'</span>)
+17:           <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">WIN32OLERuntimeError</span>
+18:             <span class="ruby-identifier">dll</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-keyword kw">__FILE__</span>) <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;/../../../../ext/AutoItX/AutoItX3.dll&quot;</span>
+19:             <span class="ruby-identifier">system</span>(<span class="ruby-node">&quot;regsvr32.exe /s #{dll.gsub('/', '\\')}&quot;</span>)
+20:             <span class="ruby-identifier">@@autoit</span> = <span class="ruby-constant">WIN32OLE</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value str">'AutoItX3.Control'</span>)
+21:           <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(container, locators)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Creates the window object. @note this method is not meant to be accessed
+directly, but only through {RAutomation::Window#initialize}! @param [Hash]
+locators for searching the window. @option locators [String, Regexp]
+:title Title of the window @option locators [String, Regexp] :text Visible
+text of the window @option locators [String, Regexp] :class Internal class
+name of the window @option locators [String, Fixnum] :hwnd <a
+href="Window.html">Window</a> handle in decimal format @option locators
+[String, Fixnum] :index 0-based index to specify n-th window if all other
+criteria match @see RAutomation::Window#initialize
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rautomation/adapter/autoit/window.rb, line 47</span>
+47:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">container</span>, <span class="ruby-identifier">locators</span>)
+48:           <span class="ruby-ivar">@container</span> = <span class="ruby-identifier">container</span>
+49:           <span class="ruby-ivar">@hwnd</span> = <span class="ruby-identifier">locators</span>[<span class="ruby-value">:hwnd</span>]
+50:           <span class="ruby-ivar">@locator_index</span> = <span class="ruby-identifier">locators</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:index</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">locators</span>[<span class="ruby-value">:index</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">locators</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+51:           <span class="ruby-ivar">@locator_pid</span> = <span class="ruby-identifier">locators</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:pid</span>).<span class="ruby-identifier">to_i</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">locators</span>[<span class="ruby-value">:pid</span>]
+52:           <span class="ruby-ivar">@locator_text</span> = <span class="ruby-identifier">locators</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value">:text</span>)
+53:           <span class="ruby-identifier">extract</span>(<span class="ruby-identifier">locators</span>)
+54:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="activate-method" class="method-detail ">
+				<a name="method-i-activate"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">activate</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@see <a
+href="../../Window.html#method-i-activate">RAutomation::Window#activate</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="activate-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rautomation/adapter/autoit/window.rb, line 95</span>
+95:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">activate</span>
+96:           <span class="ruby-identifier">@@autoit</span>.<span class="ruby-constant">WinWait</span>(<span class="ruby-identifier">locator_hwnd</span>, <span class="ruby-value str">&quot;&quot;</span>, <span class="ruby-value">1</span>)
+97:           <span class="ruby-identifier">@@autoit</span>.<span class="ruby-constant">WinActivate</span>(<span class="ruby-identifier">locator_hwnd</span>)
+98:           <span class="ruby-identifier">sleep</span> <span class="ruby-value">1</span>
+99:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="active--method" class="method-detail ">
+				<a name="method-i-active%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">active?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@see <a
+href="../../Window.html#method-i-active%3F">RAutomation::Window#active?</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="active--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/adapter/autoit/window.rb, line 102</span>
+102:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">active?</span>
+103:           <span class="ruby-identifier">@@autoit</span>.<span class="ruby-constant">WinActive</span>(<span class="ruby-identifier">locator_hwnd</span>) <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+104:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="button-method" class="method-detail ">
+				<a name="method-i-button"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">button</span><span
+						class="method-args">(locator={})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@see Button#initialize @see <a
+href="../../Window.html#method-i-button">RAutomation::Window#button</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="button-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/adapter/autoit/window.rb, line 170</span>
+170:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">button</span>(<span class="ruby-identifier">locator</span>={})
+171:           <span class="ruby-constant">Button</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-identifier">locator</span>)
+172:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="class-names-method" class="method-detail ">
+				<a name="method-i-class_names"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">class_names</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@see <a
+href="../../Window.html#method-i-class_names">RAutomation::Window#class_names</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="class-names-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rautomation/adapter/autoit/window.rb, line 90</span>
+90:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">class_names</span>
+91:           <span class="ruby-identifier">@@autoit</span>.<span class="ruby-constant">WinGetClassList</span>(<span class="ruby-identifier">locator_hwnd</span>).<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;\n&quot;</span>).<span class="ruby-identifier">sort</span>
+92:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="close-method" class="method-detail ">
+				<a name="method-i-close"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">close</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@see <a
+href="../../Window.html#method-i-close">RAutomation::Window#close</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="close-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/adapter/autoit/window.rb, line 158</span>
+158:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">close</span>
+159:           <span class="ruby-identifier">@@autoit</span>.<span class="ruby-constant">WinClose</span>(<span class="ruby-identifier">locator_hwnd</span>)
+160:           <span class="ruby-identifier">@@autoit</span>.<span class="ruby-constant">WinKill</span>(<span class="ruby-identifier">locator_hwnd</span>)
+161:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="exists--method" class="method-detail ">
+				<a name="method-i-exists%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">exists?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@see <a
+href="../../Window.html#method-i-exists%3F">RAutomation::Window#exists?</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="exists--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/adapter/autoit/window.rb, line 112</span>
+112:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">exists?</span>
+113:           <span class="ruby-identifier">@@autoit</span>.<span class="ruby-constant">WinExists</span>(<span class="ruby-identifier">locator_hwnd</span>) <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+114:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="hwnd-method" class="method-detail ">
+				<a name="method-i-hwnd"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">hwnd</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Retrieves handle of the window. @note Searches only for visible windows.
+@see <a
+href="../../Window.html#method-i-hwnd">RAutomation::Window#hwnd</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="hwnd-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rautomation/adapter/autoit/window.rb, line 59</span>
+59:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">hwnd</span>
+60:           <span class="ruby-ivar">@hwnd</span> <span class="ruby-operator">||=</span> <span class="ruby-keyword kw">begin</span>
+61:             <span class="ruby-identifier">locators</span> = <span class="ruby-ivar">@autoit_locators</span>
+62:             <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@locator_index</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@locator_pid</span>
+63:               <span class="ruby-comment cmt"># @todo Come up with some better solution for this case</span>
+64:               <span class="ruby-identifier">locators</span> = <span class="ruby-value str">&quot;[regexptitle:]&quot;</span> <span class="ruby-comment cmt"># match all, needed for the case when only :index or :pid is used</span>
+65:             <span class="ruby-keyword kw">end</span>
+66:             <span class="ruby-identifier">windows</span> = <span class="ruby-identifier">@@autoit</span>.<span class="ruby-constant">WinList</span>(<span class="ruby-identifier">locators</span>, <span class="ruby-ivar">@locator_text</span>).<span class="ruby-identifier">pop</span>.<span class="ruby-identifier">compact</span>.
+67:                 <span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">handle</span><span class="ruby-operator">|</span> <span class="ruby-constant">RAutomation</span><span class="ruby-operator">::</span><span class="ruby-constant">Window</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:hwnd</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">handle</span>.<span class="ruby-identifier">hex</span>) }
+68:             <span class="ruby-identifier">windows</span>.<span class="ruby-identifier">delete_if</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">window</span><span class="ruby-operator">|</span> <span class="ruby-operator">!</span><span class="ruby-identifier">window</span>.<span class="ruby-identifier">visible?</span> }
+69: 
+70:             <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@locator_pid</span>
+71:               <span class="ruby-identifier">window</span> = <span class="ruby-identifier">windows</span>.<span class="ruby-identifier">find</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">win</span><span class="ruby-operator">|</span> <span class="ruby-identifier">win</span>.<span class="ruby-identifier">pid</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@locator_pid</span> }
+72:             <span class="ruby-keyword kw">else</span>
+73:               <span class="ruby-identifier">window</span> = <span class="ruby-identifier">windows</span>[<span class="ruby-ivar">@locator_index</span> <span class="ruby-operator">||</span> <span class="ruby-value">0</span>]
+74:             <span class="ruby-keyword kw">end</span>
+75:             <span class="ruby-identifier">window</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">window</span>.<span class="ruby-identifier">hwnd</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">nil</span>
+76:           <span class="ruby-keyword kw">end</span>
+77:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="locator-hwnd-method" class="method-detail ">
+				<a name="method-i-locator_hwnd"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">locator_hwnd</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@private
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="locator-hwnd-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/adapter/autoit/window.rb, line 189</span>
+189:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">locator_hwnd</span>
+190:           <span class="ruby-node">&quot;[HANDLE:#{hwnd.to_i.to_s(16)}]&quot;</span>
+191:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="maximize-method" class="method-detail ">
+				<a name="method-i-maximize"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">maximize</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@see <a
+href="../../Window.html#method-i-maximize">RAutomation::Window#maximize</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="maximize-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/adapter/autoit/window.rb, line 122</span>
+122:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">maximize</span>
+123:           <span class="ruby-identifier">@@autoit</span>.<span class="ruby-constant">WinSetState</span>(<span class="ruby-identifier">locator_hwnd</span>, <span class="ruby-value str">&quot;&quot;</span>, <span class="ruby-identifier">@@autoit</span>.<span class="ruby-constant">SW_MAXIMIZE</span>)
+124:           <span class="ruby-identifier">sleep</span> <span class="ruby-value">1</span>
+125:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="method-missing-method" class="method-detail ">
+				<a name="method-i-method_missing"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">method_missing</span><span
+						class="method-args">(name, *args)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Redirects all method calls not part of the public API to the AutoIt
+directly. @example execute AutoIt&#8217;s WinGetTitle function:
+</p>
+<pre>
+  RAutomation::Window.new(:hwnd =&gt; 123456).WinGetTitle(...)
+</pre>
+<p>
+@see <a
+href="../../Window.html#method-i-method_missing">RAutomation::Window#method_missing</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="method-missing-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/adapter/autoit/window.rb, line 184</span>
+184:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">method_missing</span>(<span class="ruby-identifier">name</span>, *<span class="ruby-identifier">args</span>)
+185:           <span class="ruby-identifier">@@autoit</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">name</span>, *<span class="ruby-identifier">args</span>)
+186:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="minimize-method" class="method-detail ">
+				<a name="method-i-minimize"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">minimize</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@see <a
+href="../../Window.html#method-i-minimize">RAutomation::Window#minimize</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="minimize-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/adapter/autoit/window.rb, line 128</span>
+128:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">minimize</span>
+129:           <span class="ruby-identifier">@@autoit</span>.<span class="ruby-constant">WinSetState</span>(<span class="ruby-identifier">locator_hwnd</span>, <span class="ruby-value str">&quot;&quot;</span>, <span class="ruby-identifier">@@autoit</span>.<span class="ruby-constant">SW_MINIMIZE</span>)
+130:           <span class="ruby-identifier">sleep</span> <span class="ruby-value">1</span>
+131:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="minimized--method" class="method-detail ">
+				<a name="method-i-minimized%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">minimized?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@see <a
+href="../../Window.html#method-i-minimized%3F">RAutomation::Window#minimized?</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="minimized--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/adapter/autoit/window.rb, line 134</span>
+134:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">minimized?</span>
+135:           <span class="ruby-identifier">@@autoit</span>.<span class="ruby-constant">WinGetState</span>(<span class="ruby-identifier">locator_hwnd</span>) &amp; <span class="ruby-value">16</span> <span class="ruby-operator">==</span> <span class="ruby-value">16</span>
+136:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="mouse-method" class="method-detail ">
+				<a name="method-i-mouse"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">mouse</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="mouse-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/adapter/autoit/window.rb, line 163</span>
+163:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mouse</span>
+164:           <span class="ruby-ivar">@container</span>.<span class="ruby-identifier">wait_until_present</span>
+165:           <span class="ruby-constant">Mouse</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>)
+166:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="pid-method" class="method-detail ">
+				<a name="method-i-pid"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">pid</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@see <a href="../../Window.html#method-i-pid">RAutomation::Window#pid</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="pid-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rautomation/adapter/autoit/window.rb, line 80</span>
+80:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pid</span>
+81:           <span class="ruby-identifier">@@autoit</span>.<span class="ruby-constant">WinGetProcess</span>(<span class="ruby-identifier">locator_hwnd</span>).<span class="ruby-identifier">to_i</span>
+82:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="restore-method" class="method-detail ">
+				<a name="method-i-restore"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">restore</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@see <a
+href="../../Window.html#method-i-restore">RAutomation::Window#restore</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="restore-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/adapter/autoit/window.rb, line 139</span>
+139:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">restore</span>
+140:           <span class="ruby-identifier">@@autoit</span>.<span class="ruby-constant">WinSetState</span>(<span class="ruby-identifier">locator_hwnd</span>, <span class="ruby-value str">&quot;&quot;</span>, <span class="ruby-identifier">@@autoit</span>.<span class="ruby-constant">SW_RESTORE</span>)
+141:           <span class="ruby-identifier">sleep</span> <span class="ruby-value">1</span>
+142:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="send-keys-method" class="method-detail ">
+				<a name="method-i-send_keys"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">send_keys</span><span
+						class="method-args">(keys)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Activates the window and sends keys to it.
+</p>
+<p>
+Refer to AutoIt documentation at <a
+href="http://www.autoitscript.com/autoit3/docs/appendix/SendKeys.htm">www.autoitscript.com/autoit3/docs/appendix/SendKeys.htm</a>
+for keys syntax. @see <a
+href="../../Window.html#method-i-send_keys">RAutomation::Window#send_keys</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="send-keys-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/adapter/autoit/window.rb, line 149</span>
+149:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">send_keys</span>(<span class="ruby-identifier">keys</span>)
+150:           <span class="ruby-identifier">wait_until</span> <span class="ruby-keyword kw">do</span>
+151:             <span class="ruby-identifier">activate</span>
+152:             <span class="ruby-identifier">active?</span>
+153:           <span class="ruby-keyword kw">end</span>
+154:           <span class="ruby-identifier">@@autoit</span>.<span class="ruby-constant">Send</span>(<span class="ruby-identifier">keys</span>[<span class="ruby-value">0</span>])
+155:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="text-method" class="method-detail ">
+				<a name="method-i-text"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">text</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@see <a
+href="../../Window.html#method-i-text">RAutomation::Window#text</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="text-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/adapter/autoit/window.rb, line 107</span>
+107:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">text</span>
+108:           <span class="ruby-identifier">@@autoit</span>.<span class="ruby-constant">WinGetText</span>(<span class="ruby-identifier">locator_hwnd</span>)
+109:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="text-field-method" class="method-detail ">
+				<a name="method-i-text_field"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">text_field</span><span
+						class="method-args">(locator={})</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@see TextField#initialize @see <a
+href="../../Window.html#method-i-text_field">RAutomation::Window#text_field</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="text-field-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/adapter/autoit/window.rb, line 176</span>
+176:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">text_field</span>(<span class="ruby-identifier">locator</span>={})
+177:           <span class="ruby-constant">TextField</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-identifier">locator</span>)
+178:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="title-method" class="method-detail ">
+				<a name="method-i-title"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">title</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@see <a
+href="../../Window.html#method-i-title">RAutomation::Window#title</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="title-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rautomation/adapter/autoit/window.rb, line 85</span>
+85:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">title</span>
+86:           <span class="ruby-identifier">@@autoit</span>.<span class="ruby-constant">WinGetTitle</span>(<span class="ruby-identifier">locator_hwnd</span>)
+87:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="visible--method" class="method-detail ">
+				<a name="method-i-visible%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">visible?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+@see <a
+href="../../Window.html#method-i-visible%3F">RAutomation::Window#visible?</a>
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="visible--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/rautomation/adapter/autoit/window.rb, line 117</span>
+117:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">visible?</span>
+118:           <span class="ruby-identifier">@@autoit</span>.<span class="ruby-constant">WinGetState</span>(<span class="ruby-identifier">locator_hwnd</span>) &amp; <span class="ruby-value">2</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span>
+119:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Selenium::RSpec::Reporting::FilePathStrategy</title>
+
+	<link rel="stylesheet" href="../../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../../index.html">Home</a>
+          <a href="../../../index.html#classes">Classes</a>
+          <a href="../../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../../lib/selenium/rspec/reporting/file_path_strategy_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/selenium/rspec/reporting/file_path_strategy.rb">lib/selenium/rspec/reporting/file_path_strategy.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-base_report_dir">#base_report_dir</a></li>
+					
+					<li><a href="#method-i-file_path">#file_path</a></li>
+					
+					<li><a href="#method-i-file_path_for_browser_network_traffic">#file_path_for_browser_network_traffic</a></li>
+					
+					<li><a href="#method-i-file_path_for_html_capture">#file_path_for_html_capture</a></li>
+					
+					<li><a href="#method-i-file_path_for_page_screenshot">#file_path_for_page_screenshot</a></li>
+					
+					<li><a href="#method-i-file_path_for_remote_control_logs">#file_path_for_remote_control_logs</a></li>
+					
+					<li><a href="#method-i-file_path_for_system_screenshot">#file_path_for_system_screenshot</a></li>
+					
+					<li><a href="#method-i-relative_dir">#relative_dir</a></li>
+					
+					<li><a href="#method-i-relative_file_path_for_browser_network_traffic">#relative_file_path_for_browser_network_traffic</a></li>
+					
+					<li><a href="#method-i-relative_file_path_for_html_capture">#relative_file_path_for_html_capture</a></li>
+					
+					<li><a href="#method-i-relative_file_path_for_page_screenshot">#relative_file_path_for_page_screenshot</a></li>
+					
+					<li><a href="#method-i-relative_file_path_for_remote_control_logs">#relative_file_path_for_remote_control_logs</a></li>
+					
+					<li><a href="#method-i-relative_file_path_for_system_screenshot">#relative_file_path_for_system_screenshot</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../../Selenium.html">Selenium</a></li>
+				
+					<li><a href="../../../Selenium/Client.html">Selenium::Client</a></li>
+				
+					<li><a href="../../../Selenium/Client/Base.html">Selenium::Client::Base</a></li>
+				
+					<li><a href="../../../Selenium/Client/Driver.html">Selenium::Client::Driver</a></li>
+				
+					<li><a href="../../../Selenium/Client/Driver.html">Selenium::Client::Driver</a></li>
+				
+					<li><a href="../../../Selenium/Client/Extensions.html">Selenium::Client::Extensions</a></li>
+				
+					<li><a href="../../../Selenium/Client/GeneratedDriver.html">Selenium::Client::GeneratedDriver</a></li>
+				
+					<li><a href="../../../Selenium/Client/Idiomatic.html">Selenium::Client::Idiomatic</a></li>
+				
+					<li><a href="../../../Selenium/Client/JavascriptExpressionBuilder.html">Selenium::Client::JavascriptExpressionBuilder</a></li>
+				
+					<li><a href="../../../Selenium/Client/JavascriptFrameworks.html">Selenium::Client::JavascriptFrameworks</a></li>
+				
+					<li><a href="../../../Selenium/Client/JavascriptFrameworks/JQuery.html">Selenium::Client::JavascriptFrameworks::JQuery</a></li>
+				
+					<li><a href="../../../Selenium/Client/JavascriptFrameworks/Prototype.html">Selenium::Client::JavascriptFrameworks::Prototype</a></li>
+				
+					<li><a href="../../../Selenium/Client/Protocol.html">Selenium::Client::Protocol</a></li>
+				
+					<li><a href="../../../Selenium/Client/SeleniumHelper.html">Selenium::Client::SeleniumHelper</a></li>
+				
+					<li><a href="../../../Selenium/Client/SeleniumHelper.html">Selenium::Client::SeleniumHelper</a></li>
+				
+					<li><a href="../../../Selenium/CommandError.html">Selenium::CommandError</a></li>
+				
+					<li><a href="../../../Selenium/CommandError.html">Selenium::CommandError</a></li>
+				
+					<li><a href="../../../Selenium/ProtocolError.html">Selenium::ProtocolError</a></li>
+				
+					<li><a href="../../../Selenium/RSpec.html">Selenium::RSpec</a></li>
+				
+					<li><a href="../../../Selenium/RSpec/Reporting.html">Selenium::RSpec::Reporting</a></li>
+				
+					<li><a href="../../../Selenium/RSpec/Reporting/FilePathStrategy.html">Selenium::RSpec::Reporting::FilePathStrategy</a></li>
+				
+					<li><a href="../../../Selenium/RSpec/Reporting/HtmlReport.html">Selenium::RSpec::Reporting::HtmlReport</a></li>
+				
+					<li><a href="../../../Selenium/RSpec/Reporting/SystemCapture.html">Selenium::RSpec::Reporting::SystemCapture</a></li>
+				
+					<li><a href="../../../Selenium/RSpec/SeleniumTestReportFormatter.html">Selenium::RSpec::SeleniumTestReportFormatter</a></li>
+				
+					<li><a href="../../../Selenium/Rake.html">Selenium::Rake</a></li>
+				
+					<li><a href="../../../Selenium/Rake/RemoteControlStartTask.html">Selenium::Rake::RemoteControlStartTask</a></li>
+				
+					<li><a href="../../../Selenium/Rake/RemoteControlStopTask.html">Selenium::Rake::RemoteControlStopTask</a></li>
+				
+					<li><a href="../../../Selenium/RemoteControl.html">Selenium::RemoteControl</a></li>
+				
+					<li><a href="../../../Selenium/RemoteControl/RemoteControl.html">Selenium::RemoteControl::RemoteControl</a></li>
+				
+					<li><a href="../../../Spec.html">Spec</a></li>
+				
+					<li><a href="../../../Spec/Example.html">Spec::Example</a></li>
+				
+					<li><a href="../../../Spec/Example/ExampleMethods.html">Spec::Example::ExampleMethods</a></li>
+				
+					<li><a href="../../../Spec/Example/ExampleProxy.html">Spec::Example::ExampleProxy</a></li>
+				
+					<li><a href="../../../Nautilus.html">Nautilus</a></li>
+				
+					<li><a href="../../../Nautilus/Shell.html">Nautilus::Shell</a></li>
+				
+					<li><a href="../../../TCPSocket.html">TCPSocket</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Selenium::RSpec::Reporting::FilePathStrategy</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="REPORT_DEFAULT_FILE_PATH">REPORT_DEFAULT_FILE_PATH</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="final-report-file-path-attribute-method" class="method-detail">
+				<a name="final_report_file_path"></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">final_report_file_path</span><span
+						class="attribute-access-type">[R]</span>
+				</div>
+
+				<div class="method-description">
+				
+				
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(final_report_file_path)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/selenium/rspec/reporting/file_path_strategy.rb, line 10</span>
+10:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">final_report_file_path</span>)
+11:           <span class="ruby-ivar">@final_report_file_path</span> = <span class="ruby-identifier">final_report_file_path</span> <span class="ruby-operator">||</span> <span class="ruby-constant">REPORT_DEFAULT_FILE_PATH</span>
+12:           <span class="ruby-ivar">@relative_dir</span> = <span class="ruby-keyword kw">nil</span>
+13:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="base-report-dir-method" class="method-detail ">
+				<a name="method-i-base_report_dir"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">base_report_dir</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="base-report-dir-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/selenium/rspec/reporting/file_path_strategy.rb, line 15</span>
+15:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">base_report_dir</span>
+16:           <span class="ruby-ivar">@base_report_dir</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-constant">File</span>.<span class="ruby-identifier">expand_path</span>(<span class="ruby-ivar">@final_report_file_path</span>))
+17:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="file-path-method" class="method-detail ">
+				<a name="method-i-file_path"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">file_path</span><span
+						class="method-args">(relative_file_path)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="file-path-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/selenium/rspec/reporting/file_path_strategy.rb, line 66</span>
+66:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">file_path</span>(<span class="ruby-identifier">relative_file_path</span>)
+67:           <span class="ruby-identifier">the_file_path</span> = <span class="ruby-identifier">base_report_dir</span> <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;/&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">relative_file_path</span>
+68:           <span class="ruby-identifier">parent_dir</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">dirname</span>(<span class="ruby-identifier">the_file_path</span>)
+69:           <span class="ruby-constant">FileUtils</span>.<span class="ruby-identifier">mkdir_p</span>(<span class="ruby-identifier">parent_dir</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span>(<span class="ruby-identifier">parent_dir</span>)
+70:           <span class="ruby-identifier">the_file_path</span>
+71:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="file-path-for-browser-network-traffic-method" class="method-detail ">
+				<a name="method-i-file_path_for_browser_network_traffic"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">file_path_for_browser_network_traffic</span><span
+						class="method-args">(example)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="file-path-for-browser-network-traffic-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/selenium/rspec/reporting/file_path_strategy.rb, line 62</span>
+62:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">file_path_for_browser_network_traffic</span>(<span class="ruby-identifier">example</span>)
+63:           <span class="ruby-identifier">file_path</span> <span class="ruby-identifier">relative_file_path_for_browser_network_traffic</span>(<span class="ruby-identifier">example</span>)
+64:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="file-path-for-html-capture-method" class="method-detail ">
+				<a name="method-i-file_path_for_html_capture"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">file_path_for_html_capture</span><span
+						class="method-args">(example)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="file-path-for-html-capture-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/selenium/rspec/reporting/file_path_strategy.rb, line 46</span>
+46:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">file_path_for_html_capture</span>(<span class="ruby-identifier">example</span>)
+47:           <span class="ruby-identifier">file_path</span> <span class="ruby-identifier">relative_file_path_for_html_capture</span>(<span class="ruby-identifier">example</span>)
+48:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="file-path-for-page-screenshot-method" class="method-detail ">
+				<a name="method-i-file_path_for_page_screenshot"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">file_path_for_page_screenshot</span><span
+						class="method-args">(example)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="file-path-for-page-screenshot-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/selenium/rspec/reporting/file_path_strategy.rb, line 54</span>
+54:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">file_path_for_page_screenshot</span>(<span class="ruby-identifier">example</span>)
+55:           <span class="ruby-identifier">file_path</span> <span class="ruby-identifier">relative_file_path_for_page_screenshot</span>(<span class="ruby-identifier">example</span>)
+56:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="file-path-for-remote-control-logs-method" class="method-detail ">
+				<a name="method-i-file_path_for_remote_control_logs"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">file_path_for_remote_control_logs</span><span
+						class="method-args">(example)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="file-path-for-remote-control-logs-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/selenium/rspec/reporting/file_path_strategy.rb, line 58</span>
+58:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">file_path_for_remote_control_logs</span>(<span class="ruby-identifier">example</span>)
+59:           <span class="ruby-identifier">file_path</span> <span class="ruby-identifier">relative_file_path_for_remote_control_logs</span>(<span class="ruby-identifier">example</span>)
+60:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="file-path-for-system-screenshot-method" class="method-detail ">
+				<a name="method-i-file_path_for_system_screenshot"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">file_path_for_system_screenshot</span><span
+						class="method-args">(example)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="file-path-for-system-screenshot-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/selenium/rspec/reporting/file_path_strategy.rb, line 50</span>
+50:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">file_path_for_system_screenshot</span>(<span class="ruby-identifier">example</span>)
+51:           <span class="ruby-identifier">file_path</span> <span class="ruby-identifier">relative_file_path_for_system_screenshot</span>(<span class="ruby-identifier">example</span>)
+52:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="relative-dir-method" class="method-detail ">
+				<a name="method-i-relative_dir"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">relative_dir</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="relative-dir-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/selenium/rspec/reporting/file_path_strategy.rb, line 19</span>
+19:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">relative_dir</span>
+20:           <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@relative_dir</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@relative_dir</span>
+21:           
+22:           <span class="ruby-identifier">file_name_without_extension</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">basename</span>(<span class="ruby-ivar">@final_report_file_path</span>).<span class="ruby-identifier">sub</span>(<span class="ruby-regexp re">/\.[^\.]*$/</span>, <span class="ruby-value str">&quot;&quot;</span>)
+23:           <span class="ruby-ivar">@relative_dir</span> <span class="ruby-operator">||=</span>  <span class="ruby-value str">&quot;resources/&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">file_name_without_extension</span>
+24:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="relative-file-path-for-browser-network-traffic-method" class="method-detail ">
+				<a name="method-i-relative_file_path_for_browser_network_traffic"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">relative_file_path_for_browser_network_traffic</span><span
+						class="method-args">(example)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="relative-file-path-for-browser-network-traffic-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/selenium/rspec/reporting/file_path_strategy.rb, line 42</span>
+42:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">relative_file_path_for_browser_network_traffic</span>(<span class="ruby-identifier">example</span>)
+43:           <span class="ruby-node">&quot;#{relative_dir}/example_#{example.reporting_uid}_browser_network_traffic.log&quot;</span>
+44:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="relative-file-path-for-html-capture-method" class="method-detail ">
+				<a name="method-i-relative_file_path_for_html_capture"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">relative_file_path_for_html_capture</span><span
+						class="method-args">(example)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="relative-file-path-for-html-capture-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/selenium/rspec/reporting/file_path_strategy.rb, line 26</span>
+26:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">relative_file_path_for_html_capture</span>(<span class="ruby-identifier">example</span>)
+27:           <span class="ruby-node">&quot;#{relative_dir}/example_#{example.reporting_uid}.html&quot;</span>
+28:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="relative-file-path-for-page-screenshot-method" class="method-detail ">
+				<a name="method-i-relative_file_path_for_page_screenshot"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">relative_file_path_for_page_screenshot</span><span
+						class="method-args">(example)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="relative-file-path-for-page-screenshot-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/selenium/rspec/reporting/file_path_strategy.rb, line 34</span>
+34:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">relative_file_path_for_page_screenshot</span>(<span class="ruby-identifier">example</span>)
+35:           <span class="ruby-node">&quot;#{relative_dir}/example_#{example.reporting_uid}_page_screenshot.png&quot;</span>
+36:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="relative-file-path-for-remote-control-logs-method" class="method-detail ">
+				<a name="method-i-relative_file_path_for_remote_control_logs"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">relative_file_path_for_remote_control_logs</span><span
+						class="method-args">(example)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="relative-file-path-for-remote-control-logs-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/selenium/rspec/reporting/file_path_strategy.rb, line 38</span>
+38:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">relative_file_path_for_remote_control_logs</span>(<span class="ruby-identifier">example</span>)
+39:           <span class="ruby-node">&quot;#{relative_dir}/example_#{example.reporting_uid}_remote_control.log&quot;</span>
+40:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="relative-file-path-for-system-screenshot-method" class="method-detail ">
+				<a name="method-i-relative_file_path_for_system_screenshot"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">relative_file_path_for_system_screenshot</span><span
+						class="method-args">(example)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="relative-file-path-for-system-screenshot-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/selenium/rspec/reporting/file_path_strategy.rb, line 30</span>
+30:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">relative_file_path_for_system_screenshot</span>(<span class="ruby-identifier">example</span>)
+31:           <span class="ruby-node">&quot;#{relative_dir}/example_#{example.reporting_uid}_system_screenshot.png&quot;</span>
+32:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

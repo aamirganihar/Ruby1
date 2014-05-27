@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Watir::PageContainer</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/watir-classic/contrib/enabled_popup_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/watir-classic/contrib/enabled_popup.rb">lib/watir-classic/contrib/enabled_popup.rb</a></li>
+					
+						<li><a href="../lib/watir-classic/page-container_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/watir-classic/page-container.rb">lib/watir-classic/page-container.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-check_for_http_error">#check_for_http_error</a></li>
+					
+					<li><a href="#method-i-contains_text">#contains_text</a></li>
+					
+					<li><a href="#method-i-enabled_popup">#enabled_popup</a></li>
+					
+					<li><a href="#method-i-execute_script">#execute_script</a></li>
+					
+					<li><a href="#method-i-html">#html</a></li>
+					
+					<li><a href="#method-i-page">#page</a></li>
+					
+					<li><a href="#method-i-set_container">#set_container</a></li>
+					
+					<li><a href="#method-i-show_frames">#show_frames</a></li>
+					
+					<li><a href="#method-i-text">#text</a></li>
+					
+					<li><a href="#method-i-url">#url</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+			<div id="includes-section" class="section">
+				<h3 class="section-header">Included Modules</h3>
+				<ul class="link-list">
+				
+				
+					<li><span class="include">Win32</span></li>
+				
+				
+				
+					<li><a class="include" href="Exception.html">Watir::Exception</a></li>
+				
+				
+				</ul>
+			</div>
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Watir.html">Watir</a></li>
+				
+					<li><a href="../Watir/Area.html">Watir::Area</a></li>
+				
+					<li><a href="../Watir/Assertions.html">Watir::Assertions</a></li>
+				
+					<li><a href="../Watir/Audio.html">Watir::Audio</a></li>
+				
+					<li><a href="../Watir/Base.html">Watir::Base</a></li>
+				
+					<li><a href="../Watir/Browser.html">Watir::Browser</a></li>
+				
+					<li><a href="../Watir/Button.html">Watir::Button</a></li>
+				
+					<li><a href="../Watir/CheckBox.html">Watir::CheckBox</a></li>
+				
+					<li><a href="../Watir/Command.html">Watir::Command</a></li>
+				
+					<li><a href="../Watir/Container.html">Watir::Container</a></li>
+				
+					<li><a href="../Watir/Cookies.html">Watir::Cookies</a></li>
+				
+					<li><a href="../Watir/Data.html">Watir::Data</a></li>
+				
+					<li><a href="../Watir/DefaultLogger.html">Watir::DefaultLogger</a></li>
+				
+					<li><a href="../Watir/DragAndDropHelper.html">Watir::DragAndDropHelper</a></li>
+				
+					<li><a href="../Watir/Element.html">Watir::Element</a></li>
+				
+					<li><a href="../Watir/ElementCollection.html">Watir::ElementCollection</a></li>
+				
+					<li><a href="../Watir/ElementExtensions.html">Watir::ElementExtensions</a></li>
+				
+					<li><a href="../Watir/ElementExtensions/WhenPresentDecorator.html">Watir::ElementExtensions::WhenPresentDecorator</a></li>
+				
+					<li><a href="../Watir/Embed.html">Watir::Embed</a></li>
+				
+					<li><a href="../Watir/Exception.html">Watir::Exception</a></li>
+				
+					<li><a href="../Watir/Exception/FrameAccessDeniedException.html">Watir::Exception::FrameAccessDeniedException</a></li>
+				
+					<li><a href="../Watir/Exception/MissingWayOfFindingObjectException.html">Watir::Exception::MissingWayOfFindingObjectException</a></li>
+				
+					<li><a href="../Watir/Exception/NavigationException.html">Watir::Exception::NavigationException</a></li>
+				
+					<li><a href="../Watir/Exception/NoMatchingWindowFoundException.html">Watir::Exception::NoMatchingWindowFoundException</a></li>
+				
+					<li><a href="../Watir/Exception/NoStatusBarException.html">Watir::Exception::NoStatusBarException</a></li>
+				
+					<li><a href="../Watir/Exception/NoValueFoundException.html">Watir::Exception::NoValueFoundException</a></li>
+				
+					<li><a href="../Watir/Exception/ObjectDisabledException.html">Watir::Exception::ObjectDisabledException</a></li>
+				
+					<li><a href="../Watir/Exception/ObjectReadOnlyException.html">Watir::Exception::ObjectReadOnlyException</a></li>
+				
+					<li><a href="../Watir/Exception/TimeOutException.html">Watir::Exception::TimeOutException</a></li>
+				
+					<li><a href="../Watir/Exception/UnhandledEventException.html">Watir::Exception::UnhandledEventException</a></li>
+				
+					<li><a href="../Watir/Exception/UnknownCellException.html">Watir::Exception::UnknownCellException</a></li>
+				
+					<li><a href="../Watir/Exception/UnknownFormException.html">Watir::Exception::UnknownFormException</a></li>
+				
+					<li><a href="../Watir/Exception/UnknownFrameException.html">Watir::Exception::UnknownFrameException</a></li>
+				
+					<li><a href="../Watir/Exception/UnknownObjectException.html">Watir::Exception::UnknownObjectException</a></li>
+				
+					<li><a href="../Watir/Exception/WatirException.html">Watir::Exception::WatirException</a></li>
+				
+					<li><a href="../Watir/FieldSet.html">Watir::FieldSet</a></li>
+				
+					<li><a href="../Watir/FileField.html">Watir::FileField</a></li>
+				
+					<li><a href="../Watir/Font.html">Watir::Font</a></li>
+				
+					<li><a href="../Watir/Form.html">Watir::Form</a></li>
+				
+					<li><a href="../Watir/FormLocator.html">Watir::FormLocator</a></li>
+				
+					<li><a href="../Watir/Frame.html">Watir::Frame</a></li>
+				
+					<li><a href="../Watir/FrameLocator.html">Watir::FrameLocator</a></li>
+				
+					<li><a href="../Watir/HTMLElementCollection.html">Watir::HTMLElementCollection</a></li>
+				
+					<li><a href="../Watir/Hidden.html">Watir::Hidden</a></li>
+				
+					<li><a href="../Watir/IE.html">Watir::IE</a></li>
+				
+					<li><a href="../Watir/IE/Process.html">Watir::IE::Process</a></li>
+				
+					<li><a href="../Watir/Image.html">Watir::Image</a></li>
+				
+					<li><a href="../Watir/InputElementCollection.html">Watir::InputElementCollection</a></li>
+				
+					<li><a href="../Watir/InputElementLocator.html">Watir::InputElementLocator</a></li>
+				
+					<li><a href="../Watir/JavascriptDialog.html">Watir::JavascriptDialog</a></li>
+				
+					<li><a href="../Watir/Keygen.html">Watir::Keygen</a></li>
+				
+					<li><a href="../Watir/Label.html">Watir::Label</a></li>
+				
+					<li><a href="../Watir/Li.html">Watir::Li</a></li>
+				
+					<li><a href="../Watir/Link.html">Watir::Link</a></li>
+				
+					<li><a href="../Watir/Locator.html">Watir::Locator</a></li>
+				
+					<li><a href="../Watir/Map.html">Watir::Map</a></li>
+				
+					<li><a href="../Watir/Menu.html">Watir::Menu</a></li>
+				
+					<li><a href="../Watir/Meta.html">Watir::Meta</a></li>
+				
+					<li><a href="../Watir/Meter.html">Watir::Meter</a></li>
+				
+					<li><a href="../Watir/ModalDialog.html">Watir::ModalDialog</a></li>
+				
+					<li><a href="../Watir/Object.html">Watir::Object</a></li>
+				
+					<li><a href="../Watir/Optgroup.html">Watir::Optgroup</a></li>
+				
+					<li><a href="../Watir/Option.html">Watir::Option</a></li>
+				
+					<li><a href="../Watir/Output.html">Watir::Output</a></li>
+				
+					<li><a href="../Watir/PageContainer.html">Watir::PageContainer</a></li>
+				
+					<li><a href="../Watir/Param.html">Watir::Param</a></li>
+				
+					<li><a href="../Watir/Process.html">Watir::Process</a></li>
+				
+					<li><a href="../Watir/Progress.html">Watir::Progress</a></li>
+				
+					<li><a href="../Watir/Radio.html">Watir::Radio</a></li>
+				
+					<li><a href="../Watir/RadioCheckCommon.html">Watir::RadioCheckCommon</a></li>
+				
+					<li><a href="../Watir/ScreenCapture.html">Watir::ScreenCapture</a></li>
+				
+					<li><a href="../Watir/Script.html">Watir::Script</a></li>
+				
+					<li><a href="../Watir/SelectList.html">Watir::SelectList</a></li>
+				
+					<li><a href="../Watir/Source.html">Watir::Source</a></li>
+				
+					<li><a href="../Watir/Style.html">Watir::Style</a></li>
+				
+					<li><a href="../Watir/Table.html">Watir::Table</a></li>
+				
+					<li><a href="../Watir/TableCell.html">Watir::TableCell</a></li>
+				
+					<li><a href="../Watir/TableCellCollection.html">Watir::TableCellCollection</a></li>
+				
+					<li><a href="../Watir/TableCellsContainer.html">Watir::TableCellsContainer</a></li>
+				
+					<li><a href="../Watir/TableContainer.html">Watir::TableContainer</a></li>
+				
+					<li><a href="../Watir/TableElementCollection.html">Watir::TableElementCollection</a></li>
+				
+					<li><a href="../Watir/TableElementsContainer.html">Watir::TableElementsContainer</a></li>
+				
+					<li><a href="../Watir/TableRow.html">Watir::TableRow</a></li>
+				
+					<li><a href="../Watir/TableRowCollection.html">Watir::TableRowCollection</a></li>
+				
+					<li><a href="../Watir/TableRowsContainer.html">Watir::TableRowsContainer</a></li>
+				
+					<li><a href="../Watir/TableSection.html">Watir::TableSection</a></li>
+				
+					<li><a href="../Watir/TaggedElementLocator.html">Watir::TaggedElementLocator</a></li>
+				
+					<li><a href="../Watir/TestCase.html">Watir::TestCase</a></li>
+				
+					<li><a href="../Watir/TextField.html">Watir::TextField</a></li>
+				
+					<li><a href="../Watir/TimeKeeper.html">Watir::TimeKeeper</a></li>
+				
+					<li><a href="../Watir/Track.html">Watir::Track</a></li>
+				
+					<li><a href="../Watir/Util.html">Watir::Util</a></li>
+				
+					<li><a href="../Watir/Video.html">Watir::Video</a></li>
+				
+					<li><a href="../Watir/Wait.html">Watir::Wait</a></li>
+				
+					<li><a href="../Watir/Wait/TimeoutError.html">Watir::Wait::TimeoutError</a></li>
+				
+					<li><a href="../Watir/WaitHelper.html">Watir::WaitHelper</a></li>
+				
+					<li><a href="../Watir/Waiter.html">Watir::Waiter</a></li>
+				
+					<li><a href="../Watir/WatirLogger.html">Watir::WatirLogger</a></li>
+				
+					<li><a href="../Watir/WatirOptions.html">Watir::WatirOptions</a></li>
+				
+					<li><a href="../Watir/Win32.html">Watir::Win32</a></li>
+				
+					<li><a href="../Watir/Window.html">Watir::Window</a></li>
+				
+					<li><a href="../Watir/XpathLocator.html">Watir::XpathLocator</a></li>
+				
+					<li><a href="../Test.html">Test</a></li>
+				
+					<li><a href="../Test/Unit.html">Test::Unit</a></li>
+				
+					<li><a href="../Test/Unit/Assertions.html">Test::Unit::Assertions</a></li>
+				
+					<li><a href="../Readline.html">Readline</a></li>
+				
+					<li><a href="../Readline/History.html">Readline::History</a></li>
+				
+					<li><a href="../IEProcess.html">IEProcess</a></li>
+				
+					<li><a href="../Integer.html">Integer</a></li>
+				
+					<li><a href="../Object.html">Object</a></li>
+				
+					<li><a href="../PageCheckers.html">PageCheckers</a></li>
+				
+					<li><a href="../Regexp.html">Regexp</a></li>
+				
+					<li><a href="../String.html">String</a></li>
+				
+					<li><a href="../WinClicker.html">WinClicker</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Watir::PageContainer</h1>
+
+		<div id="description">
+			<p>
+A <a href="PageContainer.html">PageContainer</a> contains an HTML Document.
+In other words, it is a what JavaScript calls a <a
+href="Window.html">Window</a>.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="check-for-http-error-method" class="method-detail ">
+				<a name="method-i-check_for_http_error"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">check_for_http_error</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+This method checks the currently displayed page for http errors, 404, 500
+etc It gets called internally by the wait method, so a user does not need
+to call it explicitly
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="check-for-http-error-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-classic/page-container.rb, line 10</span>
+10:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">check_for_http_error</span>
+11:       <span class="ruby-comment cmt"># check for IE7</span>
+12:       <span class="ruby-identifier">n</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">document</span>.<span class="ruby-identifier">invoke</span>(<span class="ruby-value str">'parentWindow'</span>).<span class="ruby-identifier">navigator</span>.<span class="ruby-identifier">appVersion</span>
+13:       <span class="ruby-identifier">m</span>=<span class="ruby-regexp re">/MSIE\s(.*?);/</span>.<span class="ruby-identifier">match</span>( <span class="ruby-identifier">n</span> )
+14:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">m</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">m</span>[<span class="ruby-value">1</span>] <span class="ruby-operator">==</span><span class="ruby-value str">'7.0'</span>
+15:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">m</span> = <span class="ruby-regexp re">/HTTP (\d\d\d.*)/</span>.<span class="ruby-identifier">match</span>( <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">title</span> )
+16:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">NavigationException</span>, <span class="ruby-identifier">m</span>[<span class="ruby-value">1</span>]
+17:         <span class="ruby-keyword kw">end</span>
+18:       <span class="ruby-keyword kw">else</span>
+19:         <span class="ruby-comment cmt"># assume its IE6</span>
+20:         <span class="ruby-identifier">url</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">document</span>.<span class="ruby-identifier">location</span>.<span class="ruby-identifier">href</span>
+21:         <span class="ruby-keyword kw">if</span> <span class="ruby-regexp re">/shdoclc.dll/</span>.<span class="ruby-identifier">match</span>(<span class="ruby-identifier">url</span>)
+22:           <span class="ruby-identifier">m</span> = <span class="ruby-regexp re">/id=IEText.*?&gt;(.*?)&lt;/</span>.<span class="ruby-identifier">match</span>(<span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">html</span>)
+23:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">NavigationException</span>, <span class="ruby-identifier">m</span>[<span class="ruby-value">1</span>] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">m</span>
+24:         <span class="ruby-keyword kw">end</span>
+25:       <span class="ruby-keyword kw">end</span>
+26:       <span class="ruby-keyword kw">false</span>
+27:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="contains-text-method" class="method-detail ">
+				<a name="method-i-contains_text"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">contains_text</span><span
+						class="method-args">(target)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Search the current page for specified text or regexp. Returns the index if
+the specified text was found. Returns matchdata object if the specified
+regexp was found.
+</p>
+<p>
+<b>Deprecated</b> Instead use
+</p>
+<pre>
+  IE#text.include? target
+</pre>
+<p>
+or
+</p>
+<pre>
+  IE#text.match target</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="contains-text-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-classic/page-container.rb, line 103</span>
+103:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">contains_text</span>(<span class="ruby-identifier">target</span>)
+104:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">target</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">Regexp</span>
+105:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">match</span>(<span class="ruby-identifier">target</span>)
+106:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">target</span>.<span class="ruby-identifier">kind_of?</span> <span class="ruby-constant">String</span>
+107:         <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">text</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">target</span>)
+108:       <span class="ruby-keyword kw">else</span>
+109:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Argument #{target} should be a string or regexp.&quot;</span>
+110:       <span class="ruby-keyword kw">end</span>
+111:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="enabled-popup-method" class="method-detail ">
+				<a name="method-i-enabled_popup"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">enabled_popup</span><span
+						class="method-args">(timeout=4)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="enabled-popup-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-classic/contrib/enabled_popup.rb, line 6</span>
+ 6:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">enabled_popup</span>(<span class="ruby-identifier">timeout</span>=<span class="ruby-value">4</span>)
+ 7:       <span class="ruby-comment cmt"># Use handle of our parent window to see if we have any currently</span>
+ 8:       <span class="ruby-comment cmt"># enabled popup.</span>
+ 9:       <span class="ruby-identifier">hwnd_modal</span> = <span class="ruby-value">0</span>
+10:       <span class="ruby-constant">Wait</span>.<span class="ruby-identifier">until</span>(<span class="ruby-identifier">timeout</span>) <span class="ruby-keyword kw">do</span>
+11:         <span class="ruby-identifier">hwnd_modal</span>, <span class="ruby-identifier">arr</span> = <span class="ruby-constant">GetWindow</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">hwnd</span>, <span class="ruby-constant">GW_ENABLEDPOPUP</span>)
+12:         <span class="ruby-identifier">hwnd_modal</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+13:       <span class="ruby-keyword kw">end</span>
+14:       <span class="ruby-comment cmt"># use hwnd() method to find the IE or Container hwnd (overriden by IE)</span>
+15:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">hwnd_modal</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">hwnd</span>() <span class="ruby-operator">||</span> <span class="ruby-value">0</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">hwnd_modal</span>
+16:         <span class="ruby-identifier">hwnd_modal</span> = <span class="ruby-keyword kw">nil</span>
+17:       <span class="ruby-keyword kw">end</span>
+18:       <span class="ruby-identifier">hwnd_modal</span>
+19:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="execute-script-method" class="method-detail ">
+				<a name="method-i-execute_script"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">execute_script</span><span
+						class="method-args">(source)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Execute the given JavaScript string
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="execute-script-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-classic/page-container.rb, line 37</span>
+37:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">execute_script</span>(<span class="ruby-identifier">source</span>)
+38:       <span class="ruby-identifier">result</span> = <span class="ruby-keyword kw">nil</span>
+39:       <span class="ruby-keyword kw">begin</span>
+40:         <span class="ruby-identifier">source</span> = <span class="ruby-node">&quot;(function() {#{source}})()&quot;</span>
+41:         <span class="ruby-identifier">result</span> = <span class="ruby-identifier">document</span>.<span class="ruby-identifier">parentWindow</span>.<span class="ruby-identifier">eval</span>(<span class="ruby-identifier">source</span>)
+42:       <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">WIN32OLERuntimeError</span>, <span class="ruby-constant">NoMethodError</span> <span class="ruby-comment cmt">#if eval fails we need to use execScript(source.to_s) which does not return a value, hence the workaround</span>
+43:         <span class="ruby-identifier">escaped_src</span> = <span class="ruby-identifier">source</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/[\r\n']/</span>) {<span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;\\#{m}&quot;</span>}
+44:         <span class="ruby-identifier">wrapper</span> = <span class="ruby-node">&quot;_watir_helper_div_#{::Time.now.to_i + ::Time.now.usec}&quot;</span>
+45:         <span class="ruby-identifier">cmd</span> = <span class="ruby-node">&quot;var e = document.createElement('DIV'); e.style.display='none'; e.id='#{wrapper}'; e.innerHTML = eval('#{escaped_src}'); document.body.appendChild(e);&quot;</span>
+46:         <span class="ruby-identifier">document</span>.<span class="ruby-identifier">parentWindow</span>.<span class="ruby-identifier">execScript</span>(<span class="ruby-identifier">cmd</span>)
+47:         <span class="ruby-identifier">result</span> = <span class="ruby-identifier">document</span>.<span class="ruby-identifier">getElementById</span>(<span class="ruby-identifier">wrapper</span>).<span class="ruby-identifier">innerHTML</span>
+48:       <span class="ruby-keyword kw">end</span>
+49: 
+50:       <span class="ruby-identifier">result</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;undefined&quot;</span> <span class="ruby-operator">?</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">result</span>
+51:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="html-method" class="method-detail ">
+				<a name="method-i-html"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">html</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The HTML of the current page
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="html-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-classic/page-container.rb, line 54</span>
+54:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">html</span>
+55:       <span class="ruby-identifier">page</span>.<span class="ruby-identifier">outerhtml</span>
+56:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="set-container-method" class="method-detail ">
+				<a name="method-i-set_container"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">set_container</span><span
+						class="method-args">(container)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="set-container-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-classic/page-container.rb, line 68</span>
+68:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">set_container</span> <span class="ruby-identifier">container</span>
+69:       <span class="ruby-ivar">@container</span> = <span class="ruby-identifier">container</span>
+70:       <span class="ruby-ivar">@page_container</span> = <span class="ruby-keyword kw">self</span>
+71:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="show-frames-method" class="method-detail ">
+				<a name="method-i-show_frames"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">show_frames</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+This method is used to display the available html frames that Internet
+Explorer currently has loaded. This method is usually only used for
+debugging test scripts.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="show-frames-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-classic/page-container.rb, line 75</span>
+75:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">show_frames</span>
+76:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">allFrames</span> = <span class="ruby-identifier">document</span>.<span class="ruby-identifier">frames</span>
+77:         <span class="ruby-identifier">count</span> = <span class="ruby-identifier">allFrames</span>.<span class="ruby-identifier">length</span>
+78:         <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;there are #{count} frames&quot;</span>
+79:         <span class="ruby-keyword kw">for</span> <span class="ruby-identifier">i</span> <span class="ruby-keyword kw">in</span> <span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-identifier">count</span><span class="ruby-operator">-</span><span class="ruby-value">1</span> <span class="ruby-keyword kw">do</span>
+80:           <span class="ruby-keyword kw">begin</span>
+81:             <span class="ruby-identifier">fname</span> = <span class="ruby-identifier">allFrames</span>.<span class="ruby-identifier">item</span>(<span class="ruby-identifier">i</span>).<span class="ruby-identifier">name</span>.<span class="ruby-identifier">to_s</span>
+82:             <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;frame  index: #{i + 1} name: #{fname}&quot;</span>
+83:           <span class="ruby-keyword kw">rescue</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+84:             <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">match</span>(<span class="ruby-regexp re">/Access is denied/</span>)
+85:               <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;frame  index: #{i + 1} Access Denied, see http://wiki.openqa.org/display/WTR/FAQ#access-denied&quot;</span>
+86:             <span class="ruby-keyword kw">end</span>
+87:           <span class="ruby-keyword kw">end</span>
+88:         <span class="ruby-keyword kw">end</span>
+89:       <span class="ruby-keyword kw">else</span>
+90:         <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;no frames&quot;</span>
+91:       <span class="ruby-keyword kw">end</span>
+92:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="text-method" class="method-detail ">
+				<a name="method-i-text"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">text</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The text of the current page
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="text-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-classic/page-container.rb, line 64</span>
+64:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">text</span>
+65:       <span class="ruby-identifier">page</span>.<span class="ruby-identifier">innertext</span>.<span class="ruby-identifier">strip</span>
+66:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="url-method" class="method-detail ">
+				<a name="method-i-url"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">url</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The url of the page object.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="url-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-classic/page-container.rb, line 59</span>
+59:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">url</span>
+60:       <span class="ruby-identifier">page</span>.<span class="ruby-identifier">document</span>.<span class="ruby-identifier">location</span>.<span class="ruby-identifier">href</span>
+61:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="page-method" class="method-detail ">
+				<a name="method-i-page"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">page</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+The HTML Page
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="page-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-classic/page-container.rb, line 30</span>
+30:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">page</span>
+31:       <span class="ruby-identifier">document</span>.<span class="ruby-identifier">documentelement</span>
+32:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

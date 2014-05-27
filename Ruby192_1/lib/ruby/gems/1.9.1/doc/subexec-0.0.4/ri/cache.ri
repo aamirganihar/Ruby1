@@ -1,0 +1,4 @@
+{
+:class_methods{I"Subexec:EF[I"new;FI"run;F:instance_methods{I"Subexec;F[I"command;FI"	exec;FI"exitstatus;FI"output;FI"pid;FI"	run!;FI"
+spawn;FI"timeout;FI"
+timer;F:attributes{I"Subexec;F[I"attr_accessor command;FI"attr_accessor exitstatus;FI"attr_accessor output;FI"attr_accessor pid;FI"attr_accessor timeout;FI"attr_accessor timer;F:modules[I"Subexec;F:ancestors{I"Subexec;F[I"Object;F

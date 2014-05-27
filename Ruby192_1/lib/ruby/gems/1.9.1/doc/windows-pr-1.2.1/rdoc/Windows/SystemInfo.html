@@ -1,0 +1,1044 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Windows::SystemInfo</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/windows/system_info_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/windows/system_info.rb">lib/windows/system_info.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-HIBYTE">#HIBYTE</a></li>
+					
+					<li><a href="#method-i-HIWORD">#HIWORD</a></li>
+					
+					<li><a href="#method-i-LOBYTE">#LOBYTE</a></li>
+					
+					<li><a href="#method-i-LOWORD">#LOWORD</a></li>
+					
+					<li><a href="#method-i-MAKELONG">#MAKELONG</a></li>
+					
+					<li><a href="#method-i-MAKEWORD">#MAKEWORD</a></li>
+					
+					<li><a href="#method-i-windows_2000%3F">#windows_2000?</a></li>
+					
+					<li><a href="#method-i-windows_2003%3F">#windows_2003?</a></li>
+					
+					<li><a href="#method-i-windows_7%3F">#windows_7?</a></li>
+					
+					<li><a href="#method-i-windows_version">#windows_version</a></li>
+					
+					<li><a href="#method-i-windows_vista%3F">#windows_vista?</a></li>
+					
+					<li><a href="#method-i-windows_xp%3F">#windows_xp?</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../CHANGES.html">CHANGES</a></li>
+				
+					<li class="file"><a href="../MANIFEST.html">MANIFEST</a></li>
+				
+					<li class="file"><a href="../README.html">README</a></li>
+				
+					<li class="file"><a href="../doc/conversion_guide_txt.html">conversion_guide.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Windows.html">Windows</a></li>
+				
+					<li><a href="../Windows/COM.html">Windows::COM</a></li>
+				
+					<li><a href="../Windows/COM/Accessibility.html">Windows::COM::Accessibility</a></li>
+				
+					<li><a href="../Windows/COM/Automation.html">Windows::COM::Automation</a></li>
+				
+					<li><a href="../Windows/COM/Variant.html">Windows::COM::Variant</a></li>
+				
+					<li><a href="../Windows/Clipboard.html">Windows::Clipboard</a></li>
+				
+					<li><a href="../Windows/Console.html">Windows::Console</a></li>
+				
+					<li><a href="../Windows/Debug.html">Windows::Debug</a></li>
+				
+					<li><a href="../Windows/DeviceIO.html">Windows::DeviceIO</a></li>
+				
+					<li><a href="../Windows/Directory.html">Windows::Directory</a></li>
+				
+					<li><a href="../Windows/Error.html">Windows::Error</a></li>
+				
+					<li><a href="../Windows/EventLog.html">Windows::EventLog</a></li>
+				
+					<li><a href="../Windows/File.html">Windows::File</a></li>
+				
+					<li><a href="../Windows/FileMapping.html">Windows::FileMapping</a></li>
+				
+					<li><a href="../Windows/FileSystem.html">Windows::FileSystem</a></li>
+				
+					<li><a href="../Windows/GDI.html">Windows::GDI</a></li>
+				
+					<li><a href="../Windows/GDI/Bitmap.html">Windows::GDI::Bitmap</a></li>
+				
+					<li><a href="../Windows/GDI/DeviceContext.html">Windows::GDI::DeviceContext</a></li>
+				
+					<li><a href="../Windows/GDI/MetaFile.html">Windows::GDI::MetaFile</a></li>
+				
+					<li><a href="../Windows/GDI/PaintingDrawing.html">Windows::GDI::PaintingDrawing</a></li>
+				
+					<li><a href="../Windows/Handle.html">Windows::Handle</a></li>
+				
+					<li><a href="../Windows/Library.html">Windows::Library</a></li>
+				
+					<li><a href="../Windows/Limits.html">Windows::Limits</a></li>
+				
+					<li><a href="../Windows/MSVCRT.html">Windows::MSVCRT</a></li>
+				
+					<li><a href="../Windows/MSVCRT/Buffer.html">Windows::MSVCRT::Buffer</a></li>
+				
+					<li><a href="../Windows/MSVCRT/Directory.html">Windows::MSVCRT::Directory</a></li>
+				
+					<li><a href="../Windows/MSVCRT/File.html">Windows::MSVCRT::File</a></li>
+				
+					<li><a href="../Windows/MSVCRT/IO.html">Windows::MSVCRT::IO</a></li>
+				
+					<li><a href="../Windows/MSVCRT/String.html">Windows::MSVCRT::String</a></li>
+				
+					<li><a href="../Windows/MSVCRT/Time.html">Windows::MSVCRT::Time</a></li>
+				
+					<li><a href="../Windows/Mailslot.html">Windows::Mailslot</a></li>
+				
+					<li><a href="../Windows/Memory.html">Windows::Memory</a></li>
+				
+					<li><a href="../Windows/NIO.html">Windows::NIO</a></li>
+				
+					<li><a href="../Windows/NTFS.html">Windows::NTFS</a></li>
+				
+					<li><a href="../Windows/NTFS/Winternl.html">Windows::NTFS::Winternl</a></li>
+				
+					<li><a href="../Windows/National.html">Windows::National</a></li>
+				
+					<li><a href="../Windows/Network.html">Windows::Network</a></li>
+				
+					<li><a href="../Windows/Network/Management.html">Windows::Network::Management</a></li>
+				
+					<li><a href="../Windows/Network/SNMP.html">Windows::Network::SNMP</a></li>
+				
+					<li><a href="../Windows/Network/Winsock.html">Windows::Network::Winsock</a></li>
+				
+					<li><a href="../Windows/Path.html">Windows::Path</a></li>
+				
+					<li><a href="../Windows/Pipe.html">Windows::Pipe</a></li>
+				
+					<li><a href="../Windows/Process.html">Windows::Process</a></li>
+				
+					<li><a href="../Windows/Registry.html">Windows::Registry</a></li>
+				
+					<li><a href="../Windows/Security.html">Windows::Security</a></li>
+				
+					<li><a href="../Windows/Security/Authentication.html">Windows::Security::Authentication</a></li>
+				
+					<li><a href="../Windows/Service.html">Windows::Service</a></li>
+				
+					<li><a href="../Windows/Shell.html">Windows::Shell</a></li>
+				
+					<li><a href="../Windows/Socket.html">Windows::Socket</a></li>
+				
+					<li><a href="../Windows/Sound.html">Windows::Sound</a></li>
+				
+					<li><a href="../Windows/Synchronize.html">Windows::Synchronize</a></li>
+				
+					<li><a href="../Windows/SystemInfo.html">Windows::SystemInfo</a></li>
+				
+					<li><a href="../Windows/Thread.html">Windows::Thread</a></li>
+				
+					<li><a href="../Windows/Time.html">Windows::Time</a></li>
+				
+					<li><a href="../Windows/ToolHelper.html">Windows::ToolHelper</a></li>
+				
+					<li><a href="../Windows/Unicode.html">Windows::Unicode</a></li>
+				
+					<li><a href="../Windows/Volume.html">Windows::Volume</a></li>
+				
+					<li><a href="../Windows/WSA.html">Windows::WSA</a></li>
+				
+					<li><a href="../Windows/Window.html">Windows::Window</a></li>
+				
+					<li><a href="../Windows/Window/Classes.html">Windows::Window::Classes</a></li>
+				
+					<li><a href="../Windows/Window/Dialog.html">Windows::Window::Dialog</a></li>
+				
+					<li><a href="../Windows/Window/Menu.html">Windows::Window::Menu</a></li>
+				
+					<li><a href="../Windows/Window/Message.html">Windows::Window::Message</a></li>
+				
+					<li><a href="../Windows/Window/Properties.html">Windows::Window::Properties</a></li>
+				
+					<li><a href="../Windows/Window/Timer.html">Windows::Window::Timer</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Windows::SystemInfo</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="PROCESSOR_INTEL_386">PROCESSOR_INTEL_386</a></dt>
+				
+				<dd class="description"><p>
+Obsolete processor info constants
+</p></dd>
+				
+			
+				<dt><a name="PROCESSOR_INTEL_486">PROCESSOR_INTEL_486</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="PROCESSOR_INTEL_PENTIUM">PROCESSOR_INTEL_PENTIUM</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="PROCESSOR_INTEL_IA64">PROCESSOR_INTEL_IA64</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="PROCESSOR_AMD_X8664">PROCESSOR_AMD_X8664</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="VER_SERVER_NT">VER_SERVER_NT</a></dt>
+				
+				<dd class="description"><p>
+Suite mask constants
+</p></dd>
+				
+			
+				<dt><a name="VER_WORKSTATION_NT">VER_WORKSTATION_NT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="VER_SUITE_SMALLBUSINESS">VER_SUITE_SMALLBUSINESS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="VER_SUITE_ENTERPRISE">VER_SUITE_ENTERPRISE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="VER_SUITE_BACKOFFICE">VER_SUITE_BACKOFFICE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="VER_SUITE_COMMUNICATIONS">VER_SUITE_COMMUNICATIONS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="VER_SUITE_TERMINAL">VER_SUITE_TERMINAL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="VER_SUITE_SMALLBUSINESS_RESTRICTED">VER_SUITE_SMALLBUSINESS_RESTRICTED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="VER_SUITE_EMBEDDEDNT">VER_SUITE_EMBEDDEDNT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="VER_SUITE_DATACENTER">VER_SUITE_DATACENTER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="VER_SUITE_SINGLEUSERTS">VER_SUITE_SINGLEUSERTS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="VER_SUITE_PERSONAL">VER_SUITE_PERSONAL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="VER_SUITE_BLADE">VER_SUITE_BLADE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="VER_SUITE_EMBEDDED_RESTRICTED">VER_SUITE_EMBEDDED_RESTRICTED</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="VER_SUITE_SECURITY_APPLIANCE">VER_SUITE_SECURITY_APPLIANCE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="VER_SUITE_STORAGE_SERVER">VER_SUITE_STORAGE_SERVER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="VER_SUITE_COMPUTE_SERVER">VER_SUITE_COMPUTE_SERVER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="VER_NT_WORKSTATION">VER_NT_WORKSTATION</a></dt>
+				
+				<dd class="description"><p>
+Product mask constants
+</p></dd>
+				
+			
+				<dt><a name="VER_NT_DOMAIN_CONTROLLER">VER_NT_DOMAIN_CONTROLLER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="VER_NT_SERVER">VER_NT_SERVER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="VER_PLATFORM_WIN32s">VER_PLATFORM_WIN32s</a></dt>
+				
+				<dd class="description"><p>
+Platform definitions
+</p></dd>
+				
+			
+				<dt><a name="VER_PLATFORM_WIN32_WINDOWS">VER_PLATFORM_WIN32_WINDOWS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="VER_PLATFORM_WIN32_NT">VER_PLATFORM_WIN32_NT</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="VER_MINORVERSION">VER_MINORVERSION</a></dt>
+				
+				<dd class="description"><p>
+Version info type constants
+</p></dd>
+				
+			
+				<dt><a name="VER_MAJORVERSION">VER_MAJORVERSION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="VER_BUILDNUMBER">VER_BUILDNUMBER</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="VER_PLATFORMID">VER_PLATFORMID</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="VER_SERVICEPACKMINOR">VER_SERVICEPACKMINOR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="VER_SERVICEPACKMAJOR">VER_SERVICEPACKMAJOR</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="VER_SUITENAME">VER_SUITENAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="VER_PRODUCT_TYPE">VER_PRODUCT_TYPE</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ComputerNameNetBIOS">ComputerNameNetBIOS</a></dt>
+				
+				<dd class="description"><p>
+Enum COMPUTER_NAME_FORMAT
+</p></dd>
+				
+			
+				<dt><a name="ComputerNameDnsHostname">ComputerNameDnsHostname</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ComputerNameDnsDomain">ComputerNameDnsDomain</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ComputerNameDnsFullyQualified">ComputerNameDnsFullyQualified</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ComputerNamePhysicalNetBIOS">ComputerNamePhysicalNetBIOS</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ComputerNamePhysicalDnsHostname">ComputerNamePhysicalDnsHostname</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ComputerNamePhysicalDnsDomain">ComputerNamePhysicalDnsDomain</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ComputerNamePhysicalDnsFullyQualified">ComputerNamePhysicalDnsFullyQualified</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="ComputerNameMax">ComputerNameMax</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-HIBYTE"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">HIBYTE</span><span
+						class="method-args">(w)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/system_info.rb, line 115</span>
+115:     <span class="ruby-keyword kw">def</span> <span class="ruby-constant">HIBYTE</span>(<span class="ruby-identifier">w</span>)
+116:       <span class="ruby-identifier">w</span> <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">8</span>
+117:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-HIWORD"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">HIWORD</span><span
+						class="method-args">(l)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/system_info.rb, line 107</span>
+107:     <span class="ruby-keyword kw">def</span> <span class="ruby-constant">HIWORD</span>(<span class="ruby-identifier">l</span>)
+108:       <span class="ruby-identifier">l</span> <span class="ruby-operator">&gt;&gt;</span> <span class="ruby-value">16</span>
+109:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-LOBYTE"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">LOBYTE</span><span
+						class="method-args">(w)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/system_info.rb, line 111</span>
+111:     <span class="ruby-keyword kw">def</span> <span class="ruby-constant">LOBYTE</span>(<span class="ruby-identifier">w</span>)
+112:       <span class="ruby-identifier">w</span> &amp; <span class="ruby-value">0xff</span>
+113:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-LOWORD"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">LOWORD</span><span
+						class="method-args">(l)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/system_info.rb, line 103</span>
+103:     <span class="ruby-keyword kw">def</span> <span class="ruby-constant">LOWORD</span>(<span class="ruby-identifier">l</span>)
+104:       <span class="ruby-identifier">l</span> &amp; <span class="ruby-value">0xffff</span>
+105:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-MAKELONG"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">MAKELONG</span><span
+						class="method-args">(a, b)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/system_info.rb, line 99</span>
+ 99:     <span class="ruby-keyword kw">def</span> <span class="ruby-constant">MAKELONG</span>(<span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span>)
+100:       ((<span class="ruby-identifier">a</span> &amp; <span class="ruby-value">0xffff</span>) <span class="ruby-operator">|</span> ((<span class="ruby-identifier">b</span> &amp; <span class="ruby-value">0xffff</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">16</span>))
+101:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="--method" class="method-detail ">
+				<a name="method-i-MAKEWORD"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">MAKEWORD</span><span
+						class="method-args">(a, b)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+These macros are from windef.h, but I&#8217;ve put them here for now since
+they can be used in conjunction with some of the functions declared in this
+module.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/windows/system_info.rb, line 95</span>
+95:     <span class="ruby-keyword kw">def</span> <span class="ruby-constant">MAKEWORD</span>(<span class="ruby-identifier">a</span>, <span class="ruby-identifier">b</span>)
+96:       ((<span class="ruby-identifier">a</span> &amp; <span class="ruby-value">0xff</span>) <span class="ruby-operator">|</span> ((<span class="ruby-identifier">b</span> &amp; <span class="ruby-value">0xff</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">8</span>))
+97:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="windows--method" class="method-detail ">
+				<a name="method-i-windows_2000%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">windows_2000?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns true if the current platform is Vista (any variant) or <a
+href="../Windows.html">Windows</a> Server 2008, i.e. major version 6, minor
+version 0.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="windows--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/system_info.rb, line 134</span>
+134:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">windows_2000?</span>
+135:       <span class="ruby-identifier">version</span> = <span class="ruby-constant">GetVersion</span>()
+136:       <span class="ruby-constant">LOBYTE</span>(<span class="ruby-constant">LOWORD</span>(<span class="ruby-identifier">version</span>)) <span class="ruby-operator">==</span> <span class="ruby-value">5</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">HIBYTE</span>(<span class="ruby-constant">LOWORD</span>(<span class="ruby-identifier">version</span>)) <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+137:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="windows--method" class="method-detail ">
+				<a name="method-i-windows_2003%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">windows_2003?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns true if the current platform is <a
+href="../Windows.html">Windows</a> 2003 (any version). i.e. major version
+5, minor version 2.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="windows--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/system_info.rb, line 189</span>
+189:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">windows_2003?</span>
+190:       <span class="ruby-identifier">bool</span> = <span class="ruby-keyword kw">false</span>
+191: 
+192:       <span class="ruby-identifier">buf</span> = <span class="ruby-value">0</span>.<span class="ruby-identifier">chr</span> * <span class="ruby-value">156</span>
+193:       <span class="ruby-identifier">buf</span>[<span class="ruby-value">0</span>,<span class="ruby-value">4</span>] = [<span class="ruby-identifier">buf</span>.<span class="ruby-identifier">size</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-value str">&quot;L&quot;</span>) <span class="ruby-comment cmt"># Set dwOSVersionInfoSize</span>
+194: 
+195:       <span class="ruby-constant">GetVersionEx</span>(<span class="ruby-identifier">buf</span>)
+196: 
+197:       <span class="ruby-identifier">major</span> = <span class="ruby-identifier">buf</span>[<span class="ruby-value">4</span>,<span class="ruby-value">4</span>].<span class="ruby-identifier">unpack</span>(<span class="ruby-value str">&quot;L&quot;</span>)[<span class="ruby-value">0</span>]
+198:       <span class="ruby-identifier">minor</span> = <span class="ruby-identifier">buf</span>[<span class="ruby-value">8</span>,<span class="ruby-value">4</span>].<span class="ruby-identifier">unpack</span>(<span class="ruby-value str">&quot;L&quot;</span>)[<span class="ruby-value">0</span>]
+199:       <span class="ruby-identifier">suite</span> = <span class="ruby-identifier">buf</span>[<span class="ruby-value">152</span>,<span class="ruby-value">2</span>].<span class="ruby-identifier">unpack</span>(<span class="ruby-value str">&quot;S&quot;</span>)[<span class="ruby-value">0</span>]
+200: 
+201:       <span class="ruby-comment cmt"># Make sure we exclude a 64-bit Windows XP Pro</span>
+202:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">major</span> <span class="ruby-operator">==</span> <span class="ruby-value">5</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">minor</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span>
+203:         <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">suite</span> &amp; <span class="ruby-constant">VER_SUITE_BLADE</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>)          <span class="ruby-operator">||</span>
+204:            (<span class="ruby-identifier">suite</span> &amp; <span class="ruby-constant">VER_SUITE_COMPUTE_SERVER</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>) <span class="ruby-operator">||</span>
+205:            (<span class="ruby-identifier">suite</span> &amp; <span class="ruby-constant">VER_SUITE_DATACENTER</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>)     <span class="ruby-operator">||</span>
+206:            (<span class="ruby-identifier">suite</span> &amp; <span class="ruby-constant">VER_SUITE_ENTERPRISE</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>)     <span class="ruby-operator">||</span>
+207:            (<span class="ruby-identifier">suite</span> &amp; <span class="ruby-constant">VER_SUITE_STORAGE_SERVER</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>)
+208:         <span class="ruby-keyword kw">then</span>
+209:           <span class="ruby-identifier">bool</span> = <span class="ruby-keyword kw">true</span>
+210:         <span class="ruby-keyword kw">end</span>
+211:       <span class="ruby-keyword kw">end</span>
+212: 
+213:       <span class="ruby-identifier">bool</span>
+214:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="windows--method" class="method-detail ">
+				<a name="method-i-windows_7%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">windows_7?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="windows--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/system_info.rb, line 224</span>
+224:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">windows_7?</span>
+225:       <span class="ruby-identifier">version</span> = <span class="ruby-constant">GetVersion</span>()
+226:       <span class="ruby-constant">LOBYTE</span>(<span class="ruby-constant">LOWORD</span>(<span class="ruby-identifier">version</span>)) <span class="ruby-operator">==</span> <span class="ruby-value">6</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">HIBYTE</span>(<span class="ruby-constant">LOWORD</span>(<span class="ruby-identifier">version</span>)) <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+227:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="windows-version-method" class="method-detail ">
+				<a name="method-i-windows_version"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">windows_version</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns a float indicating the major and minor version of <a
+href="../Windows.html">Windows</a>, e.g. 5.1, 6.0, etc.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="windows-version-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/system_info.rb, line 122</span>
+122:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">windows_version</span>
+123:       <span class="ruby-identifier">version</span> = <span class="ruby-constant">GetVersion</span>()
+124:       <span class="ruby-identifier">major</span> = <span class="ruby-constant">LOBYTE</span>(<span class="ruby-constant">LOWORD</span>(<span class="ruby-identifier">version</span>))
+125:       <span class="ruby-identifier">minor</span> = <span class="ruby-constant">HIBYTE</span>(<span class="ruby-constant">LOWORD</span>(<span class="ruby-identifier">version</span>))
+126:       <span class="ruby-identifier">eval</span>(<span class="ruby-node">&quot;Float(#{major}.#{minor})&quot;</span>)
+127:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="windows-vista--method" class="method-detail ">
+				<a name="method-i-windows_vista%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">windows_vista?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns true if the current platform is <a
+href="../Windows.html">Windows</a> Vista (any variant) or <a
+href="../Windows.html">Windows</a> Server 2008, i.e. major version 6, minor
+version 0.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="windows-vista--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/system_info.rb, line 219</span>
+219:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">windows_vista?</span>
+220:       <span class="ruby-identifier">version</span> = <span class="ruby-constant">GetVersion</span>()
+221:       <span class="ruby-constant">LOBYTE</span>(<span class="ruby-constant">LOWORD</span>(<span class="ruby-identifier">version</span>)) <span class="ruby-operator">==</span> <span class="ruby-value">6</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-constant">HIBYTE</span>(<span class="ruby-constant">LOWORD</span>(<span class="ruby-identifier">version</span>)) <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+222:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="windows-xp--method" class="method-detail ">
+				<a name="method-i-windows_xp%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">windows_xp?</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns true if the current platform is <a
+href="../Windows.html">Windows</a> XP or <a
+href="../Windows.html">Windows</a> XP Pro, i.e. major version 5, minor
+version 1 (or 2 in the case of a 64-bit <a
+href="../Windows.html">Windows</a> XP Pro).
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="windows-xp--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/windows/system_info.rb, line 148</span>
+148:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">windows_xp?</span>
+149:       <span class="ruby-identifier">bool</span> = <span class="ruby-keyword kw">false</span>
+150: 
+151:       <span class="ruby-identifier">buf</span> = <span class="ruby-value">0</span>.<span class="ruby-identifier">chr</span> * <span class="ruby-value">156</span>
+152:       <span class="ruby-identifier">buf</span>[<span class="ruby-value">0</span>,<span class="ruby-value">4</span>] = [<span class="ruby-identifier">buf</span>.<span class="ruby-identifier">size</span>].<span class="ruby-identifier">pack</span>(<span class="ruby-value str">&quot;L&quot;</span>) <span class="ruby-comment cmt"># Set dwOSVersionInfoSize</span>
+153: 
+154:       <span class="ruby-constant">GetVersionEx</span>(<span class="ruby-identifier">buf</span>)
+155: 
+156:       <span class="ruby-identifier">major</span> = <span class="ruby-identifier">buf</span>[<span class="ruby-value">4</span>,<span class="ruby-value">4</span>].<span class="ruby-identifier">unpack</span>(<span class="ruby-value str">&quot;L&quot;</span>)[<span class="ruby-value">0</span>]
+157:       <span class="ruby-identifier">minor</span> = <span class="ruby-identifier">buf</span>[<span class="ruby-value">8</span>,<span class="ruby-value">4</span>].<span class="ruby-identifier">unpack</span>(<span class="ruby-value str">&quot;L&quot;</span>)[<span class="ruby-value">0</span>]
+158:       <span class="ruby-identifier">suite</span> = <span class="ruby-identifier">buf</span>[<span class="ruby-value">152</span>,<span class="ruby-value">2</span>].<span class="ruby-identifier">unpack</span>(<span class="ruby-value str">&quot;S&quot;</span>)[<span class="ruby-value">0</span>]
+159: 
+160:       <span class="ruby-comment cmt"># Make sure we detect a 64-bit Windows XP Pro</span>
+161:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">major</span> <span class="ruby-operator">==</span> <span class="ruby-value">5</span>
+162:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">minor</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+163:           <span class="ruby-identifier">bool</span> = <span class="ruby-keyword kw">true</span>
+164:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">minor</span> <span class="ruby-operator">==</span> <span class="ruby-value">2</span>
+165:           <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">suite</span> &amp; <span class="ruby-constant">VER_SUITE_BLADE</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>)          <span class="ruby-operator">&amp;&amp;</span>
+166:              (<span class="ruby-identifier">suite</span> &amp; <span class="ruby-constant">VER_SUITE_COMPUTE_SERVER</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>) <span class="ruby-operator">&amp;&amp;</span>
+167:              (<span class="ruby-identifier">suite</span> &amp; <span class="ruby-constant">VER_SUITE_DATACENTER</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>)     <span class="ruby-operator">&amp;&amp;</span>
+168:              (<span class="ruby-identifier">suite</span> &amp; <span class="ruby-constant">VER_SUITE_ENTERPRISE</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>)     <span class="ruby-operator">&amp;&amp;</span>
+169:              (<span class="ruby-identifier">suite</span> &amp; <span class="ruby-constant">VER_SUITE_STORAGE_SERVER</span> <span class="ruby-operator">==</span> <span class="ruby-value">0</span>)
+170:           <span class="ruby-keyword kw">then</span>
+171:             <span class="ruby-identifier">bool</span> = <span class="ruby-keyword kw">true</span>
+172:           <span class="ruby-keyword kw">end</span>
+173:         <span class="ruby-keyword kw">else</span>
+174:           <span class="ruby-comment cmt"># Do nothing - already false</span>
+175:         <span class="ruby-keyword kw">end</span>
+176:       <span class="ruby-keyword kw">end</span>
+177: 
+178:       <span class="ruby-identifier">bool</span>
+179:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

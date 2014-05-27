@@ -1,0 +1,1259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>watir-classic-3.0.0 Documentation</title>
+
+	<link type="text/css" media="screen" href="rdoc.css" rel="stylesheet" />
+
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+
+</head>
+<body class="indexpage">
+
+	
+	<h1>watir-classic-3.0.0 Documentation</h1>
+
+	
+	<div id="main">
+		
+<p>
+<a href="Watir.html">Watir</a>, pronounced water, is an open-source (BSD)
+family of Ruby libraries for automating web browsers. It supports your app
+no matter what technology it is developed in. They support Internet
+Explorer on Windows, Firefox and Chrome on Windows, Mac and Linux and
+Safari on Mac.
+</p>
+<table>
+<tr><td valign="top">Project Home</td><td><p>
+<a href="http://watir.com">watir.com</a>
+</p>
+</td></tr>
+<tr><td valign="top">Source Code</td><td><p>
+<a href="http://github.com/bret/watir">github.com/bret/watir</a>
+</p>
+</td></tr>
+<tr><td valign="top">Support</td><td><p>
+<a href="http://watir.com/support">watir.com/support</a>
+</p>
+</td></tr>
+<tr><td valign="top">Gem</td><td><p>
+<a href="https://rubygems.org/gems/watir">rubygems.org/gems/watir</a>
+</p>
+</td></tr>
+<tr><td valign="top">Gem</td><td><p>
+<a
+href="https://rubygems.org/gems/firewatir">rubygems.org/gems/firewatir</a>
+</p>
+</td></tr>
+<tr><td valign="top">Gem</td><td><p>
+<a
+href="https://rubygems.org/gems/commonwatir">rubygems.org/gems/commonwatir</a>
+</p>
+</td></tr>
+<tr><td valign="top">Gem</td><td><p>
+<a
+href="https://rubygems.org/gems/safariwatir">rubygems.org/gems/safariwatir</a>
+</p>
+</td></tr>
+<tr><td valign="top">Gem</td><td><p>
+<a
+href="https://rubygems.org/gems/watir-webdriver">rubygems.org/gems/watir-webdriver</a>
+</p>
+</td></tr>
+<tr><td valign="top">Gem</td><td><p>
+<a
+href="https://rubygems.org/gems/celerity">rubygems.org/gems/celerity</a>
+</p>
+</td></tr>
+</table>
+<h2>Install</h2>
+<p>
+You have to install Ruby and RubyGems first. To be able to drive Firefox
+you have to install Firefox add-on. Detailed installation instructions are
+at <a href="http://watir.com/installation">watir.com/installation</a>
+</p>
+<h3>Windows</h3>
+<p>
+To install Internet Explorer and Firefox driver:
+</p>
+<pre>
+  gem update --system
+  gem install watir-classic
+
+</pre>
+<h2>Examples</h2>
+<p>
+Some examples from <a
+href="http://watir.com/examples">watir.com/examples</a>
+</p>
+<p>
+Loading <a href="Watir.html">Watir</a> gem to drive Internet Explorer on
+Windows
+</p>
+<pre>
+  require 'watir-classic'
+
+</pre>
+<p>
+Starting a new browser &amp; and going to our site
+</p>
+<pre>
+  browser = Watir::Browser.new
+  browser.goto(&quot;http://bit.ly/watir-example&quot;)
+
+</pre>
+<p>
+Setting a text field
+</p>
+<pre>
+  browser.text_field(:name =&gt; &quot;entry.0.single&quot;).set &quot;Watir&quot;
+
+</pre>
+<p>
+Setting a multi-line text box
+</p>
+<pre>
+  browser.text_field(:name =&gt; &quot;entry.1.single&quot;).set &quot;I come here from Australia. \n The weather is great here.&quot;
+
+</pre>
+<p>
+Setting and clearing a radio button
+</p>
+<pre>
+  browser.radio(:value =&gt; &quot;Watir&quot;).set
+  browser.radio(:value =&gt; &quot;Watir&quot;).clear
+
+</pre>
+<p>
+Setting and clearing check boxes
+</p>
+<pre>
+  browser.checkbox(:value =&gt; &quot;Ruby&quot;).set
+  browser.checkbox(:value =&gt; &quot;Python&quot;).set
+  browser.checkbox(:value =&gt; &quot;Python&quot;).clear
+
+</pre>
+<p>
+Clicking a button
+</p>
+<pre>
+  browser.button(:name =&gt; &quot;logon&quot;).click
+
+</pre>
+<p>
+Clearing, getting and selecting selection list values
+</p>
+<pre>
+  browser.select_list(:name =&gt; &quot;entry.6.single&quot;).clear
+  puts browser.select_list(:name =&gt; &quot;entry.6.single&quot;).options
+  browser.select_list(:name =&gt; &quot;entry.6.single&quot;).select &quot;Chrome&quot;
+
+</pre>
+<p>
+Clicking a button
+</p>
+<pre>
+  browser.button(:name =&gt; &quot;submit&quot;).click
+
+</pre>
+<p>
+Checking for text in a page
+</p>
+<pre>
+  puts browser.text.include?(&quot;Your response has been recorded.&quot;)
+
+</pre>
+<p>
+Checking the title of a page
+</p>
+<pre>
+  puts browser.title == &quot;Thanks!&quot;</pre>
+
+	</div>
+	
+
+	
+	
+	<h2>Files</h2>
+	<ul>
+		
+			<li class="file"><a href="README_rdoc.html">README.rdoc</a></li>
+		
+	</ul>
+	
+
+	<h2 id="classes">Classes/Modules</h2>
+	<ul>
+		
+		<li class="module"><a href="Watir.html">Watir</a></li>
+		
+		<li class="class"><a href="Watir/Area.html">Watir::Area</a></li>
+		
+		<li class="module"><a href="Watir/Assertions.html">Watir::Assertions</a></li>
+		
+		<li class="class"><a href="Watir/Audio.html">Watir::Audio</a></li>
+		
+		<li class="class"><a href="Watir/Base.html">Watir::Base</a></li>
+		
+		<li class="module"><a href="Watir/Browser.html">Watir::Browser</a></li>
+		
+		<li class="class"><a href="Watir/Button.html">Watir::Button</a></li>
+		
+		<li class="class"><a href="Watir/CheckBox.html">Watir::CheckBox</a></li>
+		
+		<li class="class"><a href="Watir/Command.html">Watir::Command</a></li>
+		
+		<li class="module"><a href="Watir/Container.html">Watir::Container</a></li>
+		
+		<li class="class"><a href="Watir/Cookies.html">Watir::Cookies</a></li>
+		
+		<li class="class"><a href="Watir/Data.html">Watir::Data</a></li>
+		
+		<li class="class"><a href="Watir/DefaultLogger.html">Watir::DefaultLogger</a></li>
+		
+		<li class="module"><a href="Watir/DragAndDropHelper.html">Watir::DragAndDropHelper</a></li>
+		
+		<li class="class"><a href="Watir/Element.html">Watir::Element</a></li>
+		
+		<li class="class"><a href="Watir/ElementCollection.html">Watir::ElementCollection</a></li>
+		
+		<li class="module"><a href="Watir/ElementExtensions.html">Watir::ElementExtensions</a></li>
+		
+		<li class="class"><a href="Watir/ElementExtensions/WhenPresentDecorator.html">Watir::ElementExtensions::WhenPresentDecorator</a></li>
+		
+		<li class="class"><a href="Watir/Embed.html">Watir::Embed</a></li>
+		
+		<li class="module"><a href="Watir/Exception.html">Watir::Exception</a></li>
+		
+		<li class="class"><a href="Watir/Exception/FrameAccessDeniedException.html">Watir::Exception::FrameAccessDeniedException</a></li>
+		
+		<li class="class"><a href="Watir/Exception/MissingWayOfFindingObjectException.html">Watir::Exception::MissingWayOfFindingObjectException</a></li>
+		
+		<li class="class"><a href="Watir/Exception/NavigationException.html">Watir::Exception::NavigationException</a></li>
+		
+		<li class="class"><a href="Watir/Exception/NoMatchingWindowFoundException.html">Watir::Exception::NoMatchingWindowFoundException</a></li>
+		
+		<li class="class"><a href="Watir/Exception/NoStatusBarException.html">Watir::Exception::NoStatusBarException</a></li>
+		
+		<li class="class"><a href="Watir/Exception/NoValueFoundException.html">Watir::Exception::NoValueFoundException</a></li>
+		
+		<li class="class"><a href="Watir/Exception/ObjectDisabledException.html">Watir::Exception::ObjectDisabledException</a></li>
+		
+		<li class="class"><a href="Watir/Exception/ObjectReadOnlyException.html">Watir::Exception::ObjectReadOnlyException</a></li>
+		
+		<li class="class"><a href="Watir/Exception/TimeOutException.html">Watir::Exception::TimeOutException</a></li>
+		
+		<li class="class"><a href="Watir/Exception/UnhandledEventException.html">Watir::Exception::UnhandledEventException</a></li>
+		
+		<li class="class"><a href="Watir/Exception/UnknownCellException.html">Watir::Exception::UnknownCellException</a></li>
+		
+		<li class="class"><a href="Watir/Exception/UnknownFormException.html">Watir::Exception::UnknownFormException</a></li>
+		
+		<li class="class"><a href="Watir/Exception/UnknownFrameException.html">Watir::Exception::UnknownFrameException</a></li>
+		
+		<li class="class"><a href="Watir/Exception/UnknownObjectException.html">Watir::Exception::UnknownObjectException</a></li>
+		
+		<li class="class"><a href="Watir/Exception/WatirException.html">Watir::Exception::WatirException</a></li>
+		
+		<li class="class"><a href="Watir/FieldSet.html">Watir::FieldSet</a></li>
+		
+		<li class="class"><a href="Watir/FileField.html">Watir::FileField</a></li>
+		
+		<li class="class"><a href="Watir/Font.html">Watir::Font</a></li>
+		
+		<li class="class"><a href="Watir/Form.html">Watir::Form</a></li>
+		
+		<li class="class"><a href="Watir/FormLocator.html">Watir::FormLocator</a></li>
+		
+		<li class="class"><a href="Watir/Frame.html">Watir::Frame</a></li>
+		
+		<li class="class"><a href="Watir/FrameLocator.html">Watir::FrameLocator</a></li>
+		
+		<li class="class"><a href="Watir/HTMLElementCollection.html">Watir::HTMLElementCollection</a></li>
+		
+		<li class="class"><a href="Watir/Hidden.html">Watir::Hidden</a></li>
+		
+		<li class="class"><a href="Watir/IE.html">Watir::IE</a></li>
+		
+		<li class="class"><a href="Watir/IE/Process.html">Watir::IE::Process</a></li>
+		
+		<li class="class"><a href="Watir/Image.html">Watir::Image</a></li>
+		
+		<li class="class"><a href="Watir/InputElementCollection.html">Watir::InputElementCollection</a></li>
+		
+		<li class="class"><a href="Watir/InputElementLocator.html">Watir::InputElementLocator</a></li>
+		
+		<li class="class"><a href="Watir/JavascriptDialog.html">Watir::JavascriptDialog</a></li>
+		
+		<li class="class"><a href="Watir/Keygen.html">Watir::Keygen</a></li>
+		
+		<li class="class"><a href="Watir/Label.html">Watir::Label</a></li>
+		
+		<li class="class"><a href="Watir/Li.html">Watir::Li</a></li>
+		
+		<li class="class"><a href="Watir/Link.html">Watir::Link</a></li>
+		
+		<li class="class"><a href="Watir/Locator.html">Watir::Locator</a></li>
+		
+		<li class="class"><a href="Watir/Map.html">Watir::Map</a></li>
+		
+		<li class="class"><a href="Watir/Menu.html">Watir::Menu</a></li>
+		
+		<li class="class"><a href="Watir/Meta.html">Watir::Meta</a></li>
+		
+		<li class="class"><a href="Watir/Meter.html">Watir::Meter</a></li>
+		
+		<li class="class"><a href="Watir/ModalDialog.html">Watir::ModalDialog</a></li>
+		
+		<li class="class"><a href="Watir/Object.html">Watir::Object</a></li>
+		
+		<li class="class"><a href="Watir/Optgroup.html">Watir::Optgroup</a></li>
+		
+		<li class="class"><a href="Watir/Option.html">Watir::Option</a></li>
+		
+		<li class="class"><a href="Watir/Output.html">Watir::Output</a></li>
+		
+		<li class="module"><a href="Watir/PageContainer.html">Watir::PageContainer</a></li>
+		
+		<li class="class"><a href="Watir/Param.html">Watir::Param</a></li>
+		
+		<li class="module"><a href="Watir/Process.html">Watir::Process</a></li>
+		
+		<li class="class"><a href="Watir/Progress.html">Watir::Progress</a></li>
+		
+		<li class="class"><a href="Watir/Radio.html">Watir::Radio</a></li>
+		
+		<li class="module"><a href="Watir/RadioCheckCommon.html">Watir::RadioCheckCommon</a></li>
+		
+		<li class="module"><a href="Watir/ScreenCapture.html">Watir::ScreenCapture</a></li>
+		
+		<li class="class"><a href="Watir/Script.html">Watir::Script</a></li>
+		
+		<li class="class"><a href="Watir/SelectList.html">Watir::SelectList</a></li>
+		
+		<li class="class"><a href="Watir/Source.html">Watir::Source</a></li>
+		
+		<li class="class"><a href="Watir/Style.html">Watir::Style</a></li>
+		
+		<li class="class"><a href="Watir/Table.html">Watir::Table</a></li>
+		
+		<li class="class"><a href="Watir/TableCell.html">Watir::TableCell</a></li>
+		
+		<li class="class"><a href="Watir/TableCellCollection.html">Watir::TableCellCollection</a></li>
+		
+		<li class="module"><a href="Watir/TableCellsContainer.html">Watir::TableCellsContainer</a></li>
+		
+		<li class="module"><a href="Watir/TableContainer.html">Watir::TableContainer</a></li>
+		
+		<li class="class"><a href="Watir/TableElementCollection.html">Watir::TableElementCollection</a></li>
+		
+		<li class="module"><a href="Watir/TableElementsContainer.html">Watir::TableElementsContainer</a></li>
+		
+		<li class="class"><a href="Watir/TableRow.html">Watir::TableRow</a></li>
+		
+		<li class="class"><a href="Watir/TableRowCollection.html">Watir::TableRowCollection</a></li>
+		
+		<li class="module"><a href="Watir/TableRowsContainer.html">Watir::TableRowsContainer</a></li>
+		
+		<li class="class"><a href="Watir/TableSection.html">Watir::TableSection</a></li>
+		
+		<li class="class"><a href="Watir/TaggedElementLocator.html">Watir::TaggedElementLocator</a></li>
+		
+		<li class="class"><a href="Watir/TestCase.html">Watir::TestCase</a></li>
+		
+		<li class="class"><a href="Watir/TextField.html">Watir::TextField</a></li>
+		
+		<li class="class"><a href="Watir/TimeKeeper.html">Watir::TimeKeeper</a></li>
+		
+		<li class="class"><a href="Watir/Track.html">Watir::Track</a></li>
+		
+		<li class="class"><a href="Watir/Util.html">Watir::Util</a></li>
+		
+		<li class="class"><a href="Watir/Video.html">Watir::Video</a></li>
+		
+		<li class="module"><a href="Watir/Wait.html">Watir::Wait</a></li>
+		
+		<li class="class"><a href="Watir/Wait/TimeoutError.html">Watir::Wait::TimeoutError</a></li>
+		
+		<li class="module"><a href="Watir/WaitHelper.html">Watir::WaitHelper</a></li>
+		
+		<li class="class"><a href="Watir/Waiter.html">Watir::Waiter</a></li>
+		
+		<li class="class"><a href="Watir/WatirLogger.html">Watir::WatirLogger</a></li>
+		
+		<li class="class"><a href="Watir/WatirOptions.html">Watir::WatirOptions</a></li>
+		
+		<li class="module"><a href="Watir/Win32.html">Watir::Win32</a></li>
+		
+		<li class="class"><a href="Watir/Window.html">Watir::Window</a></li>
+		
+		<li class="module"><a href="Watir/XpathLocator.html">Watir::XpathLocator</a></li>
+		
+		<li class="module"><a href="Test.html">Test</a></li>
+		
+		<li class="module"><a href="Test/Unit.html">Test::Unit</a></li>
+		
+		<li class="module"><a href="Test/Unit/Assertions.html">Test::Unit::Assertions</a></li>
+		
+		<li class="module"><a href="Readline.html">Readline</a></li>
+		
+		<li class="module"><a href="Readline/History.html">Readline::History</a></li>
+		
+		<li class="class"><a href="IEProcess.html">IEProcess</a></li>
+		
+		<li class="class"><a href="Integer.html">Integer</a></li>
+		
+		<li class="class"><a href="Object.html">Object</a></li>
+		
+		<li class="module"><a href="PageCheckers.html">PageCheckers</a></li>
+		
+		<li class="class"><a href="Regexp.html">Regexp</a></li>
+		
+		<li class="class"><a href="String.html">String</a></li>
+		
+		<li class="class"><a href="WinClicker.html">WinClicker</a></li>
+		
+	</ul>
+
+	<h2 id="methods">Methods</h2>
+	<ul>
+		
+			<li><a href="Watir/IE.html#method-c-_find">::_find &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE.html#method-c-_find_all">::_find_all &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/Browser.html#method-c-activate_gem">::activate_gem &mdash; Watir::Browser</a></li>
+		
+			<li><a href="Watir/IE.html#method-c-attach">::attach &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/Browser.html#method-c-attach">::attach &mdash; Watir::Browser</a></li>
+		
+			<li><a href="Watir/IE.html#method-c-attach_timeout">::attach_timeout &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE.html#method-c-attach_timeout%3D">::attach_timeout= &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/Element.html#method-c-attr_ole">::attr_ole &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/Browser.html#method-c-autoload">::autoload &mdash; Watir::Browser</a></li>
+		
+			<li><a href="Watir/IE.html#method-c-base_index">::base_index &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE.html#method-c-bind">::bind &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/Browser.html#method-c-browser_names">::browser_names &mdash; Watir::Browser</a></li>
+		
+			<li><a href="Watir/IE.html#method-c-close_all">::close_all &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE.html#method-c-close_all_but">::close_all_but &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/Process.html#method-c-count">::count &mdash; Watir::Process</a></li>
+		
+			<li><a href="Watir/Browser.html#method-c-default">::default &mdash; Watir::Browser</a></li>
+		
+			<li><a href="Watir/Browser.html#method-c-default%3D">::default= &mdash; Watir::Browser</a></li>
+		
+			<li><a href="Watir/TestCase.html#method-c-default_order%3D">::default_order= &mdash; Watir::TestCase</a></li>
+		
+			<li><a href="Watir/Util.html#method-c-demodulize">::demodulize &mdash; Watir::Util</a></li>
+		
+			<li><a href="Watir/IE.html#method-c-each">::each &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/TestCase.html#method-c-execute">::execute &mdash; Watir::TestCase</a></li>
+		
+			<li><a href="Watir/IE.html#method-c-find">::find &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/RadioCheckCommon.html#method-c-included">::included &mdash; Watir::RadioCheckCommon</a></li>
+		
+			<li><a href="Watir/Browser.html#method-c-klass">::klass &mdash; Watir::Browser</a></li>
+		
+			<li><a href="Readline/History.html#method-c-log%3D">::log= &mdash; Readline::History</a></li>
+		
+			<li><a href="Watir/Exception.html#method-c-message_for_unable_to_locate">::message_for_unable_to_locate &mdash; Watir::Exception</a></li>
+		
+			<li><a href="Watir/TestCase.html#method-c-method_added">::method_added &mdash; Watir::TestCase</a></li>
+		
+			<li><a href="Watir/DefaultLogger.html#method-c-new">::new &mdash; Watir::DefaultLogger</a></li>
+		
+			<li><a href="Watir/IE.html#method-c-new">::new &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/Exception/TimeOutException.html#method-c-new">::new &mdash; Watir::Exception::TimeOutException</a></li>
+		
+			<li><a href="Watir/JavascriptDialog.html#method-c-new">::new &mdash; Watir::JavascriptDialog</a></li>
+		
+			<li><a href="Watir/Form.html#method-c-new">::new &mdash; Watir::Form</a></li>
+		
+			<li><a href="Watir/Cookies.html#method-c-new">::new &mdash; Watir::Cookies</a></li>
+		
+			<li><a href="Watir/Exception/WatirException.html#method-c-new">::new &mdash; Watir::Exception::WatirException</a></li>
+		
+			<li><a href="Watir/TimeKeeper.html#method-c-new">::new &mdash; Watir::TimeKeeper</a></li>
+		
+			<li><a href="Watir/TestCase.html#method-c-new">::new &mdash; Watir::TestCase</a></li>
+		
+			<li><a href="Watir/Waiter.html#method-c-new">::new &mdash; Watir::Waiter</a></li>
+		
+			<li><a href="Watir/Window.html#method-c-new">::new &mdash; Watir::Window</a></li>
+		
+			<li><a href="Watir/Frame.html#method-c-new">::new &mdash; Watir::Frame</a></li>
+		
+			<li><a href="Watir/ElementExtensions/WhenPresentDecorator.html#method-c-new">::new &mdash; Watir::ElementExtensions::WhenPresentDecorator</a></li>
+		
+			<li><a href="Watir/TableElementCollection.html#method-c-new">::new &mdash; Watir::TableElementCollection</a></li>
+		
+			<li><a href="Watir/Browser.html#method-c-new">::new &mdash; Watir::Browser</a></li>
+		
+			<li><a href="Watir/IE/Process.html#method-c-new">::new &mdash; Watir::IE::Process</a></li>
+		
+			<li><a href="WinClicker.html#method-c-new">::new &mdash; WinClicker</a></li>
+		
+			<li><a href="Watir/WatirLogger.html#method-c-new">::new &mdash; Watir::WatirLogger</a></li>
+		
+			<li><a href="Watir/Locator.html#method-c-new">::new &mdash; Watir::Locator</a></li>
+		
+			<li><a href="Watir/ElementCollection.html#method-c-new">::new &mdash; Watir::ElementCollection</a></li>
+		
+			<li><a href="Watir/Element.html#method-c-new">::new &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/ModalDialog.html#method-c-new">::new &mdash; Watir::ModalDialog</a></li>
+		
+			<li><a href="Watir/IE.html#method-c-new_process">::new_process &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE.html#method-c-new_window">::new_window &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE.html#method-c-options">::options &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir.html#method-c-options">::options &mdash; Watir</a></li>
+		
+			<li><a href="Watir/Browser.html#method-c-options">::options &mdash; Watir::Browser</a></li>
+		
+			<li><a href="Watir.html#method-c-options%3D">::options= &mdash; Watir</a></li>
+		
+			<li><a href="Watir.html#method-c-options_file">::options_file &mdash; Watir</a></li>
+		
+			<li><a href="Watir.html#method-c-options_file%3D">::options_file= &mdash; Watir</a></li>
+		
+			<li><a href="Watir/TestCase.html#method-c-order">::order &mdash; Watir::TestCase</a></li>
+		
+			<li><a href="Watir/IE.html#method-c-process_count">::process_count &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE/Process.html#method-c-process_id_from_hwnd">::process_id_from_hwnd &mdash; Watir::IE::Process</a></li>
+		
+			<li><a href="Watir/IE.html#method-c-set_options">::set_options &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/Browser.html#method-c-set_options">::set_options &mdash; Watir::Browser</a></li>
+		
+			<li><a href="Watir/Browser.html#method-c-set_sub_options">::set_sub_options &mdash; Watir::Browser</a></li>
+		
+			<li><a href="Watir/Util.html#method-c-singularize">::singularize &mdash; Watir::Util</a></li>
+		
+			<li><a href="Watir/TestCase.html#method-c-sorted_test_methods">::sorted_test_methods &mdash; Watir::TestCase</a></li>
+		
+			<li><a href="Watir/IE.html#method-c-speed">::speed &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE.html#method-c-speed%3D">::speed= &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE/Process.html#method-c-start">::start &mdash; Watir::IE::Process</a></li>
+		
+			<li><a href="Watir/Browser.html#method-c-start">::start &mdash; Watir::Browser</a></li>
+		
+			<li><a href="Watir/IE.html#method-c-start">::start &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE.html#method-c-start_process">::start_process &mdash; Watir::IE</a></li>
+		
+			<li><a href="Readline/History.html#method-c-start_session_log">::start_session_log &mdash; Readline::History</a></li>
+		
+			<li><a href="Watir/IE.html#method-c-start_window">::start_window &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/TestCase.html#method-c-suite">::suite &mdash; Watir::TestCase</a></li>
+		
+			<li><a href="Watir/Browser.html#method-c-support">::support &mdash; Watir::Browser</a></li>
+		
+			<li><a href="Watir/Container.html#method-c-support_element">::support_element &mdash; Watir::Container</a></li>
+		
+			<li><a href="Watir/TestCase.html#method-c-test_methods">::test_methods &mdash; Watir::TestCase</a></li>
+		
+			<li><a href="Watir/Util.html#method-c-underscore">::underscore &mdash; Watir::Util</a></li>
+		
+			<li><a href="Watir.html#method-c-until_with_timeout">::until_with_timeout &mdash; Watir</a></li>
+		
+			<li><a href="Watir/IE.html#method-c-version">::version &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE.html#method-c-version_parts">::version_parts &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE.html#method-c-visible">::visible &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE.html#method-c-visible%3D">::visible= &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/Waiter.html#method-c-wait_until">::wait_until &mdash; Watir::Waiter</a></li>
+		
+			<li><a href="Watir/Win32.html#method-c-window_exists%3F">::window_exists? &mdash; Watir::Win32</a></li>
+		
+			<li><a href="Watir/Window.html#method-c-wrap">::wrap &mdash; Watir::Window</a></li>
+		
+			<li><a href="Readline/History.html#method-c-write_log">::write_log &mdash; Readline::History</a></li>
+		
+			<li><a href="Watir/IE.html#method-c-zero_based_indexing">::zero_based_indexing &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE.html#method-c-zero_based_indexing%3D">::zero_based_indexing= &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-%3C%3D%3E">#<=> &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/Window.html#method-i-%3D%3D">#== &mdash; Watir::Window</a></li>
+		
+			<li><a href="Watir/TableRow.html#method-i-%5B%5D">#[] &mdash; Watir::TableRow</a></li>
+		
+			<li><a href="Watir/TableContainer.html#method-i-%5B%5D">#[] &mdash; Watir::TableContainer</a></li>
+		
+			<li><a href="Watir/ElementCollection.html#method-i-%5B%5D">#[] &mdash; Watir::ElementCollection</a></li>
+		
+			<li><a href="Watir/Form.html#method-i-__ole_inner_elements">#__ole_inner_elements &mdash; Watir::Form</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-__ole_inner_elements">#__ole_inner_elements &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/Container.html#method-i-__ole_inner_elements">#__ole_inner_elements &mdash; Watir::Container</a></li>
+		
+			<li><a href="Watir/Frame.html#method-i-__ole_inner_elements">#__ole_inner_elements &mdash; Watir::Frame</a></li>
+		
+			<li><a href="Watir/Button.html#method-i-__value">#__value &mdash; Watir::Button</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-_attach_init">#_attach_init &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-_new_process_init">#_new_process_init &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-_new_window_init">#_new_window_init &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-activate">#activate &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-active%3F">#active? &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/ModalDialog.html#method-i-active%3F">#active? &mdash; Watir::ModalDialog</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-activeObjectHighLightColor">#activeObjectHighLightColor &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/Cookies.html#method-i-add">#add &mdash; Watir::Cookies</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-add_checker">#add_checker &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/WatirOptions.html#method-i-add_choices">#add_choices &mdash; Watir::WatirOptions</a></li>
+		
+			<li><a href="Watir/WatirOptions.html#method-i-add_sources">#add_sources &mdash; Watir::WatirOptions</a></li>
+		
+			<li><a href="Watir/TextField.html#method-i-append">#append &mdash; Watir::TextField</a></li>
+		
+			<li><a href="Watir/Hidden.html#method-i-append">#append &mdash; Watir::Hidden</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-assert_enabled">#assert_enabled &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-assert_exists">#assert_exists &mdash; Watir::Element</a></li>
+		
+			<li><a href="Test/Unit/Assertions.html#method-i-assert_false">#assert_false &mdash; Test::Unit::Assertions</a></li>
+		
+			<li><a href="Watir/FileField.html#method-i-assert_file_exists">#assert_file_exists &mdash; Watir::FileField</a></li>
+		
+			<li><a href="Watir/DragAndDropHelper.html#method-i-assert_target">#assert_target &mdash; Watir::DragAndDropHelper</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-attach_browser_window">#attach_browser_window &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-attach_command">#attach_command &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/ModalDialog.html#method-i-attach_command">#attach_command &mdash; Watir::ModalDialog</a></li>
+		
+			<li><a href="Watir/Frame.html#method-i-attach_command">#attach_command &mdash; Watir::Frame</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-attribute_value">#attribute_value &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-autoit">#autoit &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-back">#back &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/DragAndDropHelper.html#method-i-bottom_edge">#bottom_edge &mdash; Watir::DragAndDropHelper</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-bring_to_front">#bring_to_front &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/Window.html#method-i-browser">#browser &mdash; Watir::Window</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-build_method">#build_method &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/JavascriptDialog.html#method-i-button">#button &mdash; Watir::JavascriptDialog</a></li>
+		
+			<li><a href="Watir/FileField.html#method-i-cancel_button">#cancel_button &mdash; Watir::FileField</a></li>
+		
+			<li><a href="Watir/TableCellsContainer.html#method-i-cell">#cell &mdash; Watir::TableCellsContainer</a></li>
+		
+			<li><a href="Watir/TableCellsContainer.html#method-i-cells">#cells &mdash; Watir::TableCellsContainer</a></li>
+		
+			<li><a href="Watir/DragAndDropHelper.html#method-i-center_x_y_absolute">#center_x_y_absolute &mdash; Watir::DragAndDropHelper</a></li>
+		
+			<li><a href="Watir/TextField.html#method-i-characters_in">#characters_in &mdash; Watir::TextField</a></li>
+		
+			<li><a href="Watir/PageContainer.html#method-i-check_for_http_error">#check_for_http_error &mdash; Watir::PageContainer</a></li>
+		
+			<li><a href="Watir/TextField.html#method-i-clear">#clear &mdash; Watir::TextField</a></li>
+		
+			<li><a href="Watir/Cookies.html#method-i-clear">#clear &mdash; Watir::Cookies</a></li>
+		
+			<li><a href="Watir/CheckBox.html#method-i-clear">#clear &mdash; Watir::CheckBox</a></li>
+		
+			<li><a href="Watir/Option.html#method-i-clear">#clear &mdash; Watir::Option</a></li>
+		
+			<li><a href="Watir/Radio.html#method-i-clear">#clear &mdash; Watir::Radio</a></li>
+		
+			<li><a href="Watir/Hidden.html#method-i-clear">#clear &mdash; Watir::Hidden</a></li>
+		
+			<li><a href="Watir/SelectList.html#method-i-clear">#clear &mdash; Watir::SelectList</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-clear_url_list">#clear_url_list &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-click">#click &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-click%21">#click! &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/JavascriptDialog.html#method-i-close">#close &mdash; Watir::JavascriptDialog</a></li>
+		
+			<li><a href="Watir/ModalDialog.html#method-i-close">#close &mdash; Watir::ModalDialog</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-close">#close &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-close_modal">#close_modal &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-close_others">#close_others &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/TableCell.html#method-i-colspan">#colspan &mdash; Watir::TableCell</a></li>
+		
+			<li><a href="Watir/TableRow.html#method-i-column_count">#column_count &mdash; Watir::TableRow</a></li>
+		
+			<li><a href="Watir/Table.html#method-i-column_count">#column_count &mdash; Watir::Table</a></li>
+		
+			<li><a href="Watir/Table.html#method-i-column_values">#column_values &mdash; Watir::Table</a></li>
+		
+			<li><a href="Watir/PageContainer.html#method-i-contains_text">#contains_text &mdash; Watir::PageContainer</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-cookies">#cookies &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/Container.html#method-i-copy_test_config">#copy_test_config &mdash; Watir::Container</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-create_browser_window">#create_browser_window &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/Locator.html#method-i-create_element">#create_element &mdash; Watir::Locator</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-create_event">#create_event &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/Window.html#method-i-current%3F">#current? &mdash; Watir::Window</a></li>
+		
+			<li><a href="Watir/Cookies.html#method-i-delete">#delete &mdash; Watir::Cookies</a></li>
+		
+			<li><a href="Watir/Cookies.html#method-i-delete_with_options">#delete_with_options &mdash; Watir::Cookies</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-dir">#dir &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/XpathLocator.html#method-i-direct_children">#direct_children &mdash; Watir::XpathLocator</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-disable_checker">#disable_checker &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-disabled%3F">#disabled? &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-dispatch_event">#dispatch_event &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/Locator.html#method-i-document">#document &mdash; Watir::Locator</a></li>
+		
+			<li><a href="Watir/Frame.html#method-i-document">#document &mdash; Watir::Frame</a></li>
+		
+			<li><a href="Watir/ModalDialog.html#method-i-document">#document &mdash; Watir::ModalDialog</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-document">#document &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-document">#document &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-double_click">#double_click &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/DragAndDropHelper.html#method-i-drag_and_drop_by">#drag_and_drop_by &mdash; Watir::DragAndDropHelper</a></li>
+		
+			<li><a href="Watir/DragAndDropHelper.html#method-i-drag_and_drop_on">#drag_and_drop_on &mdash; Watir::DragAndDropHelper</a></li>
+		
+			<li><a href="Watir/TextField.html#method-i-drag_contents_to">#drag_contents_to &mdash; Watir::TextField</a></li>
+		
+			<li><a href="Watir/DragAndDropHelper.html#method-i-drag_to">#drag_to &mdash; Watir::DragAndDropHelper</a></li>
+		
+			<li><a href="Watir/InputElementLocator.html#method-i-each">#each &mdash; Watir::InputElementLocator</a></li>
+		
+			<li><a href="Watir/Cookies.html#method-i-each">#each &mdash; Watir::Cookies</a></li>
+		
+			<li><a href="Watir/TableElementCollection.html#method-i-each">#each &mdash; Watir::TableElementCollection</a></li>
+		
+			<li><a href="Watir/ElementCollection.html#method-i-each">#each &mdash; Watir::ElementCollection</a></li>
+		
+			<li><a href="Watir/Locator.html#method-i-each">#each &mdash; Watir::Locator</a></li>
+		
+			<li><a href="Watir/TableRow.html#method-i-each">#each &mdash; Watir::TableRow</a></li>
+		
+			<li><a href="Watir/InputElementCollection.html#method-i-each">#each &mdash; Watir::InputElementCollection</a></li>
+		
+			<li><a href="Watir/HTMLElementCollection.html#method-i-each">#each &mdash; Watir::HTMLElementCollection</a></li>
+		
+			<li><a href="Watir/FormLocator.html#method-i-each_element">#each_element &mdash; Watir::FormLocator</a></li>
+		
+			<li><a href="Watir/InputElementLocator.html#method-i-each_element">#each_element &mdash; Watir::InputElementLocator</a></li>
+		
+			<li><a href="Watir/TaggedElementLocator.html#method-i-each_element">#each_element &mdash; Watir::TaggedElementLocator</a></li>
+		
+			<li><a href="Watir/FrameLocator.html#method-i-each_element">#each_element &mdash; Watir::FrameLocator</a></li>
+		
+			<li><a href="Watir/XpathLocator.html#method-i-element_by_css">#element_by_css &mdash; Watir::XpathLocator</a></li>
+		
+			<li><a href="Watir/XpathLocator.html#method-i-element_by_xpath">#element_by_xpath &mdash; Watir::XpathLocator</a></li>
+		
+			<li><a href="Watir/ElementCollection.html#method-i-element_class">#element_class &mdash; Watir::ElementCollection</a></li>
+		
+			<li><a href="Watir/XpathLocator.html#method-i-elements_by_css">#elements_by_css &mdash; Watir::XpathLocator</a></li>
+		
+			<li><a href="Watir/XpathLocator.html#method-i-elements_by_xpath">#elements_by_xpath &mdash; Watir::XpathLocator</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-enabled%3F">#enabled? &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/PageContainer.html#method-i-enabled_popup">#enabled_popup &mdash; Watir::PageContainer</a></li>
+		
+			<li><a href="Watir/Window.html#method-i-eql%3F">#eql? &mdash; Watir::Window</a></li>
+		
+			<li><a href="Watir/WatirOptions.html#method-i-execute">#execute &mdash; Watir::WatirOptions</a></li>
+		
+			<li><a href="Watir/PageContainer.html#method-i-execute_script">#execute_script &mdash; Watir::PageContainer</a></li>
+		
+			<li><a href="Watir/ModalDialog.html#method-i-exist%3F">#exist? &mdash; Watir::ModalDialog</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-exist%3F">#exist? &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-exist%3F">#exist? &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/JavascriptDialog.html#method-i-exists%3F">#exists? &mdash; Watir::JavascriptDialog</a></li>
+		
+			<li><a href="Watir/ModalDialog.html#method-i-exists%3F">#exists? &mdash; Watir::ModalDialog</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-exists%3F">#exists? &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-exists%3F">#exists? &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/Image.html#method-i-file_size">#file_size &mdash; Watir::Image</a></li>
+		
+			<li><a href="Watir/FileField.html#method-i-file_upload_window">#file_upload_window &mdash; Watir::FileField</a></li>
+		
+			<li><a href="Watir/Image.html#method-i-fill_save_image_dialog">#fill_save_image_dialog &mdash; Watir::Image</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-fire_event">#fire_event &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/ElementCollection.html#method-i-first">#first &mdash; Watir::ElementCollection</a></li>
+		
+			<li><a href="Watir/Form.html#method-i-flash">#flash &mdash; Watir::Form</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-flash">#flash &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-focus">#focus &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/Hidden.html#method-i-focus">#focus &mdash; Watir::Hidden</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-focus">#focus &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-focused%3F">#focused? &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/Form.html#method-i-form_method">#form_method &mdash; Watir::Form</a></li>
+		
+			<li><a href="Watir/Container.html#method-i-format_specifiers">#format_specifiers &mdash; Watir::Container</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-forward">#forward &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-front%3F">#front? &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-generate_ruby_code">#generate_ruby_code &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-goto">#goto &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/Locator.html#method-i-has_excluding_specifiers%3F">#has_excluding_specifiers? &mdash; Watir::Locator</a></li>
+		
+			<li><a href="Watir/Table.html#method-i-hashes">#hashes &mdash; Watir::Table</a></li>
+		
+			<li><a href="Watir/Image.html#method-i-height">#height &mdash; Watir::Image</a></li>
+		
+			<li><a href="Watir/Table.html#method-i-highlight">#highlight &mdash; Watir::Table</a></li>
+		
+			<li><a href="Watir/Image.html#method-i-highlight">#highlight &mdash; Watir::Image</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-highlight">#highlight &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/Form.html#method-i-highlight">#highlight &mdash; Watir::Form</a></li>
+		
+			<li><a href="Watir/PageContainer.html#method-i-html">#html &mdash; Watir::PageContainer</a></li>
+		
+			<li><a href="Watir/ModalDialog.html#method-i-hwnd">#hwnd &mdash; Watir::ModalDialog</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-hwnd">#hwnd &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/ElementExtensions/WhenPresentDecorator.html#method-i-id">#id &mdash; Watir::ElementExtensions::WhenPresentDecorator</a></li>
+		
+			<li><a href="Watir/Image.html#method-i-image_string_creator">#image_string_creator &mdash; Watir::Image</a></li>
+		
+			<li><a href="Watir/SelectList.html#method-i-include%3F">#include? &mdash; Watir::SelectList</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-initialize_options">#initialize_options &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-inspect">#inspect &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/ElementCollection.html#method-i-inspect">#inspect &mdash; Watir::ElementCollection</a></li>
+		
+			<li><a href="Watir/RadioCheckCommon.html#method-i-inspect">#inspect &mdash; Watir::RadioCheckCommon</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-inspect">#inspect &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/ElementCollection.html#method-i-iterator_object">#iterator_object &mdash; Watir::ElementCollection</a></li>
+		
+			<li><a href="Watir/JavascriptDialog.html#method-i-javascript_dialog">#javascript_dialog &mdash; Watir::JavascriptDialog</a></li>
+		
+			<li><a href="Watir/JavascriptDialog.html#method-i-javascript_dialog_window">#javascript_dialog_window &mdash; Watir::JavascriptDialog</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-kill">#kill &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/TextField.html#method-i-label">#label &mdash; Watir::TextField</a></li>
+		
+			<li><a href="Watir/ElementCollection.html#method-i-last">#last &mdash; Watir::ElementCollection</a></li>
+		
+			<li><a href="Watir/DragAndDropHelper.html#method-i-left_edge">#left_edge &mdash; Watir::DragAndDropHelper</a></li>
+		
+			<li><a href="Watir/DragAndDropHelper.html#method-i-left_edge_absolute">#left_edge_absolute &mdash; Watir::DragAndDropHelper</a></li>
+		
+			<li><a href="Watir/ElementCollection.html#method-i-length">#length &mdash; Watir::ElementCollection</a></li>
+		
+			<li><a href="Watir/TextField.html#method-i-limit_to_maxlength">#limit_to_maxlength &mdash; Watir::TextField</a></li>
+		
+			<li><a href="Watir/Link.html#method-i-link_has_image">#link_has_image &mdash; Watir::Link</a></li>
+		
+			<li><a href="Watir/Link.html#method-i-link_string_creator">#link_string_creator &mdash; Watir::Link</a></li>
+		
+			<li><a href="Watir/Image.html#method-i-loaded%3F">#loaded? &mdash; Watir::Image</a></li>
+		
+			<li><a href="Watir/Form.html#method-i-locate">#locate &mdash; Watir::Form</a></li>
+		
+			<li><a href="Watir/TaggedElementLocator.html#method-i-locate">#locate &mdash; Watir::TaggedElementLocator</a></li>
+		
+			<li><a href="Watir/Frame.html#method-i-locate">#locate &mdash; Watir::Frame</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-locate">#locate &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/InputElementLocator.html#method-i-locate">#locate &mdash; Watir::InputElementLocator</a></li>
+		
+			<li><a href="Watir/ModalDialog.html#method-i-locate">#locate &mdash; Watir::ModalDialog</a></li>
+		
+			<li><a href="Watir/FrameLocator.html#method-i-locate">#locate &mdash; Watir::FrameLocator</a></li>
+		
+			<li><a href="Watir/Locator.html#method-i-locate_by_id">#locate_by_id &mdash; Watir::Locator</a></li>
+		
+			<li><a href="Watir/InputElementLocator.html#method-i-locate_by_name">#locate_by_name &mdash; Watir::InputElementLocator</a></li>
+		
+			<li><a href="Watir/Locator.html#method-i-locate_elements_by_xpath_css_ole">#locate_elements_by_xpath_css_ole &mdash; Watir::Locator</a></li>
+		
+			<li><a href="Watir/FrameLocator.html#method-i-locate_elements_by_xpath_css_ole">#locate_elements_by_xpath_css_ole &mdash; Watir::FrameLocator</a></li>
+		
+			<li><a href="Watir/Container.html#method-i-locator_for">#locator_for &mdash; Watir::Container</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-log">#log &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/Container.html#method-i-log">#log &mdash; Watir::Container</a></li>
+		
+			<li><a href="Watir/Locator.html#method-i-match%3F">#match? &mdash; Watir::Locator</a></li>
+		
+			<li><a href="Watir/Locator.html#method-i-match_class%3F">#match_class? &mdash; Watir::Locator</a></li>
+		
+			<li><a href="Watir/Locator.html#method-i-match_with_specifiers%3F">#match_with_specifiers? &mdash; Watir::Locator</a></li>
+		
+			<li><a href="Integer.html#method-i-matches">#matches &mdash; Integer</a></li>
+		
+			<li><a href="String.html#method-i-matches">#matches &mdash; String</a></li>
+		
+			<li><a href="Regexp.html#method-i-matches">#matches &mdash; Regexp</a></li>
+		
+			<li><a href="Object.html#method-i-matches">#matches &mdash; Object</a></li>
+		
+			<li><a href="Watir/SelectList.html#method-i-matching_items_in_select_list">#matching_items_in_select_list &mdash; Watir::SelectList</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-maximize">#maximize &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/TextField.html#method-i-maxlength">#maxlength &mdash; Watir::TextField</a></li>
+		
+			<li><a href="Watir/Form.html#method-i-method">#method &mdash; Watir::Form</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-method_missing">#method_missing &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/ElementExtensions/WhenPresentDecorator.html#method-i-method_missing">#method_missing &mdash; Watir::ElementExtensions::WhenPresentDecorator</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-minimize">#minimize &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-minimized%3F">#minimized? &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/Container.html#method-i-modal_dialog">#modal_dialog &mdash; Watir::Container</a></li>
+		
+			<li><a href="Watir/Form.html#method-i-name">#name &mdash; Watir::Form</a></li>
+		
+			<li><a href="Watir/Locator.html#method-i-normalize_specifiers">#normalize_specifiers &mdash; Watir::Locator</a></li>
+		
+			<li><a href="Watir/TimeKeeper.html#method-i-now">#now &mdash; Watir::TimeKeeper</a></li>
+		
+			<li><a href="Watir/Waiter.html#method-i-now">#now &mdash; Watir::Waiter</a></li>
+		
+			<li><a href="Readline.html#method-i-old_readline">#old_readline &mdash; Readline</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-ole_object">#ole_object &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-ole_object%3D">#ole_object= &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/FileField.html#method-i-open_button">#open_button &mdash; Watir::FileField</a></li>
+		
+			<li><a href="Watir/PageContainer.html#method-i-page">#page &mdash; Watir::PageContainer</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-parent">#parent &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-perform_action">#perform_action &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/Window.html#method-i-present%3F">#present? &mdash; Watir::Window</a></li>
+		
+			<li><a href="Watir/ElementExtensions.html#method-i-present%3F">#present? &mdash; Watir::ElementExtensions</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-process_id">#process_id &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-rautomation">#rautomation &mdash; Watir::IE</a></li>
+		
+			<li><a href="Readline.html#method-i-readline">#readline &mdash; Readline</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-refresh">#refresh &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-replace_method">#replace_method &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-restore">#restore &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-right_click">#right_click &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/DragAndDropHelper.html#method-i-right_edge">#right_edge &mdash; Watir::DragAndDropHelper</a></li>
+		
+			<li><a href="Watir/TableRowsContainer.html#method-i-row">#row &mdash; Watir::TableRowsContainer</a></li>
+		
+			<li><a href="Watir/Table.html#method-i-row_count">#row_count &mdash; Watir::Table</a></li>
+		
+			<li><a href="Watir/Table.html#method-i-row_values">#row_values &mdash; Watir::Table</a></li>
+		
+			<li><a href="Watir/TableRowsContainer.html#method-i-rows">#rows &mdash; Watir::TableRowsContainer</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-run_error_checks">#run_error_checks &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/Image.html#method-i-save">#save &mdash; Watir::Image</a></li>
+		
+			<li><a href="Watir/ScreenCapture.html#method-i-screen_capture">#screen_capture &mdash; Watir::ScreenCapture</a></li>
+		
+			<li><a href="Watir/SelectList.html#method-i-select">#select &mdash; Watir::SelectList</a></li>
+		
+			<li><a href="Watir/Option.html#method-i-select">#select &mdash; Watir::Option</a></li>
+		
+			<li><a href="Watir/Option.html#method-i-select_list">#select_list &mdash; Watir::Option</a></li>
+		
+			<li><a href="Watir/SelectList.html#method-i-select_value">#select_value &mdash; Watir::SelectList</a></li>
+		
+			<li><a href="Watir/SelectList.html#method-i-selected%3F">#selected? &mdash; Watir::SelectList</a></li>
+		
+			<li><a href="Watir/Option.html#method-i-selected%3F">#selected? &mdash; Watir::Option</a></li>
+		
+			<li><a href="Watir/SelectList.html#method-i-selected_options">#selected_options &mdash; Watir::SelectList</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-send_keys">#send_keys &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-send_keys">#send_keys &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/FileField.html#method-i-set">#set &mdash; Watir::FileField</a></li>
+		
+			<li><a href="Watir/TextField.html#method-i-set">#set &mdash; Watir::TextField</a></li>
+		
+			<li><a href="Watir/Hidden.html#method-i-set">#set &mdash; Watir::Hidden</a></li>
+		
+			<li><a href="Watir/CheckBox.html#method-i-set">#set &mdash; Watir::CheckBox</a></li>
+		
+			<li><a href="Watir/Radio.html#method-i-set">#set &mdash; Watir::Radio</a></li>
+		
+			<li><a href="Watir/PageContainer.html#method-i-set_container">#set_container &mdash; Watir::PageContainer</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-set_fast_speed">#set_fast_speed &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/FileField.html#method-i-set_file_name">#set_file_name &mdash; Watir::FileField</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-set_logger">#set_logger &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-set_slow_speed">#set_slow_speed &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-show_active">#show_active &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/Container.html#method-i-show_all_objects">#show_all_objects &mdash; Watir::Container</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-show_divs">#show_divs &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-show_forms">#show_forms &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/PageContainer.html#method-i-show_frames">#show_frames &mdash; Watir::PageContainer</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-show_images">#show_images &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-show_labels">#show_labels &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-show_links">#show_links &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-show_pres">#show_pres &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-show_spans">#show_spans &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-show_tables">#show_tables &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/ElementCollection.html#method-i-size">#size &mdash; Watir::ElementCollection</a></li>
+		
+			<li><a href="Watir/TimeKeeper.html#method-i-sleep">#sleep &mdash; Watir::TimeKeeper</a></li>
+		
+			<li><a href="Watir/Waiter.html#method-i-sleep">#sleep &mdash; Watir::Waiter</a></li>
+		
+			<li><a href="Watir/DragAndDropHelper.html#method-i-source_x_y">#source_x_y &mdash; Watir::DragAndDropHelper</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-spawned_no_wait_command">#spawned_no_wait_command &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-speed">#speed &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-speed%3D">#speed= &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/Link.html#method-i-src">#src &mdash; Watir::Link</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-status">#status &mdash; Watir::IE</a></li>
+		
+			<li><a href="IEProcess.html#method-i-stop">#stop &mdash; IEProcess</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-string_creator">#string_creator &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/TableContainer.html#method-i-strings">#strings &mdash; Watir::TableContainer</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-style">#style &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/Form.html#method-i-submit">#submit &mdash; Watir::Form</a></li>
+		
+			<li><a href="Watir/TableElementsContainer.html#method-i-table_elements">#table_elements &mdash; Watir::TableElementsContainer</a></li>
+		
+			<li><a href="Watir/Table.html#method-i-table_string_creator">#table_string_creator &mdash; Watir::Table</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-tag_name">#tag_name &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/Button.html#method-i-text">#text &mdash; Watir::Button</a></li>
+		
+			<li><a href="Watir/Option.html#method-i-text">#text &mdash; Watir::Option</a></li>
+		
+			<li><a href="Watir/JavascriptDialog.html#method-i-text">#text &mdash; Watir::JavascriptDialog</a></li>
+		
+			<li><a href="Watir/PageContainer.html#method-i-text">#text &mdash; Watir::PageContainer</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-text">#text &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/TextField.html#method-i-text_string_creator">#text_string_creator &mdash; Watir::TextField</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-title">#title &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/ModalDialog.html#method-i-title">#title &mdash; Watir::ModalDialog</a></li>
+		
+			<li><a href="Watir/ElementCollection.html#method-i-to_s">#to_s &mdash; Watir::ElementCollection</a></li>
+		
+			<li><a href="Watir/Link.html#method-i-to_s">#to_s &mdash; Watir::Link</a></li>
+		
+			<li><a href="Watir/Table.html#method-i-to_s">#to_s &mdash; Watir::Table</a></li>
+		
+			<li><a href="Watir/Image.html#method-i-to_s">#to_s &mdash; Watir::Image</a></li>
+		
+			<li><a href="Watir/TextField.html#method-i-to_s">#to_s &mdash; Watir::TextField</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-to_s">#to_s &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-to_subtype">#to_subtype &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/DragAndDropHelper.html#method-i-top_edge">#top_edge &mdash; Watir::DragAndDropHelper</a></li>
+		
+			<li><a href="Watir/DragAndDropHelper.html#method-i-top_edge_absolute">#top_edge_absolute &mdash; Watir::DragAndDropHelper</a></li>
+		
+			<li><a href="Watir/TextField.html#method-i-type_by_character">#type_by_character &mdash; Watir::TextField</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-type_keys">#type_keys &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/Locator.html#method-i-type_matches%3F">#type_matches? &mdash; Watir::Locator</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-typingspeed">#typingspeed &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/Wait.html#method-i-until">#until &mdash; Watir::Wait</a></li>
+		
+			<li><a href="Watir/PageContainer.html#method-i-url">#url &mdash; Watir::PageContainer</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-url">#url &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/Window.html#method-i-use">#use &mdash; Watir::Window</a></li>
+		
+			<li><a href="Watir/Button.html#method-i-value">#value &mdash; Watir::Button</a></li>
+		
+			<li><a href="Watir/FileField.html#method-i-value%3D">#value= &mdash; Watir::FileField</a></li>
+		
+			<li><a href="Watir/TextField.html#method-i-value%3D">#value= &mdash; Watir::TextField</a></li>
+		
+			<li><a href="Watir/Assertions.html#method-i-verify">#verify &mdash; Watir::Assertions</a></li>
+		
+			<li><a href="Watir/Assertions.html#method-i-verify_equal">#verify_equal &mdash; Watir::Assertions</a></li>
+		
+			<li><a href="Watir/Assertions.html#method-i-verify_match">#verify_match &mdash; Watir::Assertions</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-visible">#visible &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-visible%3D">#visible= &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/Element.html#method-i-visible%3F">#visible? &mdash; Watir::Element</a></li>
+		
+			<li><a href="Watir/Hidden.html#method-i-visible%3F">#visible? &mdash; Watir::Hidden</a></li>
+		
+			<li><a href="Watir/Container.html#method-i-wait">#wait &mdash; Watir::Container</a></li>
+		
+			<li><a href="Watir/ModalDialog.html#method-i-wait">#wait &mdash; Watir::ModalDialog</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-wait">#wait &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/Waiter.html#method-i-wait_until">#wait_until &mdash; Watir::Waiter</a></li>
+		
+			<li><a href="Watir.html#method-i-wait_until">#wait_until &mdash; Watir</a></li>
+		
+			<li><a href="Watir/WaitHelper.html#method-i-wait_until">#wait_until &mdash; Watir::WaitHelper</a></li>
+		
+			<li><a href="Watir/ElementExtensions.html#method-i-wait_until_present">#wait_until_present &mdash; Watir::ElementExtensions</a></li>
+		
+			<li><a href="Watir/WaitHelper.html#method-i-wait_while">#wait_while &mdash; Watir::WaitHelper</a></li>
+		
+			<li><a href="Watir/ElementExtensions.html#method-i-wait_while_present">#wait_while_present &mdash; Watir::ElementExtensions</a></li>
+		
+			<li><a href="Watir/ElementExtensions.html#method-i-when_present">#when_present &mdash; Watir::ElementExtensions</a></li>
+		
+			<li><a href="Watir/Wait.html#method-i-while">#while &mdash; Watir::Wait</a></li>
+		
+			<li><a href="Watir/Image.html#method-i-width">#width &mdash; Watir::Image</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-window">#window &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/IE/Process.html#method-i-window">#window &mdash; Watir::IE::Process</a></li>
+		
+			<li><a href="Watir/IE.html#method-i-windows">#windows &mdash; Watir::IE</a></li>
+		
+			<li><a href="Watir/XpathLocator.html#method-i-xmlparser_document_object">#xmlparser_document_object &mdash; Watir::XpathLocator</a></li>
+		
+	</ul>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+</body>
+</html>

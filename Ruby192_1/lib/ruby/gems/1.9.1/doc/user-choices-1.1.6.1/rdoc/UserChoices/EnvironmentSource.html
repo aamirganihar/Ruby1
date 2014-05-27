@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: UserChoices::EnvironmentSource</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/user-choices/sources_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/user-choices/sources.rb">lib/user-choices/sources.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="AbstractSource.html">UserChoices::AbstractSource</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-mapping">#mapping</a></li>
+					
+					<li><a href="#method-i-with_prefix">#with_prefix</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../History_txt.html">History.txt</a></li>
+				
+					<li class="file"><a href="../LICENSE_txt.html">LICENSE.txt</a></li>
+				
+					<li class="file"><a href="../Manifest_txt.html">Manifest.txt</a></li>
+				
+					<li class="file"><a href="../README_txt.html">README.txt</a></li>
+				
+					<li class="file"><a href="../examples/older/README_txt.html">README.txt</a></li>
+				
+					<li class="file"><a href="../examples/tutorial/css/LICENSE_txt.html">LICENSE.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../UserChoices/ChoicesBuilder.html">UserChoices::ChoicesBuilder</a></li>
+				
+					<li><a href="../UserChoices/Command.html">UserChoices::Command</a></li>
+				
+					<li><a href="../UserChoices/CommandLineSource.html">UserChoices::CommandLineSource</a></li>
+				
+					<li><a href="../UserChoices/EnvironmentSource.html">UserChoices::EnvironmentSource</a></li>
+				
+					<li><a href="../UserChoices/PosixCommandLineSource.html">UserChoices::PosixCommandLineSource</a></li>
+				
+					<li><a href="../UserChoices/XmlConfigFileSource.html">UserChoices::XmlConfigFileSource</a></li>
+				
+					<li><a href="../UserChoices/YamlConfigFileSource.html">UserChoices::YamlConfigFileSource</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">UserChoices::EnvironmentSource</h1>
+
+		<div id="description">
+			<p>
+Describe the environment as a source of choices. 
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="mapping-method" class="method-detail ">
+				<a name="method-i-mapping"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">mapping</span><span
+						class="method-args">(map)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Some environment variables have names you don&#8217;t like. For example,
+$HOME might be annoying because of the uppercase. Also, if most of your
+program&#8217;s  environment variables have some prefix (see <a
+href="EnvironmentSource.html#method-i-with_prefix">with_prefix</a>) but you
+also want to use $HOME, you need a way to do that. You can satisfy both
+desires with 
+</p>
+<pre>
+     EnvironmentSource.new.with_prefix(&quot;my_&quot;).mapping(:home =&gt; &quot;HOME&quot;)</pre>
+					
+
+					
+					<div class="method-source-code"
+						id="mapping-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/user-choices/sources.rb, line 139</span>
+139:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mapping</span>(<span class="ruby-identifier">map</span>)
+140:       <span class="ruby-ivar">@external_names</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-identifier">map</span>)
+141:       <span class="ruby-keyword kw">self</span>
+142:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="with-prefix-method" class="method-detail ">
+				<a name="method-i-with_prefix"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">with_prefix</span><span
+						class="method-args">(prefix)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Environment variables beginning with <em>prefix</em> (a string) are
+considered to be user choices relevant to this script. Everything after the
+prefix names a choice (that is, a symbol). Dashes are converted to
+underscores. Examples:
+</p>
+<ul>
+<li><p>
+Environment variable <tt>prefix-my-choice</tt> with prefix
+<tt>&quot;prefix-&quot; is choice &lt;tt&gt;:my_choice</tt>.
+</p>
+</li>
+<li><p>
+Environment variable <tt>PREFIX_FOO</tt> with prefix
+<tt>&quot;PREFIX_&quot; is choice &lt;tt&gt;:FOO</tt>
+</p>
+</li>
+</ul>
+<p>
+If you want an array of strings, separate the values by commas:
+ENV_VAR=a,b,c There&#8217;s currently no way to escape a comma and no
+cleverness about quotes or whitespace.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="with-prefix-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/user-choices/sources.rb, line 122</span>
+122:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">with_prefix</span>(<span class="ruby-identifier">prefix</span>)
+123:       <span class="ruby-identifier">matches</span> = <span class="ruby-constant">ENV</span>.<span class="ruby-identifier">collect</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span> <span class="ruby-identifier">env_var</span>, <span class="ruby-identifier">ignored_value</span> <span class="ruby-operator">|</span>
+124:         <span class="ruby-keyword kw">if</span> <span class="ruby-node">/^#{prefix}(.+)/</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">env_var</span>
+125:           [<span class="ruby-node">$1</span>.<span class="ruby-identifier">to_inputable_sym</span>, <span class="ruby-identifier">env_var</span>]
+126:         <span class="ruby-keyword kw">end</span>
+127:       <span class="ruby-keyword kw">end</span>
+128:       <span class="ruby-ivar">@external_names</span>.<span class="ruby-identifier">merge!</span>(<span class="ruby-constant">Hash</span>[*<span class="ruby-identifier">matches</span>.<span class="ruby-identifier">compact</span>.<span class="ruby-identifier">flatten</span>])
+129:       <span class="ruby-keyword kw">self</span>
+130:     <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

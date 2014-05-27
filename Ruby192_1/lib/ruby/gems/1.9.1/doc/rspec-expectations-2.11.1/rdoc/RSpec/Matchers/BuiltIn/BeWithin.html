@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+
+	<title>Class: RSpec::Matchers::BuiltIn::BeWithin</title>
+
+	<link rel="stylesheet" href="../../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../../index.html">Home</a>
+          <a href="../../../index.html#classes">Classes</a>
+          <a href="../../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../../lib/rspec/matchers/built_in/be_within_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/rspec/matchers/built_in/be_within.rb">lib/rspec/matchers/built_in/be_within.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-description">#description</a></li>
+					
+					<li><a href="#method-i-failure_message_for_should">#failure_message_for_should</a></li>
+					
+					<li><a href="#method-i-failure_message_for_should_not">#failure_message_for_should_not</a></li>
+					
+					<li><a href="#method-i-matches%3F">#matches?</a></li>
+					
+					<li><a href="#method-i-needs_expected">#needs_expected</a></li>
+					
+					<li><a href="#method-i-needs_subtractable">#needs_subtractable</a></li>
+					
+					<li><a href="#method-i-of">#of</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../../RSpec.html">RSpec</a></li>
+				
+					<li><a href="../../../RSpec/Expectations.html">RSpec::Expectations</a></li>
+				
+					<li><a href="../../../RSpec/Expectations/DeprecatedConstants.html">RSpec::Expectations::DeprecatedConstants</a></li>
+				
+					<li><a href="../../../RSpec/Expectations/Differ.html">RSpec::Expectations::Differ</a></li>
+				
+					<li><a href="../../../RSpec/Expectations/ExpectationNotMetError.html">RSpec::Expectations::ExpectationNotMetError</a></li>
+				
+					<li><a href="../../../RSpec/Expectations/ExpectationTarget.html">RSpec::Expectations::ExpectationTarget</a></li>
+				
+					<li><a href="../../../RSpec/Expectations/NegativeExpectationHandler.html">RSpec::Expectations::NegativeExpectationHandler</a></li>
+				
+					<li><a href="../../../RSpec/Expectations/PositiveExpectationHandler.html">RSpec::Expectations::PositiveExpectationHandler</a></li>
+				
+					<li><a href="../../../RSpec/Expectations/Syntax.html">RSpec::Expectations::Syntax</a></li>
+				
+					<li><a href="../../../RSpec/Expectations/Version.html">RSpec::Expectations::Version</a></li>
+				
+					<li><a href="../../../RSpec/Matchers.html">RSpec::Matchers</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn.html">RSpec::Matchers::BuiltIn</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn/BaseMatcher.html">RSpec::Matchers::BuiltIn::BaseMatcher</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn/Be.html">RSpec::Matchers::BuiltIn::Be</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn/BeAKindOf.html">RSpec::Matchers::BuiltIn::BeAKindOf</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn/BeAnInstanceOf.html">RSpec::Matchers::BuiltIn::BeAnInstanceOf</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn/BeComparedTo.html">RSpec::Matchers::BuiltIn::BeComparedTo</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn/BeFalse.html">RSpec::Matchers::BuiltIn::BeFalse</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn/BeNil.html">RSpec::Matchers::BuiltIn::BeNil</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn/BePredicate.html">RSpec::Matchers::BuiltIn::BePredicate</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn/BeTrue.html">RSpec::Matchers::BuiltIn::BeTrue</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn/BeWithin.html">RSpec::Matchers::BuiltIn::BeWithin</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn/Change.html">RSpec::Matchers::BuiltIn::Change</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn/Cover.html">RSpec::Matchers::BuiltIn::Cover</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn/EndWith.html">RSpec::Matchers::BuiltIn::EndWith</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn/Eq.html">RSpec::Matchers::BuiltIn::Eq</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn/Eql.html">RSpec::Matchers::BuiltIn::Eql</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn/Equal.html">RSpec::Matchers::BuiltIn::Equal</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn/Exist.html">RSpec::Matchers::BuiltIn::Exist</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn/Has.html">RSpec::Matchers::BuiltIn::Has</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn/Have.html">RSpec::Matchers::BuiltIn::Have</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn/Include.html">RSpec::Matchers::BuiltIn::Include</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn/Match.html">RSpec::Matchers::BuiltIn::Match</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn/MatchArray.html">RSpec::Matchers::BuiltIn::MatchArray</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn/NegativeOperatorMatcher.html">RSpec::Matchers::BuiltIn::NegativeOperatorMatcher</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn/PositiveOperatorMatcher.html">RSpec::Matchers::BuiltIn::PositiveOperatorMatcher</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn/RaiseError.html">RSpec::Matchers::BuiltIn::RaiseError</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn/RespondTo.html">RSpec::Matchers::BuiltIn::RespondTo</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn/Satisfy.html">RSpec::Matchers::BuiltIn::Satisfy</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn/StartAndEndWith.html">RSpec::Matchers::BuiltIn::StartAndEndWith</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn/StartWith.html">RSpec::Matchers::BuiltIn::StartWith</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn/ThrowSymbol.html">RSpec::Matchers::BuiltIn::ThrowSymbol</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn/YieldControl.html">RSpec::Matchers::BuiltIn::YieldControl</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn/YieldProbe.html">RSpec::Matchers::BuiltIn::YieldProbe</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn/YieldSuccessiveArgs.html">RSpec::Matchers::BuiltIn::YieldSuccessiveArgs</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn/YieldWithArgs.html">RSpec::Matchers::BuiltIn::YieldWithArgs</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/BuiltIn/YieldWithNoArgs.html">RSpec::Matchers::BuiltIn::YieldWithNoArgs</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/Configuration.html">RSpec::Matchers::Configuration</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/DSL.html">RSpec::Matchers::DSL</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/DSL/Matcher.html">RSpec::Matchers::DSL::Matcher</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/Extensions.html">RSpec::Matchers::Extensions</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/Extensions/InstanceEvalWithArgs.html">RSpec::Matchers::Extensions::InstanceEvalWithArgs</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/OperatorMatcher.html">RSpec::Matchers::OperatorMatcher</a></li>
+				
+					<li><a href="../../../RSpec/Matchers/Pretty.html">RSpec::Matchers::Pretty</a></li>
+				
+					<li><a href="../../../Array.html">Array</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">RSpec::Matchers::BuiltIn::BeWithin</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(delta)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+   <span class="ruby-comment cmt"># File lib/rspec/matchers/built_in/be_within.rb, line 5</span>
+5:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">delta</span>)
+6:           <span class="ruby-ivar">@delta</span> = <span class="ruby-identifier">delta</span>
+7:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="description-method" class="method-detail ">
+				<a name="method-i-description"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">description</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="description-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rspec/matchers/built_in/be_within.rb, line 29</span>
+29:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">description</span>
+30:           <span class="ruby-node">&quot;be within #{@delta} of #{@expected}&quot;</span>
+31:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="failure-message-for-should-method" class="method-detail ">
+				<a name="method-i-failure_message_for_should"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">failure_message_for_should</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="failure-message-for-should-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rspec/matchers/built_in/be_within.rb, line 21</span>
+21:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">failure_message_for_should</span>
+22:           <span class="ruby-node">&quot;expected #{@actual} to #{description}&quot;</span>
+23:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="failure-message-for-should-not-method" class="method-detail ">
+				<a name="method-i-failure_message_for_should_not"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">failure_message_for_should_not</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="failure-message-for-should-not-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rspec/matchers/built_in/be_within.rb, line 25</span>
+25:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">failure_message_for_should_not</span>
+26:           <span class="ruby-node">&quot;expected #{@actual} not to #{description}&quot;</span>
+27:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="matches--method" class="method-detail ">
+				<a name="method-i-matches%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">matches?</span><span
+						class="method-args">(actual)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="matches--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rspec/matchers/built_in/be_within.rb, line 9</span>
+ 9:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">matches?</span>(<span class="ruby-identifier">actual</span>)
+10:           <span class="ruby-ivar">@actual</span> = <span class="ruby-identifier">actual</span>
+11:           <span class="ruby-identifier">raise</span> <span class="ruby-identifier">needs_expected</span>     <span class="ruby-keyword kw">unless</span> <span class="ruby-keyword kw">defined?</span> <span class="ruby-ivar">@expected</span> 
+12:           <span class="ruby-identifier">raise</span> <span class="ruby-identifier">needs_subtractable</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@actual</span>.<span class="ruby-identifier">respond_to?</span> <span class="ruby-value">:-</span>
+13:           (<span class="ruby-ivar">@actual</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@expected</span>).<span class="ruby-identifier">abs</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-ivar">@delta</span>
+14:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="of-method" class="method-detail ">
+				<a name="method-i-of"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">of</span><span
+						class="method-args">(expected)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="of-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rspec/matchers/built_in/be_within.rb, line 16</span>
+16:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">of</span>(<span class="ruby-identifier">expected</span>)
+17:           <span class="ruby-ivar">@expected</span> = <span class="ruby-identifier">expected</span>
+18:           <span class="ruby-keyword kw">self</span>
+19:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="needs-expected-method" class="method-detail ">
+				<a name="method-i-needs_expected"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">needs_expected</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="needs-expected-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rspec/matchers/built_in/be_within.rb, line 39</span>
+39:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">needs_expected</span>
+40:           <span class="ruby-constant">ArgumentError</span>.<span class="ruby-identifier">new</span> <span class="ruby-node">&quot;You must set an expected value using #of: be_within(#{@delta}).of(expected_value)&quot;</span>
+41:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="needs-subtractable-method" class="method-detail ">
+				<a name="method-i-needs_subtractable"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">needs_subtractable</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="needs-subtractable-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/rspec/matchers/built_in/be_within.rb, line 35</span>
+35:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">needs_subtractable</span>
+36:           <span class="ruby-constant">ArgumentError</span>.<span class="ruby-identifier">new</span> <span class="ruby-node">&quot;The actual value (#{@actual.inspect}) must respond to `-`&quot;</span>
+37:         <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

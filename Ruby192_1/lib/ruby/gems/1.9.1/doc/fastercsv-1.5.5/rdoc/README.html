@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>File: README [fastercsv-1.5.5 Documentation]</title>
+
+	<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+</head>
+
+<body class="file">
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="./AUTHORS.html">AUTHORS</a></li>
+				
+					<li class="file"><a href="./CHANGELOG.html">CHANGELOG</a></li>
+				
+					<li class="file"><a href="./COPYING.html">COPYING</a></li>
+				
+					<li class="file"><a href="./INSTALL.html">INSTALL</a></li>
+				
+					<li class="file"><a href="./LICENSE.html">LICENSE</a></li>
+				
+					<li class="file"><a href="./README.html">README</a></li>
+				
+					<li class="file"><a href="./TODO.html">TODO</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./FasterCSV.html">FasterCSV</a></li>
+				
+					<li><a href="./FasterCSV/MalformedCSVError.html">FasterCSV::MalformedCSVError</a></li>
+				
+					<li><a href="./FasterCSV/Row.html">FasterCSV::Row</a></li>
+				
+					<li><a href="./FasterCSV/Table.html">FasterCSV::Table</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1>Read Me</h1>
+<p>
+by James Edward Gray II
+</p>
+<h2>Description</h2>
+<p>
+Welcome to <a href="FasterCSV.html">FasterCSV</a>.
+</p>
+<p>
+<a href="FasterCSV.html">FasterCSV</a> is intended as a replacement to
+Ruby&#8217;s standard CSV library.  It was designed to address concerns
+users of that library had and it has three primary goals:
+</p>
+<ol>
+<li><p>
+Be significantly faster than CSV while remaining a pure Ruby library.
+</p>
+</li>
+<li><p>
+Use a smaller and easier to maintain code base.  (<a
+href="FasterCSV.html">FasterCSV</a> is larger now,  but considerably richer
+in features.  The parsing core remains quite small.)
+</p>
+</li>
+<li><p>
+Improve on the CSV interface.
+</p>
+</li>
+</ol>
+<p>
+Obviously, the last one is subjective.  If you love CSV&#8217;s interface,
+odds are good this one won&#8217;t suit you.  I did try to defer to that
+interface whenever I didn&#8217;t have a compelling reason to change it
+though, so hopefully this won&#8217;t be too radically different.
+</p>
+<h2>What&#8217;s Different From CSV?</h2>
+<p>
+I&#8217;m sure I&#8217;ll miss something, but I&#8217;ll try to mention
+most of the major differences I am aware of, to help others quickly get up
+to speed:
+</p>
+<h3>CSV Parsing</h3>
+<ul>
+<li><p>
+<a href="FasterCSV.html">FasterCSV</a> has a stricter parser and will throw
+MalformedCSVErrors on problematic data.
+</p>
+</li>
+<li><p>
+<a href="FasterCSV.html">FasterCSV</a> has a less liberal idea of a line
+ending than CSV.  What you set as the <tt>:row_sep</tt> is law.
+</p>
+</li>
+<li><p>
+CSV returns empty lines as <tt>[nil]</tt>.  <a
+href="FasterCSV.html">FasterCSV</a> calls them <tt>[]</tt>.
+</p>
+</li>
+<li><p>
+<a href="FasterCSV.html">FasterCSV</a> has a much faster parser.
+</p>
+</li>
+</ul>
+<h3>Interface</h3>
+<ul>
+<li><p>
+<a href="FasterCSV.html">FasterCSV</a> uses Hash-style parameters to set
+options.
+</p>
+</li>
+<li><p>
+<a href="FasterCSV.html">FasterCSV</a> does not have generate_row() or
+parse_row() from CSV.
+</p>
+</li>
+<li><p>
+<a href="FasterCSV.html">FasterCSV</a> does not have CSV&#8217;s Reader and
+Writer classes.
+</p>
+</li>
+<li><p>
+<a href="FasterCSV.html#method-c-open">FasterCSV::open()</a> is more like
+Ruby&#8217;s open() than CSV::open().
+</p>
+</li>
+<li><p>
+<a href="FasterCSV.html">FasterCSV</a> objects support most standard IO
+methods.
+</p>
+</li>
+<li><p>
+<a href="FasterCSV.html">FasterCSV</a> has a new() method used to wrap
+objects like String and IO for reading and writing.
+</p>
+</li>
+<li><p>
+<a href="FasterCSV.html#method-c-generate">FasterCSV::generate()</a> is
+different from CSV::generate().
+</p>
+</li>
+<li><p>
+<a href="FasterCSV.html">FasterCSV</a> does not support partial reads.  It
+works line-by-line.
+</p>
+</li>
+<li><p>
+<a href="FasterCSV.html">FasterCSV</a> does not allow the instance methods
+to override the separators for performance reasons.  They must be set in
+the constructor.
+</p>
+</li>
+</ul>
+<p>
+If you use this library and find yourself missing any functionality I have
+trimmed, please <a href="mailto:james@grayproductions.net">let me know</a>.
+</p>
+<h2>Documentation</h2>
+<p>
+See <a href="FasterCSV.html">FasterCSV</a> for documentation.
+</p>
+<h2>Installing</h2>
+<p>
+See the <a href="INSTALL.html">INSTALL</a> file for instructions.
+</p>
+<h2>What is CSV, really?</h2>
+<p>
+<a href="FasterCSV.html">FasterCSV</a> maintains a pretty strict definition
+of CSV taken directly from <a
+href="http://www.ietf.org/rfc/rfc4180.txt">the RFC</a>.  I relax the rules
+in only one place and that is to make using this library easier.  <a
+href="FasterCSV.html">FasterCSV</a> will parse all valid CSV.
+</p>
+<p>
+What you don&#8217;t want to do is feed <a
+href="FasterCSV.html">FasterCSV</a> invalid CSV.  Because of the way the
+CSV format works, it&#8217;s common for a parser to need to read until the
+end of the file to be sure a field is invalid.  This eats a lot of time and
+memory.
+</p>
+<p>
+Luckily, when working with invalid CSV, Ruby&#8217;s built-in methods will
+almost always be superior in every way.  For example, parsing non-quoted
+fields is as easy as:
+</p>
+<pre>
+  data.split(&quot;,&quot;)
+</pre>
+<h2>Questions and/or Comments</h2>
+<p>
+Feel free to email <a href="mailto:james@grayproductions.net">James Edward
+Gray II</a> with any questions.
+</p>
+
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+</body>
+</html>
+

@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: String</title>
+
+	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="./lib/s4t-utils/ruby-extensions_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/s4t-utils/ruby-extensions.rb">lib/s4t-utils/ruby-extensions.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-has_exact_prefix%3F">#has_exact_prefix?</a></li>
+					
+					<li><a href="#method-i-indent_by">#indent_by</a></li>
+					
+					<li><a href="#method-i-without_pretty_indentation">#without_pretty_indentation</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="./History_txt.html">History.txt</a></li>
+				
+					<li class="file"><a href="./LICENSE_txt.html">LICENSE.txt</a></li>
+				
+					<li class="file"><a href="./Manifest_txt.html">Manifest.txt</a></li>
+				
+					<li class="file"><a href="./NOTES_txt.html">NOTES.txt</a></li>
+				
+					<li class="file"><a href="./README_txt.html">README.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./S4tUtils.html">S4tUtils</a></li>
+				
+					<li><a href="./S4tUtils/ArgForwarder.html">S4tUtils::ArgForwarder</a></li>
+				
+					<li><a href="./Test.html">Test</a></li>
+				
+					<li><a href="./Test/Unit.html">Test::Unit</a></li>
+				
+					<li><a href="./Test/Unit/Assertions.html">Test::Unit::Assertions</a></li>
+				
+					<li><a href="./HoeLike.html">HoeLike</a></li>
+				
+					<li><a href="./String.html">String</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">String</h1>
+
+		<div id="description">
+			<p>
+After some time trying to write libraries that used facets or extensions
+and didn&#8217;t conflict with other libraries that used (for example)
+active_support,  I give up. I&#8217;m going to copy the methods I need,
+rename them to something so  bad there&#8217;ll never be a conflict, and
+see if that&#8217;s more painful.
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="has-exact-prefix--method" class="method-detail ">
+				<a name="method-i-has_exact_prefix%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">has_exact_prefix?</span><span
+						class="method-args">(prefix)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+What everyone calls starts_with?
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="has-exact-prefix--source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/s4t-utils/ruby-extensions.rb, line 12</span>
+12:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">has_exact_prefix?</span>(<span class="ruby-identifier">prefix</span>)
+13:    <span class="ruby-identifier">index</span>(<span class="ruby-identifier">prefix</span>) <span class="ruby-operator">==</span> <span class="ruby-value">0</span>
+14:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="indent-by-method" class="method-detail ">
+				<a name="method-i-indent_by"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">indent_by</span><span
+						class="method-args">(n)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Indents the string <tt>n</tt> spaces. Taken from extensions
+(extensions.rubyforge.org), except that this version doesn&#8217;t take a
+negative argument.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="indent-by-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/s4t-utils/ruby-extensions.rb, line 62</span>
+62:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">indent_by</span>(<span class="ruby-identifier">n</span>)
+63:     <span class="ruby-identifier">n</span> = <span class="ruby-identifier">n</span>.<span class="ruby-identifier">to_int</span>
+64:     <span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/^/</span>, <span class="ruby-value str">&quot; &quot;</span>*<span class="ruby-identifier">n</span>)
+65:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="without-pretty-indentation-method" class="method-detail ">
+				<a name="method-i-without_pretty_indentation"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">without_pretty_indentation</span><span
+						class="method-args">(margin=nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Copied from the extensions library (<a
+href="http://extensions.rubyforge.org">extensions.rubyforge.org</a>)
+</p>
+<p>
+Trims a string:
+</p>
+<ul>
+<li><p>
+removes one initial blank line
+</p>
+</li>
+<li><p>
+removes trailing spaces on each line
+</p>
+</li>
+<li><p>
+if <tt>margin</tt> is given, removes initial spaces up to and including the
+margin on each line, plus one space
+</p>
+</li>
+</ul>
+<p>
+This is designed specifically for working with inline documents.
+Here-documents are great, except they tend to go against the indentation of
+your code.  This method allows a convenient way of using %{}-style
+documents.  For instance:
+</p>
+<pre>
+  USAGE = %{
+    | usage: prog [-o dir] -h file...
+    |   where
+    |     -o dir         outputs to DIR
+    |     -h             prints this message
+  }.without_pretty_indentation(&quot;|&quot;)
+
+  # USAGE == &quot;usage: prog [-o dir] -h file...\n  where&quot;...
+  # (note single space to right of margin is deleted)
+</pre>
+<p>
+Note carefully that if no margin string is given, then there is no clipping
+at the beginning of each line and your string will remain indented.  
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="without-pretty-indentation-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/s4t-utils/ruby-extensions.rb, line 42</span>
+42:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">without_pretty_indentation</span>(<span class="ruby-identifier">margin</span>=<span class="ruby-keyword kw">nil</span>)
+43:     <span class="ruby-identifier">s</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">dup</span>
+44:     <span class="ruby-comment cmt"># Remove initial blank line.</span>
+45:     <span class="ruby-identifier">s</span>.<span class="ruby-identifier">sub!</span>(<span class="ruby-regexp re">/\A[ \t]*\n/</span>, <span class="ruby-value str">&quot;&quot;</span>)
+46:     <span class="ruby-comment cmt"># Get rid of the margin, if it's specified.</span>
+47:     <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">margin</span>.<span class="ruby-identifier">nil?</span>
+48:       <span class="ruby-identifier">margin_re</span> = <span class="ruby-constant">Regexp</span>.<span class="ruby-identifier">escape</span>(<span class="ruby-identifier">margin</span> <span class="ruby-operator">||</span> <span class="ruby-value str">&quot;&quot;</span>)
+49:       <span class="ruby-identifier">margin_re</span> = <span class="ruby-node">/^[ \t]*#{margin_re} ?/</span>
+50:       <span class="ruby-identifier">s</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-identifier">margin_re</span>, <span class="ruby-value str">&quot;&quot;</span>)
+51:     <span class="ruby-keyword kw">end</span>
+52:     <span class="ruby-comment cmt"># Remove trailing whitespace on each line</span>
+53:     <span class="ruby-identifier">s</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-regexp re">/[ \t]+$/</span>, <span class="ruby-value str">&quot;&quot;</span>)
+54:     <span class="ruby-identifier">s</span>
+55:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

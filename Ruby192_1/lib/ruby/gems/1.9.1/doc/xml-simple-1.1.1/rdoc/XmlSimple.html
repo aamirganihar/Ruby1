@@ -1,0 +1,2240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: XmlSimple</title>
+
+	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="./lib/xmlsimple_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/xmlsimple.rb">lib/xmlsimple.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+			<div id="namespace-list-section" class="section">
+				<h3 class="section-header">Namespace</h3>
+				<ul class="link-list">
+					
+					<li><span class="type">CLASS</span> <a href="XmlSimple/Cache.html">XmlSimple::Cache</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-c-xml_in">::xml_in</a></li>
+					
+					<li><a href="#method-c-xml_out">::xml_out</a></li>
+					
+					<li><a href="#method-i-collapse">#collapse</a></li>
+					
+					<li><a href="#method-i-collapse_content">#collapse_content</a></li>
+					
+					<li><a href="#method-i-collapse_text_node">#collapse_text_node</a></li>
+					
+					<li><a href="#method-i-empty">#empty</a></li>
+					
+					<li><a href="#method-i-escape_value">#escape_value</a></li>
+					
+					<li><a href="#method-i-find_xml_file">#find_xml_file</a></li>
+					
+					<li><a href="#method-i-fold_array">#fold_array</a></li>
+					
+					<li><a href="#method-i-fold_array_by_name">#fold_array_by_name</a></li>
+					
+					<li><a href="#method-i-fold_arrays">#fold_arrays</a></li>
+					
+					<li><a href="#method-i-force_array%3F">#force_array?</a></li>
+					
+					<li><a href="#method-i-get_attributes">#get_attributes</a></li>
+					
+					<li><a href="#method-i-get_var">#get_var</a></li>
+					
+					<li><a href="#method-i-handle_options">#handle_options</a></li>
+					
+					<li><a href="#method-i-has_mixed_content%3F">#has_mixed_content?</a></li>
+					
+					<li><a href="#method-i-hash_to_array">#hash_to_array</a></li>
+					
+					<li><a href="#method-i-load_xml_file">#load_xml_file</a></li>
+					
+					<li><a href="#method-i-merge">#merge</a></li>
+					
+					<li><a href="#method-i-node_to_text">#node_to_text</a></li>
+					
+					<li><a href="#method-i-normalise_space">#normalise_space</a></li>
+					
+					<li><a href="#method-i-normalize_option_names">#normalize_option_names</a></li>
+					
+					<li><a href="#method-i-parse">#parse</a></li>
+					
+					<li><a href="#method-i-put_into_cache">#put_into_cache</a></li>
+					
+					<li><a href="#method-i-scalar">#scalar</a></li>
+					
+					<li><a href="#method-i-set_var">#set_var</a></li>
+					
+					<li><a href="#method-i-value_to_xml">#value_to_xml</a></li>
+					
+					<li><a href="#method-i-xml_in">#xml_in</a></li>
+					
+					<li><a href="#method-i-xml_out">#xml_out</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+			<div id="includes-section" class="section">
+				<h3 class="section-header">Included Modules</h3>
+				<ul class="link-list">
+				
+				
+					<li><span class="include">REXML</span></li>
+				
+				
+				</ul>
+			</div>
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./XmlSimple.html">XmlSimple</a></li>
+				
+					<li><a href="./XmlSimple/Cache.html">XmlSimple::Cache</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">XmlSimple</h1>
+
+		<div id="description">
+			<p>
+Easy API to maintain XML (especially configuration files).
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="KNOWN_OPTIONS">KNOWN_OPTIONS</a></dt>
+				
+				<dd class="description"><p>
+Declare options that are valid for <a
+href="XmlSimple.html#method-i-xml_in">xml_in</a> and xml_out.
+</p></dd>
+				
+			
+				<dt><a name="DEF_KEY_ATTRIBUTES">DEF_KEY_ATTRIBUTES</a></dt>
+				
+				<dd class="description"><p>
+Define some reasonable defaults.
+</p></dd>
+				
+			
+				<dt><a name="DEF_ROOT_NAME">DEF_ROOT_NAME</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DEF_CONTENT_KEY">DEF_CONTENT_KEY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DEF_XML_DECLARATION">DEF_XML_DECLARATION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DEF_ANONYMOUS_TAG">DEF_ANONYMOUS_TAG</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DEF_FORCE_ARRAY">DEF_FORCE_ARRAY</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DEF_INDENTATION">DEF_INDENTATION</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="DEF_KEY_TO_SYMBOL">DEF_KEY_TO_SYMBOL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(defaults = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Creates and intializes a new <a href="XmlSimple.html">XmlSimple</a> object.
+</p>
+<table>
+<tr><td valign="top">defaults</td><td><p>
+Default values for options.
+</p>
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/xmlsimple.rb, line 128</span>
+128:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">defaults</span> = <span class="ruby-keyword kw">nil</span>)
+129:     <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">defaults</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">defaults</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+130:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;Options have to be a Hash.&quot;</span>
+131:     <span class="ruby-keyword kw">end</span>
+132:     <span class="ruby-ivar">@default_options</span> = <span class="ruby-identifier">normalize_option_names</span>(<span class="ruby-identifier">defaults</span>, (<span class="ruby-constant">KNOWN_OPTIONS</span>[<span class="ruby-value str">'in'</span>] <span class="ruby-operator">+</span> <span class="ruby-constant">KNOWN_OPTIONS</span>[<span class="ruby-value str">'out'</span>]).<span class="ruby-identifier">uniq</span>)
+133:     <span class="ruby-ivar">@options</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+134:     <span class="ruby-ivar">@_var_values</span> = <span class="ruby-keyword kw">nil</span>
+135:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="xml-in-method" class="method-detail ">
+				<a name="method-c-xml_in"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">xml_in</span><span
+						class="method-args">(string = nil, options = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+This is the functional version of the instance method xml_in.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="xml-in-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/xmlsimple.rb, line 201</span>
+201:   <span class="ruby-keyword kw">def</span> <span class="ruby-constant">XmlSimple</span>.<span class="ruby-identifier">xml_in</span>(<span class="ruby-identifier">string</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">options</span> = <span class="ruby-keyword kw">nil</span>)
+202:     <span class="ruby-identifier">xml_simple</span> = <span class="ruby-constant">XmlSimple</span>.<span class="ruby-identifier">new</span>
+203:     <span class="ruby-identifier">xml_simple</span>.<span class="ruby-identifier">xml_in</span>(<span class="ruby-identifier">string</span>, <span class="ruby-identifier">options</span>)
+204:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="xml-out-method" class="method-detail ">
+				<a name="method-c-xml_out"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">xml_out</span><span
+						class="method-args">(hash, options = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+This is the functional version of the instance method xml_out.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="xml-out-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/xmlsimple.rb, line 257</span>
+257:   <span class="ruby-keyword kw">def</span> <span class="ruby-constant">XmlSimple</span>.<span class="ruby-identifier">xml_out</span>(<span class="ruby-identifier">hash</span>, <span class="ruby-identifier">options</span> = <span class="ruby-keyword kw">nil</span>)
+258:     <span class="ruby-identifier">xml_simple</span> = <span class="ruby-constant">XmlSimple</span>.<span class="ruby-identifier">new</span>
+259:     <span class="ruby-identifier">xml_simple</span>.<span class="ruby-identifier">xml_out</span>(<span class="ruby-identifier">hash</span>, <span class="ruby-identifier">options</span>)
+260:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="xml-in-method" class="method-detail ">
+				<a name="method-i-xml_in"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">xml_in</span><span
+						class="method-args">(string = nil, options = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Converts an XML document in the same way as the Perl module XML::Simple.
+</p>
+<table>
+<tr><td valign="top">string</td><td><p>
+XML source. Could be one of the following:
+</p>
+<ul>
+<li><p>
+nil: Tries to load and parse &#8217;<scriptname>.xml&#8217;.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+filename: Tries to load and parse filename.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+IO object: Reads from object until EOF is detected and parses result.
+</p>
+</li>
+</ul>
+<ul>
+<li><p>
+XML string: Parses string.
+</p>
+</li>
+</ul>
+</td></tr>
+<tr><td valign="top">options</td><td><p>
+Options to be used.
+</p>
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="xml-in-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/xmlsimple.rb, line 149</span>
+149:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">xml_in</span>(<span class="ruby-identifier">string</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">options</span> = <span class="ruby-keyword kw">nil</span>)
+150:     <span class="ruby-identifier">handle_options</span>(<span class="ruby-value str">'in'</span>, <span class="ruby-identifier">options</span>)
+151: 
+152:     <span class="ruby-comment cmt"># If no XML string or filename was supplied look for scriptname.xml.</span>
+153:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">string</span>.<span class="ruby-identifier">nil?</span>
+154:       <span class="ruby-identifier">string</span> = <span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-identifier">basename</span>(<span class="ruby-identifier">$0</span>).<span class="ruby-identifier">dup</span>
+155:       <span class="ruby-identifier">string</span>.<span class="ruby-identifier">sub!</span>(<span class="ruby-regexp re">/\.[^.]+$/</span>, <span class="ruby-value str">''</span>)
+156:       <span class="ruby-identifier">string</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">'.xml'</span>
+157: 
+158:       <span class="ruby-identifier">directory</span> = <span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-identifier">dirname</span>(<span class="ruby-identifier">$0</span>)
+159:       <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'searchpath'</span>].<span class="ruby-identifier">unshift</span>(<span class="ruby-identifier">directory</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">directory</span>.<span class="ruby-identifier">nil?</span>
+160:     <span class="ruby-keyword kw">end</span>
+161: 
+162:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">string</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)
+163:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">string</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/&lt;.*?&gt;/</span>
+164:         <span class="ruby-ivar">@doc</span> = <span class="ruby-identifier">parse</span>(<span class="ruby-identifier">string</span>)
+165:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">string</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'-'</span>
+166:         <span class="ruby-ivar">@doc</span> = <span class="ruby-identifier">parse</span>(<span class="ruby-identifier">$stdin</span>.<span class="ruby-identifier">read</span>)
+167:       <span class="ruby-keyword kw">else</span>
+168:         <span class="ruby-identifier">filename</span> = <span class="ruby-identifier">find_xml_file</span>(<span class="ruby-identifier">string</span>, <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'searchpath'</span>])
+169: 
+170:         <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value str">'cache'</span>)
+171:           <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'cache'</span>].<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">scheme</span><span class="ruby-operator">|</span>
+172:             <span class="ruby-keyword kw">case</span>(<span class="ruby-identifier">scheme</span>)
+173:             <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'storable'</span>
+174:               <span class="ruby-identifier">content</span> = <span class="ruby-identifier">@@cache</span>.<span class="ruby-identifier">restore_storable</span>(<span class="ruby-identifier">filename</span>)
+175:             <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'mem_share'</span>
+176:               <span class="ruby-identifier">content</span> = <span class="ruby-identifier">@@cache</span>.<span class="ruby-identifier">restore_mem_share</span>(<span class="ruby-identifier">filename</span>)
+177:             <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'mem_copy'</span>
+178:               <span class="ruby-identifier">content</span> = <span class="ruby-identifier">@@cache</span>.<span class="ruby-identifier">restore_mem_copy</span>(<span class="ruby-identifier">filename</span>)
+179:             <span class="ruby-keyword kw">else</span>
+180:               <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Unsupported caching scheme: &lt;#{scheme}&gt;.&quot;</span>
+181:             <span class="ruby-keyword kw">end</span>
+182:             <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">content</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">content</span>
+183:           }
+184:         <span class="ruby-keyword kw">end</span>
+185: 
+186:         <span class="ruby-ivar">@doc</span> = <span class="ruby-identifier">load_xml_file</span>(<span class="ruby-identifier">filename</span>)
+187:       <span class="ruby-keyword kw">end</span>
+188:     <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">string</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">IO</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">string</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">StringIO</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">string</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Zlib</span><span class="ruby-operator">::</span><span class="ruby-constant">GzipReader</span>)
+189:       <span class="ruby-ivar">@doc</span> = <span class="ruby-identifier">parse</span>(<span class="ruby-identifier">string</span>.<span class="ruby-identifier">read</span>)
+190:     <span class="ruby-keyword kw">else</span>
+191:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Could not parse object of type: &lt;#{string.type}&gt;.&quot;</span>
+192:     <span class="ruby-keyword kw">end</span>
+193: 
+194:     <span class="ruby-identifier">result</span> = <span class="ruby-identifier">collapse</span>(<span class="ruby-ivar">@doc</span>.<span class="ruby-identifier">root</span>)
+195:     <span class="ruby-identifier">result</span> = <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'keeproot'</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">merge</span>({}, <span class="ruby-ivar">@doc</span>.<span class="ruby-identifier">root</span>.<span class="ruby-identifier">name</span>, <span class="ruby-identifier">result</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">result</span>
+196:     <span class="ruby-identifier">put_into_cache</span>(<span class="ruby-identifier">result</span>, <span class="ruby-identifier">filename</span>)
+197:     <span class="ruby-identifier">result</span>
+198:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="xml-out-method" class="method-detail ">
+				<a name="method-i-xml_out"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">xml_out</span><span
+						class="method-args">(ref, options = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Converts a data structure into an XML document.
+</p>
+<table>
+<tr><td valign="top">ref</td><td><p>
+Reference to data structure to be converted into XML.
+</p>
+</td></tr>
+<tr><td valign="top">options</td><td><p>
+Options to be used.
+</p>
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="xml-out-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/xmlsimple.rb, line 212</span>
+212:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">xml_out</span>(<span class="ruby-identifier">ref</span>, <span class="ruby-identifier">options</span> = <span class="ruby-keyword kw">nil</span>)
+213:     <span class="ruby-identifier">handle_options</span>(<span class="ruby-value str">'out'</span>, <span class="ruby-identifier">options</span>)
+214:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">ref</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>)
+215:       <span class="ruby-identifier">ref</span> = { <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'anonymoustag'</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">ref</span> }
+216:     <span class="ruby-keyword kw">end</span>
+217: 
+218:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'keeproot'</span>]
+219:       <span class="ruby-identifier">keys</span> = <span class="ruby-identifier">ref</span>.<span class="ruby-identifier">keys</span>
+220:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+221:         <span class="ruby-identifier">ref</span> = <span class="ruby-identifier">ref</span>[<span class="ruby-identifier">keys</span>[<span class="ruby-value">0</span>]]
+222:         <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'rootname'</span>] = <span class="ruby-identifier">keys</span>[<span class="ruby-value">0</span>]
+223:       <span class="ruby-keyword kw">end</span>
+224:     <span class="ruby-keyword kw">elsif</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'rootname'</span>] <span class="ruby-operator">==</span> <span class="ruby-value str">''</span>
+225:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">ref</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+226:         <span class="ruby-identifier">refsave</span> = <span class="ruby-identifier">ref</span>
+227:         <span class="ruby-identifier">ref</span> = {}
+228:         <span class="ruby-identifier">refsave</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+229:           <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">scalar</span>(<span class="ruby-identifier">value</span>)
+230:             <span class="ruby-identifier">ref</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">value</span>
+231:           <span class="ruby-keyword kw">else</span>
+232:             <span class="ruby-identifier">ref</span>[<span class="ruby-identifier">key</span>] = [ <span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_s</span> ]
+233:           <span class="ruby-keyword kw">end</span>
+234:         }
+235:       <span class="ruby-keyword kw">end</span>
+236:     <span class="ruby-keyword kw">end</span>
+237: 
+238:     <span class="ruby-ivar">@ancestors</span> = []
+239:     <span class="ruby-identifier">xml</span> = <span class="ruby-identifier">value_to_xml</span>(<span class="ruby-identifier">ref</span>, <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'rootname'</span>], <span class="ruby-value str">''</span>)
+240:     <span class="ruby-ivar">@ancestors</span> = <span class="ruby-keyword kw">nil</span>
+241: 
+242:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'xmldeclaration'</span>]
+243:       <span class="ruby-identifier">xml</span> = <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'xmldeclaration'</span>] <span class="ruby-operator">+</span> <span class="ruby-value str">&quot;\n&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">xml</span>
+244:     <span class="ruby-keyword kw">end</span>
+245: 
+246:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value str">'outputfile'</span>)
+247:       <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'outputfile'</span>].<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">IO</span>)
+248:         <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'outputfile'</span>].<span class="ruby-identifier">write</span>(<span class="ruby-identifier">xml</span>)
+249:       <span class="ruby-keyword kw">else</span>
+250:         <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-ivar">@options</span>[<span class="ruby-value str">'outputfile'</span>], <span class="ruby-value str">&quot;w&quot;</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">file</span><span class="ruby-operator">|</span> <span class="ruby-identifier">file</span>.<span class="ruby-identifier">write</span>(<span class="ruby-identifier">xml</span>) }
+251:       <span class="ruby-keyword kw">end</span>
+252:     <span class="ruby-keyword kw">end</span>
+253:     <span class="ruby-identifier">xml</span>
+254:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="collapse-method" class="method-detail ">
+				<a name="method-i-collapse"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">collapse</span><span
+						class="method-args">(element)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Actually converts an XML document element into a data structure.
+</p>
+<table>
+<tr><td valign="top">element</td><td><p>
+The document element to be collapsed.
+</p>
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="collapse-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/xmlsimple.rb, line 460</span>
+460:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">collapse</span>(<span class="ruby-identifier">element</span>)
+461:     <span class="ruby-identifier">result</span> = <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'noattr'</span>] <span class="ruby-operator">?</span> {} <span class="ruby-operator">:</span> <span class="ruby-identifier">get_attributes</span>(<span class="ruby-identifier">element</span>)
+462: 
+463:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'normalisespace'</span>] <span class="ruby-operator">==</span> <span class="ruby-value">2</span>
+464:       <span class="ruby-identifier">result</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">result</span>[<span class="ruby-identifier">k</span>] = <span class="ruby-identifier">normalise_space</span>(<span class="ruby-identifier">v</span>) }
+465:     <span class="ruby-keyword kw">end</span>
+466: 
+467:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">element</span>.<span class="ruby-identifier">has_elements?</span>
+468:       <span class="ruby-identifier">element</span>.<span class="ruby-identifier">each_element</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">child</span><span class="ruby-operator">|</span>
+469:         <span class="ruby-identifier">value</span> = <span class="ruby-identifier">collapse</span>(<span class="ruby-identifier">child</span>)
+470:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">empty</span>(<span class="ruby-identifier">value</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">element</span>.<span class="ruby-identifier">attributes</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'noattr'</span>])
+471:           <span class="ruby-keyword kw">next</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value str">'suppressempty'</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'suppressempty'</span>] <span class="ruby-operator">==</span> <span class="ruby-keyword kw">true</span>
+472:         <span class="ruby-keyword kw">end</span>
+473:         <span class="ruby-identifier">result</span> = <span class="ruby-identifier">merge</span>(<span class="ruby-identifier">result</span>, <span class="ruby-identifier">child</span>.<span class="ruby-identifier">name</span>, <span class="ruby-identifier">value</span>)
+474:       }
+475:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">has_mixed_content?</span>(<span class="ruby-identifier">element</span>)
+476:         <span class="ruby-comment cmt"># normalisespace?</span>
+477:         <span class="ruby-identifier">content</span> = <span class="ruby-identifier">element</span>.<span class="ruby-identifier">texts</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">to_s</span> }
+478:         <span class="ruby-identifier">content</span> = <span class="ruby-identifier">content</span>[<span class="ruby-value">0</span>] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">content</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+479:         <span class="ruby-identifier">result</span>[<span class="ruby-ivar">@options</span>[<span class="ruby-value str">'contentkey'</span>]] = <span class="ruby-identifier">content</span>
+480:       <span class="ruby-keyword kw">end</span>
+481:     <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">element</span>.<span class="ruby-identifier">has_text?</span> <span class="ruby-comment cmt"># i.e. it has only text.</span>
+482:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">collapse_text_node</span>(<span class="ruby-identifier">result</span>, <span class="ruby-identifier">element</span>)
+483:     <span class="ruby-keyword kw">end</span>
+484: 
+485:     <span class="ruby-comment cmt"># Turn Arrays into Hashes if key fields present.</span>
+486:     <span class="ruby-identifier">count</span> = <span class="ruby-identifier">fold_arrays</span>(<span class="ruby-identifier">result</span>)
+487: 
+488:     <span class="ruby-comment cmt"># Disintermediate grouped tags.</span>
+489:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value str">'grouptags'</span>)
+490:       <span class="ruby-identifier">result</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+491:         <span class="ruby-keyword kw">next</span> <span class="ruby-keyword kw">unless</span> (<span class="ruby-identifier">value</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>) <span class="ruby-operator">&amp;&amp;</span> (<span class="ruby-identifier">value</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>))
+492:         <span class="ruby-identifier">child_key</span>, <span class="ruby-identifier">child_value</span> = <span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_a</span>[<span class="ruby-value">0</span>]
+493:         <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'grouptags'</span>][<span class="ruby-identifier">key</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">child_key</span>
+494:           <span class="ruby-identifier">result</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">child_value</span>
+495:         <span class="ruby-keyword kw">end</span>
+496:       }
+497:     <span class="ruby-keyword kw">end</span>
+498: 
+499:     <span class="ruby-comment cmt"># Fold Hashes containing a single anonymous Array up into just the Array.</span>
+500:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">count</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+501:       <span class="ruby-identifier">anonymoustag</span> = <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'anonymoustag'</span>]
+502:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">anonymoustag</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">result</span>[<span class="ruby-identifier">anonymoustag</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>)
+503:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">result</span>[<span class="ruby-identifier">anonymoustag</span>]
+504:       <span class="ruby-keyword kw">end</span>
+505:     <span class="ruby-keyword kw">end</span>
+506: 
+507:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">result</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value str">'suppressempty'</span>)
+508:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'suppressempty'</span>] <span class="ruby-operator">==</span> <span class="ruby-value str">''</span> <span class="ruby-operator">?</span> <span class="ruby-value str">''</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">nil</span>
+509:     <span class="ruby-keyword kw">end</span>
+510: 
+511:     <span class="ruby-identifier">result</span>
+512:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="collapse-content-method" class="method-detail ">
+				<a name="method-i-collapse_content"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">collapse_content</span><span
+						class="method-args">(hash)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Tries to collapse a Hash even more ;-)
+</p>
+<table>
+<tr><td valign="top">hash</td><td><p>
+Hash to be collapsed again.
+</p>
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="collapse-content-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/xmlsimple.rb, line 623</span>
+623:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">collapse_content</span>(<span class="ruby-identifier">hash</span>)
+624:     <span class="ruby-identifier">content_key</span> = <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'contentkey'</span>]
+625:     <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">each_value</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+626:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">hash</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">content_key</span>)
+627:       <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">each_key</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span> <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">key</span>][<span class="ruby-identifier">content_key</span>] }
+628:     }
+629:     <span class="ruby-identifier">hash</span>
+630:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="collapse-text-node-method" class="method-detail ">
+				<a name="method-i-collapse_text_node"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">collapse_text_node</span><span
+						class="method-args">(hash, element)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Collapses a text node and merges it with an existing Hash, if possible.
+Thanks to Curtis Schofield for reporting a subtle bug.
+</p>
+<table>
+<tr><td valign="top">hash</td><td><p>
+Hash to merge text node value with, if possible.
+</p>
+</td></tr>
+<tr><td valign="top">element</td><td><p>
+Text node to be collapsed.
+</p>
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="collapse-text-node-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/xmlsimple.rb, line 522</span>
+522:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">collapse_text_node</span>(<span class="ruby-identifier">hash</span>, <span class="ruby-identifier">element</span>)
+523:     <span class="ruby-identifier">value</span> = <span class="ruby-identifier">node_to_text</span>(<span class="ruby-identifier">element</span>)
+524:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">empty</span>(<span class="ruby-identifier">value</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">element</span>.<span class="ruby-identifier">has_attributes?</span>
+525:       <span class="ruby-keyword kw">return</span> {}
+526:     <span class="ruby-keyword kw">end</span>
+527: 
+528:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">element</span>.<span class="ruby-identifier">has_attributes?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@options</span>[<span class="ruby-value str">'noattr'</span>]
+529:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">merge</span>(<span class="ruby-identifier">hash</span>, <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'contentkey'</span>], <span class="ruby-identifier">value</span>)
+530:     <span class="ruby-keyword kw">else</span>
+531:       <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'forcecontent'</span>]
+532:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">merge</span>(<span class="ruby-identifier">hash</span>, <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'contentkey'</span>], <span class="ruby-identifier">value</span>)
+533:       <span class="ruby-keyword kw">else</span>
+534:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">value</span>
+535:       <span class="ruby-keyword kw">end</span>
+536:     <span class="ruby-keyword kw">end</span>
+537:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="empty-method" class="method-detail ">
+				<a name="method-i-empty"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">empty</span><span
+						class="method-args">(value)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Checks, if an object is nil, an empty String or an empty Hash. Thanks to
+Norbert Gawor for a bugfix.
+</p>
+<table>
+<tr><td valign="top">value</td><td><p>
+Value to be checked for emptyness.
+</p>
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="empty-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/xmlsimple.rb, line 924</span>
+924:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">empty</span>(<span class="ruby-identifier">value</span>)
+925:     <span class="ruby-keyword kw">case</span> <span class="ruby-identifier">value</span>
+926:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">Hash</span>
+927:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">empty?</span>
+928:       <span class="ruby-keyword kw">when</span> <span class="ruby-constant">String</span>
+929:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">!~</span> <span class="ruby-regexp re">/\S/</span>
+930:       <span class="ruby-keyword kw">else</span>
+931:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">nil?</span>
+932:     <span class="ruby-keyword kw">end</span>
+933:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="escape-value-method" class="method-detail ">
+				<a name="method-i-escape_value"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">escape_value</span><span
+						class="method-args">(data)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Replaces XML markup characters by their external entities.
+</p>
+<table>
+<tr><td valign="top">data</td><td><p>
+The string to be escaped.
+</p>
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="escape-value-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/xmlsimple.rb, line 906</span>
+906:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">escape_value</span>(<span class="ruby-identifier">data</span>)
+907:     <span class="ruby-constant">Text</span><span class="ruby-operator">::</span><span class="ruby-identifier">normalize</span>(<span class="ruby-identifier">data</span>)
+908:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="find-xml-file-method" class="method-detail ">
+				<a name="method-i-find_xml_file"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">find_xml_file</span><span
+						class="method-args">(file, searchpath)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Searches in a list of paths for a certain file. Returns the full path to
+the file, if it could be found. Otherwise, an exception will be raised.
+</p>
+<table>
+<tr><td valign="top">filename</td><td><p>
+Name of the file to search for.
+</p>
+</td></tr>
+<tr><td valign="top">searchpath</td><td><p>
+List of paths to search in.
+</p>
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="find-xml-file-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/xmlsimple.rb, line 976</span>
+976:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">find_xml_file</span>(<span class="ruby-identifier">file</span>, <span class="ruby-identifier">searchpath</span>)
+977:     <span class="ruby-identifier">filename</span> = <span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-identifier">basename</span>(<span class="ruby-identifier">file</span>)
+978: 
+979:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">filename</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">file</span>
+980:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">file</span> <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-identifier">file?</span>(<span class="ruby-identifier">file</span>)
+981:     <span class="ruby-keyword kw">else</span>
+982:       <span class="ruby-identifier">searchpath</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">path</span><span class="ruby-operator">|</span>
+983:         <span class="ruby-identifier">full_path</span> = <span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-identifier">join</span>(<span class="ruby-identifier">path</span>, <span class="ruby-identifier">filename</span>)
+984:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">full_path</span> <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-identifier">file?</span>(<span class="ruby-identifier">full_path</span>)
+985:       }
+986:     <span class="ruby-keyword kw">end</span>
+987: 
+988:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">searchpath</span>.<span class="ruby-identifier">empty?</span>
+989:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">file</span> <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-identifier">file?</span>(<span class="ruby-identifier">file</span>)
+990:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;File does not exist: #{file}.&quot;</span>
+991:     <span class="ruby-keyword kw">end</span>
+992:     <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Could not find &lt;#{filename}&gt; in &lt;#{searchpath.join(':')}&gt;&quot;</span>
+993:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="fold-array-method" class="method-detail ">
+				<a name="method-i-fold_array"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">fold_array</span><span
+						class="method-args">(array)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Folds an Array to a Hash, if possible. Folding happens according to the
+content of keyattr, which has to be an array.
+</p>
+<table>
+<tr><td valign="top">array</td><td><p>
+Array to be folded.
+</p>
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="fold-array-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/xmlsimple.rb, line 567</span>
+567:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">fold_array</span>(<span class="ruby-identifier">array</span>)
+568:     <span class="ruby-identifier">hash</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+569:     <span class="ruby-identifier">array</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span>
+570:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">array</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+571:       <span class="ruby-identifier">key_matched</span> = <span class="ruby-keyword kw">false</span>
+572:       <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'keyattr'</span>].<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span><span class="ruby-operator">|</span>
+573:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">key</span>)
+574:           <span class="ruby-identifier">key_matched</span> = <span class="ruby-keyword kw">true</span>
+575:           <span class="ruby-identifier">value</span> = <span class="ruby-identifier">x</span>[<span class="ruby-identifier">key</span>]
+576:           <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">array</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>)
+577:           <span class="ruby-identifier">value</span> = <span class="ruby-identifier">normalise_space</span>(<span class="ruby-identifier">value</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'normalisespace'</span>] <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+578:           <span class="ruby-identifier">x</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">key</span>)
+579:           <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">value</span>] = <span class="ruby-identifier">x</span>
+580:           <span class="ruby-keyword kw">break</span>
+581:         <span class="ruby-keyword kw">end</span>
+582:       }
+583:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">array</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">key_matched</span>
+584:     }
+585:     <span class="ruby-identifier">hash</span> = <span class="ruby-identifier">collapse_content</span>(<span class="ruby-identifier">hash</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'collapseagain'</span>]
+586:     <span class="ruby-identifier">hash</span>
+587:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="fold-array-by-name-method" class="method-detail ">
+				<a name="method-i-fold_array_by_name"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">fold_array_by_name</span><span
+						class="method-args">(name, array)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Folds an Array to a Hash, if possible. Folding happens according to the
+content of keyattr, which has to be a Hash.
+</p>
+<table>
+<tr><td valign="top">name</td><td><p>
+Name of the attribute to be folded upon.
+</p>
+</td></tr>
+<tr><td valign="top">array</td><td><p>
+Array to be folded.
+</p>
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="fold-array-by-name-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/xmlsimple.rb, line 597</span>
+597:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">fold_array_by_name</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">array</span>)
+598:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">array</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'keyattr'</span>].<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">name</span>)
+599:     <span class="ruby-identifier">key</span>, <span class="ruby-identifier">flag</span> = <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'keyattr'</span>][<span class="ruby-identifier">name</span>]
+600: 
+601:     <span class="ruby-identifier">hash</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+602:     <span class="ruby-identifier">array</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span>
+603:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">key</span>)
+604:         <span class="ruby-identifier">value</span> = <span class="ruby-identifier">x</span>[<span class="ruby-identifier">key</span>]
+605:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">array</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>)
+606:         <span class="ruby-identifier">value</span> = <span class="ruby-identifier">normalise_space</span>(<span class="ruby-identifier">value</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'normalisespace'</span>] <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+607:         <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">value</span>] = <span class="ruby-identifier">x</span>
+608:         <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">value</span>][<span class="ruby-node">&quot;-#{key}&quot;</span>] = <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">value</span>][<span class="ruby-identifier">key</span>] <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">flag</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'-'</span>
+609:         <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">value</span>].<span class="ruby-identifier">delete</span>(<span class="ruby-identifier">key</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">flag</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'+'</span>
+610:       <span class="ruby-keyword kw">else</span>
+611:         <span class="ruby-identifier">$stderr</span>.<span class="ruby-identifier">puts</span>(<span class="ruby-node">&quot;Warning: &lt;#{name}&gt; element has no '#{key}' attribute.&quot;</span>)
+612:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">array</span>
+613:       <span class="ruby-keyword kw">end</span>
+614:     }
+615:     <span class="ruby-identifier">hash</span> = <span class="ruby-identifier">collapse_content</span>(<span class="ruby-identifier">hash</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'collapseagain'</span>]
+616:     <span class="ruby-identifier">hash</span>
+617:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="fold-arrays-method" class="method-detail ">
+				<a name="method-i-fold_arrays"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">fold_arrays</span><span
+						class="method-args">(hash)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Folds all arrays in a Hash.
+</p>
+<table>
+<tr><td valign="top">hash</td><td><p>
+Hash to be folded.
+</p>
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="fold-arrays-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/xmlsimple.rb, line 543</span>
+543:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">fold_arrays</span>(<span class="ruby-identifier">hash</span>)
+544:     <span class="ruby-identifier">fold_amount</span> = <span class="ruby-value">0</span>
+545:     <span class="ruby-identifier">keyattr</span> = <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'keyattr'</span>]
+546:     <span class="ruby-keyword kw">if</span> (<span class="ruby-identifier">keyattr</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">keyattr</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>))
+547:       <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+548:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>)
+549:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">keyattr</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>)
+550:             <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">fold_array</span>(<span class="ruby-identifier">value</span>)
+551:           <span class="ruby-keyword kw">else</span>
+552:             <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">fold_array_by_name</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span>)
+553:           <span class="ruby-keyword kw">end</span>
+554:           <span class="ruby-identifier">fold_amount</span> <span class="ruby-operator">+=</span> <span class="ruby-value">1</span>
+555:         <span class="ruby-keyword kw">end</span>
+556:       }
+557:     <span class="ruby-keyword kw">end</span>
+558:     <span class="ruby-identifier">fold_amount</span>
+559:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="force-array--method" class="method-detail ">
+				<a name="method-i-force_array%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">force_array?</span><span
+						class="method-args">(key)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Checks, if the &#8216;forcearray&#8217; option has to be used for a certain
+key.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="force-array--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/xmlsimple.rb, line 692</span>
+692:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">force_array?</span>(<span class="ruby-identifier">key</span>)
+693:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">key</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'contentkey'</span>]
+694:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'forcearray'</span>] <span class="ruby-operator">==</span> <span class="ruby-keyword kw">true</span>
+695:     <span class="ruby-identifier">forcearray</span> = <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'forcearray'</span>]
+696:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">forcearray</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+697:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">forcearray</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">key</span>)
+698:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">forcearray</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value str">'_regex'</span>)
+699:       <span class="ruby-identifier">forcearray</span>[<span class="ruby-value str">'_regex'</span>].<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">key</span> <span class="ruby-operator">=~</span> <span class="ruby-identifier">x</span> }
+700:     <span class="ruby-keyword kw">end</span>
+701:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span>
+702:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="get-attributes-method" class="method-detail ">
+				<a name="method-i-get_attributes"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">get_attributes</span><span
+						class="method-args">(node)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Converts the attributes array of a document node into a Hash. Returns an
+empty Hash, if node has no attributes.
+</p>
+<table>
+<tr><td valign="top">node</td><td><p>
+Document node to extract attributes from.
+</p>
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="get-attributes-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/xmlsimple.rb, line 709</span>
+709:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_attributes</span>(<span class="ruby-identifier">node</span>)
+710:     <span class="ruby-identifier">attributes</span> = {}
+711:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'attrprefix'</span>]
+712:       <span class="ruby-identifier">node</span>.<span class="ruby-identifier">attributes</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">n</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">attributes</span>[<span class="ruby-value str">&quot;@&quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">n</span>] = <span class="ruby-identifier">v</span> }
+713:     <span class="ruby-keyword kw">else</span>
+714:       <span class="ruby-identifier">node</span>.<span class="ruby-identifier">attributes</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">n</span>,<span class="ruby-identifier">v</span><span class="ruby-operator">|</span> <span class="ruby-identifier">attributes</span>[<span class="ruby-identifier">n</span>] = <span class="ruby-identifier">v</span> }
+715:     <span class="ruby-keyword kw">end</span>
+716:     <span class="ruby-identifier">attributes</span>
+717:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="get-var-method" class="method-detail ">
+				<a name="method-i-get_var"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">get_var</span><span
+						class="method-args">(name)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Called during variable substitution to get the value for the named
+variable.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="get-var-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/xmlsimple.rb, line 740</span>
+740:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_var</span>(<span class="ruby-identifier">name</span>)
+741:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@_var_values</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">name</span>)
+742:       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@_var_values</span>[<span class="ruby-identifier">name</span>]
+743:     <span class="ruby-keyword kw">else</span>
+744:       <span class="ruby-keyword kw">return</span> <span class="ruby-node">&quot;${#{name}}&quot;</span>
+745:     <span class="ruby-keyword kw">end</span>
+746:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="handle-options-method" class="method-detail ">
+				<a name="method-i-handle_options"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">handle_options</span><span
+						class="method-args">(direction, options)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Merges a set of options with the default options.
+</p>
+<table>
+<tr><td valign="top">direction</td><td><p>
+&#8216;in&#8217;:  If options should be handled for xml_in.
+&#8216;out&#8217;: If options should be handled for xml_out.
+</p>
+</td></tr>
+<tr><td valign="top">options</td><td><p>
+Options to be merged with the default options.
+</p>
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="handle-options-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/xmlsimple.rb, line 318</span>
+318:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">handle_options</span>(<span class="ruby-identifier">direction</span>, <span class="ruby-identifier">options</span>)
+319:     <span class="ruby-ivar">@options</span> = <span class="ruby-identifier">options</span> <span class="ruby-operator">||</span> <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+320: 
+321:     <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;Options must be a Hash!&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+322: 
+323:     <span class="ruby-keyword kw">unless</span> <span class="ruby-constant">KNOWN_OPTIONS</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">direction</span>)
+324:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Unknown direction: &lt;#{direction}&gt;.&quot;</span>
+325:     <span class="ruby-keyword kw">end</span>
+326: 
+327:     <span class="ruby-identifier">known_options</span> = <span class="ruby-constant">KNOWN_OPTIONS</span>[<span class="ruby-identifier">direction</span>]
+328:     <span class="ruby-ivar">@options</span> = <span class="ruby-identifier">normalize_option_names</span>(<span class="ruby-ivar">@options</span>, <span class="ruby-identifier">known_options</span>)
+329: 
+330:     <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@default_options</span>.<span class="ruby-identifier">nil?</span>
+331:       <span class="ruby-identifier">known_options</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">option</span><span class="ruby-operator">|</span>
+332:         <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">option</span>)
+333:           <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@default_options</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">option</span>)
+334:             <span class="ruby-ivar">@options</span>[<span class="ruby-identifier">option</span>] = <span class="ruby-ivar">@default_options</span>[<span class="ruby-identifier">option</span>]
+335:           <span class="ruby-keyword kw">end</span>
+336:         <span class="ruby-keyword kw">end</span>
+337:       }
+338:     <span class="ruby-keyword kw">end</span>
+339: 
+340:     <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value str">'noattr'</span>)
+341:         <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'noattr'</span>] = <span class="ruby-keyword kw">false</span>
+342:     <span class="ruby-keyword kw">end</span>
+343: 
+344:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value str">'rootname'</span>)
+345:       <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'rootname'</span>] = <span class="ruby-value str">''</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'rootname'</span>].<span class="ruby-identifier">nil?</span>
+346:     <span class="ruby-keyword kw">else</span>
+347:       <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'rootname'</span>] = <span class="ruby-constant">DEF_ROOT_NAME</span>
+348:     <span class="ruby-keyword kw">end</span>
+349: 
+350:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value str">'xmldeclaration'</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'xmldeclaration'</span>] <span class="ruby-operator">==</span> <span class="ruby-keyword kw">true</span>
+351:       <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'xmldeclaration'</span>] = <span class="ruby-constant">DEF_XML_DECLARATION</span>
+352:     <span class="ruby-keyword kw">end</span>
+353: 
+354:     <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'keytosymbol'</span>] = <span class="ruby-constant">DEF_KEY_TO_SYMBOL</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value str">'keytosymbol'</span>)
+355: 
+356:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value str">'contentkey'</span>)
+357:       <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'contentkey'</span>] <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^-(.*)$/</span>
+358:         <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'contentkey'</span>]    = <span class="ruby-node">$1</span>
+359:         <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'collapseagain'</span>] = <span class="ruby-keyword kw">true</span>
+360:       <span class="ruby-keyword kw">end</span>
+361:     <span class="ruby-keyword kw">else</span>
+362:       <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'contentkey'</span>] = <span class="ruby-constant">DEF_CONTENT_KEY</span>
+363:     <span class="ruby-keyword kw">end</span>
+364: 
+365:     <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value str">'normalisespace'</span>)
+366:       <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'normalisespace'</span>] = <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'normalizespace'</span>]
+367:     <span class="ruby-keyword kw">end</span>
+368:     <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'normalisespace'</span>] = <span class="ruby-value">0</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'normalisespace'</span>].<span class="ruby-identifier">nil?</span>
+369: 
+370:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value str">'searchpath'</span>)
+371:       <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'searchpath'</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>)
+372:         <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'searchpath'</span>] = [ <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'searchpath'</span>] ]
+373:       <span class="ruby-keyword kw">end</span>
+374:     <span class="ruby-keyword kw">else</span>
+375:       <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'searchpath'</span>] = []
+376:     <span class="ruby-keyword kw">end</span>
+377: 
+378:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value str">'cache'</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">scalar</span>(<span class="ruby-ivar">@options</span>[<span class="ruby-value str">'cache'</span>])
+379:       <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'cache'</span>] = [ <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'cache'</span>] ]
+380:     <span class="ruby-keyword kw">end</span>
+381: 
+382:     <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'anonymoustag'</span>] = <span class="ruby-constant">DEF_ANONYMOUS_TAG</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value str">'anonymoustag'</span>)
+383: 
+384:     <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@options</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value str">'indent'</span>) <span class="ruby-operator">||</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'indent'</span>].<span class="ruby-identifier">nil?</span>
+385:       <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'indent'</span>] = <span class="ruby-constant">DEF_INDENTATION</span>
+386:     <span class="ruby-keyword kw">end</span>
+387: 
+388:     <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'indent'</span>] = <span class="ruby-value str">''</span> <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value str">'noindent'</span>)
+389: 
+390:     <span class="ruby-comment cmt"># Special cleanup for 'keyattr' which could be an array or</span>
+391:     <span class="ruby-comment cmt"># a hash or left to default to array.</span>
+392:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value str">'keyattr'</span>)
+393:       <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">scalar</span>(<span class="ruby-ivar">@options</span>[<span class="ruby-value str">'keyattr'</span>])
+394:         <span class="ruby-comment cmt"># Convert keyattr =&gt; { elem =&gt; '+attr' }</span>
+395:         <span class="ruby-comment cmt">#      to keyattr =&gt; { elem =&gt; ['attr', '+'] }</span>
+396:         <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'keyattr'</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+397:           <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'keyattr'</span>].<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+398:             <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^([-+])?(.*)$/</span>
+399:               <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'keyattr'</span>][<span class="ruby-identifier">key</span>] = [<span class="ruby-node">$2</span>, <span class="ruby-node">$1</span> <span class="ruby-operator">?</span> <span class="ruby-node">$1</span> <span class="ruby-operator">:</span> <span class="ruby-value str">''</span>]
+400:             <span class="ruby-keyword kw">end</span>
+401:           }
+402:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@options</span>[<span class="ruby-value str">'keyattr'</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>)
+403:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;'keyattr' must be String, Hash, or Array!&quot;</span>
+404:         <span class="ruby-keyword kw">end</span>
+405:       <span class="ruby-keyword kw">else</span>
+406:         <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'keyattr'</span>] = [ <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'keyattr'</span>] ]
+407:       <span class="ruby-keyword kw">end</span>
+408:     <span class="ruby-keyword kw">else</span>
+409:       <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'keyattr'</span>] = <span class="ruby-constant">DEF_KEY_ATTRIBUTES</span>
+410:     <span class="ruby-keyword kw">end</span>
+411: 
+412:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value str">'forcearray'</span>)
+413:       <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'forcearray'</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Regexp</span>)
+414:         <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'forcearray'</span>] = [ <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'forcearray'</span>] ]
+415:       <span class="ruby-keyword kw">end</span>
+416: 
+417:       <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'forcearray'</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>)
+418:         <span class="ruby-identifier">force_list</span> = <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'forcearray'</span>]
+419:         <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">force_list</span>.<span class="ruby-identifier">empty?</span>
+420:           <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'forcearray'</span>] = {}
+421:           <span class="ruby-identifier">force_list</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">tag</span><span class="ruby-operator">|</span>
+422:             <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">tag</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Regexp</span>)
+423:               <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'forcearray'</span>][<span class="ruby-value str">'_regex'</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>)
+424:                 <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'forcearray'</span>][<span class="ruby-value str">'_regex'</span>] = []
+425:               <span class="ruby-keyword kw">end</span>
+426:               <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'forcearray'</span>][<span class="ruby-value str">'_regex'</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">tag</span>
+427:             <span class="ruby-keyword kw">else</span>
+428:               <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'forcearray'</span>][<span class="ruby-identifier">tag</span>] = <span class="ruby-keyword kw">true</span>
+429:             <span class="ruby-keyword kw">end</span>
+430:           }
+431:         <span class="ruby-keyword kw">else</span>
+432:           <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'forcearray'</span>] = <span class="ruby-keyword kw">false</span>
+433:         <span class="ruby-keyword kw">end</span>
+434:       <span class="ruby-keyword kw">else</span>
+435:         <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'forcearray'</span>] = <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'forcearray'</span>] <span class="ruby-operator">?</span> <span class="ruby-keyword kw">true</span> <span class="ruby-operator">:</span> <span class="ruby-keyword kw">false</span>
+436:       <span class="ruby-keyword kw">end</span>
+437:     <span class="ruby-keyword kw">else</span>
+438:       <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'forcearray'</span>] = <span class="ruby-constant">DEF_FORCE_ARRAY</span>
+439:     <span class="ruby-keyword kw">end</span>
+440: 
+441:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value str">'grouptags'</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@options</span>[<span class="ruby-value str">'grouptags'</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+442:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;Illegal value for 'GroupTags' option - expected a Hash.&quot;</span>
+443:     <span class="ruby-keyword kw">end</span>
+444: 
+445:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value str">'variables'</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@options</span>[<span class="ruby-value str">'variables'</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+446:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;Illegal value for 'Variables' option - expected a Hash.&quot;</span>
+447:     <span class="ruby-keyword kw">end</span>
+448: 
+449:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value str">'variables'</span>)
+450:       <span class="ruby-ivar">@_var_values</span> = <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'variables'</span>]
+451:     <span class="ruby-keyword kw">elsif</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value str">'varattr'</span>)
+452:       <span class="ruby-ivar">@_var_values</span> = {}
+453:     <span class="ruby-keyword kw">end</span>
+454:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="has-mixed-content--method" class="method-detail ">
+				<a name="method-i-has_mixed_content%3F"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">has_mixed_content?</span><span
+						class="method-args">(element)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Determines, if a document element has mixed content.
+</p>
+<table>
+<tr><td valign="top">element</td><td><p>
+Document element to be checked.
+</p>
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="has-mixed-content--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/xmlsimple.rb, line 723</span>
+723:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">has_mixed_content?</span>(<span class="ruby-identifier">element</span>)
+724:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">element</span>.<span class="ruby-identifier">has_text?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">element</span>.<span class="ruby-identifier">has_elements?</span>
+725:       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">element</span>.<span class="ruby-identifier">texts</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">''</span>) <span class="ruby-operator">!~</span> <span class="ruby-regexp re">/^\s*$/</span>
+726:     <span class="ruby-keyword kw">end</span>
+727:     <span class="ruby-keyword kw">false</span>
+728:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="hash-to-array-method" class="method-detail ">
+				<a name="method-i-hash_to_array"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">hash_to_array</span><span
+						class="method-args">(parent, hashref)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Attempts to unfold a hash of hashes into an array of hashes. Returns a
+reference to th array on success or the original hash, if unfolding is not
+possible.
+</p>
+<table>
+<tr><td valign="top">parent</td><td></td></tr>
+<tr><td valign="top">hashref</td><td><p>
+Reference to the hash to be unfolded.
+</p>
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="hash-to-array-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/xmlsimple.rb, line 887</span>
+887:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">hash_to_array</span>(<span class="ruby-identifier">parent</span>, <span class="ruby-identifier">hashref</span>)
+888:     <span class="ruby-identifier">arrayref</span> = []
+889:     <span class="ruby-identifier">hashref</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+890:       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">hashref</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+891: 
+892:       <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'keyattr'</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+893:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">hashref</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'keyattr'</span>].<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">parent</span>)
+894:         <span class="ruby-identifier">arrayref</span> <span class="ruby-operator">&lt;&lt;</span> { <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'keyattr'</span>][<span class="ruby-identifier">parent</span>][<span class="ruby-value">0</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">key</span> }.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">value</span>)
+895:       <span class="ruby-keyword kw">else</span>
+896:         <span class="ruby-identifier">arrayref</span> <span class="ruby-operator">&lt;&lt;</span> { <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'keyattr'</span>][<span class="ruby-value">0</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">key</span> }.<span class="ruby-identifier">update</span>(<span class="ruby-identifier">value</span>)
+897:       <span class="ruby-keyword kw">end</span>
+898:     }
+899:     <span class="ruby-identifier">arrayref</span>
+900:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="load-xml-file-method" class="method-detail ">
+				<a name="method-i-load_xml_file"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">load_xml_file</span><span
+						class="method-args">(filename)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Loads and parses an XML configuration file.
+</p>
+<table>
+<tr><td valign="top">filename</td><td><p>
+Name of the configuration file to be loaded.
+</p>
+</td></tr>
+</table>
+<p>
+The following exceptions may be raised:
+</p>
+<table>
+<tr><td valign="top">Errno::ENOENT</td><td><p>
+If the specified file does not exist.
+</p>
+</td></tr>
+<tr><td valign="top">REXML::ParseException</td><td><p>
+If the specified file is not wellformed.
+</p>
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="load-xml-file-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/xmlsimple.rb, line 1006</span>
+1006:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">load_xml_file</span>(<span class="ruby-identifier">filename</span>)
+1007:     <span class="ruby-identifier">parse</span>(<span class="ruby-constant">IO</span><span class="ruby-operator">::</span><span class="ruby-identifier">read</span>(<span class="ruby-identifier">filename</span>))
+1008:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="merge-method" class="method-detail ">
+				<a name="method-i-merge"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">merge</span><span
+						class="method-args">(hash, key, value)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Adds a new key/value pair to an existing Hash. If the key to be added does
+already exist and the existing value associated with key is not an Array,
+it will be converted into an Array. Then the new value is appended to that
+Array.
+</p>
+<table>
+<tr><td valign="top">hash</td><td><p>
+Hash to add key/value pair to.
+</p>
+</td></tr>
+<tr><td valign="top">key</td><td><p>
+Key to be added.
+</p>
+</td></tr>
+<tr><td valign="top">value</td><td><p>
+Value to be associated with key.
+</p>
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="merge-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/xmlsimple.rb, line 643</span>
+643:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">merge</span>(<span class="ruby-identifier">hash</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span>)
+644:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">String</span>)
+645:       <span class="ruby-identifier">value</span> = <span class="ruby-identifier">normalise_space</span>(<span class="ruby-identifier">value</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'normalisespace'</span>] <span class="ruby-operator">==</span> <span class="ruby-value">2</span>
+646: 
+647:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">conv</span> = <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'conversions'</span>] <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">conv</span> = <span class="ruby-identifier">conv</span>.<span class="ruby-identifier">find</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">c</span>,<span class="ruby-identifier">_</span><span class="ruby-operator">|</span> <span class="ruby-identifier">c</span>.<span class="ruby-identifier">match</span>(<span class="ruby-identifier">key</span>)} <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">conv</span> = <span class="ruby-identifier">conv</span>.<span class="ruby-identifier">at</span>(<span class="ruby-value">1</span>)
+648:         <span class="ruby-identifier">value</span> = <span class="ruby-identifier">conv</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">value</span>)
+649:       <span class="ruby-keyword kw">end</span>
+650: 
+651:       <span class="ruby-comment cmt"># do variable substitutions</span>
+652:       <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@_var_values</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@_var_values</span>.<span class="ruby-identifier">empty?</span>
+653:         <span class="ruby-identifier">value</span>.<span class="ruby-identifier">gsub!</span>(<span class="ruby-regexp re">/\$\{(\w+)\}/</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">x</span><span class="ruby-operator">|</span> <span class="ruby-identifier">get_var</span>(<span class="ruby-node">$1</span>) }
+654:       <span class="ruby-keyword kw">end</span>
+655: 
+656:       <span class="ruby-comment cmt"># look for variable definitions</span>
+657:       <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value str">'varattr'</span>)
+658:         <span class="ruby-identifier">varattr</span> = <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'varattr'</span>]
+659:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">varattr</span>)
+660:           <span class="ruby-identifier">set_var</span>(<span class="ruby-identifier">hash</span>[<span class="ruby-identifier">varattr</span>], <span class="ruby-identifier">value</span>)
+661:         <span class="ruby-keyword kw">end</span>
+662:       <span class="ruby-keyword kw">end</span>
+663:     <span class="ruby-keyword kw">end</span>
+664: 
+665:     <span class="ruby-comment cmt">#patch for converting keys to symbols</span>
+666:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value str">'keytosymbol'</span>)
+667:       <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'keytosymbol'</span>] <span class="ruby-operator">==</span> <span class="ruby-keyword kw">true</span>
+668:         <span class="ruby-identifier">key</span> = <span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">downcase</span>.<span class="ruby-identifier">to_sym</span>
+669:       <span class="ruby-keyword kw">end</span>
+670:     <span class="ruby-keyword kw">end</span>
+671: 
+672:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">hash</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">key</span>)
+673:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">key</span>].<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>)
+674:         <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">key</span>] <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">value</span>
+675:       <span class="ruby-keyword kw">else</span>
+676:         <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">key</span>] = [ <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">key</span>], <span class="ruby-identifier">value</span> ]
+677:       <span class="ruby-keyword kw">end</span>
+678:     <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>) <span class="ruby-comment cmt"># Handle anonymous arrays.</span>
+679:       <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">key</span>] = [ <span class="ruby-identifier">value</span> ]
+680:     <span class="ruby-keyword kw">else</span>
+681:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">force_array?</span>(<span class="ruby-identifier">key</span>)
+682:         <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">key</span>] = [ <span class="ruby-identifier">value</span> ]
+683:       <span class="ruby-keyword kw">else</span>
+684:         <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">key</span>] = <span class="ruby-identifier">value</span>
+685:       <span class="ruby-keyword kw">end</span>
+686:     <span class="ruby-keyword kw">end</span>
+687:     <span class="ruby-identifier">hash</span>
+688:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="node-to-text-method" class="method-detail ">
+				<a name="method-i-node_to_text"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">node_to_text</span><span
+						class="method-args">(node, default = nil)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Converts a document node into a String. If the node could not be converted
+into a String for any reason, default will be returned.
+</p>
+<table>
+<tr><td valign="top">node</td><td><p>
+Document node to be converted.
+</p>
+</td></tr>
+<tr><td valign="top">default</td><td><p>
+Value to be returned, if node could not be converted.
+</p>
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="node-to-text-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/xmlsimple.rb, line 943</span>
+943:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">node_to_text</span>(<span class="ruby-identifier">node</span>, <span class="ruby-identifier">default</span> = <span class="ruby-keyword kw">nil</span>)
+944:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Element</span>)
+945:       <span class="ruby-identifier">node</span>.<span class="ruby-identifier">texts</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span> <span class="ruby-identifier">t</span>.<span class="ruby-identifier">value</span> }.<span class="ruby-identifier">join</span>(<span class="ruby-value str">''</span>)
+946:     <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Attribute</span>)
+947:       <span class="ruby-identifier">node</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">default</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">strip</span>
+948:     <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">node</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">REXML</span><span class="ruby-operator">::</span><span class="ruby-constant">Text</span>)
+949:       <span class="ruby-identifier">node</span>.<span class="ruby-identifier">value</span>.<span class="ruby-identifier">strip</span>
+950:     <span class="ruby-keyword kw">else</span>
+951:       <span class="ruby-identifier">default</span>
+952:     <span class="ruby-keyword kw">end</span>
+953:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="normalise-space-method" class="method-detail ">
+				<a name="method-i-normalise_space"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">normalise_space</span><span
+						class="method-args">(text)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Removes leading and trailing whitespace and sequences of whitespaces from a
+string.
+</p>
+<table>
+<tr><td valign="top">text</td><td><p>
+String to be normalised.
+</p>
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="normalise-space-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/xmlsimple.rb, line 915</span>
+915:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">normalise_space</span>(<span class="ruby-identifier">text</span>)
+916:     <span class="ruby-identifier">text</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/\s\s+/</span>, <span class="ruby-value str">' '</span>)
+917:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="normalize-option-names-method" class="method-detail ">
+				<a name="method-i-normalize_option_names"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">normalize_option_names</span><span
+						class="method-args">(options, known_options)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Normalizes option names in a hash, i.e., turns all characters to lower case
+and removes all underscores. Additionally, this method checks, if an
+unknown option was used and raises an according exception.
+</p>
+<table>
+<tr><td valign="top">options</td><td><p>
+Hash to be normalized.
+</p>
+</td></tr>
+<tr><td valign="top">known_options</td><td><p>
+List of known options.
+</p>
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="normalize-option-names-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/xmlsimple.rb, line 298</span>
+298:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">normalize_option_names</span>(<span class="ruby-identifier">options</span>, <span class="ruby-identifier">known_options</span>)
+299:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">nil?</span>
+300:     <span class="ruby-identifier">result</span> = <span class="ruby-constant">Hash</span>.<span class="ruby-identifier">new</span>
+301:     <span class="ruby-identifier">options</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+302:       <span class="ruby-identifier">lkey</span> = <span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">downcase</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/_/</span>, <span class="ruby-value str">''</span>)
+303:       <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">known_options</span>.<span class="ruby-identifier">member?</span>(<span class="ruby-identifier">lkey</span>)
+304:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Unrecognised option: #{lkey}.&quot;</span>
+305:       <span class="ruby-keyword kw">end</span>
+306:       <span class="ruby-identifier">result</span>[<span class="ruby-identifier">lkey</span>] = <span class="ruby-identifier">value</span>
+307:     }
+308:     <span class="ruby-identifier">result</span>
+309:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="parse-method" class="method-detail ">
+				<a name="method-i-parse"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">parse</span><span
+						class="method-args">(xml_string)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Parses an XML string and returns the according document.
+</p>
+<table>
+<tr><td valign="top">xml_string</td><td><p>
+XML string to be parsed.
+</p>
+</td></tr>
+</table>
+<p>
+The following exception may be raised:
+</p>
+<table>
+<tr><td valign="top">REXML::ParseException</td><td><p>
+If the specified file is not wellformed.
+</p>
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="parse-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/xmlsimple.rb, line 964</span>
+964:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse</span>(<span class="ruby-identifier">xml_string</span>)
+965:     <span class="ruby-constant">Document</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">xml_string</span>)
+966:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="put-into-cache-method" class="method-detail ">
+				<a name="method-i-put_into_cache"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">put_into_cache</span><span
+						class="method-args">(data, filename)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Caches the data belonging to a certain file.
+</p>
+<table>
+<tr><td valign="top">data</td><td><p>
+Data to be cached.
+</p>
+</td></tr>
+<tr><td valign="top">filename</td><td><p>
+Name of file the data was read from.
+</p>
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="put-into-cache-source">
+<pre>
+      <span class="ruby-comment cmt"># File lib/xmlsimple.rb, line 1016</span>
+1016:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">put_into_cache</span>(<span class="ruby-identifier">data</span>, <span class="ruby-identifier">filename</span>)
+1017:     <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value str">'cache'</span>)
+1018:       <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'cache'</span>].<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">scheme</span><span class="ruby-operator">|</span>
+1019:         <span class="ruby-keyword kw">case</span>(<span class="ruby-identifier">scheme</span>)
+1020:         <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'storable'</span>
+1021:           <span class="ruby-identifier">@@cache</span>.<span class="ruby-identifier">save_storable</span>(<span class="ruby-identifier">data</span>, <span class="ruby-identifier">filename</span>)
+1022:         <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'mem_share'</span>
+1023:           <span class="ruby-identifier">@@cache</span>.<span class="ruby-identifier">save_mem_share</span>(<span class="ruby-identifier">data</span>, <span class="ruby-identifier">filename</span>)
+1024:         <span class="ruby-keyword kw">when</span> <span class="ruby-value str">'mem_copy'</span>
+1025:           <span class="ruby-identifier">@@cache</span>.<span class="ruby-identifier">save_mem_copy</span>(<span class="ruby-identifier">data</span>, <span class="ruby-identifier">filename</span>)
+1026:         <span class="ruby-keyword kw">else</span>
+1027:           <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Unsupported caching scheme: &lt;#{scheme}&gt;.&quot;</span>
+1028:         <span class="ruby-keyword kw">end</span>
+1029:       }
+1030:     <span class="ruby-keyword kw">end</span>
+1031:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="scalar-method" class="method-detail ">
+				<a name="method-i-scalar"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">scalar</span><span
+						class="method-args">(value)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Checks, if a certain value is a &#8220;scalar&#8221; value. Whatever that
+will be in Ruby &#8230; ;-)
+</p>
+<table>
+<tr><td valign="top">value</td><td><p>
+Value to be checked.
+</p>
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="scalar-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/xmlsimple.rb, line 874</span>
+874:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">scalar</span>(<span class="ruby-identifier">value</span>)
+875:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">false</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>) <span class="ruby-operator">||</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>)
+876:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">true</span>
+877:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="set-var-method" class="method-detail ">
+				<a name="method-i-set_var"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">set_var</span><span
+						class="method-args">(name, value)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Called when a variable definition is encountered in the XML. A variable
+definition looks like
+</p>
+<pre>
+   &lt;element attrname=&quot;name&quot;&gt;value&lt;/element&gt;
+</pre>
+<p>
+where attrname matches the varattr setting.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="set-var-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/xmlsimple.rb, line 734</span>
+734:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">set_var</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">value</span>)
+735:     <span class="ruby-ivar">@_var_values</span>[<span class="ruby-identifier">name</span>] = <span class="ruby-identifier">value</span>
+736:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="value-to-xml-method" class="method-detail ">
+				<a name="method-i-value_to_xml"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">value_to_xml</span><span
+						class="method-args">(ref, name, indent)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Recurses through a data structure building up and returning an XML
+representation of that structure as a string.
+</p>
+<table>
+<tr><td valign="top">ref</td><td><p>
+Reference to the data structure to be encoded.
+</p>
+</td></tr>
+<tr><td valign="top">name</td><td><p>
+The XML tag name to be used for this item.
+</p>
+</td></tr>
+<tr><td valign="top">indent</td><td><p>
+A string of spaces for use as the current indent level.
+</p>
+</td></tr>
+</table>
+					
+
+					
+					<div class="method-source-code"
+						id="value-to-xml-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/xmlsimple.rb, line 757</span>
+757:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">value_to_xml</span>(<span class="ruby-identifier">ref</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">indent</span>)
+758:     <span class="ruby-identifier">named</span> = <span class="ruby-operator">!</span><span class="ruby-identifier">name</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">''</span>
+759:     <span class="ruby-identifier">nl</span>    = <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value str">'noindent'</span>) <span class="ruby-operator">?</span> <span class="ruby-value str">''</span> <span class="ruby-operator">:</span> <span class="ruby-value str">&quot;\n&quot;</span>
+760: 
+761:     <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">scalar</span>(<span class="ruby-identifier">ref</span>)
+762:       <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@ancestors</span>.<span class="ruby-identifier">member?</span>(<span class="ruby-identifier">ref</span>)
+763:         <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;Circular data structures not supported!&quot;</span>
+764:       <span class="ruby-keyword kw">end</span>
+765:       <span class="ruby-ivar">@ancestors</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">ref</span>
+766:     <span class="ruby-keyword kw">else</span>
+767:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">named</span>
+768:         <span class="ruby-keyword kw">return</span> [<span class="ruby-identifier">indent</span>, <span class="ruby-value str">'&lt;'</span>, <span class="ruby-identifier">name</span>, <span class="ruby-value str">'&gt;'</span>, <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'noescape'</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">ref</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">escape_value</span>(<span class="ruby-identifier">ref</span>.<span class="ruby-identifier">to_s</span>), <span class="ruby-value str">'&lt;/'</span>, <span class="ruby-identifier">name</span>, <span class="ruby-value str">'&gt;'</span>, <span class="ruby-identifier">nl</span>].<span class="ruby-identifier">join</span>(<span class="ruby-value str">''</span>)
+769:       <span class="ruby-keyword kw">else</span>
+770:         <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">ref</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">nl</span>
+771:       <span class="ruby-keyword kw">end</span>
+772:     <span class="ruby-keyword kw">end</span>
+773: 
+774:     <span class="ruby-comment cmt"># Unfold hash to array if possible.</span>
+775:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">ref</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-identifier">ref</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span><span class="ruby-ivar">@options</span>[<span class="ruby-value str">'keyattr'</span>].<span class="ruby-identifier">empty?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">indent</span> <span class="ruby-operator">!=</span> <span class="ruby-value str">''</span>
+776:       <span class="ruby-identifier">ref</span> = <span class="ruby-identifier">hash_to_array</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">ref</span>)
+777:     <span class="ruby-keyword kw">end</span>
+778: 
+779:     <span class="ruby-identifier">result</span> = []
+780:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">ref</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+781:       <span class="ruby-comment cmt"># Reintermediate grouped values if applicable.</span>
+782:       <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value str">'grouptags'</span>)
+783:         <span class="ruby-identifier">ref</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+784:           <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'grouptags'</span>].<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">key</span>)
+785:             <span class="ruby-identifier">ref</span>[<span class="ruby-identifier">key</span>] = { <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'grouptags'</span>][<span class="ruby-identifier">key</span>] =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">value</span> }
+786:           <span class="ruby-keyword kw">end</span>
+787:         }
+788:       <span class="ruby-keyword kw">end</span>
+789: 
+790:       <span class="ruby-identifier">nested</span> = []
+791:       <span class="ruby-identifier">text_content</span> = <span class="ruby-keyword kw">nil</span>
+792:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">named</span>
+793:         <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">indent</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">'&lt;'</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">name</span>
+794:       <span class="ruby-keyword kw">end</span>
+795: 
+796:       <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">ref</span>.<span class="ruby-identifier">empty?</span>
+797:         <span class="ruby-identifier">ref</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+798:           <span class="ruby-keyword kw">next</span> <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">key</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">key</span>.<span class="ruby-identifier">to_s</span>[<span class="ruby-value">0</span>, <span class="ruby-value">1</span>] <span class="ruby-operator">==</span> <span class="ruby-value str">'-'</span>
+799:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">nil?</span>
+800:             <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-value str">'suppressempty'</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'suppressempty'</span>].<span class="ruby-identifier">nil?</span>
+801:               <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-value str">&quot;Use of uninitialized value!&quot;</span>
+802:             <span class="ruby-keyword kw">end</span>
+803:             <span class="ruby-identifier">value</span> = {}
+804:           <span class="ruby-keyword kw">end</span>
+805: 
+806:           <span class="ruby-comment cmt"># Check for the '@' attribute prefix to allow separation of attributes and elements</span>
+807: 
+808:           <span class="ruby-keyword kw">if</span> (<span class="ruby-ivar">@options</span>[<span class="ruby-value str">'noattr'</span>] <span class="ruby-operator">||</span>
+809:               (<span class="ruby-ivar">@options</span>[<span class="ruby-value str">'attrprefix'</span>] <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-operator">!</span>(<span class="ruby-identifier">key</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/^@(.*)/</span>)) <span class="ruby-operator">||</span>
+810:               <span class="ruby-operator">!</span><span class="ruby-identifier">scalar</span>(<span class="ruby-identifier">value</span>)
+811:              ) <span class="ruby-operator">&amp;&amp;</span>
+812:              <span class="ruby-identifier">key</span> <span class="ruby-operator">!=</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'contentkey'</span>]
+813:             <span class="ruby-identifier">nested</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">value_to_xml</span>(<span class="ruby-identifier">value</span>, <span class="ruby-identifier">key</span>, <span class="ruby-identifier">indent</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'indent'</span>])
+814:           <span class="ruby-keyword kw">else</span>
+815:             <span class="ruby-identifier">value</span> = <span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_s</span>
+816:             <span class="ruby-identifier">value</span> = <span class="ruby-identifier">escape_value</span>(<span class="ruby-identifier">value</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'noescape'</span>]
+817:             <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">key</span> <span class="ruby-operator">==</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'contentkey'</span>]
+818:               <span class="ruby-identifier">text_content</span> = <span class="ruby-identifier">value</span>
+819:             <span class="ruby-keyword kw">else</span>
+820:               <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">' '</span> <span class="ruby-operator">&lt;&lt;</span> (<span class="ruby-node">$1</span><span class="ruby-operator">||</span><span class="ruby-identifier">key</span>) <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">'=&quot;'</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">value</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">'&quot;'</span>
+821:             <span class="ruby-keyword kw">end</span>
+822:           <span class="ruby-keyword kw">end</span>
+823:         }
+824:       <span class="ruby-keyword kw">else</span>
+825:         <span class="ruby-identifier">text_content</span> = <span class="ruby-value str">''</span>
+826:       <span class="ruby-keyword kw">end</span>
+827: 
+828:       <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">nested</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">||</span> <span class="ruby-operator">!</span><span class="ruby-identifier">text_content</span>.<span class="ruby-identifier">nil?</span>
+829:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">named</span>
+830:           <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">'&gt;'</span>
+831:           <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">text_content</span>.<span class="ruby-identifier">nil?</span>
+832:             <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">text_content</span>
+833:             <span class="ruby-identifier">nested</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">sub!</span>(<span class="ruby-regexp re">/^\s+/</span>, <span class="ruby-value str">''</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">nested</span>.<span class="ruby-identifier">empty?</span>
+834:           <span class="ruby-keyword kw">else</span>
+835:             <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">nl</span>
+836:           <span class="ruby-keyword kw">end</span>
+837:           <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">nested</span>.<span class="ruby-identifier">empty?</span>
+838:             <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">nested</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">indent</span>
+839:           <span class="ruby-keyword kw">end</span>
+840:           <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">'&lt;/'</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">'&gt;'</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">nl</span>
+841:         <span class="ruby-keyword kw">else</span>
+842:           <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">nested</span>
+843:         <span class="ruby-keyword kw">end</span>
+844:       <span class="ruby-keyword kw">else</span>
+845:         <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">' /&gt;'</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">nl</span>
+846:       <span class="ruby-keyword kw">end</span>
+847:     <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">ref</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Array</span>)
+848:       <span class="ruby-identifier">ref</span>.<span class="ruby-identifier">each</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+849:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">scalar</span>(<span class="ruby-identifier">value</span>)
+850:           <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">indent</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">'&lt;'</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">'&gt;'</span>
+851:           <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> (<span class="ruby-ivar">@options</span>[<span class="ruby-value str">'noescape'</span>] <span class="ruby-operator">?</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_s</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">escape_value</span>(<span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_s</span>))
+852:           <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">'&lt;/'</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">'&gt;'</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">nl</span>
+853:         <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-constant">Hash</span>)
+854:           <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">value_to_xml</span>(<span class="ruby-identifier">value</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">indent</span>)
+855:         <span class="ruby-keyword kw">else</span>
+856:           <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">indent</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">'&lt;'</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">'&gt;'</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">nl</span>
+857:           <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">value_to_xml</span>(<span class="ruby-identifier">value</span>, <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'anonymoustag'</span>], <span class="ruby-identifier">indent</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@options</span>[<span class="ruby-value str">'indent'</span>])
+858:           <span class="ruby-identifier">result</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">indent</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">'&lt;/'</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">'&gt;'</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">nl</span>
+859:         <span class="ruby-keyword kw">end</span>
+860:       }
+861:     <span class="ruby-keyword kw">else</span>
+862:       <span class="ruby-comment cmt"># Probably, this is obsolete.</span>
+863:       <span class="ruby-identifier">raise</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-node">&quot;Can't encode a value of type: #{ref.type}.&quot;</span>
+864:     <span class="ruby-keyword kw">end</span>
+865:     <span class="ruby-ivar">@ancestors</span>.<span class="ruby-identifier">pop</span> <span class="ruby-keyword kw">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">scalar</span>(<span class="ruby-identifier">ref</span>)
+866:     <span class="ruby-identifier">result</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">''</span>)
+867:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Hoe::Package</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/hoe/package_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/hoe/package.rb">lib/hoe/package.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-define_package_tasks">#define_package_tasks</a></li>
+					
+					<li><a href="#method-i-initialize_package">#initialize_package</a></li>
+					
+					<li><a href="#method-i-install_gem">#install_gem</a></li>
+					
+					<li><a href="#method-i-pkg_path">#pkg_path</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../History_txt.html">History.txt</a></li>
+				
+					<li class="file"><a href="../Manifest_txt.html">Manifest.txt</a></li>
+				
+					<li class="file"><a href="../README_txt.html">README.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Hoe.html">Hoe</a></li>
+				
+					<li><a href="../Hoe/Clean.html">Hoe::Clean</a></li>
+				
+					<li><a href="../Hoe/Compiler.html">Hoe::Compiler</a></li>
+				
+					<li><a href="../Hoe/Debug.html">Hoe::Debug</a></li>
+				
+					<li><a href="../Hoe/Deps.html">Hoe::Deps</a></li>
+				
+					<li><a href="../Hoe/Flay.html">Hoe::Flay</a></li>
+				
+					<li><a href="../Hoe/Flog.html">Hoe::Flog</a></li>
+				
+					<li><a href="../Hoe/GemPreludeSucks.html">Hoe::GemPreludeSucks</a></li>
+				
+					<li><a href="../Hoe/Gemcutter.html">Hoe::Gemcutter</a></li>
+				
+					<li><a href="../Hoe/Inline.html">Hoe::Inline</a></li>
+				
+					<li><a href="../Hoe/Newb.html">Hoe::Newb</a></li>
+				
+					<li><a href="../Hoe/Package.html">Hoe::Package</a></li>
+				
+					<li><a href="../Hoe/Publish.html">Hoe::Publish</a></li>
+				
+					<li><a href="../Hoe/RCov.html">Hoe::RCov</a></li>
+				
+					<li><a href="../Hoe/Racc.html">Hoe::Racc</a></li>
+				
+					<li><a href="../Hoe/RubyForge.html">Hoe::RubyForge</a></li>
+				
+					<li><a href="../Hoe/Signing.html">Hoe::Signing</a></li>
+				
+					<li><a href="../Hoe/Test.html">Hoe::Test</a></li>
+				
+					<li><a href="../Rake.html">Rake</a></li>
+				
+					<li><a href="../Rake/Task.html">Rake::Task</a></li>
+				
+					<li><a href="../Rake/TaskManager.html">Rake::TaskManager</a></li>
+				
+					<li><a href="../File.html">File</a></li>
+				
+					<li><a href="../Gem.html">Gem</a></li>
+				
+					<li><a href="../String.html">String</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Hoe::Package</h1>
+
+		<div id="description">
+			<p>
+<a href="Package.html">Package</a> plugin for hoe.
+</p>
+<h3>Tasks Provided:</h3>
+<table>
+<tr><td valign="top"><a href="Package.html#method-i-install_gem">install_gem</a></td><td><p>
+Install the package as a gem.
+</p>
+</td></tr>
+<tr><td valign="top">prerelease</td><td><p>
+Hook for pre-release actions like sanity checks.
+</p>
+</td></tr>
+<tr><td valign="top">postrelease</td><td><p>
+Hook for post-release actions like release announcements.
+</p>
+</td></tr>
+<tr><td valign="top">release</td><td><p>
+<a href="Package.html">Package</a> and upload the release.
+</p>
+</td></tr>
+</table>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="need-tar-attribute-method" class="method-detail">
+				<a name="need_tar"></a>
+				
+				<a name="need_tar="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">need_tar</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Optional: Should package create a tarball? [default: true]
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="need-zip-attribute-method" class="method-detail">
+				<a name="need_zip"></a>
+				
+				<a name="need_zip="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">need_zip</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Optional: Should package create a zipfile? [default: false]
+</p>
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="define-package-tasks-method" class="method-detail ">
+				<a name="method-i-define_package_tasks"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">define_package_tasks</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Define tasks for plugin.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="define-package-tasks-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/hoe/package.rb, line 41</span>
+41:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">define_package_tasks</span>
+42:     <span class="ruby-identifier">prerelease_version</span>
+43: 
+44:     <span class="ruby-constant">Gem</span><span class="ruby-operator">::</span><span class="ruby-constant">PackageTask</span>.<span class="ruby-identifier">new</span> <span class="ruby-identifier">spec</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">pkg</span><span class="ruby-operator">|</span>
+45:       <span class="ruby-identifier">pkg</span>.<span class="ruby-identifier">need_tar</span> = <span class="ruby-ivar">@need_tar</span>
+46:       <span class="ruby-identifier">pkg</span>.<span class="ruby-identifier">need_zip</span> = <span class="ruby-ivar">@need_zip</span>
+47:     <span class="ruby-keyword kw">end</span>
+48: 
+49:     <span class="ruby-identifier">desc</span> <span class="ruby-value str">'Install the package as a gem. (opt. NOSUDO=1)'</span>
+50:     <span class="ruby-identifier">task</span> <span class="ruby-value">:install_gem</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">:clean</span>, <span class="ruby-value">:package</span>, <span class="ruby-value">:check_extra_deps</span>] <span class="ruby-keyword kw">do</span>
+51:       <span class="ruby-identifier">install_gem</span> <span class="ruby-constant">Dir</span>[<span class="ruby-value str">'pkg/*.gem'</span>].<span class="ruby-identifier">first</span>
+52:     <span class="ruby-keyword kw">end</span>
+53: 
+54:     <span class="ruby-identifier">desc</span> <span class="ruby-value str">'Package and upload; Requires VERSION=x.y.z (optional PRE=a.1)'</span>
+55:     <span class="ruby-identifier">task</span> <span class="ruby-value">:release</span> =<span class="ruby-operator">&gt;</span> [<span class="ruby-value">:prerelease</span>, <span class="ruby-value">:release_to</span>, <span class="ruby-value">:postrelease</span>]
+56: 
+57:     <span class="ruby-comment cmt"># no doco, invisible hook</span>
+58:     <span class="ruby-identifier">task</span> <span class="ruby-value">:prerelease</span> <span class="ruby-keyword kw">do</span>
+59:       <span class="ruby-identifier">abort</span> <span class="ruby-value str">&quot;Fix your version before you release&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">spec</span>.<span class="ruby-identifier">version</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp re">/borked/</span>
+60:     <span class="ruby-keyword kw">end</span>
+61: 
+62:     <span class="ruby-comment cmt"># no doco, invisible hook</span>
+63:     <span class="ruby-identifier">task</span> <span class="ruby-value">:release_to</span>
+64: 
+65:     <span class="ruby-comment cmt"># no doco, invisible hook</span>
+66:     <span class="ruby-identifier">task</span> <span class="ruby-value">:postrelease</span>
+67: 
+68:     <span class="ruby-identifier">desc</span> <span class="ruby-value str">&quot;Sanity checks for release&quot;</span>
+69:     <span class="ruby-identifier">task</span> <span class="ruby-value">:release_sanity</span> <span class="ruby-keyword kw">do</span>
+70:       <span class="ruby-identifier">v</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-value str">&quot;VERSION&quot;</span>] <span class="ruby-keyword kw">or</span> <span class="ruby-identifier">abort</span> <span class="ruby-value str">&quot;Must supply VERSION=x.y.z&quot;</span>
+71: 
+72:       <span class="ruby-identifier">pre</span> = <span class="ruby-constant">ENV</span>[<span class="ruby-value str">'PRERELEASE'</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">ENV</span>[<span class="ruby-value str">'PRE'</span>]
+73:       <span class="ruby-identifier">v</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot;.#{pre}&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">pre</span>
+74: 
+75:       <span class="ruby-identifier">abort</span> <span class="ruby-node">&quot;Versions don't match #{v} vs #{version}&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">v</span> <span class="ruby-operator">!=</span> <span class="ruby-identifier">version</span>
+76:     <span class="ruby-keyword kw">end</span>
+77:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="initialize-package-method" class="method-detail ">
+				<a name="method-i-initialize_package"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">initialize_package</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Initialize variables for plugin.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="initialize-package-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/hoe/package.rb, line 33</span>
+33:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize_package</span>
+34:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">need_tar</span> <span class="ruby-operator">||=</span> <span class="ruby-keyword kw">false</span>
+35:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">need_zip</span> <span class="ruby-operator">||=</span> <span class="ruby-keyword kw">false</span>
+36:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="install-gem-method" class="method-detail ">
+				<a name="method-i-install_gem"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">install_gem</span><span
+						class="method-args">(name, version = nil, rdoc=true)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Install the named gem.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="install-gem-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe/package.rb, line 90</span>
+ 90:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">install_gem</span> <span class="ruby-identifier">name</span>, <span class="ruby-identifier">version</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">rdoc</span>=<span class="ruby-keyword kw">true</span>
+ 91:     <span class="ruby-identifier">should_not_sudo</span> = <span class="ruby-constant">Hoe</span><span class="ruby-operator">::</span><span class="ruby-constant">WINDOZE</span> <span class="ruby-operator">||</span> <span class="ruby-constant">ENV</span>[<span class="ruby-value str">&quot;NOSUDO&quot;</span>] <span class="ruby-operator">||</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">writable?</span>(<span class="ruby-constant">Gem</span>.<span class="ruby-identifier">dir</span>)
+ 92:     <span class="ruby-identifier">null_dev</span> = <span class="ruby-constant">Hoe</span><span class="ruby-operator">::</span><span class="ruby-constant">WINDOZE</span> <span class="ruby-operator">?</span> <span class="ruby-value str">'&gt; NUL 2&gt;&amp;1'</span> <span class="ruby-operator">:</span> <span class="ruby-value str">'&amp;&gt; /dev/null'</span>
+ 93: 
+ 94:     <span class="ruby-identifier">gem_cmd</span> = <span class="ruby-constant">Gem</span>.<span class="ruby-identifier">default_exec_format</span> <span class="ruby-operator">%</span> <span class="ruby-value str">'gem'</span>
+ 95:     <span class="ruby-identifier">sudo</span>    = <span class="ruby-value str">'sudo '</span>                  <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">should_not_sudo</span>
+ 96:     <span class="ruby-identifier">local</span>   = <span class="ruby-value str">'--local'</span>                <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">version</span>
+ 97:     <span class="ruby-identifier">version</span> = <span class="ruby-node">&quot;--version '#{version}'&quot;</span> <span class="ruby-keyword kw">if</span>     <span class="ruby-identifier">version</span>
+ 98: 
+ 99:     <span class="ruby-identifier">cmd</span>  = <span class="ruby-node">&quot;#{sudo}#{gem_cmd} install #{local} #{name} #{version}&quot;</span>
+100:     <span class="ruby-identifier">cmd</span> <span class="ruby-operator">+=</span> <span class="ruby-value str">&quot; --no-rdoc --no-ri&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">rdoc</span>
+101:     <span class="ruby-identifier">cmd</span> <span class="ruby-operator">+=</span> <span class="ruby-node">&quot; #{null_dev}&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-constant">Rake</span>.<span class="ruby-identifier">application</span>.<span class="ruby-identifier">options</span>.<span class="ruby-identifier">trace</span>
+102: 
+103:     <span class="ruby-identifier">puts</span> <span class="ruby-identifier">cmd</span> <span class="ruby-keyword kw">if</span> <span class="ruby-constant">Rake</span>.<span class="ruby-identifier">application</span>.<span class="ruby-identifier">options</span>.<span class="ruby-identifier">trace</span>
+104:     <span class="ruby-identifier">system</span> <span class="ruby-identifier">cmd</span>
+105:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="pkg-path-method" class="method-detail ">
+				<a name="method-i-pkg_path"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">pkg_path</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Returns the path used for packaging. Convenience method for those that need
+to write a package hook.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="pkg-path-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/hoe/package.rb, line 83</span>
+83:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">pkg_path</span>
+84:     <span class="ruby-node">&quot;pkg/#{spec.full_name}&quot;</span>
+85:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>File: subexec.rb [subexec-0.0.4 Documentation]</title>
+
+	<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+</head>
+
+<body class="file file-popup">
+	<div id="metadata">
+		<dl>
+			<dt class="modified-date">Last Modified</dt>
+			<dd class="modified-date">2012-08-23 00:45:52 -0700</dd>
+
+			
+			<dt class="requires">Requires</dt>
+			<dd class="requires">
+				<ul>
+				
+				</ul>
+			</dd>
+			
+
+			
+		</dl>
+	</div>
+
+	<div id="documentation">
+		
+		<div class="description">
+			<h2>Description</h2>
+			<h1><a href="../Subexec.html">Subexec</a></h1>
+<ul>
+<li><p>
+by Peter Kieltyka
+</p>
+</li>
+<li><p>
+<a href="http://github/nulayer/subprocess">github/nulayer/subprocess</a>
+</p>
+</li>
+</ul>
+<h3>Description</h3>
+<p>
+<a href="../Subexec.html">Subexec</a> is a simple library that spawns an
+external command with an optional timeout parameter. It relies on Ruby
+1.9&#8217;s Process.spawn method. Also, it works with synchronous and
+asynchronous code.
+</p>
+<p>
+Useful for libraries that are Ruby wrappers for CLI&#8217;s. For example,
+resizing images with ImageMagick&#8217;s mogrify command sometimes stalls
+and never returns control back to the original process. <a
+href="../Subexec.html">Subexec</a> executes mogrify and preempts if gets
+lost.
+</p>
+<h3>Usage</h3>
+<p>
+# Print hello sub = Subexec.run &#8220;echo &#8216;hello&#8217; &amp;&amp;
+sleep 3&#8221;, :timeout => 5 puts sub.output     # returns: hello puts
+sub.exitstatus # returns: 0
+</p>
+<p>
+# Timeout process after a second sub = Subexec.run &#8220;echo
+&#8216;hello&#8217; &amp;&amp; sleep 3&#8221;, :timeout => 1 puts
+sub.output     # returns:  puts sub.exitstatus # returns:
+</p>
+
+		</div>
+		
+	</div>
+</body>
+</html>
+

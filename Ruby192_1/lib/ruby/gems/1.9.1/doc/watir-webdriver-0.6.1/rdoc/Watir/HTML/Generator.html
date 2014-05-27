@@ -1,0 +1,1007 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: Watir::HTML::Generator</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/watir-webdriver/html/generator_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/watir-webdriver/html/generator.rb">lib/watir-webdriver/html/generator.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link"><a href="../Object.html">Watir::Object</a></p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-cleanup_spec">#cleanup_spec</a></li>
+					
+					<li><a href="#method-i-extract_spec">#extract_spec</a></li>
+					
+					<li><a href="#method-i-extractor">#extractor</a></li>
+					
+					<li><a href="#method-i-generate">#generate</a></li>
+					
+					<li><a href="#method-i-generator">#generator</a></li>
+					
+					<li><a href="#method-i-indent">#indent</a></li>
+					
+					<li><a href="#method-i-visitor">#visitor</a></li>
+					
+					<li><a href="#method-i-write_class_defs">#write_class_defs</a></li>
+					
+					<li><a href="#method-i-write_container_methods">#write_container_methods</a></li>
+					
+					<li><a href="#method-i-write_footer">#write_footer</a></li>
+					
+					<li><a href="#method-i-write_header">#write_header</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../../lib/watir-webdriver/atoms/README.html">README</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../Watir.html">Watir</a></li>
+				
+					<li><a href="../../Watir/Alert.html">Watir::Alert</a></li>
+				
+					<li><a href="../../Watir/AlertHelper.html">Watir::AlertHelper</a></li>
+				
+					<li><a href="../../Watir/Anchor.html">Watir::Anchor</a></li>
+				
+					<li><a href="../../Watir/AnchorCollection.html">Watir::AnchorCollection</a></li>
+				
+					<li><a href="../../Watir/Applet.html">Watir::Applet</a></li>
+				
+					<li><a href="../../Watir/AppletCollection.html">Watir::AppletCollection</a></li>
+				
+					<li><a href="../../Watir/Area.html">Watir::Area</a></li>
+				
+					<li><a href="../../Watir/AreaCollection.html">Watir::AreaCollection</a></li>
+				
+					<li><a href="../../Watir/Atoms.html">Watir::Atoms</a></li>
+				
+					<li><a href="../../Watir/AttributeHelper.html">Watir::AttributeHelper</a></li>
+				
+					<li><a href="../../Watir/Audio.html">Watir::Audio</a></li>
+				
+					<li><a href="../../Watir/AudioCollection.html">Watir::AudioCollection</a></li>
+				
+					<li><a href="../../Watir/BR.html">Watir::BR</a></li>
+				
+					<li><a href="../../Watir/BRCollection.html">Watir::BRCollection</a></li>
+				
+					<li><a href="../../Watir/Base.html">Watir::Base</a></li>
+				
+					<li><a href="../../Watir/BaseCollection.html">Watir::BaseCollection</a></li>
+				
+					<li><a href="../../Watir/BaseFont.html">Watir::BaseFont</a></li>
+				
+					<li><a href="../../Watir/BaseFontCollection.html">Watir::BaseFontCollection</a></li>
+				
+					<li><a href="../../Watir/Body.html">Watir::Body</a></li>
+				
+					<li><a href="../../Watir/BodyCollection.html">Watir::BodyCollection</a></li>
+				
+					<li><a href="../../Watir/Browser.html">Watir::Browser</a></li>
+				
+					<li><a href="../../Watir/Button.html">Watir::Button</a></li>
+				
+					<li><a href="../../Watir/ButtonCollection.html">Watir::ButtonCollection</a></li>
+				
+					<li><a href="../../Watir/ButtonLocator.html">Watir::ButtonLocator</a></li>
+				
+					<li><a href="../../Watir/Canvas.html">Watir::Canvas</a></li>
+				
+					<li><a href="../../Watir/CanvasCollection.html">Watir::CanvasCollection</a></li>
+				
+					<li><a href="../../Watir/CellContainer.html">Watir::CellContainer</a></li>
+				
+					<li><a href="../../Watir/CheckBox.html">Watir::CheckBox</a></li>
+				
+					<li><a href="../../Watir/CheckBoxCollection.html">Watir::CheckBoxCollection</a></li>
+				
+					<li><a href="../../Watir/ChildCellLocator.html">Watir::ChildCellLocator</a></li>
+				
+					<li><a href="../../Watir/ChildRowLocator.html">Watir::ChildRowLocator</a></li>
+				
+					<li><a href="../../Watir/Command.html">Watir::Command</a></li>
+				
+					<li><a href="../../Watir/CommandCollection.html">Watir::CommandCollection</a></li>
+				
+					<li><a href="../../Watir/Container.html">Watir::Container</a></li>
+				
+					<li><a href="../../Watir/Cookies.html">Watir::Cookies</a></li>
+				
+					<li><a href="../../Watir/DList.html">Watir::DList</a></li>
+				
+					<li><a href="../../Watir/DListCollection.html">Watir::DListCollection</a></li>
+				
+					<li><a href="../../Watir/Data.html">Watir::Data</a></li>
+				
+					<li><a href="../../Watir/DataCollection.html">Watir::DataCollection</a></li>
+				
+					<li><a href="../../Watir/DataList.html">Watir::DataList</a></li>
+				
+					<li><a href="../../Watir/DataListCollection.html">Watir::DataListCollection</a></li>
+				
+					<li><a href="../../Watir/Details.html">Watir::Details</a></li>
+				
+					<li><a href="../../Watir/DetailsCollection.html">Watir::DetailsCollection</a></li>
+				
+					<li><a href="../../Watir/Dialog.html">Watir::Dialog</a></li>
+				
+					<li><a href="../../Watir/DialogCollection.html">Watir::DialogCollection</a></li>
+				
+					<li><a href="../../Watir/Directory.html">Watir::Directory</a></li>
+				
+					<li><a href="../../Watir/DirectoryCollection.html">Watir::DirectoryCollection</a></li>
+				
+					<li><a href="../../Watir/Div.html">Watir::Div</a></li>
+				
+					<li><a href="../../Watir/DivCollection.html">Watir::DivCollection</a></li>
+				
+					<li><a href="../../Watir/Element.html">Watir::Element</a></li>
+				
+					<li><a href="../../Watir/ElementCollection.html">Watir::ElementCollection</a></li>
+				
+					<li><a href="../../Watir/ElementLocator.html">Watir::ElementLocator</a></li>
+				
+					<li><a href="../../Watir/Embed.html">Watir::Embed</a></li>
+				
+					<li><a href="../../Watir/EmbedCollection.html">Watir::EmbedCollection</a></li>
+				
+					<li><a href="../../Watir/EventuallyPresent.html">Watir::EventuallyPresent</a></li>
+				
+					<li><a href="../../Watir/Exception.html">Watir::Exception</a></li>
+				
+					<li><a href="../../Watir/Exception/Error.html">Watir::Exception::Error</a></li>
+				
+					<li><a href="../../Watir/Exception/MissingWayOfFindingObjectException.html">Watir::Exception::MissingWayOfFindingObjectException</a></li>
+				
+					<li><a href="../../Watir/Exception/NavigationException.html">Watir::Exception::NavigationException</a></li>
+				
+					<li><a href="../../Watir/Exception/NoMatchingWindowFoundException.html">Watir::Exception::NoMatchingWindowFoundException</a></li>
+				
+					<li><a href="../../Watir/Exception/NoStatusBarException.html">Watir::Exception::NoStatusBarException</a></li>
+				
+					<li><a href="../../Watir/Exception/NoValueFoundException.html">Watir::Exception::NoValueFoundException</a></li>
+				
+					<li><a href="../../Watir/Exception/ObjectDisabledException.html">Watir::Exception::ObjectDisabledException</a></li>
+				
+					<li><a href="../../Watir/Exception/ObjectReadOnlyException.html">Watir::Exception::ObjectReadOnlyException</a></li>
+				
+					<li><a href="../../Watir/Exception/UnknownCellException.html">Watir::Exception::UnknownCellException</a></li>
+				
+					<li><a href="../../Watir/Exception/UnknownFrameException.html">Watir::Exception::UnknownFrameException</a></li>
+				
+					<li><a href="../../Watir/Exception/UnknownObjectException.html">Watir::Exception::UnknownObjectException</a></li>
+				
+					<li><a href="../../Watir/Exception/UnknownRowException.html">Watir::Exception::UnknownRowException</a></li>
+				
+					<li><a href="../../Watir/FieldSet.html">Watir::FieldSet</a></li>
+				
+					<li><a href="../../Watir/FieldSetCollection.html">Watir::FieldSetCollection</a></li>
+				
+					<li><a href="../../Watir/FileField.html">Watir::FileField</a></li>
+				
+					<li><a href="../../Watir/FileFieldCollection.html">Watir::FileFieldCollection</a></li>
+				
+					<li><a href="../../Watir/Font.html">Watir::Font</a></li>
+				
+					<li><a href="../../Watir/FontCollection.html">Watir::FontCollection</a></li>
+				
+					<li><a href="../../Watir/Form.html">Watir::Form</a></li>
+				
+					<li><a href="../../Watir/FormCollection.html">Watir::FormCollection</a></li>
+				
+					<li><a href="../../Watir/Frame.html">Watir::Frame</a></li>
+				
+					<li><a href="../../Watir/FrameCollection.html">Watir::FrameCollection</a></li>
+				
+					<li><a href="../../Watir/FrameSet.html">Watir::FrameSet</a></li>
+				
+					<li><a href="../../Watir/FrameSetCollection.html">Watir::FrameSetCollection</a></li>
+				
+					<li><a href="../../Watir/FramedDriver.html">Watir::FramedDriver</a></li>
+				
+					<li><a href="../../Watir/HR.html">Watir::HR</a></li>
+				
+					<li><a href="../../Watir/HRCollection.html">Watir::HRCollection</a></li>
+				
+					<li><a href="../../Watir/HTML.html">Watir::HTML</a></li>
+				
+					<li><a href="../../Watir/HTML/Generator.html">Watir::HTML::Generator</a></li>
+				
+					<li><a href="../../Watir/HTML/IDLSorter.html">Watir::HTML::IDLSorter</a></li>
+				
+					<li><a href="../../Watir/HTML/SpecExtractor.html">Watir::HTML::SpecExtractor</a></li>
+				
+					<li><a href="../../Watir/HTML/Util.html">Watir::HTML::Util</a></li>
+				
+					<li><a href="../../Watir/HTML/Visitor.html">Watir::HTML::Visitor</a></li>
+				
+					<li><a href="../../Watir/HTMLElement.html">Watir::HTMLElement</a></li>
+				
+					<li><a href="../../Watir/HTMLElementCollection.html">Watir::HTMLElementCollection</a></li>
+				
+					<li><a href="../../Watir/HasWindow.html">Watir::HasWindow</a></li>
+				
+					<li><a href="../../Watir/Head.html">Watir::Head</a></li>
+				
+					<li><a href="../../Watir/HeadCollection.html">Watir::HeadCollection</a></li>
+				
+					<li><a href="../../Watir/Heading.html">Watir::Heading</a></li>
+				
+					<li><a href="../../Watir/HeadingCollection.html">Watir::HeadingCollection</a></li>
+				
+					<li><a href="../../Watir/Hidden.html">Watir::Hidden</a></li>
+				
+					<li><a href="../../Watir/HiddenCollection.html">Watir::HiddenCollection</a></li>
+				
+					<li><a href="../../Watir/Html.html">Watir::Html</a></li>
+				
+					<li><a href="../../Watir/HtmlCollection.html">Watir::HtmlCollection</a></li>
+				
+					<li><a href="../../Watir/IFrame.html">Watir::IFrame</a></li>
+				
+					<li><a href="../../Watir/IFrameCollection.html">Watir::IFrameCollection</a></li>
+				
+					<li><a href="../../Watir/Image.html">Watir::Image</a></li>
+				
+					<li><a href="../../Watir/ImageCollection.html">Watir::ImageCollection</a></li>
+				
+					<li><a href="../../Watir/Input.html">Watir::Input</a></li>
+				
+					<li><a href="../../Watir/InputCollection.html">Watir::InputCollection</a></li>
+				
+					<li><a href="../../Watir/Keygen.html">Watir::Keygen</a></li>
+				
+					<li><a href="../../Watir/KeygenCollection.html">Watir::KeygenCollection</a></li>
+				
+					<li><a href="../../Watir/LI.html">Watir::LI</a></li>
+				
+					<li><a href="../../Watir/LICollection.html">Watir::LICollection</a></li>
+				
+					<li><a href="../../Watir/Label.html">Watir::Label</a></li>
+				
+					<li><a href="../../Watir/LabelCollection.html">Watir::LabelCollection</a></li>
+				
+					<li><a href="../../Watir/Legend.html">Watir::Legend</a></li>
+				
+					<li><a href="../../Watir/LegendCollection.html">Watir::LegendCollection</a></li>
+				
+					<li><a href="../../Watir/Map.html">Watir::Map</a></li>
+				
+					<li><a href="../../Watir/MapCollection.html">Watir::MapCollection</a></li>
+				
+					<li><a href="../../Watir/Marquee.html">Watir::Marquee</a></li>
+				
+					<li><a href="../../Watir/MarqueeCollection.html">Watir::MarqueeCollection</a></li>
+				
+					<li><a href="../../Watir/Media.html">Watir::Media</a></li>
+				
+					<li><a href="../../Watir/MediaCollection.html">Watir::MediaCollection</a></li>
+				
+					<li><a href="../../Watir/Menu.html">Watir::Menu</a></li>
+				
+					<li><a href="../../Watir/MenuCollection.html">Watir::MenuCollection</a></li>
+				
+					<li><a href="../../Watir/Meta.html">Watir::Meta</a></li>
+				
+					<li><a href="../../Watir/MetaCollection.html">Watir::MetaCollection</a></li>
+				
+					<li><a href="../../Watir/Meter.html">Watir::Meter</a></li>
+				
+					<li><a href="../../Watir/MeterCollection.html">Watir::MeterCollection</a></li>
+				
+					<li><a href="../../Watir/Mod.html">Watir::Mod</a></li>
+				
+					<li><a href="../../Watir/ModCollection.html">Watir::ModCollection</a></li>
+				
+					<li><a href="../../Watir/OList.html">Watir::OList</a></li>
+				
+					<li><a href="../../Watir/OListCollection.html">Watir::OListCollection</a></li>
+				
+					<li><a href="../../Watir/Object.html">Watir::Object</a></li>
+				
+					<li><a href="../../Watir/ObjectCollection.html">Watir::ObjectCollection</a></li>
+				
+					<li><a href="../../Watir/OptGroup.html">Watir::OptGroup</a></li>
+				
+					<li><a href="../../Watir/OptGroupCollection.html">Watir::OptGroupCollection</a></li>
+				
+					<li><a href="../../Watir/Option.html">Watir::Option</a></li>
+				
+					<li><a href="../../Watir/OptionCollection.html">Watir::OptionCollection</a></li>
+				
+					<li><a href="../../Watir/Output.html">Watir::Output</a></li>
+				
+					<li><a href="../../Watir/OutputCollection.html">Watir::OutputCollection</a></li>
+				
+					<li><a href="../../Watir/Paragraph.html">Watir::Paragraph</a></li>
+				
+					<li><a href="../../Watir/ParagraphCollection.html">Watir::ParagraphCollection</a></li>
+				
+					<li><a href="../../Watir/Param.html">Watir::Param</a></li>
+				
+					<li><a href="../../Watir/ParamCollection.html">Watir::ParamCollection</a></li>
+				
+					<li><a href="../../Watir/Pre.html">Watir::Pre</a></li>
+				
+					<li><a href="../../Watir/PreCollection.html">Watir::PreCollection</a></li>
+				
+					<li><a href="../../Watir/Progress.html">Watir::Progress</a></li>
+				
+					<li><a href="../../Watir/ProgressCollection.html">Watir::ProgressCollection</a></li>
+				
+					<li><a href="../../Watir/Quote.html">Watir::Quote</a></li>
+				
+					<li><a href="../../Watir/QuoteCollection.html">Watir::QuoteCollection</a></li>
+				
+					<li><a href="../../Watir/Radio.html">Watir::Radio</a></li>
+				
+					<li><a href="../../Watir/RadioCollection.html">Watir::RadioCollection</a></li>
+				
+					<li><a href="../../Watir/RowContainer.html">Watir::RowContainer</a></li>
+				
+					<li><a href="../../Watir/Screenshot.html">Watir::Screenshot</a></li>
+				
+					<li><a href="../../Watir/Script.html">Watir::Script</a></li>
+				
+					<li><a href="../../Watir/ScriptCollection.html">Watir::ScriptCollection</a></li>
+				
+					<li><a href="../../Watir/Select.html">Watir::Select</a></li>
+				
+					<li><a href="../../Watir/SelectCollection.html">Watir::SelectCollection</a></li>
+				
+					<li><a href="../../Watir/Source.html">Watir::Source</a></li>
+				
+					<li><a href="../../Watir/SourceCollection.html">Watir::SourceCollection</a></li>
+				
+					<li><a href="../../Watir/Span.html">Watir::Span</a></li>
+				
+					<li><a href="../../Watir/SpanCollection.html">Watir::SpanCollection</a></li>
+				
+					<li><a href="../../Watir/Style.html">Watir::Style</a></li>
+				
+					<li><a href="../../Watir/StyleCollection.html">Watir::StyleCollection</a></li>
+				
+					<li><a href="../../Watir/Table.html">Watir::Table</a></li>
+				
+					<li><a href="../../Watir/TableCaption.html">Watir::TableCaption</a></li>
+				
+					<li><a href="../../Watir/TableCaptionCollection.html">Watir::TableCaptionCollection</a></li>
+				
+					<li><a href="../../Watir/TableCell.html">Watir::TableCell</a></li>
+				
+					<li><a href="../../Watir/TableCellCollection.html">Watir::TableCellCollection</a></li>
+				
+					<li><a href="../../Watir/TableCol.html">Watir::TableCol</a></li>
+				
+					<li><a href="../../Watir/TableColCollection.html">Watir::TableColCollection</a></li>
+				
+					<li><a href="../../Watir/TableCollection.html">Watir::TableCollection</a></li>
+				
+					<li><a href="../../Watir/TableDataCell.html">Watir::TableDataCell</a></li>
+				
+					<li><a href="../../Watir/TableDataCellCollection.html">Watir::TableDataCellCollection</a></li>
+				
+					<li><a href="../../Watir/TableHeaderCell.html">Watir::TableHeaderCell</a></li>
+				
+					<li><a href="../../Watir/TableHeaderCellCollection.html">Watir::TableHeaderCellCollection</a></li>
+				
+					<li><a href="../../Watir/TableRow.html">Watir::TableRow</a></li>
+				
+					<li><a href="../../Watir/TableRowCollection.html">Watir::TableRowCollection</a></li>
+				
+					<li><a href="../../Watir/TableSection.html">Watir::TableSection</a></li>
+				
+					<li><a href="../../Watir/TableSectionCollection.html">Watir::TableSectionCollection</a></li>
+				
+					<li><a href="../../Watir/TextArea.html">Watir::TextArea</a></li>
+				
+					<li><a href="../../Watir/TextAreaCollection.html">Watir::TextAreaCollection</a></li>
+				
+					<li><a href="../../Watir/TextField.html">Watir::TextField</a></li>
+				
+					<li><a href="../../Watir/TextFieldCollection.html">Watir::TextFieldCollection</a></li>
+				
+					<li><a href="../../Watir/TextFieldLocator.html">Watir::TextFieldLocator</a></li>
+				
+					<li><a href="../../Watir/Time.html">Watir::Time</a></li>
+				
+					<li><a href="../../Watir/TimeCollection.html">Watir::TimeCollection</a></li>
+				
+					<li><a href="../../Watir/Title.html">Watir::Title</a></li>
+				
+					<li><a href="../../Watir/TitleCollection.html">Watir::TitleCollection</a></li>
+				
+					<li><a href="../../Watir/Track.html">Watir::Track</a></li>
+				
+					<li><a href="../../Watir/TrackCollection.html">Watir::TrackCollection</a></li>
+				
+					<li><a href="../../Watir/UList.html">Watir::UList</a></li>
+				
+					<li><a href="../../Watir/UListCollection.html">Watir::UListCollection</a></li>
+				
+					<li><a href="../../Watir/Unknown.html">Watir::Unknown</a></li>
+				
+					<li><a href="../../Watir/UnknownCollection.html">Watir::UnknownCollection</a></li>
+				
+					<li><a href="../../Watir/UserEditable.html">Watir::UserEditable</a></li>
+				
+					<li><a href="../../Watir/Video.html">Watir::Video</a></li>
+				
+					<li><a href="../../Watir/VideoCollection.html">Watir::VideoCollection</a></li>
+				
+					<li><a href="../../Watir/Wait.html">Watir::Wait</a></li>
+				
+					<li><a href="../../Watir/Wait/TimeoutError.html">Watir::Wait::TimeoutError</a></li>
+				
+					<li><a href="../../Watir/Waitable.html">Watir::Waitable</a></li>
+				
+					<li><a href="../../Watir/WhenPresentDecorator.html">Watir::WhenPresentDecorator</a></li>
+				
+					<li><a href="../../Watir/Window.html">Watir::Window</a></li>
+				
+					<li><a href="../../Watir/XpathSupport.html">Watir::XpathSupport</a></li>
+				
+					<li><a href="../../YARD.html">YARD</a></li>
+				
+					<li><a href="../../YARD/Handlers.html">YARD::Handlers</a></li>
+				
+					<li><a href="../../YARD/Handlers/Watir.html">YARD::Handlers::Watir</a></li>
+				
+					<li><a href="../../YARD/Handlers/Watir/AttributesHandler.html">YARD::Handlers::Watir::AttributesHandler</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">Watir::HTML::Generator</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="generate-method" class="method-detail ">
+				<a name="method-i-generate"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">generate</span><span
+						class="method-args">(spec_url, io = StringIO.new)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="generate-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-webdriver/html/generator.rb, line 7</span>
+ 7:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">generate</span>(<span class="ruby-identifier">spec_url</span>, <span class="ruby-identifier">io</span> = <span class="ruby-constant">StringIO</span>.<span class="ruby-identifier">new</span>)
+ 8:         <span class="ruby-ivar">@spec_url</span>, <span class="ruby-ivar">@io</span> = <span class="ruby-identifier">spec_url</span>, <span class="ruby-identifier">io</span>
+ 9: 
+10:         <span class="ruby-identifier">extract_spec</span>
+11:         <span class="ruby-identifier">cleanup_spec</span>
+12: 
+13:         <span class="ruby-identifier">write_header</span>
+14:         <span class="ruby-identifier">write_class_defs</span>
+15:         <span class="ruby-identifier">write_container_methods</span>
+16:         <span class="ruby-identifier">write_footer</span>
+17: 
+18:         <span class="ruby-identifier">io</span>
+19:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="cleanup-spec-method" class="method-detail ">
+				<a name="method-i-cleanup_spec"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">cleanup_spec</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="cleanup-spec-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-webdriver/html/generator.rb, line 44</span>
+44:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">cleanup_spec</span>
+45:         <span class="ruby-comment cmt"># ignore the link element for now</span>
+46:         <span class="ruby-ivar">@tag2interfaces</span>.<span class="ruby-identifier">delete</span>(<span class="ruby-value str">&quot;link&quot;</span>)
+47:         <span class="ruby-ivar">@sorted_interfaces</span>.<span class="ruby-identifier">reject!</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">intf</span><span class="ruby-operator">|</span> <span class="ruby-identifier">intf</span>.<span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-value str">&quot;HTMLLinkElement&quot;</span> }
+48:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="extract-spec-method" class="method-detail ">
+				<a name="method-i-extract_spec"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">extract_spec</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="extract-spec-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-webdriver/html/generator.rb, line 35</span>
+35:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">extract_spec</span>
+36:         <span class="ruby-ivar">@tag2interfaces</span>    = <span class="ruby-identifier">extractor</span>.<span class="ruby-identifier">process</span>
+37:         <span class="ruby-ivar">@sorted_interfaces</span> = <span class="ruby-identifier">extractor</span>.<span class="ruby-identifier">sorted_interfaces</span>
+38: 
+39:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">extractor</span>.<span class="ruby-identifier">errors</span>.<span class="ruby-identifier">any?</span>
+40:           <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;error extracting spec: #{extractor.errors.join(&quot;\n&quot;)}&quot;</span>
+41:         <span class="ruby-keyword kw">end</span>
+42:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="extractor-method" class="method-detail ">
+				<a name="method-i-extractor"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">extractor</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="extractor-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-webdriver/html/generator.rb, line 31</span>
+31:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">extractor</span>
+32:         <span class="ruby-ivar">@extractor</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">SpecExtractor</span>.<span class="ruby-identifier">new</span>(<span class="ruby-ivar">@spec_url</span>)
+33:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="generator-method" class="method-detail ">
+				<a name="method-i-generator"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">generator</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="generator-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-webdriver/html/generator.rb, line 23</span>
+23:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">generator</span>
+24:         <span class="ruby-ivar">@generator</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">WebIDL</span><span class="ruby-operator">::</span><span class="ruby-constant">Generator</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">visitor</span>)
+25:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="indent-method" class="method-detail ">
+				<a name="method-i-indent"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">indent</span><span
+						class="method-args">(code, indent = 1)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="indent-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/html/generator.rb, line 105</span>
+105:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">indent</span>(<span class="ruby-identifier">code</span>, <span class="ruby-identifier">indent</span> = <span class="ruby-value">1</span>)
+106:         <span class="ruby-identifier">indent_string</span> = <span class="ruby-value str">&quot; &quot;</span>*<span class="ruby-identifier">indent</span>
+107:         <span class="ruby-identifier">code</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;\n&quot;</span>).<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">line</span><span class="ruby-operator">|</span> <span class="ruby-identifier">line</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">line</span> <span class="ruby-operator">:</span> <span class="ruby-identifier">indent_string</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">line</span> }.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;\n&quot;</span>)
+108:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="visitor-method" class="method-detail ">
+				<a name="method-i-visitor"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">visitor</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="visitor-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-webdriver/html/generator.rb, line 27</span>
+27:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">visitor</span>
+28:         <span class="ruby-ivar">@visitor</span> <span class="ruby-operator">||=</span> <span class="ruby-constant">Visitor</span>.<span class="ruby-identifier">new</span>
+29:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="write-class-defs-method" class="method-detail ">
+				<a name="method-i-write_class_defs"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">write_class_defs</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="write-class-defs-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-webdriver/html/generator.rb, line 55</span>
+55:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">write_class_defs</span>
+56:         <span class="ruby-ivar">@sorted_interfaces</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">interface</span><span class="ruby-operator">|</span>
+57:           <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">indent</span>(<span class="ruby-identifier">generator</span>.<span class="ruby-identifier">generate</span>(<span class="ruby-identifier">interface</span>))
+58:         <span class="ruby-keyword kw">end</span>
+59:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="write-container-methods-method" class="method-detail ">
+				<a name="method-i-write_container_methods"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">write_container_methods</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="write-container-methods-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-webdriver/html/generator.rb, line 62</span>
+62:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">write_container_methods</span>
+63:         <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">indent</span>(<span class="ruby-value str">&quot;module Container&quot;</span>)
+64: 
+65:         <span class="ruby-ivar">@tag2interfaces</span>.<span class="ruby-identifier">sort</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">tag</span>, <span class="ruby-identifier">interfaces</span><span class="ruby-operator">|</span>
+66:           <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;multiple interfaces for tag #{tag.inspect}&quot;</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">interfaces</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">e</span><span class="ruby-operator">|</span> <span class="ruby-identifier">e</span>.<span class="ruby-identifier">name</span> }.<span class="ruby-identifier">uniq</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+67: 
+68:           <span class="ruby-identifier">tag_string</span>       = <span class="ruby-identifier">tag</span>.<span class="ruby-identifier">inspect</span>
+69:           <span class="ruby-identifier">singular</span>         = <span class="ruby-constant">Util</span>.<span class="ruby-identifier">paramify</span>(<span class="ruby-identifier">tag</span>)
+70:           <span class="ruby-identifier">plural</span>           = <span class="ruby-identifier">singular</span>.<span class="ruby-identifier">pluralize</span>
+71:           <span class="ruby-identifier">element_class</span>    = <span class="ruby-constant">Util</span>.<span class="ruby-identifier">classify</span>(<span class="ruby-identifier">interfaces</span>.<span class="ruby-identifier">first</span>.<span class="ruby-identifier">name</span>)
+72:           <span class="ruby-identifier">collection_class</span> = <span class="ruby-node">&quot;#{element_class}Collection&quot;</span>
+73: 
+74:           <span class="ruby-comment cmt"># visitor.visit_tag(tag, interfaces.first.name) !?</span>
+75:           <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">indent</span>(<span class="ruby-value str">## @return [#{element_class}]#def #{singular}(*args)  #{element_class}.new(self, extract_selector(args).merge(:tag_name =&gt; #{tag_string}))end## @return [#{collection_class}]#def #{plural}(*args)  #{collection_class}.new(self, extract_selector(args).merge(:tag_name =&gt; #{tag_string}))endWatir.tag_to_class[#{tag.to_sym.inspect}] = #{element_class}</span>, <span class="ruby-value">3</span>)
+76:         <span class="ruby-keyword kw">end</span>
+77: 
+78:         <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-identifier">indent</span>(<span class="ruby-node">&quot;end # Container&quot;</span>)
+79:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="write-footer-method" class="method-detail ">
+				<a name="method-i-write_footer"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">write_footer</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="write-footer-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/watir-webdriver/html/generator.rb, line 100</span>
+100:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">write_footer</span>
+101:         <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;end # Watir&quot;</span>
+102:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="write-header-method" class="method-detail ">
+				<a name="method-i-write_header"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">write_header</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="write-header-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/watir-webdriver/html/generator.rb, line 50</span>
+50:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">write_header</span>
+51:         <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;# Autogenerated from the HTML5 specification. Edits may be lost.&quot;</span>
+52:         <span class="ruby-ivar">@io</span>.<span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;module Watir&quot;</span>
+53:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

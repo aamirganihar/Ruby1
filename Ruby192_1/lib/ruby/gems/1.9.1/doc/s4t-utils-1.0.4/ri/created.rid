@@ -1,0 +1,23 @@
+Wed, 11 Jul 2012 23:50:36 -0700
+lib/s4t-utils/capturing-globals.rb	Wed, 11 Jul 2012 23:50:02 -0700
+lib/s4t-utils/claims.rb	Wed, 11 Jul 2012 23:50:02 -0700
+lib/s4t-utils/command-line.rb	Wed, 11 Jul 2012 23:50:02 -0700
+lib/s4t-utils/error-handling.rb	Wed, 11 Jul 2012 23:50:02 -0700
+lib/s4t-utils/friendly-format.rb	Wed, 11 Jul 2012 23:50:02 -0700
+lib/s4t-utils/hacks.rb	Wed, 11 Jul 2012 23:50:02 -0700
+lib/s4t-utils/hoelike.rb	Wed, 11 Jul 2012 23:50:02 -0700
+lib/s4t-utils/load-path-auto-adjuster.rb	Wed, 11 Jul 2012 23:50:02 -0700
+lib/s4t-utils/more-assertions.rb	Wed, 11 Jul 2012 23:50:02 -0700
+lib/s4t-utils/os.rb	Wed, 11 Jul 2012 23:50:02 -0700
+lib/s4t-utils/rake-task-helpers.rb	Wed, 11 Jul 2012 23:50:02 -0700
+lib/s4t-utils/rakefile-common.rb	Wed, 11 Jul 2012 23:50:02 -0700
+lib/s4t-utils/ruby-extensions.rb	Wed, 11 Jul 2012 23:50:02 -0700
+lib/s4t-utils/svn-file-movement.rb	Wed, 11 Jul 2012 23:50:02 -0700
+lib/s4t-utils/test-util.rb	Wed, 11 Jul 2012 23:50:02 -0700
+lib/s4t-utils/version.rb	Wed, 11 Jul 2012 23:50:02 -0700
+lib/s4t-utils.rb	Wed, 11 Jul 2012 23:50:02 -0700
+History.txt	Wed, 11 Jul 2012 23:50:02 -0700
+LICENSE.txt	Wed, 11 Jul 2012 23:50:02 -0700
+Manifest.txt	Wed, 11 Jul 2012 23:50:02 -0700
+NOTES.txt	Wed, 11 Jul 2012 23:50:02 -0700
+README.txt	Wed, 11 Jul 2012 23:50:02 -0700

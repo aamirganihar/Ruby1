@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Windows::MSVCRT::Buffer</title>
+
+	<link rel="stylesheet" href="../../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../../index.html">Home</a>
+          <a href="../../index.html#classes">Classes</a>
+          <a href="../../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../../lib/windows/msvcrt/buffer_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/windows/msvcrt/buffer.rb">lib/windows/msvcrt/buffer.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-memccpy">#memccpy</a></li>
+					
+					<li><a href="#method-i-memchr">#memchr</a></li>
+					
+					<li><a href="#method-i-memcmp">#memcmp</a></li>
+					
+					<li><a href="#method-i-memcpy">#memcpy</a></li>
+					
+					<li><a href="#method-i-memicmp">#memicmp</a></li>
+					
+					<li><a href="#method-i-memmove">#memmove</a></li>
+					
+					<li><a href="#method-i-memset">#memset</a></li>
+					
+					<li><a href="#method-i-swab">#swab</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../../CHANGES.html">CHANGES</a></li>
+				
+					<li class="file"><a href="../../MANIFEST.html">MANIFEST</a></li>
+				
+					<li class="file"><a href="../../README.html">README</a></li>
+				
+					<li class="file"><a href="../../doc/conversion_guide_txt.html">conversion_guide.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../../Windows.html">Windows</a></li>
+				
+					<li><a href="../../Windows/COM.html">Windows::COM</a></li>
+				
+					<li><a href="../../Windows/COM/Accessibility.html">Windows::COM::Accessibility</a></li>
+				
+					<li><a href="../../Windows/COM/Automation.html">Windows::COM::Automation</a></li>
+				
+					<li><a href="../../Windows/COM/Variant.html">Windows::COM::Variant</a></li>
+				
+					<li><a href="../../Windows/Clipboard.html">Windows::Clipboard</a></li>
+				
+					<li><a href="../../Windows/Console.html">Windows::Console</a></li>
+				
+					<li><a href="../../Windows/Debug.html">Windows::Debug</a></li>
+				
+					<li><a href="../../Windows/DeviceIO.html">Windows::DeviceIO</a></li>
+				
+					<li><a href="../../Windows/Directory.html">Windows::Directory</a></li>
+				
+					<li><a href="../../Windows/Error.html">Windows::Error</a></li>
+				
+					<li><a href="../../Windows/EventLog.html">Windows::EventLog</a></li>
+				
+					<li><a href="../../Windows/File.html">Windows::File</a></li>
+				
+					<li><a href="../../Windows/FileMapping.html">Windows::FileMapping</a></li>
+				
+					<li><a href="../../Windows/FileSystem.html">Windows::FileSystem</a></li>
+				
+					<li><a href="../../Windows/GDI.html">Windows::GDI</a></li>
+				
+					<li><a href="../../Windows/GDI/Bitmap.html">Windows::GDI::Bitmap</a></li>
+				
+					<li><a href="../../Windows/GDI/DeviceContext.html">Windows::GDI::DeviceContext</a></li>
+				
+					<li><a href="../../Windows/GDI/MetaFile.html">Windows::GDI::MetaFile</a></li>
+				
+					<li><a href="../../Windows/GDI/PaintingDrawing.html">Windows::GDI::PaintingDrawing</a></li>
+				
+					<li><a href="../../Windows/Handle.html">Windows::Handle</a></li>
+				
+					<li><a href="../../Windows/Library.html">Windows::Library</a></li>
+				
+					<li><a href="../../Windows/Limits.html">Windows::Limits</a></li>
+				
+					<li><a href="../../Windows/MSVCRT.html">Windows::MSVCRT</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/Buffer.html">Windows::MSVCRT::Buffer</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/Directory.html">Windows::MSVCRT::Directory</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/File.html">Windows::MSVCRT::File</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/IO.html">Windows::MSVCRT::IO</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/String.html">Windows::MSVCRT::String</a></li>
+				
+					<li><a href="../../Windows/MSVCRT/Time.html">Windows::MSVCRT::Time</a></li>
+				
+					<li><a href="../../Windows/Mailslot.html">Windows::Mailslot</a></li>
+				
+					<li><a href="../../Windows/Memory.html">Windows::Memory</a></li>
+				
+					<li><a href="../../Windows/NIO.html">Windows::NIO</a></li>
+				
+					<li><a href="../../Windows/NTFS.html">Windows::NTFS</a></li>
+				
+					<li><a href="../../Windows/NTFS/Winternl.html">Windows::NTFS::Winternl</a></li>
+				
+					<li><a href="../../Windows/National.html">Windows::National</a></li>
+				
+					<li><a href="../../Windows/Network.html">Windows::Network</a></li>
+				
+					<li><a href="../../Windows/Network/Management.html">Windows::Network::Management</a></li>
+				
+					<li><a href="../../Windows/Network/SNMP.html">Windows::Network::SNMP</a></li>
+				
+					<li><a href="../../Windows/Network/Winsock.html">Windows::Network::Winsock</a></li>
+				
+					<li><a href="../../Windows/Path.html">Windows::Path</a></li>
+				
+					<li><a href="../../Windows/Pipe.html">Windows::Pipe</a></li>
+				
+					<li><a href="../../Windows/Process.html">Windows::Process</a></li>
+				
+					<li><a href="../../Windows/Registry.html">Windows::Registry</a></li>
+				
+					<li><a href="../../Windows/Security.html">Windows::Security</a></li>
+				
+					<li><a href="../../Windows/Security/Authentication.html">Windows::Security::Authentication</a></li>
+				
+					<li><a href="../../Windows/Service.html">Windows::Service</a></li>
+				
+					<li><a href="../../Windows/Shell.html">Windows::Shell</a></li>
+				
+					<li><a href="../../Windows/Socket.html">Windows::Socket</a></li>
+				
+					<li><a href="../../Windows/Sound.html">Windows::Sound</a></li>
+				
+					<li><a href="../../Windows/Synchronize.html">Windows::Synchronize</a></li>
+				
+					<li><a href="../../Windows/SystemInfo.html">Windows::SystemInfo</a></li>
+				
+					<li><a href="../../Windows/Thread.html">Windows::Thread</a></li>
+				
+					<li><a href="../../Windows/Time.html">Windows::Time</a></li>
+				
+					<li><a href="../../Windows/ToolHelper.html">Windows::ToolHelper</a></li>
+				
+					<li><a href="../../Windows/Unicode.html">Windows::Unicode</a></li>
+				
+					<li><a href="../../Windows/Volume.html">Windows::Volume</a></li>
+				
+					<li><a href="../../Windows/WSA.html">Windows::WSA</a></li>
+				
+					<li><a href="../../Windows/Window.html">Windows::Window</a></li>
+				
+					<li><a href="../../Windows/Window/Classes.html">Windows::Window::Classes</a></li>
+				
+					<li><a href="../../Windows/Window/Dialog.html">Windows::Window::Dialog</a></li>
+				
+					<li><a href="../../Windows/Window/Menu.html">Windows::Window::Menu</a></li>
+				
+					<li><a href="../../Windows/Window/Message.html">Windows::Window::Message</a></li>
+				
+					<li><a href="../../Windows/Window/Properties.html">Windows::Window::Properties</a></li>
+				
+					<li><a href="../../Windows/Window/Timer.html">Windows::Window::Timer</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Windows::MSVCRT::Buffer</h1>
+
+		<div id="description">
+			
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="Memcpy">Memcpy</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Memccpy">Memccpy</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Memchr">Memchr</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Memcmp">Memcmp</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Memicmp">Memicmp</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Memmove">Memmove</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Memset">Memset</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="Swab">Swab</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="MemcpyPLL">MemcpyPLL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="MemcpyLPL">MemcpyLPL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="MemcpyLLL">MemcpyLLL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+				<dt><a name="MemcpyPPL">MemcpyPPL</a></dt>
+				
+				<dd class="description"></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="memccpy-method" class="method-detail ">
+				<a name="method-i-memccpy"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">memccpy</span><span
+						class="method-args">(dest, src, char, count)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="memccpy-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/windows/msvcrt/buffer.rb, line 46</span>
+46:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">memccpy</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-identifier">src</span>, <span class="ruby-identifier">char</span>, <span class="ruby-identifier">count</span>)
+47:         <span class="ruby-constant">Memccpy</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-identifier">src</span>, <span class="ruby-identifier">char</span>, <span class="ruby-identifier">count</span>)
+48:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="memchr-method" class="method-detail ">
+				<a name="method-i-memchr"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">memchr</span><span
+						class="method-args">(buf, char, count)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="memchr-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/windows/msvcrt/buffer.rb, line 50</span>
+50:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">memchr</span>(<span class="ruby-identifier">buf</span>, <span class="ruby-identifier">char</span>, <span class="ruby-identifier">count</span>)
+51:         <span class="ruby-constant">Memchr</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">buf</span>, <span class="ruby-identifier">char</span>, <span class="ruby-identifier">count</span>)
+52:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="memcmp-method" class="method-detail ">
+				<a name="method-i-memcmp"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">memcmp</span><span
+						class="method-args">(buf1, buf2, count)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="memcmp-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/windows/msvcrt/buffer.rb, line 54</span>
+54:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">memcmp</span>(<span class="ruby-identifier">buf1</span>, <span class="ruby-identifier">buf2</span>, <span class="ruby-identifier">count</span>)
+55:         <span class="ruby-constant">Memcmp</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">buf1</span>, <span class="ruby-identifier">buf2</span>, <span class="ruby-identifier">count</span>)
+56:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="memcpy-method" class="method-detail ">
+				<a name="method-i-memcpy"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">memcpy</span><span
+						class="method-args">(dest, src, size = src.length)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Wrapper for the memcpy() function.  Both the <tt>dest</tt> and <tt>src</tt>
+can be either a string or a memory address.  If <tt>size</tt> is omitted,
+it defaults to the length of <tt>src</tt>. 
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="memcpy-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/windows/msvcrt/buffer.rb, line 30</span>
+30:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">memcpy</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-identifier">src</span>, <span class="ruby-identifier">size</span> = <span class="ruby-identifier">src</span>.<span class="ruby-identifier">length</span>)
+31:         <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">dest</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-operator">::</span><span class="ruby-constant">Integer</span>)
+32:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">src</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-operator">::</span><span class="ruby-constant">String</span>)
+33:             <span class="ruby-constant">MemcpyLPL</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-identifier">src</span>, <span class="ruby-identifier">size</span>)
+34:           <span class="ruby-keyword kw">else</span>
+35:             <span class="ruby-constant">MemcpyLLL</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-identifier">src</span>, <span class="ruby-identifier">size</span>)
+36:           <span class="ruby-keyword kw">end</span>
+37:         <span class="ruby-keyword kw">else</span>
+38:           <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">src</span>.<span class="ruby-identifier">is_a?</span>(<span class="ruby-operator">::</span><span class="ruby-constant">String</span>)
+39:             <span class="ruby-constant">MemcpyPPL</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-identifier">src</span>, <span class="ruby-identifier">size</span>)
+40:           <span class="ruby-keyword kw">else</span>
+41:             <span class="ruby-constant">MemcpyPLL</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-identifier">src</span>, <span class="ruby-identifier">size</span>)
+42:           <span class="ruby-keyword kw">end</span>
+43:         <span class="ruby-keyword kw">end</span>
+44:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="memicmp-method" class="method-detail ">
+				<a name="method-i-memicmp"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">memicmp</span><span
+						class="method-args">(buf1, buf2, count)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="memicmp-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/windows/msvcrt/buffer.rb, line 58</span>
+58:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">memicmp</span>(<span class="ruby-identifier">buf1</span>, <span class="ruby-identifier">buf2</span>, <span class="ruby-identifier">count</span>)
+59:         <span class="ruby-constant">Memicmp</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">buf1</span>, <span class="ruby-identifier">buf2</span>, <span class="ruby-identifier">count</span>)
+60:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="memmove-method" class="method-detail ">
+				<a name="method-i-memmove"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">memmove</span><span
+						class="method-args">(dest, src, count)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="memmove-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/windows/msvcrt/buffer.rb, line 62</span>
+62:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">memmove</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-identifier">src</span>, <span class="ruby-identifier">count</span>)
+63:         <span class="ruby-constant">Memmove</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-identifier">src</span>, <span class="ruby-identifier">count</span>)
+64:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="memset-method" class="method-detail ">
+				<a name="method-i-memset"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">memset</span><span
+						class="method-args">(dest, char, count)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="memset-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/windows/msvcrt/buffer.rb, line 66</span>
+66:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">memset</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-identifier">char</span>, <span class="ruby-identifier">count</span>)
+67:         <span class="ruby-constant">Memset</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">dest</span>, <span class="ruby-identifier">char</span>, <span class="ruby-identifier">count</span>)
+68:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="swab-method" class="method-detail ">
+				<a name="method-i-swab"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">swab</span><span
+						class="method-args">(src, dest, count)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="swab-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/windows/msvcrt/buffer.rb, line 70</span>
+70:       <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">swab</span>(<span class="ruby-identifier">src</span>, <span class="ruby-identifier">dest</span>, <span class="ruby-identifier">count</span>)
+71:         <span class="ruby-constant">Swab</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">src</span>, <span class="ruby-identifier">dest</span>, <span class="ruby-identifier">count</span>)
+72:       <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

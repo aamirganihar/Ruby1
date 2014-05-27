@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Module: Hoe::Test</title>
+
+	<link rel="stylesheet" href="../rdoc.css" type="text/css" media="screen" />
+
+	<script src="../js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="../js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="module">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="../index.html">Home</a>
+          <a href="../index.html#classes">Classes</a>
+          <a href="../index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="../lib/hoe/test_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/hoe/test.rb">lib/hoe/test.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-define_test_tasks">#define_test_tasks</a></li>
+					
+					<li><a href="#method-i-initialize_test">#initialize_test</a></li>
+					
+					<li><a href="#method-i-make_test_cmd">#make_test_cmd</a></li>
+					
+					<li><a href="#method-i-try_loading_rspec1">#try_loading_rspec1</a></li>
+					
+					<li><a href="#method-i-try_loading_rspec2">#try_loading_rspec2</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="../History_txt.html">History.txt</a></li>
+				
+					<li class="file"><a href="../Manifest_txt.html">Manifest.txt</a></li>
+				
+					<li class="file"><a href="../README_txt.html">README.txt</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="../images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="../Hoe.html">Hoe</a></li>
+				
+					<li><a href="../Hoe/Clean.html">Hoe::Clean</a></li>
+				
+					<li><a href="../Hoe/Compiler.html">Hoe::Compiler</a></li>
+				
+					<li><a href="../Hoe/Debug.html">Hoe::Debug</a></li>
+				
+					<li><a href="../Hoe/Deps.html">Hoe::Deps</a></li>
+				
+					<li><a href="../Hoe/Flay.html">Hoe::Flay</a></li>
+				
+					<li><a href="../Hoe/Flog.html">Hoe::Flog</a></li>
+				
+					<li><a href="../Hoe/GemPreludeSucks.html">Hoe::GemPreludeSucks</a></li>
+				
+					<li><a href="../Hoe/Gemcutter.html">Hoe::Gemcutter</a></li>
+				
+					<li><a href="../Hoe/Inline.html">Hoe::Inline</a></li>
+				
+					<li><a href="../Hoe/Newb.html">Hoe::Newb</a></li>
+				
+					<li><a href="../Hoe/Package.html">Hoe::Package</a></li>
+				
+					<li><a href="../Hoe/Publish.html">Hoe::Publish</a></li>
+				
+					<li><a href="../Hoe/RCov.html">Hoe::RCov</a></li>
+				
+					<li><a href="../Hoe/Racc.html">Hoe::Racc</a></li>
+				
+					<li><a href="../Hoe/RubyForge.html">Hoe::RubyForge</a></li>
+				
+					<li><a href="../Hoe/Signing.html">Hoe::Signing</a></li>
+				
+					<li><a href="../Hoe/Test.html">Hoe::Test</a></li>
+				
+					<li><a href="../Rake.html">Rake</a></li>
+				
+					<li><a href="../Rake/Task.html">Rake::Task</a></li>
+				
+					<li><a href="../Rake/TaskManager.html">Rake::TaskManager</a></li>
+				
+					<li><a href="../File.html">File</a></li>
+				
+					<li><a href="../Gem.html">Gem</a></li>
+				
+					<li><a href="../String.html">String</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="module">Hoe::Test</h1>
+
+		<div id="description">
+			<p>
+<a href="Test.html">Test</a> plugin for hoe.
+</p>
+<h3>Tasks Provided:</h3>
+<table>
+<tr><td valign="top">audit</td><td><p>
+Run ZenTest against the package.
+</p>
+</td></tr>
+<tr><td valign="top">default</td><td><p>
+Run the default task(s).
+</p>
+</td></tr>
+<tr><td valign="top">multi</td><td><p>
+Run the test suite using multiruby.
+</p>
+</td></tr>
+<tr><td valign="top">test</td><td><p>
+Run the test suite.
+</p>
+</td></tr>
+<tr><td valign="top">test_deps</td><td><p>
+Show which test files fail when run alone.
+</p>
+</td></tr>
+</table>
+
+		</div>
+
+		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="SUPPORTED_TEST_FRAMEWORKS">SUPPORTED_TEST_FRAMEWORKS</a></dt>
+				
+				<dd class="description"><p>
+Configuration for the supported test frameworks for test task.
+</p></dd>
+				
+			
+				<dt><a name="FILTER">FILTER</a></dt>
+				
+				<dd class="description"><p>
+Used to add flags to test_unit (e.g., -n test_borked).
+</p>
+<p>
+eg FILTER=&#8221;-n test_blah&#8220;
+</p></dd>
+				
+			
+			</dl>
+		</div>
+		
+
+		<!-- Attributes -->
+		
+		<div id="attribute-method-details" class="method-section section">
+			<h3 class="section-header">Attributes</h3>
+
+			
+			<div id="multiruby-skip-attribute-method" class="method-detail">
+				<a name="multiruby_skip"></a>
+				
+				<a name="multiruby_skip="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">multiruby_skip</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Optional: Array of incompatible versions for multiruby filtering. Used as a
+regex.
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="testlib-attribute-method" class="method-detail">
+				<a name="testlib"></a>
+				
+				<a name="testlib="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">testlib</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Optional: What test library to require [default: :testunit]
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="test-prelude-attribute-method" class="method-detail">
+				<a name="test_prelude"></a>
+				
+				<a name="test_prelude="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">test_prelude</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Optional: Additional ruby to run before the test framework is loaded.
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="rspec-dirs-attribute-method" class="method-detail">
+				<a name="rspec_dirs"></a>
+				
+				<a name="rspec_dirs="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">rspec_dirs</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Optional: RSpec dirs. [default: %w(spec lib)]
+</p>
+				
+				</div>
+			</div>
+			
+			<div id="rspec-options-attribute-method" class="method-detail">
+				<a name="rspec_options"></a>
+				
+				<a name="rspec_options="></a>
+				
+				<div class="method-heading attribute-method-heading">
+					<span class="method-name">rspec_options</span><span
+						class="attribute-access-type">[RW]</span>
+				</div>
+
+				<div class="method-description">
+				
+				<p>
+Optional: RSpec options. [default: []]
+</p>
+				
+				</div>
+			</div>
+			
+		</div>
+		
+
+		<!-- Methods -->
+		
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="define-test-tasks-method" class="method-detail ">
+				<a name="method-i-define_test_tasks"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">define_test_tasks</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Define tasks for plugin.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="define-test-tasks-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe/test.rb, line 69</span>
+ 69:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">define_test_tasks</span>
+ 70:     <span class="ruby-identifier">default_tasks</span> = []
+ 71: 
+ 72:     <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span> <span class="ruby-value str">&quot;test&quot;</span> <span class="ruby-keyword kw">then</span>
+ 73:       <span class="ruby-identifier">desc</span> <span class="ruby-value str">'Run the test suite. Use FILTER or TESTOPTS to add flags/args.'</span>
+ 74:       <span class="ruby-identifier">task</span> <span class="ruby-value">:test</span> <span class="ruby-keyword kw">do</span>
+ 75:         <span class="ruby-identifier">ruby</span> <span class="ruby-identifier">make_test_cmd</span>
+ 76:       <span class="ruby-keyword kw">end</span>
+ 77: 
+ 78:       <span class="ruby-identifier">desc</span> <span class="ruby-value str">'Run the test suite using multiruby.'</span>
+ 79:       <span class="ruby-identifier">task</span> <span class="ruby-value">:multi</span> <span class="ruby-keyword kw">do</span>
+ 80:         <span class="ruby-constant">ENV</span>[<span class="ruby-value str">&quot;EXCLUDED_VERSIONS&quot;</span>] = <span class="ruby-identifier">multiruby_skip</span>.<span class="ruby-identifier">join</span>(<span class="ruby-value str">&quot;:&quot;</span>)
+ 81:         <span class="ruby-identifier">system</span> <span class="ruby-value str">&quot;multiruby -S rake&quot;</span>
+ 82:       <span class="ruby-keyword kw">end</span>
+ 83: 
+ 84:       <span class="ruby-identifier">desc</span> <span class="ruby-value str">'Show which test files fail when run alone.'</span>
+ 85:       <span class="ruby-identifier">task</span> <span class="ruby-value">:test_deps</span> <span class="ruby-keyword kw">do</span>
+ 86:         <span class="ruby-identifier">tests</span> = <span class="ruby-constant">Dir</span>[<span class="ruby-value str">&quot;test/**/test_*.rb&quot;</span>]  <span class="ruby-operator">+</span>  <span class="ruby-constant">Dir</span>[<span class="ruby-value str">&quot;test/**/*_test.rb&quot;</span>]
+ 87: 
+ 88:         <span class="ruby-identifier">paths</span> = [<span class="ruby-value str">'bin'</span>, <span class="ruby-value str">'lib'</span>, <span class="ruby-value str">'test'</span>].<span class="ruby-identifier">join</span>(<span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-constant">PATH_SEPARATOR</span>)
+ 89:         <span class="ruby-identifier">null_dev</span> = <span class="ruby-constant">Hoe</span><span class="ruby-operator">::</span><span class="ruby-constant">WINDOZE</span> <span class="ruby-operator">?</span> <span class="ruby-value str">'&gt; NUL 2&gt;&amp;1'</span> <span class="ruby-operator">:</span> <span class="ruby-value str">'&amp;&gt; /dev/null'</span>
+ 90: 
+ 91:         <span class="ruby-identifier">tests</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">test</span><span class="ruby-operator">|</span>
+ 92:           <span class="ruby-keyword kw">if</span> <span class="ruby-keyword kw">not</span> <span class="ruby-identifier">system</span> <span class="ruby-node">&quot;ruby -I#{paths} #{test} #{null_dev}&quot;</span> <span class="ruby-keyword kw">then</span>
+ 93:             <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;Dependency Issues: #{test}&quot;</span>
+ 94:           <span class="ruby-keyword kw">end</span>
+ 95:         <span class="ruby-keyword kw">end</span>
+ 96:       <span class="ruby-keyword kw">end</span>
+ 97: 
+ 98:       <span class="ruby-identifier">default_tasks</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">:test</span>
+ 99:     <span class="ruby-keyword kw">end</span>
+100: 
+101:     <span class="ruby-keyword kw">if</span> <span class="ruby-constant">File</span>.<span class="ruby-identifier">directory?</span> <span class="ruby-value str">&quot;spec&quot;</span> <span class="ruby-keyword kw">then</span>
+102:       <span class="ruby-identifier">found</span> = <span class="ruby-identifier">try_loading_rspec2</span> <span class="ruby-operator">||</span> <span class="ruby-identifier">try_loading_rspec1</span>
+103: 
+104:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">found</span> <span class="ruby-keyword kw">then</span>
+105:         <span class="ruby-identifier">default_tasks</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value">:spec</span>
+106:       <span class="ruby-keyword kw">else</span>
+107:         <span class="ruby-identifier">warn</span> <span class="ruby-value str">&quot;Found spec dir, but couldn't load rspec (1 or 2) task. skipping.&quot;</span>
+108:       <span class="ruby-keyword kw">end</span>
+109:     <span class="ruby-keyword kw">end</span>
+110: 
+111:     <span class="ruby-identifier">desc</span> <span class="ruby-value str">'Run the default task(s).'</span>
+112:     <span class="ruby-identifier">task</span> <span class="ruby-value">:default</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">default_tasks</span>
+113: 
+114:     <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">default_tasks</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-keyword kw">then</span>
+115:       <span class="ruby-comment cmt">##</span>
+116:       <span class="ruby-comment cmt"># This is for Erik Hollensbe's rubygems-test project. Hoe is</span>
+117:       <span class="ruby-comment cmt"># test-happy, so by using this plugin you're already testable. For</span>
+118:       <span class="ruby-comment cmt"># more information, see: &lt;https://github.com/erikh/rubygems-test&gt;</span>
+119:       <span class="ruby-comment cmt"># and/or &lt;http://www.gem-testers.org/&gt;</span>
+120: 
+121:       <span class="ruby-identifier">gemtest</span> = <span class="ruby-value str">&quot;.gemtest&quot;</span>
+122: 
+123:       <span class="ruby-identifier">gemtest</span>.<span class="ruby-identifier">encode!</span>(<span class="ruby-constant">Encoding</span><span class="ruby-operator">::</span><span class="ruby-constant">UTF_8</span>) <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">gemtest</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:encoding</span>)
+124: 
+125:       <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">spec</span>.<span class="ruby-identifier">files</span> <span class="ruby-operator">+=</span> [<span class="ruby-identifier">gemtest</span>]
+126: 
+127:       <span class="ruby-identifier">pkg</span>  = <span class="ruby-identifier">pkg_path</span>
+128:       <span class="ruby-identifier">turd</span> = <span class="ruby-node">&quot;#{pkg}/.gemtest&quot;</span>
+129: 
+130:       <span class="ruby-identifier">file</span> <span class="ruby-identifier">turd</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">pkg_path</span> <span class="ruby-keyword kw">do</span>
+131:         <span class="ruby-identifier">touch</span> <span class="ruby-identifier">turd</span>
+132:       <span class="ruby-keyword kw">end</span>
+133: 
+134:       <span class="ruby-identifier">file</span> <span class="ruby-node">&quot;#{pkg}.gem&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">turd</span>
+135:     <span class="ruby-keyword kw">end</span>
+136: 
+137:     <span class="ruby-identifier">desc</span> <span class="ruby-value str">'Run ZenTest against the package.'</span>
+138:     <span class="ruby-identifier">task</span> <span class="ruby-value">:audit</span> <span class="ruby-keyword kw">do</span>
+139:       <span class="ruby-identifier">libs</span> = <span class="ruby-node">%(lib test ext)</span>.<span class="ruby-identifier">join</span>(<span class="ruby-constant">File</span><span class="ruby-operator">::</span><span class="ruby-constant">PATH_SEPARATOR</span>)
+140:       <span class="ruby-identifier">sh</span> <span class="ruby-node">&quot;zentest -I=#{libs} #{spec.files.grep(/^(lib|test)/).join(' ')}&quot;</span>
+141:     <span class="ruby-keyword kw">end</span>
+142:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="initialize-test-method" class="method-detail ">
+				<a name="method-i-initialize_test"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">initialize_test</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Initialize variables for plugin.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="initialize-test-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/hoe/test.rb, line 58</span>
+58:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize_test</span>
+59:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">multiruby_skip</span> <span class="ruby-operator">||=</span> []
+60:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">testlib</span>        <span class="ruby-operator">||=</span> <span class="ruby-value">:testunit</span>
+61:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">test_prelude</span>   <span class="ruby-operator">||=</span> <span class="ruby-keyword kw">nil</span>
+62:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">rspec_dirs</span>     <span class="ruby-operator">||=</span> <span class="ruby-node">%(spec lib)</span>
+63:     <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">rspec_options</span>  <span class="ruby-operator">||=</span> []
+64:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="make-test-cmd-method" class="method-detail ">
+				<a name="method-i-make_test_cmd"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">make_test_cmd</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Generate the test command-line.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="make-test-cmd-source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe/test.rb, line 147</span>
+147:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">make_test_cmd</span>
+148:     <span class="ruby-keyword kw">unless</span> <span class="ruby-constant">SUPPORTED_TEST_FRAMEWORKS</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">testlib</span>)
+149:       <span class="ruby-identifier">raise</span> <span class="ruby-node">&quot;unsupported test framework #{testlib}&quot;</span>
+150:     <span class="ruby-keyword kw">end</span>
+151: 
+152:     <span class="ruby-identifier">framework</span> = <span class="ruby-constant">SUPPORTED_TEST_FRAMEWORKS</span>[<span class="ruby-identifier">testlib</span>]
+153: 
+154:     <span class="ruby-identifier">tests</span> = [<span class="ruby-value str">&quot;rubygems&quot;</span>]
+155:     <span class="ruby-identifier">tests</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">framework</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">framework</span>
+156:     <span class="ruby-identifier">tests</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">test_globs</span>.<span class="ruby-identifier">sort</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">g</span><span class="ruby-operator">|</span> <span class="ruby-constant">Dir</span>.<span class="ruby-identifier">glob</span>(<span class="ruby-identifier">g</span>) }
+157:     <span class="ruby-identifier">tests</span>.<span class="ruby-identifier">flatten!</span>
+158:     <span class="ruby-identifier">tests</span>.<span class="ruby-identifier">map!</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">f</span><span class="ruby-operator">|</span> <span class="ruby-node">%(require &quot;#{f}&quot;)</span>}
+159: 
+160:     <span class="ruby-identifier">tests</span>.<span class="ruby-identifier">insert</span> <span class="ruby-value">1</span>, <span class="ruby-identifier">test_prelude</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">test_prelude</span>
+161: 
+162:     <span class="ruby-node">&quot;#{Hoe::RUBY_FLAGS} -e '#{tests.join(&quot;; &quot;)}' -- #{FILTER}&quot;</span>
+163:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="try-loading-rspec--method" class="method-detail ">
+				<a name="method-i-try_loading_rspec1"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">try_loading_rspec1</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Attempt to load RSpec 1, returning true if successful
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="try-loading-rspec--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe/test.rb, line 187</span>
+187:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">try_loading_rspec1</span>
+188:     <span class="ruby-identifier">require</span> <span class="ruby-value str">'spec/rake/spectask'</span>
+189: 
+190:     <span class="ruby-identifier">desc</span> <span class="ruby-value str">&quot;Run all specifications&quot;</span>
+191:     <span class="ruby-constant">Spec</span><span class="ruby-operator">::</span><span class="ruby-constant">Rake</span><span class="ruby-operator">::</span><span class="ruby-constant">SpecTask</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:spec</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
+192:       <span class="ruby-identifier">t</span>.<span class="ruby-identifier">libs</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">rspec_dirs</span>
+193:       <span class="ruby-identifier">t</span>.<span class="ruby-identifier">spec_opts</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">rspec_options</span>
+194:     <span class="ruby-keyword kw">end</span>
+195:     <span class="ruby-keyword kw">true</span>
+196:   <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">LoadError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">err</span>
+197:     <span class="ruby-identifier">warn</span> <span class="ruby-value str">&quot;%p while trying to load RSpec 1: %s&quot;</span> <span class="ruby-operator">%</span> [ <span class="ruby-identifier">err</span>.<span class="ruby-identifier">class</span>, <span class="ruby-identifier">err</span>.<span class="ruby-identifier">message</span> ]
+198:     <span class="ruby-keyword kw">false</span>
+199:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="try-loading-rspec--method" class="method-detail ">
+				<a name="method-i-try_loading_rspec2"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">try_loading_rspec2</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Attempt to load RSpec 2, returning true if successful
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="try-loading-rspec--source">
+<pre>
+     <span class="ruby-comment cmt"># File lib/hoe/test.rb, line 168</span>
+168:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">try_loading_rspec2</span>
+169:     <span class="ruby-identifier">require</span> <span class="ruby-value str">'rspec/core/rake_task'</span>
+170: 
+171:     <span class="ruby-identifier">desc</span> <span class="ruby-value str">&quot;Run all specifications&quot;</span>
+172:     <span class="ruby-constant">RSpec</span><span class="ruby-operator">::</span><span class="ruby-constant">Core</span><span class="ruby-operator">::</span><span class="ruby-constant">RakeTask</span>.<span class="ruby-identifier">new</span>(<span class="ruby-value">:spec</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">t</span><span class="ruby-operator">|</span>
+173:       <span class="ruby-identifier">t</span>.<span class="ruby-identifier">rspec_opts</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">rspec_options</span>
+174:       <span class="ruby-identifier">t</span>.<span class="ruby-identifier">rspec_opts</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-node">&quot;-I#{self.rspec_dirs.join(&quot;:&quot;)}&quot;</span> <span class="ruby-keyword kw">unless</span>
+175:       <span class="ruby-identifier">rspec_dirs</span>.<span class="ruby-identifier">empty?</span>
+176:     <span class="ruby-keyword kw">end</span>
+177: 
+178:     <span class="ruby-keyword kw">true</span>
+179:   <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">LoadError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">err</span>
+180:     <span class="ruby-identifier">warn</span> <span class="ruby-value str">&quot;%p while trying to load RSpec 2: %s&quot;</span> <span class="ruby-operator">%</span> [ <span class="ruby-identifier">err</span>.<span class="ruby-identifier">class</span>, <span class="ruby-identifier">err</span>.<span class="ruby-identifier">message</span> ]
+181:     <span class="ruby-keyword kw">false</span>
+182:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+
